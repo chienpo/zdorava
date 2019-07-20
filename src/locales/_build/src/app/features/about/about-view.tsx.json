@@ -1,0 +1,10 @@
+{
+  "About": {
+    "origin": [
+      [
+        "src/app/features/about/about-view.tsx",
+        4
+      ]
+    ]
+  }
+}
