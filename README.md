@@ -101,3 +101,12 @@ Build src and open bundle analyzer in browser
 ### `make jest-coverage`
 
 Get jest coverage and show report in browser
+
+### `yarn add-locale`
+Add locale 'yarn add-locale er ru...'
+
+### `yarn extract`
+Extract locale
+
+### `yarn compile`
+Compile translations
