@@ -1,0 +1,20 @@
+# dependencies
+node_modules
+
+# production
+/dist
+/build
+
+# misc
+.temp
+.idea
+.docz
+/coverage
+yarn.lock
+Makefile
+LICENSE
+*.ico
+*.png
+*.sh
+*.log
+*.woff2
