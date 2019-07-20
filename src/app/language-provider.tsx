@@ -4,21 +4,20 @@ import { I18nProvider } from '@lingui/react';
 
 interface Props {
   children: any;
+  language: string;
 }
 // noinspection JSFileReferences
 const importCatalog = async (lang: string) =>
   import(`@lingui/loader!../locales/${lang}/messages.po`).then(({ default: catalog }) => catalog);
 
-export const LanguageProvider: React.FC<Props> = ({ children }) => {
+export const LanguageProvider: React.FC<Props> = ({ children, language }) => {
   const [catalog, setCatalog] = useState({
     messages: {},
   });
 
-  const language='ru';
-
   useEffect(() => {
     importCatalog(language).then(setCatalog);
-  }, [catalog]);
+  }, [catalog, language]);
 
   return (
     <I18nProvider language={language} catalogs={{ [language]: catalog }}>
