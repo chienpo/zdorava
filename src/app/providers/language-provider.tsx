@@ -8,7 +8,7 @@ interface Props {
 }
 // noinspection JSFileReferences
 const importCatalog = async (lang: string) =>
-  import(`@lingui/loader!../locales/${lang}/messages.po`).then(({ default: catalog }) => catalog);
+  import(`@lingui/loader!../../locales/${lang}/messages.po`).then(({ default: catalog }) => catalog);
 
 export const LanguageProvider: React.FC<Props> = ({ children, language }) => {
   const [catalog, setCatalog] = useState({

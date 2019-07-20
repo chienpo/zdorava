@@ -9,7 +9,7 @@ module.exports = {
   },
   ignore: ['LICENCE.md'],
   port: 7000,
-  wrapper: 'src/app/providers.tsx',
+  wrapper: 'src/app/providers/providers.tsx',
   codeSandbox: false,
   typescript: true,
   menu: [

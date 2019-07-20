@@ -1,7 +1,7 @@
 import React from 'react';
 import { RouterProvider } from 'react-router5';
 
-import Providers from './providers';
+import Providers from './providers/providers';
 import { Layout } from './layout';
 
 // App providers
