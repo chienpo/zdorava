@@ -9,7 +9,7 @@ type Props = {
   children: (ReactNode);
 };
 
-const LANGUAGE = 'ru';
+const LANGUAGE = 'en';
 const THEME_MODE = 'dark';
 
 // App providers
