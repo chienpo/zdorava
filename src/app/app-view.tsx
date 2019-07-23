@@ -6,11 +6,9 @@ import { Layout } from './layout';
 
 // App providers
 export const AppView = ({ router }: any) => (
-  <>
-    <RouterProvider router={router}>
-      <Providers>
-        <Layout />
-      </Providers>
-    </RouterProvider>
-  </>
+  <RouterProvider router={router}>
+    <Providers>
+      <Layout />
+    </Providers>
+  </RouterProvider>
 );

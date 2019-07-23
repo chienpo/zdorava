@@ -4,19 +4,25 @@ import { I18nProvider } from '@lingui/react';
 
 interface Props {
   children: any;
-  language: string;
 }
 // noinspection JSFileReferences
 const importCatalog = async (lang: string) =>
   import(`@lingui/loader!../../locales/${lang}/messages.po`).then(({ default: catalog }) => catalog);
 
-export const LanguageProvider: React.FC<Props> = ({ children, language }) => {
-  const [catalog, setCatalog] = useState({
-    messages: {},
-  });
+let languageMiddleware = {
+  changeLanguage: (lang: string) => {},
+  loading: false,
+};
+
+const LanguageProvider: React.FC<Props> = ({ children }) => {
+  const [catalog, setCatalog] = useState();
+  const [language, setLanguage] = useState('en');
+
+  languageMiddleware.changeLanguage = (lang: string) => setLanguage(lang);
 
   useEffect(() => {
-    importCatalog(language).then(setCatalog);
+    languageMiddleware.loading = false;
+    importCatalog(language).then(setCatalog).then(() => languageMiddleware.loading = true);
   }, [catalog, language]);
 
   return (
@@ -25,3 +31,6 @@ export const LanguageProvider: React.FC<Props> = ({ children, language }) => {
     </I18nProvider>
   );
 };
+
+export { LanguageProvider };
+export { languageMiddleware };

@@ -1,4 +1,7 @@
 import * as React from 'react';
+
+import { LanguageSwitchProps } from 'app/ui/language-switch/language-switch';
+import { LanguageSwitch } from 'app/ui/language-switch/language-switch';
 import { NavigationWrapper, NavigationList, NavLinkStyled } from './styled';
 
 type Props = {
@@ -12,7 +15,7 @@ type NavigationProps = {
   routeName: string;
 };
 
-export const NavigationView = ({ navLinks, theme, router }: Props) => (
+export const NavigationView = ({ navLinks, theme, router, selectedLanguage, onChangeLanguage }: Props & LanguageSwitchProps) => (
   <NavigationWrapper theme={theme}>
     <NavigationList>
       {navLinks.map(({ label, routeName }: NavigationProps) => (
@@ -26,5 +29,9 @@ export const NavigationView = ({ navLinks, theme, router }: Props) => (
         </NavLinkStyled>
       ))}
     </NavigationList>
+    <LanguageSwitch
+      selectedLanguage={selectedLanguage}
+      onChangeLanguage={onChangeLanguage}
+    />
   </NavigationWrapper>
 );

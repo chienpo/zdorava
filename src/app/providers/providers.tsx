@@ -9,13 +9,12 @@ type Props = {
   children: (ReactNode);
 };
 
-const LANGUAGE = 'en';
 const THEME_MODE = 'dark';
 
 // App providers
 export default ({ children }: Props) => (
   <ThemeProvider theme={{ mode: THEME_MODE }}>
-    <LanguageProvider language={LANGUAGE}>
+    <LanguageProvider>
       <Normalize />
       {children}
     </LanguageProvider>

@@ -10,6 +10,8 @@ export const NavigationWrapper = styled.div`
       ? `rgba(1, 1, 1, 0.95) url(${overlayBlackDot}) repeat scroll 0 0;`
       : `rgba(255, 255, 255, 0.90) url(${overlayWhiteDot}) repeat scroll 0 0;`};
   z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 170px;
 `;
 
 export const NavigationList = styled.nav`
@@ -18,6 +20,7 @@ export const NavigationList = styled.nav`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  padding-left: 170px;
 `;
 
 export const NavLinkStyled = styled(BaseLink)`
