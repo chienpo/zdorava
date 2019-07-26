@@ -43,13 +43,11 @@ export const PortfolioTab = styled(Button)`
 `;
 
 export const MoreButton = styled.button`
-  border: 1px solid black;
   outline: none;
   bottom: 10px;
   right: 1%;
   padding: 10px 20px;
   cursor: pointer;
-  width: 8%;
   box-sizing: inherit;
   transition: all ease-in-out 0.4s;
   display: flex;
@@ -60,7 +58,6 @@ export const MoreButton = styled.button`
   background: #222225;
   border: 1px solid #262629;
   opacity: 0.8;
-  margin: 0 3px;
   width: 80%;
   margin: 0 auto;
 
@@ -72,14 +69,13 @@ export const MoreButton = styled.button`
 
 export const ItemLabel = styled.div`
   color: white;
-  font-family: Orbitron-Medium;
+  font-family: Orbitron-Medium, sans-serif;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 2px;
   font-weight: bold;
   position: absolute;
-  top: 0.90909090909091em;
-  right: -110%;
+  right: -100%;
   padding: 5px;
   outline: 0;
   transition: all 0.8s ease-in-out;
@@ -91,9 +87,7 @@ export const ItemDescription = styled.div`
   position: absolute;
   bottom: 10px;
   left: -250%;
-  color: #000000;
   margin-bottom: 0;
-  margin-right: 10px;
   transition: all 0.8s ease-in-out;
   background: red;
   opacity: 0.8;

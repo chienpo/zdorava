@@ -8,11 +8,10 @@ import {
 } from './styled';
 
 export const HomepageContent = () => (
-  <HomepageContentWrapper theme="dark">
+  <HomepageContentWrapper>
     <HomepageHGroup>
       <HomepageTitle>
-        STEF
-        <span>LAGUNOVSKY</span>
+        STEF <span>LAGUNOVSKY</span>
       </HomepageTitle>
 
       <HomepageSubtitle>FRONT-END DEVELOPER</HomepageSubtitle>

@@ -13,6 +13,10 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/app/features/about/about-view.tsx:4
-msgid "About"
-msgstr "About"
+#: src/app/features/about/about-view.tsx:16
+msgid "Developer"
+msgstr "Developer"
+
+#: src/app/features/about/about-view.tsx:13
+msgid "Stefan Lagunovsky"
+msgstr "Stefan Lagunovsky"

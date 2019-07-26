@@ -4,11 +4,7 @@ import { NavigationView } from './navigation-view';
 
 import { LanguageSwitchProps } from 'app/ui/language-switch/language-switch';
 
-interface Props {
-  theme: string;
-}
-
-export const Navigation: React.FC<Props & LanguageSwitchProps> = ({ theme, selectedLanguage, onChangeLanguage }) => {
+export const Navigation: React.FC<LanguageSwitchProps> = ({ selectedLanguage, onChangeLanguage }) => {
   const navLinks = [
     {
       label: 'Main',
@@ -26,5 +22,5 @@ export const Navigation: React.FC<Props & LanguageSwitchProps> = ({ theme, selec
 
   const { router } = useRoute();
 
-  return createElement(NavigationView, { router, navLinks, theme, selectedLanguage, onChangeLanguage, });
+  return createElement(NavigationView, { router, navLinks, selectedLanguage, onChangeLanguage, });
 };

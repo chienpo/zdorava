@@ -6,7 +6,6 @@ import { NavigationWrapper, NavigationList, NavLinkStyled } from './styled';
 
 type Props = {
   navLinks: any;
-  theme: string;
   router: any;
 };
 
@@ -15,15 +14,14 @@ type NavigationProps = {
   routeName: string;
 };
 
-export const NavigationView = ({ navLinks, theme, router, selectedLanguage, onChangeLanguage }: Props & LanguageSwitchProps) => (
-  <NavigationWrapper theme={theme}>
+export const NavigationView = ({ navLinks, router, selectedLanguage, onChangeLanguage }: Props & LanguageSwitchProps) => (
+  <NavigationWrapper>
     <NavigationList>
       {navLinks.map(({ label, routeName }: NavigationProps) => (
         <NavLinkStyled
           key={routeName}
           router={router}
           routeName={routeName}
-          theme={theme}
         >
           {label}
         </NavLinkStyled>

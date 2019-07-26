@@ -33,15 +33,15 @@ export const MasonryGridView: React.FC<Props> = ({
   onItemClick,
 }: Props) => {
   const handleLayoutComplete = (item: any) => {
-    console.log(item);
+    console.warn(item);
   };
 
   const handleRemoveComplete = (item: any) => {
-    console.log(item);
+    console.warn(item);
   };
 
   const handleImagesLoaded = (imagesLoadedInstance: any) => {
-    console.log(imagesLoadedInstance);
+    console.warn(imagesLoadedInstance);
   };
 
   return (

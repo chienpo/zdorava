@@ -1,9 +1,17 @@
 {
-  "About": {
+  "Stefan Lagunovsky": {
     "origin": [
       [
         "src/app/features/about/about-view.tsx",
-        4
+        13
+      ]
+    ]
+  },
+  "Developer": {
+    "origin": [
+      [
+        "src/app/features/about/about-view.tsx",
+        16
       ]
     ]
   }

@@ -25,36 +25,6 @@ export const MoreButton = styled.button`
   }
 `;
 
-export const ItemLabel = styled.div`
-  color: white;
-  font-family: Orbitron-Medium;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 2px;
-  font-weight: bold;
-  position: absolute;
-  top: 0.90909090909091em;
-  right: -110%;
-  padding: 5px;
-  outline: 0;
-  transition: all 0.8s ease-in-out;
-  background: red;
-  opacity: 0.8;
-  border-right: 1px solid transparent;
-`;
-export const ItemDescription = styled.div`
-  position: absolute;
-  bottom: 10px;
-  left: -250%;
-  color: #000000;
-  margin-bottom: 0;
-  margin-right: 10px;
-  transition: all 0.8s ease-in-out;
-  background: red;
-  opacity: 0.8;
-  color: white;
-`;
-
 export const PortfolioOverlay = styled.div`
   padding: 0 0;
   background: rgba(38, 38, 41, 0.7);
@@ -78,6 +48,36 @@ export const StyledMassonry = styled(Masonry)`
   height: auto !important;
   margin: 0 auto;
   background: black;
+`;
+
+export const ItemLabel = styled.div`
+  color: white;
+  font-family: Orbitron-Medium, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  position: absolute;
+  right: -100%;
+  padding: 5px;
+  outline: 0;
+  transition: all 0.8s ease-in-out;
+  background: red;
+  opacity: 0.8;
+  border-right: 1px solid transparent;
+  width: 80%;
+  top: 20px;
+`;
+
+export const ItemDescription = styled.div`
+  position: absolute;
+  bottom: 20px;
+  left: -100%;
+  transition: all 0.8s ease-in-out;
+  background: red;
+  opacity: 0.8;
+  color: white;
+  width: 90%;
 `;
 
 export const Item = styled.div`

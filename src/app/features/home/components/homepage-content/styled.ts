@@ -2,10 +2,11 @@ import styled from 'styled-components';
 
 import overlayBlackDot from 'assets/images/overlay_black.png';
 import overlayWhiteDot from 'assets/images/overlay_white.png';
+import { DARK_MODE } from 'app/constants/theme';
 
 export const HomepageContentWrapper = styled.div`
-  background: ${props =>
-    props.theme === 'dark'
+  background: ${({ theme }) =>
+    theme.mode === DARK_MODE
       ? `rgba(1, 1, 1, 0.9) url(${overlayBlackDot}) repeat scroll 0 0;`
       : `rgba(255, 255, 255, 0.90) url(${overlayWhiteDot}) repeat scroll 0 0;`};
 

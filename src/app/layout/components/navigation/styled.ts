@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 import { BaseLink } from 'react-router5';
 
+import { DARK_MODE } from 'app/constants/theme';
 import overlayBlackDot from './overlay_black.png';
 import overlayWhiteDot from './overlay_white.png';
 
 export const NavigationWrapper = styled.div`
-  background: ${props =>
-    props.theme === 'dark'
+  background: ${({ theme }) =>
+    theme.mode === DARK_MODE
       ? `rgba(1, 1, 1, 0.95) url(${overlayBlackDot}) repeat scroll 0 0;`
       : `rgba(255, 255, 255, 0.90) url(${overlayWhiteDot}) repeat scroll 0 0;`};
   z-index: 1;
@@ -27,15 +28,15 @@ export const NavLinkStyled = styled(BaseLink)`
   transition: all ease-in-out 0.4s;
   text-decoration: none;
   color: #808080;
-  font-size: 24px;
+  font-size: 28px;
   line-height: 30px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  padding: 10px 25px;
+  padding: 10px 35px;
   border-bottom: 1px solid transparent;
-
-  background: ${props =>
-    props.theme === 'dark'
+  
+  ${({ theme }) =>
+    theme.mode === DARK_MODE
       ? `
       color: #808080;
 
