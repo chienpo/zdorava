@@ -37,16 +37,18 @@ export const Portfolio: React.FC<Props> = () => {
   };
 
   useEffect(() => {
-    setData(portfolioData);
-  }, [portfolioData]);
+    if (data.length === 0) {
+      setData(portfolioData);
+    }
+  }, [portfolioData, data]);
 
   const sortGallery = (name: string) => {
     switch (name) {
       case 'art':
-        setData(artData);
+        setData(shuffleCards(artData));
         break;
       case 'frontend':
-        setData(frontEndData);
+        setData(shuffleCards(frontEndData));
         break;
       default:
         setData(shuffleCards(portfolioData));
