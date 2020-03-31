@@ -1,26 +1,19 @@
 import { createElement } from 'react';
 import { useRoute } from 'react-router5';
-import { NavigationView } from './navigation-view';
 
 import { LanguageSwitchProps } from 'app/ui/language-switch/language-switch';
+import { NavigationView } from './navigation-view';
 
-export const Navigation: React.FC<LanguageSwitchProps> = ({ selectedLanguage, onChangeLanguage }) => {
-  const navLinks = [
-    {
-      label: 'Main',
-      routeName: 'home',
-    },
-    {
-      label: 'About',
-      routeName: 'about',
-    },
-    {
-      label: 'Portfolio',
-      routeName: 'portfolio',
-    },
-  ];
+export const Navigation: React.FC<LanguageSwitchProps> = ({
+  selectedLanguage,
+  onChangeLanguage
+}) => {
 
   const { router } = useRoute();
 
-  return createElement(NavigationView, { router, navLinks, selectedLanguage, onChangeLanguage, });
+  return createElement(NavigationView, {
+    router,
+    selectedLanguage,
+    onChangeLanguage,
+  });
 };

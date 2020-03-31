@@ -13,9 +13,21 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: src/app/constants/page-titles.ts:7
+msgid "About"
+msgstr "About"
+
 #: src/app/features/about/about-view.tsx:16
 msgid "Developer"
 msgstr "Developer"
+
+#: src/app/constants/page-titles.ts:6
+msgid "Home"
+msgstr "Home"
+
+#: src/app/constants/page-titles.ts:8
+msgid "Portfolio"
+msgstr "Portfolio"
 
 #: src/app/features/about/about-view.tsx:13
 msgid "Stefan Lagunovsky"

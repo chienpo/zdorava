@@ -5,8 +5,10 @@ import { useRoute } from 'react-router5';
 import { Normalize } from 'styled-normalize';
 import { ThemeProvider } from 'styled-components';
 
-import { LanguageProvider } from './language-provider';
 import { DARK_MODE, LIGHT_MODE } from 'app/constants/theme';
+import { PAGE_ABOUT } from 'app/constants/page-titles';
+import { TitleProvider } from './title-provider';
+import { LanguageProvider } from './language-provider';
 
 type Props = {
   children: (ReactNode);
@@ -18,14 +20,17 @@ export default ({ children }: Props) => {
   const { router } = useRoute();
   const curRouter = router.getState();
 
-  let THEME_MODE: string;
-  THEME_MODE = curRouter.name === 'about' ? LIGHT_MODE : DARK_MODE;
+  const THEME_MODE: string = curRouter.name === PAGE_ABOUT
+    ? LIGHT_MODE
+    : DARK_MODE;
 
   return (
     <ThemeProvider theme={{ mode: THEME_MODE }}>
       <LanguageProvider>
         <Normalize />
-        {children}
+        <TitleProvider routeName={curRouter.name}>
+          {children}
+        </TitleProvider>
       </LanguageProvider>
     </ThemeProvider>
   );

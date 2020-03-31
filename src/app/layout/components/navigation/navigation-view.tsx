@@ -1,35 +1,43 @@
 import * as React from 'react';
+import { I18n } from '@lingui/react';
 
-import { LanguageSwitchProps } from 'app/ui/language-switch/language-switch';
-import { LanguageSwitch } from 'app/ui/language-switch/language-switch';
+import { LanguageSwitchProps, LanguageSwitch } from 'app/ui/language-switch/language-switch';
+import { routes } from 'router';
+import { PAGE_TITLES } from 'app/constants/page-titles';
 import { NavigationWrapper, NavigationList, NavLinkStyled } from './styled';
 
 type Props = {
-  navLinks: any;
   router: any;
 };
 
 type NavigationProps = {
-  label: string;
-  routeName: string;
+  name: string;
 };
 
-export const NavigationView = ({ navLinks, router, selectedLanguage, onChangeLanguage }: Props & LanguageSwitchProps) => (
-  <NavigationWrapper>
-    <NavigationList>
-      {navLinks.map(({ label, routeName }: NavigationProps) => (
-        <NavLinkStyled
-          key={routeName}
-          router={router}
-          routeName={routeName}
-        >
-          {label}
-        </NavLinkStyled>
-      ))}
-    </NavigationList>
-    <LanguageSwitch
-      selectedLanguage={selectedLanguage}
-      onChangeLanguage={onChangeLanguage}
-    />
-  </NavigationWrapper>
+export const NavigationView = ({
+  router,
+  selectedLanguage,
+  onChangeLanguage
+}: Props & LanguageSwitchProps) => (
+  <I18n>
+    {({ i18n }) => (
+      <NavigationWrapper>
+        <NavigationList>
+          {routes.map(({ name }: NavigationProps) => (
+            <NavLinkStyled
+              key={name}
+              router={router}
+              routeName={name}
+            >
+              {i18n._(PAGE_TITLES[name])}
+            </NavLinkStyled>
+          ))}
+        </NavigationList>
+        <LanguageSwitch
+          selectedLanguage={selectedLanguage}
+          onChangeLanguage={onChangeLanguage}
+        />
+      </NavigationWrapper>
+    )}
+  </I18n>
 );

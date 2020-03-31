@@ -1,0 +1,11 @@
+{
+  "Home": {
+    "origin": [["src/app/constants/page-titles.ts", 6]]
+  },
+  "About": {
+    "origin": [["src/app/constants/page-titles.ts", 7]]
+  },
+  "Portfolio": {
+    "origin": [["src/app/constants/page-titles.ts", 8]]
+  }
+}
