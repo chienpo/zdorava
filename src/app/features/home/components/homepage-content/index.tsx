@@ -5,16 +5,22 @@ import {
   HomepageHGroup,
   HomepageTitle,
   HomepageSubtitle,
+  WebsiteSubtitle,
+  Name,
+  SurName,
 } from './styled';
 
 export const HomepageContent = () => (
   <HomepageContentWrapper>
     <HomepageHGroup>
       <HomepageTitle>
-        STEF <span>LAGUNOVSKY</span>
+        <Name>Stepan</Name>
+        <SurName>Lagunovsky</SurName>
       </HomepageTitle>
-
       <HomepageSubtitle>FRONT-END DEVELOPER</HomepageSubtitle>
+      <WebsiteSubtitle>
+        Zdorava
+      </WebsiteSubtitle>
     </HomepageHGroup>
   </HomepageContentWrapper>
 );
