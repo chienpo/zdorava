@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { Trans } from '@lingui/macro';
 
+import aboutLogo from 'assets/images/about-logo.png';
+import { RESUME, SKILLS } from 'app/constants/about';
 import { Accordion } from 'app/ui/accordion/accordion';
 import {
   SectionAbout,
@@ -9,8 +11,6 @@ import {
   DeveloperName,
   Position,
 } from './styled';
-import { RESUME, SKILLS } from 'app/constants/about';
-import aboutLogo from 'assets/images/about-logo.png';
 
 export const AboutView = () => (
   <SectionAbout>
@@ -22,7 +22,11 @@ export const AboutView = () => (
         <Trans>Stefan Lagunovsky</Trans>
       </DeveloperName>
       <Position>
-        Front-End <strong>ReactJS</strong> <Trans>Developer</Trans>
+        Front-End
+        &nbsp;
+        <strong>ReactJS</strong>
+        &nbsp;
+        <Trans>Developer</Trans>
       </Position>
       <Accordion data={RESUME} activePanel={SKILLS} />
     </AccordionBox>
