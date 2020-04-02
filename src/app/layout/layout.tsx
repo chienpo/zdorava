@@ -6,7 +6,7 @@ import { languageMiddleware } from 'app/providers/language-provider';
 import { Navigation } from './components/navigation';
 import { Footer } from './components/footer';
 import { Main } from './main';
-import { AppContent } from './styled';
+import { AppContent, Header } from './styled';
 
 export const Layout = () => (
   // TODO: Check and refactor scrollbar styled
@@ -14,11 +14,12 @@ export const Layout = () => (
     <I18n>
       {({ i18n }) => (
         <AppContent>
-          <Navigation
-            selectedLanguage={i18n.language}
-            onChangeLanguage={val => languageMiddleware.changeLanguage(val)}
-          />
-          {/* TODO: Check jsx main/Main */}
+          <Header>
+            <Navigation
+              selectedLanguage={i18n.language}
+              onChangeLanguage={val => languageMiddleware.changeLanguage(val)}
+            />
+          </Header>
           <main>
             <Main />
           </main>

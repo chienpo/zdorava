@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Masonry from 'react-masonry-component';
 
 import { Button } from '../../ui/button/button';
+import sectionBg  from 'assets/images/wrapper_main.jpg'
 
 export const PortfolioTabs = styled.div`
   padding: 40px 0 5px;
@@ -100,8 +101,8 @@ export const PortfolioOverlay = styled.div`
 `;
 
 export const SectionPortfolio = styled.section`
-  background: url('http://zdorava.com/assets/templates/html/img/backgrounds/wrapper_main.jpg')
-    center center no-repeat / cover;
+  background: url(${sectionBg})center center no-repeat;
+  background-size: cover;
   background-attachment: fixed;
 `;
 

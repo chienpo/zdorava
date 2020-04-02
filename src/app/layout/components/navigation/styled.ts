@@ -13,6 +13,8 @@ export const NavigationWrapper = styled.div`
   z-index: 1;
   display: grid;
   grid-template-columns: 1fr 170px;
+  position: fixed;
+  width: 100%;
 `;
 
 export const NavigationList = styled.nav`
@@ -34,7 +36,7 @@ export const NavLinkStyled = styled(BaseLink)`
   text-transform: uppercase;
   padding: 10px 35px;
   border-bottom: 1px solid transparent;
-  
+
   ${({ theme }) =>
     theme.mode === DARK_MODE
       ? `
@@ -69,6 +71,6 @@ export const NavLinkStyled = styled(BaseLink)`
         &:hover {
           color: red;
           border-color: red;
-        }      
+        }
       `};
 `;
