@@ -17,7 +17,7 @@ msgstr ""
 msgid "About"
 msgstr "About"
 
-#: src/app/features/about/about-view.tsx:16
+#: src/app/features/about/about-view.tsx:20
 msgid "Developer"
 msgstr "Developer"
 

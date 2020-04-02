@@ -17,7 +17,7 @@ msgstr ""
 msgid "About"
 msgstr "Обо мне"
 
-#: src/app/features/about/about-view.tsx:16
+#: src/app/features/about/about-view.tsx:20
 msgid "Developer"
 msgstr "Разработчик"
 
