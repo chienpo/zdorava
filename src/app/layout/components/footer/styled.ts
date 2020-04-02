@@ -15,6 +15,7 @@ export const FooterWrapper = styled.div`
     theme.mode === DARK_MODE
       ? `url(${overlayBlackDot}) repeat scroll 0 0`
       : `url(${overlayWhiteDot}) repeat scroll 0 0`};
+  z-index: 1;
 `;
 
 export const FooterNav = styled.nav`
