@@ -1,4 +1,5 @@
 import React from 'react';
+import GlitchEffect from 'react-glitch-effect';
 
 import {
   HomepageContentWrapper,
@@ -8,6 +9,7 @@ import {
   WebsiteSubtitle,
   Name,
   SurName,
+  GlitchLine,
 } from './styled';
 
 export const HomepageContent = () => (
@@ -17,6 +19,9 @@ export const HomepageContent = () => (
         <Name>Stepan</Name>
         <SurName>Lagunovsky</SurName>
       </HomepageTitle>
+      <GlitchEffect duration="20s">
+        <GlitchLine />
+      </GlitchEffect>
       <HomepageSubtitle>FRONT-END DEVELOPER</HomepageSubtitle>
       <WebsiteSubtitle>
         Zdorava

@@ -5,6 +5,17 @@ import overlayWhiteDot from 'assets/images/overlay_white.png';
 import { DARK_MODE } from 'app/constants/theme';
 import { noiseAnim, noiseAnimTwo } from 'app/animations/keyframes/noise';
 
+export const GlitchLine = styled.div`
+  min-height: 3px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: url(${overlayWhiteDot}) center center no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: -10px;
+`;
+
 export const HomepageContentWrapper = styled.div`
   background: ${({ theme }) =>
     theme.mode === DARK_MODE
@@ -36,7 +47,7 @@ export const HomepageTitle = styled.h1`
   flex-wrap: wrap;
   justify-content: center;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 0;
 `;
 
 export const Name = styled.div`
