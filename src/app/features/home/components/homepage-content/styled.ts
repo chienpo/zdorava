@@ -13,13 +13,13 @@ export const HomepageContentWrapper = styled.div`
 
   height: 100%;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   z-index: 1;
 `;
 
 export const HomepageHGroup = styled.div`
   opacity: 0.8;
-  padding: 20px 0 100px;
+  padding: 20px 0 20px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -35,6 +35,8 @@ export const HomepageTitle = styled.h1`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 `;
 
 export const Name = styled.div`
@@ -43,7 +45,6 @@ export const Name = styled.div`
   margin-top: auto;
   margin-bottom: 17px;
   color: yellow;
-  text-transform: uppercase;
 `;
 
 export const SurName = styled.div`

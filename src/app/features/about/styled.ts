@@ -18,7 +18,6 @@ export const IntroduceImage = styled.figure`
 
 export const AccordionBox = styled.div`
   width: 100%;
-  height: 60%;
 `;
 
 export const DeveloperName = styled.h1`
@@ -38,7 +37,7 @@ export const Position = styled.h2`
   font-family: Orbitron-Bold, sans-serif;
   font-size: 31px;
   margin-bottom: 28px;
-  
+
   strong {
     color: red;
   }

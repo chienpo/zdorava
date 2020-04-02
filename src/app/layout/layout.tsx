@@ -4,6 +4,7 @@ import Scrollbars from 'react-custom-scrollbars';
 
 import { languageMiddleware } from 'app/providers/language-provider';
 import { Navigation } from './components/navigation';
+import { Footer } from './components/footer';
 import { Main } from './main';
 import { AppContent } from './styled';
 
@@ -21,6 +22,7 @@ export const Layout = () => (
           <main>
             <Main />
           </main>
+          <Footer />
         </AppContent>
       )}
     </I18n>

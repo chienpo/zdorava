@@ -6,5 +6,5 @@ export const AppContent = styled.div`
   width: 100%;
   min-height: 100vh;
   grid-template-columns: minmax(320px, 1fr);
-  grid-template-rows: min-content;
+  grid-template-rows: auto 1fr auto;
 `;
