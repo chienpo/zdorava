@@ -9,16 +9,17 @@ import { FooterWrapper, FooterNav, FooterCopy, FooterSocialLink } from './styled
 
 export const FooterView = () => {
   const footerNavigationLinks = [
-    {path: SOCIAL_GITHUB_PATH, icon: faGithub},
-    {path: SOCIAL_LINKED_IN_PATH, icon: faLinkedin},
-    {path: null, icon: faPhone},
+    {name: 'github', path: SOCIAL_GITHUB_PATH, icon: faGithub},
+    {name: 'linkedin', path: SOCIAL_LINKED_IN_PATH, icon: faLinkedin},
+    {name: 'contacts', path: null, icon: faPhone},
   ];
 
   return (
     <FooterWrapper>
       <FooterNav>
-        {footerNavigationLinks.map(({ path, icon }) => path ? (
+        {footerNavigationLinks.map(({ path, icon, name }) => path ? (
           <FooterSocialLink
+            key={name}
             href={path}
             target="_blank"
             rel="noopener noreferrer"
@@ -27,6 +28,7 @@ export const FooterView = () => {
           </FooterSocialLink>
         ) : (
           <FooterSocialLink
+            key={name}
             as="button"
           >
             <FontAwesomeIcon icon={icon} />

@@ -25,9 +25,6 @@ export const PortfolioView: React.FC<Props> = ({
   activeCategoryPayload,
 }: Props) => (
   <SectionPortfolio>
-    <p>
-      
-    </p>
     <PortfolioOverlay>
       <PortfolioTabs activeCategoryPayload={activeCategoryPayload} />
       <MasonryGrid data={data} />

@@ -8,7 +8,7 @@ interface Props {
 }
 
 interface Categories {
-  lable: string;
+  label: string;
 }
 
 export const PortfolioTabsView: React.FC<Props> = ({
@@ -18,13 +18,13 @@ export const PortfolioTabsView: React.FC<Props> = ({
 }: Props) => {
   return (
     <PortfolioTabs>
-      {categories.map(category => (
+      {categories.map(({ label}) => (
         <PortfolioTab
-          key={category.lable}
-          onClick={() => onSetCategory(category.lable)}
-          className={category.lable === activeCategory ? 'active' : ''}
+          key={label}
+          onClick={() => onSetCategory(label)}
+          className={label === activeCategory ? 'active' : ''}
         >
-          {category.lable}
+          {label}
         </PortfolioTab>
       ))}
     </PortfolioTabs>

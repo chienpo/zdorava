@@ -6,12 +6,12 @@ interface Props {
   activeCategoryPayload: (name: string) => void;
 }
 
-const categories = [{ lable: 'all' }, { lable: 'art' }, { lable: 'frontend' }];
+const categories = [{ label: 'all' }, { label: 'art' }, { label: 'frontend' }];
 
 export const PortfolioTabs: React.FC<Props> = ({
   activeCategoryPayload,
 }: Props) => {
-  const [activeCategory, setCategory] = useState(categories[0].lable);
+  const [activeCategory, setCategory] = useState('all');
 
   const onSetCategory = (name: string) => {
     setCategory(name);
