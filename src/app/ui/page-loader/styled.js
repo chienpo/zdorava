@@ -1,8 +1,9 @@
 import styled, { keyframes } from 'styled-components';
 
 import { DARK_MODE } from 'app/constants/theme';
-import overlayBlackDot from 'assets/images/overlay_black.png';
+import { BLACK, BLACK_90, WHITE, WHITE_80 } from 'app/constants/colors';
 import overlayWhiteDot from 'assets/images/overlay_white.png';
+import overlayBlackDot from 'assets/images/overlay_black.png';
 
 const write1 = keyframes`
   0% { stroke-dashoffset: 1200; }
@@ -47,16 +48,16 @@ export const LoaderBox = styled.div`
   ${({ theme }) =>
     theme.mode === DARK_MODE
       ? `
-    background: rgba(0, 0, 0, 0.9) url(${overlayBlackDot}) repeat scroll 0 0;
+    background: ${BLACK_90} url(${overlayBlackDot}) repeat scroll 0 0;
     path {
-      stroke: white;
+      stroke: ${WHITE};
     }
   `
       : `
     path {
-      stroke: black;
+      stroke: ${BLACK};
     }
-    background: rgba(255, 255, 255, 0.8) url(${overlayWhiteDot}) repeat scroll 0 0;
+    background: ${WHITE_80} url(${overlayWhiteDot}) repeat scroll 0 0;
   `}
 
   .stroke-I {

@@ -1,15 +1,24 @@
 import styled from 'styled-components';
 import Masonry from 'react-masonry-component';
 
+import {
+  BLACK,
+  RED,
+  SHARK_DARK_70,
+  WHITE,
+  WHITE_20,
+  WHITE_SMOKE,
+} from 'app/constants/colors';
+
 export const MoreButton = styled.button`
   position: fixed;
-  border: 1px solid black;
+  border: 1px solid ${BLACK};
   outline: none;
   bottom: 10px;
   right: 1%;
   padding: 10px 20px;
   cursor: pointer;
-  background: black;
+  background: ${BLACK};
   width: 8%;
   box-sizing: inherit;
   transition: all ease-in-out 0.4s;
@@ -17,17 +26,17 @@ export const MoreButton = styled.button`
   align-items: center;
   justify-content: center;
   line-height: 1;
-  color: whitesmoke;
+  color: ${WHITE_SMOKE};
 
   &:hover {
-    background: white;
-    color: black;
+    background: ${WHITE};
+    color: ${BLACK};
   }
 `;
 
 export const PortfolioOverlay = styled.div`
   padding: 0 0;
-  background: rgba(38, 38, 41, 0.7);
+  background: ${SHARK_DARK_70};
 `;
 
 export const SectionPortfolio = styled.section`
@@ -47,11 +56,11 @@ export const StyledMassonry = styled(Masonry)`
 
   height: auto !important;
   margin: 0 auto;
-  background: black;
+  background: ${BLACK};
 `;
 
 export const ItemLabel = styled.div`
-  color: white;
+  color: ${WHITE};
   font-family: Orbitron-Medium, sans-serif;
   font-size: 14px;
   line-height: 20px;
@@ -62,7 +71,7 @@ export const ItemLabel = styled.div`
   padding: 5px;
   outline: 0;
   transition: all 0.8s ease-in-out;
-  background: red;
+  background: ${RED};
   opacity: 0.8;
   border-right: 1px solid transparent;
   width: 80%;
@@ -74,9 +83,9 @@ export const ItemDescription = styled.div`
   bottom: 20px;
   left: -100%;
   transition: all 0.8s ease-in-out;
-  background: red;
+  background: ${RED};
   opacity: 0.8;
-  color: white;
+  color: ${WHITE};
   width: 90%;
 `;
 
@@ -89,7 +98,6 @@ export const Item = styled.div`
   top: auto !important;
   transform: none !important;
   opacity: 1;
-
   width: 100%;
 
   @media (min-width: 600px) {
@@ -168,12 +176,12 @@ export const ItemFigure = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-  border: 1px solid white;
+  border: 1px solid ${WHITE};
   overflow: hidden;
   transition: all 0.8s ease 0s;
 
   &:before {
-    background: rgba(255, 255, 255, 0.2) none repeat scroll 0 0;
+    background: ${WHITE_20} none repeat scroll 0 0;
     box-sizing: border-box;
     content: '';
     height: 100%;

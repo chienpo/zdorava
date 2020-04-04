@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
-import { DARK_MODE } from 'app/constants/theme';
 import overlayBlackDot from 'assets/images/overlay_black.png';
 import overlayWhiteDot from 'assets/images/overlay_white.png';
+import { DARK_MODE } from '../../../constants/theme';
+import { BLACK_LIGHTER_95, BLACK_LIGHTER_99, GRAY, RED, WHITE_SMOKE_10 } from '../../../constants/colors';
 
 
 export const FooterWrapper = styled.div`
@@ -25,9 +26,9 @@ export const FooterNav = styled.nav`
   justify-content: center;
   padding: 45px 0;
   ${({ theme }) => theme.mode === DARK_MODE ? `
-    background: rgba(1, 1, 1, 0.95);
+    background: ${BLACK_LIGHTER_95};
   ` : `
-    background: rgba(240, 240, 240, 0.1);
+    background: ${WHITE_SMOKE_10};
   `};
 `;
 
@@ -37,18 +38,18 @@ export const FooterCopy = styled.small`
   letter-spacing: 0.5px;
   display: block;
   width: 100%;
-  color: #808080;
+  color: ${GRAY};
   ${({ theme }) => theme.mode === DARK_MODE ? `
-    background: rgba(1, 1, 1, 0.99);
+    background: ${BLACK_LIGHTER_99};
   ` : `
-    background: rgba(240, 240, 240, 0.1);
+    background: ${WHITE_SMOKE_10};
   `};
 `;
 
 export const FooterSocialLink = styled.a`
   display: flex;
   align-items: center;
-  color: #808080;
+  color: ${GRAY};
   font-size: 30px;
   background: none;
   border: none;
@@ -56,6 +57,6 @@ export const FooterSocialLink = styled.a`
   transition: color ease-out 0.4s;
 
   &:hover {
-    color: red;
+    color: ${RED};
   }
 `;

@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 import { BaseLink } from 'react-router5';
 
-import { DARK_MODE } from 'app/constants/theme';
 import overlayBlackDot from 'assets/images/overlay_black.png';
 import overlayWhiteDot from 'assets/images/overlay_white.png';
+import { DARK_MODE } from '../../../constants/theme';
+import { BLACK_LIGHTER_95, GRAY, RED, WHITE, WHITE_90, WHITE_SMOKE_10 } from '../../../constants/colors';
 
 export const NavigationWrapper = styled.div`
   background: ${({ theme }) =>
     theme.mode === DARK_MODE
-      ? `rgba(1, 1, 1, 0.95) url(${overlayBlackDot}) repeat scroll 0 0;`
-      : `rgba(255, 255, 255, 0.90) url(${overlayWhiteDot}) repeat scroll 0 0;`};
+      ? `${BLACK_LIGHTER_95} url(${overlayBlackDot}) repeat scroll 0 0;`
+      : `${WHITE_90} url(${overlayWhiteDot}) repeat scroll 0 0;`};
   z-index: 1;
   display: grid;
   grid-template-columns: 1fr 170px;
@@ -18,7 +19,7 @@ export const NavigationWrapper = styled.div`
 `;
 
 export const NavigationList = styled.nav`
-  background: rgba(240, 240, 240, 0.1);
+  background: ${WHITE_SMOKE_10};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,7 +30,7 @@ export const NavigationList = styled.nav`
 export const NavLinkStyled = styled(BaseLink)`
   transition: all ease-in-out 0.4s;
   text-decoration: none;
-  color: #808080;
+  color: ${GRAY};
   font-size: 28px;
   line-height: 30px;
   letter-spacing: 0.5px;
@@ -40,37 +41,37 @@ export const NavLinkStyled = styled(BaseLink)`
   ${({ theme }) =>
     theme.mode === DARK_MODE
       ? `
-      color: #808080;
+      color: ${GRAY};
 
         &.active {
-          color: white;
-          border-bottom: 1px solid white;
+          color: ${WHITE};
+          border-bottom: 1px solid ${WHITE};
 
           &:hover {
-            color: white;
-            border-color: white;
+            color: ${WHITE};
+            border-color: ${WHITE};
           }
         }
 
         &:hover {
-          color: red;
-          border-color: red;
+          color: ${RED};
+          border-color: ${RED};
         }
       `
       : `
         &.active {
-          color: red;
-          border-bottom: 1px solid red;
+          color: ${RED};
+          border-bottom: 1px solid ${RED};
 
           &:hover {
-            color: red;
-            border-color: red;
+            color: ${RED};
+            border-color: ${RED};
           }
         }
 
         &:hover {
-          color: red;
-          border-color: red;
+          color: ${RED};
+          border-color: ${RED};
         }
       `};
 `;

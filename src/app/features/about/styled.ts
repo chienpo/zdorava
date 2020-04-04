@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { BLACK, RED, WHITE } from 'app/constants/colors';
+
 export const SectionAbout = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -10,6 +12,7 @@ export const SectionAbout = styled.section`
 export const IntroduceImage = styled.figure`
   padding: 0 21.5%;
   box-sizing: border-box;
+
   img {
     width: 100%;
     height: auto;
@@ -22,8 +25,8 @@ export const AccordionBox = styled.div`
 
 export const DeveloperName = styled.h1`
   padding: 10px 0 0 20px;
-  background: black;
-  color: white;
+  background: ${BLACK};
+  color: ${WHITE};
   text-align: left;
   font-family: Orbitron-Bold, sans-serif;
   font-size: 56px;
@@ -39,6 +42,6 @@ export const Position = styled.h2`
   margin-bottom: 28px;
 
   strong {
-    color: red;
+    color: ${RED};
   }
 `;

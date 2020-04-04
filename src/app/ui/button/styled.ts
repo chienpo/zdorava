@@ -1,13 +1,12 @@
 import styled from 'styled-components';
 
+import { BLACK, SHARK, WHITE } from 'app/constants/colors';
+
 export const ButtonStyled = styled.button`
-  border: 1px solid black;
   outline: none;
   bottom: 10px;
   right: 1%;
   padding: 10px 20px;
-  cursor: pointer;
-  width: 8%;
   box-sizing: inherit;
   transition: all ease-in-out 0.4s;
   display: flex;
@@ -15,16 +14,15 @@ export const ButtonStyled = styled.button`
   justify-content: center;
   line-height: 1;
   color: whitesmoke;
-  background: #222225;
-  border: 1px solid #262629;
+  background: transparent;
+  border: 1px solid ${SHARK};
   opacity: 0.8;
-  margin: 0 3px;
   width: 80%;
   margin: 0 auto;
 
   &:hover {
-    background: white;
-    color: black;
+    background: ${WHITE};
+    color: ${BLACK};
   }
 
   ${(props: any) =>
@@ -33,8 +31,8 @@ export const ButtonStyled = styled.button`
     cursor: default;
 
     &:hover {
-      background: #222225;
-      color: white;
+      background: ${SHARK};
+      color: ${WHITE};
     }
   `};
 `;

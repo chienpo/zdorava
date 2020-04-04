@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { BLACK, ROSE_WOOD_50, WHITE } from '../../constants/colors';
+
 export const Panel = styled.div<{ active: boolean }>`
   font-family: Orbitron-Bold, sans-serif;
   font-size: 21px;
@@ -11,13 +13,13 @@ export const Panel = styled.div<{ active: boolean }>`
   ${({ active }) =>
     active
       ? `
-    color: white;
-    background: black;
+    color: ${WHITE};
+    background: ${BLACK};
     padding-left: 10px;
     margin-bottom: 24px;
  `
       : `
-    color: rgba(100, 0, 0, 0.5);
+    color: ${ROSE_WOOD_50};
     background: transparent;
     margin-bottom: 18px;
   `};

@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 import Masonry from 'react-masonry-component';
 
-import { Button } from '../../ui/button/button';
+import { BLACK, GREEN, RED, SHARK, SHARK_DARK, SHARK_DARK_70, TUNDORA, WHITE, WHITE_20 } from 'app/constants/colors';
+import { Button } from 'app/ui/button/button';
 import sectionBg  from 'assets/images/wrapper_main.jpg'
 
 export const PortfolioTabs = styled.div`
   padding: 40px 0 5px;
   max-width: 80%;
   margin: 0 auto;
-  display: flex;
   justify-content: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -16,30 +16,29 @@ export const PortfolioTabs = styled.div`
 `;
 
 export const PortfolioTab = styled(Button)`
-  color: #404040;
+  color: ${TUNDORA};
   font-weight: normal;
   text-decoration: none;
   padding: 15px 0;
-  text-transform: uppercase;
   font-size: 16px;
   text-transform: uppercase;
   transition: all ease-in-out 0.2s;
-  border: 1px solid #404040;
+  border: 1px solid ${TUNDORA};
   background: transparent;
   outline: none;
   cursor: pointer;
 
-  ${(props: any) => props.more && `background: green;`};
+  ${(props: any) => props.more && `background: ${GREEN};`};
 
   &:hover {
-    border-color: red;
-    color: red;
+    border-color: ${RED};
+    color: ${RED};
   }
 
   &.active {
     cursor: default;
-    color: white;
-    border-color: white;
+    color: ${WHITE};
+    border-color: ${WHITE};
   }
 `;
 
@@ -56,20 +55,20 @@ export const MoreButton = styled.button`
   justify-content: center;
   line-height: 1;
   color: whitesmoke;
-  background: #222225;
-  border: 1px solid #262629;
+  background: ${SHARK};
+  border: 1px solid ${SHARK_DARK};
   opacity: 0.8;
   width: 80%;
   margin: 0 auto;
 
   &:hover {
-    background: white;
-    color: black;
+    background: ${WHITE};
+    color: ${BLACK};
   }
 `;
 
 export const ItemLabel = styled.div`
-  color: white;
+  color: ${WHITE};
   font-family: Orbitron-Medium, sans-serif;
   font-size: 14px;
   line-height: 20px;
@@ -80,24 +79,25 @@ export const ItemLabel = styled.div`
   padding: 5px;
   outline: 0;
   transition: all 0.8s ease-in-out;
-  background: red;
+  background: ${RED};
   opacity: 0.8;
   border-right: 1px solid transparent;
 `;
+
 export const ItemDescription = styled.div`
   position: absolute;
   bottom: 10px;
   left: -250%;
   margin-bottom: 0;
   transition: all 0.8s ease-in-out;
-  background: red;
+  background: ${RED};
   opacity: 0.8;
-  color: white;
+  color: ${WHITE};
 `;
 
 export const PortfolioOverlay = styled.div`
   padding: 0 0;
-  background: rgba(38, 38, 41, 0.7);
+  background: ${SHARK_DARK_70};
 `;
 
 export const SectionPortfolio = styled.section`
@@ -117,7 +117,7 @@ export const StyledMassonry = styled(Masonry)`
 
   height: auto !important;
   margin: 0 auto;
-  background: black;
+  background: ${BLACK};
 `;
 
 export const StyledItem = styled.div`
@@ -129,7 +129,6 @@ export const StyledItem = styled.div`
   top: auto !important;
   transform: none !important;
   opacity: 1;
-
   width: 100%;
 
   @media (min-width: 600px) {
@@ -213,7 +212,7 @@ export const ItemFigure = styled.div`
   transition: all 0.8s ease 0s;
 
   &:before {
-    background: rgba(255, 255, 255, 0.2) none repeat scroll 0 0;
+    background: ${WHITE_20} none repeat scroll 0 0;
     box-sizing: border-box;
     content: '';
     height: 100%;

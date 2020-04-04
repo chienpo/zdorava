@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
+import { RED, TUNDORA, WHITE } from 'app/constants/colors';
+
 export const PortfolioTabs = styled.div`
   padding: 40px 0 5px;
   max-width: 80%;
   margin: 0 auto;
-  display: flex;
   justify-content: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -12,27 +13,26 @@ export const PortfolioTabs = styled.div`
 `;
 
 export const PortfolioTab = styled.button`
-  color: #404040;
+  color: ${TUNDORA};
   font-weight: normal;
   text-decoration: none;
   padding: 15px 0;
-  text-transform: uppercase;
   font-size: 16px;
   text-transform: uppercase;
   transition: all ease-in-out 0.2s;
-  border: 1px solid #404040;
+  border: 1px solid ${TUNDORA};
   background: transparent;
   outline: none;
   cursor: pointer;
 
   &:hover {
-    border-color: red;
-    color: red;
+    border-color: ${RED};
+    color: ${RED};
   }
 
   &.active {
     cursor: default;
-    color: white;
-    border-color: white;
+    color: ${WHITE};
+    border-color: ${WHITE};
   }
 `;

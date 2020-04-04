@@ -28,7 +28,7 @@ export const PortfolioView: React.FC<Props> = ({
     <PortfolioOverlay>
       <PortfolioTabs activeCategoryPayload={activeCategoryPayload} />
       <MasonryGrid data={data} />
-      <Button more type="button">
+      <Button disabled={noMore} more type="button">
         {noMore ? 'Comeing soon...' : 'Some More...'}
       </Button>
     </PortfolioOverlay>

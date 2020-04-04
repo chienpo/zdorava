@@ -1,10 +1,11 @@
 import styled, { keyframes } from 'styled-components';
 
+import { DARK_MODE } from 'app/constants/theme';
+import { BLACK_90, BLUE, DARK_SLATE_GREY, RED, WHITE, WHITE_90, YELLOW } from 'app/constants/colors';
+import { noiseAnim, noiseAnimTwo } from 'app/animations/keyframes/noise';
 import overlayBlackDot from 'assets/images/overlay_black.png';
 import overlayWhiteDot from 'assets/images/overlay_white.png';
 import homepageGlitchBg from 'assets/images/homepage-yellow-background.jpg';
-import { DARK_MODE } from 'app/constants/theme';
-import { noiseAnim, noiseAnimTwo } from 'app/animations/keyframes/noise';
 
 export const GlitchLine = styled.div`
   min-height: 1px;
@@ -12,7 +13,6 @@ export const GlitchLine = styled.div`
   left: 0;
   width: 100%;
   background: url(${overlayWhiteDot}) center center no-repeat;
-  background-position: center;
   background-size: cover;
   margin-top: -10px;
 `;
@@ -25,8 +25,8 @@ export const Divider = styled.div`
 export const HomepageContentWrapper = styled.div`
   background: ${({ theme }) =>
     theme.mode === DARK_MODE
-      ? `rgba(1, 1, 1, 0.9) url(${overlayBlackDot}) repeat scroll 0 0;`
-      : `rgba(255, 255, 255, 0.90) url(${overlayWhiteDot}) repeat scroll 0 0;`};
+      ? `${BLACK_90} url(${overlayBlackDot}) repeat scroll 0 0;`
+      : `${WHITE_90} url(${overlayWhiteDot}) repeat scroll 0 0;`};
 
   height: 100%;
   display: flex;
@@ -36,9 +36,9 @@ export const HomepageContentWrapper = styled.div`
 `;
 
 const blink = keyframes`
-  0%{opacity: 0;}
-  50%{opacity: 1;}
-  100%{opacity: 0;}
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
 `;
 
 export const Image = styled.div<{ bgIsToggling: boolean }>`
@@ -54,7 +54,6 @@ export const Image = styled.div<{ bgIsToggling: boolean }>`
 
   ${({ bgIsToggling }) => bgIsToggling && `
     background: url(${homepageGlitchBg}) center center no-repeat;
-    background-position: center;
     background-size: cover;
   `};
 `;
@@ -71,7 +70,7 @@ export const HomepageHGroup = styled.div`
 
 export const HomepageTitle = styled.h1`
   font-family: 'Orbitron-Bold', sans-serif;
-  color: darkslategrey;
+  color: ${DARK_SLATE_GREY};
   font-size: 65.5px;
   line-height: 80px;
   letter-spacing: 0;
@@ -87,11 +86,11 @@ export const Name = styled.div`
   line-height: 1;
   margin-top: auto;
   margin-bottom: 17px;
-  color: yellow;
+  color: ${YELLOW};
 `;
 
 export const SurName = styled.div`
-  color: white;
+  color: ${WHITE};
   margin-left: 15px;
   display: inline;
 `;
@@ -103,7 +102,7 @@ export const HomepageSubtitle = styled.div`
   line-height: 18px;
   letter-spacing: 5px;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.9);
+  color: ${WHITE_90};
   height: 18px;
 `;
 
@@ -126,7 +125,7 @@ export const WebsiteSubtitle = styled.div`
     position: absolute;
     right: 0;
     top: 0;
-    color: white;
+    color: ${WHITE};
     text-transform: uppercase;
     background: transparent;
     overflow: hidden;
@@ -135,13 +134,13 @@ export const WebsiteSubtitle = styled.div`
 
   &:before {
     left: -2px;
-    text-shadow: 1px 0 blue;
+    text-shadow: 1px 0 ${BLUE};
     animation: ${noiseAnimTwo} 3s infinite linear alternate-reverse;
   }
 
   &:after {
     left: 2px;
-    text-shadow: -1px 0 red;
+    text-shadow: -1px 0 ${RED};
     animation: ${noiseAnim} 4s infinite alternate-reverse;
   }
 `;
