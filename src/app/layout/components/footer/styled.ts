@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 import { DARK_MODE } from 'app/constants/theme';
-import overlayBlackDot from './overlay_black.png';
-import overlayWhiteDot from './overlay_white.png';
+import overlayBlackDot from 'assets/images/overlay_black.png';
+import overlayWhiteDot from 'assets/images/overlay_white.png';
 
 
 export const FooterWrapper = styled.div`

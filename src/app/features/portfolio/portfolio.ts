@@ -1,7 +1,7 @@
 import { createElement, useState, useEffect, FC } from 'react';
 import axios from 'axios';
 
-import { PageLoader} from 'app/ui/page-loader';
+import { PageLoader} from 'app/ui/page-loader/page-loader';
 import { PortfolioView } from './portfolio-view';
 
 interface PortfolioItems {
@@ -66,7 +66,7 @@ export const Portfolio: FC<Props> = () => {
         .then((portfolioData: any = []) => {
           setData(portfolioData);
           setCategoryData(portfolioData);
-          setPageLoading(false);
+          setTimeout(() => setPageLoading(false), 1800);
         }).catch(({ response }) => {
           throw response.data.error
         })
