@@ -18,6 +18,9 @@ const masonryOptions = {
 interface Props {
   data: PortfolioItem[];
   onItemClick: (value: string) => void;
+  handleLayoutComplete: (item: any) => void;
+  handleRemoveComplete: (item: any) => void;
+  handleImagesLoaded: (imagesLoadedInstance: any) => void;
 }
 
 interface PortfolioItem {
@@ -31,18 +34,10 @@ interface PortfolioItem {
 export const MasonryGridView: React.FC<Props> = ({
   data,
   onItemClick,
+  handleLayoutComplete,
+  handleRemoveComplete,
+  handleImagesLoaded,
 }: Props) => {
-  const handleLayoutComplete = (item: any) => {
-    console.warn('Layout Complete', item);
-  };
-
-  const handleRemoveComplete = (item: any) => {
-    console.warn('RemoveComplete', item);
-  };
-
-  const handleImagesLoaded = (imagesLoadedInstance: any) => {
-    console.warn('ImagesLoaded', imagesLoadedInstance);
-  };
 
   return (
     <StyledMassonry

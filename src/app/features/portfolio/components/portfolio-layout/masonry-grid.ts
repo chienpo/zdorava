@@ -9,6 +9,9 @@ interface Props {
 interface OtherProps {
   data: PortfolioItem[];
   onItemClick: (value: string) => void;
+  handleLayoutComplete: (item: any) => void;
+  handleRemoveComplete: (item: any) => void;
+  handleImagesLoaded: (imagesLoadedInstance: any) => void;
 }
 
 interface PortfolioItem {
@@ -24,5 +27,23 @@ export const MasonryGrid: React.FC<Props> = ({ data }: Props) => {
     alert(value);
   };
 
-  return createElement<OtherProps>(MasonryGridView, { data, onItemClick });
+  const handleLayoutComplete = (item: any) => {
+    console.warn('Layout Complete', item);
+  };
+
+  const handleRemoveComplete = (item: any) => {
+    console.warn('RemoveComplete', item);
+  };
+
+  const handleImagesLoaded = (imagesLoadedInstance: any) => {
+    console.warn('ImagesLoaded', imagesLoadedInstance);
+  };
+
+  return createElement<OtherProps>(MasonryGridView, {
+    data,
+    onItemClick,
+    handleLayoutComplete,
+    handleRemoveComplete,
+    handleImagesLoaded,
+  });
 };

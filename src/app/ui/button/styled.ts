@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { BLACK, SHARK, WHITE } from 'app/constants/colors';
+import { SHARK, WHITE } from 'app/constants/colors';
 
 export const ButtonStyled = styled.button`
   outline: none;
@@ -19,20 +19,10 @@ export const ButtonStyled = styled.button`
   opacity: 0.8;
   width: 80%;
   margin: 0 auto;
+  cursor: default;
 
   &:hover {
-    background: ${WHITE};
-    color: ${BLACK};
+    background: ${SHARK};
+    color: ${WHITE};
   }
-
-  ${(props: any) =>
-    props.more &&
-    `
-    cursor: default;
-
-    &:hover {
-      background: ${SHARK};
-      color: ${WHITE};
-    }
-  `};
 `;

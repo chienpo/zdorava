@@ -1,7 +1,9 @@
 import { createElement, useState, useEffect, FC } from 'react';
 import axios from 'axios';
 
-import { PageLoader} from 'app/ui/page-loader/page-loader';
+import { FIREBASE_PORTFOLIO_URL } from '../../constants/api';
+import { PORTFOLIO_CATEGORY_TAB_NAME_ART, PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND } from '../../constants/portfolio';
+import { PageLoader } from '../../ui/page-loader/page-loader';
 import { PortfolioView } from './portfolio-view';
 
 interface PortfolioItems {
@@ -15,12 +17,15 @@ interface PortfolioItems {
 interface Props {
   data: PortfolioItems[];
   activeCategoryPayload: (name: string) => void;
+  getPortfolioDate: () => void;
+  hasMore: boolean;
 }
 
 export const Portfolio: FC<Props> = () => {
   const [data, setData] = useState<PortfolioItems[]>([]);
   const [categoryData, setCategoryData] = useState<PortfolioItems[]>([]);
   const [pageLoading, setPageLoading] = useState<boolean>(true);
+  const [hasMore, setHasMore] = useState<boolean>(true);
 
   const shuffleCards = (shufflingArray: PortfolioItems[]) => {
     const shuffledArray = [...shufflingArray];
@@ -37,22 +42,32 @@ export const Portfolio: FC<Props> = () => {
   };
 
   const getPortfolioDate = async () => {
-    const { data: responseData } = await axios.get('https://zdorava-9a8e1.firebaseio.com/portfolio.json');
+    const { data: portfolioData } = await axios.get(FIREBASE_PORTFOLIO_URL, {
+      params: {
+        // orderBy: JSON.stringify("$value"),
+        collection: "portfolio",
+        orderBy: JSON.stringify("art"),
+        limit: 5,
+      }
+    });
 
-    const portfolioData = Object.entries(responseData)
-      .map(([, value]) => value)
-      .flat();
-
-    return portfolioData;
+    if (!data.length) {
+      setData(portfolioData.slice(0, 7));
+      setCategoryData(portfolioData.slice(0, 7));
+      return portfolioData.slice(0, 7)
+    }
+    setData(portfolioData.slice(0, data.length * 2));
+    setCategoryData(portfolioData.slice(0, data.length * 2));
+    return portfolioData.slice(0, data.length * 2)
   };
 
   const sortGallery = (name: string) => {
     switch (name) {
-      case 'art':
+      case PORTFOLIO_CATEGORY_TAB_NAME_ART:
         setCategoryData(shuffleCards(data
           .filter(({ category }) => category === name)));
         break;
-      case 'frontend':
+      case PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND:
         setCategoryData(shuffleCards(data
           .filter(({ category }) => category === name)));
         break;
@@ -62,15 +77,21 @@ export const Portfolio: FC<Props> = () => {
   };
 
   useEffect(() => {
-      getPortfolioDate()
-        .then((portfolioData: any = []) => {
-          setData(portfolioData);
-          setCategoryData(portfolioData);
-          setTimeout(() => setPageLoading(false), 1800);
-        }).catch(({ response }) => {
-          throw response.data.error
-        })
+    getPortfolioDate()
+      .then((portfolioData: any = []) => {
+        setData(portfolioData);
+        setCategoryData(portfolioData);
+        setPageLoading(false)
+      }).catch(({ response }) => {
+      throw response.data.error
+    })
   }, []);
+
+  useEffect(() => {
+    if (data.length >= 13) {
+      setHasMore(false);
+    }
+  }, [data]);
 
   if (pageLoading) {
     return createElement(PageLoader);
@@ -79,5 +100,7 @@ export const Portfolio: FC<Props> = () => {
   return createElement<Props>(PortfolioView, {
     data: categoryData,
     activeCategoryPayload: sortGallery,
+    getPortfolioDate,
+    hasMore,
   });
 };

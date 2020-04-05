@@ -17,13 +17,33 @@ msgstr ""
 msgid "About"
 msgstr "Обо мне"
 
+#: src/app/constants/portfolio.ts:6
+msgid "All projects"
+msgstr "Все проекты"
+
+#: src/app/constants/portfolio.ts:7
+msgid "Art"
+msgstr "Дизайн"
+
+#: src/app/features/portfolio/portfolio-view.tsx:14
+msgid "Coming soon..."
+msgstr "Портфолио загружено..."
+
 #: src/app/features/about/about-view.tsx:20
 msgid "Developer"
 msgstr "Разработчик"
 
+#: src/app/constants/portfolio.ts:8
+msgid "Front-end"
+msgstr "Front-end"
+
 #: src/app/constants/page-titles.ts:6
 msgid "Home"
 msgstr "Главная"
+
+#: src/app/features/portfolio/portfolio-view.tsx:12
+msgid "Loading..."
+msgstr "Загрузка..."
 
 #: src/app/constants/page-titles.ts:8
 msgid "Portfolio"

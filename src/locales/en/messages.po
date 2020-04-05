@@ -17,13 +17,33 @@ msgstr ""
 msgid "About"
 msgstr "About"
 
+#: src/app/constants/portfolio.ts:6
+msgid "All projects"
+msgstr "All projects"
+
+#: src/app/constants/portfolio.ts:7
+msgid "Art"
+msgstr "Art"
+
+#: src/app/features/portfolio/portfolio-view.tsx:14
+msgid "Coming soon..."
+msgstr "Coming soon..."
+
 #: src/app/features/about/about-view.tsx:20
 msgid "Developer"
 msgstr "Developer"
 
+#: src/app/constants/portfolio.ts:8
+msgid "Front-end"
+msgstr "Front-end"
+
 #: src/app/constants/page-titles.ts:6
 msgid "Home"
 msgstr "Home"
+
+#: src/app/features/portfolio/portfolio-view.tsx:12
+msgid "Loading..."
+msgstr "Loading..."
 
 #: src/app/constants/page-titles.ts:8
 msgid "Portfolio"
