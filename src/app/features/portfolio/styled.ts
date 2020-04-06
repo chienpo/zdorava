@@ -3,7 +3,8 @@ import Masonry from 'react-masonry-component';
 
 import { BLACK, GREEN, RED, SHARK, SHARK_DARK, SHARK_DARK_70, TUNDORA, WHITE, WHITE_20 } from 'app/constants/colors';
 import { Button } from 'app/ui/button/button';
-import sectionBg  from 'assets/images/wrapper_main.jpg'
+import sectionBg  from 'assets/images/wrapper_main.jpg';
+import sectionOverlayDark from 'assets/images/overlay_black_small_squares.png';
 
 export const PortfolioTabs = styled.div`
   padding: 40px 0 5px;
@@ -95,15 +96,17 @@ export const ItemDescription = styled.div`
   color: ${WHITE};
 `;
 
-export const PortfolioOverlay = styled.div`
-  padding: 0 0;
-  background: ${SHARK_DARK_70};
-`;
-
 export const SectionPortfolio = styled.section`
   background: url(${sectionBg})center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  height: 100%;
+`;
+
+export const PortfolioOverlay = styled.div`
+  padding: 0 0;
+  background: ${SHARK_DARK_70} url(${sectionOverlayDark}) repeat scroll 0 0;
+  height: 100%;
 `;
 
 export const StyledMassonry = styled(Masonry)`

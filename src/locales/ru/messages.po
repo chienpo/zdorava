@@ -17,11 +17,11 @@ msgstr ""
 msgid "About"
 msgstr "Обо мне"
 
-#: src/app/constants/portfolio.ts:6
+#: src/app/constants/portfolio.ts:11
 msgid "All projects"
 msgstr "Все проекты"
 
-#: src/app/constants/portfolio.ts:7
+#: src/app/constants/portfolio.ts:12
 msgid "Art"
 msgstr "Дизайн"
 
@@ -33,7 +33,7 @@ msgstr "Портфолио загружено..."
 msgid "Developer"
 msgstr "Разработчик"
 
-#: src/app/constants/portfolio.ts:8
+#: src/app/constants/portfolio.ts:13
 msgid "Front-end"
 msgstr "Front-end"
 

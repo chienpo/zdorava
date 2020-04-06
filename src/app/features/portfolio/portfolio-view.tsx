@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Trans } from '@lingui/macro';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
@@ -10,7 +10,7 @@ import { SectionPortfolio, PortfolioOverlay } from './styled';
 interface Props {
   data: PortfolioItem[];
   activeCategoryPayload: (name: string) => void;
-  getPortfolioDate: () => void;
+  getNextPortfolioDate: () => void;
   hasMore: boolean;
 }
 
@@ -25,16 +25,15 @@ interface PortfolioItem {
 export const PortfolioView: React.FC<Props> = ({
   data,
   activeCategoryPayload,
-  getPortfolioDate,
+  getNextPortfolioDate,
   hasMore,
 }: Props) => (
-  <SectionPortfolio id="scrollableDiv" style={{ height: 500, overflow: "auto" }}>
+  <SectionPortfolio>
     <PortfolioOverlay>
       <PortfolioTabs activeCategoryPayload={activeCategoryPayload} />
       <InfiniteScroll
-        scrollableTarget="scrollableDiv"
-        dataLength={5}
-        next={getPortfolioDate}
+        dataLength={data.length}
+        next={getNextPortfolioDate}
         hasMore={hasMore}
         loader={(
           <Button disabled>

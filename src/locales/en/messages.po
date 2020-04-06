@@ -17,11 +17,11 @@ msgstr ""
 msgid "About"
 msgstr "About"
 
-#: src/app/constants/portfolio.ts:6
+#: src/app/constants/portfolio.ts:11
 msgid "All projects"
 msgstr "All projects"
 
-#: src/app/constants/portfolio.ts:7
+#: src/app/constants/portfolio.ts:12
 msgid "Art"
 msgstr "Art"
 
@@ -33,7 +33,7 @@ msgstr "Coming soon..."
 msgid "Developer"
 msgstr "Developer"
 
-#: src/app/constants/portfolio.ts:8
+#: src/app/constants/portfolio.ts:13
 msgid "Front-end"
 msgstr "Front-end"
 
