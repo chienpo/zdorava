@@ -1,6 +1,7 @@
 import { i18nMark } from '@lingui/react';
 
 export const PORTFOLIO_CATEGORY_TAB_NAME_ALL = 'all';
+export const PORTFOLIO_CATEGORY_DEFAULT_TAB_NAME = PORTFOLIO_CATEGORY_TAB_NAME_ALL;
 export const PORTFOLIO_CATEGORY_TAB_NAME_ART = 'art';
 export const PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND = 'frontend';
 

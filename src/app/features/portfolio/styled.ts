@@ -1,8 +1,14 @@
 import styled from 'styled-components';
 import Masonry from 'react-masonry-component';
 
-import { BLACK, GREEN, RED, SHARK, SHARK_DARK, SHARK_DARK_70, TUNDORA, WHITE, WHITE_20 } from 'app/constants/colors';
-import { Button } from 'app/ui/button/button';
+import {
+  BLACK,
+  RED,
+  SHARK_DARK_70,
+  WHITE,
+  WHITE_20,
+  WHITE_SMOKE,
+} from 'app/constants/colors';
 import sectionBg  from 'assets/images/wrapper_main.jpg';
 import sectionOverlayDark from 'assets/images/overlay_black_small_squares.png';
 
@@ -14,58 +20,6 @@ export const PortfolioTabs = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 5px;
-`;
-
-export const PortfolioTab = styled(Button)`
-  color: ${TUNDORA};
-  font-weight: normal;
-  text-decoration: none;
-  padding: 15px 0;
-  font-size: 16px;
-  text-transform: uppercase;
-  transition: all ease-in-out 0.2s;
-  border: 1px solid ${TUNDORA};
-  background: transparent;
-  outline: none;
-  cursor: pointer;
-
-  ${(props: any) => props.more && `background: ${GREEN};`};
-
-  &:hover {
-    border-color: ${RED};
-    color: ${RED};
-  }
-
-  &.active {
-    cursor: default;
-    color: ${WHITE};
-    border-color: ${WHITE};
-  }
-`;
-
-export const MoreButton = styled.button`
-  outline: none;
-  bottom: 10px;
-  right: 1%;
-  padding: 10px 20px;
-  cursor: pointer;
-  box-sizing: inherit;
-  transition: all ease-in-out 0.4s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-  color: whitesmoke;
-  background: ${SHARK};
-  border: 1px solid ${SHARK_DARK};
-  opacity: 0.8;
-  width: 80%;
-  margin: 0 auto;
-
-  &:hover {
-    background: ${WHITE};
-    color: ${BLACK};
-  }
 `;
 
 export const ItemLabel = styled.div`
@@ -104,7 +58,11 @@ export const SectionPortfolio = styled.section`
 `;
 
 export const PortfolioOverlay = styled.div`
-  padding: 0 0;
+  @media (min-width: 767px) {
+    padding: 0 50px;
+  }
+
+  padding: 0 15px;
   background: ${SHARK_DARK_70} url(${sectionOverlayDark}) repeat scroll 0 0;
   height: 100%;
 `;
@@ -246,4 +204,12 @@ export const ItemFigure = styled.div`
       opacity: 1;
     }
   }
+`;
+
+export const ItemsLoadingStateDescription = styled.div`
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: ${WHITE_SMOKE};
 `;

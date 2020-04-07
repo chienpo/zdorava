@@ -1,8 +1,8 @@
 {
   "Loading...": {
-    "origin": [["src/app/features/portfolio/portfolio-view.tsx", 12]]
+    "origin": [["src/app/features/portfolio/portfolio-view.tsx", 11]]
   },
   "Coming soon...": {
-    "origin": [["src/app/features/portfolio/portfolio-view.tsx", 14]]
+    "origin": [["src/app/features/portfolio/portfolio-view.tsx", 13]]
   }
 }

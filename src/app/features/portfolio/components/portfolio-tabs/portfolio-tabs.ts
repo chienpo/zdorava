@@ -18,13 +18,11 @@ const categories = [
 ];
 
 export const PortfolioTabs: FC<Props> = ({ activeCategoryPayload }: Props) => {
-  const [activeCategory, setCategory] = useState(PORTFOLIO_CATEGORY_TAB_NAME_ALL);
+  const [activeCategory, setCategory] = useState(
+    PORTFOLIO_CATEGORY_TAB_NAME_ALL
+  );
 
   const onSetCategory = (name: string) => {
-    if (activeCategory === name) {
-      return
-    }
-
     setCategory(name);
     activeCategoryPayload(name);
   };

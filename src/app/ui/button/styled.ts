@@ -1,28 +1,33 @@
 import styled from 'styled-components';
 
-import { SHARK, WHITE } from 'app/constants/colors';
+import { GRAY, RED, TUNDORA, WHITE } from 'app/constants/colors';
 
 export const ButtonStyled = styled.button`
-  outline: none;
-  bottom: 10px;
-  right: 1%;
-  padding: 10px 20px;
-  box-sizing: inherit;
-  transition: all ease-in-out 0.4s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-  color: whitesmoke;
+  color: ${TUNDORA};
+  font-weight: normal;
+  text-decoration: none;
+  padding: 15px 0;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: all ease-in-out 0.2s;
+  border: 1px solid ${TUNDORA};
   background: transparent;
-  border: 1px solid ${SHARK};
-  opacity: 0.8;
-  width: 80%;
-  margin: 0 auto;
-  cursor: default;
+  outline: none;
+  cursor: pointer;
 
   &:hover {
-    background: ${SHARK};
+    border-color: ${RED};
+    color: ${RED};
+  }
+
+  &:focus {
+    color: ${GRAY};
+    border-color: ${GRAY};
+  }
+
+  &.active {
+    cursor: default;
     color: ${WHITE};
+    border-color: ${WHITE};
   }
 `;

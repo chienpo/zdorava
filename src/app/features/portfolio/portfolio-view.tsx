@@ -2,10 +2,13 @@ import React from 'react';
 import { Trans } from '@lingui/macro';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
-import { Button } from '../../ui/button/button';
 import { MasonryGrid } from './components/portfolio-layout/masonry-grid';
 import { PortfolioTabs } from './components/portfolio-tabs/portfolio-tabs';
-import { SectionPortfolio, PortfolioOverlay } from './styled';
+import {
+  SectionPortfolio,
+  PortfolioOverlay,
+  ItemsLoadingStateDescription,
+} from './styled';
 
 interface Props {
   data: PortfolioItem[];
@@ -36,14 +39,14 @@ export const PortfolioView: React.FC<Props> = ({
         next={getNextPortfolioDate}
         hasMore={hasMore}
         loader={(
-          <Button disabled>
+          <ItemsLoadingStateDescription>
             <Trans>Loading...</Trans>
-          </Button>
+          </ItemsLoadingStateDescription>
         )}
         endMessage={(
-          <Button disabled>
+          <ItemsLoadingStateDescription>
             <Trans>Coming soon...</Trans>
-          </Button>
+          </ItemsLoadingStateDescription>
         )}
       >
         <MasonryGrid data={data} />

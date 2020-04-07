@@ -49,7 +49,7 @@ export const StyledMassonry = styled(Masonry)`
   @media (min-width: 600px) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    max-width: 80%;
+    width: 100%;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
   }
