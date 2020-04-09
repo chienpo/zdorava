@@ -2,12 +2,12 @@ import { rgba } from 'polished';
 
 export const BLACK = 'black';
 export const BLACK_90 = rgba(BLACK, 0.9);
+export const BLACK_50 = rgba(BLACK, 0.5);
 const BLACK_LIGHTER = '#010101';
 export const BLACK_LIGHTER_95 = rgba(BLACK_LIGHTER, 0.95);
 export const BLACK_LIGHTER_99 = rgba(BLACK_LIGHTER, 0.99);
 export const BLUE = 'blue';
 export const DARK_SLATE_GREY = 'darkslategrey';
-export const GREEN = 'green';
 export const GRAY = '#808080';
 export const RED = 'red';
 export const ROSE_WOOD = '#640000';

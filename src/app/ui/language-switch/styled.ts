@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { DARK_MODE } from '../../constants/theme';
-import { BLACK, WHITE, WHITE_SMOKE, WHITE_SMOKE_10 } from '../../constants/colors';
+import { BLACK, RED, WHITE, WHITE_SMOKE, WHITE_SMOKE_10 } from '../../constants/colors';
 
 export const Separator = styled.div`
   width: 2px;
@@ -43,6 +43,15 @@ export const Label = styled.label`
     text-transform: uppercase;
     opacity: 1;
     font-size: 20px;
+  }
+
+  input:not(:checked)+span {
+    transition: color 0.2s, font-size 0.2s;
+
+    &:hover {
+      color: ${RED};
+      font-size: 18px;
+    }
   }
 `;
 

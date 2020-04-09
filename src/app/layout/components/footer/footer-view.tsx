@@ -5,7 +5,6 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons'
 
 import { SOCIAL_GITHUB_PATH, SOCIAL_LINKED_IN_PATH } from 'app/constants/social';
 import { WEBSITE_PUBLICATION_YEAR } from 'app/constants/site';
-import { Trans } from '@lingui/macro';
 import { FooterWrapper, FooterNav, FooterCopy, FooterSocialLink } from './styled';
 
 export const FooterView = () => {

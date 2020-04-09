@@ -1,4 +1,4 @@
-import { createElement } from 'react';
+import { FC, createElement } from 'react';
 
 import { LanguageSwitchView } from './language-switch-view';
 
@@ -12,7 +12,7 @@ export interface SwitchProps {
   value: string;
 }
 
-export const LanguageSwitch: React.FC<LanguageSwitchProps> = ({ selectedLanguage, onChangeLanguage }) => {
+export const LanguageSwitch: FC<LanguageSwitchProps> = ({ selectedLanguage, onChangeLanguage }) => {
 
   return createElement<SwitchProps>(LanguageSwitchView, {
     onChange: (checked: string) => onChangeLanguage(checked),

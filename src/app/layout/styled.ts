@@ -14,5 +14,5 @@ export const AppContent = styled.div`
 
 export const Header = styled.header`
   height: 50px;
-  z-index: 2;
+  z-index: 3;
 `;

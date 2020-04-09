@@ -15,6 +15,7 @@ export const NavigationWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 170px;
   position: fixed;
+  height: 50px;
   width: 100%;
 `;
 

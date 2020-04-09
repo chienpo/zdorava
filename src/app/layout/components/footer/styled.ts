@@ -21,7 +21,7 @@ export const FooterWrapper = styled.footer`
 
 export const FooterNav = styled.nav`
   display: grid;
-  grid-column-gap: 20px;
+  grid-column-gap: 25px;
   grid-template-columns: auto auto auto;
   justify-content: center;
   padding: 45px 0;
