@@ -6,7 +6,7 @@ import { DARK_MODE } from '../../../constants/theme';
 import { BLACK_LIGHTER_95, BLACK_LIGHTER_99, GRAY, RED, WHITE_SMOKE_10 } from '../../../constants/colors';
 
 
-export const FooterWrapper = styled.div`
+export const FooterWrapper = styled.footer`
   display: grid;
   grid-template-rows: 1fr auto;
   grid-template-columns: 1fr;

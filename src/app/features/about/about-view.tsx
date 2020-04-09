@@ -19,7 +19,9 @@ export const AboutView = () => (
     </IntroduceImage>
     <AccordionBox>
       <DeveloperName>
-        <Trans>Stefan Lagunovsky</Trans>
+        <Trans>Stepan</Trans>
+        &nbsp;
+        <Trans>Lagunovsky</Trans>
       </DeveloperName>
       <Position>
         Front-End

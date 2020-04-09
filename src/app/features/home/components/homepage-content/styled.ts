@@ -31,7 +31,7 @@ export const HomepageContentWrapper = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
-  z-index: 1;
+  z-index: 2;
   position: relative;
 `;
 
@@ -51,6 +51,7 @@ export const Image = styled.div<{ bgIsToggling: boolean }>`
   animation: ${blink} 0.4s linear;
   opacity: 0;
   transition: opacity 0.4s;
+  z-index: 1;
 
   ${({ bgIsToggling }) => bgIsToggling && `
     background: url(${homepageGlitchBg}) center center no-repeat;
@@ -82,15 +83,16 @@ export const HomepageTitle = styled.h1`
 `;
 
 export const Name = styled.div`
-  font-size: 22px;
+  font-size: 38px;
   line-height: 1;
   margin-top: auto;
-  margin-bottom: 17px;
+  margin-bottom: 14px;
   color: ${YELLOW};
+  color: rgba(200, 0, 0, 0.5);
 `;
 
 export const SurName = styled.div`
-  color: ${WHITE};
+  color: rgba(47, 79, 79, 0.8);
   margin-left: 15px;
   display: inline;
 `;

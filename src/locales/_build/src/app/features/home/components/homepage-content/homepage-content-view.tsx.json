@@ -1,0 +1,18 @@
+{
+  "Stepan": {
+    "origin": [
+      [
+        "src/app/features/home/components/homepage-content/homepage-content-view.tsx",
+        17
+      ]
+    ]
+  },
+  "Lagunovsky": {
+    "origin": [
+      [
+        "src/app/features/home/components/homepage-content/homepage-content-view.tsx",
+        20
+      ]
+    ]
+  }
+}

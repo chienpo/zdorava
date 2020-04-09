@@ -29,7 +29,7 @@ msgstr "Дизайн"
 msgid "Coming soon..."
 msgstr "Портфолио загружено..."
 
-#: src/app/features/about/about-view.tsx:20
+#: src/app/features/about/about-view.tsx:22
 msgid "Developer"
 msgstr "Разработчик"
 
@@ -41,6 +41,11 @@ msgstr "Front-end"
 msgid "Home"
 msgstr "Главная"
 
+#: src/app/features/about/about-view.tsx:15
+#: src/app/features/home/components/homepage-content/homepage-content-view.tsx:20
+msgid "Lagunovsky"
+msgstr "Лагуновский"
+
 #: src/app/features/portfolio/portfolio-view.tsx:11
 msgid "Loading..."
 msgstr "Загрузка..."
@@ -50,5 +55,6 @@ msgid "Portfolio"
 msgstr "Портфолио"
 
 #: src/app/features/about/about-view.tsx:13
-msgid "Stefan Lagunovsky"
-msgstr "Степан Лагуновский"
+#: src/app/features/home/components/homepage-content/homepage-content-view.tsx:17
+msgid "Stepan"
+msgstr "Степан"

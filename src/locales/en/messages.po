@@ -29,7 +29,7 @@ msgstr "Art"
 msgid "Coming soon..."
 msgstr "Coming soon..."
 
-#: src/app/features/about/about-view.tsx:20
+#: src/app/features/about/about-view.tsx:22
 msgid "Developer"
 msgstr "Developer"
 
@@ -41,6 +41,11 @@ msgstr "Front-end"
 msgid "Home"
 msgstr "Home"
 
+#: src/app/features/about/about-view.tsx:15
+#: src/app/features/home/components/homepage-content/homepage-content-view.tsx:20
+msgid "Lagunovsky"
+msgstr "Lagunovsky"
+
 #: src/app/features/portfolio/portfolio-view.tsx:11
 msgid "Loading..."
 msgstr "Loading..."
@@ -50,5 +55,6 @@ msgid "Portfolio"
 msgstr "Portfolio"
 
 #: src/app/features/about/about-view.tsx:13
-msgid "Stefan Lagunovsky"
-msgstr "Stefan Lagunovsky"
+#: src/app/features/home/components/homepage-content/homepage-content-view.tsx:17
+msgid "Stepan"
+msgstr "Stepan"
