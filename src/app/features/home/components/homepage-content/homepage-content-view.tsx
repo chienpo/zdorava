@@ -3,6 +3,7 @@ import GlitchEffect from 'react-glitch-effect';
 import Typing from 'react-typing-animation';
 import { Trans } from '@lingui/macro';
 
+import { Contacts } from '../../../../contacts/contacts';
 import {
   HomepageContentWrapper,
   HomepageHGroup,
@@ -47,6 +48,7 @@ export const HomepageContentView: React.FC<Props> = ({
         <Typing onFinishedTyping={() => toggleDefaultBg(true)}>
           <HomepageSubtitle>FRONT-END DEVELOPER</HomepageSubtitle>
         </Typing>
+        <Contacts />
         <WebsiteSubtitle>
           Zdorava
         </WebsiteSubtitle>

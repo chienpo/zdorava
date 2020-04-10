@@ -88,11 +88,11 @@ export const Name = styled.div`
   margin-top: auto;
   margin-bottom: 14px;
   color: ${YELLOW};
-  color: rgba(200, 0, 0, 0.5);
+  color: rgba(47,79,79,0.8);
 `;
 
 export const SurName = styled.div`
-  color: rgba(47, 79, 79, 0.8);
+  color: rgba(200, 200, 200, 0.7);
   margin-left: 15px;
   display: inline;
 `;
