@@ -1,23 +1,24 @@
 import styled from 'styled-components';
 
-import { GRAY, RED, TUNDORA, WHITE } from 'app/constants/colors';
+import { BLACK, BLACK_90, GRAY, WHITE } from 'app/constants/colors';
 
 export const ButtonStyled = styled.button`
-  color: ${TUNDORA};
+  color: ${WHITE};
   font-weight: normal;
   text-decoration: none;
-  padding: 15px 0;
   font-size: 16px;
   text-transform: uppercase;
-  transition: all ease-in-out 0.2s;
-  border: 1px solid ${TUNDORA};
-  background: transparent;
+  transition: background 0.2s;
+  border: 1px solid ${BLACK};
+  background: ${({ plain }: any) => plain ? `${BLACK}` : 'transparent'};
+  width: ${({ width }: any) => width || 'auto'};
   outline: none;
   cursor: pointer;
+  padding: 15px;
 
   &:hover {
-    border-color: ${RED};
-    color: ${RED};
+    background: ${({ plain }: any) => plain && `${BLACK_90}`};
+    border-color: ${BLACK_90};
   }
 
   &:focus {

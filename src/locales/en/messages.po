@@ -29,9 +29,29 @@ msgstr "Art"
 msgid "Coming soon..."
 msgstr "Coming soon..."
 
+#: src/app/contacts/contacts-view.tsx:10
+msgid "Contacts"
+msgstr "Contacts"
+
 #: src/app/features/about/about-view.tsx:22
 msgid "Developer"
 msgstr "Developer"
+
+#: src/app/contacts/components/contact-form-view.tsx:16
+msgid "Enter your email"
+msgstr "Enter your email"
+
+#: src/app/contacts/components/contact-form-view.tsx:13
+msgid "Enter your last name"
+msgstr "Enter your last name"
+
+#: src/app/contacts/components/contact-form-view.tsx:19
+msgid "Enter your message"
+msgstr "Enter your message"
+
+#: src/app/contacts/components/contact-form-view.tsx:10
+msgid "Enter your name"
+msgstr "Enter your name"
 
 #: src/app/constants/portfolio.ts:14
 msgid "Front-end"
@@ -53,6 +73,10 @@ msgstr "Loading..."
 #: src/app/constants/page-titles.ts:8
 msgid "Portfolio"
 msgstr "Portfolio"
+
+#: src/app/contacts/components/contact-form-view.tsx:22
+msgid "Send message"
+msgstr "Send message"
 
 #: src/app/features/about/about-view.tsx:13
 #: src/app/features/home/components/homepage-content/homepage-content-view.tsx:17

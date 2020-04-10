@@ -4,6 +4,7 @@ import { I18n } from '@lingui/react';
 import { LanguageSwitchProps, LanguageSwitch } from 'app/ui/language-switch/language-switch';
 import { routes } from 'router';
 import { PAGE_TITLES } from 'app/constants/page-titles';
+import { FadeInOut } from '../../../../animations/fade-in-out-vertically';
 import {
   NavigationWrapper,
   NavigationList,
@@ -36,20 +37,22 @@ export const NavigationMobileView = ({
     {({ i18n }) => (
       <>
         {mobileMenuOpened && (
-          <NavigationList>
-            {routes.map(({ name }: NavigationProps) => (
-              <NavLinkStyled
-                key={name}
-                router={router}
-                routeName={name}
-                onClick={() => {
-                  return toggleBurgerMenu((prevState: boolean) => !prevState)
-                }}
-              >
-                {i18n._(PAGE_TITLES[name])}
-              </NavLinkStyled>
-            ))}
-          </NavigationList>
+          <FadeInOut pose="enter">
+            <NavigationList>
+              {routes.map(({ name }: NavigationProps) => (
+                <NavLinkStyled
+                  key={name}
+                  router={router}
+                  routeName={name}
+                  onClick={() => {
+                    return toggleBurgerMenu((prevState: boolean) => !prevState)
+                  }}
+                >
+                  {i18n._(PAGE_TITLES[name])}
+                </NavLinkStyled>
+              ))}
+            </NavigationList>
+          </FadeInOut>
         )}
         <NavigationWrapper>
           <Overlay>

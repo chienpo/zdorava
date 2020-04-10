@@ -60,7 +60,6 @@ export const Image = styled.div<{ bgIsToggling: boolean }>`
 `;
 
 export const HomepageHGroup = styled.div`
-  opacity: 0.8;
   padding: 20px 0 50px;
   display: flex;
   justify-content: center;

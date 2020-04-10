@@ -29,9 +29,29 @@ msgstr "Дизайн"
 msgid "Coming soon..."
 msgstr "Портфолио загружено..."
 
+#: src/app/contacts/contacts-view.tsx:10
+msgid "Contacts"
+msgstr "Контакты"
+
 #: src/app/features/about/about-view.tsx:22
 msgid "Developer"
 msgstr "Разработчик"
+
+#: src/app/contacts/components/contact-form-view.tsx:16
+msgid "Enter your email"
+msgstr "Введите вашу почту"
+
+#: src/app/contacts/components/contact-form-view.tsx:13
+msgid "Enter your last name"
+msgstr "Введите вашу фамилию"
+
+#: src/app/contacts/components/contact-form-view.tsx:19
+msgid "Enter your message"
+msgstr "Cообщение"
+
+#: src/app/contacts/components/contact-form-view.tsx:10
+msgid "Enter your name"
+msgstr "Введите ваше имя"
 
 #: src/app/constants/portfolio.ts:14
 msgid "Front-end"
@@ -53,6 +73,10 @@ msgstr "Загрузка..."
 #: src/app/constants/page-titles.ts:8
 msgid "Portfolio"
 msgstr "Портфолио"
+
+#: src/app/contacts/components/contact-form-view.tsx:22
+msgid "Send message"
+msgstr "Отправить сообщение"
 
 #: src/app/features/about/about-view.tsx:13
 #: src/app/features/home/components/homepage-content/homepage-content-view.tsx:17

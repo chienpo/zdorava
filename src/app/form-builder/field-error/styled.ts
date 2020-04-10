@@ -1,14 +1,16 @@
 import styled from 'styled-components';
 
+import { RED_70 } from '../../constants/colors';
+
 export const ErrorBox = styled.div`
-  background: #f75d5d;
+  background: ${RED_70};
   color: white;
   padding: 5px;
   margin-top: 5px;
   display: flex;
   align-items: center;
   font-size: 14px;
-  line-height: 1;
+  line-height: 20px;
 `;
 
 export const IconError = styled.span`

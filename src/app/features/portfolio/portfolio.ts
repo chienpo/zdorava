@@ -125,6 +125,7 @@ export const Portfolio: FC<Props> = () => {
       });
     }
     getFirebaseData(PORTFOLIO_CATEGORY_DEFAULT_TAB_NAME);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (pageLoading) {

@@ -56,7 +56,6 @@ export const StyledMassonry = styled(Masonry)`
 
   height: auto !important;
   margin: 0 auto;
-  background: ${BLACK};
 `;
 
 export const ItemLabel = styled.div`

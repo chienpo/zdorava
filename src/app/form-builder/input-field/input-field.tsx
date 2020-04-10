@@ -2,28 +2,41 @@ import React, { FC } from 'react';
 import { Field } from 'react-final-form';
 
 import { FieldError } from '../field-error/field-error';
-import { FieldWrapper, Label, Input, LabelText } from './styled';
+import { FieldWrapper, Label, Input, LabelText, RequiredStar } from './styled';
 
 interface Props {
   name: string;
   type: string;
   children: any;
-  validate: (value: any) => any | null;
+  validate: (value: any) => any;
+  placeholder?: any | '';
 }
 
-export const InputField: FC<Props> = ({ validate, name, children, ...props }) => (
-  <Field
-    name={name}
-    render={({ input, meta }: any) => (
-      <FieldWrapper>
-        <Label>
-          <LabelText>
-            {children}
-          </LabelText>
-          <Input {...input} {...props} />
-        </Label>
-        {meta && <FieldError meta={meta} />}
-      </FieldWrapper>
-    )}
-  />
-);
+export const InputField: FC<any> = ({
+  validate,
+  name,
+  children,
+  ...props
+}: Props) => {
+
+  return (
+    <Field
+      name={name}
+      validate={validate}
+      render={({ input, meta }: any) => (
+        <FieldWrapper>
+          <Label>
+            <LabelText>
+              {children}
+              {validate && (
+                <RequiredStar>*</RequiredStar>
+              )}
+            </LabelText>
+            <Input {...input} {...props} />
+          </Label>
+          {meta && <FieldError meta={meta} />}
+        </FieldWrapper>
+      )}
+    />
+  )
+};
