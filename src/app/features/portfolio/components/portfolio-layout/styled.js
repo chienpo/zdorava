@@ -67,7 +67,6 @@ export const ItemLabel = styled.div`
   font-weight: bold;
   position: absolute;
   right: -100%;
-  padding: 5px;
   outline: 0;
   transition: all 0.8s ease-in-out;
   background: ${RED};
@@ -75,6 +74,11 @@ export const ItemLabel = styled.div`
   border-right: 1px solid transparent;
   width: 80%;
   top: 20px;
+  padding: 5px 10px;
+`;
+
+export const ItemName = styled.span`
+  margin-left: 10px;
 `;
 
 export const ItemDescription = styled.div`
@@ -86,6 +90,7 @@ export const ItemDescription = styled.div`
   opacity: 0.8;
   color: ${WHITE};
   width: 90%;
+  padding: 5px 10px;
 `;
 
 export const Item = styled.div`

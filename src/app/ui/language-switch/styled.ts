@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { DARK_MODE } from '../../constants/theme';
-import { BLACK, RED, WHITE, WHITE_SMOKE, WHITE_SMOKE_10 } from '../../constants/colors';
+import { BLACK, RED, WHITE, WHITE_SMOKE_10 } from '../../constants/colors';
 
 export const Separator = styled.div`
   width: 2px;
@@ -17,7 +17,7 @@ export const Label = styled.label`
   align-items: center;
   justify-content: center;
   line-height: 1;
-  color: ${WHITE_SMOKE};
+  color: ${WHITE};
   background: transparent;
   margin: 0 10px;
   width: 80px;
@@ -25,18 +25,11 @@ export const Label = styled.label`
 
   input {
     cursor: pointer;
-    opacity: 0.9;
     margin-right: 10px;
-    display: none;
-
-    &:checked {
-      opacity: 1;
-    }
   }
 
   span {
-    opacity: 0.4;
-    font-weight: 100;
+    transition: color 0.2s, opacity 0.2s, font-size 0.2s;
   }
 
   input:checked+span {
@@ -46,9 +39,10 @@ export const Label = styled.label`
   }
 
   input:not(:checked)+span {
-    transition: color 0.2s, font-size 0.2s;
+    opacity: 0.4;
 
     &:hover {
+      opacity: 1;
       color: ${RED};
       font-size: 18px;
     }

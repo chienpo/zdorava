@@ -1,5 +1,8 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faImage } from '@fortawesome/free-solid-svg-icons'
 
+import { SITE_URL, PORTFOLIO_IMAGES_PATH } from '../../../../constants/site';
 import {
   ItemLabel,
   ItemDescription,
@@ -9,6 +12,7 @@ import {
   ItemOrientationType,
   ItemImage,
   ItemFigure,
+  ItemName,
 } from './styled';
 
 const masonryOptions = {
@@ -50,19 +54,24 @@ export const MasonryGridView: React.FC<Props> = ({
       onLayoutComplete={laidOutItems => handleLayoutComplete(laidOutItems)}
       onRemoveComplete={removedItems => handleRemoveComplete(removedItems)}
     >
-      {data.map((item: PortfolioItem) => (
-        <Item key={item.alt} className="image-element-class">
-          <ItemLink onClick={() => onItemClick(item.alt)} href="#">
+      {data.map(({ category, src, alt, name, description }: PortfolioItem) => (
+        <Item key={alt} className="image-element-class">
+          <ItemLink onClick={() => onItemClick(alt)} href="#">
             <ItemOrientationType>
               <ItemFigure>
-                <ItemImage src={item.src} alt={item.alt} />
+                <ItemImage
+                  src={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${category}/${src}`}
+                  alt={alt}
+                />
               </ItemFigure>
               <ItemLabel>
-                <i className="fa fa-picture-o" />
-                {item.name}
+                <FontAwesomeIcon icon={faImage} />
+                <ItemName>
+                  {name}
+                </ItemName>
               </ItemLabel>
               <ItemDescription>
-                <h3>{item.description}</h3>
+                {description}
               </ItemDescription>
             </ItemOrientationType>
           </ItemLink>

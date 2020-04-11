@@ -16,6 +16,7 @@ export const LanguageSwitchView: React.FC<SwitchProps> = ({
         type="radio"
         value={EN}
         onChange={(event: any) => onChange(event.target.value)}
+        hidden
       />
       <span>en</span>
     </Label>
@@ -27,6 +28,7 @@ export const LanguageSwitchView: React.FC<SwitchProps> = ({
         type="radio"
         value={RU}
         onChange={(event: any) => onChange(event.target.value)}
+        hidden
       />
       <span>ru</span>
     </Label>

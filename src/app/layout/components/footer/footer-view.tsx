@@ -4,7 +4,7 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
 
 import { SOCIAL_GITHUB_PATH, SOCIAL_LINKED_IN_PATH } from 'app/constants/social';
-import { WEBSITE_PUBLICATION_YEAR } from 'app/constants/site';
+import { SITE_PUBLICATION_YEAR } from 'app/constants/site';
 import { Contacts } from '../../../contacts/contacts';
 import { FooterWrapper, FooterNav, FooterCopy, FooterSocialLink } from './styled';
 
@@ -21,7 +21,10 @@ export const FooterView = ({ toggleContactForm, contactFormOpened }: Props) => {
 
   return (
     <>
-      <Contacts opened={contactFormOpened} />
+      <Contacts
+        opened={contactFormOpened}
+        onClose={() => toggleContactForm((prevState: boolean) => !prevState)}
+      />
       <FooterWrapper>
         <FooterNav>
           {footerNavigationLinks.map(({ path, icon, name }) => (
@@ -35,7 +38,9 @@ export const FooterView = ({ toggleContactForm, contactFormOpened }: Props) => {
             </FooterSocialLink>
           ))}
           <FooterSocialLink
-            onClick={() => toggleContactForm((prevState: boolean) => !prevState)}
+            onClick={() => {
+              return toggleContactForm((prevState: boolean) => !prevState)
+            }}
             key="contacts"
             as="button"
           >
@@ -46,7 +51,7 @@ export const FooterView = ({ toggleContactForm, contactFormOpened }: Props) => {
           ©
           Zdorava
           &nbsp;
-          {WEBSITE_PUBLICATION_YEAR}
+          {SITE_PUBLICATION_YEAR}
         </FooterCopy>
       </FooterWrapper>
     </>

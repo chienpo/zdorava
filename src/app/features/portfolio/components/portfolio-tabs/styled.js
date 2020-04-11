@@ -7,5 +7,5 @@ export const PortfolioTabs = styled.div`
   justify-content: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 5px;
+  column-gap: 10px;
 `;
