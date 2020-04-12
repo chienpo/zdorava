@@ -16,7 +16,7 @@ interface IRoutes {
 
 export const createRouter = (routes: any) => {
   const router = createRouter5(routes, {
-    defaultRoute: 'home',
+    allowNotFound: true,
   });
   router.usePlugin(
     browserPlugin({

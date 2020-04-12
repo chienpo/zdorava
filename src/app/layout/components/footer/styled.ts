@@ -3,7 +3,14 @@ import styled from 'styled-components';
 import overlayBlackDot from 'assets/images/overlay_black.png';
 import overlayWhiteDot from 'assets/images/overlay_white.png';
 import { DARK_MODE } from '../../../constants/theme';
-import { BLACK_LIGHTER_95, BLACK_LIGHTER_99, GRAY, RED, WHITE_95, WHITE_SMOKE_10 } from '../../../constants/colors';
+import {
+  BLACK_LIGHTER_95,
+  BLACK_LIGHTER_99,
+  GRAY,
+  RED,
+  WHITE_20,
+  WHITE_SMOKE_10,
+} from '../../../constants/colors';
 
 
 export const FooterWrapper = styled.footer`
@@ -15,7 +22,7 @@ export const FooterWrapper = styled.footer`
   background: ${({ theme }) =>
     theme.mode === DARK_MODE
       ? `url(${overlayBlackDot}) repeat scroll 0 0`
-      : `${WHITE_95} url(${overlayWhiteDot}) repeat scroll 0 0`};
+      : `url(${overlayWhiteDot}) repeat scroll 0 0`};
   z-index: 1;
 `;
 
@@ -28,7 +35,7 @@ export const FooterNav = styled.nav`
   ${({ theme }) => theme.mode === DARK_MODE ? `
     background: ${BLACK_LIGHTER_95};
   ` : `
-    background: ${WHITE_SMOKE_10};
+    background: ${WHITE_20};
   `};
 `;
 

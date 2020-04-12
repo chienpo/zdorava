@@ -1,11 +1,10 @@
-// Entry point
-
 import { createElement } from 'react';
 import { render } from 'react-dom';
 
 import './index.css';
 import { App } from 'app';
-import { createRouter, routes } from './router';
+import { createRouter } from './router';
+import { routes } from './app/constants/routes';
 
 const rootElement = document.getElementById('root');
 
@@ -21,7 +20,6 @@ const renderApp = (): void => {
 
 router.start(renderApp);
 
-// Hot reloading
 if (module.hot) {
   module.hot.accept(renderApp);
 }
