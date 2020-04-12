@@ -23,6 +23,7 @@ export const WHITE_20 = rgba(WHITE, 0.2);
 export const WHITE_50 = rgba(WHITE, 0.5);
 export const WHITE_80 = rgba(WHITE, 0.8);
 export const WHITE_90 = rgba(WHITE, 0.9);
+export const WHITE_95 = rgba(WHITE, 0.95);
 export const WHITE_SMOKE = 'whitesmoke';
 export const WHITE_SMOKE_10 = rgba(WHITE_SMOKE, 0.1);
 export const YELLOW = 'yellow';

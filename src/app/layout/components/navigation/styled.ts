@@ -4,13 +4,13 @@ import { BaseLink } from 'react-router5';
 import overlayBlackDot from 'assets/images/overlay_black.png';
 import overlayWhiteDot from 'assets/images/overlay_white.png';
 import { DARK_MODE } from '../../../constants/theme';
-import { BLACK_LIGHTER_95, GRAY, RED, WHITE, WHITE_90, WHITE_SMOKE_10 } from '../../../constants/colors';
+import { BLACK_LIGHTER_95, GRAY, RED, WHITE, WHITE_95, WHITE_SMOKE_10 } from '../../../constants/colors';
 
 export const NavigationWrapper = styled.div`
   background: ${({ theme }) =>
     theme.mode === DARK_MODE
       ? `${BLACK_LIGHTER_95} url(${overlayBlackDot}) repeat scroll 0 0;`
-      : `${WHITE_90} url(${overlayWhiteDot}) repeat scroll 0 0;`};
+      : `${WHITE_95} url(${overlayWhiteDot}) repeat scroll 0 0;`};
   z-index: 1;
   display: grid;
   grid-template-columns: 1fr 170px;
