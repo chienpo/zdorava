@@ -1,49 +1,7 @@
 import styled from 'styled-components';
 import Masonry from 'react-masonry-component';
 
-import {
-  BLACK,
-  RED,
-  SHARK_DARK_70,
-  WHITE,
-  WHITE_20,
-  WHITE_SMOKE,
-} from 'app/constants/colors';
-
-export const MoreButton = styled.button`
-  position: fixed;
-  border: 1px solid ${BLACK};
-  outline: none;
-  bottom: 10px;
-  right: 1%;
-  padding: 10px 20px;
-  cursor: pointer;
-  background: ${BLACK};
-  width: 8%;
-  box-sizing: inherit;
-  transition: all ease-in-out 0.4s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-  color: ${WHITE_SMOKE};
-
-  &:hover {
-    background: ${WHITE};
-    color: ${BLACK};
-  }
-`;
-
-export const PortfolioOverlay = styled.div`
-  padding: 0 0;
-  background: ${SHARK_DARK_70};
-`;
-
-export const SectionPortfolio = styled.section`
-  background: url('http://zdorava.com/assets/templates/html/img/backgrounds/wrapper_main.jpg')
-    center center no-repeat / cover;
-  background-attachment: fixed;
-`;
+import { RED, WHITE, WHITE_20 } from 'app/constants/colors';
 
 export const StyledMassonry = styled(Masonry)`
   @media (min-width: 600px) {
@@ -110,7 +68,7 @@ export const Item = styled.div`
     &:nth-child(21) {
       grid-column: span 2;
       grid-row: span 2;
-      opacity: 0.1;
+      opacity: 0.3;
     }
     &:nth-child(2),
     &:nth-child(12),
@@ -122,7 +80,7 @@ export const Item = styled.div`
     &:nth-child(18),
     &:nth-child(28) {
       grid-column: span 2;
-      opacity: 0.1;
+      opacity: 0.3;
     }
     &:nth-child(7),
     &:nth-child(17),
@@ -168,7 +126,7 @@ export const ItemImage = styled.img`
   width: 100%;
   height: 100%;
   max-width: none;
-  transition: all ease-in-out 0.8s;
+  transition: opacity 0.8s;
   object-fit: cover;
   filter: grayscale(100);
   opacity: 1;

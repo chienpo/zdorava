@@ -13,7 +13,7 @@ import {
 interface Props {
   data: PortfolioItem[];
   activeCategoryPayload: (name: string) => void;
-  getNextPortfolioDate: () => void;
+  getNextPortfolioDate: any;
   hasMore: boolean;
 }
 

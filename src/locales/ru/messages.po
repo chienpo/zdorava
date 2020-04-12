@@ -29,7 +29,7 @@ msgstr "Дизайн"
 msgid "Coming soon..."
 msgstr "Портфолио загружено..."
 
-#: src/app/contacts/contacts-view.tsx:10
+#: src/app/contacts/contacts-view.tsx:15
 msgid "Contacts"
 msgstr "Контакты"
 

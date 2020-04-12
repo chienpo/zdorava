@@ -2,101 +2,157 @@
   "portfolio": [
     {
       "category": "frontend",
-      "src": "980x-betolit-landing.4ff.jpg",
-      "alt": "front-end-image-1",
+      "src": "course-project-one.png",
+      "alt": "course-project-one",
       "name": "front-end",
       "description": "front-end project"
     },
     {
       "category": "frontend",
-      "src": "980x-solaris_metod_one.9c1.jpg",
-      "alt": "front-end-image-3",
+      "src": "course-project-two.png",
+      "alt": "course-project-two",
       "name": "front-end",
       "description": "front-end project"
     },
     {
       "category": "frontend",
-      "src": "980x-maybelline-2017.ee7.jpg",
-      "alt": "front-end-image-2",
+      "src": "grifstd-landing.png",
+      "alt": "grifstd-landing",
       "name": "front-end",
       "description": "front-end project"
     },
     {
       "category": "frontend",
-      "src": "980x-solaris_method_two.9c1.jpg",
-      "alt": "front-end-image-4",
+      "src": "pb-betolit-landing-page.png",
+      "alt": "pb-betolit-landing-page",
+      "name": "front-end",
+      "description": "front-end project"
+    },
+    {
+      "category": "frontend",
+      "src": "lastminute-theatre-page.png",
+      "alt": "lastminute-theatre-page",
+      "name": "front-end",
+      "description": "front-end project"
+    },
+    {
+      "category": "frontend",
+      "src": "ipwe-platform-import-details-page.png",
+      "alt": "ipwe-platform-import-details-page",
+      "name": "front-end",
+      "description": "front-end project"
+    },
+    {
+      "category": "frontend",
+      "src": "ipwe-home-page.png",
+      "alt": "ipwe-home-page",
       "name": "front-end",
       "description": "front-end project"
     },
     {
       "category": "art",
-      "src": "980x-faces_2.a56.jpg",
-      "alt": "art-end-image-1",
+      "src": "cars-copy-2012.png",
+      "alt": "cars-copy-2012",
       "name": "PAPER, SANGUINE",
       "description": "1000X1000 - PAPER, SANGUINE"
     },
     {
       "category": "art",
-      "src": "980x-same_wall_drowing_bntu.d27.jpg",
-      "alt": "art-end-image-2",
-      "name": "art",
-      "description": "art project"
+      "src": "ecorche.png",
+      "alt": "ecorche.png",
+      "name": "PAPER, SANGUINE",
+      "description": "1000X1000 - PAPER, SANGUINE"
     },
     {
       "category": "art",
-      "src": "980x-venera-portrait-2011.d27.jpg",
-      "alt": "art-end-image-3",
-      "name": "art",
-      "description": "art project"
+      "src": "faces-in-pastel.png",
+      "alt": "faces-in-pastel-1",
+      "name": "PAPER, SANGUINE",
+      "description": "1000X1000 - PAPER, SANGUINE"
     },
     {
       "category": "art",
-      "src": "980x-headss-2011.d27.jpg",
-      "alt": "art-end-image-4",
-      "name": "art",
-      "description": "art project"
+      "src": "head-portrait-2011.png",
+      "alt": "head-portrait-2011",
+      "name": "PAPER, SANGUINE",
+      "description": "1000X1000 - PAPER, SANGUINE"
     },
     {
       "category": "art",
-      "src": "980x-head-portrait-2011.d27.jpg",
-      "alt": "art-end-image-5",
-      "name": "art",
-      "description": "art project"
+      "src": "head-square-2011.png",
+      "alt": "head-square-2011",
+      "name": "PAPER, SANGUINE",
+      "description": "1000X1000 - PAPER, SANGUINE"
     },
     {
       "category": "art",
-      "src": "980x-cars-copy-2012.d27.jpg",
-      "alt": "art-end-image-6",
-      "name": "art",
-      "description": "art project"
+      "src": "heads-2011.png",
+      "alt": "heads-2011",
+      "name": "PAPER, SANGUINE",
+      "description": "1000X1000 - PAPER, SANGUINE"
     },
     {
       "category": "art",
-      "src": "980x-faces_3.a56.jpg",
-      "alt": "art-end-image-7",
-      "name": "art",
-      "description": "art project"
+      "src": "lady-portrait-2011.png",
+      "alt": "lady-portrait-2011",
+      "name": "PAPER, SANGUINE",
+      "description": "1000X1000 - PAPER, SANGUINE"
     },
     {
       "category": "art",
-      "src": "980x-head-square-2011.d27.jpg",
-      "alt": "art-end-image-8",
-      "name": "art",
-      "description": "art project"
+      "src": "same-wall-drowing-bntu.png",
+      "alt": "same-wall-drowing-bntu",
+      "name": "PAPER, SANGUINE",
+      "description": "1000X1000 - PAPER, SANGUINE"
     },
     {
       "category": "art",
-      "src": "980x-something_in_pastel_1.d27.jpg",
-      "alt": "art-end-image-9",
-      "name": "art",
-      "description": "art project"
+      "src": "something-in-pastel-1.png",
+      "alt": "something-in-pastel-1",
+      "name": "PAPER, SANGUINE",
+      "description": "1000X1000 - PAPER, SANGUINE"
     },
     {
       "category": "art",
-      "src": "980x-mosaik.d27.jpg",
-      "alt": "art-end-image-10",
-      "name": "art",
-      "description": "art project"
+      "src": "venera-portrait-2011.png",
+      "alt": "venera-portrait-2011",
+      "name": "PAPER, SANGUINE",
+      "description": "1000X1000 - PAPER, SANGUINE"
+    },
+    {
+      "category": "art",
+      "src": "arch-design-same-interiorv-rendering-1.png",
+      "alt": "arch-design-same-interiorv-rendering-1",
+      "name": "PAPER, SANGUINE",
+      "description": "1000X1000 - PAPER, SANGUINE"
+    },
+    {
+      "category": "art",
+      "src": "arch-design-school-concept.png",
+      "alt": "arch-design-school-concept",
+      "name": "PAPER, SANGUINE",
+      "description": "1000X1000 - PAPER, SANGUINE"
+    },
+    {
+      "category": "art",
+      "src": "arch-design-sculpture_people.png",
+      "alt": "arch-design-sculpture_people",
+      "name": "PAPER, SANGUINE",
+      "description": "1000X1000 - PAPER, SANGUINE"
+    },
+    {
+      "category": "art",
+      "src": "arch-design-sculpture.png",
+      "alt": "arch-design-sculpture",
+      "name": "PAPER, SANGUINE",
+      "description": "1000X1000 - PAPER, SANGUINE"
+    },
+    {
+      "category": "art",
+      "src": "arch-design-transit-2-int-day.png",
+      "alt": "arch-design-transit-2-int-day",
+      "name": "PAPER, SANGUINE",
+      "description": "1000X1000 - PAPER, SANGUINE"
     }
   ]
 }

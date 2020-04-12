@@ -16,7 +16,7 @@ import {
 } from './styled';
 
 const masonryOptions = {
-  transitionDuration: 800,
+  transitionDuration: 1200,
 };
 
 interface Props {
@@ -49,7 +49,7 @@ export const MasonryGridView: React.FC<Props> = ({
       elementType="div"
       options={masonryOptions}
       disableImagesLoaded={false}
-      updateOnEachImageLoad={false}
+      updateOnEachImageLoad
       onImagesLoaded={handleImagesLoaded}
       onLayoutComplete={laidOutItems => handleLayoutComplete(laidOutItems)}
       onRemoveComplete={removedItems => handleRemoveComplete(removedItems)}
@@ -62,6 +62,7 @@ export const MasonryGridView: React.FC<Props> = ({
                 <ItemImage
                   src={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${category}/${src}`}
                   alt={alt}
+                  width="400px"
                 />
               </ItemFigure>
               <ItemLabel>

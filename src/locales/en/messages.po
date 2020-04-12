@@ -29,7 +29,7 @@ msgstr "Art"
 msgid "Coming soon..."
 msgstr "Coming soon..."
 
-#: src/app/contacts/contacts-view.tsx:10
+#: src/app/contacts/contacts-view.tsx:15
 msgid "Contacts"
 msgstr "Contacts"
 

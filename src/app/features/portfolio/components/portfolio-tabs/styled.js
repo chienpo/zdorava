@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const PortfolioTabs = styled.div`
-  padding: 40px 0 5px;
+  padding: 80px 0 5px;
   width: 100%;
   margin: 0 auto;
   justify-content: center;
