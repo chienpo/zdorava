@@ -50,6 +50,7 @@ export const NavigationList = styled.nav`
   bottom: 0;
   z-index: 3;
   flex-direction: column;
+  backdrop-filter: blur(3px);
 
   background: ${({ theme }) =>
   theme.mode === DARK_MODE

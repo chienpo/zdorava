@@ -5,7 +5,7 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons'
 
 import { SOCIAL_GITHUB_PATH, SOCIAL_LINKED_IN_PATH } from 'app/constants/social';
 import { SITE_PUBLICATION_YEAR } from 'app/constants/site';
-import { Contacts } from '../../../contacts/contacts';
+import { Contacts } from 'app/features/contacts';
 import { FooterWrapper, FooterNav, FooterCopy, FooterSocialLink } from './styled';
 
 interface Props {

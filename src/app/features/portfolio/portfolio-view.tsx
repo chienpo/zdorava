@@ -15,6 +15,7 @@ interface Props {
   activeCategoryPayload: (name: string) => void;
   getNextPortfolioDate: any;
   hasMore: boolean;
+  selectedCategory: string;
 }
 
 interface PortfolioItem {
@@ -30,6 +31,7 @@ export const PortfolioView: React.FC<Props> = ({
   activeCategoryPayload,
   getNextPortfolioDate,
   hasMore,
+  selectedCategory,
 }: Props) => (
   <SectionPortfolio>
     <PortfolioOverlay>
@@ -49,7 +51,7 @@ export const PortfolioView: React.FC<Props> = ({
           </ItemsLoadingStateDescription>
         )}
       >
-        <MasonryGrid data={data} />
+        <MasonryGrid data={data} selectedCategory={selectedCategory} />
       </InfiniteScroll>
     </PortfolioOverlay>
   </SectionPortfolio>

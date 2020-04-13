@@ -1,11 +1,14 @@
 {
+  "404": {
+    "origin": [["src/app/constants/page-titles.ts", 8]]
+  },
   "Home": {
-    "origin": [["src/app/constants/page-titles.ts", 6]]
+    "origin": [["src/app/constants/page-titles.ts", 5]]
   },
   "About": {
-    "origin": [["src/app/constants/page-titles.ts", 7]]
+    "origin": [["src/app/constants/page-titles.ts", 6]]
   },
   "Portfolio": {
-    "origin": [["src/app/constants/page-titles.ts", 8]]
+    "origin": [["src/app/constants/page-titles.ts", 7]]
   }
 }

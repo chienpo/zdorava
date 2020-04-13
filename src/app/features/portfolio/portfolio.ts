@@ -24,6 +24,7 @@ interface Props {
   activeCategoryPayload: (name: string) => void;
   getNextPortfolioDate: () => void;
   hasMore: boolean;
+  selectedCategory: string;
 }
 
 export const Portfolio: FC<Props> = () => {
@@ -148,5 +149,6 @@ export const Portfolio: FC<Props> = () => {
     activeCategoryPayload: onCategoryClick,
     getNextPortfolioDate: getNextFirebaseData,
     hasMore,
+    selectedCategory,
   });
 };

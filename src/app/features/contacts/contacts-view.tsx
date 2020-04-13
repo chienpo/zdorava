@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faWindowClose } from '@fortawesome/free-solid-svg-icons'
 import { Trans } from '@lingui/macro';
 import { PoseGroup } from 'react-pose';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faWindowClose } from '@fortawesome/free-solid-svg-icons'
 
-import { FadeInOutVertically } from 'app/animations/fade-in-out-vertically';
+import { FadeInOutVertically, FadeInOut } from 'app/animations/fade-in-out-vertically';
 import { ContactForm } from './components/contact-form';
-import { FormSection, H2Styled, FormBox, CloseButton } from './styled';
+import { FormSection, FormSectionBackdrop, H2Styled, FormBox, CloseButton } from './styled';
 
 interface Props {
   opened: boolean;
@@ -15,7 +15,10 @@ interface Props {
 
 export const ContactsView: FC<Props> = ({ opened, onClose }) => (
   <PoseGroup style={{position: 'fixed'}}>
-    {opened && (
+    {opened && [
+      <FadeInOut key="fadeInOut">
+        <FormSectionBackdrop />
+      </FadeInOut>,
       <FadeInOutVertically key="fadeInOutVertically">
         <FormSection>
           <CloseButton
@@ -32,6 +35,6 @@ export const ContactsView: FC<Props> = ({ opened, onClose }) => (
           </FormBox>
         </FormSection>
       </FadeInOutVertically>
-    )}
+    ]}
   </PoseGroup>
 );

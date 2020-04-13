@@ -1,0 +1,27 @@
+{
+  "Enter your name": {
+    "origin": [
+      ["src/app/features/contacts/components/contact-form-view.tsx", 10]
+    ]
+  },
+  "Enter your last name": {
+    "origin": [
+      ["src/app/features/contacts/components/contact-form-view.tsx", 13]
+    ]
+  },
+  "Enter your email": {
+    "origin": [
+      ["src/app/features/contacts/components/contact-form-view.tsx", 16]
+    ]
+  },
+  "Enter your message": {
+    "origin": [
+      ["src/app/features/contacts/components/contact-form-view.tsx", 19]
+    ]
+  },
+  "Send message": {
+    "origin": [
+      ["src/app/features/contacts/components/contact-form-view.tsx", 22]
+    ]
+  }
+}

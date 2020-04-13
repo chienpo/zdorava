@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { I18n } from '@lingui/react';
+import { PoseGroup } from 'react-pose';
 
 import { LanguageSwitchProps, LanguageSwitch } from 'app/ui/language-switch/language-switch';
 import { routes } from 'app/constants/routes';
@@ -36,24 +37,26 @@ export const NavigationMobileView = ({
   <I18n>
     {({ i18n }) => (
       <>
-        {mobileMenuOpened && (
-          <FadeInOut pose="enter">
-            <NavigationList>
-              {routes.map(({ name }: NavigationProps) => (
-                <NavLinkStyled
-                  key={name}
-                  router={router}
-                  routeName={name}
-                  onClick={() => {
-                    return toggleBurgerMenu((prevState: boolean) => !prevState)
-                  }}
-                >
-                  {i18n._(PAGE_TITLES[name])}
-                </NavLinkStyled>
-              ))}
-            </NavigationList>
-          </FadeInOut>
-        )}
+        <PoseGroup>
+          {mobileMenuOpened && (
+            <FadeInOut key="fadeInOut">
+              <NavigationList>
+                {routes.map(({ name }: NavigationProps) => (
+                  <NavLinkStyled
+                    key={name}
+                    router={router}
+                    routeName={name}
+                    onClick={() => {
+                      return toggleBurgerMenu((prevState: boolean) => !prevState)
+                    }}
+                  >
+                    {i18n._(PAGE_TITLES[name])}
+                  </NavLinkStyled>
+                ))}
+              </NavigationList>
+            </FadeInOut>
+          )}
+        </PoseGroup>
         <NavigationWrapper>
           <Overlay>
             <BurgerButton

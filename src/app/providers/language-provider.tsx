@@ -22,7 +22,9 @@ const LanguageProvider: React.FC<Props> = ({ children }) => {
 
   useEffect(() => {
     languageMiddleware.loading = false;
-    importCatalog(language).then(setCatalog).then(() => languageMiddleware.loading = true);
+    importCatalog(language)
+      .then(setCatalog)
+      .then(() => languageMiddleware.loading = true);
   }, [catalog, language]);
 
   return (

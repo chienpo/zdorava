@@ -8,7 +8,6 @@ import {
   ItemDescription,
   StyledMassonry,
   Item,
-  ItemLink,
   ItemOrientationType,
   ItemImage,
   ItemFigure,
@@ -25,6 +24,7 @@ interface Props {
   handleLayoutComplete: (item: any) => void;
   handleRemoveComplete: (item: any) => void;
   handleImagesLoaded: (imagesLoadedInstance: any) => void;
+  selectedCategory: string;
 }
 
 interface PortfolioItem {
@@ -35,17 +35,18 @@ interface PortfolioItem {
   description: string;
 }
 
-export const MasonryGridView: React.FC<Props> = ({
+export const MasonryGridView: React.FC<any> = ({
   data,
   onItemClick,
   handleLayoutComplete,
   handleRemoveComplete,
   handleImagesLoaded,
+  selectedCategory,
 }: Props) => {
 
   return (
     <StyledMassonry
-      className="my-gallery-class"
+      className={selectedCategory}
       elementType="div"
       options={masonryOptions}
       disableImagesLoaded={false}
@@ -55,27 +56,29 @@ export const MasonryGridView: React.FC<Props> = ({
       onRemoveComplete={removedItems => handleRemoveComplete(removedItems)}
     >
       {data.map(({ category, src, alt, name, description }: PortfolioItem) => (
-        <Item key={alt} className="image-element-class">
-          <ItemLink onClick={() => onItemClick(alt)} href="#">
-            <ItemOrientationType>
-              <ItemFigure>
-                <ItemImage
-                  src={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${category}/${src}`}
-                  alt={alt}
-                  width="400px"
-                />
-              </ItemFigure>
-              <ItemLabel>
-                <FontAwesomeIcon icon={faImage} />
-                <ItemName>
-                  {name}
-                </ItemName>
-              </ItemLabel>
-              <ItemDescription>
-                {description}
-              </ItemDescription>
-            </ItemOrientationType>
-          </ItemLink>
+        <Item
+          key={alt}
+          className={selectedCategory}
+          onClick={() => onItemClick(alt)}
+        >
+          <ItemOrientationType>
+            <ItemFigure>
+              <ItemImage
+                src={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${category}/${src}`}
+                alt={alt}
+                width="400px"
+              />
+            </ItemFigure>
+            <ItemLabel>
+              <FontAwesomeIcon icon={faImage} />
+              <ItemName>
+                {name}
+              </ItemName>
+            </ItemLabel>
+            <ItemDescription>
+              {description}
+            </ItemDescription>
+          </ItemOrientationType>
         </Item>
       ))}
     </StyledMassonry>

@@ -13,7 +13,12 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/app/constants/page-titles.ts:7
+#: src/app/constants/page-titles.ts:8
+#: src/app/features/not-found/not-found-view.tsx:6
+msgid "404"
+msgstr ""
+
+#: src/app/constants/page-titles.ts:6
 msgid "About"
 msgstr "Обо мне"
 
@@ -29,7 +34,7 @@ msgstr "Дизайн"
 msgid "Coming soon..."
 msgstr "Портфолио загружено..."
 
-#: src/app/contacts/contacts-view.tsx:15
+#: src/app/features/contacts/contacts-view.tsx:21
 msgid "Contacts"
 msgstr "Контакты"
 
@@ -37,19 +42,19 @@ msgstr "Контакты"
 msgid "Developer"
 msgstr "Разработчик"
 
-#: src/app/contacts/components/contact-form-view.tsx:16
+#: src/app/features/contacts/components/contact-form-view.tsx:16
 msgid "Enter your email"
 msgstr "Введите вашу почту"
 
-#: src/app/contacts/components/contact-form-view.tsx:13
+#: src/app/features/contacts/components/contact-form-view.tsx:13
 msgid "Enter your last name"
 msgstr "Введите вашу фамилию"
 
-#: src/app/contacts/components/contact-form-view.tsx:19
+#: src/app/features/contacts/components/contact-form-view.tsx:19
 msgid "Enter your message"
 msgstr "Cообщение"
 
-#: src/app/contacts/components/contact-form-view.tsx:10
+#: src/app/features/contacts/components/contact-form-view.tsx:10
 msgid "Enter your name"
 msgstr "Введите ваше имя"
 
@@ -57,12 +62,12 @@ msgstr "Введите ваше имя"
 msgid "Front-end"
 msgstr "Front-end"
 
-#: src/app/constants/page-titles.ts:6
+#: src/app/constants/page-titles.ts:5
 msgid "Home"
 msgstr "Главная"
 
 #: src/app/features/about/about-view.tsx:15
-#: src/app/features/home/components/homepage-content/homepage-content-view.tsx:20
+#: src/app/features/home/home-view.tsx:20
 msgid "Lagunovsky"
 msgstr "Лагуновский"
 
@@ -70,15 +75,15 @@ msgstr "Лагуновский"
 msgid "Loading..."
 msgstr "Загрузка..."
 
-#: src/app/constants/page-titles.ts:8
+#: src/app/constants/page-titles.ts:7
 msgid "Portfolio"
 msgstr "Портфолио"
 
-#: src/app/contacts/components/contact-form-view.tsx:22
+#: src/app/features/contacts/components/contact-form-view.tsx:22
 msgid "Send message"
 msgstr "Отправить сообщение"
 
 #: src/app/features/about/about-view.tsx:13
-#: src/app/features/home/components/homepage-content/homepage-content-view.tsx:17
+#: src/app/features/home/home-view.tsx:17
 msgid "Stepan"
 msgstr "Степан"

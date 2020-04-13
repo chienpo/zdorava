@@ -1,9 +1,10 @@
-import { createElement } from 'react';
+import { createElement, FC } from 'react';
 
 import { MasonryGridView } from './masonry-grid-view';
 
 interface Props {
   data: PortfolioItem[];
+  selectedCategory: string;
 }
 
 interface OtherProps {
@@ -12,6 +13,7 @@ interface OtherProps {
   handleLayoutComplete: (item: any) => void;
   handleRemoveComplete: (item: any) => void;
   handleImagesLoaded: (imagesLoadedInstance: any) => void;
+  selectedCategory: string;
 }
 
 interface PortfolioItem {
@@ -22,7 +24,7 @@ interface PortfolioItem {
   description: string;
 }
 
-export const MasonryGrid: React.FC<Props> = ({ data }: Props) => {
+export const MasonryGrid: FC<Props> = ({ data, selectedCategory }: Props) => {
   const onItemClick = (value: string) => {
     alert(value);
   };
@@ -41,6 +43,7 @@ export const MasonryGrid: React.FC<Props> = ({ data }: Props) => {
 
   return createElement<OtherProps>(MasonryGridView, {
     data,
+    selectedCategory,
     onItemClick,
     handleLayoutComplete,
     handleRemoveComplete,

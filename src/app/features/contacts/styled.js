@@ -29,6 +29,13 @@ export const FormSection = styled.section`
   }
 `;
 
+export const FormSectionBackdrop = styled.div`
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  backdrop-filter: blur(3px);
+`;
+
 export const FormBox = styled.div`
   background: ${WHITE};
   padding: 50px 15px;

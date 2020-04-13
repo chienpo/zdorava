@@ -2,9 +2,9 @@ import React, { FC } from 'react';
 import { Trans } from '@lingui/macro';
 import { Form } from 'react-final-form';
 
-import { Button } from '../../ui/button/button';
-import { InputField } from '../../form-builder';
-import { required } from '../../form-builder/validators';
+import { Button } from '../../../ui/button/button';
+import { InputField } from '../../../form-builder';
+import { required } from '../../../form-builder/validators';
 import {
   FIELD_NAME,
   FIELD_LAST_NAME,
