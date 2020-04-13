@@ -26,31 +26,17 @@ FadeInOut.defaultProps = {
 };
 
 export const FadeInOutVertically = posed.div({
-  open: {
-    zIndex: 3,
-    top: '-100%',
-    position: 'fixed',
-    transition: {
-      duration: 400,
-    },
-  },
   enter: {
     transition: {
-      duration: 400,
+      default: { duration: 800 }
     },
     opacity: 1,
     zIndex: 3,
-    top: 0
+    top: 0,
   },
   exit: {
-    transition: {
-      duration: 400,
-    },
+    transition: { duration: 800 },
     zIndex: 3,
     top: '-100%'
   },
 });
-
-FadeInOutVertically.defaultProps = {
-  initialPose: 'open',
-};
