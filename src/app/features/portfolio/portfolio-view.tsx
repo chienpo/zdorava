@@ -20,7 +20,7 @@ interface Props {
 
 interface PortfolioItem {
   category: string;
-  src: string;
+  imageSrc: string;
   alt: string;
   name: string;
   description: string;

@@ -1,8 +1,8 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faImage } from '@fortawesome/free-solid-svg-icons'
-import Lightbox from "react-image-lightbox";
-import "react-image-lightbox/style.css";
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
 
 import { SITE_URL, PORTFOLIO_IMAGES_PATH } from '../../../../constants/site';
 import {
@@ -20,9 +20,18 @@ const masonryOptions = {
   transitionDuration: 1200,
 };
 
+interface PortfolioItem {
+  category: string;
+  imageSrc: string;
+  alt: string;
+  name: string;
+  description: string;
+  details: string;
+}
+
 interface Props {
   data: PortfolioItem[];
-  onItemClick: (value: string) => void;
+  onItemClick: (index: number) => void;
   handleLayoutComplete: (item: any) => void;
   handleRemoveComplete: (item: any) => void;
   handleImagesLoaded: (imagesLoadedInstance: any) => void;
@@ -31,14 +40,6 @@ interface Props {
   setIsOpen: (val: boolean) => any;
   photoIndex: any;
   setPhotoIndex: any;
-}
-
-interface PortfolioItem {
-  category: string;
-  src: string;
-  alt: string;
-  name: string;
-  description: string;
 }
 
 export const MasonryGridView: React.FC<any> = ({
@@ -54,29 +55,31 @@ export const MasonryGridView: React.FC<any> = ({
   setPhotoIndex,
 }: Props) => {
 
-  const images = data.map(({ src }) => `${SITE_URL}${PORTFOLIO_IMAGES_PATH}${selectedCategory === 'all' ? 'design' : selectedCategory}/${src}`);
+  const getImagePath = (curItem: PortfolioItem) => {
+    return `${SITE_URL}${PORTFOLIO_IMAGES_PATH}${curItem.category}/${curItem.imageSrc}`
+  };
 
   return (
     <>
       {isOpen && (
         <Lightbox
-          mainSrc={images[photoIndex]}
-          nextSrc={images[(photoIndex + 1) % images.length]}
-          prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+          mainSrc={getImagePath(data[photoIndex])}
+          nextSrc={getImagePath(data[(photoIndex + 1) % data.length])}
+          prevSrc={getImagePath(data[(photoIndex + data.length - 1) % data.length])}
           onCloseRequest={() => setIsOpen(false)}
           onMovePrevRequest={() =>
-            setPhotoIndex((photoIndex + images.length - 1) % images.length)
+            setPhotoIndex((photoIndex + data.length - 1) % data.length)
           }
           onMoveNextRequest={() =>
-            setPhotoIndex((photoIndex + 1) % images.length)
+            setPhotoIndex((photoIndex + 1) % data.length)
           }
-          imageTitle="title"
-          imageCaption="caption"
+          imageTitle={data[(photoIndex + 1) % data.length].name}
+          imageCaption={data[(photoIndex + 1) % data.length].description}
           reactModalStyle={{ color: 'yellow' }}
           imagePadding={100}
           wrapperClassName="wrapperClassName"
-          prevLabel="prevLabel"
-          nextLabel="nextLabel"
+          prevLabel="previous-project"
+          nextLabel="next-project"
         />
       )}
       <StyledMassonry
@@ -91,20 +94,20 @@ export const MasonryGridView: React.FC<any> = ({
       >
         {data.map(({
            category,
-           src,
+           imageSrc,
            alt,
            name,
            description
-        }: PortfolioItem) => (
+        }: PortfolioItem, index) => (
           <Item
             key={alt}
             className={selectedCategory}
-            onClick={() => onItemClick(alt)}
+            onClick={() => onItemClick(index)}
           >
             <ItemOrientationType>
               <ItemFigure>
                 <ItemImage
-                  src={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${category}/${src}`}
+                  src={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${category}/${imageSrc}`}
                   alt={alt}
                   width="400px"
                 />
