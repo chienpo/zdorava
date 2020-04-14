@@ -3769,11 +3769,6 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-classnames@^2.1.2:
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
-  integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
-
 clean-css@4.2.x, clean-css@^4.2.1:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/clean-css/-/clean-css-4.2.1.tgz#2d411ef76b8569b6d0c84068dabe85b0aa5e5c17"
@@ -5823,6 +5818,11 @@ execall@^1.0.0:
   integrity sha1-c9CQTjlbPKsGWLCNCewlMH8pu3M=
   dependencies:
     clone-regexp "^1.0.0"
+
+exenv@^1.2.0:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/exenv/-/exenv-1.2.2.tgz#2ae78e85d9894158670b03d47bec1f03bd91bb9d"
+  integrity sha1-KueOhdmJQVhnCwPUe+wfA72Ru50=
 
 exit@^0.1.2:
   version "0.1.2"
@@ -11411,7 +11411,7 @@ prompts@^2.0.1:
     kleur "^3.0.2"
     sisteransi "^1.0.0"
 
-prop-types@15.7.2, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@15.7.2, prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.6, prop-types@^15.5.8, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -11780,13 +11780,6 @@ react-final-form@^6.4.0:
     "@babel/runtime" "^7.9.2"
     ts-essentials "^6.0.3"
 
-react-gist@^1.1.0:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/react-gist/-/react-gist-1.2.1.tgz#969ceb706b5503d84f398c5953818ee631a05fd0"
-  integrity sha512-2zxOrdxipjW2KrPTy7FJsYzzOsK84ReufIEnSKypq5pjRKurYzJTtQD4vffWviWWyJiqTniox7kDG+/yEtCs/g==
-  dependencies:
-    prop-types "^15.6.0"
-
 react-glitch-effect@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/react-glitch-effect/-/react-glitch-effect-1.0.4.tgz#9720d35f7206d4faa61633cc2e79d84b522f3c27"
@@ -11809,6 +11802,14 @@ react-hot-loader@^4.8.4, react-hot-loader@^4.8.8:
     shallowequal "^1.0.2"
     source-map "^0.7.3"
 
+react-image-lightbox@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/react-image-lightbox/-/react-image-lightbox-5.1.1.tgz#872d1a4336b5a6410ea7909b767cf59014081004"
+  integrity sha512-GprldD8AqpRb2hsOdns3sI7Xeo9hJlcybDxuli4RB+ml1J/GaFaUuRkT/7IrTLv2+4vkR74ahz2LD0HOUHI7wA==
+  dependencies:
+    prop-types "^15.6.2"
+    react-modal "^3.8.1"
+
 react-infinite-scroll-component@^5.0.4:
   version "5.0.4"
   resolved "https://registry.yarnpkg.com/react-infinite-scroll-component/-/react-infinite-scroll-component-5.0.4.tgz#45ca72c75bfe1ad5cf46d032247a8e0af65593ca"
@@ -11821,7 +11822,7 @@ react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
   integrity sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==
 
-react-lifecycles-compat@^3.0.4:
+react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
@@ -11840,14 +11841,6 @@ react-live@2.0.1:
     react-simple-code-editor "^0.9.0"
     unescape "^0.2.0"
 
-react-magnific-popup@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/react-magnific-popup/-/react-magnific-popup-1.0.1.tgz#2ab568010ca3ab793fadf9b5d42f47e6794b8afc"
-  integrity sha512-Spn7jCQSC54ZImSLKJ/83qzjcto5rSZ2zSJti5tA8rKht8jSsKjno/dsyjkJbJ+yEaP3Q6b/ieAVunMv1RcqXw==
-  dependencies:
-    classnames "^2.1.2"
-    react-gist "^1.1.0"
-
 react-masonry-component@^6.2.1:
   version "6.2.1"
   resolved "https://registry.yarnpkg.com/react-masonry-component/-/react-masonry-component-6.2.1.tgz#dd23b3129d6b922852b160472e6c9a6256fcdb8a"
@@ -11859,6 +11852,16 @@ react-masonry-component@^6.2.1:
     lodash "^4.17.4"
     masonry-layout "^4.2.0"
     prop-types "^15.5.8"
+
+react-modal@^3.8.1:
+  version "3.11.2"
+  resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-3.11.2.tgz#bad911976d4add31aa30dba8a41d11e21c4ac8a4"
+  integrity sha512-o8gvvCOFaG1T7W6JUvsYjRjMVToLZgLIsi5kdhFIQCtHxDkA47LznX62j+l6YQkpXDbvQegsDyxe/+JJsFQN7w==
+  dependencies:
+    exenv "^1.2.0"
+    prop-types "^15.5.10"
+    react-lifecycles-compat "^3.0.0"
+    warning "^4.0.3"
 
 react-perfect-scrollbar@^1.5.0:
   version "1.5.2"
@@ -14700,6 +14703,13 @@ warning@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/warning/-/warning-3.0.0.tgz#32e5377cb572de4ab04753bdf8821c01ed605b7c"
   integrity sha1-MuU3fLVy3kqwR1O9+IIcAe1gW3w=
+  dependencies:
+    loose-envify "^1.0.0"
+
+warning@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/warning/-/warning-4.0.3.tgz#16e9e077eb8a86d6af7d64aa1e05fd85b4678ca3"
+  integrity sha512-rpJyN222KWIvHJ/F53XSZv0Zl/accqHR8et1kpaMTD/fLCRxtV8iX8czMzY7sVZupTI3zcUTg8eycS2kNF9l6w==
   dependencies:
     loose-envify "^1.0.0"
 

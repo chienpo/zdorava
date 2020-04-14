@@ -36,4 +36,4 @@ export const PortfolioTabsView: React.FC<Props> = ({
       </PortfolioTabs>
     )}
   </I18n>
-);;
+);

@@ -1,4 +1,4 @@
-import { createElement, FC } from 'react';
+import { createElement, FC, useState } from 'react';
 
 import { MasonryGridView } from './masonry-grid-view';
 
@@ -14,6 +14,10 @@ interface OtherProps {
   handleRemoveComplete: (item: any) => void;
   handleImagesLoaded: (imagesLoadedInstance: any) => void;
   selectedCategory: string;
+  isOpen: boolean;
+  setIsOpen: any;
+  photoIndex: number;
+  setPhotoIndex: any;
 }
 
 interface PortfolioItem {
@@ -25,8 +29,11 @@ interface PortfolioItem {
 }
 
 export const MasonryGrid: FC<Props> = ({ data, selectedCategory }: Props) => {
+  const [photoIndex, setPhotoIndex] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
+
   const onItemClick = (value: string) => {
-    alert(value);
+    setIsOpen(true);
   };
 
   const handleLayoutComplete = (item: any) => {
@@ -48,5 +55,9 @@ export const MasonryGrid: FC<Props> = ({ data, selectedCategory }: Props) => {
     handleLayoutComplete,
     handleRemoveComplete,
     handleImagesLoaded,
+    isOpen,
+    setIsOpen,
+    photoIndex,
+    setPhotoIndex,
   });
 };
