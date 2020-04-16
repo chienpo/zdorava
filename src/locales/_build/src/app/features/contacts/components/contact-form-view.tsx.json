@@ -1,27 +1,37 @@
 {
-  "Enter your name": {
+  "Name": {
     "origin": [
-      ["src/app/features/contacts/components/contact-form-view.tsx", 10]
+      ["src/app/features/contacts/components/contact-form-view.tsx", 11]
     ]
   },
-  "Enter your last name": {
+  "Please enter your name": {
     "origin": [
-      ["src/app/features/contacts/components/contact-form-view.tsx", 13]
+      ["src/app/features/contacts/components/contact-form-view.tsx", 12]
     ]
   },
-  "Enter your email": {
+  "Email": {
     "origin": [
-      ["src/app/features/contacts/components/contact-form-view.tsx", 16]
+      ["src/app/features/contacts/components/contact-form-view.tsx", 14]
     ]
   },
-  "Enter your message": {
+  "Please enter your email": {
     "origin": [
-      ["src/app/features/contacts/components/contact-form-view.tsx", 19]
+      ["src/app/features/contacts/components/contact-form-view.tsx", 15]
+    ]
+  },
+  "Message": {
+    "origin": [
+      ["src/app/features/contacts/components/contact-form-view.tsx", 17]
+    ]
+  },
+  "Please enter your message": {
+    "origin": [
+      ["src/app/features/contacts/components/contact-form-view.tsx", 18]
     ]
   },
   "Send message": {
     "origin": [
-      ["src/app/features/contacts/components/contact-form-view.tsx", 22]
+      ["src/app/features/contacts/components/contact-form-view.tsx", 21]
     ]
   }
 }

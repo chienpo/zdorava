@@ -47,6 +47,17 @@ export const Input = styled.input`
   ${inputStyles}
 `;
 
+export const Textarea = styled.textarea`
+  display: flex;
+  justify-content: center;
+  line-height: 30px;
+  padding: 0 10px;
+  width: 100%;
+  box-sizing: border-box;
+
+  ${inputStyles}
+`;
+
 export const RequiredStar = styled.span`
   color: ${RED};
   margin-left: 5px;

@@ -8,7 +8,7 @@ export const ButtonStyled = styled.button`
   text-decoration: none;
   font-size: 16px;
   text-transform: uppercase;
-  transition: background 0.2s;
+  transition: background 0.2s, opacity 0.2s;
   border: 1px solid ${BLACK};
   background: ${({ plain }: any) => plain ? `${BLACK}` : 'transparent'};
   width: ${({ width }: any) => width || 'auto'};
@@ -30,5 +30,10 @@ export const ButtonStyled = styled.button`
     cursor: default;
     color: ${WHITE};
     border-color: ${WHITE};
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
   }
 `;

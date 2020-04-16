@@ -42,21 +42,9 @@ msgstr "Contacts"
 msgid "Developer"
 msgstr "Developer"
 
-#: src/app/features/contacts/components/contact-form-view.tsx:16
-msgid "Enter your email"
-msgstr "Enter your email"
-
-#: src/app/features/contacts/components/contact-form-view.tsx:13
-msgid "Enter your last name"
-msgstr "Enter your last name"
-
-#: src/app/features/contacts/components/contact-form-view.tsx:19
-msgid "Enter your message"
-msgstr "Enter your message"
-
-#: src/app/features/contacts/components/contact-form-view.tsx:10
-msgid "Enter your name"
-msgstr "Enter your name"
+#: src/app/features/contacts/components/contact-form-view.tsx:14
+msgid "Email"
+msgstr "Email"
 
 #: src/app/constants/portfolio.ts:14
 msgid "Front-end"
@@ -75,11 +63,35 @@ msgstr "Lagunovsky"
 msgid "Loading..."
 msgstr "Loading..."
 
+#: src/app/features/contacts/components/contact-form-view.tsx:17
+msgid "Message"
+msgstr "Message"
+
+#: src/app/features/contacts/components/contact-form-view.tsx:11
+msgid "Name"
+msgstr "Name"
+
+#: src/app/features/contacts/components/contact-form-view.tsx:15
+msgid "Please enter your email"
+msgstr "Please enter your email"
+
+#: src/app/features/contacts/components/contact-form-view.tsx:18
+msgid "Please enter your message"
+msgstr "Please enter your message"
+
+#: src/app/features/contacts/components/contact-form-view.tsx:12
+msgid "Please enter your name"
+msgstr "Please enter your name"
+
 #: src/app/constants/page-titles.ts:7
 msgid "Portfolio"
 msgstr "Portfolio"
 
-#: src/app/features/contacts/components/contact-form-view.tsx:22
+#: src/app/form-builder/validators.tsx:7
+msgid "Required"
+msgstr "Required"
+
+#: src/app/features/contacts/components/contact-form-view.tsx:21
 msgid "Send message"
 msgstr "Send message"
 

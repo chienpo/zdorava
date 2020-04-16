@@ -16,7 +16,7 @@ msgstr ""
 #: src/app/constants/page-titles.ts:8
 #: src/app/features/not-found/not-found-view.tsx:6
 msgid "404"
-msgstr ""
+msgstr "404"
 
 #: src/app/constants/page-titles.ts:6
 msgid "About"
@@ -42,21 +42,9 @@ msgstr "Контакты"
 msgid "Developer"
 msgstr "Разработчик"
 
-#: src/app/features/contacts/components/contact-form-view.tsx:16
-msgid "Enter your email"
-msgstr "Введите вашу почту"
-
-#: src/app/features/contacts/components/contact-form-view.tsx:13
-msgid "Enter your last name"
-msgstr "Введите вашу фамилию"
-
-#: src/app/features/contacts/components/contact-form-view.tsx:19
-msgid "Enter your message"
-msgstr "Cообщение"
-
-#: src/app/features/contacts/components/contact-form-view.tsx:10
-msgid "Enter your name"
-msgstr "Введите ваше имя"
+#: src/app/features/contacts/components/contact-form-view.tsx:14
+msgid "Email"
+msgstr ""
 
 #: src/app/constants/portfolio.ts:14
 msgid "Front-end"
@@ -75,11 +63,35 @@ msgstr "Лагуновский"
 msgid "Loading..."
 msgstr "Загрузка..."
 
+#: src/app/features/contacts/components/contact-form-view.tsx:17
+msgid "Message"
+msgstr "Текст сообщения"
+
+#: src/app/features/contacts/components/contact-form-view.tsx:11
+msgid "Name"
+msgstr "Имя"
+
+#: src/app/features/contacts/components/contact-form-view.tsx:15
+msgid "Please enter your email"
+msgstr "Введите адрес вашей электронной почты"
+
+#: src/app/features/contacts/components/contact-form-view.tsx:18
+msgid "Please enter your message"
+msgstr "Введите текст сообщения"
+
+#: src/app/features/contacts/components/contact-form-view.tsx:12
+msgid "Please enter your name"
+msgstr "Введите ваше имя"
+
 #: src/app/constants/page-titles.ts:7
 msgid "Portfolio"
 msgstr "Портфолио"
 
-#: src/app/features/contacts/components/contact-form-view.tsx:22
+#: src/app/form-builder/validators.tsx:7
+msgid "Required"
+msgstr "Обязательное поле"
+
+#: src/app/features/contacts/components/contact-form-view.tsx:21
 msgid "Send message"
 msgstr "Отправить сообщение"
 

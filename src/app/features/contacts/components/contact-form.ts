@@ -1,28 +1,33 @@
-import { createElement } from 'react';
+import { createElement, useState } from 'react';
+import emailjs from 'emailjs-com';
 
+import {
+  SERVICE_ID,
+  TEMPLATE_ID,
+  USER_ID,
+} from 'app/constants/contacts';
 import { ContactFormView } from './contact-form-view';
-
-export const FIELD_NAME = 'name';
-export const FIELD_LAST_NAME = 'lastName';
-export const FIELD_EMAIL = 'email';
-export const FIELD_MESSAGE = 'message';
-
-// const initialValues = {
-//   [FIELD_NAME]: '',
-//   [FIELD_LAST_NAME]: '',
-//   [FIELD_EMAIL]: '',
-//   [FIELD_MESSAGE]: '',
-// };
 
 const initialValues = {};
 
 export const ContactForm = () => {
+  const [requestLoading, setRequestLoading] = useState(false);
+
   const onSubmit = (values: any) => {
-    console.info('1', values);
+    setRequestLoading(true);
+
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, values, USER_ID)
+      .then(() => {
+        setRequestLoading(false);
+      }, (error) => {
+        setRequestLoading(false);
+        throw error.text
+      });
   };
 
   return createElement(ContactFormView, {
     onSubmit,
     initialValues,
+    requestLoading,
   })
 };

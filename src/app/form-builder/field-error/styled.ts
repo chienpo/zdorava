@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { RED_70 } from '../../constants/colors';
 
 export const ErrorBox = styled.div`
+  font-family: Orbitron-Bold, sans-serif;
   background: ${RED_70};
   color: white;
   padding: 5px;
@@ -14,6 +15,7 @@ export const ErrorBox = styled.div`
 `;
 
 export const IconError = styled.span`
+    font-family: Orbitron-Bold, sans-serif;
     width: 14px;
     height: 14px;
     background: white;
