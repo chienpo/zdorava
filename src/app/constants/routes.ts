@@ -12,7 +12,7 @@ export const routes = [
 ];
 
 export const ROUTE_THEME_MODES: { [key: string]: string } = {
-  [ROUTE_NAME_HOME]: DARK_MODE,
+  [ROUTE_NAME_HOME]: LIGHT_MODE,
   [ROUTE_NAME_ABOUT]: LIGHT_MODE,
   [ROUTE_NAME_PORTFOLIO]: DARK_MODE,
   [constants.UNKNOWN_ROUTE]: LIGHT_MODE,

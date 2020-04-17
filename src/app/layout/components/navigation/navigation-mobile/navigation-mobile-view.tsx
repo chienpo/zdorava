@@ -3,7 +3,6 @@ import { I18n } from '@lingui/react';
 import { PoseGroup } from 'react-pose';
 
 import { LanguageSwitchProps, LanguageSwitch } from 'app/ui/language-switch/language-switch';
-import { routes } from 'app/constants/routes';
 import { PAGE_TITLES } from 'app/constants/page-titles';
 import { FadeInOut } from '../../../../animations/fade-in-out-vertically';
 import {
@@ -21,6 +20,7 @@ type Props = {
   router: any;
   mobileMenuOpened: boolean;
   toggleBurgerMenu: (prevState: any) => void;
+  preparedRoutes: any;
 };
 
 type NavigationProps = {
@@ -33,29 +33,30 @@ export const NavigationMobileView = ({
   onChangeLanguage,
   mobileMenuOpened,
   toggleBurgerMenu,
+  preparedRoutes,
 }: Props & LanguageSwitchProps) => (
   <I18n>
     {({ i18n }) => (
       <>
         <PoseGroup>
           {mobileMenuOpened && (
-            <FadeInOut key="fadeInOut">
-              <NavigationList>
-                {routes.map(({ name }: NavigationProps) => (
-                  <NavLinkStyled
-                    key={name}
-                    router={router}
-                    routeName={name}
-                    onClick={() => {
-                      return toggleBurgerMenu((prevState: boolean) => !prevState)
-                    }}
-                  >
-                    {i18n._(PAGE_TITLES[name])}
-                  </NavLinkStyled>
-                ))}
-              </NavigationList>
-            </FadeInOut>
-          )}
+          <FadeInOut key="fadeInOut">
+            <NavigationList>
+              {preparedRoutes.map(({ name }: NavigationProps) => (
+                <NavLinkStyled
+                  key={name}
+                  router={router}
+                  routeName={name}
+                  onClick={() => {
+                    return toggleBurgerMenu((prevState: boolean) => !prevState)
+                  }}
+                >
+                  {i18n._(PAGE_TITLES[name])}
+                </NavLinkStyled>
+                  ))}
+            </NavigationList>
+          </FadeInOut>
+            )}
         </PoseGroup>
         <NavigationWrapper>
           <Overlay>
@@ -63,8 +64,8 @@ export const NavigationMobileView = ({
               opened={mobileMenuOpened}
               type="button"
               onClick={() => {
-                return toggleBurgerMenu((prevState: boolean) => !prevState)
-              }}
+                  return toggleBurgerMenu((prevState: boolean) => !prevState)
+                }}
             >
               <BurgerTopLine />
               <BurgerCenteredLine />
@@ -77,6 +78,6 @@ export const NavigationMobileView = ({
           />
         </NavigationWrapper>
       </>
-    )}
+      )}
   </I18n>
-);
+  );

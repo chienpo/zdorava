@@ -32,7 +32,7 @@ export const NavLinkStyled = styled(BaseLink)`
   transition: all ease-in-out 0.4s;
   text-decoration: none;
   color: ${GRAY};
-  font-size: 28px;
+  font-size: 14px;
   line-height: 30px;
   letter-spacing: 0.5px;
   text-transform: uppercase;

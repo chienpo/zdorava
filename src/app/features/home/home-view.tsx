@@ -1,5 +1,4 @@
 import React from 'react';
-import GlitchEffect from 'react-glitch-effect';
 import Typing from 'react-typing-animation';
 import { Trans } from '@lingui/macro';
 
@@ -12,9 +11,12 @@ import {
   WebsiteSubtitle,
   Name,
   SurName,
-  GlitchLine,
   Image,
   Divider,
+  LeftNav,
+  RightNav,
+  LinkInner,
+  LinkOverlay,
 } from './styled';
 
 interface Props {
@@ -28,11 +30,19 @@ export const HomeView: React.FC<Props> = ({
 }: Props) => (
   <>
     <HomepageContentWrapper>
+      <LeftNav>
+        <LinkOverlay />
+        <LinkInner>
+          <Trans>About me</Trans>
+        </LinkInner>
+      </LeftNav>
+      <RightNav>
+        <LinkOverlay />
+        <LinkInner>
+          <Trans>Portfolio</Trans>
+        </LinkInner>
+      </RightNav>
       <HomepageHGroup>
-        <Divider />
-        <GlitchEffect duration="0.8s">
-          <GlitchLine />
-        </GlitchEffect>
         <Divider />
         <HomepageTitle>
           <Name>
@@ -42,8 +52,9 @@ export const HomeView: React.FC<Props> = ({
             <Trans>Lagunovsky</Trans>
           </SurName>
         </HomepageTitle>
+        <Divider />
         <Typing onFinishedTyping={() => toggleDefaultBg(true)}>
-          <HomepageSubtitle>FRONT-END DEVELOPER</HomepageSubtitle>
+          <HomepageSubtitle>web&art pro</HomepageSubtitle>
         </Typing>
         <WebsiteSubtitle>
           Zdorava

@@ -9,6 +9,7 @@ import {
   GRAY,
   RED,
   WHITE_20,
+  WHITE_95,
   WHITE_SMOKE_10,
 } from '../../../constants/colors';
 
@@ -22,7 +23,7 @@ export const FooterWrapper = styled.footer`
   background: ${({ theme }) =>
     theme.mode === DARK_MODE
       ? `url(${overlayBlackDot}) repeat scroll 0 0`
-      : `url(${overlayWhiteDot}) repeat scroll 0 0`};
+      : `${WHITE_95} url(${overlayWhiteDot}) repeat scroll 0 0`};
   z-index: 1;
 `;
 
