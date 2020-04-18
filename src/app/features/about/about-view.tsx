@@ -20,7 +20,6 @@ export const AboutView = () => (
     <AccordionBox>
       <DeveloperName>
         <Trans>Stepan</Trans>
-        &nbsp;
         <Trans>Lagunovsky</Trans>
       </DeveloperName>
       <Position>

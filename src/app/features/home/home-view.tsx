@@ -26,10 +26,10 @@ export const HomeView: React.FC<Props> = ({
   toggleDefaultBg
 }: Props) => (
   <>
-    <PageLinkView position="left">
-      <Trans>About me</Trans>
+    <PageLinkView href="/about" position="left">
+      <Trans>Resume</Trans>
     </PageLinkView>
-    <PageLinkView position="right">
+    <PageLinkView href="/portfolio" position="right">
       <Trans>Portfolio</Trans>
     </PageLinkView>
     <HomepageContentWrapper>

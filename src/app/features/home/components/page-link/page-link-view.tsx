@@ -4,6 +4,7 @@ import {PageLinkStyled, LinkText, LinkOverlay } from "./styled";
 
 interface Props {
   position: string;
+  href: string;
   children: any;
 }
 

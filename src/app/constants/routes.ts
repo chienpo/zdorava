@@ -1,5 +1,5 @@
 import { constants } from 'router5';
-import { DARK_MODE, LIGHT_MODE } from 'app/constants/theme';
+import { LIGHT_MODE } from 'app/constants/theme';
 
 export const ROUTE_NAME_HOME = 'home';
 export const ROUTE_NAME_ABOUT = 'about';
@@ -14,6 +14,6 @@ export const routes = [
 export const ROUTE_THEME_MODES: { [key: string]: string } = {
   [ROUTE_NAME_HOME]: LIGHT_MODE,
   [ROUTE_NAME_ABOUT]: LIGHT_MODE,
-  [ROUTE_NAME_PORTFOLIO]: DARK_MODE,
+  [ROUTE_NAME_PORTFOLIO]: LIGHT_MODE,
   [constants.UNKNOWN_ROUTE]: LIGHT_MODE,
 };
