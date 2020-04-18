@@ -22,6 +22,10 @@ msgstr "404"
 msgid "About"
 msgstr "Обо мне"
 
+#: src/app/features/home/home-view.tsx:9
+msgid "About me"
+msgstr ""
+
 #: src/app/constants/portfolio.ts:12
 msgid "All projects"
 msgstr "Все проекты"
@@ -55,7 +59,7 @@ msgid "Home"
 msgstr "Главная"
 
 #: src/app/features/about/about-view.tsx:15
-#: src/app/features/home/home-view.tsx:20
+#: src/app/features/home/home-view.tsx:22
 msgid "Lagunovsky"
 msgstr "Лагуновский"
 
@@ -84,6 +88,7 @@ msgid "Please enter your name"
 msgstr "Введите ваше имя"
 
 #: src/app/constants/page-titles.ts:7
+#: src/app/features/home/home-view.tsx:12
 msgid "Portfolio"
 msgstr "Портфолио"
 
@@ -96,6 +101,6 @@ msgid "Send message"
 msgstr "Отправить сообщение"
 
 #: src/app/features/about/about-view.tsx:13
-#: src/app/features/home/home-view.tsx:17
+#: src/app/features/home/home-view.tsx:19
 msgid "Stepan"
 msgstr "Степан"

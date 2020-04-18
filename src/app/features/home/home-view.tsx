@@ -3,6 +3,7 @@ import Typing from 'react-typing-animation';
 import { Trans } from '@lingui/macro';
 
 import { HomepageGlitch } from './components/homepage-glitch';
+import {PageLinkView} from "./components/page-link/page-link-view";
 import {
   HomepageContentWrapper,
   HomepageHGroup,
@@ -13,10 +14,6 @@ import {
   SurName,
   Image,
   Divider,
-  LeftNav,
-  RightNav,
-  LinkInner,
-  LinkOverlay,
 } from './styled';
 
 interface Props {
@@ -29,19 +26,13 @@ export const HomeView: React.FC<Props> = ({
   toggleDefaultBg
 }: Props) => (
   <>
+    <PageLinkView position="left">
+      <Trans>About me</Trans>
+    </PageLinkView>
+    <PageLinkView position="right">
+      <Trans>Portfolio</Trans>
+    </PageLinkView>
     <HomepageContentWrapper>
-      <LeftNav>
-        <LinkOverlay />
-        <LinkInner>
-          <Trans>About me</Trans>
-        </LinkInner>
-      </LeftNav>
-      <RightNav>
-        <LinkOverlay />
-        <LinkInner>
-          <Trans>Portfolio</Trans>
-        </LinkInner>
-      </RightNav>
       <HomepageHGroup>
         <Divider />
         <HomepageTitle>

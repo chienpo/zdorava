@@ -34,7 +34,7 @@ export const InputField: FC<any> = ({
               )}
             </LabelText>
             {type === 'textarea' ? (
-              <Textarea {...input} {...props} />
+              <Textarea rows={4} {...input} {...props} />
             ) : (
               <Input {...input} {...props} />
             )}

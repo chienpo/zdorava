@@ -22,6 +22,10 @@ msgstr "404"
 msgid "About"
 msgstr "About"
 
+#: src/app/features/home/home-view.tsx:9
+msgid "About me"
+msgstr "About me"
+
 #: src/app/constants/portfolio.ts:12
 msgid "All projects"
 msgstr "All projects"
@@ -55,7 +59,7 @@ msgid "Home"
 msgstr "Home"
 
 #: src/app/features/about/about-view.tsx:15
-#: src/app/features/home/home-view.tsx:20
+#: src/app/features/home/home-view.tsx:22
 msgid "Lagunovsky"
 msgstr "Lagunovsky"
 
@@ -84,6 +88,7 @@ msgid "Please enter your name"
 msgstr "Please enter your name"
 
 #: src/app/constants/page-titles.ts:7
+#: src/app/features/home/home-view.tsx:12
 msgid "Portfolio"
 msgstr "Portfolio"
 
@@ -96,6 +101,6 @@ msgid "Send message"
 msgstr "Send message"
 
 #: src/app/features/about/about-view.tsx:13
-#: src/app/features/home/home-view.tsx:17
+#: src/app/features/home/home-view.tsx:19
 msgid "Stepan"
 msgstr "Stepan"

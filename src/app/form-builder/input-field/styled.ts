@@ -54,6 +54,7 @@ export const Textarea = styled.textarea`
   padding: 0 10px;
   width: 100%;
   box-sizing: border-box;
+  resize: none;
 
   ${inputStyles}
 `;
