@@ -26,7 +26,7 @@ interface Props {
   selectedCategory: string;
 }
 
-export const Portfolio: FC<Props> = () => {
+export const Portfolio: FC = () => {
   // eslint-disable-next-line max-len
   const [data, setData] = useState<PortfolioItem[]>([]);
   const [projectsTotalCount, setProjectsTotalCount] = useState<number>(0);

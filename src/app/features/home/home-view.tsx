@@ -1,9 +1,10 @@
 import React from 'react';
 import Typing from 'react-typing-animation';
 import { Trans } from '@lingui/macro';
+import posed from 'react-pose';
 
 import { HomepageGlitch } from './components/homepage-glitch';
-import {PageLinkView} from "./components/page-link/page-link-view";
+import {PageLinkFadeView} from "./components/page-link-fade/page-link-fade-view";
 import {
   HomepageContentWrapper,
   HomepageHGroup,
@@ -16,6 +17,15 @@ import {
   Divider,
 } from './styled';
 
+const Container = posed.div({
+  enter: { applyAtStart: { height: '100%' } }
+});
+
+const Wrap = posed.div({
+  enter: { opacity: 1, applyAtStart: { height: '100%' } },
+  exit: { opacity: 0 }
+});
+
 interface Props {
   bgIsToggling: boolean;
   toggleDefaultBg: (value: boolean) => void;
@@ -23,38 +33,40 @@ interface Props {
 
 export const HomeView: React.FC<Props> = ({
   bgIsToggling,
-  toggleDefaultBg
+  toggleDefaultBg,
 }: Props) => (
-  <>
-    <PageLinkView href="/about" position="left">
-      <Trans>Resume</Trans>
-    </PageLinkView>
-    <PageLinkView href="/portfolio" position="right">
-      <Trans>Portfolio</Trans>
-    </PageLinkView>
-    <HomepageContentWrapper>
-      <HomepageHGroup>
-        <Divider />
-        <HomepageTitle>
-          <Name>
-            <Trans>Stepan</Trans>
-          </Name>
-          <SurName>
-            <Trans>Lagunovsky</Trans>
-          </SurName>
-        </HomepageTitle>
-        <Divider />
-        <Typing onFinishedTyping={() => toggleDefaultBg(true)}>
-          <HomepageSubtitle>web&art pro</HomepageSubtitle>
-        </Typing>
-        <WebsiteSubtitle>
-          Zdorava
-        </WebsiteSubtitle>
-      </HomepageHGroup>
-    </HomepageContentWrapper>
-    {bgIsToggling && (
-      <Image bgIsToggling={bgIsToggling} />
-    )}
-    <HomepageGlitch />
-  </>
+  <Container>
+    <Wrap style={{ position: 'relative' }}>
+      <PageLinkFadeView routeName="about" position="left">
+        <Trans>Resume</Trans>
+      </PageLinkFadeView>
+      <PageLinkFadeView routeName="portfolio" position="right">
+        <Trans>Portfolio</Trans>
+      </PageLinkFadeView>
+      <HomepageContentWrapper>
+        <HomepageHGroup>
+          <Divider />
+          <HomepageTitle>
+            <Name>
+              <Trans>Stepan</Trans>
+            </Name>
+            <SurName>
+              <Trans>Lagunovsky</Trans>
+            </SurName>
+          </HomepageTitle>
+          <Divider />
+          <Typing onFinishedTyping={() => toggleDefaultBg(true)}>
+            <HomepageSubtitle>web&art pro</HomepageSubtitle>
+          </Typing>
+          <WebsiteSubtitle>
+            Zdorava
+          </WebsiteSubtitle>
+        </HomepageHGroup>
+      </HomepageContentWrapper>
+      {bgIsToggling && (
+        <Image bgIsToggling={bgIsToggling} />
+      )}
+      <HomepageGlitch />
+    </Wrap>
+  </Container>
 );

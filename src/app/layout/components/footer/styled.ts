@@ -4,11 +4,8 @@ import overlayBlackDot from 'assets/images/overlay_black.png';
 import overlayWhiteDot from 'assets/images/overlay_white.png';
 import { DARK_MODE } from '../../../constants/theme';
 import {
-  BLACK_LIGHTER_95,
-  BLACK_LIGHTER_99,
   GRAY,
   RED,
-  WHITE_20,
   WHITE_95,
   WHITE_SMOKE_10,
 } from '../../../constants/colors';
@@ -33,11 +30,6 @@ export const FooterNav = styled.nav`
   grid-template-columns: auto auto auto;
   justify-content: center;
   padding: 45px 0;
-  ${({ theme }) => theme.mode === DARK_MODE ? `
-    background: ${BLACK_LIGHTER_95};
-  ` : `
-    background: ${WHITE_20};
-  `};
 `;
 
 export const FooterCopy = styled.small`
@@ -47,11 +39,7 @@ export const FooterCopy = styled.small`
   display: block;
   width: 100%;
   color: ${GRAY};
-  ${({ theme }) => theme.mode === DARK_MODE ? `
-    background: ${BLACK_LIGHTER_99};
-  ` : `
-    background: ${WHITE_SMOKE_10};
-  `};
+  background: ${WHITE_SMOKE_10};
 `;
 
 export const FooterSocialLink = styled.a`

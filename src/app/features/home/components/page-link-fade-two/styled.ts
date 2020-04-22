@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { Link } from "react-router5";
 
-import {WHITE_20, WHITE_50, WHITE_90} from "../../../../constants/colors";
+import {WHITE, WHITE_20, WHITE_50, WHITE_90} from "../../../../constants/colors";
 import overlayWhiteDot from "../../../../../assets/images/overlay_white.png";
 import navigationPortfolioBackground from "../../../../../assets/images/navigation-portfolio-background.png";
 import navigationPortfolioBackgroundLogo from "../../../../../assets/images/about-logo.png";
@@ -8,9 +9,10 @@ import navigationPortfolioBackgroundLogo from "../../../../../assets/images/abou
 export const LinkOverlay = styled.div`
   backdrop-filter: blur(3px);
   position: fixed;
-  top: 0;
+  top: 50px;
   transition: left 0.8s, right 0.8s;
-  bottom: 0;
+  bottom: 135px;
+  width: 100vw;
   display: block;
   z-index: 1;
   display: none;
@@ -21,13 +23,13 @@ export const LinkOverlay = styled.div`
 export const LinkText = styled.div`
   position: relative;
   z-index: 2;
-  background: ${WHITE_90} url(${overlayWhiteDot}) repeat scroll 0 0;
   display: flex;
   height: 100%;
   width: 100%;
   justify-content: center;
   justify-content: unset;
   padding-top: 80px;
+  color: ${WHITE};
   transition: box-shadow 0.8s;
 
   &:before {
@@ -40,7 +42,7 @@ export const LinkText = styled.div`
     position: absolute;
     top: 0;
     transform: scale3d(3.5, 3, 2) rotate3d(0, 0, 1, 135deg)
-      translate3d(0px, 100%, 0px);
+    translate3d(0px, 100%, 0px);
     transition: transform 0.8s ease 0s;
     visibility: hidden;
     width: 120%;
@@ -60,24 +62,25 @@ export const LinkText = styled.div`
   }
 `;
 
-export const PageLinkStyled = styled.a`
+export const PageLinkStyled = styled(Link)`
   position: fixed;
-  top: 0;
-  bottom: 0;
-  ${({ position }: any) => position === 'left' ? 'left: 0' : 'right: 0'};
   z-index: 3;
-  width: 80px;
+  width: 100vw;
   text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  writing-mode: vertical-l;
-  writing-mode: vertical-rl;
   text-orientation: mixed;
-  font-size: 80px;
-  background: url(${({ position }: any) => position === 'left' ? navigationPortfolioBackgroundLogo : navigationPortfolioBackground}) right center no-repeat;
   background-size: cover;
   transition: width 0.8s, background 0.8s;
+
+  ${({ position }: any) => position === 'left' ? `
+    top: 50px;
+    bottom: 50vh;
+  ` : `
+    top: 50vh;
+    bottom: 135px;
+  `}
 
   ${LinkOverlay} {
     left: 0;
@@ -86,28 +89,28 @@ export const PageLinkStyled = styled.a`
   }
 
   ${LinkText} {
+    justify-content: ${({ position }: any) => position === 'left' ? 'flex-start' : 'flex-end'};
     align-items: ${({ position }: any) => position === 'left' ? 'flex-start' : 'flex-end'};
-    color: rgba(200,200, 200, 0.7);
-    color: ${({ position }: any) => position === 'left' ? 'gray' : 'white'};
-    background: ${WHITE_50} url(${overlayWhiteDot}) repeat scroll 0 0;
     transition: width 0.8s, background 0.8s, color 0.8s, box-shadow 0.8s;
+    font-size: 100px;
+    color: rgba(100,100,100,0.1)
   }
 
   &:hover {
     cursor: pointer;
-    width: 25vw;
+    width: 100vw;
+    background: ${WHITE} url(${({ position }: any) => position === 'left' ? navigationPortfolioBackgroundLogo : navigationPortfolioBackground}) right center no-repeat;
 
     ${LinkOverlay} {
       display: block;
-      left: ${({ position }: any) => position === 'left' ? '25vw' : '0'};
-      right: ${({ position }: any) => position === 'left' ? '0' : '25vw'};
+      left: ${({ position }: any) => position === 'left' ? '100vw' : '0'};
+      right: ${({ position }: any) => position === 'left' ? '0' : '100vw'};
     }
 
     ${LinkText} {
       color: black;
       background: none;
-      align-items: ${({ position }: any) => position === 'left' ? 'flex-start' : 'flex-end'};
-      box-shadow: ${({ position }: any) => position === 'left' ? '-36px 0 38px 45px' : '36px 0 38px 45px'} rgba(17,17,17,0.8);
+      box-shadow: ${({ position }: any) => position === 'left' ? '0px 15px 15px 0px' : '0px -15px 15px 0px'} rgba(17,17,17,0.8);
     }
   }
 `;

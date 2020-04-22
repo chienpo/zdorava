@@ -22,7 +22,7 @@ export const Navigation: FC<LanguageSwitchProps> = ({
   const mediaMinWidthForLaptops = useMediaMinWidth(LAPTOPS);
 
   const preparedRoutes = topRouteName === ROUTE_NAME_HOME
-    ? routes.filter(({ name }) => name !== ROUTE_NAME_HOME)
+    ? []
     : routes;
 
   if (isMobile.any || !mediaMinWidthForLaptops) {
