@@ -16,7 +16,7 @@ export const PageLinkFadeView = ({ children, position, ...props }: Props) => {
   return (
     <>
       {overlayVisible && (
-        <FadeInOut pose="enter" key={position} onMouseEnter={() => showOverlay(false)}>
+        <FadeInOut pose="enter" key={position}>
           <LinkOverlay onMouseEnter={() => showOverlay(false)} />
         </FadeInOut>
       )}

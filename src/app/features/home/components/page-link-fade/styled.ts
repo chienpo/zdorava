@@ -80,7 +80,7 @@ export const PageLinkStyled = styled(Link)`
 
   svg {
     path, polygon {
-      fill: ${RED_50};
+      fill: ${RED_50} !important;
     }
   }
 
@@ -106,7 +106,7 @@ export const PageLinkStyled = styled(Link)`
 
     svg {
       path, polygon {
-        fill: ${RED};
+        fill: ${RED} !important;
       }
     }
   }
