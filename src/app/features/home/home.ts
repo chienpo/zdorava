@@ -1,8 +1,8 @@
-import { createElement, useState } from 'react';
+import { createElement, useState, FC } from 'react';
 
 import { HomeView } from './home-view';
 
-export const Home = () => {
+export const Home: FC<any> = () => {
   const [bgIsToggling, toggleDefaultBg] = useState(false);
 
   return createElement(HomeView, {
@@ -10,3 +10,6 @@ export const Home = () => {
     toggleDefaultBg,
   })
 };
+
+// // eslint-disable-next-line import/no-default-export
+// export default Home;

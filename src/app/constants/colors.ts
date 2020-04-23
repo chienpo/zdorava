@@ -12,6 +12,7 @@ export const GRAY_MEDIUM_10 = rgba(GRAY_MEDIUM, 0.10);
 export const GRAY_LIGHT = '#ccc';
 export const RED = 'red';
 export const RED_70 = rgba(RED, 0.7);
+export const RED_50 = rgba(RED, 0.5);
 export const ROSE_WOOD = '#640000';
 export const ROSE_WOOD_50 = rgba(ROSE_WOOD, 0.5);
 export const SHARK_DARK = '#262629';

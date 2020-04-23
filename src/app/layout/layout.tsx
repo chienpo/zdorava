@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, Suspense } from 'react';
 import { constants } from "router5";
 import { useRouteNode } from 'react-router5';
 import { I18n } from '@lingui/react';
@@ -8,11 +8,13 @@ import { languageMiddleware } from 'app/providers/language-provider';
 import {ROUTE_NAME_ABOUT, ROUTE_NAME_HOME, ROUTE_NAME_PORTFOLIO} from '../constants/routes';
 import { Navigation } from './components/navigation';
 import { Footer } from './components/footer';
-import { Home } from '../features/home';
-import { About } from '../features/about';
 import { NotFound } from '../features/not-found';
-import { Portfolio } from '../features/portfolio';
+import { PageLoader } from '../ui/page-loader/page-loader';
 import { AppContent, Header, AppBackground } from './styled';
+
+const Home = React.lazy(() => import('../features/home'));
+const About = React.lazy(() => import('../features/about/about'));
+const Portfolio = React.lazy(() => import('../features/portfolio'));
 
 const RouteContainer = posed.div({
   enter: { opacity: 1, delay: 300, beforeChildren: true },
@@ -40,19 +42,19 @@ export const Layout = () => {
                 </Header>
                 <main>
                   {topRouteName === ROUTE_NAME_HOME && (
-                    <Fragment key={topRouteName}>
+                    <Suspense fallback={PageLoader}>
                       <Home />
-                    </Fragment>
+                    </Suspense>
                   )}
                   {topRouteName === ROUTE_NAME_ABOUT && (
-                    <Fragment key={topRouteName}>
-                      <About />
-                    </Fragment>
+                    <Suspense fallback={PageLoader}>
+                      <About poseKey={topRouteName} />
+                    </Suspense>
                   )}
                   {topRouteName === ROUTE_NAME_PORTFOLIO && (
-                    <Fragment key={topRouteName}>
+                    <Suspense fallback={PageLoader}>
                       <Portfolio />
-                    </Fragment>
+                    </Suspense>
                   )}
                   {topRouteName === constants.UNKNOWN_ROUTE && (
                     <Fragment key={topRouteName}>

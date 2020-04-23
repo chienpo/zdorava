@@ -7,11 +7,11 @@ export const FadeInOut = posed.div({
       delay: 400,
     },
     opacity: 1,
-    zIndex: 3,
+    zIndex: 5,
   },
   exit: {
     opacity: 0,
-    zIndex: 3,
+    zIndex: 5,
     transition: {
       duration: 200,
       delay: 400,
@@ -25,12 +25,12 @@ export const FadeInOutVertically = posed.div({
       default: { duration: 400 }
     },
     opacity: 1,
-    zIndex: 3,
+    zIndex: 5,
     top: 0,
   },
   exit: {
     transition: { duration: 400 },
-    zIndex: 3,
+    zIndex: 5,
     top: '-100%'
   },
 });

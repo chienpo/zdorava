@@ -2,7 +2,7 @@ import React from 'react';
 
 import { EN, RU } from '../../constants/languages';
 import { SwitchProps } from './language-switch';
-import { Label, Separator, Switch } from './styled';
+import { Label, Separator, Switch, InputRadio, LangText } from './styled';
 
 export const LanguageSwitchView: React.FC<SwitchProps> = ({
   value,
@@ -10,7 +10,7 @@ export const LanguageSwitchView: React.FC<SwitchProps> = ({
 }) => (
   <Switch>
     <Label>
-      <input
+      <InputRadio
         checked={value === EN}
         name="lang"
         type="radio"
@@ -18,11 +18,11 @@ export const LanguageSwitchView: React.FC<SwitchProps> = ({
         onChange={(event: any) => onChange(event.target.value)}
         hidden
       />
-      <span>en</span>
+      <LangText>en</LangText>
     </Label>
     <Separator />
     <Label>
-      <input
+      <InputRadio
         checked={value === RU}
         name="lang"
         type="radio"
@@ -30,7 +30,7 @@ export const LanguageSwitchView: React.FC<SwitchProps> = ({
         onChange={(event: any) => onChange(event.target.value)}
         hidden
       />
-      <span>ru</span>
+      <LangText>ru</LangText>
     </Label>
   </Switch>
 );

@@ -19,12 +19,12 @@ msgid "404"
 msgstr "404"
 
 #: src/app/constants/page-titles.ts:6
-msgid "About"
-msgstr "Обо мне"
+#~ msgid "About"
+#~ msgstr "Обо мне"
 
 #: src/app/features/home/home-view.tsx:9
-msgid "About me"
-msgstr ""
+#~ msgid "About me"
+#~ msgstr ""
 
 #: src/app/constants/portfolio.ts:12
 msgid "All projects"
@@ -42,7 +42,7 @@ msgstr "Портфолио загружено..."
 msgid "Contacts"
 msgstr "Контакты"
 
-#: src/app/features/about/about-view.tsx:22
+#: src/app/features/about/about-view.tsx:65
 msgid "Developer"
 msgstr "Разработчик"
 
@@ -58,8 +58,7 @@ msgstr "Front-end"
 msgid "Home"
 msgstr "Главная"
 
-#: src/app/features/about/about-view.tsx:15
-#: src/app/features/home/home-view.tsx:22
+#: src/app/features/home/home-view.tsx:31
 msgid "Lagunovsky"
 msgstr "Лагуновский"
 
@@ -88,7 +87,7 @@ msgid "Please enter your name"
 msgstr "Введите ваше имя"
 
 #: src/app/constants/page-titles.ts:7
-#: src/app/features/home/home-view.tsx:12
+#: src/app/features/home/home-view.tsx:21
 msgid "Portfolio"
 msgstr "Портфолио"
 
@@ -96,11 +95,19 @@ msgstr "Портфолио"
 msgid "Required"
 msgstr "Обязательное поле"
 
+#: src/app/constants/page-titles.ts:6
+#: src/app/features/home/home-view.tsx:18
+msgid "Resume"
+msgstr ""
+
 #: src/app/features/contacts/components/contact-form-view.tsx:21
 msgid "Send message"
 msgstr "Отправить сообщение"
 
-#: src/app/features/about/about-view.tsx:13
-#: src/app/features/home/home-view.tsx:19
+#: src/app/features/home/home-view.tsx:28
 msgid "Stepan"
 msgstr "Степан"
+
+#: src/app/features/about/about-view.tsx:58
+msgid "Stepan Lagunovsky"
+msgstr ""

@@ -1,11 +1,8 @@
 {
-  "Stepan": {
-    "origin": [["src/app/features/about/about-view.tsx", 13]]
-  },
-  "Lagunovsky": {
-    "origin": [["src/app/features/about/about-view.tsx", 15]]
+  "Stepan Lagunovsky": {
+    "origin": [["src/app/features/about/about-view.tsx", 58]]
   },
   "Developer": {
-    "origin": [["src/app/features/about/about-view.tsx", 22]]
+    "origin": [["src/app/features/about/about-view.tsx", 65]]
   }
 }

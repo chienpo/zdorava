@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router5";
 
-import {GRAY_MEDIUM_10, WHITE_20} from "../../../../constants/colors";
+import {GRAY_MEDIUM_10, RED, RED_50, WHITE_20} from "../../../../constants/colors";
 import navigationPortfolioBackground from "../../../../../assets/images/navigation-portfolio-background.png";
 import navigationPortfolioBackgroundLogo from "../../../../../assets/images/about-logo.png";
 import overlayWhiteDot from "../../../../../assets/images/overlay_white.png";
@@ -78,6 +78,12 @@ export const PageLinkStyled = styled(Link)`
   position: fixed;
   transition: box-shadow 0.2s, background 0.8s;
 
+  svg {
+    path, polygon {
+      fill: ${RED_50};
+    }
+  }
+
   ${({ position }: any) => position === 'left' ? `
     top: 50px;
     justify-content: flex-start;
@@ -96,6 +102,12 @@ export const PageLinkStyled = styled(Link)`
     ${LinkText} {
       color: black;
       background: none;
+    }
+
+    svg {
+      path, polygon {
+        fill: ${RED};
+      }
     }
   }
 `;

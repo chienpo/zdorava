@@ -2,4 +2,9 @@ import { createElement } from 'react';
 
 import { AboutView } from './about-view';
 
-export const About = ({ key }: any) => createElement(AboutView, { key });
+const About = ({ poseKey }: any) => {
+  return createElement(AboutView, { poseKey })
+};
+
+// eslint-disable-next-line import/no-default-export
+export default About;

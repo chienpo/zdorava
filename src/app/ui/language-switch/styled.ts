@@ -11,6 +11,32 @@ export const Separator = styled.div`
   opacity: 0.9;
 `;
 
+export const LangText = styled.span`
+  transition: color 0.2s, opacity 0.2s, font-size 0.2s;
+`;
+
+export const InputRadio = styled.input`
+  cursor: pointer;
+  margin-right: 10px;
+
+  &+${LangText} {
+    text-transform: uppercase;
+    opacity: 1;
+    font-size: 20px;
+  }
+
+  &:not(:checked)+${LangText} {
+    opacity: 0.4;
+    font-size: 14px;
+
+    &:hover {
+      opacity: 1;
+      color: ${RED};
+      font-size: 18px;
+    }
+  }
+`;
+
 export const Label = styled.label`
   cursor: pointer;
   display: inline-flex;
@@ -22,31 +48,6 @@ export const Label = styled.label`
   margin: 0 10px;
   width: 80px;
   height: 100%;
-
-  input {
-    cursor: pointer;
-    margin-right: 10px;
-  }
-
-  span {
-    transition: color 0.2s, opacity 0.2s, font-size 0.2s;
-  }
-
-  input:checked+span {
-    text-transform: uppercase;
-    opacity: 1;
-    font-size: 20px;
-  }
-
-  input:not(:checked)+span {
-    opacity: 0.4;
-
-    &:hover {
-      opacity: 1;
-      color: ${RED};
-      font-size: 18px;
-    }
-  }
 `;
 
 export const Switch = styled.div<{ theme: string }>`
