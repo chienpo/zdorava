@@ -1,6 +1,10 @@
 import React from 'react';
 import posed from 'react-pose';
 
+import reactUdemyCourse from 'assets/images/sertificates/react-udemy-course.jpg';
+import englishCourse from 'assets/images/sertificates/english-course-1.jpg';
+import englishCourse2 from 'assets/images/sertificates/english-course-2.jpg';
+
 import { PanelsProps } from './accordion';
 import { Panel, RowContent, Row } from './styled';
 
@@ -35,6 +39,13 @@ export const AccordionView: React.FC<PanelsProps> = ({
                 </li>
               ))}
             </ul>
+            {key === 'sertificates' && (
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gridColumnGap: '10px', padding: '10px' }}>
+                <img style={{ width: '100%', border: '1px solid black', filter: 'grayscale(100%)' }} src={reactUdemyCourse} alt="udemy react course sertificate" />
+                <img style={{ width: '100%', border: '1px solid black', filter: 'grayscale(100%)' }} src={englishCourse} alt="english course sertificate" />
+                <img style={{ width: '100%', border: '1px solid black', filter: 'grayscale(100%)' }} src={englishCourse2} alt="english course sertificate" />
+              </div>
+            )}
           </RowContent>
         </PanelContent>
       </Row>

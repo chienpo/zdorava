@@ -1,5 +1,6 @@
 export const SKILLS = 'skills';
 export const ABOUT = 'about';
+export const SERTIFICATES = 'sertificates';
 
 export const RESUME = {
   [ABOUT]: {
@@ -28,23 +29,19 @@ export const RESUME = {
       },
       {
         label: '',
-        text: 'Is it cool? I think so',
-      },
-      {
-        label: '',
-        text:
-          'So now I very glad to work with a my team developers in ITRANSITION-SOFTWARE-COMPANY, where i can improve my skills in these ways:',
+        text: 'Is it cool? I think so!',
       },
     ],
   },
   [SKILLS]: {
     title: 'Skills',
     content: [
-      { label: 'FRAMEWORKS:', text: 'React JS' },
-      { label: 'PROGRAMMING:', text: 'Java-Script, Type-Script' },
-      { label: 'STATE MANAGERS:', text: 'Redux, Effector' },
+      { label: 'FRAMEWORKS:', text: 'React JS, and some experience working with Symfony and LoopBack' },
+      { label: 'STATE MANAGERS:', text: 'Redux and some experience working with ReduxSagas' },
+      { label: 'REACT FEATURES:', text: 'Router5, react-pose' },
       { label: 'ROUTING:', text: 'React-router-dom, Router-5' },
-      { label: 'STYLES:', text: 'Flexboxes, Grid, SVG' },
+      { label: 'PROGRAMMING LANGUAGES:', text: 'JavaScript, TypeScript' },
+      { label: 'CSS:', text: 'Flexbox, Grid' },
       {
         label: 'ANIMATIONS:',
         text: 'CSS3, React-pose',
@@ -54,8 +51,11 @@ export const RESUME = {
         text: 'Webpack, Parcel, GULP',
       },
       { label: 'VERSION CONTROLS:', text: 'Git' },
-      { label: 'WORKFLOW:', text: 'KANBAN' },
-      { label: 'WEB-DESIGN:', text: 'ADOBE PHOTOSHOP, GIMP, SVG' },
+      { label: 'WEB-DESIGN:', text: 'ADOBE PHOTOSHOP, GIMP' },
     ],
+  },
+  [SERTIFICATES]: {
+    title: 'Languages & achievements letters',
+    content: [],
   },
 };

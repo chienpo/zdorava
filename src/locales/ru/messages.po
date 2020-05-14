@@ -18,14 +18,6 @@ msgstr ""
 msgid "404"
 msgstr "404"
 
-#: src/app/constants/page-titles.ts:6
-#~ msgid "About"
-#~ msgstr "Обо мне"
-
-#: src/app/features/home/home-view.tsx:9
-#~ msgid "About me"
-#~ msgstr ""
-
 #: src/app/constants/portfolio.ts:12
 msgid "All projects"
 msgstr "Все проекты"
@@ -38,9 +30,9 @@ msgstr "Дизайн"
 msgid "Coming soon..."
 msgstr "Портфолио загружено..."
 
-#: src/app/features/contacts/contacts-view.tsx:21
-msgid "Contacts"
-msgstr "Контакты"
+#: src/app/features/contacts/contacts-view.tsx:42
+msgid "Contact me"
+msgstr "Гапиши мне"
 
 #: src/app/features/about/about-view.tsx:65
 msgid "Developer"
@@ -48,7 +40,19 @@ msgstr "Разработчик"
 
 #: src/app/features/contacts/components/contact-form-view.tsx:14
 msgid "Email"
-msgstr ""
+msgstr "Почта"
+
+#: src/app/features/contacts/components/contact-form-view.tsx:15
+msgid "Enter your email"
+msgstr "Почта"
+
+#: src/app/features/contacts/components/contact-form-view.tsx:18
+msgid "Enter your message"
+msgstr "Сообщение"
+
+#: src/app/features/contacts/components/contact-form-view.tsx:12
+msgid "Enter your name"
+msgstr "Ваши инициалы"
 
 #: src/app/constants/portfolio.ts:14
 msgid "Front-end"
@@ -58,7 +62,7 @@ msgstr "Front-end"
 msgid "Home"
 msgstr "Главная"
 
-#: src/app/features/home/home-view.tsx:31
+#: src/app/features/home/home-view.tsx:30
 msgid "Lagunovsky"
 msgstr "Лагуновский"
 
@@ -74,18 +78,6 @@ msgstr "Текст сообщения"
 msgid "Name"
 msgstr "Имя"
 
-#: src/app/features/contacts/components/contact-form-view.tsx:15
-msgid "Please enter your email"
-msgstr "Введите адрес вашей электронной почты"
-
-#: src/app/features/contacts/components/contact-form-view.tsx:18
-msgid "Please enter your message"
-msgstr "Введите текст сообщения"
-
-#: src/app/features/contacts/components/contact-form-view.tsx:12
-msgid "Please enter your name"
-msgstr "Введите ваше имя"
-
 #: src/app/constants/page-titles.ts:7
 #: src/app/features/home/home-view.tsx:21
 msgid "Portfolio"
@@ -98,16 +90,16 @@ msgstr "Обязательное поле"
 #: src/app/constants/page-titles.ts:6
 #: src/app/features/home/home-view.tsx:18
 msgid "Resume"
-msgstr ""
+msgstr "Резюме"
 
 #: src/app/features/contacts/components/contact-form-view.tsx:21
 msgid "Send message"
 msgstr "Отправить сообщение"
 
-#: src/app/features/home/home-view.tsx:28
+#: src/app/features/home/home-view.tsx:27
 msgid "Stepan"
 msgstr "Степан"
 
 #: src/app/features/about/about-view.tsx:58
 msgid "Stepan Lagunovsky"
-msgstr ""
+msgstr "Степан Лагуновский"

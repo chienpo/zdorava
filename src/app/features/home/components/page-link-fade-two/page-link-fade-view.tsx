@@ -1,8 +1,8 @@
-import React from "react";
-import posed from 'react-pose';
+import React, { useState } from "react";
+import { PoseGroup } from "react-pose";
 
-
-import {PageLinkStyled, LinkText, LinkOverlay } from "./styled";
+import Tilt from "react-parallax-tilt";
+import { PageLinkStyled, Text, LinkMirrorEffectBox, LinkOverlayMirrorEffect, LinkOverlayAnimated } from "./styled";
 
 interface Props {
   position: string;
@@ -10,28 +10,56 @@ interface Props {
   children: any;
 }
 
-const Box = posed.div({
-  hoverable: true,
-  init: {
-    scale: 1,
-  },
-  hover: {
-    scale: 1.2,
-    boxShadow: '0px 5px 10px rgba(0,0,0,0.2)'
-  },
-  press: {
-    scale: 1.1,
-    boxShadow: '0px 2px 5px rgba(0,0,0,0.1)'
-  }
-});
+export const PageLinkFadeView = ({ children, position, ...props }: Props) => {
+  const [overlayVisible, showOverlay] = useState(false);
 
-export const PageLinkFadeView = ({ children, ...props }: Props) => (
-  <Box>
-    <PageLinkStyled {...props}>
-      <LinkOverlay />
-      <LinkText>
-        {children}
-      </LinkText>
-    </PageLinkStyled>
-  </Box>
-);
+  return (
+    <>
+      <Tilt
+        key={position}
+        glareEnable={false}
+        glareMaxOpacity={0.9}
+        glareColor="black"
+        glarePosition="all"
+        perspective={4500}
+        trackOnWindow
+        scale={1.15}
+        transitionSpeed={2500}
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          zIndex: 1,
+        }}
+        tiltReverse
+        tiltAxis="y"
+      >
+        <PoseGroup>
+          {overlayVisible && (
+            <LinkOverlayAnimated key={position} title={position}>
+              <LinkOverlayMirrorEffect />
+            </LinkOverlayAnimated>
+          )}
+        </PoseGroup>
+      </Tilt>
+
+      <PageLinkStyled
+        title={position}
+        onMouseEnter={() => showOverlay(true)}
+        onBlur={() => showOverlay(false)}
+        onFocus={() => showOverlay(true)}
+        onMouseOver={() => showOverlay(true)}
+        onMouseOut={() => showOverlay(false)}
+        {...props}
+      >
+        <LinkMirrorEffectBox>
+          <Text title={position === 'left' ? 'next' : 'prev'}>
+            {children}
+          </Text>
+        </LinkMirrorEffectBox>
+      </PageLinkStyled>
+    </>
+  )
+};

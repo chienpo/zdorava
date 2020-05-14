@@ -36,7 +36,7 @@ export const ContactFormView: FC<Props> = ({
               placeholder={i18n._(i18nMark('Name'))}
               validate={required}
             >
-              <Trans>Please enter your name</Trans>
+              <Trans>Enter your name</Trans>
             </InputField>
             <InputField
               name={FIELD_EMAIL}
@@ -44,7 +44,7 @@ export const ContactFormView: FC<Props> = ({
               placeholder={i18n._(i18nMark('Email'))}
               validate={required}
             >
-              <Trans>Please enter your email</Trans>
+              <Trans>Enter your email</Trans>
             </InputField>
             <InputField
               name={FIELD_MESSAGE}
@@ -52,7 +52,7 @@ export const ContactFormView: FC<Props> = ({
               placeholder={i18n._(i18nMark('Message'))}
               validate={required}
             >
-              <Trans>Please enter your message</Trans>
+              <Trans>Enter your message</Trans>
             </InputField>
             <Button type="submit" plain width="100%" disabled={requestLoading}>
               <Trans>Send message</Trans>

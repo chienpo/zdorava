@@ -4,7 +4,7 @@
       ["src/app/features/contacts/components/contact-form-view.tsx", 11]
     ]
   },
-  "Please enter your name": {
+  "Enter your name": {
     "origin": [
       ["src/app/features/contacts/components/contact-form-view.tsx", 12]
     ]
@@ -14,7 +14,7 @@
       ["src/app/features/contacts/components/contact-form-view.tsx", 14]
     ]
   },
-  "Please enter your email": {
+  "Enter your email": {
     "origin": [
       ["src/app/features/contacts/components/contact-form-view.tsx", 15]
     ]
@@ -24,7 +24,7 @@
       ["src/app/features/contacts/components/contact-form-view.tsx", 17]
     ]
   },
-  "Please enter your message": {
+  "Enter your message": {
     "origin": [
       ["src/app/features/contacts/components/contact-form-view.tsx", 18]
     ]

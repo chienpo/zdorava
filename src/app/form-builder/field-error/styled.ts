@@ -1,21 +1,20 @@
 import styled from 'styled-components';
 
-import { RED_70 } from '../../constants/colors';
+import { RED } from '../../constants/colors';
 
 export const ErrorBox = styled.div`
-  font-family: Orbitron-Bold, sans-serif;
-  background: ${RED_70};
+  background: ${RED};
   color: white;
-  padding: 5px;
+  padding: 5px 10px;
   margin-top: 5px;
   display: flex;
   align-items: center;
   font-size: 14px;
   line-height: 20px;
+  letter-spacing: 1px;
 `;
 
 export const IconError = styled.span`
-    font-family: Orbitron-Bold, sans-serif;
     width: 14px;
     height: 14px;
     background: white;

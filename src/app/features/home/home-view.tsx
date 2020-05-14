@@ -2,9 +2,10 @@ import React from 'react';
 import Typing from 'react-typing-animation';
 import { Trans } from '@lingui/macro';
 import posed from 'react-pose';
+import Tilt from "react-parallax-tilt";
 
 import { HomepageGlitch } from './components/homepage-glitch';
-import {PageLinkFadeView} from "./components/page-link-fade/page-link-fade-view";
+import { PageLinkFadeView } from "./components/page-link-fade-two/page-link-fade-view";
 import {
   HomepageContentWrapper,
   HomepageHGroup,
@@ -14,7 +15,6 @@ import {
   Name,
   SurName,
   Image,
-  Divider,
 } from './styled';
 
 const Container = posed.div({
@@ -22,7 +22,7 @@ const Container = posed.div({
 });
 
 const Wrap = posed.div({
-  enter: { opacity: 1, applyAtStart: { height: '100%' } },
+  enter: { opacity: 1, applyAtStart: { height: '100%', width: '100vw' } },
   exit: { opacity: 0 }
 });
 
@@ -45,7 +45,6 @@ export const HomeView: React.FC<Props> = ({
       </PageLinkFadeView>
       <HomepageContentWrapper>
         <HomepageHGroup>
-          <Divider />
           <HomepageTitle>
             <Name>
               <Trans>Stepan</Trans>
@@ -54,7 +53,6 @@ export const HomeView: React.FC<Props> = ({
               <Trans>Lagunovsky</Trans>
             </SurName>
           </HomepageTitle>
-          <Divider />
           <Typing onFinishedTyping={() => toggleDefaultBg(true)}>
             <HomepageSubtitle>web&art pro</HomepageSubtitle>
           </Typing>
@@ -66,7 +64,28 @@ export const HomeView: React.FC<Props> = ({
       {bgIsToggling && (
         <Image bgIsToggling={bgIsToggling} />
       )}
-      <HomepageGlitch />
+      <Tilt
+        glareEnable
+        glareMaxOpacity={1}
+        glareColor="transparent"
+        glarePosition="all"
+        className="track-on-window"
+        perspective={5000}
+        trackOnWindow
+        style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+        }}
+        scale={1.1}
+        transitionSpeed={2500}
+        tiltAxis="y"
+        tiltReverse
+      >
+        <HomepageGlitch />
+      </Tilt>
     </Wrap>
   </Container>
 );

@@ -14,7 +14,7 @@ export const ButtonStyled = styled.button`
   outline: none;
   cursor: pointer;
   padding: 15px;
-  transition: all 0.2s;
+  transition: background 0.2s, color 0.2s, opacity 0.2s;
 
   &:hover {
     background: ${({ plain }: any) => plain && `${BLACK_90}`};

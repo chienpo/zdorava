@@ -11362,6 +11362,11 @@ react-modal@^3.8.1:
     react-lifecycles-compat "^3.0.0"
     warning "^4.0.3"
 
+react-parallax-tilt@^1.3.41:
+  version "1.3.41"
+  resolved "https://registry.yarnpkg.com/react-parallax-tilt/-/react-parallax-tilt-1.3.41.tgz#1a40955832cb30b5d110b348be9803b8011fefbe"
+  integrity sha512-pZId6HiSoDdbUk1m7yEjz572t4HAWmUlRchv0M9PCpS8NOerLXEfArBtw9Mmc98B8Zi3wO6WC8dLAIuSFRZiuA==
+
 react-perfect-scrollbar@^1.5.0:
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/react-perfect-scrollbar/-/react-perfect-scrollbar-1.5.2.tgz#ea14f5e022c329e3b3f85e50645afafb85880ca7"

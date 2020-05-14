@@ -3,7 +3,7 @@ import posed from 'react-pose';
 export const FadeInOut = posed.div({
   enter: {
     transition: {
-      duration: 200,
+      default: { duration: 400 },
       delay: 400,
     },
     opacity: 1,

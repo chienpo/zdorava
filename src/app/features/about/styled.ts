@@ -9,28 +9,34 @@ export const GridLogo = styled.div`
   grid-template-rows: calc((100vh - 182px) / 3) calc((100vh - 182px) / 3) calc((100vh - 182px) / 3);
   height: 100%;
   width: 100%;
-
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    background: rgba(255,255,255,0.1) url(${overlayWhiteDot}) repeat;
-  }
 `;
 
-export const GridFigure = styled.figure`
+export const GridFigure = styled.div`
   width: 100%;
   height: 100%;
 
-  &::after {
-    content: "";
-    padding-bottom: 100%;
-    display: inline-block;
-    vertical-align: top;
+  figure {
+    position: relative;
+
+    img {
+      ${({ title }) => title === 'hello-photo' && `
+        filter: contrast(120%);
+      `};
+    }
+
+    &::after {
+      content: "";
+      padding-bottom: 100%;
+      display: inline-block;
+      vertical-align: top;
+      ${({ title }) => title !== 'hello-photo' && `
+        box-shadow: inset 0px 0px 50px 25px rgba(0,0,0,0.3);
+      `};
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+    }
   }
 
   img {
@@ -47,34 +53,10 @@ export const SectionAbout = styled.section`
   grid-column-gap: 20px;
 `;
 
-export const IntroduceImage = styled.figure`
-  position: absolute;
-  width: calc(50% - 300px);
-  height: 100vh;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  z-index: 233;
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255,255,255,0.1) url(${overlayWhiteDot});
-  }
-
-  img {
-    width: auto;
-    height: 100%;
-  }
-`;
-
 export const AccordionBox = styled.div`
   width: 100%;
   padding-top: 100px;
+  padding-left: 50px;
 `;
 
 export const DeveloperName = styled.h1`
@@ -91,9 +73,9 @@ export const DeveloperName = styled.h1`
 `;
 
 export const Position = styled.h2`
-  font-family: Orbitron-Bold, sans-serif;
   font-size: 31px;
   margin-bottom: 28px;
+  font-weight: normal;
 
   strong {
     color: ${RED};

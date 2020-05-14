@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { BLACK_50, GRAY, GRAY_LIGHT, RED, WHITE } from '../../constants/colors';
+import {BLACK_50, BLACK_90, GRAY, GRAY_LIGHT, RED, WHITE} from '../../constants/colors';
 
 export const FieldWrapper = styled.div`
   display: flex;
@@ -29,6 +29,10 @@ const inputStyles = `
   background: ${WHITE};
   outline: none;
   transition: border 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    box-shadow: inset 0 0 0 ${BLACK_90}, 0 0 8px ${GRAY_LIGHT};
+  }
 
   &:focus {
     border-color: ${GRAY_LIGHT};

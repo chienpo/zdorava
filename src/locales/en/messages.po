@@ -38,9 +38,13 @@ msgstr "Art"
 msgid "Coming soon..."
 msgstr "Coming soon..."
 
+#: src/app/features/contacts/contacts-view.tsx:42
+msgid "Contact me"
+msgstr "Contact me"
+
 #: src/app/features/contacts/contacts-view.tsx:21
-msgid "Contacts"
-msgstr "Contacts"
+#~ msgid "Contacts"
+#~ msgstr "Contacts"
 
 #: src/app/features/about/about-view.tsx:65
 msgid "Developer"
@@ -50,6 +54,18 @@ msgstr "Developer"
 msgid "Email"
 msgstr "Email"
 
+#: src/app/features/contacts/components/contact-form-view.tsx:15
+msgid "Enter your email"
+msgstr "Enter your email"
+
+#: src/app/features/contacts/components/contact-form-view.tsx:18
+msgid "Enter your message"
+msgstr "Enter your message"
+
+#: src/app/features/contacts/components/contact-form-view.tsx:12
+msgid "Enter your name"
+msgstr "Enter your name"
+
 #: src/app/constants/portfolio.ts:14
 msgid "Front-end"
 msgstr "Front-end"
@@ -58,7 +74,7 @@ msgstr "Front-end"
 msgid "Home"
 msgstr "Home"
 
-#: src/app/features/home/home-view.tsx:31
+#: src/app/features/home/home-view.tsx:30
 msgid "Lagunovsky"
 msgstr "Lagunovsky"
 
@@ -75,16 +91,16 @@ msgid "Name"
 msgstr "Name"
 
 #: src/app/features/contacts/components/contact-form-view.tsx:15
-msgid "Please enter your email"
-msgstr "Please enter your email"
+#~ msgid "Please enter your email"
+#~ msgstr "Please enter your email"
 
 #: src/app/features/contacts/components/contact-form-view.tsx:18
-msgid "Please enter your message"
-msgstr "Please enter your message"
+#~ msgid "Please enter your message"
+#~ msgstr "Please enter your message"
 
 #: src/app/features/contacts/components/contact-form-view.tsx:12
-msgid "Please enter your name"
-msgstr "Please enter your name"
+#~ msgid "Please enter your name"
+#~ msgstr "Please enter your name"
 
 #: src/app/constants/page-titles.ts:7
 #: src/app/features/home/home-view.tsx:21
@@ -104,7 +120,7 @@ msgstr "Resume"
 msgid "Send message"
 msgstr "Send message"
 
-#: src/app/features/home/home-view.tsx:28
+#: src/app/features/home/home-view.tsx:27
 msgid "Stepan"
 msgstr "Stepan"
 

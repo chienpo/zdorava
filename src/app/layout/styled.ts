@@ -10,6 +10,7 @@ export const AppContent = styled.div`
   grid-template-columns: minmax(320px, 1fr);
   grid-template-rows: auto 1fr auto;
   background: ${WHITE};
+  width: 100vw;
 `;
 
 export const AppBackground = styled.div`

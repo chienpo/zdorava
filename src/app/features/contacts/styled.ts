@@ -19,7 +19,7 @@ export const CloseButton = styled.button`
 
 export const FormSection = styled.section`
   width: 100vw;
-  box-shadow: 0px -48px 35px 45px ${({ theme }) => theme.mode === LIGHT_MODE && `rgb(17,17,17)`};
+  box-shadow: 0px -48px 35px 45px ${({ theme }) => theme.mode === LIGHT_MODE && `rgb(17,17,17);`};
   position: relative;
 
   ${CloseButton} {
@@ -27,13 +27,6 @@ export const FormSection = styled.section`
     right: 15px;
     top: 15px;
   }
-`;
-
-export const FormSectionBackdrop = styled.div`
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  backdrop-filter: blur(3px);
 `;
 
 export const FormBox = styled.div`
@@ -46,4 +39,5 @@ export const FormBox = styled.div`
 export const H2Styled = styled(H2)`
   text-align: center;
   margin-bottom: 20px;
+  text-transform: uppercase;
 `;

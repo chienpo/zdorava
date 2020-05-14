@@ -54,7 +54,7 @@ export const Switch = styled.div<{ theme: string }>`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${WHITE_SMOKE_10};
+  background: ${({ theme }) => theme.mode === DARK_MODE ? `transparent` : `${WHITE_SMOKE_10}`};
 
   ${({ theme }) => theme.mode === DARK_MODE ? `
     ${Separator} {
