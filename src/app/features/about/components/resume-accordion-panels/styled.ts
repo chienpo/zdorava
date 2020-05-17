@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { DARK_SLATE_GREY, RED, WHITE } from '../../constants/colors';
+import { DARK_SLATE_GREY, RED, WHITE } from 'app/constants/colors';
 
 export const Panel = styled.div<{ active: boolean }>`
   font-size: 21px;
@@ -36,7 +36,9 @@ export const RowContent = styled.div`
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 0.2px;
+`;
 
+export const Ul = styled.ul`
   ul {
     padding-top: 5px;
   }
@@ -47,7 +49,7 @@ export const RowContent = styled.div`
       margin-right: 5px;
     }
   }
-`;
+`
 
 export const Row = styled.div`
   cursor: pointer;

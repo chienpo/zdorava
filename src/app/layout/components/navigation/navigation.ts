@@ -21,9 +21,11 @@ export const Navigation: FC<LanguageSwitchProps> = ({
 
   const mediaMinWidthForLaptops = useMediaMinWidth(LAPTOPS);
 
-  const preparedRoutes = topRouteName === ROUTE_NAME_HOME
-    ? []
-    : routes;
+  let preparedRoutes = routes;
+
+  if (topRouteName === ROUTE_NAME_HOME && !isMobile.any && mediaMinWidthForLaptops) {
+    preparedRoutes = [];
+  }
 
   if (isMobile.any || !mediaMinWidthForLaptops) {
     return createElement(NavigationMobileView, {

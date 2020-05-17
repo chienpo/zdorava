@@ -5,7 +5,7 @@ import posed from 'react-pose';
 import Tilt from "react-parallax-tilt";
 
 import { HomepageGlitch } from './components/homepage-glitch';
-import { PageLinkFadeView } from "./components/page-link-fade-two/page-link-fade-view";
+import { PageLinkFadeView } from "./components/page-link-fade/page-link-fade-view";
 import {
   HomepageContentWrapper,
   HomepageHGroup,

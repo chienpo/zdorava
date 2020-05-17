@@ -3,12 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
+import { RED } from '../../../constants/colors';
 import { SOCIAL_GITHUB_PATH, SOCIAL_LINKED_IN_PATH } from 'app/constants/social';
 import { SITE_PUBLICATION_YEAR } from 'app/constants/site';
 import { Contacts } from 'app/features/contacts';
 import { FooterWrapper, FooterNav, FooterCopy, FooterSocialLink } from './styled';
-import {RED} from "../../../constants/colors";
-import {Trans} from "@lingui/macro";
 
 interface Props {
   toggleContactForm: (prevState: any) => void;
@@ -40,7 +39,7 @@ export const FooterView = ({ toggleContactForm, contactFormOpened }: Props) => {
             </FooterSocialLink>
           ))}
           <FooterSocialLink
-            key="contacts"
+            key="contacts-phone"
             href="tel:+375 44 721-37-70"
           >
             <FontAwesomeIcon icon={faPhone} />
@@ -49,7 +48,7 @@ export const FooterView = ({ toggleContactForm, contactFormOpened }: Props) => {
             onClick={() => {
               return toggleContactForm((prevState: boolean) => !prevState)
             }}
-            key="contacts"
+            key="contacts-mail"
             as="button"
             color={RED}
           >

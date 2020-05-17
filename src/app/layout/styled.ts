@@ -20,5 +20,5 @@ export const AppBackground = styled.div`
 
 export const Header = styled.header`
   height: 50px;
-  z-index: 3;
+  z-index: 5;
 `;

@@ -33,7 +33,7 @@ const Wrapper = styled.div`
   display: inline-flex;
 
   svg {
-    width: 100px;
+    width: 80px;
     height: auto;
     margin: 0 2rem;
     cursor: pointer;

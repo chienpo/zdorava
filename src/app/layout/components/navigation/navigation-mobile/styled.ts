@@ -28,12 +28,7 @@ export const NavigationWrapper = styled.div`
   position: fixed;
   height: 50px;
   width: 100%;
-`;
-
-export const Overlay = styled.div`
-  background: rgba(245,245,245,0.1);
   align-items: center;
-  display: flex;
   padding-left: 15px;
 `;
 
@@ -48,7 +43,7 @@ export const NavigationList = styled.nav`
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 3;
+  z-index: 20;
   flex-direction: column;
   backdrop-filter: blur(3px);
 

@@ -13,7 +13,6 @@ import {
   BurgerTopLine,
   BurgerCenteredLine,
   BurgerBottomLine,
-  Overlay,
 } from './styled';
 
 type Props = {
@@ -40,38 +39,36 @@ export const NavigationMobileView = ({
       <>
         <PoseGroup>
           {mobileMenuOpened && (
-          <FadeInOut key="fadeInOut">
-            <NavigationList>
-              {preparedRoutes.map(({ name }: NavigationProps) => (
-                <NavLinkStyled
-                  key={name}
-                  router={router}
-                  routeName={name}
-                  onClick={() => {
-                    return toggleBurgerMenu((prevState: boolean) => !prevState)
-                  }}
-                >
-                  {i18n._(PAGE_TITLES[name])}
-                </NavLinkStyled>
-                  ))}
-            </NavigationList>
-          </FadeInOut>
-            )}
+            <FadeInOut key="fadeInOut">
+              <NavigationList>
+                {preparedRoutes.map(({ name }: NavigationProps) => (
+                  <NavLinkStyled
+                    key={name}
+                    router={router}
+                    routeName={name}
+                    onClick={() => {
+                      return toggleBurgerMenu((prevState: boolean) => !prevState)
+                    }}
+                  >
+                    {i18n._(PAGE_TITLES[name])}
+                  </NavLinkStyled>
+                ))}
+              </NavigationList>
+            </FadeInOut>
+          )}
         </PoseGroup>
         <NavigationWrapper>
-          <Overlay>
-            <BurgerButton
-              opened={mobileMenuOpened}
-              type="button"
-              onClick={() => {
-                  return toggleBurgerMenu((prevState: boolean) => !prevState)
-                }}
-            >
-              <BurgerTopLine />
-              <BurgerCenteredLine />
-              <BurgerBottomLine />
-            </BurgerButton>
-          </Overlay>
+          <BurgerButton
+            opened={mobileMenuOpened}
+            type="button"
+            onClick={() => {
+              return toggleBurgerMenu((prevState: boolean) => !prevState)
+            }}
+          >
+            <BurgerTopLine />
+            <BurgerCenteredLine />
+            <BurgerBottomLine />
+          </BurgerButton>
           <LanguageSwitch
             selectedLanguage={selectedLanguage}
             onChangeLanguage={onChangeLanguage}
