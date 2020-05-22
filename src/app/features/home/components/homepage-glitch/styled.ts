@@ -19,11 +19,8 @@ export const GlitchContainer = styled.div`
 `;
 
 export const GlitchBackground = styled.div`
-  min-height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
+  height: 100%;
   background: url(${homepageGlitchBackground}) center center no-repeat;
   background-size: cover;
 `;

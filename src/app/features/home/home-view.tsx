@@ -1,7 +1,7 @@
 import React from 'react';
 import Typing from 'react-typing-animation';
 import { Trans } from '@lingui/macro';
-import posed from 'react-pose';
+import posed, { PoseGroup } from 'react-pose';
 import Tilt from "react-parallax-tilt";
 
 import { HomepageGlitch } from './components/homepage-glitch';
@@ -17,13 +17,9 @@ import {
   Image,
 } from './styled';
 
-const Container = posed.div({
-  enter: { applyAtStart: { height: '100%' } }
-});
-
 const Wrap = posed.div({
-  enter: { opacity: 1, applyAtStart: { height: '100%', width: '100vw' } },
-  exit: { opacity: 0 }
+  enter: { opacity: 1, left: 0, position: 'relative', transition: 800 },
+  exit: { opacity: 0, left: '100%', position: 'relative', }
 });
 
 interface Props {
@@ -34,36 +30,18 @@ interface Props {
 export const HomeView: React.FC<Props> = ({
   bgIsToggling,
   toggleDefaultBg,
-}: Props) => (
-  <Container>
-    <Wrap style={{ position: 'relative' }}>
+}) => (
+  <PoseGroup animateOnMount flipMove={false}>
+    <Wrap key="test" style={{ position: 'relative', height: '100%' }}>
+      {bgIsToggling && (
+        <Image bgIsToggling={bgIsToggling} />
+      )}
       <PageLinkFadeView routeName="about" position="left">
         <Trans>Resume</Trans>
       </PageLinkFadeView>
       <PageLinkFadeView routeName="portfolio" position="right">
         <Trans>Portfolio</Trans>
       </PageLinkFadeView>
-      <HomepageContentWrapper>
-        <HomepageHGroup>
-          <HomepageTitle>
-            <Name>
-              <Trans>Stepan</Trans>
-            </Name>
-            <SurName>
-              <Trans>Lagunovsky</Trans>
-            </SurName>
-          </HomepageTitle>
-          <Typing onFinishedTyping={() => toggleDefaultBg(true)}>
-            <HomepageSubtitle>web&art pro</HomepageSubtitle>
-          </Typing>
-          <WebsiteSubtitle>
-            Zdorava
-          </WebsiteSubtitle>
-        </HomepageHGroup>
-      </HomepageContentWrapper>
-      {bgIsToggling && (
-        <Image bgIsToggling={bgIsToggling} />
-      )}
       <Tilt
         glareEnable
         glareMaxOpacity={1}
@@ -86,6 +64,24 @@ export const HomeView: React.FC<Props> = ({
       >
         <HomepageGlitch />
       </Tilt>
+      <HomepageContentWrapper>
+        <HomepageHGroup>
+          <HomepageTitle>
+            <Name>
+              <Trans>Stepan</Trans>
+            </Name>
+            <SurName>
+              <Trans>Lagunovsky</Trans>
+            </SurName>
+          </HomepageTitle>
+          <Typing onFinishedTyping={() => toggleDefaultBg(true)}>
+            <HomepageSubtitle>web&art pro</HomepageSubtitle>
+          </Typing>
+          <WebsiteSubtitle>
+            Zdorava
+          </WebsiteSubtitle>
+        </HomepageHGroup>
+      </HomepageContentWrapper>
     </Wrap>
-  </Container>
+  </PoseGroup>
 );
