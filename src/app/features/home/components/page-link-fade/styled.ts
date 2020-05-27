@@ -1,48 +1,19 @@
-import styled, {keyframes} from "styled-components";
+import styled from "styled-components";
 import { Link } from "react-router5";
 import posed from "react-pose";
 
 import {BLACK, GRAY_MEDIUM_10, RED, WHITE, WHITE_20} from "../../../../constants/colors";
 import navigationPortfolioBackground from "../../../../../assets/images/navigation-portfolio-background.png";
-// import navigationAboutBackgroundLogo from "../../../../../assets/images/selfies2/resume.jpg";
-import navigationAboutBackgroundLogo from "../../../../../assets/images/about-logo-1.png";
+import navigationAboutBackgroundLogo from "../../../../../assets/images/contacts-background.png";
 import {DARK_MODE} from "../../../../constants/theme";
 import {pulseAnim, pulseAnimWhite} from "../../../../animations/keyframes/pulse";
-
-const linkOverlayMirrorEffect = keyframes`
-  0% {
-    transform: scale3d(3.5, 3, 2) rotate3d(0, 0, 1, 135deg)
-    translate3d(0px, 50%, 0px);
-    visibility: hidden;
-  }
-  100% {
-    opacity: 1;
-    transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 135deg) translate3d(0px, -130%, 0px);
-    visibility: initial;
-  }
-`;
+import { mirrorEffect } from "../../../../css-helpers";
 
 export const LinkOverlayMirrorEffect = styled.div`
   width: 100%;
   height: 100%;
-  position: relative;
 
-  &:before {
-    background: ${({ theme }) => theme.mode === DARK_MODE ? WHITE : BLACK};
-    box-sizing: border-box;
-    content: '';
-    height: 100%;
-    left: -10%;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    transition: transform 0.8s ease 0s;
-    width: 120%;
-    z-index: 6;
-    transition: all 0.4s;
-    transition-delay: 0.8s;
-    animation: ${linkOverlayMirrorEffect} 0.8s;
-  }
+  ${mirrorEffect}
 `;
 
 export const LinkOverlay = posed.div({

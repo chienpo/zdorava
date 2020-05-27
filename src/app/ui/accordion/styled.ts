@@ -21,7 +21,6 @@ export const Panel = styled.div<{ active: boolean }>`
     color: ${WHITE};
     background: ${RED};
     padding-left: 10px;
-    margin-bottom: 24px;
   `
       : `
     background: ${DARK_SLATE_GREY};
@@ -32,25 +31,7 @@ export const Panel = styled.div<{ active: boolean }>`
   `};
 `;
 
-export const RowContent = styled.div`
-  overflow: hidden;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 0.2px;
-
-  ul {
-    padding-top: 5px;
-  }
-
-  ul > li {
-    margin-bottom: 12px;
-
-    strong {
-      margin-right: 5px;
-    }
-  }
-`;
-
 export const Row = styled.div`
   cursor: pointer;
+  overflow: hidden;
 `;

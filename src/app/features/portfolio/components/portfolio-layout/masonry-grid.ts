@@ -46,7 +46,7 @@ export const MasonryGrid: FC<Props> = ({ data, selectedCategory }: Props) => {
   };
 
   const handleImagesLoaded = (imagesLoadedInstance: any) => {
-    // console.warn('ImagesLoaded', imagesLoadedInstance);
+    console.warn('ImagesLoaded', Boolean(imagesLoadedInstance.isComplete));
   };
 
   return createElement<OtherProps>(MasonryGridView, {

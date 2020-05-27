@@ -10,7 +10,7 @@ import {
 import { PageLoader } from '../../ui/page-loader/page-loader';
 import { PortfolioView } from './portfolio-view';
 
-interface PortfolioItem {
+interface PortfolioItemModel {
   alt: string;
   category: string;
   description: string;
@@ -19,7 +19,7 @@ interface PortfolioItem {
 }
 
 interface Props {
-  data: PortfolioItem[];
+  data: PortfolioItemModel[];
   activeCategoryPayload: (name: string) => void;
   getNextPortfolioDate: () => void;
   hasMore: boolean;
@@ -28,7 +28,7 @@ interface Props {
 
 export const Portfolio: FC = () => {
   // eslint-disable-next-line max-len
-  const [data, setData] = useState<PortfolioItem[]>([]);
+  const [data, setData] = useState<PortfolioItemModel[]>([]);
   const [projectsTotalCount, setProjectsTotalCount] = useState<number>(0);
   const [pageLoading, setPageLoading] = useState<boolean>(true);
   const [hasMore, setHasMore] = useState<boolean>(true);

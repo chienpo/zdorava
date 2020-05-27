@@ -2,7 +2,7 @@ import React from 'react';
 import posed from 'react-pose';
 
 import { PanelsProps } from './accordion';
-import { Panel, RowContent, Row } from './styled';
+import { Panel, Row } from './styled';
 
 const PanelContent = posed.div({
   closed: { height: 0, overflow: 'hidden', opacity: 0, transition: { duration: 200 } },
@@ -22,9 +22,7 @@ export const AccordionView: React.FC<PanelsProps> = ({
           &nbsp;-
         </Panel>
         <PanelContent pose={activePanel === key ? 'open' : 'closed'}>
-          <RowContent>
-            <Component />
-          </RowContent>
+          <Component />
         </PanelContent>
       </Row>
     ))}

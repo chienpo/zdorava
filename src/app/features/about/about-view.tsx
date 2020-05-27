@@ -15,7 +15,6 @@ import {
   Position,
 } from './styled';
 
-
 const Container = posed.div({
   enter: { staggerChildren: 10, applyAtStart: { height: '100%' } }
 });

@@ -33,7 +33,7 @@ export const PortfolioView: React.FC<Props> = ({
   hasMore,
   selectedCategory,
 }: Props) => (
-  <SectionPortfolio>
+  <SectionPortfolio className="test">
     <PortfolioOverlay>
       <PortfolioTabs activeCategoryPayload={activeCategoryPayload} />
       <InfiniteScroll

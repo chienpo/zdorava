@@ -1,36 +1,21 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faImage } from '@fortawesome/free-solid-svg-icons'
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 
+import { PortfolioItemModel } from "../../../../../models/portfolio-item.model";
 import { SITE_URL, PORTFOLIO_IMAGES_PATH } from '../../../../constants/site';
-import {
-  ItemLabel,
-  ItemDescription,
-  StyledMassonry,
-  Item,
-  ItemOrientationType,
-  ItemImage,
-  ItemFigure,
-  ItemName,
-} from './styled';
+import { StyledMassonry } from './styled';
+import {PortfolioItem} from "../portfolio-item/portfolio-item";
 
 const masonryOptions = {
   transitionDuration: 1200,
 };
 
-interface PortfolioItem {
-  category: string;
-  imageSrc: string;
-  alt: string;
-  name: string;
-  description: string;
-  details: string;
+interface DataProps {
+  data: PortfolioItemModel[];
 }
 
-interface Props {
-  data: PortfolioItem[];
+interface Props extends DataProps {
   onItemClick: (index: number) => void;
   handleLayoutComplete: (item: any) => void;
   handleRemoveComplete: (item: any) => void;
@@ -55,7 +40,7 @@ export const MasonryGridView: React.FC<any> = ({
   setPhotoIndex,
 }: Props) => {
 
-  const getImagePath = (curItem: PortfolioItem) => {
+  const getImagePath = (curItem: PortfolioItemModel) => {
     return `${SITE_URL}${PORTFOLIO_IMAGES_PATH}${curItem.category}/${curItem.imageSrc}`
   };
 
@@ -92,37 +77,23 @@ export const MasonryGridView: React.FC<any> = ({
         onLayoutComplete={laidOutItems => handleLayoutComplete(laidOutItems)}
         onRemoveComplete={removedItems => handleRemoveComplete(removedItems)}
       >
-        {data.map(({
+        {(data as PortfolioItemModel[]).map(({
            category,
            imageSrc,
            alt,
            name,
            description
-        }: PortfolioItem, index) => (
-          <Item
+        }, index) => (
+          <PortfolioItem
             key={alt}
+            category={category}
+            imageSrc={imageSrc}
+            alt={alt}
+            name={name}
+            description={description}
             className={selectedCategory}
-            onClick={() => onItemClick(index)}
-          >
-            <ItemOrientationType>
-              <ItemFigure>
-                <ItemImage
-                  src={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${category}/${imageSrc}`}
-                  alt={alt}
-                  width="400px"
-                />
-              </ItemFigure>
-              <ItemLabel>
-                <FontAwesomeIcon icon={faImage} />
-                <ItemName>
-                  {name}
-                </ItemName>
-              </ItemLabel>
-              <ItemDescription>
-                {description}
-              </ItemDescription>
-            </ItemOrientationType>
-          </Item>
+            onItemClick={() => onItemClick(index)}
+          />
         ))}
       </StyledMassonry>
     </>
