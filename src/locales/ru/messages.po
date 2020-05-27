@@ -18,6 +18,10 @@ msgstr ""
 msgid "404"
 msgstr "404"
 
+#: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:11
+msgid "About"
+msgstr "Обо мне"
+
 #: src/app/constants/portfolio.ts:12
 msgid "All projects"
 msgstr "Все проекты"
@@ -30,11 +34,7 @@ msgstr "Дизайн"
 msgid "Coming soon..."
 msgstr "Портфолио загружено..."
 
-#: src/app/features/contacts/contacts-view.tsx:42
-msgid "Contact me"
-msgstr "Гапиши мне"
-
-#: src/app/features/about/about-view.tsx:65
+#: src/app/features/about/about-view.tsx:24
 msgid "Developer"
 msgstr "Разработчик"
 
@@ -54,17 +54,30 @@ msgstr "Сообщение"
 msgid "Enter your name"
 msgstr "Ваши инициалы"
 
+#: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:9
+msgid "Experience"
+msgstr "Опыт"
+
 #: src/app/constants/portfolio.ts:14
 msgid "Front-end"
 msgstr "Front-end"
+
+#: src/app/features/about/about-view.tsx:21
+msgid "Hello, I am Stepan"
+msgstr "Привет, меня зовут Степан"
 
 #: src/app/constants/page-titles.ts:5
 msgid "Home"
 msgstr "Главная"
 
-#: src/app/features/home/home-view.tsx:30
+#: src/app/features/home/home-view.tsx:38
 msgid "Lagunovsky"
 msgstr "Лагуновский"
+
+#: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:10
+#: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:12
+msgid "Languages & achievements letters"
+msgstr "Языки, сертификаты"
 
 #: src/app/features/portfolio/portfolio-view.tsx:11
 msgid "Loading..."
@@ -79,7 +92,7 @@ msgid "Name"
 msgstr "Имя"
 
 #: src/app/constants/page-titles.ts:7
-#: src/app/features/home/home-view.tsx:21
+#: src/app/features/home/home-view.tsx:20
 msgid "Portfolio"
 msgstr "Портфолио"
 
@@ -88,7 +101,7 @@ msgid "Required"
 msgstr "Обязательное поле"
 
 #: src/app/constants/page-titles.ts:6
-#: src/app/features/home/home-view.tsx:18
+#: src/app/features/home/home-view.tsx:17
 msgid "Resume"
 msgstr "Резюме"
 
@@ -96,10 +109,10 @@ msgstr "Резюме"
 msgid "Send message"
 msgstr "Отправить сообщение"
 
-#: src/app/features/home/home-view.tsx:27
+#: src/app/features/home/home-view.tsx:35
 msgid "Stepan"
 msgstr "Степан"
 
-#: src/app/features/about/about-view.tsx:58
-msgid "Stepan Lagunovsky"
-msgstr "Степан Лагуновский"
+#: src/app/features/contacts/contacts-view.tsx:42
+msgid "Write me"
+msgstr ""

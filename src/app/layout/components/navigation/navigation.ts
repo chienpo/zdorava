@@ -2,10 +2,10 @@ import { createElement, FC, useState } from 'react';
 import {useRoute, useRouteNode} from 'react-router5';
 import isMobile from 'ismobilejs/dist/isMobile.min';
 
-import {ROUTE_NAME_HOME, routes} from "../../../constants/routes";
 import { LAPTOPS } from 'app/constants/mediaDeviceMinWidths';
 import { useMediaMinWidth } from 'helpers/use-media-min-width';
 import { LanguageSwitchProps } from 'app/ui/language-switch/language-switch';
+import {ROUTE_NAME_HOME, routes} from "../../../constants/routes";
 import { NavigationView } from './navigation-view';
 import { NavigationMobileView } from './navigation-mobile/navigation-mobile-view';
 

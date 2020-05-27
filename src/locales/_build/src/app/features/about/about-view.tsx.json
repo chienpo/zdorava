@@ -1,8 +1,8 @@
 {
-  "Stepan Lagunovsky": {
-    "origin": [["src/app/features/about/about-view.tsx", 58]]
+  "Hello, I am Stepan": {
+    "origin": [["src/app/features/about/about-view.tsx", 21]]
   },
   "Developer": {
-    "origin": [["src/app/features/about/about-view.tsx", 65]]
+    "origin": [["src/app/features/about/about-view.tsx", 24]]
   }
 }

@@ -3,6 +3,7 @@ import React from 'react';
 import reactUdemyCourse from 'assets/images/sertificates/react-udemy-course.jpg';
 import spokenIntermediateOneCourseCertificate from 'assets/images/sertificates/spoken-intermediate-one-course-lagunovsky.png';
 import businessEnglishThreeCourseCertificate from 'assets/images/sertificates/business-english-three-course-lagunovsky.png';
+import typescriptUdemyCourse from 'assets/images/sertificates/type-script-udemy-course.jpg';
 
 import { Ul } from './styled';
 
@@ -82,6 +83,7 @@ export const PanelFourView: React.FC<any> = () => (
   <div>
     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gridColumnGap: '10px', padding: '10px' }}>
       <img style={{ width: '100%', border: '1px solid black', filter: 'grayscale(100%)' }} src={reactUdemyCourse} alt="udemy react course certificate" />
+      <img style={{ width: '100%', border: '1px solid black', filter: 'grayscale(100%)' }} src={typescriptUdemyCourse} alt="udemy type script course certificate" />
       <img style={{ width: '100%', border: '1px solid black', filter: 'grayscale(100%)' }} src={spokenIntermediateOneCourseCertificate} alt="spoken intermediate one course certificate lagunovsky" />
       <img style={{ width: '100%', border: '1px solid black', filter: 'grayscale(100%)' }} src={businessEnglishThreeCourseCertificate} alt="business english three course certificate lagunovsky" />
     </div>

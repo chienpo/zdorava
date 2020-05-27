@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { DARK_SLATE_GREY, RED, WHITE } from '../../constants/colors';
+import {BLACK, DARK_SLATE_GREY, RED, WHITE} from '../../constants/colors';
 
 export const Panel = styled.div<{ active: boolean }>`
   font-size: 21px;
@@ -8,7 +8,7 @@ export const Panel = styled.div<{ active: boolean }>`
   text-transform: uppercase;
   width: 100%;
   cursor: pointer;
-  transition: background 0.4s;
+  transition: background 0.4s, color 0.4s;
 
   &:hover {
     ${({ active }) =>
@@ -24,10 +24,11 @@ export const Panel = styled.div<{ active: boolean }>`
     margin-bottom: 24px;
   `
       : `
-    color: ${WHITE};
     background: ${DARK_SLATE_GREY};
+    background: transparent;
+    color: ${BLACK}
+    font-weight: bold;
     padding-left: 10px;
-    margin-bottom: 18px;
   `};
 `;
 
@@ -40,6 +41,7 @@ export const RowContent = styled.div`
   ul {
     padding-top: 5px;
   }
+
   ul > li {
     margin-bottom: 12px;
 

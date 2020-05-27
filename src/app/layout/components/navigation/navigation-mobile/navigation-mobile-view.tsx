@@ -2,7 +2,7 @@ import * as React from 'react';
 import { I18n } from '@lingui/react';
 import { PoseGroup } from 'react-pose';
 
-import { LanguageSwitchProps, LanguageSwitch } from 'app/ui/language-switch/language-switch';
+import { LanguageSwitch } from 'app/ui/language-switch/language-switch';
 import { PAGE_TITLES } from 'app/constants/page-titles';
 import { FadeInOut } from '../../../../animations/fade-in-out-vertically';
 import {
@@ -20,6 +20,8 @@ type Props = {
   mobileMenuOpened: boolean;
   toggleBurgerMenu: (prevState: any) => void;
   preparedRoutes: any;
+  selectedLanguage: string;
+  onChangeLanguage: (lang: string) => void;
 };
 
 type NavigationProps = {
@@ -33,7 +35,7 @@ export const NavigationMobileView = ({
   mobileMenuOpened,
   toggleBurgerMenu,
   preparedRoutes,
-}: Props & LanguageSwitchProps) => (
+}: Props) => (
   <I18n>
     {({ i18n }) => (
       <>

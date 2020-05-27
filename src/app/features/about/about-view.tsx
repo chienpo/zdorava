@@ -25,7 +25,7 @@ const Wrap = posed.div({
   exit: { opacity: 0, left: '100%', position: 'relative', }
 });
 
-export const AboutView = ({ poseKey }: any) => (
+export const AboutView: React.FC<{poseKey: string}> = ({ poseKey }) => (
   <PoseGroup animateOnMount>
     <Container key={poseKey}>
       <SectionAbout>
@@ -34,11 +34,11 @@ export const AboutView = ({ poseKey }: any) => (
           <AccordionBox>
             <DeveloperName>
               <Trans>Hello, I am Stepan</Trans>
+              <Position>
+                FrontEnd&nbsp;(ReactJS)&nbsp;
+                <Trans>Developer</Trans>
+              </Position>
             </DeveloperName>
-            <Position>
-              FrontEnd&nbsp;(ReactJS)&nbsp;
-              <Trans>Developer</Trans>
-            </Position>
             <Accordion data={RESUME_PANELS} defaultPanel={DEFAULT_RESUME_PANEL} />
           </AccordionBox>
         </Wrap>
