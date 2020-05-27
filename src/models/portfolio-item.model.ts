@@ -6,4 +6,5 @@ export interface PortfolioItemModel {
   description: string;
   className: string;
   onItemClick?: () => void;
+  thumbnailPath?: string;
 }

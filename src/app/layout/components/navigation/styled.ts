@@ -16,7 +16,10 @@ export const NavigationWrapper = styled.div`
   background: ${({ theme }) =>
     theme.mode === DARK_MODE
       ? `${BLACK_LIGHTER_95} url(${overlayBlackDot}) repeat scroll 0 0;`
-      : `${WHITE_95} url(${overlayWhiteDot}) repeat scroll 0 0;`};
+      : `
+        ${WHITE_95} url(${overlayWhiteDot}) repeat scroll 0 0;
+        box-shadow: rgb(17, 17, 17) 0px -48px 35px 45px;
+      `};
   display: grid;
   grid-template-columns: 1fr 170px;
   position: fixed;

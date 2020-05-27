@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-import {BLACK, BLACK_90, GRAY, WHITE, WHITE_90} from 'app/constants/colors';
+import {BLACK, BLACK_90, GRAY, RED, WHITE, WHITE_90} from 'app/constants/colors';
 
 export const ButtonStyled = styled.button`
-  color: ${({ plain }: any) => plain ? WHITE : GRAY};
-  border: 1px solid ${({ plain }: any) => plain ? BLACK : GRAY};
+  color: ${({ plain }: any) => plain ? WHITE : 'white'};
+  border: 1px solid ${({ plain }: any) => plain ? BLACK : 'white'};
   background: ${({ plain }: any) => plain ? `${BLACK}` : 'transparent'};
   width: ${({ width }: any) => width || 'auto'};
   font-weight: normal;
@@ -14,17 +14,20 @@ export const ButtonStyled = styled.button`
   outline: none;
   cursor: pointer;
   padding: 15px;
-  transition: background 0.2s, color 0.2s, opacity 0.2s;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, opacity 0.2s;
 
   &:hover {
     background: ${({ plain }: any) => plain && `${BLACK_90}`};
-    color: ${WHITE_90};
-    border-color: ${({ plain }: any) => plain ? BLACK_90 : WHITE_90};
+    color: ${RED};
+    border-color: ${({ plain }: any) => plain ? BLACK_90 : RED};
   }
 
   &:focus {
     color: ${GRAY};
     border-color: ${GRAY};
+
+    color: ${'rgba(255,0,0,0.7)'};
+    border-color: ${'rgba(255,0,0,0.7)'};
   }
 
   &:disabled {
@@ -33,9 +36,10 @@ export const ButtonStyled = styled.button`
   }
 
   &.active {
-    cursor: default;
     color: ${WHITE};
-    border-color: ${WHITE};
+
+    border-color: ${RED};
+    background: ${RED};
 
     &:disabled {
       opacity: 1;

@@ -15,9 +15,7 @@ export const ItemLabel = styled.div`
   outline: 0;
   transition: all 0.8s ease-in-out;
   background: ${RED};
-  opacity: 0.8;
   border-right: 1px solid transparent;
-  width: 80%;
   top: 20px;
   padding: 5px 10px;
 `;
@@ -30,11 +28,9 @@ export const ItemDescription = styled.div`
   position: absolute;
   bottom: 20px;
   left: -100%;
-  transition: all 0.8s ease-in-out;
+  transition: left 0.2s, left 0.2s;
   background: ${RED};
-  opacity: 0.8;
   color: ${WHITE};
-  width: 90%;
   padding: 5px 10px;
 `;
 

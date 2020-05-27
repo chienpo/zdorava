@@ -15,13 +15,13 @@ import {
 } from "./styled";
 
 export const PortfolioItem: React.FC<PortfolioItemModel> = ({
-   onItemClick,
-   className,
-   category,
-   imageSrc,
-   alt,
-   name,
-   description
+  onItemClick,
+  className,
+  category,
+  alt,
+  name,
+  description,
+  thumbnailPath
 }) => (
   <Item
     className={className}
@@ -30,9 +30,8 @@ export const PortfolioItem: React.FC<PortfolioItemModel> = ({
     <ItemOrientationType>
       <ItemFigure>
         <ItemImage
-          src={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${category}/${imageSrc}`}
+          src={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${category}/${thumbnailPath}`}
           alt={alt}
-          width="400px"
         />
       </ItemFigure>
       <ItemLabel>
