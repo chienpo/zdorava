@@ -1,5 +1,7 @@
 import { createElement, useState, useEffect, FC } from 'react';
 import axios from 'axios';
+import firebase from 'firebase/app';
+import 'firebase/database';
 
 import { BACKEND_URL } from '../../constants/api';
 import {
@@ -9,14 +11,11 @@ import {
 } from '../../constants/portfolio';
 import { PageLoader } from '../../ui/page-loader/page-loader';
 import { PortfolioView } from './portfolio-view';
+import { PortfolioItemModel } from "../../../models/portfolio-item.model";
 
-interface PortfolioItemModel {
-  alt: string;
-  category: string;
-  description: string;
-  imageSrc: string;
-  name: string;
-}
+const FIREBASE_AUTH_DOMAIN = 'zdorava-9a8e1.firebaseio.com';
+const FIREBASE_DATABASE_URL = 'https://zdorava-9a8e1.firebaseio.com';
+const FIREBASE_DATABASE_REF = 'portfolio';
 
 interface Props {
   data: PortfolioItemModel[];
@@ -34,9 +33,9 @@ export const Portfolio: FC = () => {
   const [hasMore, setHasMore] = useState<boolean>(true);
   const [selectedCategory, setCategory] = useState<string>(PORTFOLIO_CATEGORY_DEFAULT_TAB_NAME);
 
-  const DEFAULT_DATA_LIMIT = 6;
+  const DATA_CHANK_SIZE = 6;
 
-  const [dataLoadCount, setDataLoadCount] = useState<number>(0);
+  const [dataLoadCount, setDataLoadCount] = useState<number>(1);
 
   const prepareCategoryName = (name: string) => {
     let preparedCategoryName;
@@ -59,80 +58,141 @@ export const Portfolio: FC = () => {
 
   const getProductsTotalCount = async () => {
     try {
-      const response = await axios.get(`${BACKEND_URL}/projects/count`, {
+      const response = await axios.get(`https://zdorava-9a8e1.firebaseio.com/portfolio.json`, {
         params: {
-          'filter[where][category][inq]': ['art'],
+          shallow: true,
         }
       });
 
-      setProjectsTotalCount(response.data.count)
+      setProjectsTotalCount(Object.keys(response.data).length)
     } catch (error) {
       throw error
     }
   };
 
   const getData = async (categoryName: string) => {
-    setDataLoadCount(prevState => prevState + 1);
-    const preparedCategoryNamesArray = prepareCategoryName(categoryName);
+    const categoryStartIndex = categoryName === 'art' ? "7" : "0"
+    const categoryEndIndex = categoryName === 'art' ? (DATA_CHANK_SIZE + DATA_CHANK_SIZE).toString() : DATA_CHANK_SIZE.toString()
 
-    try {
-      const response = await axios.get(`${BACKEND_URL}/projects`, {
-        params: {
-          'filter[limit]': DEFAULT_DATA_LIMIT,
-          'filter[where][category][inq]': preparedCategoryNamesArray,
-        }
-      });
+    firebase.database().ref(FIREBASE_DATABASE_REF)
+      .orderByKey()
+      .startAt(categoryStartIndex)
+      .endAt(categoryEndIndex)
+      .once('value')
+      .then(snapshot => {
 
-      setData(response.data);
-      setPageLoading(false);
-    } catch (error) {
+        const arrayOfKeys = Object.keys(snapshot.val())
+        console.info(arrayOfKeys)
+
+        const results = arrayOfKeys
+          .map((key) => snapshot.val()[key]);
+        console.info(results)
+
+        setData(results);
+        setPageLoading(false);
+        setDataLoadCount(prevState => prevState + 1);
+    }).catch((error) => {
       throw error;
-    }
+    })
   };
 
   const getNextFirebaseData = async () => {
     setDataLoadCount(prevState => prevState + 1);
 
-    const preparedCategoryNamesArray = prepareCategoryName(selectedCategory);
+    const artOffset = selectedCategory === 'art' ? 0 : 6;
 
-    try {
-      const response = await axios.get(`${BACKEND_URL}/projects`, {
-        params: {
-          'filter[skip]': dataLoadCount * DEFAULT_DATA_LIMIT,
-          'filter[limit]': DEFAULT_DATA_LIMIT,
-          'filter[where][category][inq]': preparedCategoryNamesArray,
+    firebase.database().ref(FIREBASE_DATABASE_REF)
+      .orderByKey()
+      .startAt(((((dataLoadCount) * DATA_CHANK_SIZE) + 1) - artOffset).toString())
+      .endAt(selectedCategory === 'frontend' ? "6" : (((dataLoadCount * DATA_CHANK_SIZE) - artOffset) + DATA_CHANK_SIZE).toString())
+      .once('value')
+      .then(snapshot => {
+        console.info('snapshot.val()', snapshot.val())
+        if (!snapshot.val()) {
+          setHasMore(false);
+
+          return
         }
-      });
 
-      setData([...data, ...response.data]);
+        const arrayOfKeys = Object.keys(snapshot.val())
 
-      const frontEndTotalLength = projectsTotalCount - 15;
-      const artTotalLength = projectsTotalCount - 7;
+        const results = arrayOfKeys
+          .map((key) => snapshot.val()[key]);
 
-      const maxDataLength = data.some(({category}) => category
-        .includes(PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND))
-        ? frontEndTotalLength
-        : artTotalLength;
+        console.info(results)
 
-      if (data.length >= maxDataLength) {
-        setHasMore(false);
-      } else {
-        setHasMore(true);
-      }
-    } catch (error) {
+        setData(prevState => [...prevState, results].flatMap(item => item));
+
+        const frontEndTotalLength = projectsTotalCount - 15;
+        const artTotalLength = projectsTotalCount - 7;
+
+        const maxDataLength = data.some(({category}) => category
+          .includes(PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND))
+          ? frontEndTotalLength
+          : artTotalLength;
+
+        console.info('maxDataLength',data, maxDataLength)
+
+        // if (data.length >= maxDataLength) {
+        //   setHasMore(false);
+        // } else {
+        //   setHasMore(true);
+        // }
+      }).catch((error) => {
       throw error;
-    }
+    })
+
+    // try {
+    //   const response = await axios.get(`${BACKEND_URL}/portfolio.json`, {
+    //     params,
+    //     // params: {
+    //     //   // 'filter[skip]': dataLoadCount * DATA_CHANK_SIZE,
+    //     //   // 'filter[limit]': DATA_CHANK_SIZE,
+    //     //   // 'filter[where][category][inq]': preparedCategoryNamesArray,
+    //     // }
+    //   });
+    //
+    //
+    //   const preparedData = Object.values(response.data) as PortfolioItemModel[];
+    //   setData([...data, ...preparedData]);
+    //
+    //   const frontEndTotalLength = projectsTotalCount - 15;
+    //   const artTotalLength = projectsTotalCount - 7;
+    //
+    //   const maxDataLength = data.some(({category}) => category
+    //     .includes(PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND))
+    //     ? frontEndTotalLength
+    //     : artTotalLength;
+    //
+    //   if (data.length >= maxDataLength) {
+    //     setHasMore(false);
+    //   } else {
+    //     setHasMore(true);
+    //   }
+    //
+    // } catch (error) {
+    //   throw error;
+    // }
   };
 
   const onCategoryClick = (name: string) => {
     setCategory(name);
-    setDataLoadCount(0);
+    setDataLoadCount(1);
     setHasMore(true);
     setData([]);
     getData(name).catch((error) => {
       throw error
     });
   };
+
+  useEffect(() => {
+    if (!firebase.apps.length) {
+      firebase.initializeApp({
+        authDomain: FIREBASE_AUTH_DOMAIN,
+        databaseURL: FIREBASE_DATABASE_URL,
+      })
+    }
+  }, [])
 
   useEffect(() => {
     Promise.all([

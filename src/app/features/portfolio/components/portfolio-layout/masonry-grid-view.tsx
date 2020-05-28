@@ -83,7 +83,7 @@ export const MasonryGridView: React.FC<any> = ({
            alt,
            name,
            description,
-           thumbnailPath
+           thumbnailSrc
         }, index) => (
           <PortfolioItem
             key={alt}
@@ -94,7 +94,7 @@ export const MasonryGridView: React.FC<any> = ({
             description={description}
             className={selectedCategory}
             onItemClick={() => onItemClick(index)}
-            thumbnailPath={thumbnailPath}
+            thumbnailSrc={thumbnailSrc}
           />
         ))}
       </StyledMassonry>

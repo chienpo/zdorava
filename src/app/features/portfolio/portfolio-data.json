@@ -2,157 +2,201 @@
   "portfolio": [
     {
       "category": "frontend",
-      "src": "course-project-one.png",
+      "imageSrc": "course-project-one.png",
+      "thumbnailSrc": "course-project-one.png",
       "alt": "course-project-one",
       "name": "front-end",
-      "description": "front-end project"
+      "description": "front-end project",
+      "details": "front-end project"
     },
     {
       "category": "frontend",
-      "src": "course-project-two.png",
+      "imageSrc": "course-project-two.png",
+      "thumbnailSrc": "course-project-two.png",
       "alt": "course-project-two",
       "name": "front-end",
-      "description": "front-end project"
+      "description": "front-end project",
+      "details": "front-end project"
     },
     {
       "category": "frontend",
-      "src": "grifstd-landing.png",
+      "imageSrc": "grifstd-landing.png",
+      "thumbnailSrc": "grifstd-landing.png",
       "alt": "grifstd-landing",
       "name": "front-end",
-      "description": "front-end project"
+      "description": "front-end project",
+      "details": "front-end project"
     },
     {
       "category": "frontend",
-      "src": "pb-betolit-landing-page.png",
+      "imageSrc": "pb-betolit-landing-page.png",
+      "thumbnailSrc": "pb-betolit-landing-page.png",
       "alt": "pb-betolit-landing-page",
       "name": "front-end",
-      "description": "front-end project"
+      "description": "front-end project",
+      "details": "front-end project"
     },
     {
       "category": "frontend",
-      "src": "lastminute-theatre-page.png",
+      "imageSrc": "lastminute-theatre-page.png",
+      "thumbnailSrc": "lastminute-theatre-page.png",
       "alt": "lastminute-theatre-page",
       "name": "front-end",
-      "description": "front-end project"
+      "description": "front-end project",
+      "details": "front-end project"
     },
     {
       "category": "frontend",
-      "src": "ipwe-platform-import-details-page.png",
+      "imageSrc": "ipwe-platform-import-details-page.png",
+      "thumbnailSrc": "ipwe-platform-import-details-page.png",
       "alt": "ipwe-platform-import-details-page",
       "name": "front-end",
-      "description": "front-end project"
+      "description": "front-end project",
+      "details": "front-end project"
     },
     {
       "category": "frontend",
-      "src": "ipwe-home-page.png",
+      "imageSrc": "ipwe-home-page.png",
+      "thumbnailSrc": "ipwe-home-page.png",
       "alt": "ipwe-home-page",
       "name": "front-end",
-      "description": "front-end project"
+      "description": "front-end project",
+      "details": "front-end project"
     },
     {
       "category": "art",
-      "src": "cars-copy-2012.png",
+      "imageSrc": "cars-copy-2012.png",
+      "thumbnailSrc": "cars-copy-2012.png",
       "alt": "cars-copy-2012",
       "name": "PAPER, SANGUINE",
-      "description": "1000X1000 - PAPER, SANGUINE"
+      "description": "1000X1000 - PAPER, SANGUINE",
+      "details": "1000X1000 - PAPER, SANGUINE"
     },
     {
       "category": "art",
-      "src": "ecorche.png",
+      "imageSrc": "ecorche.png",
+      "thumbnailSrc": "ecorche.png",
       "alt": "ecorche.png",
       "name": "PAPER, SANGUINE",
-      "description": "1000X1000 - PAPER, SANGUINE"
+      "description": "1000X1000 - PAPER, SANGUINE",
+      "details": "1000X1000 - PAPER, SANGUINE"
     },
     {
       "category": "art",
-      "src": "faces-in-pastel.png",
+      "imageSrc": "faces-in-pastel.png",
+      "thumbnailSrc": "faces-in-pastel.png",
       "alt": "faces-in-pastel-1",
       "name": "PAPER, SANGUINE",
-      "description": "1000X1000 - PAPER, SANGUINE"
+      "description": "1000X1000 - PAPER, SANGUINE",
+      "details": "1000X1000 - PAPER, SANGUINE"
     },
     {
       "category": "art",
-      "src": "head-portrait-2011.png",
+      "imageSrc": "head-portrait-2011.png",
+      "thumbnailSrc": "head-portrait-2011.png",
       "alt": "head-portrait-2011",
       "name": "PAPER, SANGUINE",
-      "description": "1000X1000 - PAPER, SANGUINE"
+      "description": "1000X1000 - PAPER, SANGUINE",
+      "details": "1000X1000 - PAPER, SANGUINE"
     },
     {
       "category": "art",
-      "src": "head-square-2011.png",
+      "imageSrc": "head-square-2011.png",
+      "thumbnailSrc": "head-square-2011.png",
       "alt": "head-square-2011",
       "name": "PAPER, SANGUINE",
-      "description": "1000X1000 - PAPER, SANGUINE"
+      "description": "1000X1000 - PAPER, SANGUINE",
+      "details": "1000X1000 - PAPER, SANGUINE"
     },
     {
       "category": "art",
-      "src": "heads-2011.png",
+      "imageSrc": "heads-2011.png",
+      "thumbnailSrc": "heads-2011.png",
       "alt": "heads-2011",
       "name": "PAPER, SANGUINE",
-      "description": "1000X1000 - PAPER, SANGUINE"
+      "description": "1000X1000 - PAPER, SANGUINE",
+      "details": "1000X1000 - PAPER, SANGUINE"
     },
     {
       "category": "art",
-      "src": "lady-portrait-2011.png",
+      "imageSrc": "lady-portrait-2011.png",
+      "thumbnailSrc": "lady-portrait-2011.png",
       "alt": "lady-portrait-2011",
       "name": "PAPER, SANGUINE",
-      "description": "1000X1000 - PAPER, SANGUINE"
+      "description": "1000X1000 - PAPER, SANGUINE",
+      "details": "1000X1000 - PAPER, SANGUINE"
     },
     {
       "category": "art",
-      "src": "same-wall-drowing-bntu.png",
+      "imageSrc": "same-wall-drowing-bntu.png",
+      "thumbnailSrc": "same-wall-drowing-bntu.png",
       "alt": "same-wall-drowing-bntu",
       "name": "PAPER, SANGUINE",
-      "description": "1000X1000 - PAPER, SANGUINE"
+      "description": "1000X1000 - PAPER, SANGUINE",
+      "details": "1000X1000 - PAPER, SANGUINE"
     },
     {
       "category": "art",
-      "src": "something-in-pastel-1.png",
+      "imageSrc": "something-in-pastel-1.png",
+      "thumbnailSrc": "something-in-pastel-1.png",
       "alt": "something-in-pastel-1",
       "name": "PAPER, SANGUINE",
-      "description": "1000X1000 - PAPER, SANGUINE"
+      "description": "1000X1000 - PAPER, SANGUINE",
+      "details": "1000X1000 - PAPER, SANGUINE"
     },
     {
       "category": "art",
-      "src": "venera-portrait-2011.png",
+      "imageSrc": "venera-portrait-2011.png",
+      "thumbnailSrc": "venera-portrait-2011.png",
       "alt": "venera-portrait-2011",
       "name": "PAPER, SANGUINE",
-      "description": "1000X1000 - PAPER, SANGUINE"
+      "description": "1000X1000 - PAPER, SANGUINE",
+      "details": "1000X1000 - PAPER, SANGUINE"
     },
     {
       "category": "art",
-      "src": "arch-design-same-interiorv-rendering-1.png",
+      "imageSrc": "arch-design-same-interiorv-rendering-1.png",
+      "thumbnailSrc": "arch-design-same-interiorv-rendering-1.png",
       "alt": "arch-design-same-interiorv-rendering-1",
       "name": "PAPER, SANGUINE",
-      "description": "1000X1000 - PAPER, SANGUINE"
+      "description": "1000X1000 - PAPER, SANGUINE",
+      "details": "1000X1000 - PAPER, SANGUINE"
     },
     {
       "category": "art",
-      "src": "arch-design-school-concept.png",
+      "imageSrc": "arch-design-school-concept.png",
+      "thumbnailSrc": "arch-design-school-concept.png",
       "alt": "arch-design-school-concept",
       "name": "PAPER, SANGUINE",
-      "description": "1000X1000 - PAPER, SANGUINE"
+      "description": "1000X1000 - PAPER, SANGUINE",
+      "details": "1000X1000 - PAPER, SANGUINE"
     },
     {
       "category": "art",
-      "src": "arch-design-sculpture_people.png",
+      "imageSrc": "arch-design-sculpture_people.png",
+      "thumbnailSrc": "arch-design-sculpture_people.png",
       "alt": "arch-design-sculpture_people",
       "name": "PAPER, SANGUINE",
-      "description": "1000X1000 - PAPER, SANGUINE"
+      "description": "1000X1000 - PAPER, SANGUINE",
+      "details": "1000X1000 - PAPER, SANGUINE"
     },
     {
       "category": "art",
-      "src": "arch-design-sculpture.png",
+      "imageSrc": "arch-design-sculpture.png",
+      "thumbnailSrc": "arch-design-sculpture.png",
       "alt": "arch-design-sculpture",
       "name": "PAPER, SANGUINE",
-      "description": "1000X1000 - PAPER, SANGUINE"
+      "description": "1000X1000 - PAPER, SANGUINE",
+      "details": "1000X1000 - PAPER, SANGUINE"
     },
     {
       "category": "art",
-      "src": "arch-design-transit-2-int-day.png",
+      "imageSrc": "arch-design-transit-2-int-day.png",
+      "thumbnailSrc": "arch-design-transit-2-int-day.png",
       "alt": "arch-design-transit-2-int-day",
       "name": "PAPER, SANGUINE",
-      "description": "1000X1000 - PAPER, SANGUINE"
+      "description": "1000X1000 - PAPER, SANGUINE",
+      "details": "1000X1000 - PAPER, SANGUINE"
     }
   ]
 }

@@ -21,7 +21,7 @@ export const PortfolioItem: React.FC<PortfolioItemModel> = ({
   alt,
   name,
   description,
-  thumbnailPath
+  thumbnailSrc
 }) => (
   <Item
     className={className}
@@ -30,7 +30,7 @@ export const PortfolioItem: React.FC<PortfolioItemModel> = ({
     <ItemOrientationType>
       <ItemFigure>
         <ItemImage
-          src={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${category}/${thumbnailPath}`}
+          src={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${category}-thumbnail/${thumbnailSrc}`}
           alt={alt}
         />
       </ItemFigure>
