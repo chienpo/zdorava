@@ -14,7 +14,7 @@ import {
   ItemOrientationType,
 } from './styled';
 
-export const PortfolioItem: React.FC<PortfolioItemModel> = ({
+export const PortfolioItemView: React.FC<PortfolioItemModel> = ({
   onItemClick,
   className,
   category,

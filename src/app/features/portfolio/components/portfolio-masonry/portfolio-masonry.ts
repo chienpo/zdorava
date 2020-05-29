@@ -2,14 +2,14 @@ import { createElement, FC, useState } from 'react';
 
 import { PortfolioItemModel } from 'models/portfolio-item.model';
 
-import { MasonryGridView } from './masonry-grid-view';
+import { PortfolioMasonryView } from './portfolio-masonry-view';
 
 interface Props {
   data: PortfolioItemModel[];
   selectedCategory: string;
 }
 
-export const MasonryGrid: FC<Props> = ({ data, selectedCategory }) => {
+export const PortfolioMasonry: FC<Props> = ({ data, selectedCategory }) => {
   const [photoIndex, setPhotoIndex] = useState<number>(0);
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -34,7 +34,7 @@ export const MasonryGrid: FC<Props> = ({ data, selectedCategory }) => {
     );
   };
 
-  return createElement(MasonryGridView, {
+  return createElement(PortfolioMasonryView, {
     data,
     selectedCategory,
     onItemClick,

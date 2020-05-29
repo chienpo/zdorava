@@ -3,9 +3,10 @@ import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 
 import { PortfolioItemModel } from '../../../../../models/portfolio-item.model';
+
 import { SITE_URL, PORTFOLIO_IMAGES_PATH } from '../../../../constants/site';
+import { PortfolioItem } from '../portfolio-item';
 import { StyledMassonry } from './styled';
-import { PortfolioItem } from '../portfolio-item/portfolio-item';
 
 const masonryOptions = {
   transitionDuration: 1200,
@@ -27,7 +28,7 @@ interface Props {
   setPhotoIndex: (index: number) => void;
 }
 
-export const MasonryGridView: React.FC<Props & DataProps> = ({
+export const PortfolioMasonryView: React.FC<Props & DataProps> = ({
   data,
   onItemClick,
   handleLayoutComplete,

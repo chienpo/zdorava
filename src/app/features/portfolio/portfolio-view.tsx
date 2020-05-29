@@ -4,7 +4,7 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 
 import { PortfolioItemModel } from 'models/portfolio-item.model';
 
-import { MasonryGrid } from './components/portfolio-layout/masonry-grid';
+import { PortfolioMasonry } from './components/portfolio-masonry/portfolio-masonry';
 import { PortfolioTabs } from './components/portfolio-tabs/portfolio-tabs';
 import {
   SectionPortfolio,
@@ -45,7 +45,7 @@ export const PortfolioView: React.FC<Props> = ({
           </ItemsLoadingStateDescription>
         }
       >
-        <MasonryGrid data={data} selectedCategory={selectedCategory} />
+        <PortfolioMasonry data={data} selectedCategory={selectedCategory} />
       </InfiniteScroll>
     </PortfolioOverlay>
   </SectionPortfolio>
