@@ -29,7 +29,8 @@ export const DeveloperName = styled.h1`
   margin-bottom: 22px;
 `;
 
-export const Position = styled.h2`
+export const Position = styled.strong`
+  display: block;
   font-size: 31px;
   margin-bottom: 28px;
   font-weight: normal;

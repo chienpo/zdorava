@@ -46,17 +46,17 @@ export const Layout = () => {
                 </Header>
                 <main>
                   {topRouteName === ROUTE_NAME_HOME && (
-                    <Suspense fallback={PageLoader}>
+                    <Suspense fallback={<PageLoader />}>
                       <Home />
                     </Suspense>
                   )}
                   {topRouteName === ROUTE_NAME_ABOUT && (
-                    <Suspense fallback={PageLoader}>
+                    <Suspense fallback={<PageLoader />}>
                       <About poseKey={topRouteName} />
                     </Suspense>
                   )}
                   {topRouteName === ROUTE_NAME_PORTFOLIO && (
-                    <Suspense fallback={PageLoader}>
+                    <Suspense fallback={<PageLoader />}>
                       <Portfolio />
                     </Suspense>
                   )}

@@ -20,8 +20,8 @@ export const GridFigure = styled.div`
     position: relative;
 
     img {
-      ${({ title }) =>
-        title === 'Hello logo' &&
+      ${({ key }) =>
+        key === 'About logo 5' &&
         `
         filter: contrast(120%);
       `};
@@ -32,8 +32,8 @@ export const GridFigure = styled.div`
       padding-bottom: 100%;
       display: inline-block;
       vertical-align: top;
-      ${({ title }) =>
-        title !== 'Hello logo' &&
+      ${({ key }) =>
+        key !== 'About logo 5' &&
         `
         box-shadow: inset 0px 0px 50px 25px rgba(0,0,0,0.3);
       `};

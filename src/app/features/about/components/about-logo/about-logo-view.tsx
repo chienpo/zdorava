@@ -36,7 +36,7 @@ interface Props {
 export const AboutLogoView: React.FC<Props> = ({ logos }) => (
   <GridLogo>
     {logos.map(({ left, top, alt, src }) => (
-      <GridFigure title={alt}>
+      <GridFigure key={alt}>
         <PosedFigure left={left} top={top} src={src}>
           <img src={src} alt={alt} />
         </PosedFigure>
