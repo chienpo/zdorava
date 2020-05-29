@@ -25,7 +25,7 @@ export interface PanelsProps {
 export const Accordion: FC<Props> = ({ data, defaultPanel }) => {
   const [activePanel, toggleTab] = useState(defaultPanel);
 
-  return createElement<PanelsProps>(AccordionView, {
+  return createElement(AccordionView, {
     data,
     activePanel,
     onTogglePanel: (tabName: string) => toggleTab(tabName),

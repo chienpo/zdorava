@@ -2,8 +2,8 @@ import * as React from 'react';
 import { Trans } from '@lingui/macro';
 import posed, { PoseGroup } from 'react-pose';
 
-import { Accordion } from 'app/ui/accordion';
-import { RESUME_PANELS, DEFAULT_RESUME_PANEL, AboutLogo } from './components';
+import { Accordion } from 'app/ui/accordion-animated/accordion';
+import { AboutLogo, RESUME_PANELS, DEFAULT_RESUME_PANEL } from './components';
 import { SectionAbout, AccordionBox, DeveloperName, Position } from './styled';
 
 const Container = posed.div({
