@@ -10,11 +10,14 @@ export const AppView = ({ router }: any) => (
   <RouterProvider router={router}>
     <Providers>
       <Scrollbars
-        renderView={() => <Layout />}
+        autoHeight
+        autoHeightMin="100vh"
         autoHide
         autoHideTimeout={500}
         autoHideDuration={200}
-      />
+      >
+        <Layout />
+      </Scrollbars>
     </Providers>
   </RouterProvider>
 );
