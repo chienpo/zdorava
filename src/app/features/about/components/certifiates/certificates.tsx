@@ -1,15 +1,17 @@
-import React, {useState} from 'react';
-import Lightbox from "react-image-lightbox";
+import React, { useState } from 'react';
+import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 
-import {CERTIFICATES_DATA} from "../../../../constants/cartificates";
-import { Figure, Img, GalleryRow } from "./styled";
+import { CERTIFICATES_DATA } from '../../../../constants/cartificates';
+import { Figure, Img, GalleryRow } from './styled';
 
-const data = CERTIFICATES_DATA.map(({ path }) => path);
+const data = CERTIFICATES_DATA.map(({ src }) => src);
 
 export const Certificates = () => {
   const [photoIndex, setPhotoIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
+
+  console.info(data, CERTIFICATES_DATA);
 
   const onItemClick = (index: number) => {
     setIsOpen(true);
@@ -20,18 +22,32 @@ export const Certificates = () => {
     <GalleryRow>
       {isOpen && (
         <Lightbox
-          mainSrc={data[photoIndex]}
-          nextSrc={data[(photoIndex + 1) % data.length]}
-          prevSrc={data[(photoIndex + data.length - 1) % data.length]}
+          mainSrc={CERTIFICATES_DATA[photoIndex].src}
+          nextSrc={
+            CERTIFICATES_DATA[(photoIndex + 1) % CERTIFICATES_DATA.length].src
+          }
+          prevSrc={
+            CERTIFICATES_DATA[
+              (photoIndex + data.length - 1) % CERTIFICATES_DATA.length
+            ].src
+          }
           onCloseRequest={() => setIsOpen(false)}
           onMovePrevRequest={() =>
-            setPhotoIndex((photoIndex + data.length - 1) % data.length)
+            setPhotoIndex(
+              (photoIndex + data.length - 1) % CERTIFICATES_DATA.length
+            )
           }
           onMoveNextRequest={() =>
-            setPhotoIndex((photoIndex + 1) % data.length)
+            setPhotoIndex((photoIndex + 1) % CERTIFICATES_DATA.length)
           }
-          imageTitle={data[(photoIndex + 1) % data.length].name}
-          imageCaption={data[(photoIndex + 1) % data.length].description}
+          imageTitle={
+            CERTIFICATES_DATA[(photoIndex + 1) % CERTIFICATES_DATA.length]
+              .itemName
+          }
+          imageCaption={
+            CERTIFICATES_DATA[(photoIndex + 1) % CERTIFICATES_DATA.length]
+              .itemDescription
+          }
           reactModalStyle={{ color: 'yellow' }}
           imagePadding={100}
           wrapperClassName="wrapperClassName"
@@ -39,11 +55,11 @@ export const Certificates = () => {
           nextLabel="next-project"
         />
       )}
-      {CERTIFICATES_DATA.map(({ path, alt }, index) => (
-        <Figure key={path} onClick={() => onItemClick(index)}>
-          <Img src={path} alt={alt} />
+      {CERTIFICATES_DATA.map(({ src, alt }, index) => (
+        <Figure key={src} onClick={() => onItemClick(index)}>
+          <Img src={src} alt={alt} />
         </Figure>
       ))}
     </GalleryRow>
-  )
-}
+  );
+};

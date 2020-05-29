@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 export const PanelWrapper = styled.div`
   padding: 10px 5px;
-`
+`;
 
 export const Strong = styled.strong`
   margin-right: 5px;
-`
+`;
 
 export const Ul = styled.ul`
   font-size: 18px;
@@ -20,4 +20,4 @@ export const Ul = styled.ul`
       margin-right: 5px;
     }
   }
-`
+`;

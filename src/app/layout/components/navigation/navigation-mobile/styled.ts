@@ -48,9 +48,9 @@ export const NavigationList = styled.nav`
   backdrop-filter: blur(3px);
 
   background: ${({ theme }) =>
-  theme.mode === DARK_MODE
-    ? `${BLACK_50}`
-    : `${BLACK_90} url(${overlayBlackDotSmallSquares}) repeat scroll 0 0;`};
+    theme.mode === DARK_MODE
+      ? `${BLACK_50}`
+      : `${BLACK_90} url(${overlayBlackDotSmallSquares}) repeat scroll 0 0;`};
 `;
 
 export const NavLinkStyled = styled(BaseLink)`
@@ -109,7 +109,8 @@ const BurgerLine = styled.div`
   display: block;
   position: absolute;
   transition: opacity 0.4s, transform 0.4s;
-  background: ${({ theme }) => theme.mode === DARK_MODE ? `${WHITE} ` : `${BLACK}`};
+  background: ${({ theme }) =>
+    theme.mode === DARK_MODE ? `${WHITE} ` : `${BLACK}`};
 `;
 
 export const BurgerTopLine = styled(BurgerLine)`
@@ -133,10 +134,12 @@ export const BurgerButton = styled.button<{ opened?: boolean }>`
   border: none;
 
   ${BurgerLine} {
-    right: ${({ opened }: any) => opened ? '0' : '4px'};
+    right: ${({ opened }: any) => (opened ? '0' : '4px')};
   }
 
-  ${({ opened }: any) => opened && `
+  ${({ opened }: any) =>
+    opened &&
+    `
     width: 30px;
 
     ${BurgerTopLine} {

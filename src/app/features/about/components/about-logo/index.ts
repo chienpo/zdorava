@@ -1,1 +1,1 @@
-export { AboutLogoView as AboutLogo } from './about-logo-view';
+export { AboutLogo } from './about-logo';

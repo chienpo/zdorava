@@ -8,27 +8,23 @@ export const HomepageGlitch = () => {
 
   useEffect(() => {
     const setGlitchIntervalOn = setInterval(() => {
-      toggleDisabled(false)
-    }, 6000)
+      toggleDisabled(false);
+    }, 6000);
 
     return () => {
-      clearInterval(setGlitchIntervalOn)
+      clearInterval(setGlitchIntervalOn);
     };
   }, []);
 
   useEffect(() => {
     if (!disabled) {
-      setTimeout(() => toggleDisabled(true), 2000)
+      setTimeout(() => toggleDisabled(true), 2000);
     }
-  }, [disabled])
+  }, [disabled]);
 
   return (
     <GlitchContainer>
-      <GlitchEffect
-        duration="2s"
-        iterationCount="infinite"
-        disabled={disabled}
-      >
+      <GlitchEffect duration="2s" iterationCount="infinite" disabled={disabled}>
         <GlitchBackground />
       </GlitchEffect>
     </GlitchContainer>

@@ -2,10 +2,10 @@ import React from 'react';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 
-import { PortfolioItemModel } from "../../../../../models/portfolio-item.model";
+import { PortfolioItemModel } from '../../../../../models/portfolio-item.model';
 import { SITE_URL, PORTFOLIO_IMAGES_PATH } from '../../../../constants/site';
 import { StyledMassonry } from './styled';
-import {PortfolioItem} from "../portfolio-item/portfolio-item";
+import { PortfolioItem } from '../portfolio-item/portfolio-item';
 
 const masonryOptions = {
   transitionDuration: 1200,
@@ -15,19 +15,19 @@ interface DataProps {
   data: PortfolioItemModel[];
 }
 
-interface Props extends DataProps {
+interface Props {
   onItemClick: (index: number) => void;
-  handleLayoutComplete: (item: any) => void;
-  handleRemoveComplete: (item: any) => void;
-  handleImagesLoaded: (imagesLoadedInstance: any) => void;
+  handleLayoutComplete: (laidOutItems: {}[]) => void;
+  handleRemoveComplete: (removedItems: {}[]) => void;
+  handleImagesLoaded: (imagesLoadedInstance: {}) => void;
   selectedCategory: string;
-  isOpen: any;
-  setIsOpen: (val: boolean) => any;
-  photoIndex: any;
-  setPhotoIndex: any;
+  isOpen: boolean;
+  setIsOpen: (a: boolean) => void;
+  photoIndex: number;
+  setPhotoIndex: (index: number) => void;
 }
 
-export const MasonryGridView: React.FC<any> = ({
+export const MasonryGridView: React.FC<Props & DataProps> = ({
   data,
   onItemClick,
   handleLayoutComplete,
@@ -38,10 +38,11 @@ export const MasonryGridView: React.FC<any> = ({
   setIsOpen,
   photoIndex,
   setPhotoIndex,
-}: Props) => {
-
+}) => {
   const getImagePath = (curItem: PortfolioItemModel) => {
-    return `${SITE_URL}${PORTFOLIO_IMAGES_PATH}${curItem.category}/${curItem.imageSrc}`
+    return `${SITE_URL}${PORTFOLIO_IMAGES_PATH}${curItem.category}/${
+      curItem.imageSrc
+    }`;
   };
 
   return (
@@ -50,7 +51,9 @@ export const MasonryGridView: React.FC<any> = ({
         <Lightbox
           mainSrc={getImagePath(data[photoIndex])}
           nextSrc={getImagePath(data[(photoIndex + 1) % data.length])}
-          prevSrc={getImagePath(data[(photoIndex + data.length - 1) % data.length])}
+          prevSrc={getImagePath(
+            data[(photoIndex + data.length - 1) % data.length]
+          )}
           onCloseRequest={() => setIsOpen(false)}
           onMovePrevRequest={() =>
             setPhotoIndex((photoIndex + data.length - 1) % data.length)
@@ -77,26 +80,24 @@ export const MasonryGridView: React.FC<any> = ({
         onLayoutComplete={laidOutItems => handleLayoutComplete(laidOutItems)}
         onRemoveComplete={removedItems => handleRemoveComplete(removedItems)}
       >
-        {(data as PortfolioItemModel[]).map(({
-           category,
-           imageSrc,
-           alt,
-           name,
-           description,
-           thumbnailSrc
-        }, index) => (
-          <PortfolioItem
-            key={alt}
-            category={category}
-            imageSrc={imageSrc}
-            alt={alt}
-            name={name}
-            description={description}
-            className={selectedCategory}
-            onItemClick={() => onItemClick(index)}
-            thumbnailSrc={thumbnailSrc}
-          />
-        ))}
+        {data.map(
+          (
+            { category, imageSrc, alt, name, description, thumbnailSrc },
+            index
+          ) => (
+            <PortfolioItem
+              key={alt}
+              category={category}
+              imageSrc={imageSrc}
+              alt={alt}
+              name={name}
+              description={description}
+              className={selectedCategory}
+              onItemClick={() => onItemClick(index)}
+              thumbnailSrc={thumbnailSrc}
+            />
+          )
+        )}
       </StyledMassonry>
     </>
   );

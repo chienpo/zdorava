@@ -23,7 +23,7 @@ export const PortfolioTabsView: React.FC<Props> = ({
   <I18n>
     {({ i18n }) => (
       <PortfolioTabs>
-        {categories.map(({ label}) => (
+        {categories.map(({ label }) => (
           <Button
             key={label}
             onClick={() => onSetCategory(label)}

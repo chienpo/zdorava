@@ -1,9 +1,9 @@
-import React from 'react'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faImage } from "@fortawesome/free-solid-svg-icons";
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faImage } from '@fortawesome/free-solid-svg-icons';
 
-import { PortfolioItemModel } from "../../../../../models/portfolio-item.model";
-import {PORTFOLIO_IMAGES_PATH, SITE_URL} from "../../../../constants/site";
+import { PortfolioItemModel } from '../../../../../models/portfolio-item.model';
+import { PORTFOLIO_IMAGES_PATH, SITE_URL } from '../../../../constants/site';
 import {
   Item,
   ItemDescription,
@@ -11,8 +11,8 @@ import {
   ItemImage,
   ItemLabel,
   ItemName,
-  ItemOrientationType
-} from "./styled";
+  ItemOrientationType,
+} from './styled';
 
 export const PortfolioItem: React.FC<PortfolioItemModel> = ({
   onItemClick,
@@ -21,12 +21,9 @@ export const PortfolioItem: React.FC<PortfolioItemModel> = ({
   alt,
   name,
   description,
-  thumbnailSrc
+  thumbnailSrc,
 }) => (
-  <Item
-    className={className}
-    onClick={onItemClick}
-  >
+  <Item className={className} onClick={onItemClick}>
     <ItemOrientationType>
       <ItemFigure>
         <ItemImage
@@ -36,13 +33,9 @@ export const PortfolioItem: React.FC<PortfolioItemModel> = ({
       </ItemFigure>
       <ItemLabel>
         <FontAwesomeIcon icon={faImage} />
-        <ItemName>
-          {name}
-        </ItemName>
+        <ItemName>{name}</ItemName>
       </ItemLabel>
-      <ItemDescription>
-        {description}
-      </ItemDescription>
+      <ItemDescription>{description}</ItemDescription>
     </ItemOrientationType>
   </Item>
-)
+);

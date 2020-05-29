@@ -9,11 +9,6 @@ interface Props {
   disabled: boolean;
 }
 
-export const Button: FC<any> = ({
-  children,
-  ...props
-}: Props) => (
-  <ButtonStyled {...props}>
-    {children}
-  </ButtonStyled>
+export const Button: FC<any> = ({ children, ...props }: Props) => (
+  <ButtonStyled {...props}>{children}</ButtonStyled>
 );

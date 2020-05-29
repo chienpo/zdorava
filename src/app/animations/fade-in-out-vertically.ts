@@ -22,7 +22,7 @@ export const FadeInOut = posed.div({
 export const FadeInOutVertically = posed.div({
   enter: {
     transition: {
-      default: { duration: 400 }
+      default: { duration: 400 },
     },
     opacity: 1,
     zIndex: 5,
@@ -31,6 +31,6 @@ export const FadeInOutVertically = posed.div({
   exit: {
     transition: { duration: 400 },
     zIndex: 5,
-    top: '-100%'
+    top: '-100%',
   },
 });

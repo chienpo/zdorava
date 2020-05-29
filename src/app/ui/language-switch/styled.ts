@@ -19,13 +19,13 @@ export const InputRadio = styled.input`
   cursor: pointer;
   margin-right: 10px;
 
-  &+${LangText} {
+  & + ${LangText} {
     text-transform: uppercase;
     opacity: 1;
     font-size: 20px;
   }
 
-  &:not(:checked)+${LangText} {
+  &:not(:checked) + ${LangText} {
     opacity: 0.4;
     font-size: 14px;
 
@@ -54,16 +54,20 @@ export const Switch = styled.div<{ theme: string }>`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${({ theme }) => theme.mode === DARK_MODE ? `transparent` : `${WHITE_SMOKE_10}`};
+  background: ${({ theme }) =>
+    theme.mode === DARK_MODE ? `transparent` : `${WHITE_SMOKE_10}`};
 
-  ${({ theme }) => theme.mode === DARK_MODE ? `
+  ${({ theme }) =>
+    theme.mode === DARK_MODE
+      ? `
     ${Separator} {
       background: ${WHITE};
     }
     ${Label} {
       color: ${WHITE};
     }
-  ` : `
+  `
+      : `
     ${Separator} {
       background: ${BLACK};
     }

@@ -5,9 +5,12 @@ import { I18nProvider } from '@lingui/react';
 interface Props {
   children: any;
 }
+
 // noinspection JSFileReferences
 const importCatalog = async (lang: string) =>
-  import(`@lingui/loader!../../locales/${lang}/messages.po`).then(({ default: catalog }) => catalog);
+  import(`@lingui/loader!../../locales/${lang}/messages.po`).then(
+    ({ default: catalog }) => catalog
+  );
 
 let languageMiddleware = {
   changeLanguage: (lang: string) => {},
@@ -24,7 +27,7 @@ const LanguageProvider: React.FC<Props> = ({ children }) => {
     languageMiddleware.loading = false;
     importCatalog(language)
       .then(setCatalog)
-      .then(() => languageMiddleware.loading = true);
+      .then(() => (languageMiddleware.loading = true));
   }, [catalog, language]);
 
   return (

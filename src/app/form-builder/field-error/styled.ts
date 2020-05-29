@@ -15,15 +15,15 @@ export const ErrorBox = styled.div`
 `;
 
 export const IconError = styled.span`
-    width: 14px;
-    height: 14px;
-    background: white;
-    border-radius: 7px;
-    color: red;
-    margin-right: 10px;
-    font-size: 12px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 14px;
+  height: 14px;
+  background: white;
+  border-radius: 7px;
+  color: red;
+  margin-right: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;

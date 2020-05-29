@@ -1,13 +1,22 @@
-import styled from "styled-components";
-import { Link } from "react-router5";
-import posed from "react-pose";
+import styled from 'styled-components';
+import { Link } from 'react-router5';
+import posed from 'react-pose';
 
-import {BLACK, GRAY_MEDIUM_10, RED, WHITE, WHITE_20} from "../../../../constants/colors";
-import navigationPortfolioBackground from "../../../../../assets/images/navigation-portfolio-background.png";
-import navigationAboutBackgroundLogo from "../../../../../assets/images/contacts-background.png";
-import {DARK_MODE} from "../../../../constants/theme";
-import {pulseAnim, pulseAnimWhite} from "../../../../animations/keyframes/pulse";
-import { mirrorEffect } from "../../../../css-helpers";
+import {
+  BLACK,
+  GRAY_MEDIUM_10,
+  RED,
+  WHITE,
+  WHITE_20,
+} from '../../../../constants/colors';
+import navigationPortfolioBackground from '../../../../../assets/images/navigation-portfolio-background.png';
+import navigationAboutBackgroundLogo from '../../../../../assets/images/contacts-background.png';
+import { DARK_MODE } from '../../../../constants/theme';
+import {
+  pulseAnim,
+  pulseAnimWhite,
+} from '../../../../animations/keyframes/pulse';
+import { mirrorEffect } from '../../../../css-helpers';
 
 export const LinkOverlayMirrorEffect = styled.div`
   width: 100%;
@@ -24,7 +33,7 @@ export const LinkOverlay = posed.div({
   exit: {
     opacity: 0,
     transition: { duration: 600 },
-  }
+  },
 });
 
 export const LinkOverlayAnimated = styled(LinkOverlay)`
@@ -33,7 +42,11 @@ export const LinkOverlayAnimated = styled(LinkOverlay)`
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url(${({ title }: any) => title === 'left' ? navigationAboutBackgroundLogo : navigationPortfolioBackground}) right center no-repeat;
+  background: url(${({ title }: any) =>
+      title === 'left'
+        ? navigationAboutBackgroundLogo
+        : navigationPortfolioBackground})
+    right center no-repeat;
   background-size: cover;
   z-index: 1;
 `;
@@ -41,19 +54,21 @@ export const LinkOverlayAnimated = styled(LinkOverlay)`
 export const Text = styled.span`
   display: block;
   position: relative;
-  padding-${({ title }) => title === 'prev' ? 'left' : 'right'}: 55px;
-  ${({ title }) => title === 'prev' ? 'margin-top: 20vh;' : 'margin-bottom: 10vh;'}
+  padding-${({ title }) => (title === 'prev' ? 'left' : 'right')}: 55px;
+  ${({ title }) =>
+    title === 'prev' ? 'margin-top: 20vh;' : 'margin-bottom: 10vh;'}
   transition: color 0.6s;
 
-  &::${({ title }) => title === 'prev' ? 'before' : 'after'} {
+  &::${({ title }) => (title === 'prev' ? 'before' : 'after')} {
     position: absolute;
     content: '';
     display: block;
     width: 22px;
     height: 22px;
     border-radius: 50%;
-    border: 8px solid  ${({ theme }) => theme.mode === DARK_MODE ? WHITE : BLACK};
-    ${({ title }) => title === 'prev' ? 'left: 0' : 'right: 0'};
+    border: 8px solid  ${({ theme }) =>
+      theme.mode === DARK_MODE ? WHITE : BLACK};
+    ${({ title }) => (title === 'prev' ? 'left: 0' : 'right: 0')};
     top: 50%;
     transform: translateY(-50%);
     transition: border-color 0.6s;
@@ -74,7 +89,7 @@ export const PageLinkStyled = styled(Link)`
   box-sizing: border-box;
 
   ${Text} {
-    color: ${({ theme }) => theme.mode === DARK_MODE ? WHITE_20 : BLACK};
+    color: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE_20 : BLACK)};
 
     &::before,
     &::after {
@@ -102,11 +117,14 @@ export const PageLinkStyled = styled(Link)`
     line-height: 30px;
   }
 
-  ${({ title }: any) => title === 'left' ? `
+  ${({ title }: any) =>
+    title === 'left'
+      ? `
     justify-content: flex-start;
     align-items: center;
     left: 0;
-  ` : `
+  `
+      : `
     justify-content: flex-end;
     align-items: center;
     right: 0;
@@ -119,7 +137,8 @@ export const LinkMirrorEffectBox = styled.div`
   justify-content: center;
   justify-content: unset;
   transition: box-shadow 0.8s;
-  color: ${({ theme }) => theme.mode === DARK_MODE ? `rgba(255,255,255,0.1)` : `${GRAY_MEDIUM_10}`};
+  color: ${({ theme }) =>
+    theme.mode === DARK_MODE ? `rgba(255,255,255,0.1)` : `${GRAY_MEDIUM_10}`};
   text-transform: uppercase;
   transition: all 0.8s;
 `;

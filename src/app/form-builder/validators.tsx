@@ -1,12 +1,10 @@
-import React from "react";
-import { Trans } from "@lingui/macro";
+import React from 'react';
+import { Trans } from '@lingui/macro';
 
 export const required = (value: any) => {
   if (value) {
-    return undefined
+    return undefined;
   }
 
-  return (
-    <Trans>Required</Trans>
-  )
+  return <Trans>Required</Trans>;
 };

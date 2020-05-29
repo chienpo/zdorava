@@ -2,10 +2,10 @@ import React from 'react';
 import Typing from 'react-typing-animation';
 import { Trans } from '@lingui/macro';
 import posed, { PoseGroup } from 'react-pose';
-import Tilt from "react-parallax-tilt";
+import Tilt from 'react-parallax-tilt';
 
 import { HomepageGlitch } from './components/homepage-glitch';
-import { PageLinkFadeView } from "./components/page-link-fade/page-link-fade-view";
+import { PageLinkFadeView } from './components/page-link-fade/page-link-fade-view';
 import {
   HomepageContentWrapper,
   HomepageHGroup,
@@ -19,7 +19,7 @@ import {
 
 const Wrap = posed.div({
   enter: { opacity: 1, left: 0, position: 'relative', transition: 800 },
-  exit: { opacity: 0, left: '100%', position: 'relative', }
+  exit: { opacity: 0, left: '100%', position: 'relative' },
 });
 
 interface Props {
@@ -33,9 +33,7 @@ export const HomeView: React.FC<Props> = ({
 }) => (
   <PoseGroup animateOnMount flipMove={false}>
     <Wrap key="test" style={{ position: 'relative', height: '100%' }}>
-      {bgIsToggling && (
-        <Image bgIsToggling={bgIsToggling} />
-      )}
+      {bgIsToggling && <Image bgIsToggling={bgIsToggling} />}
       <PageLinkFadeView routeName="about" position="left">
         <Trans>Resume</Trans>
       </PageLinkFadeView>
@@ -77,9 +75,7 @@ export const HomeView: React.FC<Props> = ({
           <Typing onFinishedTyping={() => toggleDefaultBg(true)}>
             <HomepageSubtitle>web&art pro</HomepageSubtitle>
           </Typing>
-          <WebsiteSubtitle>
-            Zdorava
-          </WebsiteSubtitle>
+          <WebsiteSubtitle>Zdorava</WebsiteSubtitle>
         </HomepageHGroup>
       </HomepageContentWrapper>
     </Wrap>

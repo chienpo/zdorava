@@ -1,11 +1,15 @@
 import React, { Fragment, Suspense } from 'react';
-import { constants } from "router5";
+import { constants } from 'router5';
 import { useRouteNode } from 'react-router5';
 import { I18n } from '@lingui/react';
 import posed, { PoseGroup } from 'react-pose';
 
 import { languageMiddleware } from 'app/providers/language-provider';
-import {ROUTE_NAME_ABOUT, ROUTE_NAME_HOME, ROUTE_NAME_PORTFOLIO} from '../constants/routes';
+import {
+  ROUTE_NAME_ABOUT,
+  ROUTE_NAME_HOME,
+  ROUTE_NAME_PORTFOLIO,
+} from '../constants/routes';
 import { Navigation } from './components/navigation';
 import { Footer } from './components/footer';
 import { NotFound } from '../features/not-found';
@@ -70,4 +74,4 @@ export const Layout = () => {
       )}
     </I18n>
   );
-}
+};

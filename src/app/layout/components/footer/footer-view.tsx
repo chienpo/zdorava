@@ -1,13 +1,21 @@
 import * as React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-import { RED } from '../../../constants/colors';
-import { SOCIAL_GITHUB_PATH, SOCIAL_LINKED_IN_PATH } from 'app/constants/social';
+import {
+  SOCIAL_GITHUB_PATH,
+  SOCIAL_LINKED_IN_PATH,
+} from 'app/constants/social';
 import { SITE_PUBLICATION_YEAR } from 'app/constants/site';
 import { Contacts } from 'app/features/contacts';
-import { FooterWrapper, FooterNav, FooterCopy, FooterSocialLink } from './styled';
+import { RED } from '../../../constants/colors';
+import {
+  FooterWrapper,
+  FooterNav,
+  FooterCopy,
+  FooterSocialLink,
+} from './styled';
 
 interface Props {
   toggleContactForm: (prevState: any) => void;
@@ -16,8 +24,8 @@ interface Props {
 
 export const FooterView = ({ toggleContactForm, contactFormOpened }: Props) => {
   const footerNavigationLinks = [
-    {name: 'github', path: SOCIAL_GITHUB_PATH, icon: faGithub},
-    {name: 'linkedin', path: SOCIAL_LINKED_IN_PATH, icon: faLinkedin},
+    { name: 'github', path: SOCIAL_GITHUB_PATH, icon: faGithub },
+    { name: 'linkedin', path: SOCIAL_LINKED_IN_PATH, icon: faLinkedin },
   ];
 
   return (
@@ -38,15 +46,12 @@ export const FooterView = ({ toggleContactForm, contactFormOpened }: Props) => {
               <FontAwesomeIcon icon={icon} />
             </FooterSocialLink>
           ))}
-          <FooterSocialLink
-            key="contacts-phone"
-            href="tel:+375 44 721-37-70"
-          >
+          <FooterSocialLink key="contacts-phone" href="tel:+375 44 721-37-70">
             <FontAwesomeIcon icon={faPhone} />
           </FooterSocialLink>
           <FooterSocialLink
             onClick={() => {
-              return toggleContactForm((prevState: boolean) => !prevState)
+              return toggleContactForm((prevState: boolean) => !prevState);
             }}
             key="contacts-mail"
             as="button"
@@ -56,12 +61,10 @@ export const FooterView = ({ toggleContactForm, contactFormOpened }: Props) => {
           </FooterSocialLink>
         </FooterNav>
         <FooterCopy>
-          ©
-          Zdorava
-          &nbsp;
+          © Zdorava &nbsp;
           {SITE_PUBLICATION_YEAR}
         </FooterCopy>
       </FooterWrapper>
     </>
-  )
+  );
 };

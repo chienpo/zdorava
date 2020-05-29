@@ -5,8 +5,18 @@ import { PanelsProps } from './accordion';
 import { Panel, Row } from './styled';
 
 const PanelContent = posed.div({
-  closed: { height: 0, overflow: 'hidden', opacity: 0, transition: { duration: 200 } },
-  open: { height: 'auto', overflow: 'hidden', opacity: 1, transition: { duration: 400 } },
+  closed: {
+    height: 0,
+    overflow: 'hidden',
+    opacity: 0,
+    transition: { duration: 200 },
+  },
+  open: {
+    height: 'auto',
+    overflow: 'hidden',
+    opacity: 1,
+    transition: { duration: 400 },
+  },
 });
 
 export const AccordionView: React.FC<PanelsProps> = ({

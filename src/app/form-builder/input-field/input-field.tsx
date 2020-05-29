@@ -2,7 +2,14 @@ import React, { FC } from 'react';
 import { Field } from 'react-final-form';
 
 import { FieldError } from '../field-error/field-error';
-import { FieldWrapper, Label, Input, Textarea, LabelText, RequiredStar } from './styled';
+import {
+  FieldWrapper,
+  Label,
+  Input,
+  Textarea,
+  LabelText,
+  RequiredStar,
+} from './styled';
 
 interface Props {
   name: string;
@@ -19,7 +26,6 @@ export const InputField: FC<any> = ({
   children,
   ...props
 }: Props) => {
-
   return (
     <Field
       name={name}
@@ -29,9 +35,7 @@ export const InputField: FC<any> = ({
           <Label>
             <LabelText>
               {children}
-              {validate && (
-                <RequiredStar>*</RequiredStar>
-              )}
+              {validate && <RequiredStar>*</RequiredStar>}
             </LabelText>
             {type === 'textarea' ? (
               <Textarea rows={4} {...input} {...props} />
@@ -43,5 +47,5 @@ export const InputField: FC<any> = ({
         </FieldWrapper>
       )}
     />
-  )
+  );
 };

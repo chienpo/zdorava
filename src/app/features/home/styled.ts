@@ -45,7 +45,9 @@ export const Image = styled.div<{ bgIsToggling: boolean }>`
   transform: scale(1.1);
   z-index: 1;
 
-  ${({ bgIsToggling }) => bgIsToggling && `
+  ${({ bgIsToggling }) =>
+    bgIsToggling &&
+    `
     background: url(${homepageGlitchBg}) center center no-repeat;
     background-size: cover;
   `};
@@ -119,7 +121,7 @@ export const WebsiteSubtitle = styled.div`
 
   &:before,
   &:after {
-    content: "zdorava";
+    content: 'zdorava';
     position: absolute;
     right: 0;
     top: 0;
@@ -132,7 +134,7 @@ export const WebsiteSubtitle = styled.div`
 
   &:before {
     left: -2px;
-    text-shadow: 1px 0 rgba(47,79,79,0.8);
+    text-shadow: 1px 0 rgba(47, 79, 79, 0.8);
     animation: ${noiseAnimTwo} 3s infinite linear alternate-reverse;
   }
 

@@ -2,6 +2,8 @@ import React from 'react';
 import { Trans } from '@lingui/macro';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
+import { PortfolioItemModel } from 'models/portfolio-item.model';
+
 import { MasonryGrid } from './components/portfolio-layout/masonry-grid';
 import { PortfolioTabs } from './components/portfolio-tabs/portfolio-tabs';
 import {
@@ -11,45 +13,37 @@ import {
 } from './styled';
 
 interface Props {
-  data: PortfolioItem[];
+  data: PortfolioItemModel[];
   activeCategoryPayload: (name: string) => void;
-  getNextPortfolioDate: any;
+  getNextDataChunk: () => void;
   hasMore: boolean;
   selectedCategory: string;
-}
-
-interface PortfolioItem {
-  category: string;
-  imageSrc: string;
-  alt: string;
-  name: string;
-  description: string;
 }
 
 export const PortfolioView: React.FC<Props> = ({
   data,
   activeCategoryPayload,
-  getNextPortfolioDate,
+  getNextDataChunk,
   hasMore,
   selectedCategory,
-}: Props) => (
-  <SectionPortfolio className="test">
+}) => (
+  <SectionPortfolio>
     <PortfolioOverlay>
       <PortfolioTabs activeCategoryPayload={activeCategoryPayload} />
       <InfiniteScroll
         dataLength={data.length}
-        next={getNextPortfolioDate}
+        next={getNextDataChunk}
         hasMore={hasMore}
-        loader={(
+        loader={
           <ItemsLoadingStateDescription>
             <Trans>Loading...</Trans>
           </ItemsLoadingStateDescription>
-        )}
-        endMessage={(
+        }
+        endMessage={
           <ItemsLoadingStateDescription>
             <Trans>Coming soon...</Trans>
           </ItemsLoadingStateDescription>
-        )}
+        }
       >
         <MasonryGrid data={data} selectedCategory={selectedCategory} />
       </InfiniteScroll>

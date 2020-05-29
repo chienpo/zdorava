@@ -1,8 +1,14 @@
-import React, { useState } from "react";
-import { PoseGroup } from "react-pose";
+import React, { useState } from 'react';
+import { PoseGroup } from 'react-pose';
 
-import Tilt from "react-parallax-tilt";
-import { PageLinkStyled, Text, LinkMirrorEffectBox, LinkOverlayMirrorEffect, LinkOverlayAnimated } from "./styled";
+import Tilt from 'react-parallax-tilt';
+import {
+  PageLinkStyled,
+  Text,
+  LinkMirrorEffectBox,
+  LinkOverlayMirrorEffect,
+  LinkOverlayAnimated,
+} from './styled';
 
 interface Props {
   position: string;
@@ -55,11 +61,9 @@ export const PageLinkFadeView = ({ children, position, ...props }: Props) => {
         {...props}
       >
         <LinkMirrorEffectBox>
-          <Text title={position === 'left' ? 'next' : 'prev'}>
-            {children}
-          </Text>
+          <Text title={position === 'left' ? 'next' : 'prev'}>{children}</Text>
         </LinkMirrorEffectBox>
       </PageLinkStyled>
     </>
-  )
+  );
 };

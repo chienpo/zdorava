@@ -4,5 +4,5 @@ import { useRespondToWindowInnerWidth } from 'hooks/use-respond-to-window-inner-
 export const useMediaMinWidth = (deviceType: string) => {
   const currentScreenWidth = useRespondToWindowInnerWidth();
 
-  return currentScreenWidth > MIN_WIDTH_RESOLUTIONS[deviceType]
+  return currentScreenWidth > MIN_WIDTH_RESOLUTIONS[deviceType];
 };

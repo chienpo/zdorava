@@ -14,7 +14,7 @@ interface Props {
 const categories = [
   { label: PORTFOLIO_CATEGORY_TAB_NAME_ALL },
   { label: PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND },
-  { label: PORTFOLIO_CATEGORY_TAB_NAME_ART }
+  { label: PORTFOLIO_CATEGORY_TAB_NAME_ART },
 ];
 
 export const PortfolioTabs: FC<Props> = ({ activeCategoryPayload }: Props) => {

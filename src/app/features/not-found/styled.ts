@@ -18,17 +18,17 @@ export const SectionNotFound = styled.section`
 `;
 
 export const Overlay = styled.figure`
- background: ${({ theme }) =>
-  theme.mode === DARK_MODE
-    ? `${BLACK_90} url(${overlayBlackDot}) repeat scroll 0 0;`
-    : `${WHITE_90} url(${overlayWhiteDot}) repeat scroll 0 0;`};
+  background: ${({ theme }) =>
+    theme.mode === DARK_MODE
+      ? `${BLACK_90} url(${overlayBlackDot}) repeat scroll 0 0;`
+      : `${WHITE_90} url(${overlayWhiteDot}) repeat scroll 0 0;`};
 
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 500px;
-  color: rgba(10,10,10, 0.05);
+  color: rgba(10, 10, 10, 0.05);
   font-weight: 100;
   font-family: Orbitron-Light, sans-serif;
 `;

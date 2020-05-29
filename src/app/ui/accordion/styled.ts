@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import {BLACK, DARK_SLATE_GREY, RED, WHITE} from '../../constants/colors';
+import { BLACK, DARK_SLATE_GREY, RED, WHITE } from '../../constants/colors';
 
 export const Panel = styled.div<{ active: boolean }>`
   font-size: 21px;
@@ -11,8 +11,7 @@ export const Panel = styled.div<{ active: boolean }>`
   transition: background 0.4s, color 0.4s;
 
   &:hover {
-    ${({ active }) =>
-    !active && `background: ${RED}; color: ${WHITE}`};
+    ${({ active }) => !active && `background: ${RED}; color: ${WHITE}`};
   }
 
   ${({ active }) =>

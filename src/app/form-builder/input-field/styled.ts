@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 
-import {BLACK_50, BLACK_90, GRAY, GRAY_LIGHT, RED, WHITE} from '../../constants/colors';
+import {
+  BLACK_50,
+  BLACK_90,
+  GRAY,
+  GRAY_LIGHT,
+  RED,
+  WHITE,
+} from '../../constants/colors';
 
 export const FieldWrapper = styled.div`
   display: flex;
@@ -9,8 +16,8 @@ export const FieldWrapper = styled.div`
 `;
 
 export const Label = styled.label`
-    width: 100%;
-    display: block;
+  width: 100%;
+  display: block;
 `;
 
 export const LabelText = styled.span`

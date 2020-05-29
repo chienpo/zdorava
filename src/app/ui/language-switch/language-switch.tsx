@@ -7,8 +7,10 @@ export interface LanguageSwitchProps {
   onChangeLanguage: (lang: string) => void;
 }
 
-export const LanguageSwitch: FC<LanguageSwitchProps> = ({ selectedLanguage, onChangeLanguage }) => {
-
+export const LanguageSwitch: FC<LanguageSwitchProps> = ({
+  selectedLanguage,
+  onChangeLanguage,
+}) => {
   return createElement<LanguageSwitchProps>(LanguageSwitchView, {
     onChangeLanguage: (checked: string) => onChangeLanguage(checked),
     selectedLanguage,

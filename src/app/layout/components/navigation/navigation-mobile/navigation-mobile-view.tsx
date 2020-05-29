@@ -49,7 +49,9 @@ export const NavigationMobileView = ({
                     router={router}
                     routeName={name}
                     onClick={() => {
-                      return toggleBurgerMenu((prevState: boolean) => !prevState)
+                      return toggleBurgerMenu(
+                        (prevState: boolean) => !prevState
+                      );
                     }}
                   >
                     {i18n._(PAGE_TITLES[name])}
@@ -64,7 +66,7 @@ export const NavigationMobileView = ({
             opened={mobileMenuOpened}
             type="button"
             onClick={() => {
-              return toggleBurgerMenu((prevState: boolean) => !prevState)
+              return toggleBurgerMenu((prevState: boolean) => !prevState);
             }}
           >
             <BurgerTopLine />
@@ -77,6 +79,6 @@ export const NavigationMobileView = ({
           />
         </NavigationWrapper>
       </>
-      )}
+    )}
   </I18n>
-  );
+);

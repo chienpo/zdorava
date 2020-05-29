@@ -66,7 +66,8 @@ module.exports = {
     'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx'] }],
     '@typescript-eslint/indent': 'off',
     '@typescript-eslint/prefer-interface': 'off',
-    "react/prop-types": "warn",
-    "@typescript-eslint/explicit-function-return-type": "off"
+    'react/prop-types': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    'react/jsx-wrap-multilines': 'off',
   },
 };

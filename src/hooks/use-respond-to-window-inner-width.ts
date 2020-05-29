@@ -8,7 +8,7 @@ export const useRespondToWindowInnerWidth = () => {
 
     return () => {
       window.removeEventListener('resize', () => setWidth(window.innerWidth));
-    }
+    };
   }, []);
 
   return width;

@@ -8,7 +8,7 @@ export const Home: FC<any> = () => {
   return createElement(HomeView, {
     bgIsToggling,
     toggleDefaultBg,
-  })
+  });
 };
 
 // // eslint-disable-next-line import/no-default-export
