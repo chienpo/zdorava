@@ -18,7 +18,7 @@ msgstr ""
 msgid "404"
 msgstr "404"
 
-#: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:11
+#: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:14
 msgid "About"
 msgstr "Обо мне"
 
@@ -33,10 +33,6 @@ msgstr "Дизайн"
 #: src/app/features/portfolio/portfolio-view.tsx:13
 msgid "Coming soon..."
 msgstr "Портфолио загружено..."
-
-#: src/app/features/about/about-view.tsx:24
-msgid "Developer"
-msgstr "Разработчик"
 
 #: src/app/features/contacts/components/contact-form-view.tsx:14
 msgid "Email"
@@ -62,11 +58,16 @@ msgstr "Опыт"
 msgid "Front-end"
 msgstr "Front-end"
 
-#: src/app/features/about/about-view.tsx:21
+#: src/app/features/about/about-view.tsx:31
+msgid "FrontEnd (ReactJS) Developer"
+msgstr "FrontEnd (ReactJS) Разработчик"
+
+#: src/app/features/about/about-view.tsx:29
 msgid "Hello, I am Stepan"
 msgstr "Привет, меня зовут Степан"
 
 #: src/app/constants/page-titles.ts:5
+#: src/app/constants/routes.ts:8
 msgid "Home"
 msgstr "Главная"
 
@@ -74,8 +75,8 @@ msgstr "Главная"
 msgid "Lagunovsky"
 msgstr "Лагуновский"
 
-#: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:10
-#: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:12
+#: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:11
+#: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:16
 msgid "Languages & achievements letters"
 msgstr "Языки, сертификаты"
 
@@ -92,6 +93,7 @@ msgid "Name"
 msgstr "Имя"
 
 #: src/app/constants/page-titles.ts:7
+#: src/app/constants/routes.ts:12
 #: src/app/features/home/home-view.tsx:20
 msgid "Portfolio"
 msgstr "Портфолио"
@@ -101,6 +103,7 @@ msgid "Required"
 msgstr "Обязательное поле"
 
 #: src/app/constants/page-titles.ts:6
+#: src/app/constants/routes.ts:9
 #: src/app/features/home/home-view.tsx:17
 msgid "Resume"
 msgstr "Резюме"
@@ -113,6 +116,6 @@ msgstr "Отправить сообщение"
 msgid "Stepan"
 msgstr "Степан"
 
-#: src/app/features/contacts/contacts-view.tsx:42
+#: src/app/features/contacts/contacts-view.tsx:48
 msgid "Write me"
 msgstr ""

@@ -15,7 +15,6 @@ export const AppContent = styled.div`
 
 export const AppBackground = styled.div`
   background: ${WHITE};
-  min-width: 100vh;
 `;
 
 export const Header = styled.header`

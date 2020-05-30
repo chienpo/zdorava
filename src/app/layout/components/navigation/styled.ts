@@ -27,6 +27,21 @@ export const NavigationWrapper = styled.div`
   width: 100%;
 `;
 
+export const NavigationDefaultWrapper = styled.div`
+  grid-template-columns: auto 170px;
+  background: ${({ theme }) =>
+    theme.mode === DARK_MODE
+      ? `${BLACK_LIGHTER_95} url(${overlayBlackDot}) repeat scroll 0 0;`
+      : `
+        ${WHITE_95} url(${overlayWhiteDot}) repeat scroll 0 0;
+      `};
+  display: grid;
+  grid-template-columns: 1fr 170px;
+  position: fixed;
+  height: 50px;
+  width: 100%;
+`;
+
 export const NavigationList = styled.nav`
   display: flex;
   justify-content: center;

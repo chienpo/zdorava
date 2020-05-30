@@ -1,43 +1,37 @@
 import * as React from 'react';
-import { I18n } from '@lingui/react';
 
 import {
   LanguageSwitchProps,
   LanguageSwitch,
 } from 'app/ui/language-switch/language-switch';
-import { PAGE_TITLES } from 'app/constants/page-titles';
-import { NavigationWrapper, NavigationList, NavLinkStyled } from './styled';
+import { BurgerMenu } from 'app/ui/burger-menu';
+import { NavigationListView } from './navigation-list-view';
+import { NavigationDefaultWrapper } from './styled';
 
-type Props = {
-  router: any;
+interface Props extends LanguageSwitchProps {
   preparedRoutes: any;
-};
+  isMobile: boolean;
+  router: any;
+}
 
-type NavigationProps = {
-  name: string;
-};
-
-export const NavigationView = ({
-  router,
+export const NavigationView: React.FC<Props> = ({
   selectedLanguage,
   onChangeLanguage,
   preparedRoutes,
-}: Props & LanguageSwitchProps) => (
-  <I18n>
-    {({ i18n }) => (
-      <NavigationWrapper>
-        <NavigationList>
-          {preparedRoutes.map(({ name }: NavigationProps) => (
-            <NavLinkStyled key={name} router={router} routeName={name}>
-              {i18n._(PAGE_TITLES[name])}
-            </NavLinkStyled>
-          ))}
-        </NavigationList>
-        <LanguageSwitch
-          selectedLanguage={selectedLanguage}
-          onChangeLanguage={onChangeLanguage}
-        />
-      </NavigationWrapper>
-    )}
-  </I18n>
+  isMobile,
+  router,
+}) => (
+  <NavigationDefaultWrapper>
+    <div>
+      {isMobile ? (
+        <BurgerMenu routes={preparedRoutes} />
+      ) : (
+        <NavigationListView router={router} preparedRoutes={preparedRoutes} />
+      )}
+    </div>
+    <LanguageSwitch
+      selectedLanguage={selectedLanguage}
+      onChangeLanguage={onChangeLanguage}
+    />
+  </NavigationDefaultWrapper>
 );

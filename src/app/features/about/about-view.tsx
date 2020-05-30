@@ -4,7 +4,13 @@ import posed, { PoseGroup } from 'react-pose';
 
 import { Accordion } from 'app/ui/accordion-animated/accordion';
 import { AboutLogo, RESUME_PANELS, DEFAULT_RESUME_PANEL } from './components';
-import { SectionAbout, AccordionBox, DeveloperName, Position } from './styled';
+import {
+  SectionAbout,
+  AccordionBox,
+  DeveloperName,
+  Position,
+  LogoWrap,
+} from './styled';
 
 const Container = posed.div({
   enter: { staggerChildren: 10, applyAtStart: { height: '100%' } },
@@ -25,14 +31,15 @@ export const AboutView: React.FC<{ poseKey: string }> = ({ poseKey }) => (
   <PoseGroup animateOnMount>
     <Container key={poseKey}>
       <SectionAbout>
-        <AboutLogo />
+        <LogoWrap>
+          <AboutLogo />
+        </LogoWrap>
         <Wrap>
           <AccordionBox>
             <DeveloperName>
               <Trans>Hello, I am Stepan</Trans>
               <Position>
-                FrontEnd&nbsp;(ReactJS)&nbsp;
-                <Trans>Developer</Trans>
+                <Trans>FrontEnd (ReactJS) Developer</Trans>
               </Position>
             </DeveloperName>
             <Accordion

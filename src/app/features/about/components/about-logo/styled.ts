@@ -1,51 +1,63 @@
 import styled from 'styled-components';
+import posed from 'react-pose';
 
-export const GridLogo = styled.div`
+export const GridLogoWrapper = styled.div`
   display: grid;
-  grid-template-columns: calc((100vh - 182px) / 3) calc((100vh - 182px) / 3) calc(
-      (100vh - 182px) / 3
-    );
-  grid-template-rows: calc((100vh - 182px) / 3) calc((100vh - 182px) / 3) calc(
-      (100vh - 182px) / 3
-    );
-  height: 100%;
-  width: 100%;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
 `;
 
-export const GridFigure = styled.div`
+const posedFigureOptions = {
+  enter: {
+    opacity: 1,
+    left: 0,
+    top: 0,
+    scale: 1,
+    transition: { duration: 1200, delay: 400 },
+  },
+  exit: {
+    opacity: 0,
+    scale: 5,
+    left: ({ left }: { left: number }) => `${left}%`,
+    top: ({ top }: { top: number }) => `${top}%`,
+    transition: { duration: 1200, delay: 100 },
+  },
+};
+
+export const StyledPosedFigure = styled(posed.figure(posedFigureOptions))`
+  position: relative;
+
+  &::after {
+    content: '';
+    padding-bottom: 100%;
+    display: inline-block;
+    vertical-align: top;
+    ${({ alt }) =>
+      alt !== 'About logo 5' &&
+      `
+      box-shadow: inset 0px 0px 50px 25px rgba(0,0,0,0.3);
+    `};
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+  }
+`;
+
+export const GridItem = styled.div`
   width: 100%;
   height: 100%;
+  display: flex;
+`;
 
-  figure {
-    position: relative;
+export const StyledImg = styled.img`
+  display: flex;
+  width: 100%;
+  height: auto;
 
-    img {
-      ${({ key }) =>
-        key === 'About logo 5' &&
-        `
-        filter: contrast(120%);
-      `};
-    }
-
-    &::after {
-      content: '';
-      padding-bottom: 100%;
-      display: inline-block;
-      vertical-align: top;
-      ${({ key }) =>
-        key !== 'About logo 5' &&
-        `
-        box-shadow: inset 0px 0px 50px 25px rgba(0,0,0,0.3);
-      `};
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-    }
-  }
-
-  img {
-    width: 100%;
-    height: 100%;
-  }
+  ${({ alt }) =>
+    alt === 'About logo 5' &&
+    `
+    filter: contrast(120%);
+  `};
 `;

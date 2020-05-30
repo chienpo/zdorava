@@ -1,0 +1,11 @@
+{
+  "Home": {
+    "origin": [["src/app/constants/routes.ts", 8]]
+  },
+  "Resume": {
+    "origin": [["src/app/constants/routes.ts", 9]]
+  },
+  "Portfolio": {
+    "origin": [["src/app/constants/routes.ts", 12]]
+  }
+}

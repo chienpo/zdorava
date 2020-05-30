@@ -11,11 +11,11 @@
     "origin": [
       [
         "src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts",
-        10
+        11
       ],
       [
         "src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts",
-        12
+        16
       ]
     ]
   },
@@ -23,7 +23,7 @@
     "origin": [
       [
         "src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts",
-        11
+        14
       ]
     ]
   }

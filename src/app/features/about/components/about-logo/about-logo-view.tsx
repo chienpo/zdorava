@@ -1,26 +1,11 @@
 import React from 'react';
-import posed from 'react-pose';
 
-import { GridFigure, GridLogo } from './styled';
-
-const PosedFigure = posed.figure({
-  enter: {
-    opacity: 1,
-    left: 0,
-    top: 0,
-    scale: 1,
-    transition: { duration: 1200, delay: 400 },
-    position: 'relative',
-  },
-  exit: {
-    opacity: 0,
-    scale: 5,
-    left: ({ left }: { left: number }) => `${left}%`,
-    top: ({ top }: { top: number }) => `${top}%`,
-    transition: { duration: 1200, delay: 100 },
-    position: 'relative',
-  },
-});
+import {
+  GridItem,
+  GridLogoWrapper,
+  StyledPosedFigure,
+  StyledImg,
+} from './styled';
 
 interface Logo {
   left: number;
@@ -34,13 +19,13 @@ interface Props {
 }
 
 export const AboutLogoView: React.FC<Props> = ({ logos }) => (
-  <GridLogo>
+  <GridLogoWrapper>
     {logos.map(({ left, top, alt, src }) => (
-      <GridFigure key={alt}>
-        <PosedFigure left={left} top={top} src={src}>
-          <img src={src} alt={alt} />
-        </PosedFigure>
-      </GridFigure>
+      <GridItem key={alt}>
+        <StyledPosedFigure left={left} top={top} alt={alt}>
+          <StyledImg src={src} alt={alt} />
+        </StyledPosedFigure>
+      </GridItem>
     ))}
-  </GridLogo>
+  </GridLogoWrapper>
 );

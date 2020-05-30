@@ -7,7 +7,25 @@ export const SectionAbout = styled.section`
   grid-template-columns: auto 50%;
   height: 100%;
   align-items: center;
-  grid-column-gap: 20px;
+
+  @media screen and (min-width: 1199px) {
+    grid-template-columns: repeat(auto-fill, 50vw);
+  }
+
+  grid-template-columns: 1fr;
+`;
+
+export const LogoWrap = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
+  @media screen and (min-width: 1199px) {
+    width: 70%;
+  }
+
+  width: 100%;
 `;
 
 export const AccordionBox = styled.div`
