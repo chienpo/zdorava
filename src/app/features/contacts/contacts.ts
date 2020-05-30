@@ -1,6 +1,11 @@
 import { createElement } from 'react';
 import { ContactsView } from './contacts-view';
 
-export const Contacts = ({ opened, onClose }: any) => {
+interface Props {
+  opened: boolean;
+  onClose: () => void;
+}
+
+export const Contacts: React.FC<Props> = ({ opened, onClose }) => {
   return createElement(ContactsView, { opened, onClose });
 };

@@ -52,6 +52,7 @@ export const Position = styled.strong`
   font-size: 31px;
   margin-bottom: 28px;
   font-weight: normal;
+  text-transform: none;
 
   strong {
     color: ${RED};

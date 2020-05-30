@@ -32,7 +32,7 @@ export const FooterView = ({ toggleContactForm, contactFormOpened }: Props) => {
     <>
       <Contacts
         opened={contactFormOpened}
-        onClose={() => toggleContactForm((prevState: boolean) => !prevState)}
+        onClose={() => toggleContactForm(false)}
       />
       <FooterWrapper>
         <FooterNav>
@@ -50,9 +50,9 @@ export const FooterView = ({ toggleContactForm, contactFormOpened }: Props) => {
             <FontAwesomeIcon icon={faPhone} />
           </FooterSocialLink>
           <FooterSocialLink
-            onClick={() => {
-              return toggleContactForm((prevState: boolean) => !prevState);
-            }}
+            onClick={() =>
+              toggleContactForm((prevState: boolean) => !prevState)
+            }
             key="contacts-mail"
             as="button"
             color={RED}

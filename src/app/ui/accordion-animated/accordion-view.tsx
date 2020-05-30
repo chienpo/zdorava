@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { BLACK, RED, RED_70 } from 'app/constants/colors';
@@ -27,7 +27,7 @@ export const AccordionView: React.FC<Props> = ({
       const isOpen: boolean = key === expanded;
 
       return (
-        <div>
+        <Fragment key={key}>
           <motion.header
             initial={false}
             animate={{
@@ -67,7 +67,7 @@ export const AccordionView: React.FC<Props> = ({
               </motion.section>
             )}
           </AnimatePresence>
-        </div>
+        </Fragment>
       );
     })}
   </div>

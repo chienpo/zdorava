@@ -10,7 +10,7 @@ import { FormSection, H2Styled, FormBox, CloseButton } from './styled';
 
 interface Props {
   opened: boolean;
-  onClose: () => any;
+  onClose: () => void;
 }
 
 const BackdropFade = posed.div({
@@ -45,7 +45,7 @@ export const ContactsView: FC<Props> = ({ opened, onClose }) => (
         width: '100vw',
       }}
     >
-      {opened && <BackdropFade key="fadeInOut" />}
+      {opened && <BackdropFade key="fadeInOut" onClick={onClose} />}
     </PoseGroup>
     <PoseGroup style={{ position: 'fixed' }}>
       {opened && [
@@ -58,7 +58,7 @@ export const ContactsView: FC<Props> = ({ opened, onClose }) => (
               <H2Styled>
                 <Trans>Write me</Trans>
               </H2Styled>
-              <ContactForm />
+              <ContactForm onEscapeClicked={onClose} />
             </FormBox>
           </FormSection>
         </FadeInOutVertically>,
