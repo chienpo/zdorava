@@ -81,14 +81,30 @@ export const Layout = () => {
                   </motion.div>
                 )}
                 {topRouteName === ROUTE_NAME_PORTFOLIO && (
-                  <Suspense fallback={<PageLoader />}>
-                    <Portfolio />
-                  </Suspense>
+                  <motion.div
+                    key={topRouteName}
+                    initial="initial"
+                    animate="in"
+                    exit="out"
+                    variants={pageVariants}
+                  >
+                    <Suspense fallback={<PageLoader />}>
+                      <Portfolio />
+                    </Suspense>
+                  </motion.div>
                 )}
                 {topRouteName === constants.UNKNOWN_ROUTE && (
-                  <Fragment key={topRouteName}>
-                    <NotFound />
-                  </Fragment>
+                  <motion.div
+                    key={topRouteName}
+                    initial="initial"
+                    animate="in"
+                    exit="out"
+                    variants={pageVariants}
+                  >
+                    <Fragment key={topRouteName}>
+                      <NotFound />
+                    </Fragment>
+                  </motion.div>
                 )}
               </AnimatePresence>
             </main>
