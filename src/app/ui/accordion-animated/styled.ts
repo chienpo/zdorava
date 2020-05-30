@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { BLACK, DARK_SLATE_GREY, RED, WHITE } from '../../constants/colors';
+import { BLACK, RED, WHITE } from '../../constants/colors';
 
 export const Panel = styled.div<{ active: boolean }>`
   font-size: 21px;
@@ -18,19 +18,11 @@ export const Panel = styled.div<{ active: boolean }>`
     active
       ? `
     color: ${WHITE};
-    background: ${RED};
     padding-left: 10px;
   `
       : `
-    background: ${DARK_SLATE_GREY};
-    background: transparent;
     color: ${BLACK}
     font-weight: bold;
     padding-left: 10px;
   `};
-`;
-
-export const Row = styled.div`
-  cursor: pointer;
-  overflow: hidden;
 `;

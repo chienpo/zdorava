@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BLACK, GRAY_LIGHT } from 'app/constants/colors';
+
+import { BLACK, RED, RED_70 } from 'app/constants/colors';
+import { Panel } from './styled';
 
 interface Props {
   expanded: false | string;
@@ -29,13 +31,14 @@ export const AccordionView: React.FC<Props> = ({
           <motion.header
             initial={false}
             animate={{
-              backgroundColor: isOpen ? BLACK : GRAY_LIGHT,
+              backgroundColor: isOpen ? BLACK : 'transparent',
             }}
-            whileHover={{ scale: 1.01 }}
-            whileTap={{ scale: 0.99 }}
+            whileHover={{ backgroundColor: RED }}
+            whileTap={{ backgroundColor: RED_70 }}
             onClick={() => setExpanded(isOpen ? false : key)}
+            style={{ transition: 'background 0.4s' }}
           >
-            {panelTitle}
+            <Panel active={isOpen}>{panelTitle}</Panel>
           </motion.header>
           <AnimatePresence initial={false}>
             {isOpen && (
