@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import styled from 'styled-components';
 
 import { Route } from 'models/route.model';
@@ -77,7 +77,7 @@ const variants = {
 };
 
 const Backdrop = styled(motion.div)`
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(3px);
   background: ${BLACK_50};
   position: fixed;
   top: 0;
@@ -100,9 +100,19 @@ export const BurgerMenuView: React.FC<Props> = ({
     custom={height}
     ref={containerRef}
   >
-    <Backdrop variants={variants} />
+    {isOpen && (
+      <AnimatePresence>
+        <Backdrop
+          key="MenuBackdrop"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={toggleOpen}
+        />
+      </AnimatePresence>
+    )}
     <StyledMotionMenuBackdrop variants={sidebar} />
     <MenuListView routes={routes} router={router} />
-    <MenuToggleButtonView toggle={() => toggleOpen()} />
+    <MenuToggleButtonView toggle={toggleOpen} />
   </StyledMotionNav>
 );

@@ -14,12 +14,12 @@ const PANEL_CERTIFICATES = 'PANEL_CERTIFICATES';
 export const DEFAULT_RESUME_PANEL = PANEL_ABOUT;
 
 export const RESUME_PANELS = {
-  [PANEL_ABOUT]: { panelTitle: i18nMark('Experience'), content: PanelOneView },
+  [PANEL_ABOUT]: { panelTitle: i18nMark('About'), content: PanelOneView },
   [PANEL_EXPERIENCE]: {
-    panelTitle: i18nMark('Languages & achievements letters'),
+    panelTitle: i18nMark('Experience'),
     content: PanelTwoView,
   },
-  [PANEL_SKILLS]: { panelTitle: i18nMark('About'), content: PanelThreeView },
+  [PANEL_SKILLS]: { panelTitle: i18nMark('Skills'), content: PanelThreeView },
   [PANEL_CERTIFICATES]: {
     panelTitle: i18nMark('Languages & achievements letters'),
     content: PanelFourView,

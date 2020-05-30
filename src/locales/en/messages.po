@@ -18,13 +18,9 @@ msgstr ""
 msgid "404"
 msgstr "404"
 
-#: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:14
+#: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:9
 msgid "About"
 msgstr "About"
-
-#: src/app/features/home/home-view.tsx:9
-#~ msgid "About me"
-#~ msgstr "About me"
 
 #: src/app/constants/portfolio.ts:12
 msgid "All projects"
@@ -54,7 +50,7 @@ msgstr "Enter your message"
 msgid "Enter your name"
 msgstr "Enter your name"
 
-#: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:9
+#: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:11
 msgid "Experience"
 msgstr "Experience"
 
@@ -79,7 +75,6 @@ msgstr "Home"
 msgid "Lagunovsky"
 msgstr "Lagunovsky"
 
-#: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:11
 #: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:16
 msgid "Languages & achievements letters"
 msgstr "Languages & achievements letters"
@@ -115,6 +110,10 @@ msgstr "Resume"
 #: src/app/features/contacts/components/contact-form-view.tsx:21
 msgid "Send message"
 msgstr "Send message"
+
+#: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:14
+msgid "Skills"
+msgstr "Skills"
 
 #: src/app/features/home/home-view.tsx:35
 msgid "Stepan"

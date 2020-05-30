@@ -18,7 +18,7 @@ msgstr ""
 msgid "404"
 msgstr "404"
 
-#: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:14
+#: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:9
 msgid "About"
 msgstr "Обо мне"
 
@@ -50,7 +50,7 @@ msgstr "Сообщение"
 msgid "Enter your name"
 msgstr "Ваши инициалы"
 
-#: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:9
+#: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:11
 msgid "Experience"
 msgstr "Опыт"
 
@@ -75,7 +75,6 @@ msgstr "Главная"
 msgid "Lagunovsky"
 msgstr "Лагуновский"
 
-#: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:11
 #: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:16
 msgid "Languages & achievements letters"
 msgstr "Языки, сертификаты"
@@ -111,6 +110,10 @@ msgstr "Резюме"
 #: src/app/features/contacts/components/contact-form-view.tsx:21
 msgid "Send message"
 msgstr "Отправить сообщение"
+
+#: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:14
+msgid "Skills"
+msgstr ""
 
 #: src/app/features/home/home-view.tsx:35
 msgid "Stepan"
