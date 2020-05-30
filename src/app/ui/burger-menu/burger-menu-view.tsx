@@ -59,23 +59,6 @@ const sidebar = {
   },
 };
 
-const variants = {
-  open: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      y: { stiffness: 1000, velocity: -100 },
-    },
-  },
-  closed: {
-    y: 0,
-    opacity: 0,
-    transition: {
-      y: { stiffness: 1000 },
-    },
-  },
-};
-
 const Backdrop = styled(motion.div)`
   backdrop-filter: blur(3px);
   background: ${BLACK_50};
