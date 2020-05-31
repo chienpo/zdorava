@@ -33,18 +33,20 @@ export const PanelTwoView: React.FC<any> = () => (
   <PanelWrapper>
     <Ul>
       <li>
-        <Strong>&bull;</Strong>
-        2018-2020. I've been working in Itransition for two years. This time
-        allowed me to dive dipper in front-end and understand how cool is it.
-        Working with a cool team of developers I took pat in a really cool
-        projects and features for our foreign customers.
+        <Strong>2018-2020 &bull;</Strong>
+        I've been working in Itransition Softvare Development Company as a
+        Front-end Developer. This time allowed me to dive dipper in a front-end
+        and understand how cool is it! Working in a team of developers I took
+        part in making up really cool projects and features for our foreign
+        customers.
       </li>
       <li>
-        <Strong>&bull;</Strong>
-        2008-2018. Over 10 years I've been studying on architecture design
-        specialisations. I was lucky to improve my skills in art, advertisement
-        design, and creative art which became really helpful in my front-end
-        development process.
+        <Strong>2008-2019 &bull;</Strong>
+        Over 10 years I've been studying on architecture & design
+        specialisations. I was lucky to improve my skills such areas like:
+        interior and brand design, modern and creative art, supergraphics and so
+        on which has became absolutely helpful in front-end and even though in
+        the whole life!
       </li>
     </Ul>
   </PanelWrapper>
@@ -54,32 +56,44 @@ export const PanelThreeView: React.FC<any> = () => (
   <PanelWrapper>
     <Ul>
       <li>
-        <Strong>PROGRAMMING LANGUAGES:</Strong>
-        JavaScript, TypeScript
-      </li>
-      <li>
-        <Strong>FRAMEWORKS:</Strong>
-        React JS, some Symfony and LoopBack frameworks experience
+        <Strong>STACK:</Strong>
+        HTML/CSS, JavaScript/TypeScript, ReactJS
       </li>
       <li>
         <Strong>REACT FEATURES:</Strong>
-        Redux, ReduxSagas, Router5, ReactPosed-animations
+        Redux, ReduxSagas, Router5, ReactPosed / FrameMotion - animations
+      </li>
+      <li>
+        <Strong>FRAMEWORKS:</Strong>
+        Symfony, (LoopBack, Angular - quick overview)
       </li>
       <li>
         <Strong>CSS:</Strong>
         Flexbox, Grid
       </li>
       <li>
-        <Strong>MODULE BUILDERS:</Strong>
-        Webpack, Parcel, GULP
+        <Strong style={{ textTransform: 'uppercase' }}>
+          Virtual Machine Platforms & Containers:
+        </Strong>
+        Docker
       </li>
       <li>
-        <Strong>VERSION CONTROLS:</Strong>
+        <Strong style={{ textTransform: 'uppercase' }}>
+          JS Build Tools / JS Task Runners:
+        </Strong>
+        Webpack4, Parcel, GULP
+      </li>
+      <li>
+        <Strong>CRM:</Strong>
+        Wordpress,
+      </li>
+      <li>
+        <Strong>VC:</Strong>
         Git
       </li>
       <li>
         <Strong>WEB-DESIGN:</Strong>
-        PHOTOSHOP, GIMP, TinyPNG, PhotoPea
+        PHOTOSHOP, GIMP, TinyPNG, PhotoPeaa
       </li>
     </Ul>
   </PanelWrapper>

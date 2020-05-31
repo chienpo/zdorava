@@ -39,20 +39,21 @@ export const DeveloperName = styled.h1`
   background: ${BLACK};
   color: ${WHITE};
   text-align: left;
-  font-family: Orbitron-Bold, sans-serif;
   font-size: 56px;
   line-height: 66px;
   letter-spacing: 0;
   text-transform: uppercase;
-  margin-bottom: 22px;
+  margin: 0 0 22px;
 `;
 
 export const Position = styled.strong`
   display: block;
-  font-size: 31px;
-  margin-bottom: 28px;
+  font-size: 30px;
   font-weight: normal;
   text-transform: none;
+  font-weight: 100;
+  text-transform: uppercase;
+  color: white;
 
   strong {
     color: ${RED};

@@ -72,8 +72,10 @@ export const HomepageTitle = styled.h1`
   flex-wrap: wrap;
   justify-content: center;
   text-transform: uppercase;
-  font-weight: bold;
   margin-bottom: 20px;
+  font-weight: 400;
+  color: ${DARK_SLATE_GREY};
+  color: rgba(200, 200, 200, 0.7);
 
   @media only screen and (max-width: 767px) {
     font-size: 30px;
@@ -85,15 +87,10 @@ export const Name = styled.div`
   margin-left: 15px;
   display: inline;
   margin-right: 30px;
-  color: ${DARK_SLATE_GREY};
-  font-weight: 100;
 `;
 
 export const SurName = styled(Name)`
   margin-top: auto;
-  color: ${DARK_SLATE_GREY};
-  // color: rgba(200, 200, 200, 0.7);
-  font-weight: 100;
 `;
 
 export const HomepageSubtitle = styled.div`
