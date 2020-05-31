@@ -44,9 +44,9 @@ export const PanelTwoView: React.FC<any> = () => (
         <Strong>2008-2019 &bull;</Strong>
         Over 10 years I've been studying on architecture & design
         specialisations. I was lucky to improve my skills such areas like:
-        interior and brand design, modern and creative art, supergraphics and so
-        on which has became absolutely helpful in front-end and even though in
-        the whole life!
+        interior and brand design, modern and concept art, creative
+        supergraphics and so on which has became absolutely helpful in front-end
+        and even though in the whole life!
       </li>
     </Ul>
   </PanelWrapper>
@@ -81,7 +81,7 @@ export const PanelThreeView: React.FC<any> = () => (
         <Strong style={{ textTransform: 'uppercase' }}>
           JS Build Tools / JS Task Runners:
         </Strong>
-        Webpack4, Parcel, GULP
+        Webpack4, Parcel, GULPq
       </li>
       <li>
         <Strong>CRM:</Strong>
