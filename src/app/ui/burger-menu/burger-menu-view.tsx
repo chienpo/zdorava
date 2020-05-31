@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import styled from 'styled-components';
 
 import { Route } from 'models/route.model';
@@ -36,27 +36,30 @@ const StyledMotionMenuBackdrop = styled(motion.div)`
   left: 0;
   bottom: 0;
   width: 300px;
+  margin: 10px;
   background: ${({ theme }) =>
     theme.mode === DARK_MODE ? WHITE_20 : BLACK_90};
 `;
 
 const sidebar = {
-  open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+  open: (height = 1080) => ({
+    clipPath: `polygon(0px 0px, 300px 0px, 300px ${height}px, 0px ${height}px)`,
     transition: {
       type: 'spring',
       stiffness: 20,
       restDelta: 2,
     },
+    backgroundColor: 'rgba(255,255,255,1)',
   }),
   closed: {
-    clipPath: 'circle(30px at 40px 40px)',
+    clipPath: 'polygon(0px 0px, 60px 0px, 60px 55px, 0px 55px)',
     transition: {
       delay: 0.5,
       type: 'spring',
       stiffness: 400,
       damping: 40,
     },
+    backgroundColor: 'rgba(0,0,0,0)',
   },
 };
 
@@ -74,9 +77,12 @@ export const BurgerMenuView: React.FC<Props> = ({
     custom={height}
     ref={containerRef}
   >
-    {isOpen && <MenuBackdropView toggleOpen={toggleOpen} />}
+    <AnimatePresence>
+      {isOpen && <MenuBackdropView toggleOpen={toggleOpen} />}
+    </AnimatePresence>
+
     <StyledMotionMenuBackdrop variants={sidebar} />
     <MenuListView routes={routes} router={router} />
-    <MenuToggleButtonView toggle={toggleOpen} />
+    <MenuToggleButtonView isOpen={isOpen} toggle={toggleOpen} />
   </StyledMotionNav>
 );

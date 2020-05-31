@@ -4,13 +4,15 @@ import { BLACK } from '../../../../constants/colors';
 
 export const GalleryRow = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 15px;
+  grid-template-columns: 25% 25% 25%;
+  grid-gap: 10px;
 `;
 
 export const Figure = styled.figure`
   position: relative;
   overflow: hidden;
+  cursor: pointer;
+  display: flex;
 
   &:hover {
     ${mirrorEffect}

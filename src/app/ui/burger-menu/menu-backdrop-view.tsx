@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 import { useKeyPress } from 'hooks/use-key-press';
@@ -23,14 +23,24 @@ const Backdrop = styled(motion.div)`
 export const MenuBackdropView: React.FC<Props> = ({ toggleOpen }) => {
   useKeyPress(KEY_CODE_ESCAPE, toggleOpen);
   return (
-    <AnimatePresence>
-      <Backdrop
-        key="MenuBackdrop"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        onClick={toggleOpen}
-      />
-    </AnimatePresence>
+    <Backdrop
+      key="MenuBackdrop"
+      variants={{
+        initial: { opacity: 0 },
+        show: { opacity: 1 },
+        exit: {
+          opacity: 1,
+          transition: {
+            delay: 0.5,
+            type: 'spring',
+            stiffness: 100,
+          },
+        },
+      }}
+      initial="initial"
+      animate="show"
+      exit="exit"
+      onClick={toggleOpen}
+    />
   );
 };
