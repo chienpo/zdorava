@@ -10,7 +10,7 @@ import {
 } from '../../constants/api';
 import {
   PORTFOLIO_CATEGORY_DEFAULT_TAB_NAME,
-  PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND,
+  // PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND,
 } from '../../constants/portfolio';
 import { PageLoader } from '../../ui/page-loader/page-loader';
 import { PortfolioView } from './portfolio-view';
@@ -19,7 +19,9 @@ import { PortfolioItemModel } from '../../../models/portfolio-item.model';
 export const Portfolio: FC = () => {
   // eslint-disable-next-line max-len
   const [data, setData] = useState<PortfolioItemModel[]>([]);
-  const [projectsTotalCount, setProjectsTotalCount] = useState<number>(0);
+  const [, /* projectsTotalCount */ setProjectsTotalCount] = useState<number>(
+    0
+  );
   const [pageLoading, setPageLoading] = useState<boolean>(true);
   const [hasMore, setHasMore] = useState<boolean>(true);
   const [dataLoadCount, setDataLoadCount] = useState<number>(1);
@@ -62,10 +64,12 @@ export const Portfolio: FC = () => {
       .once('value')
       .then(snapshot => {
         const arrayOfKeys = Object.keys(snapshot.val());
-        console.info(arrayOfKeys);
+        // TODO: Check and remove console
+        // console.info(arrayOfKeys);
 
         const results = arrayOfKeys.map(key => snapshot.val()[key]);
-        console.info(results);
+        // TODO: Check and remove console
+        // console.info(results);
 
         setData(results);
         setPageLoading(false);
@@ -107,20 +111,22 @@ export const Portfolio: FC = () => {
 
         const results = arrayOfKeys.map(key => snapshot.val()[key]);
 
-        console.info(results);
+        // TODO: Remove console
+        // console.info(results);
 
         setData(prevState => [...prevState, results].flatMap(item => item));
 
-        const frontEndTotalLength = projectsTotalCount - 15;
-        const artTotalLength = projectsTotalCount - 7;
+        // TODO: Check later and remove console below
+        // const frontEndTotalLength = projectsTotalCount - 15;
+        // const artTotalLength = projectsTotalCount - 7;
 
-        const maxDataLength = data.some(({ category }) =>
-          category.includes(PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND)
-        )
-          ? frontEndTotalLength
-          : artTotalLength;
+        // const maxDataLength = data.some(({ category }) =>
+        //   category.includes(PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND)
+        // )
+        //   ? frontEndTotalLength
+        //   : artTotalLength;
 
-        console.info('maxDataLength', data, maxDataLength);
+        // console.info('maxDataLength', data, maxDataLength);
       })
       .catch(error => {
         throw error;

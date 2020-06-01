@@ -19,19 +19,22 @@ export const PortfolioMasonry: FC<Props> = ({ data, selectedCategory }) => {
   };
 
   const handleLayoutComplete: (laidOutItems: {}[]) => void = laidOutItems => {
-    console.warn('Layout Complete', laidOutItems);
+    // TODO: Check
+    // console.warn('Layout Complete', laidOutItems);
   };
 
   const handleRemoveComplete: (removedItems: {}[]) => void = removedItems => {
-    console.warn('RemoveComplete', removedItems);
+    // TODO: Check
+    // console.warn('RemoveComplete', removedItems);
   };
 
   const handleImagesLoaded: (imagesLoadedInstance: {}) => void = imagesLoadedInstance => {
-    console.warn(
-      'ImagesLoaded',
-      imagesLoadedInstance,
-      Boolean(imagesLoadedInstance)
-    );
+    // TODO: Check
+    // console.warn(
+    //   'ImagesLoaded',
+    //   imagesLoadedInstance,
+    //   Boolean(imagesLoadedInstance)
+    // );
   };
 
   return createElement(PortfolioMasonryView, {
