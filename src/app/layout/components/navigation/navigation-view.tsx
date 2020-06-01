@@ -13,6 +13,7 @@ interface Props extends LanguageSwitchProps {
   isMobile: boolean;
   router: any;
   showMenu: boolean;
+  headerHeight: string;
 }
 
 export const NavigationView: React.FC<Props> = ({
@@ -22,12 +23,15 @@ export const NavigationView: React.FC<Props> = ({
   isMobile,
   router,
   showMenu,
+  headerHeight,
 }) => (
-  <NavigationDefaultWrapper>
+  <NavigationDefaultWrapper style={{ height: headerHeight }}>
     {showMenu ? (
       <>
         {isMobile ? (
-          <BurgerMenu routes={routes} />
+          <div>
+            <BurgerMenu routes={routes} />
+          </div>
         ) : (
           <NavigationListView router={router} routes={routes} />
         )}

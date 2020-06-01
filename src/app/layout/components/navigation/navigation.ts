@@ -20,6 +20,7 @@ export const Navigation: FC<LanguageSwitchProps> = ({
   const mediaMinWidthForLaptops = useMediaMinWidth(LAPTOPS);
 
   const showMenu = topRouteName !== ROUTE_NAME_HOME;
+  const headerHeight = topRouteName === ROUTE_NAME_HOME ? '50px' : '70px';
 
   // TODO Move at the final return
   return createElement(NavigationView, {
@@ -29,5 +30,6 @@ export const Navigation: FC<LanguageSwitchProps> = ({
     routes,
     isMobile: isMobile.any || !mediaMinWidthForLaptops,
     showMenu,
+    headerHeight,
   });
 };

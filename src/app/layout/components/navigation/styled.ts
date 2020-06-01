@@ -12,20 +12,6 @@ import {
   WHITE_95,
 } from '../../../constants/colors';
 
-export const NavigationWrapper = styled.div`
-  background: ${({ theme }) =>
-    theme.mode === DARK_MODE
-      ? `${BLACK_LIGHTER_95} url(${overlayBlackDot}) repeat scroll 0 0;`
-      : `
-        ${WHITE_95} url(${overlayWhiteDot}) repeat scroll 0 0;
-        box-shadow: rgb(17, 17, 17) 0px -48px 35px 45px;
-      `};
-  display: grid;
-  grid-template-columns: 1fr 170px;
-  height: 100%;
-  width: 100%;
-`;
-
 export const NavigationDefaultWrapper = styled.div`
   grid-template-columns: auto 170px;
   background: ${({ theme }) =>
@@ -36,8 +22,10 @@ export const NavigationDefaultWrapper = styled.div`
       `};
   display: grid;
   grid-template-columns: 1fr 170px;
-  height: 100%;
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
 `;
 
 export const NavigationList = styled.nav`
