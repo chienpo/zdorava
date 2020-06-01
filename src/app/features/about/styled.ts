@@ -35,7 +35,7 @@ export const AccordionBox = styled.div`
 `;
 
 export const DeveloperName = styled.h1`
-  padding: 10px 0 0 20px;
+  padding: 10px 0 10px 20px;
   background: ${BLACK};
   color: ${WHITE};
   text-align: left;
@@ -49,11 +49,13 @@ export const DeveloperName = styled.h1`
 export const Position = styled.strong`
   display: block;
   font-size: 30px;
+  line-height: 38px;
   font-weight: normal;
   text-transform: none;
   font-weight: 100;
   text-transform: uppercase;
   color: white;
+  margin-top: 10px;
 
   strong {
     color: ${RED};

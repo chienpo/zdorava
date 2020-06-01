@@ -39,8 +39,7 @@ export const AboutView: React.FC<{ poseKey: string }> = ({ poseKey }) => (
             <DeveloperName>
               <Trans>Hello, I'm Stepan</Trans>
               <Position>
-                {/* <Trans>ReactJS Developer</Trans> */}
-                <Trans>React-JS & Front-end Developer</Trans>
+                <Trans>Front-end (React-JS) Developer</Trans>
               </Position>
             </DeveloperName>
             <Accordion
