@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import posed from 'react-pose';
+import { motion } from 'framer-motion';
 
 export const GridLogoWrapper = styled.div`
   display: grid;
@@ -7,24 +7,7 @@ export const GridLogoWrapper = styled.div`
   grid-template-rows: auto auto auto;
 `;
 
-const posedFigureOptions = {
-  enter: {
-    opacity: 1,
-    left: 0,
-    top: 0,
-    scale: 1,
-    transition: { duration: 1200, delay: 400 },
-  },
-  exit: {
-    opacity: 0,
-    scale: 5,
-    left: ({ left }: { left: number }) => `${left}%`,
-    top: ({ top }: { top: number }) => `${top}%`,
-    transition: { duration: 1200, delay: 100 },
-  },
-};
-
-export const StyledPosedFigure = styled(posed.figure(posedFigureOptions))`
+export const StyledMotionFigure = styled(motion.figure)`
   position: relative;
 
   &::after {
@@ -32,7 +15,7 @@ export const StyledPosedFigure = styled(posed.figure(posedFigureOptions))`
     padding-bottom: 100%;
     display: inline-block;
     vertical-align: top;
-    ${({ alt }) =>
+    ${({ alt }: any) =>
       alt !== 'About logo 5' &&
       `
       box-shadow: inset 0px 0px 50px 25px rgba(0,0,0,0.3);

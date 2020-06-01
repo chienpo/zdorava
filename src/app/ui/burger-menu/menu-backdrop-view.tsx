@@ -22,6 +22,7 @@ const Backdrop = styled(motion.div)`
 
 export const MenuBackdropView: React.FC<Props> = ({ toggleOpen }) => {
   useKeyPress(KEY_CODE_ESCAPE, toggleOpen);
+
   return (
     <Backdrop
       key="MenuBackdrop"

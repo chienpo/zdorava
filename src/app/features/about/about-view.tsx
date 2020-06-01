@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Trans } from '@lingui/macro';
 import posed, { PoseGroup } from 'react-pose';
+import { AnimatePresence } from 'framer-motion';
 
 import { Accordion } from 'app/ui/accordion-animated/accordion';
 import { AboutLogo, RESUME_PANELS, DEFAULT_RESUME_PANEL } from './components';
@@ -32,7 +33,9 @@ export const AboutView: React.FC<{ poseKey: string }> = ({ poseKey }) => (
     <Container key={poseKey}>
       <SectionAbout>
         <LogoWrap>
-          <AboutLogo />
+          <AnimatePresence>
+            <AboutLogo />
+          </AnimatePresence>
         </LogoWrap>
         <Wrap>
           <AccordionBox>

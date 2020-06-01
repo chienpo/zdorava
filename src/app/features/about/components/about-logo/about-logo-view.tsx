@@ -3,7 +3,7 @@ import React from 'react';
 import {
   GridItem,
   GridLogoWrapper,
-  StyledPosedFigure,
+  StyledMotionFigure,
   StyledImg,
 } from './styled';
 
@@ -22,9 +22,36 @@ export const AboutLogoView: React.FC<Props> = ({ logos }) => (
   <GridLogoWrapper>
     {logos.map(({ left, top, alt, src }) => (
       <GridItem key={alt}>
-        <StyledPosedFigure left={left} top={top} alt={alt}>
+        <StyledMotionFigure
+          variants={{
+            initial: {
+              opacity: 0,
+              scale: 2,
+              left,
+              top,
+              transition: { duration: 0.2, delay: 0.4 },
+            },
+            show: {
+              opacity: 1,
+              left: 0,
+              top: 0,
+              scale: 1,
+              transition: { duration: 1, delay: 1 },
+            },
+            exit: {
+              opacity: 0,
+              scale: 2,
+              left,
+              top,
+              transition: { duration: 0.2, delay: 0.4 },
+            },
+          }}
+          initial="initial"
+          animate="show"
+          exit="exit"
+        >
           <StyledImg src={src} alt={alt} />
-        </StyledPosedFigure>
+        </StyledMotionFigure>
       </GridItem>
     ))}
   </GridLogoWrapper>
