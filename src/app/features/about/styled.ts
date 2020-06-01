@@ -15,13 +15,12 @@ export const SectionAbout = styled.section`
 `;
 
 export const LogoWrap = styled.div`
-  margin: 0 auto;
-
   @media screen and (min-width: 991px) {
     width: 70%;
+    margin-bottom: 0;
   }
 
-  width: 100%;
+  margin: 0 auto 50px;
 `;
 
 export const AccordionBox = styled.div`
