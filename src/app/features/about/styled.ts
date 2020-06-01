@@ -7,7 +7,7 @@ export const SectionAbout = styled.section`
   grid-template-columns: auto 50%;
   width: 100%;
 
-  @media screen and (min-width: 1199px) {
+  @media screen and (min-width: 991px) {
     grid-template-columns: repeat(auto-fill, 50vw);
   }
 
@@ -17,7 +17,7 @@ export const SectionAbout = styled.section`
 export const LogoWrap = styled.div`
   margin: 0 auto;
 
-  @media screen and (min-width: 1199px) {
+  @media screen and (min-width: 991px) {
     width: 70%;
   }
 
