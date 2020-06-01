@@ -19,7 +19,7 @@ export const CloseButton = styled.button`
 
 export const FormSection = styled.section`
   width: 100vw;
-  box-shadow: 0px -48px 35px 45px ${({ theme }) => theme.mode === LIGHT_MODE && `rgb(17,17,17);`};
+  box-shadow: 0px -48px 35px 45px ${({ theme }) => theme.mode === LIGHT_MODE && BLACK};
   position: relative;
 
   ${CloseButton} {

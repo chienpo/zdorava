@@ -4,6 +4,9 @@ import {
   LanguageSwitchProps,
   LanguageSwitch,
 } from 'app/ui/language-switch/language-switch';
+
+import { ROUTE_NAME_PORTFOLIO } from 'app/constants/routes';
+import { BLACK } from 'app/constants/colors';
 import { BurgerMenu } from 'app/ui/burger-menu';
 import { NavigationListView } from './navigation-list-view';
 import { NavigationDefaultWrapper } from './styled';
@@ -14,6 +17,7 @@ interface Props extends LanguageSwitchProps {
   router: any;
   showMenu: boolean;
   headerHeight: string;
+  activeRouteName: string;
 }
 
 export const NavigationView: React.FC<Props> = ({
@@ -24,8 +28,17 @@ export const NavigationView: React.FC<Props> = ({
   router,
   showMenu,
   headerHeight,
+  activeRouteName,
 }) => (
-  <NavigationDefaultWrapper style={{ height: headerHeight }}>
+  <NavigationDefaultWrapper
+    style={{
+      height: headerHeight,
+      boxShadow:
+        activeRouteName === ROUTE_NAME_PORTFOLIO
+          ? `0px -48px 35px 45px ${BLACK}`
+          : '0 -0 0 0 transparent',
+    }}
+  >
     {showMenu ? (
       <>
         {isMobile ? (

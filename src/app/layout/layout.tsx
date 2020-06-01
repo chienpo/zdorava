@@ -15,6 +15,7 @@ import { Footer } from './components/footer';
 import { NotFound } from '../features/not-found';
 import { PageLoader } from '../ui/page-loader/page-loader';
 import { AppContent, Header, AppBackground } from './styled';
+import { BLACK } from 'app/constants/colors';
 
 const Home = React.lazy(() => import('../features/home'));
 const About = React.lazy(() => import('../features/about/about'));
@@ -50,6 +51,7 @@ export const Layout = () => {
               }}
             >
               <Navigation
+                activeRouteName={topRouteName}
                 selectedLanguage={i18n.language}
                 onChangeLanguage={val => {
                   return languageMiddleware.changeLanguage(val);

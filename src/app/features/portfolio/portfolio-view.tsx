@@ -4,12 +4,14 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 
 import { PortfolioItemModel } from 'models/portfolio-item.model';
 
+import { MoreLoader } from 'app/ui/more-loader/more-loader';
 import { PortfolioMasonry } from './components/portfolio-masonry/portfolio-masonry';
 import { PortfolioTabs } from './components/portfolio-tabs/portfolio-tabs';
 import {
   SectionPortfolio,
   PortfolioOverlay,
   ItemsLoadingStateDescription,
+  ItemsLoadingSpinnerBox,
 } from './styled';
 
 interface Props {
@@ -35,9 +37,9 @@ export const PortfolioView: React.FC<Props> = ({
         next={getNextDataChunk}
         hasMore={hasMore}
         loader={
-          <ItemsLoadingStateDescription>
-            <Trans>Loading...</Trans>
-          </ItemsLoadingStateDescription>
+          <ItemsLoadingSpinnerBox>
+            <MoreLoader />
+          </ItemsLoadingSpinnerBox>
         }
         endMessage={
           <ItemsLoadingStateDescription>

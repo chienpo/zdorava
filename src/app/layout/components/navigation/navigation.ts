@@ -8,9 +8,14 @@ import { LanguageSwitchProps } from 'app/ui/language-switch/language-switch';
 import { ROUTE_NAME_HOME, routes } from '../../../constants/routes';
 import { NavigationView } from './navigation-view';
 
-export const Navigation: FC<LanguageSwitchProps> = ({
+interface Props extends LanguageSwitchProps {
+  activeRouteName: string;
+}
+
+export const Navigation: FC<Props> = ({
   selectedLanguage,
   onChangeLanguage,
+  activeRouteName,
 }) => {
   const { route } = useRouteNode('');
   const topRouteName = route.name.split('.')[0];
@@ -31,5 +36,6 @@ export const Navigation: FC<LanguageSwitchProps> = ({
     isMobile: isMobile.any || !mediaMinWidthForLaptops,
     showMenu,
     headerHeight,
+    activeRouteName,
   });
 };
