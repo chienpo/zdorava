@@ -4,7 +4,7 @@ import { BLACK } from '../../../../constants/colors';
 
 export const GalleryRow = styled.div`
   display: grid;
-  grid-template-columns: 25% 25% 25%;
+  grid-template-columns: 20% 20% 20%;
   grid-gap: 10px;
 `;
 

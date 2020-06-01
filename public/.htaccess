@@ -7,5 +7,5 @@
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-l
-  RewriteRule ^(.*)$ https://zdorava.com/?q=$1 [L,R=301]
+  RewriteRule ^(.*)$ index.html?q=$1 [L,QSA]
 </IfModule>

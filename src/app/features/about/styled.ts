@@ -5,8 +5,7 @@ import { BLACK, RED, WHITE } from 'app/constants/colors';
 export const SectionAbout = styled.section`
   display: grid;
   grid-template-columns: auto 50%;
-  height: 100%;
-  align-items: center;
+  width: 100%;
 
   @media screen and (min-width: 1199px) {
     grid-template-columns: repeat(auto-fill, 50vw);
@@ -16,9 +15,6 @@ export const SectionAbout = styled.section`
 `;
 
 export const LogoWrap = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin: 0 auto;
 
   @media screen and (min-width: 1199px) {
@@ -30,7 +26,6 @@ export const LogoWrap = styled.div`
 
 export const AccordionBox = styled.div`
   width: 100%;
-  padding-top: 100px;
   padding-left: 50px;
 `;
 

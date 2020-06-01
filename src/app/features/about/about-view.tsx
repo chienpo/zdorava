@@ -30,7 +30,7 @@ const Wrap = posed.div({
 
 export const AboutView: React.FC<{ poseKey: string }> = ({ poseKey }) => (
   <PoseGroup animateOnMount>
-    <Container key={poseKey}>
+    <Container key={poseKey} style={{ display: 'flex', alignItems: 'center' }}>
       <SectionAbout>
         <LogoWrap>
           <AnimatePresence>
