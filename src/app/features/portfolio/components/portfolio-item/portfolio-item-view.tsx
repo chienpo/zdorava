@@ -6,11 +6,11 @@ import { PortfolioItemModel } from '../../../../../models/portfolio-item.model';
 import { PORTFOLIO_IMAGES_PATH, SITE_URL } from '../../../../constants/site';
 import {
   Item,
-  ItemDescription,
+  ItemTitle,
   ItemFigure,
   ItemImage,
-  ItemLabel,
-  ItemName,
+  ItemCategoryName,
+  ItemCategoryLabel,
   ItemOrientationType,
 } from './styled';
 
@@ -31,11 +31,11 @@ export const PortfolioItemView: React.FC<PortfolioItemModel> = ({
           alt={alt}
         />
       </ItemFigure>
-      <ItemLabel>
+      <ItemCategoryName>
         <FontAwesomeIcon icon={faImage} />
-        <ItemName>{name}</ItemName>
-      </ItemLabel>
-      <ItemDescription>{description}</ItemDescription>
+        <ItemCategoryLabel>{name}</ItemCategoryLabel>
+      </ItemCategoryName>
+      <ItemTitle>{description}</ItemTitle>
     </ItemOrientationType>
   </Item>
 );

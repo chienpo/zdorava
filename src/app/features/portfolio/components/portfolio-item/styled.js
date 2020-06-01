@@ -4,33 +4,27 @@ import { RED, WHITE } from 'app/constants/colors';
 import { PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND } from 'app/constants/portfolio';
 import { mirrorEffect } from 'app/css-helpers';
 
-export const ItemLabel = styled.div`
+export const ItemCategoryLabel = styled.span`
+  margin-left: 10px;
+`;
+
+export const ItemTitle = styled.h4`
+  transition: left 0.2s, left 0.2s;
+  background: ${RED};
+  color: ${WHITE};
+  padding: 5px 10px;
+`;
+
+export const ItemCategoryName = styled.span`
   color: ${WHITE};
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 2px;
   font-weight: bold;
-  position: absolute;
-  right: -100%;
   outline: 0;
   transition: all 0.8s ease-in-out;
   background: ${RED};
   border-right: 1px solid transparent;
-  top: 20px;
-  padding: 5px 10px;
-`;
-
-export const ItemName = styled.span`
-  margin-left: 10px;
-`;
-
-export const ItemDescription = styled.div`
-  position: absolute;
-  bottom: 20px;
-  left: -100%;
-  transition: left 0.2s, left 0.2s;
-  background: ${RED};
-  color: ${WHITE};
   padding: 5px 10px;
 `;
 
@@ -117,15 +111,34 @@ export const Item = styled.div`
     }
   `};
 
+  ${ItemCategoryName} {
+    position: absolute;
+    top: 20px;
+    right: -100%;
+    opacity: 0;
+    transition: left 0.4s, right 0.4s, opacity 1.6s;
+  }
+
+  ${ItemTitle} {
+    position: absolute;
+    bottom: 20px;
+    left: -100%;
+    opacity: 0;
+    transition: left 0.4s, opacity 1.6s;
+  }
+
   &:hover {
     cursor: pointer;
     opacity: 1;
 
-    ${ItemLabel} {
+    ${ItemCategoryName} {
       right: 0;
+      opacity: 1;
     }
-    ${ItemDescription} {
+
+    ${ItemTitle} {
       left: 0;
+      opacity: 1;
     }
   }
 `;
