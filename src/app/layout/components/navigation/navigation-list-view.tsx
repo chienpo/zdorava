@@ -8,17 +8,14 @@ import { NavigationList, NavLinkStyled } from './styled';
 
 interface Props {
   router: any;
-  preparedRoutes: Route[];
+  routes: Route[];
 }
 
-export const NavigationListView: React.FC<Props> = ({
-  router,
-  preparedRoutes,
-}) => (
+export const NavigationListView: React.FC<Props> = ({ router, routes }) => (
   <I18n>
     {({ i18n }) => (
       <NavigationList>
-        {preparedRoutes.map(({ name }) => (
+        {routes.map(({ name }) => (
           <NavLinkStyled key={name} router={router} routeName={name}>
             {i18n._(PAGE_TITLES[name])}
           </NavLinkStyled>

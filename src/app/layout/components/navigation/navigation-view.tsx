@@ -9,26 +9,32 @@ import { NavigationListView } from './navigation-list-view';
 import { NavigationDefaultWrapper } from './styled';
 
 interface Props extends LanguageSwitchProps {
-  preparedRoutes: any;
+  routes: any;
   isMobile: boolean;
   router: any;
+  showMenu: boolean;
 }
 
 export const NavigationView: React.FC<Props> = ({
   selectedLanguage,
   onChangeLanguage,
-  preparedRoutes,
+  routes,
   isMobile,
   router,
+  showMenu,
 }) => (
   <NavigationDefaultWrapper>
-    <div>
-      {isMobile ? (
-        <BurgerMenu routes={preparedRoutes} />
-      ) : (
-        <NavigationListView router={router} preparedRoutes={preparedRoutes} />
-      )}
-    </div>
+    {showMenu ? (
+      <>
+        {isMobile ? (
+          <BurgerMenu routes={routes} />
+        ) : (
+          <NavigationListView router={router} routes={routes} />
+        )}
+      </>
+    ) : (
+      <div />
+    )}
     <LanguageSwitch
       selectedLanguage={selectedLanguage}
       onChangeLanguage={onChangeLanguage}

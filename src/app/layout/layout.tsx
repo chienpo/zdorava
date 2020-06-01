@@ -44,7 +44,11 @@ export const Layout = () => {
       {({ i18n }) => (
         <AppBackground>
           <AppContent>
-            <Header>
+            <Header
+              style={{
+                height: topRouteName === ROUTE_NAME_HOME ? '50px' : '70px',
+              }}
+            >
               <Navigation
                 selectedLanguage={i18n.language}
                 onChangeLanguage={val => {

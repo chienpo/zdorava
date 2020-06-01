@@ -22,8 +22,7 @@ export const NavigationWrapper = styled.div`
       `};
   display: grid;
   grid-template-columns: 1fr 170px;
-  position: fixed;
-  height: 50px;
+  height: 100%;
   width: 100%;
 `;
 
@@ -37,8 +36,7 @@ export const NavigationDefaultWrapper = styled.div`
       `};
   display: grid;
   grid-template-columns: 1fr 170px;
-  position: fixed;
-  height: 50px;
+  height: 100%;
   width: 100%;
 `;
 
@@ -55,10 +53,10 @@ export const NavLinkStyled = styled(BaseLink)`
   text-decoration: none;
   color: ${GRAY};
   font-size: 14px;
-  line-height: 30px;
+  line-height: 70px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  padding: 10px 35px;
+  padding: 0 35px;
   border-bottom: 1px solid transparent;
 
   ${({ theme }) =>

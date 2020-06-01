@@ -23,13 +23,6 @@ interface Props {
   containerRef: RefObject;
 }
 
-const StyledMotionNav = styled(motion.nav)`
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-`;
-
 const StyledMotionMenuBackdrop = styled(motion.div)`
   position: absolute;
   top: 0;
@@ -71,7 +64,7 @@ export const BurgerMenuView: React.FC<Props> = ({
   routes,
   router,
 }) => (
-  <StyledMotionNav
+  <motion.nav
     initial={false}
     animate={isOpen ? 'open' : 'closed'}
     custom={height}
@@ -84,5 +77,5 @@ export const BurgerMenuView: React.FC<Props> = ({
     <StyledMotionMenuBackdrop variants={sidebar} />
     <MenuListView routes={routes} router={router} />
     <MenuToggleButtonView isOpen={isOpen} toggle={toggleOpen} />
-  </StyledMotionNav>
+  </motion.nav>
 );
