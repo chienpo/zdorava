@@ -11,8 +11,6 @@ export const Certificates = () => {
   const [photoIndex, setPhotoIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
 
-  console.info(data, CERTIFICATES_DATA);
-
   const onItemClick = (index: number) => {
     setIsOpen(true);
     setPhotoIndex(index);
