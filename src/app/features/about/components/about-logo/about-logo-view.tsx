@@ -1,4 +1,6 @@
 import React from 'react';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 import {
   GridItem,
@@ -50,7 +52,15 @@ export const AboutLogoView: React.FC<Props> = ({ logos }) => (
           animate="show"
           exit="exit"
         >
-          <StyledImg src={src} alt={alt} />
+          <StyledImg
+            className="lazyload"
+            alt={alt}
+            sizes="(min-width: 1000px) 930px, 90vw"
+            data-srcset={`${src} 500w,
+            ${src} 640w,
+            ${src} 1024w`}
+            data-src={src}
+          />
         </StyledMotionFigure>
       </GridItem>
     ))}

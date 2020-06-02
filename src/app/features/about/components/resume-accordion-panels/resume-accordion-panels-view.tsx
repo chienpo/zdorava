@@ -3,7 +3,7 @@ import React from 'react';
 import { Certificates } from '../certifiates/certificates';
 import { Ul, Strong, PanelWrapper } from './styled';
 
-export const PanelOneView: React.FC<any> = () => (
+export const PanelOneView = () => (
   <PanelWrapper>
     <Ul>
       <li>
@@ -29,7 +29,7 @@ export const PanelOneView: React.FC<any> = () => (
   </PanelWrapper>
 );
 
-export const PanelTwoView: React.FC<any> = () => (
+export const PanelTwoView = () => (
   <PanelWrapper>
     <Ul>
       <li>
@@ -52,7 +52,7 @@ export const PanelTwoView: React.FC<any> = () => (
   </PanelWrapper>
 );
 
-export const PanelThreeView: React.FC<any> = () => (
+export const PanelThreeView = () => (
   <PanelWrapper>
     <Ul>
       <li>

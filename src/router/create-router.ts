@@ -1,23 +1,17 @@
 import createRouter5 from 'router5';
 import browserPlugin from 'router5-plugin-browser';
 
-type Props = {
-  routes: IRoutes;
-};
-
-type RouteType = {
-  name: number;
+interface RouteType {
+  name: string;
   path: string;
-};
-
-interface IRoutes {
-  [key: string]: RouteType;
+  title: string;
 }
 
-export const createRouter = (routes: any) => {
+export const createRouter = (routes: RouteType[]) => {
   const router = createRouter5(routes, {
     allowNotFound: true,
   });
+
   router.usePlugin(
     browserPlugin({
       useHash: false,

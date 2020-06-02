@@ -72,17 +72,22 @@ export const BurgerMenuView: React.FC<Props> = ({
   router,
 }) => (
   <StyledMotionNav
-    initial={false}
+    initial="closed"
     animate={isOpen ? 'open' : 'closed'}
     custom={height}
     ref={containerRef}
   >
     <AnimatePresence>
-      {isOpen && <MenuBackdropView toggleOpen={toggleOpen} />}
+      {isOpen && (
+        <>
+          <MenuBackdropView toggleOpen={toggleOpen} />
+
+          <StyledMotionMenuBackdrop variants={sidebar} />
+          <MenuListView routes={routes} router={router} />
+        </>
+      )}
     </AnimatePresence>
 
-    <StyledMotionMenuBackdrop variants={sidebar} />
-    <MenuListView routes={routes} router={router} />
     <MenuToggleButtonView isOpen={isOpen} toggle={toggleOpen} />
   </StyledMotionNav>
 );

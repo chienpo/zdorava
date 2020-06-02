@@ -3150,11 +3150,6 @@ base@^0.11.1:
     mixin-deep "^1.2.0"
     pascalcase "^0.1.1"
 
-batch-processor@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/batch-processor/-/batch-processor-1.0.0.tgz#75c95c32b748e0850d10c2b168f6bdbe9891ace8"
-  integrity sha1-dclcMrdI4IUNEMKxaPa9vpiRrOg=
-
 batch@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/batch/-/batch-0.6.1.tgz#dc34314f4e679318093fc760272525f94bf25c16"
@@ -4272,15 +4267,6 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-create-react-class@^15.6.2:
-  version "15.6.3"
-  resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.6.3.tgz#2d73237fb3f970ae6ebe011a9e66f46dbca80036"
-  integrity sha512-M+/3Q6E6DLO6Yx3OwrWjwHBnvfXXYA7W+dFjt/ZDBemHO1DDZhsalX/NUtnTYclN6GfnBDRh4qRHjcDHmlJBJg==
-  dependencies:
-    fbjs "^0.8.9"
-    loose-envify "^1.3.1"
-    object-assign "^4.1.1"
-
 create-react-context@^0.2.1, create-react-context@^0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/create-react-context/-/create-react-context-0.2.3.tgz#9ec140a6914a22ef04b8b09b7771de89567cb6f3"
@@ -4823,11 +4809,6 @@ des.js@^1.0.0:
     inherits "^2.0.1"
     minimalistic-assert "^1.0.0"
 
-desandro-matches-selector@^2.0.0:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/desandro-matches-selector/-/desandro-matches-selector-2.0.2.tgz#717beed4dc13e7d8f3762f707a6d58a6774218e1"
-  integrity sha1-cXvu1NwT59jzdi9wem1YpndCGOE=
-
 destroy@~1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.0.4.tgz#978857442c44749e4206613e37946205826abd80"
@@ -5270,13 +5251,6 @@ elegant-spinner@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/elegant-spinner/-/elegant-spinner-1.0.1.tgz#db043521c95d7e303fd8f345bedc3349cfb0729e"
   integrity sha1-2wQ1IcldfjA/2PNFvtwzSc+wcp4=
-
-element-resize-detector@^1.1.9:
-  version "1.1.15"
-  resolved "https://registry.yarnpkg.com/element-resize-detector/-/element-resize-detector-1.1.15.tgz#48eba1a2eaa26969a4c998d972171128c971d8d2"
-  integrity sha512-16/5avDegXlUxytGgaumhjyQoM6hpp5j3+L79sYq5hlXfTNRy5WMMuTVWkZU3egp/CokCmTmvf18P3KeB57Iog==
-  dependencies:
-    batch-processor "^1.0.0"
 
 elliptic@^6.0.0:
   version "6.4.1"
@@ -5731,11 +5705,6 @@ etag@~1.8.1:
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
 
-ev-emitter@^1.0.0:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/ev-emitter/-/ev-emitter-1.1.1.tgz#8f18b0ce5c76a5d18017f71c0a795c65b9138f2a"
-  integrity sha512-ipiDYhdQSCZ4hSbX4rMW+XzNKMD1prg/sTvoVmSLkuQ1MVlwjJQQA+sW8tMYR3BLUr9KjodFV4pvzunvRhd33Q==
-
 eventemitter3@^3.0.0:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-3.1.2.tgz#2d3d48f9c346698fce83a85d7d664e98535df6e7"
@@ -6019,7 +5988,7 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "^2.0.0"
 
-fbjs@^0.8.0, fbjs@^0.8.5, fbjs@^0.8.7, fbjs@^0.8.9:
+fbjs@^0.8.0, fbjs@^0.8.5, fbjs@^0.8.7:
   version "0.8.17"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
   integrity sha1-xNWY6taUkRJlPWWIsBpc3Nn5D90=
@@ -6195,13 +6164,6 @@ firebase@^7.14.5:
     "@firebase/remote-config" "0.1.21"
     "@firebase/storage" "0.3.34"
     "@firebase/util" "0.2.47"
-
-fizzy-ui-utils@^2.0.0:
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/fizzy-ui-utils/-/fizzy-ui-utils-2.0.7.tgz#7df45dcc4eb374a08b65d39bb9a4beedf7330505"
-  integrity sha512-CZXDVXQ1If3/r8s0T+v+qVeMshhfcuq0rqIFgJnrtd+Bu8GmDmqMjntjUePypVtjHXKJ6V4sw9zeyox34n9aCg==
-  dependencies:
-    desandro-matches-selector "^2.0.0"
 
 flat-cache@^2.0.1:
   version "2.0.1"
@@ -6487,11 +6449,6 @@ get-pkg-repo@^4.1.0:
     hosted-git-info "^2.1.4"
     meow "^5.0.0"
     through2 "^2.0.0"
-
-get-size@^2.0.2:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/get-size/-/get-size-2.0.3.tgz#54a1d0256b20ea7ac646516756202769941ad2ef"
-  integrity sha512-lXNzT/h/dTjTxRbm9BXb+SGxxzkm97h/PCIKtlN/CBCxxmkkIVV21udumMS93MuVTDX583gqc94v3RjuHmI+2Q==
 
 get-stdin@^6.0.0:
   version "6.0.0"
@@ -7205,13 +7162,6 @@ ignore@^5.0.6:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.1.1.tgz#2fc6b8f518aff48fef65a7f348ed85632448e4a5"
   integrity sha512-DWjnQIFLenVrwyRCKZT+7a7/U4Cqgar4WG8V++K3hw+lrW1hc/SIwdiGmtxKCVACmHULTuGeBbHJmbwW7/sAvA==
-
-imagesloaded@^4.0.0:
-  version "4.1.4"
-  resolved "https://registry.yarnpkg.com/imagesloaded/-/imagesloaded-4.1.4.tgz#1376efcd162bb768c34c3727ac89cc04051f3cc7"
-  integrity sha512-ltiBVcYpc/TYTF5nolkMNsnREHW+ICvfQ3Yla2Sgr71YFwQ86bDwV9hgpFhFtrGPuwEx5+LqOHIrdXBdoWwwsA==
-  dependencies:
-    ev-emitter "^1.0.0"
 
 immer@1.10.0:
   version "1.10.0"
@@ -8581,6 +8531,11 @@ lazy-cache@^1.0.3:
   resolved "https://registry.yarnpkg.com/lazy-cache/-/lazy-cache-1.0.4.tgz#a1d78fc3a50474cb80845d3b3b6e1da49a446e8e"
   integrity sha1-odePw6UEdMuAhF07O24dpJpEbo4=
 
+lazysizes@^5.2.2:
+  version "5.2.2"
+  resolved "https://registry.yarnpkg.com/lazysizes/-/lazysizes-5.2.2.tgz#800e5914725fef1863bd9a1e19e1bb423c536f8b"
+  integrity sha512-fYgOv1Y35M86/7qyAdPPqoOhuyZrjxEAPxqwToRY2bO/PoBJ4lSqZYuZoavNp6eyuLpIAdHodpsPfj2Lkt86FQ==
+
 lcid@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/lcid/-/lcid-2.0.0.tgz#6ef5d2df60e52f82eb228a4c373e8d1f397253cf"
@@ -9033,14 +8988,6 @@ markdown-table@^1.1.0:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/markdown-table/-/markdown-table-1.1.3.tgz#9fcb69bcfdb8717bfd0398c6ec2d93036ef8de60"
   integrity sha512-1RUZVgQlpJSPWYbFSpmudq5nHY1doEIv89gBtF0s4gW1GF2XorxcA/70M5vq7rLv0a6mhOUccRsqkwhwLCIQ2Q==
-
-masonry-layout@^4.2.0:
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/masonry-layout/-/masonry-layout-4.2.2.tgz#d57b44af13e601bfcdc423f1dd8348b5524de348"
-  integrity sha512-iGtAlrpHNyxaR19CvKC3npnEcAwszXoyJiI8ARV2ePi7fmYhIud25MHK8Zx4P0LCC4d3TNO9+rFa1KoK1OEOaA==
-  dependencies:
-    get-size "^2.0.2"
-    outlayer "^2.1.0"
 
 match-sorter@^3.0.0:
   version "3.0.0"
@@ -10022,15 +9969,6 @@ osenv@^0.1.4:
   dependencies:
     os-homedir "^1.0.0"
     os-tmpdir "^1.0.0"
-
-outlayer@^2.1.0:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/outlayer/-/outlayer-2.1.1.tgz#29863b6de10ea5dadfffcadfa0d728907387e9a2"
-  integrity sha1-KYY7beEOpdrf/8rfoNcokHOH6aI=
-  dependencies:
-    ev-emitter "^1.0.0"
-    fizzy-ui-utils "^2.0.0"
-    get-size "^2.0.2"
 
 output-file-sync@^2.0.0:
   version "2.0.1"
@@ -11770,18 +11708,6 @@ react-live@2.0.1:
     prop-types "^15.5.8"
     react-simple-code-editor "^0.9.0"
     unescape "^0.2.0"
-
-react-masonry-component@^6.2.1:
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/react-masonry-component/-/react-masonry-component-6.2.1.tgz#dd23b3129d6b922852b160472e6c9a6256fcdb8a"
-  integrity sha512-xoNdw/gOp0nkCXqvF8QDcRInFEVtbCBzT8QbxmRnCEzsOgDKtKlG/x6SoxXWivPCxdyr1PGdyngiA7TsqANHKA==
-  dependencies:
-    create-react-class "^15.6.2"
-    element-resize-detector "^1.1.9"
-    imagesloaded "^4.0.0"
-    lodash "^4.17.4"
-    masonry-layout "^4.2.0"
-    prop-types "^15.5.8"
 
 react-modal@^3.8.1:
   version "3.11.2"

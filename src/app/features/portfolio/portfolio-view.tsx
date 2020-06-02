@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Trans } from '@lingui/macro';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import { motion, useAnimation } from 'framer-motion';
 
 import { PortfolioItemModel } from 'models/portfolio-item.model';
 
 import { MoreLoader } from 'app/ui/more-loader/more-loader';
-import { PortfolioMasonry } from './components/portfolio-masonry/portfolio-masonry';
+import { PortfolioGrid } from './components/portfolio-grid/portfolio-grid';
 import { PortfolioTabs } from './components/portfolio-tabs/portfolio-tabs';
 import {
   SectionPortfolio,
@@ -28,27 +29,47 @@ export const PortfolioView: React.FC<Props> = ({
   getNextDataChunk,
   hasMore,
   selectedCategory,
-}) => (
-  <SectionPortfolio>
-    <PortfolioOverlay>
-      <PortfolioTabs activeCategoryPayload={activeCategoryPayload} />
-      <InfiniteScroll
-        dataLength={data.length}
-        next={getNextDataChunk}
-        hasMore={hasMore}
-        loader={
-          <ItemsLoadingSpinnerBox>
-            <MoreLoader />
-          </ItemsLoadingSpinnerBox>
-        }
-        endMessage={
-          <ItemsLoadingStateDescription>
-            <Trans>Coming soon...</Trans>
-          </ItemsLoadingStateDescription>
-        }
-      >
-        <PortfolioMasonry data={data} selectedCategory={selectedCategory} />
-      </InfiniteScroll>
-    </PortfolioOverlay>
-  </SectionPortfolio>
-);
+}) => {
+  const controls = useAnimation();
+
+  useEffect(() => {
+    controls.start('visible');
+  }, [controls]);
+
+  const originOffset = useRef<{ top: number; left: number }>({
+    top: 0,
+    left: 0,
+  });
+
+  return (
+    <SectionPortfolio>
+      <PortfolioOverlay>
+        <PortfolioTabs activeCategoryPayload={activeCategoryPayload} />
+        <motion.div initial="hidden" animate={controls} variants={{}}>
+          <InfiniteScroll
+            style={{ overflow: 'hidden' }}
+            dataLength={data.length}
+            next={getNextDataChunk}
+            hasMore={hasMore}
+            loader={
+              <ItemsLoadingSpinnerBox>
+                <MoreLoader />
+              </ItemsLoadingSpinnerBox>
+            }
+            endMessage={
+              <ItemsLoadingStateDescription>
+                <Trans>COMING SOON</Trans>
+              </ItemsLoadingStateDescription>
+            }
+          >
+            <PortfolioGrid
+              data={data}
+              selectedCategory={selectedCategory}
+              originOffset={originOffset}
+            />
+          </InfiniteScroll>
+        </motion.div>
+      </PortfolioOverlay>
+    </SectionPortfolio>
+  );
+};

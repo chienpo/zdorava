@@ -25,12 +25,18 @@ export const MenuBackdropView: React.FC<Props> = ({ toggleOpen }) => {
 
   return (
     <Backdrop
-      key="MenuBackdrop"
       variants={{
-        initial: { opacity: 0 },
+        initial: {
+          opacity: 0,
+          transition: {
+            delay: 0.5,
+            type: 'spring',
+            stiffness: 100,
+          },
+        },
         show: { opacity: 1 },
         exit: {
-          opacity: 1,
+          opacity: 0,
           transition: {
             delay: 0.5,
             type: 'spring',

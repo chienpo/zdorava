@@ -30,9 +30,9 @@ msgstr "Все проекты"
 msgid "Art"
 msgstr "Дизайн"
 
-#: src/app/features/portfolio/portfolio-view.tsx:13
-msgid "Coming soon..."
-msgstr "Портфолио загружено..."
+#: src/app/features/portfolio/portfolio-view.tsx:25
+msgid "COMING SOON"
+msgstr "В АЗРАБОТКЕ"
 
 #: src/app/features/contacts/components/contact-form-view.tsx:14
 msgid "Email"
@@ -58,13 +58,13 @@ msgstr "Опыт"
 msgid "Front-end"
 msgstr "Front-end"
 
-#: src/app/features/about/about-view.tsx:31
-msgid "FrontEnd (ReactJS) Developer"
-msgstr "FrontEnd (ReactJS) Разработчик"
+#: src/app/features/about/about-view.tsx:34
+msgid "Front-end (React-JS) Developer"
+msgstr "Front-end (React-JS) Разработчик"
 
-#: src/app/features/about/about-view.tsx:29
-msgid "Hello, I am Stepan"
-msgstr "Привет, меня зовут Степан"
+#: src/app/features/about/about-view.tsx:32
+msgid "Hello, I'm Stepan"
+msgstr "Привет, меня зовут Степан!"
 
 #: src/app/constants/page-titles.ts:5
 #: src/app/constants/routes.ts:8
@@ -78,10 +78,6 @@ msgstr "Лагуновский"
 #: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:16
 msgid "Languages & achievements letters"
 msgstr "Языки, сертификаты"
-
-#: src/app/features/portfolio/portfolio-view.tsx:11
-msgid "Loading..."
-msgstr "Загрузка..."
 
 #: src/app/features/contacts/components/contact-form-view.tsx:17
 msgid "Message"
@@ -113,7 +109,7 @@ msgstr "Отправить сообщение"
 
 #: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:14
 msgid "Skills"
-msgstr ""
+msgstr "Профессиональные навыки"
 
 #: src/app/features/home/home-view.tsx:35
 msgid "Stepan"
@@ -121,4 +117,4 @@ msgstr "Степан"
 
 #: src/app/features/contacts/contacts-view.tsx:48
 msgid "Write me"
-msgstr ""
+msgstr "Напиши мне"

@@ -1,8 +1,8 @@
 {
-  "Hello, I am Stepan": {
-    "origin": [["src/app/features/about/about-view.tsx", 29]]
+  "Hello, I'm Stepan": {
+    "origin": [["src/app/features/about/about-view.tsx", 32]]
   },
-  "FrontEnd (ReactJS) Developer": {
-    "origin": [["src/app/features/about/about-view.tsx", 31]]
+  "Front-end (React-JS) Developer": {
+    "origin": [["src/app/features/about/about-view.tsx", 34]]
   }
 }

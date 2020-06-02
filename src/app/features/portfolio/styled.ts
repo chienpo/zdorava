@@ -31,6 +31,5 @@ export const ItemsLoadingSpinnerBox = styled.div`
   align-items: center;
   justify-content: center;
   padding: 50px 20px;
-  height: 50vh;
   color: ${WHITE};
 `;

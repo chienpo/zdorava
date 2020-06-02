@@ -16,3 +16,7 @@ export const PORTFOLIO_CATEGORIES_TABS_LABELS: { [key: string]: string } = {
   [PORTFOLIO_CATEGORY_TAB_NAME_ART]: i18nMark('Art'),
   [PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND]: i18nMark('Front-end'),
 };
+
+export const CHUNK_TYPE_ONE = 'CHUNK_TYPE_ONE';
+export const CHUNK_TYPE_TWO = 'CHUNK_TYPE_TWO';
+export const CHUNK_TYPE_THREE = 'CHUNK_TYPE_THREE';

@@ -1,8 +1,16 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 import { RED, WHITE } from 'app/constants/colors';
-import { PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND } from 'app/constants/portfolio';
+import {
+  PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND,
+  CHUNK_TYPE_ONE,
+  CHUNK_TYPE_TWO,
+  CHUNK_TYPE_THREE,
+} from 'app/constants/portfolio';
 import { mirrorEffect } from 'app/css-helpers';
+
+export const ItemBox = styled(motion.div)``;
 
 export const ItemCategoryLabel = styled.span`
   margin-left: 10px;
@@ -45,15 +53,10 @@ export const ItemImage = styled.img`
   opacity: 1;
 `;
 
-export const Item = styled.div`
+export const Item = styled(motion.div)`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  position: relative !important;
-  left: auto !important;
-  top: auto !important;
-  transform: none !important;
-  opacity: 1;
   width: 100%;
 
   ${ItemOrientationType} {
@@ -74,42 +77,54 @@ export const Item = styled.div`
 
   ${({ className }) =>
     !className.includes(PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND) &&
+    className.includes(CHUNK_TYPE_ONE) &&
     `
     @media (min-width: 600px) {
-      &:nth-child(1),
-      &:nth-child(11),
-      &:nth-child(21) {
-        grid-column: span 2;
-        grid-row: span 2;
+      &:nth-child(1) {
         opacity: 0.3;
+        grid-column: span 2 / auto;
+        grid-row: span 2 / auto;
       }
-      &:nth-child(2),
-      &:nth-child(12),
-      &:nth-child(22) {
-        grid-column: span 3;
-        grid-row: span 2;
-      }
-      &:nth-child(8),
-      &:nth-child(18),
-      &:nth-child(28) {
-        grid-column: span 2;
-        opacity: 0.3;
-      }
-      &:nth-child(7),
-      &:nth-child(17),
-      &:nth-child(27) {
-        grid-column: span 2;
-      }
-      &:nth-child(9),
-      &:nth-child(10),
-      &:nth-child(19),
-      &:nth-child(20),
-      &:nth-child(29),
-      &:nth-child(30) {
-        grid-column: span 3;
+
+      &:nth-child(2) {
+        grid-column: span 3 / auto;
+        grid-row: span 2 / auto;
       }
     }
-  `};
+  `}
+
+  ${({ className }) =>
+    !className.includes(PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND) &&
+    className.includes(CHUNK_TYPE_TWO) &&
+    `
+    @media (min-width: 600px) {
+      &:nth-child(3),
+      &:nth-child(4) {
+        grid-column: span 2 / auto;
+      }
+    }
+  `}
+
+  ${({ className }) =>
+    !className.includes(PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND) &&
+    className.includes(CHUNK_TYPE_THREE) &&
+    `
+    @media (min-width: 600px) {
+      &:nth-child(1) {
+        grid-column: span 1 / auto;
+        grid-row: span 2 / auto;
+      }
+      &:nth-child(2) {
+        grid-column: span 3 / auto;
+        grid-row: span 2 / auto;
+      }
+
+      &:nth-child(3),
+      &:nth-child(4) {
+        grid-column: span 2 / auto;
+      }
+    }
+  `}
 
   ${ItemCategoryName} {
     position: absolute;
