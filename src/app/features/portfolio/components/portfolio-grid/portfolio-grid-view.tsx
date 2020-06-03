@@ -56,23 +56,19 @@ export const PortfolioGridView: React.FC<Props & DataProps> = ({
 
   // TODO: Update
   const getChunkType = (chunkInd: number) => {
-    const chunkNum = chunkInd + 1;
+    const array = [...Array(data.length).keys()];
 
-    let type: string = CHUNK_TYPE_ONE;
+    const types: string[] = [CHUNK_TYPE_ONE, CHUNK_TYPE_TWO, CHUNK_TYPE_THREE];
 
-    if ([1, 4, 7, 10].includes(chunkNum)) {
-      type = CHUNK_TYPE_ONE;
+    const chunksNumber = array.length / types.length;
+
+    const arr: string[][] = [];
+
+    for (let i = 0; i < chunksNumber; i++) {
+      arr.push(types);
     }
 
-    if ([2, 5, 8, 11].includes(chunkNum)) {
-      type = CHUNK_TYPE_TWO;
-    }
-
-    if ([3, 6, 9, 12].includes(chunkNum)) {
-      type = CHUNK_TYPE_THREE;
-    }
-
-    return type;
+    return arr.flat()[chunkInd];
   };
 
   return (
