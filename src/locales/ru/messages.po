@@ -31,8 +31,12 @@ msgid "Art"
 msgstr "Дизайн"
 
 #: src/app/features/portfolio/portfolio-view.tsx:25
-msgid "COMING SOON"
-msgstr "В АЗРАБОТКЕ"
+#~ msgid "COMING SOON"
+#~ msgstr "В АЗРАБОТКЕ"
+
+#: src/app/features/portfolio/portfolio-view.tsx:25
+msgid "COMING SOON ..."
+msgstr "В РАЗРАБОТКЕ ..."
 
 #: src/app/features/contacts/components/contact-form-view.tsx:14
 msgid "Email"

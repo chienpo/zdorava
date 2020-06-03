@@ -1,6 +1,6 @@
 import React from 'react';
-import 'lazysizes';
-import 'lazysizes/plugins/parent-fit/ls.parent-fit';
+import lazySizes from 'lazysizes';
+import 'lazysizes/plugins/attrchange/ls.attrchange';
 
 import {
   GridItem,
@@ -19,6 +19,8 @@ interface Logo {
 interface Props {
   logos: Logo[];
 }
+
+lazySizes.cfg.lazyClass = 'lazyload';
 
 export const AboutLogoView: React.FC<Props> = ({ logos }) => (
   <GridLogoWrapper>
@@ -55,7 +57,7 @@ export const AboutLogoView: React.FC<Props> = ({ logos }) => (
           <StyledImg
             className="lazyload"
             alt={alt}
-            sizes="(min-width: 1000px) 930px, 90vw"
+            data-sizes="auto"
             data-srcset={`${src} 500w,
             ${src} 640w,
             ${src} 1024w`}

@@ -77,21 +77,18 @@ export const PortfolioChunkItemView: React.FC<Props> = ({
         open: {
           x: 0,
           y: 0,
-          opacity: 1,
           transition: {
             x: { stiffness: 1000, velocity: -250, duration: 0.4 },
-            y: { stiffness: 1000, velocity: -250, duration: 0.4 },
-            opacity: { duration: 3 },
+            y: { stiffness: 1000, velocity: -250, duration: 0.4, delay: 0.4 },
+            border: { duration: 0.4 },
           },
         },
         closed: {
-          x: 100,
-          y: 100,
-          opacity: 0,
+          x: 200,
+          y: 200,
           transition: {
-            x: { stiffness: 1000, duration: 0.4 },
-            y: { stiffness: 1000, duration: 0.4 },
-            opacity: { duration: 3 },
+            x: { stiffness: 1000, duration: 1.6 },
+            y: { stiffness: 1000, duration: 0.2 },
           },
         },
       }}
@@ -103,7 +100,6 @@ export const PortfolioChunkItemView: React.FC<Props> = ({
           <ItemImage
             data-sizes="auto"
             alt={alt}
-            src="/static/media/centered.9cacdca0.jpg"
             srcSet={imgThumbnailSrc}
             className="lazyload blur-up"
           />

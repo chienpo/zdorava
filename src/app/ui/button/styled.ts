@@ -13,8 +13,12 @@ export const ButtonStyled = styled.button`
   text-transform: uppercase;
   outline: none;
   cursor: pointer;
-  padding: 15px;
+  padding: 15px 0;
   transition: background 0.2s, color 0.2s, border-color 0.2s, opacity 0.2s;
+
+  @media (min-width: 767px) {
+    padding: 15px;
+  }
 
   &:hover {
     background: ${({ plain }: any) => plain && `${BLACK_90}`};

@@ -71,10 +71,12 @@ export const ItemImage = styled.img`
   /* other */
   &.blur-up {
     filter: blur(5px) grayscale(0);
-    transition: filter 0.8s;
+    visibility: hidden;
+    transition: filter 0.8s visibility 0.8s;
   }
 
   &.blur-up.lazyloaded {
+    visibility: visible;
     filter: blur(0) grayscale(100);
   }
 `;
@@ -84,7 +86,7 @@ export const Item = styled(motion.div)`
   padding: 0;
   box-sizing: border-box;
   width: 100%;
-  background: white;
+  border: 1px solid black;
 
   ${ItemOrientationType} {
     padding-bottom: ${({ className }) =>
@@ -172,6 +174,7 @@ export const Item = styled(motion.div)`
   &:hover {
     cursor: pointer;
     opacity: 1;
+    border: 1px solid ${RED};
 
     ${ItemCategoryName} {
       right: 0;
@@ -191,13 +194,10 @@ export const ItemFigure = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-  border: 1px solid ${WHITE};
   overflow: hidden;
   transition: all 0.8s ease 0s;
 
   &:hover {
-    border: 1px solid red;
-
     ${mirrorEffect}
 
     ${ItemImage} {

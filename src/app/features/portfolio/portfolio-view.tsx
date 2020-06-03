@@ -58,7 +58,7 @@ export const PortfolioView: React.FC<Props> = ({
             }
             endMessage={
               <ItemsLoadingStateDescription>
-                <Trans>COMING SOON</Trans>
+                <Trans>COMING SOON ...</Trans>
               </ItemsLoadingStateDescription>
             }
           >
