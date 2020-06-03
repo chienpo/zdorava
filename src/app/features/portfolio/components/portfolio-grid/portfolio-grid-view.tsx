@@ -18,7 +18,7 @@ interface DataProps {
 }
 
 interface Props {
-  onItemClick: (index: number) => void;
+  onItemClick: (index: string) => void;
   selectedCategory: string;
   isOpen: boolean;
   setIsOpen: (a: boolean) => void;
@@ -123,7 +123,7 @@ export const PortfolioGridView: React.FC<Props & DataProps> = ({
                   alt={alt}
                   name={name}
                   description={description}
-                  onItemClick={() => onItemClick(index)}
+                  onItemClick={() => onItemClick(imageSrc)}
                   thumbnailSrc={thumbnailSrc}
                   index={index}
                   originIndex={data.length}

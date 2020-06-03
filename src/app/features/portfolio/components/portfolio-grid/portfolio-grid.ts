@@ -18,9 +18,12 @@ export const PortfolioGrid: FC<Props> = ({
   const [photoIndex, setPhotoIndex] = useState<number>(0);
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const onItemClick = (index: number) => {
+  const onItemClick = (projectUrl: string) => {
+    const projectIndex = data.findIndex(
+      ({ imageSrc }) => imageSrc === projectUrl
+    );
     setIsOpen(true);
-    setPhotoIndex(index);
+    setPhotoIndex(projectIndex);
   };
 
   const chunckedData = data.reduce(

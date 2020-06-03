@@ -78,8 +78,8 @@ export const PortfolioChunkItemView: React.FC<Props> = ({
           x: 0,
           y: 0,
           transition: {
-            x: { stiffness: 1000, velocity: -250, duration: 0.4 },
-            y: { stiffness: 1000, velocity: -250, duration: 0.4, delay: 0.4 },
+            x: { stiffness: 1000, velocity: -250, duration: 1.2 },
+            y: { stiffness: 1000, velocity: -250, duration: 1.2, delay: 1.2 },
             border: { duration: 0.4 },
           },
         },
