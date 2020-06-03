@@ -1,8 +1,8 @@
 import React, { useRef, useLayoutEffect, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faImage } from '@fortawesome/free-solid-svg-icons';
-import 'lazysizes';
-import 'lazysizes/plugins/parent-fit/ls.parent-fit';
+import lazySizes from 'lazysizes';
+import 'lazysizes/plugins/attrchange/ls.attrchange';
 
 import { PortfolioItemModel } from '../../../../../models/portfolio-item.model';
 import { PORTFOLIO_IMAGES_PATH, SITE_URL } from '../../../../constants/site';
@@ -15,6 +15,8 @@ import {
   ItemCategoryLabel,
   ItemOrientationType,
 } from './styled';
+
+lazySizes.cfg.lazyClass = 'lazyload';
 
 interface Props extends PortfolioItemModel {
   delayPerPixel: number;
@@ -65,7 +67,7 @@ export const PortfolioChunkItemView: React.FC<Props> = ({
     delayRef.current = d * delayPerPixel;
   }, [delayPerPixel, originOffset]);
 
-  const imgSrc = `${SITE_URL}${PORTFOLIO_IMAGES_PATH}${category}-thumbnail/${thumbnailSrc}`;
+  const imgThumbnailSrc = `${SITE_URL}${PORTFOLIO_IMAGES_PATH}${category}-thumbnail/${thumbnailSrc}`;
 
   return (
     <Item
@@ -99,13 +101,11 @@ export const PortfolioChunkItemView: React.FC<Props> = ({
       <ItemOrientationType>
         <ItemFigure>
           <ItemImage
-            className="lazyload"
+            data-sizes="auto"
             alt={alt}
-            sizes="(min-width: 1000px) 930px, 90vw"
-            data-srcset={`${imgSrc} 500w,
-            ${imgSrc} 640w,
-            ${imgSrc} 1024w`}
-            data-src={imgSrc}
+            src="/static/media/centered.9cacdca0.jpg"
+            srcSet={imgThumbnailSrc}
+            className="lazyload blur-up"
           />
         </ItemFigure>
         <ItemCategoryName>

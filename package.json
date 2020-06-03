@@ -59,6 +59,7 @@
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-router5": "^7.1.0",
+    "react-simple-img": "^2.3.9",
     "react-typing-animation": "^1.6.2",
     "router5": "^7.0.2",
     "router5-plugin-browser": "^7.0.2",
