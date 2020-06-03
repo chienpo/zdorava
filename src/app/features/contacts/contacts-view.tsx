@@ -1,12 +1,11 @@
 import React, { FC } from 'react';
 import { Trans } from '@lingui/macro';
 import posed, { PoseGroup } from 'react-pose';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWindowClose } from '@fortawesome/free-solid-svg-icons';
 
 import { FadeInOutVertically } from 'app/animations/fade-in-out-vertically';
+import { ButtonCloseAnimated } from 'app/ui/button-close-animated';
 import { ContactForm } from './components/contact-form';
-import { FormSection, H2Styled, FormBox, CloseButton } from './styled';
+import { FormSection, H2Styled, FormBox, SectionControls } from './styled';
 
 interface Props {
   opened: boolean;
@@ -51,9 +50,9 @@ export const ContactsView: FC<Props> = ({ opened, onClose }) => (
       {opened && [
         <FadeInOutVertically key="fadeInOutVertically">
           <FormSection>
-            <CloseButton type="button" onClick={onClose}>
-              <FontAwesomeIcon icon={faWindowClose} />
-            </CloseButton>
+            <SectionControls>
+              <ButtonCloseAnimated isOpen={opened} clicked={onClose} />
+            </SectionControls>
             <FormBox>
               <H2Styled>
                 <Trans>Write me</Trans>
