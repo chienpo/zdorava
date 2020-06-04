@@ -1,5 +1,6 @@
 import React from 'react';
 import lazySizes from 'lazysizes';
+import { motion, AnimatePresence } from 'framer-motion';
 import 'lazysizes/plugins/attrchange/ls.attrchange';
 
 import { GridLogoWrapper, StyledMotionFigure, StyledImg } from './styled';
@@ -18,52 +19,57 @@ interface Props {
 lazySizes.cfg.lazyClass = 'lazyload';
 
 export const AboutLogoView: React.FC<Props> = ({ logos }) => (
-  <GridLogoWrapper
-    initial="initial"
-    animate="show"
-    exit="out"
-    variants={{ out: { transition: { staggerChildren: 0.1 } } }}
-  >
-    {logos.map(({ left, top, alt, src }) => (
-      <StyledMotionFigure
-        key={alt}
+  <motion.div animate="enter" exit="exit">
+    <AnimatePresence>
+      <GridLogoWrapper
         variants={{
-          initial: {
-            opacity: 0,
-            scale: 2,
-            left,
-            top,
-            transition: { duration: 0.2, delay: 0.4 },
+          enter: {
+            transition: {
+              staggerChildren: 0.07,
+              delayChildren: 0.2,
+            },
           },
-          show: {
-            opacity: 1,
-            left: 0,
-            top: 0,
-            scale: 1,
-            transition: { duration: 1, delay: 1 },
-          },
-          out: {
-            opacity: 0,
-            scale: 2,
-            left,
-            top,
-            transition: { duration: 0.2, delay: 0.4 },
+          exit: {
+            transition: {
+              staggerChildren: 0.05,
+              staggerDirection: -1,
+            },
           },
         }}
-        initial="initial"
-        animate="show"
-        exit="out"
+        initial="exit"
       >
-        <StyledImg
-          className="lazyload"
-          alt={alt}
-          data-sizes="auto"
-          data-srcset={`${src} 500w,
+        {logos.map(({ left, top, alt, src }) => (
+          <StyledMotionFigure
+            key={alt}
+            variants={{
+              enter: {
+                opacity: 1,
+                left: 0,
+                top: 0,
+                scale: 1,
+                transition: { duration: 2 },
+              },
+              exit: {
+                opacity: 0,
+                scale: 2,
+                left,
+                top,
+                transition: { duration: 2, delay: 0.4 },
+              },
+            }}
+          >
+            <StyledImg
+              className="lazyload"
+              alt={alt}
+              data-sizes="auto"
+              data-srcset={`${src} 500w,
             ${src} 640w,
             ${src} 1024w`}
-          data-src={src}
-        />
-      </StyledMotionFigure>
-    ))}
-  </GridLogoWrapper>
+              data-src={src}
+            />
+          </StyledMotionFigure>
+        ))}
+      </GridLogoWrapper>
+    </AnimatePresence>
+  </motion.div>
 );
