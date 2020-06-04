@@ -62,11 +62,11 @@ msgstr "Experience"
 msgid "Front-end"
 msgstr "Front-end"
 
-#: src/app/features/about/about-view.tsx:34
+#: src/app/features/about/about-view.tsx:32
 msgid "Front-end (React-JS) Developer"
 msgstr "Front-end (React-JS) Developer"
 
-#: src/app/features/about/about-view.tsx:32
+#: src/app/features/about/about-view.tsx:30
 msgid "Hello, I'm Stepan"
 msgstr "Hello, I'm Stepan"
 
@@ -75,7 +75,7 @@ msgstr "Hello, I'm Stepan"
 msgid "Home"
 msgstr "Home"
 
-#: src/app/features/home/home-view.tsx:38
+#: src/app/features/home/home-view.tsx:47
 msgid "Lagunovsky"
 msgstr "Lagunovsky"
 
@@ -93,7 +93,7 @@ msgstr "Name"
 
 #: src/app/constants/page-titles.ts:7
 #: src/app/constants/routes.ts:12
-#: src/app/features/home/home-view.tsx:20
+#: src/app/features/home/home-view.tsx:29
 msgid "Portfolio"
 msgstr "Portfolio"
 
@@ -103,7 +103,7 @@ msgstr "Required"
 
 #: src/app/constants/page-titles.ts:6
 #: src/app/constants/routes.ts:9
-#: src/app/features/home/home-view.tsx:17
+#: src/app/features/home/home-view.tsx:26
 msgid "Resume"
 msgstr "Resume"
 
@@ -115,10 +115,10 @@ msgstr "Send message"
 msgid "Skills"
 msgstr "Skills"
 
-#: src/app/features/home/home-view.tsx:35
+#: src/app/features/home/home-view.tsx:44
 msgid "Stepan"
 msgstr "Stepan"
 
-#: src/app/features/contacts/contacts-view.tsx:47
+#: src/app/features/contacts/contacts-view.tsx:26
 msgid "Write me"
 msgstr "Write me"

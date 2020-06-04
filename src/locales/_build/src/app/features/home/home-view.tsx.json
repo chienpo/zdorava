@@ -1,14 +1,14 @@
 {
   "Resume": {
-    "origin": [["src/app/features/home/home-view.tsx", 17]]
+    "origin": [["src/app/features/home/home-view.tsx", 26]]
   },
   "Portfolio": {
-    "origin": [["src/app/features/home/home-view.tsx", 20]]
+    "origin": [["src/app/features/home/home-view.tsx", 29]]
   },
   "Stepan": {
-    "origin": [["src/app/features/home/home-view.tsx", 35]]
+    "origin": [["src/app/features/home/home-view.tsx", 44]]
   },
   "Lagunovsky": {
-    "origin": [["src/app/features/home/home-view.tsx", 38]]
+    "origin": [["src/app/features/home/home-view.tsx", 47]]
   }
 }

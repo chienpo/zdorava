@@ -17,7 +17,7 @@ export const AboutLogo = () => {
     { left: -270, top: 170, alt: 'About logo 2', src: aboutLogo2 },
     { left: 220, top: -220, alt: 'About logo 3', src: aboutLogo3 },
     { left: 720, top: 720, alt: 'About logo 4', src: aboutLogo4 },
-    { left: -420, top: 120, alt: 'About logo 5', src: aboutLogo5 },
+    { left: -420, top: 120, alt: 'Hello logo', src: aboutLogo5 },
     { left: -220, top: 220, alt: 'About logo 6', src: aboutLogo6 },
     { left: 220, top: -120, alt: 'About logo 7', src: aboutLogo7 },
     { left: -620, top: 620, alt: 'About logo 8', src: aboutLogo8 },

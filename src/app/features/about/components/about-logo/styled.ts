@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
+import { BLACK_30 } from 'app/constants/colors';
+
 export const GridLogoWrapper = styled(motion.div)`
   display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 `;
 
 export const StyledMotionFigure = styled(motion.figure)`
@@ -15,31 +17,24 @@ export const StyledMotionFigure = styled(motion.figure)`
     padding-bottom: 100%;
     display: inline-block;
     vertical-align: top;
-    ${({ alt }: any) =>
-      alt !== 'About logo 5' &&
-      `
-      box-shadow: inset 0px 0px 50px 25px rgba(0,0,0,0.3);
-    `};
     position: absolute;
     top: 0;
     right: 0;
     width: 100%;
+    ${({ alt }: any) =>
+      alt !== 'Hello logo' &&
+      `
+      box-shadow: inset 0px 0px 50px 25px ${BLACK_30};
+    `};
   }
-`;
-
-export const GridItem = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
 `;
 
 export const StyledImg = styled.img`
   display: flex;
   width: 100%;
-  height: auto;
 
   ${({ alt }) =>
-    alt === 'About logo 5' &&
+    alt === 'Hello logo' &&
     `
     filter: contrast(120%);
   `};
