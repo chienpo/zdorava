@@ -62,11 +62,11 @@ msgstr "Опыт"
 msgid "Front-end"
 msgstr "Front-end"
 
-#: src/app/features/about/about-view.tsx:32
+#: src/app/features/about/about-view.tsx:34
 msgid "Front-end (React-JS) Developer"
 msgstr "Front-end (React-JS) Разработчик"
 
-#: src/app/features/about/about-view.tsx:30
+#: src/app/features/about/about-view.tsx:32
 msgid "Hello, I'm Stepan"
 msgstr "Привет, меня зовут Степан!"
 
