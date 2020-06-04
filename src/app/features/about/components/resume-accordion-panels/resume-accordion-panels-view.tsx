@@ -61,7 +61,7 @@ export const PanelThreeView = () => (
       </li>
       <li>
         <Strong>REACT FEATURES:</Strong>
-        Redux, ReduxSagas, Router5, ReactPosed / FrameMotion - animations
+        Redux, ReduxSagas, Router5, ReactPose / FrameMotion - animations
       </li>
       <li>
         <Strong>FRAMEWORKS:</Strong>

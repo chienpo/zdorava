@@ -1,12 +1,17 @@
 import styled, { keyframes } from 'styled-components';
+import { motion } from 'framer-motion';
 
 import { DARK_MODE } from 'app/constants/theme';
 import { BLACK_90, DARK_SLATE_GREY, RED } from 'app/constants/colors';
 import { noiseAnim, noiseAnimTwo } from 'app/animations/keyframes/noise';
 import overlayBlackDot from 'assets/images/overlay_black.png';
 import overlayWhiteDot from 'assets/images/overlay_white_four.png';
-// import overlayWhiteDot from 'assets/images/overlay_white.png';
 import homepageGlitchBg from 'assets/images/homepage-yellow-background.jpg';
+
+export const MotionWrap = styled(motion.div)`
+  position: realative;
+  height: 100%;
+`;
 
 export const Divider = styled.div`
   display: flex;
