@@ -3,6 +3,12 @@ import styled from 'styled-components';
 import { BLACK, RED, WHITE } from 'app/constants/colors';
 
 export const SectionAbout = styled.section`
+  height: 100%;
+  display: flex;
+  align-items: center;
+`;
+
+export const GridContent = styled.div`
   display: grid;
   grid-template-columns: auto 50%;
   width: 100%;

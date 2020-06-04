@@ -25,11 +25,11 @@ const pageVariants = {
     opacity: 0,
     height: '100%',
   },
-  in: {
+  enter: {
     opacity: 1,
     height: '100%',
   },
-  out: {
+  exit: {
     opacity: 0,
     height: '100%',
   },
@@ -60,50 +60,50 @@ export const Layout = () => {
             <main>
               <AnimatePresence exitBeforeEnter initial={false}>
                 {topRouteName === ROUTE_NAME_HOME && (
-                  <motion.div
-                    key={topRouteName}
-                    initial="initial"
-                    animate="in"
-                    exit="out"
-                    variants={pageVariants}
-                  >
-                    <Suspense fallback={<PageLoader />}>
+                  <Suspense fallback={<PageLoader />}>
+                    <motion.div
+                      key={topRouteName}
+                      initial="initial"
+                      animate="enter"
+                      exit="exit"
+                      variants={pageVariants}
+                    >
                       <Home />
-                    </Suspense>
-                  </motion.div>
+                    </motion.div>
+                  </Suspense>
                 )}
                 {topRouteName === ROUTE_NAME_ABOUT && (
                   <motion.div
                     key={topRouteName}
                     initial="initial"
-                    animate="in"
+                    animate="enter"
                     exit="out"
                     variants={pageVariants}
                   >
                     <Suspense fallback={<PageLoader />}>
-                      <About poseKey={topRouteName} />
+                      <About />
                     </Suspense>
                   </motion.div>
                 )}
                 {topRouteName === ROUTE_NAME_PORTFOLIO && (
-                  <motion.div
-                    key={topRouteName}
-                    initial="initial"
-                    animate="in"
-                    exit="out"
-                    variants={pageVariants}
-                  >
-                    <Suspense fallback={<PageLoader />}>
+                  <Suspense fallback={<PageLoader />}>
+                    <motion.div
+                      key={topRouteName}
+                      initial="initial"
+                      animate="enter"
+                      exit="exit"
+                      variants={pageVariants}
+                    >
                       <Portfolio />
-                    </Suspense>
-                  </motion.div>
+                    </motion.div>
+                  </Suspense>
                 )}
                 {topRouteName === constants.UNKNOWN_ROUTE && (
                   <motion.div
                     key={topRouteName}
                     initial="initial"
-                    animate="in"
-                    exit="out"
+                    animate="enter"
+                    exit="exit"
                     variants={pageVariants}
                   >
                     <Fragment key={topRouteName}>

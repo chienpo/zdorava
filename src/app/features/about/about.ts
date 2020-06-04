@@ -2,12 +2,8 @@ import { createElement } from 'react';
 
 import { AboutView } from './about-view';
 
-interface Props {
-  poseKey: string;
-}
-
-const About = ({ poseKey }: Props) => {
-  return createElement(AboutView, { poseKey });
+const About = () => {
+  return createElement(AboutView);
 };
 
 // eslint-disable-next-line import/no-default-export

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const GridLogoWrapper = styled.div`
+export const GridLogoWrapper = styled(motion.div)`
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto auto;

@@ -23,7 +23,12 @@ interface Props {
 lazySizes.cfg.lazyClass = 'lazyload';
 
 export const AboutLogoView: React.FC<Props> = ({ logos }) => (
-  <GridLogoWrapper>
+  <GridLogoWrapper
+    initial="initial"
+    animate="show"
+    exit="out"
+    variants={{ out: { transition: { staggerChildren: 0.1 } } }}
+  >
     {logos.map(({ left, top, alt, src }) => (
       <GridItem key={alt}>
         <StyledMotionFigure
@@ -42,7 +47,7 @@ export const AboutLogoView: React.FC<Props> = ({ logos }) => (
               scale: 1,
               transition: { duration: 1, delay: 1 },
             },
-            exit: {
+            out: {
               opacity: 0,
               scale: 2,
               left,
@@ -52,7 +57,7 @@ export const AboutLogoView: React.FC<Props> = ({ logos }) => (
           }}
           initial="initial"
           animate="show"
-          exit="exit"
+          exit="out"
         >
           <StyledImg
             className="lazyload"
