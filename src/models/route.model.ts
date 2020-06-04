@@ -1,5 +1,5 @@
 export interface Route {
   name: string;
-  path: string;
   title: string;
+  path: string;
 }

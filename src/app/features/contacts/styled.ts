@@ -1,8 +1,14 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 import { LIGHT_MODE } from 'app/constants/theme';
 import { BLACK, WHITE } from 'app/constants/colors';
 import { H2 } from 'app/ui/headings';
+
+export const StyledMotionContactFormWrapper = styled(motion.div)`
+  position: fixed;
+  z-index: 5;
+`;
 
 export const SectionControls = styled.div`
   position: absolute;

@@ -2,17 +2,24 @@ import styled from 'styled-components';
 import { BaseLink } from 'react-router5';
 
 import overlayBlackDot from 'assets/images/overlay_black.png';
-import overlayWhiteDot from '../../../../assets/images/overlay_white_four.png';
-import { DARK_MODE } from '../../../constants/theme';
+import overlayWhiteDot from 'assets/images/overlay_white_four.png';
+import { DARK_MODE } from 'app/constants/theme';
 import {
   BLACK_LIGHTER_95,
   GRAY,
   RED,
   WHITE,
   WHITE_95,
-} from '../../../constants/colors';
+} from 'app/constants/colors';
 
-export const NavigationDefaultWrapper = styled.div`
+export const LanguageSwitchBox = styled.div`
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+`;
+
+export const NavigationWrapper = styled.div`
   grid-template-columns: auto 170px;
   background: ${({ theme }) =>
     theme.mode === DARK_MODE
@@ -26,6 +33,7 @@ export const NavigationDefaultWrapper = styled.div`
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
 `;
 
 export const NavigationList = styled.nav`

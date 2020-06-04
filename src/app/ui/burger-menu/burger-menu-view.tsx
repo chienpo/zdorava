@@ -6,9 +6,9 @@ import { Route } from 'models/route.model';
 
 import { DARK_MODE } from 'app/constants/theme';
 import { BLACK_90, WHITE_20 } from 'app/constants/colors';
+import { Backdrop } from 'app/ui/backdrop';
 import { MenuToggleButtonView } from './menu-toggle-button-view';
 import { MenuListView } from './menu-list-view';
-import { MenuBackdropView } from './menu-backdrop-view';
 
 interface RefObject {
   current: null | HTMLElement;
@@ -80,7 +80,7 @@ export const BurgerMenuView: React.FC<Props> = ({
     <AnimatePresence>
       {isOpen && (
         <>
-          <MenuBackdropView toggleOpen={toggleOpen} />
+          <Backdrop onClick={toggleOpen} />
 
           <StyledMotionMenuBackdrop variants={sidebar} />
           <MenuListView routes={routes} router={router} />

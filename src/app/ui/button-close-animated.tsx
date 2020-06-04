@@ -39,17 +39,19 @@ interface PathInterface {
   stroke: string;
 }
 
+interface Props {
+  clicked: () => void;
+}
+
 const Path: React.FC<PathInterface> = props => (
   <motion.path fill="transparent" strokeLinecap="square" {...props} />
 );
 
-export const ButtonCloseAnimated: React.FC<{
-  clicked: () => void;
-  isOpen: boolean;
-}> = ({ clicked, isOpen }) => (
+export const ButtonCloseAnimated: React.FC<Props> = ({ clicked }) => (
   <BurgerMotionButton
     initial="closed"
-    animate={isOpen ? 'open' : 'closed'}
+    animate="open"
+    exit="closed"
     type="button"
     onClick={clicked}
     whileTap={{ scale: 1.1 }}

@@ -5,14 +5,15 @@ import {
   LanguageSwitch,
 } from 'app/ui/language-switch/language-switch';
 
+import { Route } from 'models/route.model';
 import { ROUTE_NAME_PORTFOLIO } from 'app/constants/routes';
 import { BLACK } from 'app/constants/colors';
 import { BurgerMenu } from 'app/ui/burger-menu';
 import { NavigationListView } from './navigation-list-view';
-import { NavigationDefaultWrapper } from './styled';
+import { NavigationWrapper, LanguageSwitchBox } from './styled';
 
 interface Props extends LanguageSwitchProps {
-  routes: any;
+  routes: Route[];
   isMobile: boolean;
   router: any;
   showMenu: boolean;
@@ -30,7 +31,7 @@ export const NavigationView: React.FC<Props> = ({
   headerHeight,
   activeRouteName,
 }) => (
-  <NavigationDefaultWrapper
+  <NavigationWrapper
     style={{
       height: headerHeight,
       boxShadow:
@@ -52,9 +53,11 @@ export const NavigationView: React.FC<Props> = ({
     ) : (
       <div />
     )}
-    <LanguageSwitch
-      selectedLanguage={selectedLanguage}
-      onChangeLanguage={onChangeLanguage}
-    />
-  </NavigationDefaultWrapper>
+    <LanguageSwitchBox>
+      <LanguageSwitch
+        selectedLanguage={selectedLanguage}
+        onChangeLanguage={onChangeLanguage}
+      />
+    </LanguageSwitchBox>
+  </NavigationWrapper>
 );
