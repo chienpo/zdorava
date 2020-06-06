@@ -11,6 +11,7 @@ import {
   WHITE,
   WHITE_SMOKE_10,
   WHITE_90,
+  BLACK_40,
 } from 'app/constants/colors';
 
 const iconPulse = keyframes`
@@ -64,7 +65,7 @@ export const FooterCopy = styled.small`
 
   background: ${({ theme }) =>
     theme.mode === DARK_MODE
-      ? `rgba(0,0,0,0.4) url(${overlayBlackDot}) repeat scroll 0 0;`
+      ? `${BLACK_40} url(${overlayBlackDot}) repeat scroll 0 0;`
       : `${WHITE_SMOKE_10}`};
 `;
 

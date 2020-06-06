@@ -1,5 +1,5 @@
 import { createElement } from 'react';
 
-import { NotFound } from 'app/features/not-found';
+import { NotFoundPageView } from './not-found-page-view';
 
-export const NotFoundPage = () => createElement(NotFound);
+export const NotFoundPage = () => createElement(NotFoundPageView);

@@ -1,8 +1,8 @@
 import { createElement } from 'react';
 
-import { Home } from 'app/features/home';
+import { HomePageView } from './home-page-view';
 
-const HomePage = () => createElement(Home);
+const HomePage = () => createElement(HomePageView);
 
 // eslint-disable-next-line import/no-default-export
 export default HomePage;

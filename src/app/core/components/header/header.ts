@@ -1,20 +1,13 @@
 import { createElement } from 'react';
+import { useRouteNode } from 'react-router5';
 
-import { LanguageSwitchProps } from 'app/ui/language-switch/language-switch';
 import { HeaderView } from './header-view';
 
-interface Props extends LanguageSwitchProps {
-  activeRouteName: string;
-}
+export const Header: React.FC = () => {
+  const { route } = useRouteNode('');
+  const topRouteName = route.name.split('.')[0];
 
-export const Header: React.FC<Props> = ({
-  activeRouteName,
-  selectedLanguage,
-  onChangeLanguage,
-}) => {
   return createElement(HeaderView, {
-    activeRouteName,
-    selectedLanguage,
-    onChangeLanguage,
+    activeRouteName: topRouteName,
   });
 };

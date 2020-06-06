@@ -1,5 +1,5 @@
 import { createElement, FC } from 'react';
-import { useRoute, useRouteNode } from 'react-router5';
+import { useRoute } from 'react-router5';
 import isMobile from 'ismobilejs/dist/isMobile.min';
 
 import { LAPTOPS } from 'app/constants/mediaDeviceMinWidths';
@@ -17,15 +17,12 @@ export const Navigation: FC<Props> = ({
   onChangeLanguage,
   activeRouteName,
 }) => {
-  const { route } = useRouteNode('');
-  const topRouteName = route.name.split('.')[0];
-
   const { router } = useRoute();
 
   const mediaMinWidthForLaptops = useMediaMinWidth(LAPTOPS);
 
-  const showMenu = topRouteName !== ROUTE_NAME_HOME;
-  const headerHeight = topRouteName === ROUTE_NAME_HOME ? '50px' : '70px';
+  const showMenu = activeRouteName !== ROUTE_NAME_HOME;
+  const headerHeight = activeRouteName === ROUTE_NAME_HOME ? '50px' : '70px';
 
   // TODO Move at the final return
   return createElement(NavigationView, {

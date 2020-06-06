@@ -1,8 +1,8 @@
 import { createElement } from 'react';
 
-import { About } from 'app/features/about/about';
+import { AboutPageView } from './about-page-view';
 
-const AboutPage = () => createElement(About);
+const AboutPage = () => createElement(AboutPageView);
 
 // eslint-disable-next-line import/no-default-export
 export default AboutPage;

@@ -68,7 +68,7 @@ msgstr "Front-end (React-JS) Разработчик"
 
 #: src/app/features/about/about-view.tsx:32
 msgid "Hello, I'm Stepan"
-msgstr "Привет, меня зовут Степан!"
+msgstr "Привет, меня зовут Степан"
 
 #: src/app/constants/page-titles.ts:5
 #: src/app/constants/routes.ts:8

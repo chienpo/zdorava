@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 import { WHITE } from 'app/constants/colors';
 
-export const Content = styled.div`
+export const MotionContent = styled(motion.div)`
   overflow: hidden;
   display: grid;
   width: 100%;
