@@ -20,7 +20,6 @@ interface Props {
 
 export const ContactsView: FC<Props> = ({ opened, onClose }) => (
   <StyledMotionContactFormWrapper
-    className="asd"
     initial="closed"
     animate={opened ? 'open' : 'closed'}
   >
@@ -45,6 +44,9 @@ export const ContactsView: FC<Props> = ({ opened, onClose }) => (
           }}
         >
           <FormSection>
+            <SectionControls>
+              <ButtonCloseAnimated clicked={onClose} />
+            </SectionControls>
             <FormBox>
               <H2Styled>
                 <Trans>Write me</Trans>
@@ -53,13 +55,6 @@ export const ContactsView: FC<Props> = ({ opened, onClose }) => (
             </FormBox>
           </FormSection>
         </motion.div>
-      )}
-    </AnimatePresence>
-    <AnimatePresence>
-      {opened && (
-        <SectionControls>
-          <ButtonCloseAnimated clicked={onClose} />
-        </SectionControls>
       )}
     </AnimatePresence>
   </StyledMotionContactFormWrapper>

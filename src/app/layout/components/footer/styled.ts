@@ -1,17 +1,37 @@
 import styled, { keyframes } from 'styled-components';
 
+import overlayWhiteDot from 'assets/images/overlay_white_four.png';
 import overlayBlackDot from 'assets/images/overlay_black.png';
-import overlayWhiteDot from '../../../../assets/images/overlay_white_four.png';
-import { DARK_MODE } from '../../../constants/theme';
+
+import { DARK_MODE } from 'app/constants/theme';
 import {
   BLACK,
   GRAY,
   RED,
   WHITE,
   WHITE_SMOKE_10,
-} from '../../../constants/colors';
+  WHITE_90,
+} from 'app/constants/colors';
 
-export const FooterWrapper = styled.footer`
+const iconPulse = keyframes`
+  0% {
+    font-size: 30px;
+  }
+  40% {
+    font-size: 30px;
+  }
+  50% {
+    font-size: 34px;
+  }
+  70% {
+    font-size: 30px;
+  }
+  100% {
+    font-size: 30px;
+  }
+`;
+
+export const FooterWrapper = styled.div`
   display: grid;
   grid-template-rows: 1fr auto;
   grid-template-columns: 1fr;
@@ -20,7 +40,7 @@ export const FooterWrapper = styled.footer`
   background: ${({ theme }) =>
     theme.mode === DARK_MODE
       ? `rgba(0,0,0,0.93) url(${overlayBlackDot}) repeat scroll 0 0;`
-      : `rgba(255,255,255,0.9) url(${overlayWhiteDot}) repeat scroll 0 0;`};
+      : `${WHITE_90} url(${overlayWhiteDot}) repeat scroll 0 0;`};
   z-index: 1;
 `;
 
@@ -48,24 +68,6 @@ export const FooterCopy = styled.small`
       : `${WHITE_SMOKE_10}`};
 `;
 
-const pulse = keyframes`
-  0% {
-    font-size: 30px;
-  }
-  40% {
-    font-size: 30px;
-  }
-  50% {
-    font-size: 34px;
-  }
-  70% {
-    font-size: 30px;
-  }
-  100% {
-    font-size: 30px;
-  }
-`;
-
 export const FooterSocialLink = styled.a`
   display: flex;
   align-items: center;
@@ -74,11 +76,11 @@ export const FooterSocialLink = styled.a`
   font-size: ${({ color }) => (color ? '34px' : '30px')};
   height: 34px;
   width: 25px;
-  animation: ${({ color }) => color && pulse} 4.4s infinite;
+  animation: ${({ color }) => color && iconPulse} 4.4s infinite;
   background: none;
   border: none;
   cursor: pointer;
-  transition: color ease-out 0.4s;
+  transition: color 0.4s;
 
   &:hover {
     color: ${RED};

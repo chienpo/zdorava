@@ -8,6 +8,7 @@ import { H2 } from 'app/ui/headings';
 export const StyledMotionContactFormWrapper = styled(motion.div)`
   position: fixed;
   z-index: 5;
+  top: 0;
 `;
 
 export const SectionControls = styled.div`

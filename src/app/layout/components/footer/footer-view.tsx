@@ -6,6 +6,7 @@ import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import {
   SOCIAL_GITHUB_PATH,
   SOCIAL_LINKED_IN_PATH,
+  PHONE,
 } from 'app/constants/social';
 import { SITE_PUBLICATION_YEAR } from 'app/constants/site';
 import { Contacts } from 'app/features/contacts';
@@ -18,7 +19,7 @@ import {
 } from './styled';
 
 interface Props {
-  toggleContactForm: (prevState: any) => void;
+  toggleContactForm: (prevState: boolean) => void;
   contactFormOpened: boolean;
 }
 
@@ -46,14 +47,11 @@ export const FooterView = ({ toggleContactForm, contactFormOpened }: Props) => {
               <FontAwesomeIcon icon={icon} />
             </FooterSocialLink>
           ))}
-          <FooterSocialLink key="contacts-phone" href="tel:+375 44 721-37-70">
+          <FooterSocialLink href={`tel:${PHONE}`}>
             <FontAwesomeIcon icon={faPhone} />
           </FooterSocialLink>
           <FooterSocialLink
-            onClick={() =>
-              toggleContactForm((prevState: boolean) => !prevState)
-            }
-            key="contacts-mail"
+            onClick={() => toggleContactForm(true)}
             as="button"
             color={RED}
           >

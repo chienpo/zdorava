@@ -29,10 +29,16 @@ interface PathInterface {
     open: {
       d: string;
       strokeWidth?: number;
+      transition?: {
+        delay?: number;
+      };
     };
     closed: {
       d: string;
       strokeWidth?: number;
+      transition?: {
+        delay?: number;
+      };
     };
   };
   d?: string;
@@ -60,14 +66,22 @@ export const ButtonCloseAnimated: React.FC<Props> = ({ clicked }) => (
       <Path
         stroke={BLACK}
         variants={{
-          open: { d: 'M 3 16.5 L 17 2.5', strokeWidth: 2 },
+          open: {
+            d: 'M 3 16.5 L 17 2.5',
+            strokeWidth: 2,
+            transition: { delay: 0.4 },
+          },
           closed: { d: 'M 3 16.5 L 17 2.5', strokeWidth: 0 },
         }}
       />
       <Path
         stroke={BLACK}
         variants={{
-          open: { d: 'M 3 2.5 L 17 16.346', strokeWidth: 2 },
+          open: {
+            d: 'M 3 2.5 L 17 16.346',
+            strokeWidth: 2,
+            transition: { delay: 0.4 },
+          },
           closed: { d: 'M 3 2.5 L 17 16.346', strokeWidth: 0 },
         }}
       />
