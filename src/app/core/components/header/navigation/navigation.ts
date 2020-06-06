@@ -5,7 +5,7 @@ import isMobile from 'ismobilejs/dist/isMobile.min';
 import { LAPTOPS } from 'app/constants/mediaDeviceMinWidths';
 import { useMediaMinWidth } from 'helpers/use-media-min-width';
 import { LanguageSwitchProps } from 'app/ui/language-switch/language-switch';
-import { ROUTE_NAME_HOME, routes } from '../../../constants/routes';
+import { ROUTE_NAME_HOME, routes } from 'app/constants/routes';
 import { NavigationView } from './navigation-view';
 
 interface Props extends LanguageSwitchProps {

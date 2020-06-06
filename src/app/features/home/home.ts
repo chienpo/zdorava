@@ -10,6 +10,3 @@ export const Home: FC<any> = () => {
     toggleDefaultBg,
   });
 };
-
-// // eslint-disable-next-line import/no-default-export
-// export default Home;

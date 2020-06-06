@@ -119,6 +119,6 @@ msgstr "Skills"
 msgid "Stepan"
 msgstr "Stepan"
 
-#: src/app/features/contacts/contacts-view.tsx:26
+#: src/app/features/contacts/contacts-view.tsx:29
 msgid "Write me"
 msgstr "Write me"

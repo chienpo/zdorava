@@ -10,7 +10,7 @@ import {
 } from 'app/constants/social';
 import { SITE_PUBLICATION_YEAR } from 'app/constants/site';
 import { Contacts } from 'app/features/contacts';
-import { RED } from '../../../constants/colors';
+import { RED } from 'app/constants/colors';
 import {
   FooterWrapper,
   FooterNav,

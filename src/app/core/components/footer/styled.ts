@@ -31,7 +31,7 @@ const iconPulse = keyframes`
   }
 `;
 
-export const FooterWrapper = styled.div`
+export const FooterWrapper = styled.footer`
   display: grid;
   grid-template-rows: 1fr auto;
   grid-template-columns: 1fr;

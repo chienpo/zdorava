@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { WHITE } from '../constants/colors';
+import { WHITE } from 'app/constants/colors';
 
 export const AppContent = styled.div`
   overflow: hidden;
@@ -11,12 +11,4 @@ export const AppContent = styled.div`
   grid-template-rows: auto 1fr auto;
   background: ${WHITE};
   width: 100vw;
-`;
-
-export const AppBackground = styled.div`
-  background: ${WHITE};
-`;
-
-export const Header = styled.header`
-  z-index: 5;
 `;
