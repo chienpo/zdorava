@@ -1,13 +1,19 @@
-import { createElement } from 'react';
+import { createElement, FC } from 'react';
 import { useRouteNode } from 'react-router5';
 
+import { LIGHT_MODE } from 'app/constants/theme';
 import { HeaderView } from './header-view';
 
-export const Header: React.FC = () => {
+interface Props {
+  theme?: string;
+}
+
+export const Header: FC<Props> = ({ theme = LIGHT_MODE }) => {
   const { route } = useRouteNode('');
-  const topRouteName = route.name.split('.')[0];
+  const [ topRouteName ] = route.name.split('.');
 
   return createElement(HeaderView, {
     activeRouteName: topRouteName,
+    theme,
   });
 };

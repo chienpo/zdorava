@@ -19,23 +19,6 @@ export const LanguageSwitchBox = styled.div`
   width: 100%;
 `;
 
-export const NavigationWrapper = styled.div`
-  grid-template-columns: auto 170px;
-  background: ${({ theme }) =>
-    theme.mode === DARK_MODE
-      ? `${BLACK_LIGHTER_95} url(${overlayBlackDot}) repeat scroll 0 0;`
-      : `
-        ${WHITE_95} url(${overlayWhiteDot}) repeat scroll 0 0;
-      `};
-  display: grid;
-  grid-template-columns: 1fr 170px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-`;
-
 export const NavigationList = styled.nav`
   display: flex;
   justify-content: center;
@@ -54,41 +37,60 @@ export const NavLinkStyled = styled(BaseLink)`
   text-transform: uppercase;
   padding: 0 35px;
   border-bottom: 1px solid transparent;
+`;
 
-  ${({ theme }) =>
-    theme.mode === DARK_MODE
+export const NavigationWrapper = styled.div`
+  grid-template-columns: auto 170px;
+  background: ${({ theme }) =>
+  theme === DARK_MODE
+    ? `${BLACK_LIGHTER_95} url(${overlayBlackDot}) repeat scroll 0 0;`
+    : `
+        ${WHITE_95} url(${overlayWhiteDot}) repeat scroll 0 0;
+      `};
+  display: grid;
+  grid-template-columns: 1fr 170px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  ${NavLinkStyled} {
+    ${({ theme }) =>
+    theme === DARK_MODE
       ? `
-      color: ${GRAY};
+        color: ${GRAY};
 
-        &.active {
-          color: ${WHITE};
-          border-bottom: 1px solid ${WHITE};
-
-          &:hover {
+          &.active {
             color: ${WHITE};
-            border-color: ${WHITE};
-          }
-        }
+            border-bottom: 1px solid ${WHITE};
 
-        &:hover {
-          color: ${RED};
-          border-color: ${RED};
-        }
-      `
-      : `
-        &.active {
-          color: ${RED};
-          border-bottom: 1px solid ${RED};
+            &:hover {
+              color: ${WHITE};
+              border-color: ${WHITE};
+            }
+          }
 
           &:hover {
             color: ${RED};
             border-color: ${RED};
           }
-        }
+        `
+      : `
+          &.active {
+            color: ${RED};
+            border-bottom: 1px solid ${RED};
 
-        &:hover {
-          color: ${RED};
-          border-color: ${RED};
-        }
-      `};
+            &:hover {
+              color: ${RED};
+              border-color: ${RED};
+            }
+          }
+
+          &:hover {
+            color: ${RED};
+            border-color: ${RED};
+          }
+        `};
+  }
 `;

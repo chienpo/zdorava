@@ -2,18 +2,19 @@ import React from 'react';
 import { I18n } from '@lingui/react';
 import { languageMiddleware } from 'app/providers/language-provider';
 
-import { ROUTE_NAME_HOME } from 'app/constants/routes';
+import { LIGHT_MODE } from 'app/constants/theme';
 import { Navigation } from './navigation';
 import { StyledHeader } from './styled';
 
 interface Props {
   activeRouteName: string;
+  theme: string;
 }
 
-export const HeaderView: React.FC<Props> = ({ activeRouteName }) => (
+export const HeaderView: React.FC<Props> = ({ activeRouteName, theme }) => (
   <StyledHeader
     style={{
-      height: activeRouteName === ROUTE_NAME_HOME ? '50px' : '70px',
+      height: theme === LIGHT_MODE ? '70px' : '50px',
     }}
   >
     <I18n>
@@ -24,6 +25,7 @@ export const HeaderView: React.FC<Props> = ({ activeRouteName }) => (
           onChangeLanguage={val => {
             return languageMiddleware.changeLanguage(val);
           }}
+          theme={theme}
         />
       )}
     </I18n>

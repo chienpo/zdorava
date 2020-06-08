@@ -21,9 +21,10 @@ import {
 interface Props {
   toggleContactForm: (prevState: boolean) => void;
   contactFormOpened: boolean;
+  theme: string;
 }
 
-export const FooterView = ({ toggleContactForm, contactFormOpened }: Props) => {
+export const FooterView: React.FC<Props> = ({ toggleContactForm, contactFormOpened, theme }) => {
   const footerNavigationLinks = [
     { name: 'github', path: SOCIAL_GITHUB_PATH, icon: faGithub },
     { name: 'linkedin', path: SOCIAL_LINKED_IN_PATH, icon: faLinkedin },
@@ -35,7 +36,9 @@ export const FooterView = ({ toggleContactForm, contactFormOpened }: Props) => {
         opened={contactFormOpened}
         onClose={() => toggleContactForm(false)}
       />
-      <FooterWrapper>
+      <FooterWrapper
+        theme={theme}
+      >
         <FooterNav>
           {footerNavigationLinks.map(({ path, icon, name }) => (
             <FooterSocialLink

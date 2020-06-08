@@ -35,7 +35,7 @@ const pageVariants = {
 
 export const PageSwitch = () => {
   const { route } = useRouteNode('');
-  const topRouteName = route.name.split('.')[0];
+  const [topRouteName] = route.name.split('.');
 
   return (
     <AnimatePresence exitBeforeEnter initial={false}>

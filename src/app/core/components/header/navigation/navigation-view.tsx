@@ -19,6 +19,7 @@ interface Props extends LanguageSwitchProps {
   showMenu: boolean;
   headerHeight: string;
   activeRouteName: string;
+  theme: string;
 }
 
 export const NavigationView: React.FC<Props> = ({
@@ -30,8 +31,10 @@ export const NavigationView: React.FC<Props> = ({
   showMenu,
   headerHeight,
   activeRouteName,
+  theme,
 }) => (
   <NavigationWrapper
+    theme={theme}
     style={{
       height: headerHeight,
       boxShadow:
