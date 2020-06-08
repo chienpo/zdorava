@@ -2,7 +2,7 @@
   "Home": {
     "origin": [["src/app/constants/routes.ts", 8]]
   },
-  "Resume": {
+  "About": {
     "origin": [["src/app/constants/routes.ts", 9]]
   },
   "Portfolio": {

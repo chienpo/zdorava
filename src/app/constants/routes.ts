@@ -10,7 +10,7 @@ export const ROUTE_NAME_PORTFOLIO = 'portfolio';
 
 export const routes: Route[] = [
   { name: ROUTE_NAME_HOME, title: i18nMark('Home'), path: '/' },
-  { name: ROUTE_NAME_ABOUT, title: i18nMark('Resume'), path: '/about' },
+  { name: ROUTE_NAME_ABOUT, title: i18nMark('About'), path: '/about' },
   {
     name: ROUTE_NAME_PORTFOLIO,
     title: i18nMark('Portfolio'),

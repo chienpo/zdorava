@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router5';
-import posed from 'react-pose';
 
+import { ROUTE_NAME_ABOUT } from 'app/constants/routes';
 import {
   BLACK,
   GRAY_MEDIUM_10,
@@ -25,25 +25,14 @@ export const LinkOverlayMirrorEffect = styled.div`
   ${mirrorEffect}
 `;
 
-export const LinkOverlay = posed.div({
-  enter: {
-    opacity: 1,
-    transition: { duration: 600 },
-  },
-  exit: {
-    opacity: 0,
-    transition: { duration: 600 },
-  },
-});
-
-export const LinkOverlayAnimated = styled(LinkOverlay)`
+export const MotionLinkOverlay = styled.div`
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   background: url(${({ title }: any) =>
-      title === 'left'
+      title === 'about'
         ? navigationAboutBackgroundLogo
         : navigationPortfolioBackground})
     right center no-repeat;
@@ -54,12 +43,13 @@ export const LinkOverlayAnimated = styled(LinkOverlay)`
 export const Text = styled.span`
   display: block;
   position: relative;
-  padding-${({ title }) => (title === 'prev' ? 'left' : 'right')}: 55px;
+  padding-${({ title }) =>
+    title === ROUTE_NAME_ABOUT ? 'right' : 'left'}: 55px;
   ${({ title }) =>
-    title === 'prev' ? 'margin-top: 20vh;' : 'margin-bottom: 10vh;'}
+    title === ROUTE_NAME_ABOUT ? 'margin-bottom: 10vh;' : 'margin-top: 20vh;'}
   transition: color 0.6s;
 
-  &::${({ title }) => (title === 'prev' ? 'before' : 'after')} {
+  &::${({ title }) => (title === ROUTE_NAME_ABOUT ? 'after' : 'before')} {
     position: absolute;
     content: '';
     display: block;
@@ -68,7 +58,7 @@ export const Text = styled.span`
     border-radius: 50%;
     border: 8px solid  ${({ theme }) =>
       theme.mode === DARK_MODE ? WHITE : BLACK};
-    ${({ title }) => (title === 'prev' ? 'left: 0' : 'right: 0')};
+    ${({ title }) => (title === ROUTE_NAME_ABOUT ? 'right: 0' : 'left: 0')};
     top: 50%;
     transform: translateY(-50%);
     transition: border-color 0.6s;
@@ -117,8 +107,8 @@ export const PageLinkStyled = styled(Link)`
     line-height: 30px;
   }
 
-  ${({ title }: any) =>
-    title === 'left'
+  ${({ routeName }: any) =>
+    routeName === 'about'
       ? `
     justify-content: flex-start;
     align-items: center;

@@ -3,6 +3,7 @@ import Typing from 'react-typing-animation';
 import { Trans } from '@lingui/macro';
 import Tilt from 'react-parallax-tilt';
 
+import { ROUTE_NAME_ABOUT, ROUTE_NAME_PORTFOLIO } from 'app/constants/routes';
 import { HomepageGlitch } from './components/homepage-glitch';
 import { PageLinkFadeView } from './components/page-link-fade/page-link-fade-view';
 import {
@@ -48,12 +49,16 @@ export const HomeView: React.FC<Props> = ({
     }}
   >
     {bgIsToggling && <Image bgIsToggling={bgIsToggling} />}
-    <PageLinkFadeView routeName="about" position="left">
-      <Trans>Resume</Trans>
-    </PageLinkFadeView>
-    <PageLinkFadeView routeName="portfolio" position="right">
-      <Trans>Portfolio</Trans>
-    </PageLinkFadeView>
+    <PageLinkFadeView
+      routeName={ROUTE_NAME_ABOUT}
+      position="left"
+      title={<Trans>About</Trans>}
+    />
+    <PageLinkFadeView
+      routeName={ROUTE_NAME_PORTFOLIO}
+      position="right"
+      title={<Trans>Portfolio</Trans>}
+    />
     <Tilt
       glareEnable
       glareMaxOpacity={1}

@@ -1,67 +1,86 @@
 import React, { useState } from 'react';
-import { PoseGroup } from 'react-pose';
-
 import Tilt from 'react-parallax-tilt';
+import { motion, AnimatePresence } from 'framer-motion';
+
 import {
   PageLinkStyled,
   Text,
   LinkMirrorEffectBox,
   LinkOverlayMirrorEffect,
-  LinkOverlayAnimated,
+  MotionLinkOverlay,
 } from './styled';
 
 interface Props {
   position: string;
   routeName: string;
-  children: any;
+  title: any;
 }
 
-export const PageLinkFadeView = ({ children, position, ...props }: Props) => {
+export const PageLinkFadeView = ({ title, position, routeName }: Props) => {
   const [overlayVisible, showOverlay] = useState(false);
 
   return (
     <>
-      <Tilt
-        key={position}
-        glareEnable={false}
-        glareMaxOpacity={0.9}
-        glareColor="black"
-        glarePosition="all"
-        perspective={4500}
-        trackOnWindow
-        scale={1.15}
-        transitionSpeed={2500}
-        style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          zIndex: 1,
-        }}
-        tiltReverse
-        tiltAxis="y"
-      >
-        <PoseGroup>
-          {overlayVisible && (
-            <LinkOverlayAnimated key={position} title={position}>
-              <LinkOverlayMirrorEffect />
-            </LinkOverlayAnimated>
-          )}
-        </PoseGroup>
-      </Tilt>
+      <AnimatePresence initial={false}>
+        {overlayVisible && (
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            variants={{
+              visible: { opacity: 1 },
+              hidden: { opacity: 0 },
+            }}
+            transition={{ duration: 0.8 }}
+            style={{
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              zIndex: 1,
+            }}
+          >
+            <Tilt
+              key={position}
+              glareEnable={false}
+              glareMaxOpacity={0.9}
+              glareColor="black"
+              glarePosition="all"
+              perspective={4500}
+              trackOnWindow
+              scale={1.15}
+              transitionSpeed={2500}
+              style={{
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                zIndex: 1,
+              }}
+              tiltReverse
+              tiltAxis="y"
+            >
+              <MotionLinkOverlay title={routeName}>
+                <LinkOverlayMirrorEffect />
+              </MotionLinkOverlay>
+            </Tilt>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <PageLinkStyled
-        title={position}
+        title={routeName}
         onMouseEnter={() => showOverlay(true)}
         onBlur={() => showOverlay(false)}
         onFocus={() => showOverlay(true)}
         onMouseOver={() => showOverlay(true)}
         onMouseOut={() => showOverlay(false)}
-        {...props}
+        routeName={routeName}
       >
         <LinkMirrorEffectBox>
-          <Text title={position === 'left' ? 'next' : 'prev'}>{children}</Text>
+          <Text title={routeName}>{title}</Text>
         </LinkMirrorEffectBox>
       </PageLinkStyled>
     </>

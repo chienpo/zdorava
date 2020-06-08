@@ -9,7 +9,7 @@ import {
 
 export const PAGE_TITLES: { [key: string]: string } = {
   [ROUTE_NAME_HOME]: i18nMark('Home'),
-  [ROUTE_NAME_ABOUT]: i18nMark('Resume'),
+  [ROUTE_NAME_ABOUT]: i18nMark('About'),
   [ROUTE_NAME_PORTFOLIO]: i18nMark('Portfolio'),
   [constants.UNKNOWN_ROUTE]: i18nMark('404'),
 };

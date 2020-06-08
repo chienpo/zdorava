@@ -18,7 +18,10 @@ msgstr ""
 msgid "404"
 msgstr "404"
 
+#: src/app/constants/page-titles.ts:6
+#: src/app/constants/routes.ts:9
 #: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:9
+#: src/app/features/home/home-view.tsx:26
 msgid "About"
 msgstr "Обо мне"
 
@@ -75,7 +78,7 @@ msgstr "Привет, меня зовут Степан"
 msgid "Home"
 msgstr "Главная"
 
-#: src/app/features/home/home-view.tsx:47
+#: src/app/features/home/home-view.tsx:44
 msgid "Lagunovsky"
 msgstr "Лагуновский"
 
@@ -93,7 +96,7 @@ msgstr "Имя"
 
 #: src/app/constants/page-titles.ts:7
 #: src/app/constants/routes.ts:12
-#: src/app/features/home/home-view.tsx:29
+#: src/app/features/home/home-view.tsx:27
 msgid "Portfolio"
 msgstr "Портфолио"
 
@@ -103,9 +106,8 @@ msgstr "Обязательное поле"
 
 #: src/app/constants/page-titles.ts:6
 #: src/app/constants/routes.ts:9
-#: src/app/features/home/home-view.tsx:26
-msgid "Resume"
-msgstr "Резюме"
+#~ msgid "Resume"
+#~ msgstr "Резюме"
 
 #: src/app/features/contacts/components/contact-form-view.tsx:21
 msgid "Send message"
@@ -115,7 +117,7 @@ msgstr "Отправить сообщение"
 msgid "Skills"
 msgstr "Профессиональные навыки"
 
-#: src/app/features/home/home-view.tsx:44
+#: src/app/features/home/home-view.tsx:41
 msgid "Stepan"
 msgstr "Степан"
 

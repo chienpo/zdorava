@@ -5,7 +5,7 @@
   "Home": {
     "origin": [["src/app/constants/page-titles.ts", 5]]
   },
-  "Resume": {
+  "About": {
     "origin": [["src/app/constants/page-titles.ts", 6]]
   },
   "Portfolio": {
