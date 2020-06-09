@@ -87,8 +87,14 @@ export const PortfolioGridView: React.FC<Props & DataProps> = ({
           onMoveNextRequest={() =>
             setPhotoIndex((photoIndex + 1) % data.length)
           }
-          imageTitle={data[(photoIndex + 1) % data.length].name}
-          imageCaption={data[(photoIndex + 1) % data.length].description}
+          imageTitle={
+            data[(photoIndex + 1) % data.length].title &&
+            data[(photoIndex + 1) % data.length].title.en
+          }
+          imageCaption={
+            data[(photoIndex + 1) % data.length].description &&
+            data[(photoIndex + 1) % data.length].description.en
+          }
           reactModalStyle={{ color: 'yellow' }}
           imagePadding={100}
           wrapperClassName="wrapperClassName"
@@ -112,6 +118,7 @@ export const PortfolioGridView: React.FC<Props & DataProps> = ({
                   name,
                   description,
                   thumbnailSrc,
+                  title,
                 }: PortfolioItemModel,
                 index
               ) => (
@@ -121,7 +128,7 @@ export const PortfolioGridView: React.FC<Props & DataProps> = ({
                   category={category}
                   imageSrc={imageSrc}
                   alt={alt}
-                  name={name}
+                  title={title}
                   description={description}
                   onItemClick={() => onItemClick(imageSrc)}
                   thumbnailSrc={thumbnailSrc}

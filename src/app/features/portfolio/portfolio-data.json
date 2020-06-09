@@ -5,198 +5,327 @@
       "imageSrc": "course-project-one.png",
       "thumbnailSrc": "course-project-one.png",
       "alt": "course-project-one",
-      "name": "front-end",
-      "description": "front-end project",
-      "details": "front-end project"
+      "description": {
+        "en": "Description text",
+        "ru": "Текст описания"
+      },
+      "details": "front-end project",
+      "title": {
+        "en": "Title",
+        "ru": "Заголовок"
+      }
     },
     {
       "category": "frontend",
       "imageSrc": "course-project-two.png",
       "thumbnailSrc": "course-project-two.png",
       "alt": "course-project-two",
-      "name": "front-end",
-      "description": "front-end project",
-      "details": "front-end project"
+      "description": {
+        "en": "Description text",
+        "ru": "Текст описания"
+      },
+      "details": "front-end project",
+      "title": {
+        "en": "Title",
+        "ru": "Заголовок"
+      }
     },
     {
       "category": "frontend",
       "imageSrc": "grifstd-landing.png",
       "thumbnailSrc": "grifstd-landing.png",
       "alt": "grifstd-landing",
-      "name": "front-end",
-      "description": "front-end project",
-      "details": "front-end project"
+      "description": {
+        "en": "Description text",
+        "ru": "Текст описания"
+      },
+      "details": "front-end project",
+      "title": {
+        "en": "Title",
+        "ru": "Заголовок"
+      }
     },
     {
       "category": "frontend",
       "imageSrc": "pb-betolit-landing-page.png",
       "thumbnailSrc": "pb-betolit-landing-page.png",
       "alt": "pb-betolit-landing-page",
-      "name": "front-end",
-      "description": "front-end project",
-      "details": "front-end project"
+      "description": {
+        "en": "Description text",
+        "ru": "Текст описания"
+      },
+      "details": "front-end project",
+      "title": {
+        "en": "Title",
+        "ru": "Заголовок"
+      }
     },
     {
       "category": "frontend",
       "imageSrc": "lastminute-theatre-page.png",
       "thumbnailSrc": "lastminute-theatre-page.png",
       "alt": "lastminute-theatre-page",
-      "name": "front-end",
-      "description": "front-end project",
-      "details": "front-end project"
+      "description": {
+        "en": "Description text",
+        "ru": "Текст описания"
+      },
+      "details": "front-end project",
+      "title": {
+        "en": "Title",
+        "ru": "Заголовок"
+      }
     },
     {
       "category": "frontend",
       "imageSrc": "ipwe-platform-import-details-page.png",
       "thumbnailSrc": "ipwe-platform-import-details-page.png",
       "alt": "ipwe-platform-import-details-page",
-      "name": "front-end",
-      "description": "front-end project",
-      "details": "front-end project"
+      "description": {
+        "en": "Description text",
+        "ru": "Текст описания"
+      },
+      "details": "front-end project",
+      "title": {
+        "en": "Title",
+        "ru": "Заголовок"
+      }
     },
     {
       "category": "frontend",
       "imageSrc": "ipwe-home-page.png",
       "thumbnailSrc": "ipwe-home-page.png",
       "alt": "ipwe-home-page",
-      "name": "front-end",
-      "description": "front-end project",
-      "details": "front-end project"
+      "description": {
+        "en": "Description text",
+        "ru": "Текст описания"
+      },
+      "details": "front-end project",
+      "title": {
+        "en": "Title",
+        "ru": "Заголовок"
+      }
     },
     {
       "category": "art",
       "imageSrc": "cars-copy-2012.png",
       "thumbnailSrc": "cars-copy-2012.png",
       "alt": "cars-copy-2012",
-      "name": "PAPER, SANGUINE",
-      "description": "1000X1000 - PAPER, SANGUINE",
-      "details": "1000X1000 - PAPER, SANGUINE"
+      "description": {
+        "en": "Description text",
+        "ru": "Текст описания"
+      },
+      "details": "1000X1000 - PAPER, SANGUINE",
+      "title": {
+        "en": "Title",
+        "ru": "Заголовок"
+      }
     },
     {
       "category": "art",
       "imageSrc": "ecorche.png",
       "thumbnailSrc": "ecorche.png",
       "alt": "ecorche.png",
-      "name": "PAPER, SANGUINE",
-      "description": "1000X1000 - PAPER, SANGUINE",
-      "details": "1000X1000 - PAPER, SANGUINE"
+      "description": {
+        "en": "Description text",
+        "ru": "Текст описания"
+      },
+      "details": "1000X1000 - PAPER, SANGUINE",
+      "title": {
+        "en": "Title",
+        "ru": "Заголовок"
+      }
     },
     {
       "category": "art",
       "imageSrc": "faces-in-pastel.png",
       "thumbnailSrc": "faces-in-pastel.png",
       "alt": "faces-in-pastel-1",
-      "name": "PAPER, SANGUINE",
-      "description": "1000X1000 - PAPER, SANGUINE",
-      "details": "1000X1000 - PAPER, SANGUINE"
+      "description": {
+        "en": "Description text",
+        "ru": "Текст описания"
+      },
+      "details": "1000X1000 - PAPER, SANGUINE",
+      "title": {
+        "en": "Title",
+        "ru": "Заголовок"
+      }
     },
     {
       "category": "art",
       "imageSrc": "head-portrait-2011.png",
       "thumbnailSrc": "head-portrait-2011.png",
       "alt": "head-portrait-2011",
-      "name": "PAPER, SANGUINE",
-      "description": "1000X1000 - PAPER, SANGUINE",
-      "details": "1000X1000 - PAPER, SANGUINE"
+      "description": {
+        "en": "Description text",
+        "ru": "Текст описания"
+      },
+      "details": "1000X1000 - PAPER, SANGUINE",
+      "title": {
+        "en": "Title",
+        "ru": "Заголовок"
+      }
     },
     {
       "category": "art",
       "imageSrc": "head-square-2011.png",
       "thumbnailSrc": "head-square-2011.png",
       "alt": "head-square-2011",
-      "name": "PAPER, SANGUINE",
-      "description": "1000X1000 - PAPER, SANGUINE",
-      "details": "1000X1000 - PAPER, SANGUINE"
+      "description": {
+        "en": "Description text",
+        "ru": "Текст описания"
+      },
+      "details": "1000X1000 - PAPER, SANGUINE",
+      "title": {
+        "en": "Title",
+        "ru": "Заголовок"
+      }
     },
     {
       "category": "art",
       "imageSrc": "heads-2011.png",
       "thumbnailSrc": "heads-2011.png",
       "alt": "heads-2011",
-      "name": "PAPER, SANGUINE",
-      "description": "1000X1000 - PAPER, SANGUINE",
-      "details": "1000X1000 - PAPER, SANGUINE"
+      "description": {
+        "en": "Description text",
+        "ru": "Текст описания"
+      },
+      "details": "1000X1000 - PAPER, SANGUINE",
+      "title": {
+        "en": "Title",
+        "ru": "Заголовок"
+      }
     },
     {
       "category": "art",
       "imageSrc": "lady-portrait-2011.png",
       "thumbnailSrc": "lady-portrait-2011.png",
       "alt": "lady-portrait-2011",
-      "name": "PAPER, SANGUINE",
-      "description": "1000X1000 - PAPER, SANGUINE",
-      "details": "1000X1000 - PAPER, SANGUINE"
+      "description": {
+        "en": "Description text",
+        "ru": "Текст описания"
+      },
+      "details": "1000X1000 - PAPER, SANGUINE",
+      "title": {
+        "en": "Title",
+        "ru": "Заголовок"
+      }
     },
     {
       "category": "art",
       "imageSrc": "same-wall-drowing-bntu.png",
       "thumbnailSrc": "same-wall-drowing-bntu.png",
       "alt": "same-wall-drowing-bntu",
-      "name": "PAPER, SANGUINE",
-      "description": "1000X1000 - PAPER, SANGUINE",
-      "details": "1000X1000 - PAPER, SANGUINE"
+      "description": {
+        "en": "Description text",
+        "ru": "Текст описания"
+      },
+      "details": "1000X1000 - PAPER, SANGUINE",
+      "title": {
+        "en": "Title",
+        "ru": "Заголовок"
+      }
     },
     {
       "category": "art",
       "imageSrc": "something-in-pastel-1.png",
       "thumbnailSrc": "something-in-pastel-1.png",
       "alt": "something-in-pastel-1",
-      "name": "PAPER, SANGUINE",
-      "description": "1000X1000 - PAPER, SANGUINE",
-      "details": "1000X1000 - PAPER, SANGUINE"
+      "description": {
+        "en": "Description text",
+        "ru": "Текст описания"
+      },
+      "details": "1000X1000 - PAPER, SANGUINE",
+      "title": {
+        "en": "Title",
+        "ru": "Заголовок"
+      }
     },
     {
       "category": "art",
       "imageSrc": "venera-portrait-2011.png",
       "thumbnailSrc": "venera-portrait-2011.png",
       "alt": "venera-portrait-2011",
-      "name": "PAPER, SANGUINE",
-      "description": "1000X1000 - PAPER, SANGUINE",
-      "details": "1000X1000 - PAPER, SANGUINE"
+      "description": {
+        "en": "Description text",
+        "ru": "Текст описания"
+      },
+      "details": "1000X1000 - PAPER, SANGUINE",
+      "title": {
+        "en": "Title",
+        "ru": "Заголовок"
+      }
     },
     {
       "category": "art",
       "imageSrc": "arch-design-same-interiorv-rendering-1.png",
       "thumbnailSrc": "arch-design-same-interiorv-rendering-1.png",
       "alt": "arch-design-same-interiorv-rendering-1",
-      "name": "PAPER, SANGUINE",
-      "description": "1000X1000 - PAPER, SANGUINE",
-      "details": "1000X1000 - PAPER, SANGUINE"
+      "description": {
+        "en": "Description text",
+        "ru": "Текст описания"
+      },
+      "details": "1000X1000 - PAPER, SANGUINE",
+      "title": {
+        "en": "Title",
+        "ru": "Заголовок"
+      }
     },
     {
       "category": "art",
       "imageSrc": "arch-design-school-concept.png",
       "thumbnailSrc": "arch-design-school-concept.png",
       "alt": "arch-design-school-concept",
-      "name": "PAPER, SANGUINE",
-      "description": "1000X1000 - PAPER, SANGUINE",
-      "details": "1000X1000 - PAPER, SANGUINE"
+      "description": {
+        "en": "Description text",
+        "ru": "Текст описания"
+      },
+      "details": "1000X1000 - PAPER, SANGUINE",
+      "title": {
+        "en": "Title",
+        "ru": "Заголовок"
+      }
     },
     {
       "category": "art",
       "imageSrc": "arch-design-sculpture_people.png",
       "thumbnailSrc": "arch-design-sculpture_people.png",
       "alt": "arch-design-sculpture_people",
-      "name": "PAPER, SANGUINE",
-      "description": "1000X1000 - PAPER, SANGUINE",
-      "details": "1000X1000 - PAPER, SANGUINE"
+      "description": {
+        "en": "Description text",
+        "ru": "Текст описания"
+      },
+      "details": "1000X1000 - PAPER, SANGUINE",
+      "title": {
+        "en": "Title",
+        "ru": "Заголовок"
+      }
     },
     {
       "category": "art",
       "imageSrc": "arch-design-sculpture.png",
       "thumbnailSrc": "arch-design-sculpture.png",
       "alt": "arch-design-sculpture",
-      "name": "PAPER, SANGUINE",
-      "description": "1000X1000 - PAPER, SANGUINE",
-      "details": "1000X1000 - PAPER, SANGUINE"
+      "description": {
+        "en": "Description text",
+        "ru": "Текст описания"
+      },
+      "details": "1000X1000 - PAPER, SANGUINE",
+      "title": {
+        "en": "Title",
+        "ru": "Заголовок"
+      }
     },
     {
       "category": "art",
       "imageSrc": "arch-design-transit-2-int-day.png",
       "thumbnailSrc": "arch-design-transit-2-int-day.png",
       "alt": "arch-design-transit-2-int-day",
-      "name": "PAPER, SANGUINE",
       "description": "1000X1000 - PAPER, SANGUINE",
-      "details": "1000X1000 - PAPER, SANGUINE"
+      "details": "1000X1000 - PAPER, SANGUINE",
+      "title": {
+        "en": "Title",
+        "ru": "Заголовок"
+      }
     }
   ]
 }
