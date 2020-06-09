@@ -3,6 +3,12 @@ import { motion } from 'framer-motion';
 
 import { WHITE } from 'app/constants/colors';
 
+export const AppBox = styled.div`
+  background: ${WHITE};
+  min-height: 100vh;
+  width: 100vw;
+`;
+
 export const MotionContent = styled(motion.div)`
   overflow: hidden;
   display: grid;

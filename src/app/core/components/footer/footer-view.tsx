@@ -9,8 +9,9 @@ import {
   PHONE,
 } from 'app/constants/social';
 import { SITE_PUBLICATION_YEAR } from 'app/constants/site';
-import { Contacts } from 'app/features/contacts';
+import { ROUTE_NAME_HOME } from 'app/constants/routes';
 import { RED } from 'app/constants/colors';
+import { Contacts } from 'app/features/contacts';
 import {
   FooterWrapper,
   FooterNav,
@@ -22,9 +23,46 @@ interface Props {
   toggleContactForm: (prevState: boolean) => void;
   contactFormOpened: boolean;
   theme: string;
+  activeRouteName: string;
 }
 
-export const FooterView: React.FC<Props> = ({ toggleContactForm, contactFormOpened, theme }) => {
+const variants = {
+  initial: {
+    opacity: 0,
+  },
+  enter: {
+    opacity: 1,
+    transition: { duration: 1 },
+  },
+  exit: {
+    opacity: 0,
+    transition: { duration: 1.5 },
+  },
+};
+
+const homePageVariants = {
+  initial: {
+    opacity: 0,
+    x: '-100%',
+  },
+  enter: {
+    opacity: 1,
+    x: '0%',
+    transition: { duration: 1 },
+  },
+  exit: {
+    opacity: 0,
+    x: '-100%',
+    transition: { duration: 1.5 },
+  },
+};
+
+export const FooterView: React.FC<Props> = ({
+  toggleContactForm,
+  contactFormOpened,
+  theme,
+  activeRouteName,
+}) => {
   const footerNavigationLinks = [
     { name: 'github', path: SOCIAL_GITHUB_PATH, icon: faGithub },
     { name: 'linkedin', path: SOCIAL_LINKED_IN_PATH, icon: faLinkedin },
@@ -38,6 +76,12 @@ export const FooterView: React.FC<Props> = ({ toggleContactForm, contactFormOpen
       />
       <FooterWrapper
         theme={theme}
+        initial="initial"
+        animate="enter"
+        exit="exit"
+        variants={
+          activeRouteName === ROUTE_NAME_HOME ? homePageVariants : variants
+        }
       >
         <FooterNav>
           {footerNavigationLinks.map(({ path, icon, name }) => (

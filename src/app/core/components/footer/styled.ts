@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { motion } from 'framer-motion';
 
 import overlayWhiteDot from 'assets/images/overlay_white_four.png';
 import overlayBlackDot from 'assets/images/overlay_black.png';
@@ -43,7 +44,7 @@ export const FooterCopy = styled.small`
   padding: 4px 0;
 `;
 
-export const FooterWrapper = styled.footer`
+export const FooterWrapper = styled(motion.footer)`
   display: grid;
   grid-template-rows: 1fr auto;
   grid-template-columns: 1fr;
@@ -57,9 +58,9 @@ export const FooterWrapper = styled.footer`
 
   ${FooterCopy} {
     background: ${({ theme }) =>
-  theme === DARK_MODE
-    ? `${BLACK_40} url(${overlayBlackDot}) repeat scroll 0 0;`
-    : `${WHITE_SMOKE_10}`};
+      theme === DARK_MODE
+        ? `${BLACK_40} url(${overlayBlackDot}) repeat scroll 0 0;`
+        : `${WHITE_SMOKE_10}`};
   }
 `;
 

@@ -8,7 +8,7 @@ import {
   CHUNK_TYPE_TWO,
   CHUNK_TYPE_THREE,
 } from 'app/constants/portfolio';
-import { mirrorEffect } from 'app/css-helpers';
+import { mirrorEffect } from 'helpers/mirror-effect';
 
 export const ItemCategoryLabel = styled.span`
   margin-left: 10px;

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router5';
 
 import { ROUTE_NAME_ABOUT } from 'app/constants/routes';
+import { mirrorEffect } from 'helpers/mirror-effect';
 import {
   BLACK,
   GRAY_MEDIUM_10,
@@ -16,7 +17,6 @@ import {
   pulseAnim,
   pulseAnimWhite,
 } from '../../../../animations/keyframes/pulse';
-import { mirrorEffect } from '../../../../css-helpers';
 
 export const LinkOverlayMirrorEffect = styled.div`
   width: 100%;
@@ -102,21 +102,22 @@ export const PageLinkStyled = styled(Link)`
     }
   }
 
-  @media only screen and (max-width: 767px) {
-    font-size: 24px;
-    line-height: 30px;
+  @media only screen and (min-width: 991px) {
+    align-items: center;
+    padding-top: 0;
   }
+
+  padding-top: 50px;
+  align-items: flex-start;
 
   ${({ routeName }: any) =>
     routeName === 'about'
       ? `
     justify-content: flex-start;
-    align-items: center;
     left: 0;
   `
       : `
     justify-content: flex-end;
-    align-items: center;
     right: 0;
   `};
 `;

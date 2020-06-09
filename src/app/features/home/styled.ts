@@ -2,14 +2,14 @@ import styled, { keyframes } from 'styled-components';
 import { motion } from 'framer-motion';
 
 import { DARK_MODE } from 'app/constants/theme';
-import { BLACK_90, DARK_SLATE_GREY, RED } from 'app/constants/colors';
+import { BLACK_90, DARK_SLATE_GREY, RED, WHITE_80 } from 'app/constants/colors';
 import { noiseAnim, noiseAnimTwo } from 'app/animations/keyframes/noise';
 import overlayBlackDot from 'assets/images/overlay_black.png';
 import overlayWhiteDot from 'assets/images/overlay_white_four.png';
 import homepageGlitchBg from 'assets/images/homepage-yellow-background.jpg';
 
 export const MotionWrap = styled(motion.div)`
-  position: realative;
+  position: relative;
   height: 100%;
 `;
 
@@ -22,7 +22,7 @@ export const HomepageContentWrapper = styled.div`
   background: ${({ theme }) =>
     theme.mode === DARK_MODE
       ? `${BLACK_90} url(${overlayBlackDot}) repeat scroll 0 0;`
-      : `rgba(255,255,255, 0.8) url(${overlayWhiteDot}) repeat scroll 0 0;`};
+      : `${WHITE_80} url(${overlayWhiteDot}) repeat scroll 0 0;`};
 
   height: 100%;
   display: flex;
@@ -89,9 +89,14 @@ export const HomepageTitle = styled.h1`
 `;
 
 export const Name = styled.div`
-  margin-left: 15px;
   display: inline;
-  margin-right: 30px;
+
+  @media only screen and (min-width: 991px) {
+    margin-left: 15px;
+    margin-right: 30px;
+  }
+
+  margin-right: 20px;
 `;
 
 export const SurName = styled(Name)`

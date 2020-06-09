@@ -1,6 +1,6 @@
 import { css, keyframes } from 'styled-components';
-import { WHITE, WHITE_20 } from '../constants/colors';
-import { DARK_MODE } from '../constants/theme';
+import { WHITE, WHITE_20 } from '../app/constants/colors';
+import { DARK_MODE } from '../app/constants/theme';
 
 const linkOverlayMirrorEffect = keyframes`
   0% {
