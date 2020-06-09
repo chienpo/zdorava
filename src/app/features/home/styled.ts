@@ -39,7 +39,7 @@ const blink = keyframes`
 
 export const Image = styled.div<{ bgIsToggling: boolean }>`
   position: fixed;
-  top: 0;
+  top: 50px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -47,7 +47,6 @@ export const Image = styled.div<{ bgIsToggling: boolean }>`
   animation: ${blink} 0.4s linear;
   opacity: 0;
   transition: opacity 0.4s;
-  transform: scale(1.1);
   z-index: 1;
 
   ${({ bgIsToggling }) =>

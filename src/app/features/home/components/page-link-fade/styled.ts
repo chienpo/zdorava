@@ -71,12 +71,12 @@ export const PageLinkStyled = styled(Link)`
   text-decoration: none;
   display: flex;
   padding: 0 70px;
-  transition: box-shadow 0.2s, background 0.8s;
   font-size: 30px;
   line-height: 38px;
   height: 100%;
-  width: 30%;
+  width: 45%;
   box-sizing: border-box;
+  transition: box-shadow 0.2s, background 0.8s;
 
   ${Text} {
     color: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE_20 : BLACK)};

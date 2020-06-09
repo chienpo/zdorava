@@ -65,16 +65,15 @@ export const HomeView: React.FC<Props> = ({
       glareColor="transparent"
       glarePosition="all"
       className="track-on-window"
-      perspective={5000}
+      perspective={7000}
       trackOnWindow
       style={{
         position: 'fixed',
-        top: 0,
+        top: -50,
         left: 0,
         right: 0,
         bottom: 0,
       }}
-      scale={1.1}
       transitionSpeed={2500}
       tiltAxis="y"
       tiltReverse
