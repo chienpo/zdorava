@@ -8,9 +8,8 @@ import { DARK_MODE } from 'app/constants/theme';
 
 const StyledMotionLi = styled(motion.li)`
   list-style: none;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: flex;
-  align-items: center;
   cursor: pointer;
 `;
 
@@ -18,12 +17,15 @@ const NavLinkStyled = styled(BaseLink)`
   transition: all ease-in-out 0.4s;
   text-decoration: none;
   color: ${GRAY};
-  font-size: 14px;
+  font-size: 30px;
   line-height: 30px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  padding: 10px 35px;
-  border-bottom: 1px solid transparent;
+  padding: 5px 0;
+
+  &.active {
+    font-weight: bold;
+  }
 
   ${({ theme }) =>
     theme.mode === DARK_MODE
@@ -32,7 +34,6 @@ const NavLinkStyled = styled(BaseLink)`
 
         &.active {
           color: ${WHITE};
-          border-bottom: 1px solid ${WHITE};
         }
 
         &:hover {
@@ -43,7 +44,6 @@ const NavLinkStyled = styled(BaseLink)`
       : `
         &.active {
           color: ${RED};
-          border-bottom: 1px solid ${RED};
         }
 
         &:hover {

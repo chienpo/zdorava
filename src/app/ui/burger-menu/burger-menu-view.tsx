@@ -1,14 +1,18 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import styled from 'styled-components';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
 import { Route } from 'models/route.model';
 
 import { DARK_MODE } from 'app/constants/theme';
-import { BLACK_90, WHITE_20 } from 'app/constants/colors';
+import { BLACK, BLACK_90, RED, WHITE_20 } from 'app/constants/colors';
+import { PHONE } from 'app/constants/social';
 import { Backdrop } from 'app/ui/backdrop';
 import { MenuToggleButtonView } from './menu-toggle-button-view';
 import { MenuListView } from './menu-list-view';
+import { SidebarSocial, StyledMotionSocialLink } from './styled';
 
 interface RefObject {
   current: null | HTMLElement;
@@ -28,6 +32,7 @@ const StyledMotionNav = styled(motion.nav)`
   top: 0;
   left: 0;
   bottom: 0;
+  width: 100%;
 `;
 
 const StyledMotionMenuBackdrop = styled(motion.div)`
@@ -36,7 +41,6 @@ const StyledMotionMenuBackdrop = styled(motion.div)`
   left: 0;
   bottom: 0;
   width: 300px;
-  margin: 10px;
   background: ${({ theme }) =>
     theme.mode === DARK_MODE ? WHITE_20 : BLACK_90};
 `;
@@ -84,6 +88,41 @@ export const BurgerMenuView: React.FC<Props> = ({
 
           <StyledMotionMenuBackdrop variants={sidebar} />
           <MenuListView routes={routes} router={router} />
+
+          <SidebarSocial
+            variants={{
+              initial: {
+                y: 50,
+                opacity: 0,
+                transition: {
+                  y: { stiffness: 1000 },
+                },
+              },
+              open: {
+                y: 0,
+                opacity: 1,
+                transition: {
+                  y: { stiffness: 1000, velocity: -100 },
+                  delay: 0.8,
+                },
+              },
+              closed: {
+                y: 50,
+                opacity: 0,
+                transition: {
+                  y: { stiffness: 1000 },
+                },
+              },
+            }}
+            initial="initial"
+            animate="open"
+            exit="closed"
+          >
+            <StyledMotionSocialLink href={`tel:${PHONE}`}>
+              <FontAwesomeIcon icon={faPhone} style={{ color: BLACK }} />
+              &nbsp;+375 (44) 721-37-70
+            </StyledMotionSocialLink>
+          </SidebarSocial>
         </>
       )}
     </AnimatePresence>

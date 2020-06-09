@@ -6,12 +6,10 @@ import { Route } from 'models/route.model';
 import { MenuListItemView } from './menu-list-item-view';
 
 const StyledMotionUl = styled(motion.ul)`
-  padding: 25px;
+  padding: 25px 15px;
   position: absolute;
   top: 100px;
-  width: 230px;
   display: flex;
-  align-items: center;
   flex-direction: column;
 `;
 
