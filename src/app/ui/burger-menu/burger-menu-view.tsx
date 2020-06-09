@@ -7,7 +7,7 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { Route } from 'models/route.model';
 
 import { DARK_MODE } from 'app/constants/theme';
-import { BLACK, BLACK_90, RED, WHITE_20 } from 'app/constants/colors';
+import { BLACK, BLACK_90, WHITE_20 } from 'app/constants/colors';
 import { PHONE } from 'app/constants/social';
 import { Backdrop } from 'app/ui/backdrop';
 import { MenuToggleButtonView } from './menu-toggle-button-view';
