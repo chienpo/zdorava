@@ -32,7 +32,6 @@ const StyledMotionNav = styled(motion.nav)`
   top: 0;
   left: 0;
   bottom: 0;
-  width: 100%;
 `;
 
 const StyledMotionMenuBackdrop = styled(motion.div)`
@@ -80,6 +79,7 @@ export const BurgerMenuView: React.FC<Props> = ({
     animate={isOpen ? 'open' : 'closed'}
     custom={height}
     ref={containerRef}
+    style={{ width: isOpen ? '100%' : 'auto' }}
   >
     <AnimatePresence>
       {isOpen && (

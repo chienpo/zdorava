@@ -74,7 +74,7 @@ export const PageLinkStyled = styled(Link)`
   font-size: 30px;
   line-height: 38px;
   height: 100%;
-  width: 45%;
+  width: 40%;
   box-sizing: border-box;
   transition: box-shadow 0.2s, background 0.8s;
 
