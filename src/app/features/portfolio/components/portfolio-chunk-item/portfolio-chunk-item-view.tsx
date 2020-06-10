@@ -5,9 +5,11 @@ import lazySizes from 'lazysizes';
 import 'lazysizes/plugins/attrchange/ls.attrchange';
 import { I18n } from '@lingui/react';
 
+import { PortfolioItemModel } from 'models/portfolio-item.model';
+
 import { PORTFOLIO_CATEGORIES_TABS_LABELS } from 'app/constants/portfolio';
-import { PortfolioItemModel } from '../../../../../models/portfolio-item.model';
-import { PORTFOLIO_IMAGES_PATH, SITE_URL } from '../../../../constants/site';
+import { PORTFOLIO_IMAGES_PATH, SITE_URL } from 'app/constants/site';
+import { ROUTE_NAME_PORTFOLIO_PROJECT } from 'app/constants/routes';
 import {
   Item,
   ItemTitle,
@@ -102,9 +104,12 @@ export const PortfolioChunkItemView: React.FC<Props> = ({
             },
           }}
           custom={delayRef}
-          onClick={onItemClick}
         >
-          <ItemOrientationType>
+          <ItemOrientationType
+            routeName={ROUTE_NAME_PORTFOLIO_PROJECT}
+            routeParams={{ id: alt }}
+            activeClassName="active"
+          >
             <ItemFigure>
               <ItemImage
                 data-sizes="auto"

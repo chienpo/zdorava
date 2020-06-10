@@ -79,7 +79,7 @@ export const BurgerMenuView: React.FC<Props> = ({
     animate={isOpen ? 'open' : 'closed'}
     custom={height}
     ref={containerRef}
-    style={{ width: isOpen ? '100%' : 'auto' }}
+    style={{ width: isOpen ? '100%' : 'auto', zIndex: 5 }}
   >
     <AnimatePresence>
       {isOpen && (

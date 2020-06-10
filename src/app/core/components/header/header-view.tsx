@@ -10,6 +10,7 @@ import { StyledHeader } from './styled';
 interface Props {
   activeRouteName: string;
   theme: string;
+  mobileByDefault: boolean;
 }
 
 const variants = {
@@ -43,7 +44,11 @@ const homePageVariants = {
   },
 };
 
-export const HeaderView: React.FC<Props> = ({ activeRouteName, theme }) => (
+export const HeaderView: React.FC<Props> = ({
+  activeRouteName,
+  theme,
+  mobileByDefault,
+}) => (
   <StyledHeader
     initial="initial"
     animate="enter"
@@ -62,6 +67,7 @@ export const HeaderView: React.FC<Props> = ({ activeRouteName, theme }) => (
             return languageMiddleware.changeLanguage(val);
           }}
           theme={theme}
+          mobileByDefault={mobileByDefault}
         />
       )}
     </I18n>

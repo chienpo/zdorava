@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router5';
 
 import { RED, WHITE } from 'app/constants/colors';
 import {
@@ -34,11 +35,12 @@ export const ItemCategoryName = styled.span`
   padding: 5px 10px;
 `;
 
-export const ItemOrientationType = styled.div`
+export const ItemOrientationType = styled(Link)`
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  display: flex;
 `;
 
 export const ItemImage = styled.img`

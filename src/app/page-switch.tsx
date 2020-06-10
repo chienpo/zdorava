@@ -7,8 +7,10 @@ import {
   ROUTE_NAME_ABOUT,
   ROUTE_NAME_HOME,
   ROUTE_NAME_PORTFOLIO,
+  ROUTE_NAME_PORTFOLIO_PROJECT,
 } from 'app/constants/routes';
 import { NotFoundPage } from './core/pages/not-found';
+import ProjectPage from './core/pages/project/project-page';
 import { PageLoader } from './ui/page-loader/page-loader';
 import { MotionContent } from './styled';
 
@@ -35,7 +37,7 @@ const pageVariants = {
 
 export const PageSwitch = () => {
   const { route } = useRouteNode('');
-  const [topRouteName] = route.name.split('.');
+  const topRouteName = route.name.split('.')[0];
 
   return (
     <AnimatePresence exitBeforeEnter initial={false}>
@@ -77,6 +79,9 @@ export const PageSwitch = () => {
             <PortfolioPage />
           </MotionContent>
         </Suspense>
+      )}
+      {topRouteName === ROUTE_NAME_PORTFOLIO_PROJECT && (
+        <ProjectPage key={topRouteName} />
       )}
       {topRouteName === constants.UNKNOWN_ROUTE && (
         <MotionContent

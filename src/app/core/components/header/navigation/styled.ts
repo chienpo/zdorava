@@ -2,15 +2,8 @@ import styled from 'styled-components';
 import { BaseLink } from 'react-router5';
 
 import overlayBlackDot from 'assets/images/overlay_black.png';
-import overlayWhiteDot from 'assets/images/overlay_white_four.png';
 import { DARK_MODE } from 'app/constants/theme';
-import {
-  BLACK_LIGHTER_95,
-  GRAY,
-  RED,
-  WHITE,
-  WHITE_95,
-} from 'app/constants/colors';
+import { BLACK_LIGHTER_95, GRAY, RED, WHITE } from 'app/constants/colors';
 
 export const LanguageSwitchBox = styled.div`
   z-index: 0;
@@ -42,10 +35,10 @@ export const NavLinkStyled = styled(BaseLink)`
 export const NavigationWrapper = styled.div`
   grid-template-columns: auto 170px;
   background: ${({ theme }) =>
-  theme === DARK_MODE
-    ? `${BLACK_LIGHTER_95} url(${overlayBlackDot}) repeat scroll 0 0;`
-    : `
-        ${WHITE_95} url(${overlayWhiteDot}) repeat scroll 0 0;
+    theme === DARK_MODE
+      ? `${BLACK_LIGHTER_95} url(${overlayBlackDot}) repeat scroll 0 0;`
+      : `
+        ${WHITE};
       `};
   display: grid;
   grid-template-columns: 1fr 170px;
@@ -57,8 +50,8 @@ export const NavigationWrapper = styled.div`
 
   ${NavLinkStyled} {
     ${({ theme }) =>
-    theme === DARK_MODE
-      ? `
+      theme === DARK_MODE
+        ? `
         color: ${GRAY};
 
           &.active {
@@ -76,7 +69,7 @@ export const NavigationWrapper = styled.div`
             border-color: ${RED};
           }
         `
-      : `
+        : `
           &.active {
             color: ${RED};
             border-bottom: 1px solid ${RED};

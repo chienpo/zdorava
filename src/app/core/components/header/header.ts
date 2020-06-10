@@ -6,14 +6,19 @@ import { HeaderView } from './header-view';
 
 interface Props {
   theme?: string;
+  mobileByDefault?: boolean;
 }
 
-export const Header: FC<Props> = ({ theme = LIGHT_MODE }) => {
+export const Header: FC<Props> = ({
+  theme = LIGHT_MODE,
+  mobileByDefault = false,
+}) => {
   const { route } = useRouteNode('');
-  const [ topRouteName ] = route.name.split('.');
+  const [topRouteName] = route.name.split('.');
 
   return createElement(HeaderView, {
     activeRouteName: topRouteName,
     theme,
+    mobileByDefault,
   });
 };

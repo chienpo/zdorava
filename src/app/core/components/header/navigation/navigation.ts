@@ -11,6 +11,7 @@ import { NavigationView } from './navigation-view';
 interface Props extends LanguageSwitchProps {
   activeRouteName: string;
   theme: string;
+  mobileByDefault: boolean;
 }
 
 export const Navigation: FC<Props> = ({
@@ -18,6 +19,7 @@ export const Navigation: FC<Props> = ({
   onChangeLanguage,
   activeRouteName,
   theme,
+  mobileByDefault,
 }) => {
   const { router } = useRoute();
 
@@ -32,7 +34,7 @@ export const Navigation: FC<Props> = ({
     selectedLanguage,
     onChangeLanguage,
     routes,
-    isMobile: isMobile.any || !mediaMinWidthForLaptops,
+    isMobile: mobileByDefault || isMobile.any || !mediaMinWidthForLaptops,
     showMenu,
     headerHeight,
     activeRouteName,

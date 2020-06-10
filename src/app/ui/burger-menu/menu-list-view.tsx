@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 import { Route } from 'models/route.model';
+
+import { ROUTE_NAME_PORTFOLIO_PROJECT } from 'app/constants/routes';
 import { MenuListItemView } from './menu-list-item-view';
 
 const StyledMotionUl = styled(motion.ul)`
@@ -29,14 +31,16 @@ interface Props {
 
 export const MenuListView: React.FC<Props> = ({ routes, router }) => (
   <StyledMotionUl variants={variants}>
-    {routes.map(({ name, title }, index) => (
-      <MenuListItemView
-        key={name}
-        i={index}
-        name={name}
-        router={router}
-        title={title}
-      />
-    ))}
+    {routes
+      .filter(({ name }) => name !== ROUTE_NAME_PORTFOLIO_PROJECT)
+      .map(({ name, title }, index) => (
+        <MenuListItemView
+          key={name}
+          i={index}
+          name={name}
+          router={router}
+          title={title}
+        />
+      ))}
   </StyledMotionUl>
 );
