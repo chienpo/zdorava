@@ -7,6 +7,7 @@ export const SidebarSocial = styled(motion.div)`
   position: absolute;
   bottom: 15px;
   left: 15px;
+  width: 300px;
 `;
 
 export const StyledMotionSocialLink = styled.a`
