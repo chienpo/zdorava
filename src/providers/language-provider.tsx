@@ -8,7 +8,7 @@ interface Props {
 
 // noinspection JSFileReferences
 const importCatalog = async (lang: string) =>
-  import(`@lingui/loader!../../locales/${lang}/messages.po`).then(
+  import(`@lingui/loader!../locales/${lang}/messages.po`).then(
     ({ default: catalog }) => catalog
   );
 
