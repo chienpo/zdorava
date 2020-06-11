@@ -9,16 +9,16 @@ import {
   ROUTE_NAME_PORTFOLIO,
   ROUTE_NAME_PORTFOLIO_PROJECT,
 } from 'constants/routes';
-import { NotFoundPage } from './core/pages/not-found';
-import ProjectPage from './core/pages/project/project-page';
+import { NotFoundPage } from '../core/pages/not-found';
+import ProjectPage from '../core/pages/project/project-page';
 import { PageLoader } from '../ui/page-loader/page-loader';
 import { MotionContent } from './styled';
 
-const HomePage = React.lazy(() => import('./core/pages/home/home-page'));
+const HomePage = React.lazy(() => import('../core/pages/home/home-page'));
 const PortfolioPage = React.lazy(() =>
-  import('./core/pages/portfolio/portfolio-page')
+  import('../core/pages/portfolio/portfolio-page')
 );
-const AboutPage = React.lazy(() => import('./core/pages/about/about-page'));
+const AboutPage = React.lazy(() => import('../core/pages/about/about-page'));
 
 const pageVariants = {
   initial: {
