@@ -11,7 +11,7 @@ import {
 } from 'constants/routes';
 import { NotFoundPage } from './core/pages/not-found';
 import ProjectPage from './core/pages/project/project-page';
-import { PageLoader } from './ui/page-loader/page-loader';
+import { PageLoader } from '../ui/page-loader/page-loader';
 import { MotionContent } from './styled';
 
 const HomePage = React.lazy(() => import('./core/pages/home/home-page'));

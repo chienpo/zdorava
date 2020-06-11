@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Trans } from '@lingui/macro';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import { Accordion } from 'app/ui/accordion';
+import { Accordion } from 'ui/accordion';
 import { AboutLogo, RESUME_PANELS, DEFAULT_RESUME_PANEL } from './components';
 import {
   SectionAbout,

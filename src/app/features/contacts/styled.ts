@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 import { LIGHT_MODE } from 'constants/theme';
 import { BLACK, WHITE } from 'constants/colors';
-import { H2 } from 'app/ui/headings';
+import { H2 } from 'ui/headings';
 
 export const StyledMotionContactFormWrapper = styled(motion.div)`
   position: fixed;

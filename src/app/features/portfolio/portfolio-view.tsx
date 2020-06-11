@@ -5,7 +5,7 @@ import { motion, useAnimation } from 'framer-motion';
 
 import { PortfolioItemModel } from 'models/portfolio-item.model';
 
-import { MoreLoader } from 'app/ui/more-loader/more-loader';
+import { MoreLoader } from 'ui/more-loader/more-loader';
 import { PortfolioGrid } from './components/portfolio-grid/portfolio-grid';
 import { PortfolioTabs } from './components/portfolio-tabs/portfolio-tabs';
 import {

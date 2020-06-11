@@ -3,12 +3,12 @@ import * as React from 'react';
 import {
   LanguageSwitchProps,
   LanguageSwitch,
-} from 'app/ui/language-switch/language-switch';
+} from 'ui/language-switch/language-switch';
 
 import { Route } from 'models/route.model';
 import { ROUTE_NAME_PORTFOLIO } from 'constants/routes';
 import { BLACK } from 'constants/colors';
-import { BurgerMenu } from 'app/ui/burger-menu';
+import { BurgerMenu } from 'ui/burger-menu';
 import { NavigationListView } from './navigation-list-view';
 import { NavigationWrapper, LanguageSwitchBox } from './styled';
 

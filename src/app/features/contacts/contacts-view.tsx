@@ -2,8 +2,8 @@ import React, { FC } from 'react';
 import { Trans } from '@lingui/macro';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import { ButtonCloseAnimated } from 'app/ui/button-close-animated';
-import { Backdrop } from 'app/ui/backdrop';
+import { ButtonCloseAnimated } from 'ui/button-close-animated';
+import { Backdrop } from 'ui/backdrop';
 import { ContactForm } from './components/contact-form';
 import {
   FormSection,

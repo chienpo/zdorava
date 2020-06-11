@@ -9,7 +9,7 @@ import { Route } from 'models/route.model';
 import { DARK_MODE } from 'constants/theme';
 import { BLACK, BLACK_90, WHITE_20 } from 'constants/colors';
 import { PHONE } from 'constants/social';
-import { Backdrop } from 'app/ui/backdrop';
+import { Backdrop } from 'ui/backdrop';
 import { MenuToggleButtonView } from './menu-toggle-button-view';
 import { MenuListView } from './menu-list-view';
 import { SidebarSocial, StyledMotionSocialLink } from './styled';
