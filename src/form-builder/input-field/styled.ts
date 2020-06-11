@@ -7,7 +7,7 @@ import {
   GRAY_LIGHT,
   RED,
   WHITE,
-} from '../../../constants/colors';
+} from '../../constants/colors';
 
 export const FieldWrapper = styled.div`
   display: flex;

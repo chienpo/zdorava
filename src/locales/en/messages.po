@@ -100,7 +100,7 @@ msgstr "Name"
 msgid "Portfolio"
 msgstr "Portfolio"
 
-#: src/app/form-builder/validators.tsx:7
+#: src/form-builder/validators.tsx:7
 msgid "Required"
 msgstr "Required"
 
