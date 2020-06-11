@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { WHITE_20, WHITE } from 'constants/colors';
-import { infiniteSpinAnim } from 'app/animations/keyframes/spin';
+import { infiniteSpinAnim } from 'animations/keyframes/spin';
 
 export const MoreLoader = styled.div`
   height: 280px;

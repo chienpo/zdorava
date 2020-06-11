@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 import { DARK_MODE } from 'constants/theme';
 import { BLACK_90, DARK_SLATE_GREY, RED, WHITE_80 } from 'constants/colors';
-import { noiseAnim, noiseAnimTwo } from 'app/animations/keyframes/noise';
+import { noiseAnim, noiseAnimTwo } from 'animations/keyframes/noise';
 import overlayBlackDot from 'assets/images/overlay_black.png';
 import overlayWhiteDot from 'assets/images/overlay_white_four.png';
 import homepageGlitchBg from 'assets/images/homepage-yellow-background.jpg';

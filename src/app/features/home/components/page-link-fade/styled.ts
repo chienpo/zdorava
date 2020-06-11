@@ -16,7 +16,7 @@ import { DARK_MODE } from '../../../../../constants/theme';
 import {
   pulseAnim,
   pulseAnimWhite,
-} from '../../../../animations/keyframes/pulse';
+} from '../../../../../animations/keyframes/pulse';
 
 export const LinkOverlayMirrorEffect = styled.div`
   width: 100%;
