@@ -2,13 +2,13 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router5';
 
-import { RED, WHITE } from 'app/constants/colors';
+import { RED, WHITE } from 'constants/colors';
 import {
   PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND,
   CHUNK_TYPE_ONE,
   CHUNK_TYPE_TWO,
   CHUNK_TYPE_THREE,
-} from 'app/constants/portfolio';
+} from 'constants/portfolio';
 import { mirrorEffect } from 'helpers/mirror-effect';
 
 export const ItemCategoryLabel = styled.span`

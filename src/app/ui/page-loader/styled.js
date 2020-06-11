@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 
-import { DARK_MODE } from 'app/constants/theme';
-import { BLACK, BLACK_90, WHITE, WHITE_80 } from 'app/constants/colors';
+import { DARK_MODE } from 'constants/theme';
+import { BLACK, BLACK_90, WHITE, WHITE_80 } from 'constants/colors';
 import overlayWhiteDot from 'assets/images/overlay_white.png';
 import overlayBlackDot from 'assets/images/overlay_black.png';
 

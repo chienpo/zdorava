@@ -1,0 +1,11 @@
+{
+  "All projects": {
+    "origin": [["src/constants/portfolio.ts", 12]]
+  },
+  "Art": {
+    "origin": [["src/constants/portfolio.ts", 13]]
+  },
+  "Front-end": {
+    "origin": [["src/constants/portfolio.ts", 14]]
+  }
+}

@@ -13,23 +13,23 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/app/constants/page-titles.ts:8
 #: src/app/features/not-found/not-found-view.tsx:6
+#: src/constants/page-titles.ts:8
 msgid "404"
 msgstr "404"
 
-#: src/app/constants/page-titles.ts:6
-#: src/app/constants/routes.ts:9
 #: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:9
 #: src/app/features/home/home-view.tsx:26
+#: src/constants/page-titles.ts:6
+#: src/constants/routes.ts:10
 msgid "About"
 msgstr "About"
 
-#: src/app/constants/portfolio.ts:12
+#: src/constants/portfolio.ts:12
 msgid "All projects"
 msgstr "All projects"
 
-#: src/app/constants/portfolio.ts:13
+#: src/constants/portfolio.ts:13
 msgid "Art"
 msgstr "Art"
 
@@ -61,7 +61,7 @@ msgstr "Enter your name"
 msgid "Experience"
 msgstr "Experience"
 
-#: src/app/constants/portfolio.ts:14
+#: src/constants/portfolio.ts:14
 msgid "Front-end"
 msgstr "Front-end"
 
@@ -73,8 +73,8 @@ msgstr "Front-end (React-JS) Developer"
 msgid "Hello, I'm Stepan"
 msgstr "Hello, I'm Stepan"
 
-#: src/app/constants/page-titles.ts:5
-#: src/app/constants/routes.ts:8
+#: src/constants/page-titles.ts:5
+#: src/constants/routes.ts:9
 msgid "Home"
 msgstr "Home"
 
@@ -94,9 +94,9 @@ msgstr "Message"
 msgid "Name"
 msgstr "Name"
 
-#: src/app/constants/page-titles.ts:7
-#: src/app/constants/routes.ts:12
 #: src/app/features/home/home-view.tsx:27
+#: src/constants/page-titles.ts:7
+#: src/constants/routes.ts:13
 msgid "Portfolio"
 msgstr "Portfolio"
 
