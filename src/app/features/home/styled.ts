@@ -1,8 +1,8 @@
 import styled, { keyframes } from 'styled-components';
 import { motion } from 'framer-motion';
 
-import { DARK_MODE } from 'app/constants/theme';
-import { BLACK_90, DARK_SLATE_GREY, RED, WHITE_80 } from 'app/constants/colors';
+import { DARK_MODE } from 'constants/theme';
+import { BLACK_90, DARK_SLATE_GREY, RED, WHITE_80 } from 'constants/colors';
 import { noiseAnim, noiseAnimTwo } from 'app/animations/keyframes/noise';
 import overlayBlackDot from 'assets/images/overlay_black.png';
 import overlayWhiteDot from 'assets/images/overlay_white_four.png';

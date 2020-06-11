@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { RED } from '../../constants/colors';
+import { RED } from '../../../constants/colors';
 
 export const ErrorBox = styled.div`
   background: ${RED};

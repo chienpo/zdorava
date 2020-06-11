@@ -8,8 +8,8 @@ import {
   CHUNK_TYPE_ONE,
   CHUNK_TYPE_TWO,
   CHUNK_TYPE_THREE,
-} from 'app/constants/portfolio';
-import { SITE_URL, PORTFOLIO_IMAGES_PATH } from 'app/constants/site';
+} from 'constants/portfolio';
+import { SITE_URL, PORTFOLIO_IMAGES_PATH } from 'constants/site';
 import { PortfolioChunkItem } from '../portfolio-chunk-item';
 import { MotionChunkRow, MotionGridContainer } from './styled';
 

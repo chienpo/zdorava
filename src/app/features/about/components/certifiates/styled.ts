@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { mirrorEffect } from 'helpers/mirror-effect';
-import { BLACK } from '../../../../constants/colors';
+import { BLACK } from '../../../../../constants/colors';
 
 export const GalleryRow = styled.div`
   display: grid;

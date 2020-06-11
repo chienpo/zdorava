@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { I18n } from '@lingui/react';
 import { BaseLink } from 'react-router5';
-import { GRAY, WHITE, RED } from 'app/constants/colors';
-import { DARK_MODE } from 'app/constants/theme';
+import { GRAY, WHITE, RED } from 'constants/colors';
+import { DARK_MODE } from 'constants/theme';
 
 const StyledMotionLi = styled(motion.li)`
   list-style: none;

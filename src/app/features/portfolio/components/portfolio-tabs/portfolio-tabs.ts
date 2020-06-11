@@ -5,7 +5,7 @@ import {
   PORTFOLIO_CATEGORY_TAB_NAME_ALL,
   PORTFOLIO_CATEGORY_TAB_NAME_ART,
   PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND,
-} from '../../../../constants/portfolio';
+} from '../../../../../constants/portfolio';
 
 interface Props {
   activeCategoryPayload: (name: string) => void;

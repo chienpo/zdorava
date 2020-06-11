@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import overlayWhiteDot from 'assets/images/overlay_white_four.png';
 import overlayBlackDot from 'assets/images/overlay_black.png';
 
-import { DARK_MODE } from 'app/constants/theme';
+import { DARK_MODE } from 'constants/theme';
 import {
   BLACK,
   GRAY,
@@ -13,7 +13,7 @@ import {
   WHITE_SMOKE_10,
   WHITE_90,
   BLACK_40,
-} from 'app/constants/colors';
+} from 'constants/colors';
 
 const iconPulse = keyframes`
   0% {

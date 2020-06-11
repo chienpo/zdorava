@@ -2,9 +2,9 @@ import React, { FC } from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-import { BLACK_20 } from 'app/constants/colors';
+import { BLACK_20 } from 'constants/colors';
 import { useKeyPress } from 'hooks/use-key-press';
-import { KEY_CODE_ESCAPE } from 'app/constants/key-codes';
+import { KEY_CODE_ESCAPE } from 'constants/key-codes';
 
 interface Props {
   onClick: () => void;

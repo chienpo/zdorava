@@ -2,8 +2,8 @@ import React from 'react';
 import { I18n } from '@lingui/react';
 import { languageMiddleware } from 'app/providers/language-provider';
 
-import { LIGHT_MODE } from 'app/constants/theme';
-import { ROUTE_NAME_HOME } from 'app/constants/routes';
+import { LIGHT_MODE } from 'constants/theme';
+import { ROUTE_NAME_HOME } from 'constants/routes';
 import { Navigation } from './navigation';
 import { StyledHeader } from './styled';
 

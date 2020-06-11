@@ -1,7 +1,7 @@
 import React from 'react';
 import { I18n } from '@lingui/react';
 
-import { PORTFOLIO_CATEGORIES_TABS_LABELS } from '../../../../constants/portfolio';
+import { PORTFOLIO_CATEGORIES_TABS_LABELS } from '../../../../../constants/portfolio';
 import { PortfolioTabs } from './styled';
 import { Button } from '../../../../ui/button/button';
 

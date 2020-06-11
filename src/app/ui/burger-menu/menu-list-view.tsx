@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import { Route } from 'models/route.model';
 
-import { ROUTE_NAME_PORTFOLIO_PROJECT } from 'app/constants/routes';
+import { ROUTE_NAME_PORTFOLIO_PROJECT } from 'constants/routes';
 import { MenuListItemView } from './menu-list-item-view';
 
 const StyledMotionUl = styled(motion.ul)`

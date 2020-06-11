@@ -2,7 +2,7 @@ import * as React from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-import { BLACK } from 'app/constants/colors';
+import { BLACK } from 'constants/colors';
 
 const BurgerButton = styled.button`
   outline: none;

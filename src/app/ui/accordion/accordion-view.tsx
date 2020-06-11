@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { I18n } from '@lingui/react';
 
-import { BLACK, RED, RED_70 } from 'app/constants/colors';
+import { BLACK, RED, RED_70 } from 'constants/colors';
 import { Panel } from './styled';
 
 interface Props {

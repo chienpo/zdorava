@@ -2,8 +2,8 @@ import { createElement, useState } from 'react';
 import emailjs from 'emailjs-com';
 
 import { useKeyPress } from 'hooks/use-key-press';
-import { KEY_CODE_ESCAPE } from 'app/constants/key-codes';
-import { SERVICE_ID, TEMPLATE_ID, USER_ID } from 'app/constants/contacts';
+import { KEY_CODE_ESCAPE } from 'constants/key-codes';
+import { SERVICE_ID, TEMPLATE_ID, USER_ID } from 'constants/contacts';
 import { ContactFormView } from './contact-form-view';
 
 const initialValues = {};

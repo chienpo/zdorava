@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router5';
 import { motion } from 'framer-motion';
 
-import { RED, BLACK, WHITE_80, WHITE } from 'app/constants/colors';
+import { RED, BLACK, WHITE_80, WHITE } from 'constants/colors';
 
 export const StyledMotionProjectSection = styled(motion.section)`
   height: calc(100vh - 70px);

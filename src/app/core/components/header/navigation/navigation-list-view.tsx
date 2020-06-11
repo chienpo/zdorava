@@ -3,8 +3,8 @@ import { I18n } from '@lingui/react';
 
 import { Route } from 'models/route.model';
 
-import { ROUTE_NAME_PORTFOLIO_PROJECT } from 'app/constants/routes';
-import { PAGE_TITLES } from 'app/constants/page-titles';
+import { ROUTE_NAME_PORTFOLIO_PROJECT } from 'constants/routes';
+import { PAGE_TITLES } from 'constants/page-titles';
 import { NavigationList, NavLinkStyled } from './styled';
 
 interface Props {

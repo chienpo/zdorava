@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import { BaseLink } from 'react-router5';
 
 import overlayBlackDot from 'assets/images/overlay_black.png';
-import { DARK_MODE } from 'app/constants/theme';
-import { BLACK_LIGHTER_95, GRAY, RED, WHITE } from 'app/constants/colors';
+import { DARK_MODE } from 'constants/theme';
+import { BLACK_LIGHTER_95, GRAY, RED, WHITE } from 'constants/colors';
 
 export const LanguageSwitchBox = styled.div`
   z-index: 0;

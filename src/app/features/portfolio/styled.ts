@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { BLACK, WHITE } from 'app/constants/colors';
+import { BLACK, WHITE } from 'constants/colors';
 
 export const SectionPortfolio = styled.section`
   background-size: cover;

@@ -1,7 +1,7 @@
 import { createElement, useState, FC } from 'react';
 import { useRouteNode } from 'react-router5';
 
-import { LIGHT_MODE } from 'app/constants/theme';
+import { LIGHT_MODE } from 'constants/theme';
 import { FooterView } from './footer-view';
 
 interface Props {

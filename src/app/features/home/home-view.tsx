@@ -3,7 +3,7 @@ import Typing from 'react-typing-animation';
 import { Trans } from '@lingui/macro';
 import Tilt from 'react-parallax-tilt';
 
-import { ROUTE_NAME_ABOUT, ROUTE_NAME_PORTFOLIO } from 'app/constants/routes';
+import { ROUTE_NAME_ABOUT, ROUTE_NAME_PORTFOLIO } from 'constants/routes';
 import { HomepageGlitch } from './components/homepage-glitch';
 import { PageLinkFadeView } from './components/page-link-fade/page-link-fade-view';
 import {

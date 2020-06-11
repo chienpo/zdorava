@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-import { LIGHT_MODE } from 'app/constants/theme';
-import { BLACK, WHITE } from 'app/constants/colors';
+import { LIGHT_MODE } from 'constants/theme';
+import { BLACK, WHITE } from 'constants/colors';
 import { H2 } from 'app/ui/headings';
 
 export const StyledMotionContactFormWrapper = styled(motion.div)`

@@ -7,11 +7,11 @@ import {
   FIREBASE_AUTH_DOMAIN,
   FIREBASE_DATABASE_URL,
   FIREBASE_DATABASE_REF,
-} from '../../constants/api';
+} from '../../../constants/api';
 import {
   PORTFOLIO_CATEGORY_DEFAULT_TAB_NAME,
   // PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND,
-} from '../../constants/portfolio';
+} from '../../../constants/portfolio';
 import { PageLoader } from '../../ui/page-loader/page-loader';
 import { PortfolioView } from './portfolio-view';
 import { PortfolioItemModel } from '../../../models/portfolio-item.model';

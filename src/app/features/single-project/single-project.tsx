@@ -9,7 +9,7 @@ import {
   FIREBASE_DATABASE_REF,
   FIREBASE_AUTH_DOMAIN,
   FIREBASE_DATABASE_URL,
-} from 'app/constants/api';
+} from 'constants/api';
 import { SingleProjectView } from './single-project-view';
 
 export const SingleProject = () => {

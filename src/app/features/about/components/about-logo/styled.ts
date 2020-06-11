@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-import { BLACK_30 } from 'app/constants/colors';
+import { BLACK_30 } from 'constants/colors';
 
 export const GridLogoWrapper = styled(motion.div)`
   display: grid;

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-import { BLACK, RED, WHITE } from 'app/constants/colors';
+import { BLACK, RED, WHITE } from 'constants/colors';
 
 const BurgerMotionButton = styled(motion.button)`
   border: none;

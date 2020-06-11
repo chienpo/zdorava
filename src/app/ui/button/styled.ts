@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { BLACK, BLACK_90, GRAY, RED, WHITE } from 'app/constants/colors';
+import { BLACK, BLACK_90, GRAY, RED, WHITE } from 'constants/colors';
 
 export const ButtonStyled = styled.button`
   color: ${({ plain }: any) => (plain ? WHITE : 'white')};

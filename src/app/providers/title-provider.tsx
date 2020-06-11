@@ -3,7 +3,7 @@ import React from 'react';
 import DocumentTitle from 'react-document-title';
 import { I18n } from '@lingui/react';
 
-import { PAGE_TITLES } from 'app/constants/page-titles';
+import { PAGE_TITLES } from 'constants/page-titles';
 
 interface Props {
   children: any;

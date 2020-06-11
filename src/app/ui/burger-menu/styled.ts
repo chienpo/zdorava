@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { GRAY, RED } from 'app/constants/colors';
+import { GRAY, RED } from 'constants/colors';
 import { motion } from 'framer-motion';
 
 export const SidebarSocial = styled(motion.div)`

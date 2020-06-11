@@ -7,9 +7,9 @@ import { I18n } from '@lingui/react';
 
 import { PortfolioItemModel } from 'models/portfolio-item.model';
 
-import { PORTFOLIO_CATEGORIES_TABS_LABELS } from 'app/constants/portfolio';
-import { PORTFOLIO_IMAGES_PATH, SITE_URL } from 'app/constants/site';
-import { ROUTE_NAME_PORTFOLIO_PROJECT } from 'app/constants/routes';
+import { PORTFOLIO_CATEGORIES_TABS_LABELS } from 'constants/portfolio';
+import { PORTFOLIO_IMAGES_PATH, SITE_URL } from 'constants/site';
+import { ROUTE_NAME_PORTFOLIO_PROJECT } from 'constants/routes';
 import {
   Item,
   ItemTitle,

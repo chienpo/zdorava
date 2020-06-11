@@ -3,9 +3,9 @@ import { I18n } from '@lingui/react';
 
 import { PortfolioItemModel } from 'models/portfolio-item.model';
 
-import { PORTFOLIO_CATEGORIES_TABS_LABELS } from 'app/constants/portfolio';
-import { SITE_URL, PORTFOLIO_IMAGES_PATH } from 'app/constants/site';
-import { ROUTE_NAME_PORTFOLIO } from 'app/constants/routes';
+import { PORTFOLIO_CATEGORIES_TABS_LABELS } from 'constants/portfolio';
+import { SITE_URL, PORTFOLIO_IMAGES_PATH } from 'constants/site';
+import { ROUTE_NAME_PORTFOLIO } from 'constants/routes';
 import {
   StyledMotionProjectSection,
   StyledMotionFigure,

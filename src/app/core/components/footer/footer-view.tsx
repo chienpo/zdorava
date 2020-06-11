@@ -7,10 +7,10 @@ import {
   SOCIAL_GITHUB_PATH,
   SOCIAL_LINKED_IN_PATH,
   PHONE,
-} from 'app/constants/social';
-import { SITE_PUBLICATION_YEAR } from 'app/constants/site';
-import { ROUTE_NAME_HOME } from 'app/constants/routes';
-import { RED } from 'app/constants/colors';
+} from 'constants/social';
+import { SITE_PUBLICATION_YEAR } from 'constants/site';
+import { ROUTE_NAME_HOME } from 'constants/routes';
+import { RED } from 'constants/colors';
 import { Contacts } from 'app/features/contacts';
 import {
   FooterWrapper,

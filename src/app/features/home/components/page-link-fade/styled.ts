@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router5';
 
-import { ROUTE_NAME_ABOUT } from 'app/constants/routes';
+import { ROUTE_NAME_ABOUT } from 'constants/routes';
 import { mirrorEffect } from 'helpers/mirror-effect';
 import {
   BLACK,
@@ -9,10 +9,10 @@ import {
   RED,
   WHITE,
   WHITE_20,
-} from '../../../../constants/colors';
+} from '../../../../../constants/colors';
 import navigationPortfolioBackground from '../../../../../assets/images/navigation-portfolio-background.png';
 import navigationAboutBackgroundLogo from '../../../../../assets/images/contacts-background.png';
-import { DARK_MODE } from '../../../../constants/theme';
+import { DARK_MODE } from '../../../../../constants/theme';
 import {
   pulseAnim,
   pulseAnimWhite,

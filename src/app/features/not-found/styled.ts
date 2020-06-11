@@ -4,8 +4,8 @@ import overlayBlackDot from 'assets/images/overlay_black.png';
 import overlayWhiteDot from 'assets/images/overlay_white.png';
 import homepageBg from 'assets/images/homepage-background.png';
 
-import { BLACK_90, WHITE_90 } from '../../constants/colors';
-import { DARK_MODE } from '../../constants/theme';
+import { BLACK_90, WHITE_90 } from '../../../constants/colors';
+import { DARK_MODE } from '../../../constants/theme';
 
 export const SectionNotFound = styled.section`
   background: url(${homepageBg}) center center no-repeat;

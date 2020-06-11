@@ -5,10 +5,10 @@ import { ThemeProvider } from 'styled-components';
 
 import { TitleProvider } from './title-provider';
 import { LanguageProvider } from './language-provider';
-import { ROUTE_THEME_MODES } from '../constants/routes';
+import { ROUTE_THEME_MODES } from '../../constants/routes';
 
 type Props = {
-  children: (ReactNode);
+  children: ReactNode;
 };
 
 // eslint-disable-next-line import/no-default-export
@@ -20,10 +20,8 @@ export default ({ children }: Props) => {
     <ThemeProvider theme={{ mode: ROUTE_THEME_MODES[curRouter.name] }}>
       <LanguageProvider>
         <Normalize />
-        <TitleProvider routeName={curRouter.name}>
-          {children}
-        </TitleProvider>
+        <TitleProvider routeName={curRouter.name}>{children}</TitleProvider>
       </LanguageProvider>
     </ThemeProvider>
   );
-}
+};

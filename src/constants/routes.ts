@@ -3,7 +3,7 @@ import { i18nMark } from '@lingui/react';
 
 import { Route } from 'models/route.model';
 
-import { DARK_MODE, LIGHT_MODE } from 'app/constants/theme';
+import { DARK_MODE, LIGHT_MODE } from 'constants/theme';
 
 export const ROUTE_NAME_HOME = 'home';
 export const ROUTE_NAME_ABOUT = 'about';

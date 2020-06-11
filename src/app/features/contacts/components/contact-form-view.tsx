@@ -3,7 +3,7 @@ import { Trans } from '@lingui/macro';
 import { Form } from 'react-final-form';
 import { i18nMark, I18n } from '@lingui/react';
 
-import { FIELD_NAME, FIELD_EMAIL, FIELD_MESSAGE } from 'app/constants/contacts';
+import { FIELD_NAME, FIELD_EMAIL, FIELD_MESSAGE } from 'constants/contacts';
 import { Button } from '../../../ui/button/button';
 import { InputField } from '../../../form-builder';
 import { required } from '../../../form-builder/validators';

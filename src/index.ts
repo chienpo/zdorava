@@ -4,7 +4,7 @@ import { render } from 'react-dom';
 import './index.css';
 import { App } from 'app';
 import { createRouter } from './router';
-import { routes } from './app/constants/routes';
+import { routes } from './constants/routes';
 
 const rootElement = document.getElementById('root');
 

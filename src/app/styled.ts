@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-import { WHITE } from 'app/constants/colors';
+import { WHITE } from 'constants/colors';
 
 export const AppBox = styled.div`
   background: ${WHITE};
