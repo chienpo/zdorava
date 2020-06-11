@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 import { Field } from 'react-final-form';
 
 import { FieldError } from '../field-error/field-error';
@@ -14,18 +14,18 @@ import {
 interface Props {
   name: string;
   type: string;
-  children: any;
-  validate: (value: any) => any;
-  placeholder?: any | '';
+  children: ReactNode;
+  validate: (value: string) => void;
+  placeholder?: string | '';
 }
 
-export const InputField: FC<any> = ({
+export const InputField: FC<Props> = ({
   validate,
   name,
   type,
   children,
   ...props
-}: Props) => {
+}) => {
   return (
     <Field
       name={name}

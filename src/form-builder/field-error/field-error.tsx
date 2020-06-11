@@ -2,13 +2,11 @@ import React, { FC } from 'react';
 
 import { ErrorBox, IconError } from './styled';
 
-interface Meta {
-  error: string;
-  touched: boolean;
-}
-
 interface Props {
-  meta: Meta;
+  meta: {
+    error: string;
+    touched: boolean;
+  };
 }
 
 export const FieldError: FC<Props> = ({ meta }) => {
