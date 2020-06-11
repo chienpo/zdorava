@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import { DARK_MODE } from '../../constants/theme';
-import { BLACK, RED, WHITE, WHITE_SMOKE_10 } from '../../constants/colors';
+import { DARK_MODE } from 'constants/theme';
+import { BLACK, RED, WHITE, WHITE_SMOKE_10 } from 'constants/colors';
 
 export const Separator = styled.div`
   width: 2px;

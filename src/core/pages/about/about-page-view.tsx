@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { About } from 'app/features/about';
+import { About } from 'features/about';
 import { Footer } from 'core/components/footer';
 import { Header } from 'core/components/header';
 

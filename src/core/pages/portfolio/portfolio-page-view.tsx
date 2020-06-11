@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Portfolio } from 'app/features/portfolio';
+import { Portfolio } from 'features/portfolio';
 import { Footer } from 'core/components/footer';
 import { Header } from 'core/components/header';
 

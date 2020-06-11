@@ -13,15 +13,15 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/app/features/not-found/not-found-view.tsx:6
 #: src/constants/page-titles.ts:8
+#: src/features/not-found/not-found-view.tsx:6
 msgid "404"
 msgstr "404"
 
-#: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:9
-#: src/app/features/home/home-view.tsx:26
 #: src/constants/page-titles.ts:6
 #: src/constants/routes.ts:10
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:9
+#: src/features/home/home-view.tsx:26
 msgid "About"
 msgstr "Обо мне"
 
@@ -37,27 +37,27 @@ msgstr "Дизайн"
 #~ msgid "COMING SOON"
 #~ msgstr "В АЗРАБОТКЕ"
 
-#: src/app/features/portfolio/portfolio-view.tsx:25
+#: src/features/portfolio/portfolio-view.tsx:25
 msgid "COMING SOON ..."
 msgstr "В РАЗРАБОТКЕ ..."
 
-#: src/app/features/contacts/components/contact-form-view.tsx:14
+#: src/features/contacts/components/contact-form-view.tsx:14
 msgid "Email"
 msgstr "Почта"
 
-#: src/app/features/contacts/components/contact-form-view.tsx:15
+#: src/features/contacts/components/contact-form-view.tsx:15
 msgid "Enter your email"
 msgstr "Почта"
 
-#: src/app/features/contacts/components/contact-form-view.tsx:18
+#: src/features/contacts/components/contact-form-view.tsx:18
 msgid "Enter your message"
 msgstr "Сообщение"
 
-#: src/app/features/contacts/components/contact-form-view.tsx:12
+#: src/features/contacts/components/contact-form-view.tsx:12
 msgid "Enter your name"
 msgstr "Ваши инициалы"
 
-#: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:11
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:11
 msgid "Experience"
 msgstr "Опыт"
 
@@ -65,11 +65,11 @@ msgstr "Опыт"
 msgid "Front-end"
 msgstr "Front-end"
 
-#: src/app/features/about/about-view.tsx:34
+#: src/features/about/about-view.tsx:34
 msgid "Front-end (React-JS) Developer"
 msgstr "Front-end (React-JS) Разработчик"
 
-#: src/app/features/about/about-view.tsx:32
+#: src/features/about/about-view.tsx:32
 msgid "Hello, I'm Stepan"
 msgstr "Привет, меня зовут Степан"
 
@@ -78,25 +78,25 @@ msgstr "Привет, меня зовут Степан"
 msgid "Home"
 msgstr "Главная"
 
-#: src/app/features/home/home-view.tsx:44
+#: src/features/home/home-view.tsx:44
 msgid "Lagunovsky"
 msgstr "Лагуновский"
 
-#: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:16
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:16
 msgid "Languages & achievements letters"
 msgstr "Языки, сертификаты"
 
-#: src/app/features/contacts/components/contact-form-view.tsx:17
+#: src/features/contacts/components/contact-form-view.tsx:17
 msgid "Message"
 msgstr "Текст сообщения"
 
-#: src/app/features/contacts/components/contact-form-view.tsx:11
+#: src/features/contacts/components/contact-form-view.tsx:11
 msgid "Name"
 msgstr "Имя"
 
-#: src/app/features/home/home-view.tsx:27
 #: src/constants/page-titles.ts:7
 #: src/constants/routes.ts:13
+#: src/features/home/home-view.tsx:27
 msgid "Portfolio"
 msgstr "Портфолио"
 
@@ -109,18 +109,18 @@ msgstr "Обязательное поле"
 #~ msgid "Resume"
 #~ msgstr "Резюме"
 
-#: src/app/features/contacts/components/contact-form-view.tsx:21
+#: src/features/contacts/components/contact-form-view.tsx:21
 msgid "Send message"
 msgstr "Отправить сообщение"
 
-#: src/app/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:14
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:14
 msgid "Skills"
 msgstr "Профессиональные навыки"
 
-#: src/app/features/home/home-view.tsx:41
+#: src/features/home/home-view.tsx:41
 msgid "Stepan"
 msgstr "Степан"
 
-#: src/app/features/contacts/contacts-view.tsx:29
+#: src/features/contacts/contacts-view.tsx:29
 msgid "Write me"
 msgstr "Напиши мне"

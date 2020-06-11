@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { DARK_MODE } from 'constants/theme';
-import { Home } from 'app/features/home';
+import { Home } from 'features/home';
 import { Footer } from 'core/components/footer';
 import { Header } from 'core/components/header';
 

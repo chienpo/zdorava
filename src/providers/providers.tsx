@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components';
 
 import { TitleProvider } from './title-provider';
 import { LanguageProvider } from './language-provider';
-import { ROUTE_THEME_MODES } from '../constants/routes';
+import { ROUTE_THEME_MODES } from 'constants/routes';
 
 type Props = {
   children: ReactNode;

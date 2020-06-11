@@ -11,7 +11,7 @@ import {
 import { SITE_PUBLICATION_YEAR } from 'constants/site';
 import { ROUTE_NAME_HOME } from 'constants/routes';
 import { RED } from 'constants/colors';
-import { Contacts } from 'app/features/contacts';
+import { Contacts } from 'features/contacts';
 import {
   FooterWrapper,
   FooterNav,

@@ -1,0 +1,34 @@
+{
+  "About": {
+    "origin": [
+      [
+        "src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts",
+        9
+      ]
+    ]
+  },
+  "Experience": {
+    "origin": [
+      [
+        "src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts",
+        11
+      ]
+    ]
+  },
+  "Skills": {
+    "origin": [
+      [
+        "src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts",
+        14
+      ]
+    ]
+  },
+  "Languages & achievements letters": {
+    "origin": [
+      [
+        "src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts",
+        16
+      ]
+    ]
+  }
+}

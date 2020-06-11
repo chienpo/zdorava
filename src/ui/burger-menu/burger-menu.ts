@@ -3,6 +3,7 @@ import { useCycle } from 'framer-motion';
 import { useRoute } from 'react-router5';
 
 import { Route } from 'models/route.model';
+
 import { BurgerMenuView } from './burger-menu-view';
 
 interface RefObject {
