@@ -69,7 +69,6 @@ export const SingleProjectView: React.FC<{
                     <Trans>watch real project</Trans>
                   </StyledRealProjectLink>
                 ))}
-              <div />
             </Description>
             <Category>
               {i18n._(PORTFOLIO_CATEGORIES_TABS_LABELS[category])}

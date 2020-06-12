@@ -6,6 +6,8 @@ import { Header } from 'core/components/header';
 export const ProjectPageView = () => (
   <>
     <Header mobileByDefault />
-    <SingleProject />
+    <main>
+      <SingleProject />
+    </main>
   </>
 );
