@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router5';
 import { motion } from 'framer-motion';
 
-import { RED, BLACK, WHITE_80, WHITE } from 'constants/colors';
+import { RED, BLACK, WHITE_80, WHITE, RED_70 } from 'constants/colors';
 
 export const StyledMotionProjectSection = styled(motion.section)`
   height: calc(100vh - 70px);
@@ -27,11 +27,24 @@ export const StyledLink = styled(Link)`
   text-decoration: none;
   font-size: 54px;
   font-weight: bold;
-  transition: color 0.2s;
   margin-bottom: 100px;
+  transition: color 0.2s;
 
   &:hover {
     color: ${RED};
+  }
+`;
+
+export const StyledRealProjectLink = styled.a`
+  color: ${RED};
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: bold;
+  margin-left: 5px;
+  transition: color 0.2s;
+
+  &:hover {
+    color: ${RED_70};
   }
 `;
 
@@ -54,7 +67,7 @@ export const StyledMotionDescription = styled(motion.div)`
 export const Title = styled.span`
   font-size: 55px;
   text-transform: uppercase;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 `;
 
 export const Description = styled.span`

@@ -6,12 +6,12 @@
       "thumbnailSrc": "course-project-one.png",
       "alt": "course-project-one",
       "description": {
-        "en": "This is one of my first mobile-responsive projects, created when i've been studying on front-end course. Here I dived deeper in to html coding, app architecture, semantic, code structure and so on! With a great pleasure I'm sharing with you a link to this project:",
-        "ru": "Один из моих первых проектов, созданных, когда я учился на курсе front-end. Здесь я углубился в HTML-кодирование, архитектуру приложения, структуру и семантику кода. С большим удовольствием делюсь с вами ссылкой на этот проект:"
+        "en": "This is one of my first mobile-responsive projects, created when i've been studying on front-end course. Here I dived deeper in to html coding, app architecture, semantic, code structure and so on! With a great pleasure I suggest you:",
+        "ru": "Один из моих первых проектов, созданных, когда я учился на курсе front-end. Здесь я углубился в HTML-кодирование, архитектуру приложения, структуру и семантику кода. С большим удовольствием предлагаю тебе"
       },
       "details": "front-end project",
       "title": {
-        "en": "'Capture' Landing Page",
+        "en": "'Capture' Landing",
         "ru": "'Capture' Лендинг"
       },
       "projectLinks": [{ "href": "https://google.com", "label": "google.com" }]
@@ -22,8 +22,8 @@
       "thumbnailSrc": "course-project-two.png",
       "alt": "course-project-two",
       "description": {
-        "en": "This is another and a little bit more complex mobile-responsive project where i dived dipper in to java-script, jquery and npm. I used here a lot of cool libs for animations, to make up really cool and complex sliders! With a great pleasure I'm sharing with you a link to this project:",
-        "ru": "Это еще один и немного более сложный проект для мобильных устройств, в котором я погрузился в изучение java-script, jquery и npm. Я использовал здесь много крутых библиотек для анимации, чтобы создать действительно крутые и сложные слайдеры! С большим удовольствием делюсь с вами ссылкой на этот проект:"
+        "en": "This is another and a little bit more complex mobile-responsive project where i dived dipper in to java-script, jquery and npm. I used here a lot of cool libs for animations, to make up really cool and complex sliders! With a great pleasure I suggest you:",
+        "ru": "Это еще один и немного более сложный проект для мобильных устройств, в котором я погрузился в изучение java-script, jquery и npm. Я использовал здесь много крутых библиотек для анимации, чтобы создать действительно крутые и сложные слайдеры! С большим удовольствием предлагаю тебе"
       },
       "details": "front-end project",
       "title": {
@@ -38,7 +38,7 @@
       "thumbnailSrc": "grifstd-landing.png",
       "alt": "grifstd-landing",
       "description": {
-        "en": "This is one of my first commerce projects. It was created from scratch and this was a pretty cool experience for me! As a developer i paid attention to code quality and as and architect made up clean and really ui/ux friendly web design. Interactive item in services section underlines whole idea of this company, and enjoy 'GRIFFEL STUDIO' experience! This project is actually closed, but nonetheless with a great pleasure I'm sharing with you a link to this project:",
+        "en": "This is one of my first commerce projects. It was created from scratch and this was a pretty cool experience for me! As a developer i paid attention to code quality and as and architect made up clean and really ui/ux friendly web design. Interactive item in services section underlines whole idea of this company, and enjoy 'GRIFFEL STUDIO' experience! This project is actually closed, but nonetheless with a great pleasure I suggest you:",
         "ru": "Это один из моих первых коммерческих проектов. Он был создан с нуля, и это был довольно крутой опыт для меня! Как разработчик - уделил большое внимание качеству кода, а, как архитектор, разработал чистый и действительно удобный для пользователя веб-дизайн. Интерактивный пункт в разделе услуг подчеркивает всю идею этой компании и в целом проект вдохновляет пользователя скорее перенять опыт ребят из 'GRIFFEL STUDIO'! Проект уже, к сожалению, закрыт, но я с большим удовольствием делюсь с вами ссылкой на этот проект:"
       },
       "details": "front-end project",
@@ -54,8 +54,8 @@
       "thumbnailSrc": "pb-betolit-landing-page.png",
       "alt": "pb-betolit-landing-page",
       "description": {
-        "en": "I really enjoy to present you my first commercial project for a big project company! This was a little bit scary but i should started somehow my front-end experience and i got my chance! This project was created from scratch. There were anly some brand design features like logo brand color ant that it. This project globally done in some steps regarding how my skills grew! Firstly this was a simple static page, and after some time i used this with mod-x platform. So i got some pretty cool experience in management, communication with the customer, presenting features and so on! With a great pleasure I'm sharing with you a link to this project:",
-        "ru": "Мне очень приятно представить вам мой первый коммерческий проект для большой проектной компании! Это было немного страшно, но я должен был как-то начать свой фронт-энд, и я получил свой шанс! Этот проект был создан с нуля. Были только некоторые особенности дизайна бренда, такие как логотип, фирменный цвет, муравей. Этот проект сделан в несколько этапов, относительно того, как росли мои профессиональные навыки! Сначала это была простая статическая страница, и через некоторое время я использовал ее на платформе mod-x. Так что я получил довольно крутой опыт управления, общения с клиентом, представления функций и так далее! С большим удовольствием делюсь с вами ссылкой на этот проект:"
+        "en": "I really enjoy to present you my first commercial project for a big project company! This was a little bit scary but i should started somehow my front-end experience and i got my chance! This project was created from scratch. There were anly some brand design features like logo brand color ant that it. This project globally done in some steps regarding how my skills grew! Firstly this was a simple static page, and after some time i used this with mod-x platform. So i got some pretty cool experience in management, communication with the customer, presenting features and so on! With a great pleasure I suggest you:",
+        "ru": "Мне очень приятно представить вам мой первый коммерческий проект для большой проектной компании! Это было немного страшно, но я должен был как-то начать свой фронт-энд, и я получил свой шанс! Этот проект был создан с нуля. Были только некоторые особенности дизайна бренда, такие как логотип, фирменный цвет, муравей. Этот проект сделан в несколько этапов, относительно того, как росли мои профессиональные навыки! Сначала это была простая статическая страница, и через некоторое время я использовал ее на платформе mod-x. Так что я получил довольно крутой опыт управления, общения с клиентом, представления функций и так далее! С большим удовольствием предлагаю тебе"
       },
       "details": "front-end project",
       "title": {
@@ -70,8 +70,8 @@
       "thumbnailSrc": "lastminute-theatre-page.png",
       "alt": "lastminute-theatre-page",
       "description": {
-        "en": "Yep! Here you can see the one of my first projects when i was working at ITRANSITION software development company! I was over the roots of this project so I was really happy to make up it's frontend part for our сolleagues from London! I've been working in a team of cool backend developers and a great project manager! Front-end is written using jquery, sass and npm. Also i got a lot of CSS experience using flex-boxes, mixins and external libraries usage and of course this project is fully mobile responsive 'defacto'. With a great pleasure I'm sharing with you a link to this project:",
-        "ru": "Представляю вам один из моих проектов, во время работы в компании по разработке программного обеспечения ITRANSITION! Я находился у истоков этого проекта и был очень рад сделать фронт-етд для наших коллег из Лондона! Я работал в команде классных бэкэнд-разработчиков и отличного проектного менеджера! Внешний интерфейс написан с использованием jquery, sass и npm. Таким образом я получил большой опыт работы с CSS, используя flex-box, mixins и использование внешних библиотек! И, конечно же, этот проект полностью адаптирован для мобильных устройств «defacto». С большим удовольствием делюсь с вами ссылкой на этот проект:"
+        "en": "Yep! Here you can see the one of my first projects when i was working at ITRANSITION software development company! I was over the roots of this project so I was really happy to make up it's frontend part for our сolleagues from London! I've been working in a team of cool backend developers and a great project manager! Front-end is written using jquery, sass and npm. Also i got a lot of CSS experience using flex-boxes, mixins and external libraries usage and of course this project is fully mobile responsive 'defacto'. With a great pleasure I suggest you:",
+        "ru": "Представляю вам один из моих проектов, во время работы в компании по разработке программного обеспечения ITRANSITION! Я находился у истоков этого проекта и был очень рад сделать фронт-етд для наших коллег из Лондона! Я работал в команде классных бэкэнд-разработчиков и отличного проектного менеджера! Внешний интерфейс написан с использованием jquery, sass и npm. Таким образом я получил большой опыт работы с CSS, используя flex-box, mixins и использование внешних библиотек! И, конечно же, этот проект полностью адаптирован для мобильных устройств «defacto». С большим удовольствием предлагаю тебе"
       },
       "details": "front-end project",
       "title": {
@@ -86,8 +86,8 @@
       "thumbnailSrc": "ipwe-platform-import-details-page.png",
       "alt": "ipwe-platform-import-details-page",
       "description": {
-        "en": "Take a look please on this cool and complex react project! This is some kind of patent administrating and sharing platform! It contains a lot of business logic, forms, tables and features. I joined to team when there was a lot of jQuery, twig templates cause of symfony framework, but soon we decided to remove jQuery and use react! So here got in to the game! This project is my first experience with React and here and i was really exited diving in to this cool library. After a year i successfully remove all jQuery, legacy code and soon we started create a new features with my teammates with React only! This is a really complex project where i used react with a great pleasure and got a lot of experience making up a lot of cool features using this awesome library! I'm sharing with you a link to this project:",
-        "ru": "Пожалуйста, взгляните на этот крутой и сложный проект на React! Это своего рода платформа администрирования и обмена патентами! Он содержит много бизнес-логики, форм, таблиц и фич. Я присоединился к команде, когда было много jQuery, шаблонов из-за фреймворка Symfony, но вскоре мы решили удалить jQuery и использовать React! Так я оказался в деле! Этот проект - мой первый опыт работы с React и здесь, и я был очень рад погружаться эту классную библиотеку. Через год я успешно удалил весь jQuery, устаревший код, и вскоре мы начали создавать новые функции с моими товарищами по команде уже только на React! Это действительно сложный проект, в котором я с большим удовольствием получил большой опыт создания множества интересных функций с помощью этой потрясающей библиотеки! С большим удовольствием делюсь с вами ссылкой на этот проект:"
+        "en": "Take a look please on this cool and complex react project! This is some kind of patent administrating and sharing platform! It contains a lot of business logic, forms, tables and features. I joined to team when there was a lot of jQuery, twig templates cause of symfony framework, but soon we decided to remove jQuery and use react! So here got in to the game! This project is my first experience with React and here and i was really exited diving in to this cool library. After a year i successfully remove all jQuery, legacy code and soon we started create a new features with my teammates with React only! This is a really complex project where i used react with a great pleasure and got a lot of experience making up a lot of cool features using this awesome library! I suggest you:",
+        "ru": "Пожалуйста, взгляните на этот крутой и сложный проект на React! Это своего рода платформа администрирования и обмена патентами! Он содержит много бизнес-логики, форм, таблиц и фич. Я присоединился к команде, когда было много jQuery, шаблонов из-за фреймворка Symfony, но вскоре мы решили удалить jQuery и использовать React! Так я оказался в деле! Этот проект - мой первый опыт работы с React и здесь, и я был очень рад погружаться эту классную библиотеку. Через год я успешно удалил весь jQuery, устаревший код, и вскоре мы начали создавать новые функции с моими товарищами по команде уже только на React! Это действительно сложный проект, в котором я с большим удовольствием получил большой опыт создания множества интересных функций с помощью этой потрясающей библиотеки! С большим удовольствием предлагаю тебе"
       },
       "details": "front-end project",
       "title": {
@@ -104,8 +104,8 @@
       "thumbnailSrc": "ipwe-home-page.png",
       "alt": "ipwe-home-page",
       "description": {
-        "en": "Hello again in my portfolio room! IPWE customers team has an admin platform IPWE-PLATFORM to manage patents and admin account! IPWE-Marketplace - some place where you can not only create and share patents programs communicating with platform but also join to chat with the other users. This project uses React only. We have been working with a love and passion to make our US customer happy having such cool responsive app for their business! I wrote a lot of complex functionality like signup stepper, and cool UI features like chat, complex modals, and so on! I was really exited not only developing but also presenting features to the customers and always enjoy the result!  With a great pleasure I'm sharing with you a link to this project:",
-        "ru": "Привет еще раз в моей комнате портфолио! Заказчики IPWE имеют административную платформу IPWE-PLATFORM для управления патентами и учетную запись администратора! IPWE-Marketplace - это место, где вы можете не только создавать и обмениваться патентными программами, связываясь с платформой, но и вступать в чат с другими пользователями. Этот проект использует только React. Мы работали с большой любовью и страстью, чтобы наш американский клиент был счастлив, имея такое крутое адаптивное приложение для своего бизнеса! Я написал много сложного функционала, например регистратор степперов, классные фичи пользовательского интерфейса, такие как: чат, сложные модалы и многое другое! Я был действительно взволнован, не только развивая, но и представляя особенности проекта заказчикам, и всегда получаю удовлетворение от результата работы! С большим удовольствием делюсь с вами ссылкой на этот проект:"
+        "en": "Hello again in my portfolio room! IPWE customers team has an admin platform IPWE-PLATFORM to manage patents and admin account! IPWE-Marketplace - some place where you can not only create and share patents programs communicating with platform but also join to chat with the other users. This project uses React only. We have been working with a love and passion to make our US customer happy having such cool responsive app for their business! I wrote a lot of complex functionality like signup stepper, and cool UI features like chat, complex modals, and so on! I was really exited not only developing but also presenting features to the customers and always enjoy the result!  With a great pleasure I suggest you:",
+        "ru": "Привет еще раз в моей комнате портфолио! Заказчики IPWE имеют административную платформу IPWE-PLATFORM для управления патентами и учетную запись администратора! IPWE-Marketplace - это место, где вы можете не только создавать и обмениваться патентными программами, связываясь с платформой, но и вступать в чат с другими пользователями. Этот проект использует только React. Мы работали с большой любовью и страстью, чтобы наш американский клиент был счастлив, имея такое крутое адаптивное приложение для своего бизнеса! Я написал много сложного функционала, например регистратор степперов, классные фичи пользовательского интерфейса, такие как: чат, сложные модалы и многое другое! Я был действительно взволнован, не только развивая, но и представляя особенности проекта заказчикам, и всегда получаю удовлетворение от результата работы! С большим удовольствием предлагаю тебе"
       },
       "details": "front-end project",
       "title": {
@@ -150,8 +150,8 @@
       "thumbnailSrc": "faces-in-pastel.png",
       "alt": "faces-in-pastel-1",
       "description": {
-        "en": "500X800 Each - Paper, sanguine. This is an expression of human personality ",
-        "ru": "500X800 каждая - Бумага, сангина. Это образное выражение человеческой личности и интерпретируется в интерьере!"
+        "en": "500X800 Each - Paper, sanguine. This is an expression of human personality",
+        "ru": "500X800 каждая - Бумага, сангина. Это образное выражение человеческой личности и интерпретируется в интерьере"
       },
       "details": "",
       "title": {
@@ -165,8 +165,8 @@
       "thumbnailSrc": "head-portrait-2011.png",
       "alt": "head-portrait-2011",
       "description": {
-        "en": "1000X1000 - Paper, sanguine, photoshop. This is an expression of human personality and  interpreted in interior!",
-        "ru": "1000X1000 - Бумага, сангина, photoshop. Это образное выражение человеческой личности и интерпретируется в интерьере!"
+        "en": "1000X1000 - Paper, sanguine, photoshop. This is an expression of human personality and  interpreted in interior",
+        "ru": "1000X1000 - Бумага, сангина, photoshop. Это образное выражение человеческой личности и интерпретируется в интерьере"
       },
       "details": "",
       "title": {
@@ -180,8 +180,8 @@
       "thumbnailSrc": "head-square-2011.png",
       "alt": "head-square-2011",
       "description": {
-        "en": "1000X1000 - Paper, sanguine. This is an expression of human personality!",
-        "ru": "1000X1000 - Бумага, сангина. Это образное выражение человеческой личности!"
+        "en": "1000X1000 - Paper, sanguine. This is an expression of human personality",
+        "ru": "1000X1000 - Бумага, сангина. Это образное выражение человеческой личности"
       },
       "details": "",
       "title": {
@@ -195,8 +195,8 @@
       "thumbnailSrc": "heads-2011.png",
       "alt": "heads-2011",
       "description": {
-        "en": "Height: A5 - Paper, pencil.",
-        "ru": "Height: A5 - Бумага, карандаш."
+        "en": "Height: A5 - Paper, pencil",
+        "ru": "Height: A5 - Бумага, карандаш"
       },
       "details": "",
       "title": {
@@ -210,8 +210,8 @@
       "thumbnailSrc": "lady-portrait-2011.png",
       "alt": "lady-portrait-2011",
       "description": {
-        "en": "1000X1500 - Paper, sanguine.",
-        "ru": "1000X1500 - Бумага, сангина."
+        "en": "1000X1500 - Paper, sanguine",
+        "ru": "1000X1500 - Бумага, сангина"
       },
       "details": "1000X1500 - PAPER, SANGUINE",
       "title": {

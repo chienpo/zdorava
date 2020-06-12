@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { I18n } from '@lingui/react';
+import { Trans } from '@lingui/macro';
 
 import { PortfolioItemModel } from 'models/portfolio-item.model';
 
@@ -15,6 +16,7 @@ import {
   Category,
   StyledLink,
   StyledImg,
+  StyledRealProjectLink,
 } from './styled';
 
 const transition = {
@@ -39,7 +41,7 @@ const backVariants = {
 export const SingleProjectView: React.FC<{
   data: PortfolioItemModel;
 }> = ({ data }) => {
-  const { category, imageSrc, alt, title, description } = data;
+  const { category, imageSrc, alt, title, description, projectLinks } = data;
 
   return (
     <I18n>
@@ -55,7 +57,20 @@ export const SingleProjectView: React.FC<{
             <StyledLink routeName={ROUTE_NAME_PORTFOLIO}>← Back</StyledLink>
 
             <Title>{title[i18n.language]}</Title>
-            <Description>{description[i18n.language]}</Description>
+            <Description>
+              {description[i18n.language]}
+              {projectLinks &&
+                projectLinks.map(({ href, label }) => (
+                  <StyledRealProjectLink
+                    href={href}
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <Trans>watch real project</Trans>
+                  </StyledRealProjectLink>
+                ))}
+              <div />
+            </Description>
             <Category>
               {i18n._(PORTFOLIO_CATEGORIES_TABS_LABELS[category])}
             </Category>

@@ -171,3 +171,7 @@ msgstr "Веб-дизайн"
 #: src/features/contacts/contacts-view.tsx:29
 msgid "Write me"
 msgstr "Напиши мне"
+
+#: src/features/single-project/single-project-view.tsx:39
+msgid "watch real project"
+msgstr "посмотреть проект"
