@@ -1,6 +1,6 @@
 {
   "404": {
-    "origin": [["src/constants/page-titles.ts", 8]]
+    "origin": [["src/constants/page-titles.ts", 9]]
   },
   "Home": {
     "origin": [["src/constants/page-titles.ts", 5]]
@@ -10,5 +10,8 @@
   },
   "Portfolio": {
     "origin": [["src/constants/page-titles.ts", 7]]
+  },
+  "Project:": {
+    "origin": [["src/constants/page-titles.ts", 8]]
   }
 }

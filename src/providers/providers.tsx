@@ -1,14 +1,14 @@
-import React, { ReactNode } from 'react';
+import React, { ReactElement } from 'react';
 import { useRoute } from 'react-router5';
 import { Normalize } from 'styled-normalize';
 import { ThemeProvider } from 'styled-components';
 
+import { ROUTE_THEME_MODES } from 'constants/routes';
 import { TitleProvider } from './title-provider';
 import { LanguageProvider } from './language-provider';
-import { ROUTE_THEME_MODES } from 'constants/routes';
 
 type Props = {
-  children: ReactNode;
+  children: ReactElement;
 };
 
 // eslint-disable-next-line import/no-default-export
@@ -20,7 +20,7 @@ export default ({ children }: Props) => {
     <ThemeProvider theme={{ mode: ROUTE_THEME_MODES[curRouter.name] }}>
       <LanguageProvider>
         <Normalize />
-        <TitleProvider routeName={curRouter.name}>{children}</TitleProvider>
+        <TitleProvider curRouter={curRouter}>{children}</TitleProvider>
       </LanguageProvider>
     </ThemeProvider>
   );
