@@ -37,6 +37,14 @@ msgstr "Art"
 msgid "COMING SOON ..."
 msgstr "COMING SOON ..."
 
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:24
+msgid "Closely related to design, front-end development process is always going on in creative way and i can always see the result of my job. And this is what i like so much!"
+msgstr "Closely related to design, front-end development process is always going on in creative way and i can always see the result of my job. And this is what i like so much!"
+
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:15
+msgid "Creating reactive applications for me is like making up some web ecosystems. But bricks here - are cutes of code, and component-structure - is the constructions. Using my arch-design and development skills, i combine this in to a real complex react web application!"
+msgstr "Creating reactive applications for me is like making up some web ecosystems. But bricks here - are cutes of code, and component-structure - is the constructions. Using my arch-design and development skills, i combine this in to a real complex react web application!"
+
 #: src/features/contacts/components/contact-form-view.tsx:14
 msgid "Email"
 msgstr "Email"
@@ -57,6 +65,10 @@ msgstr "Enter your name"
 msgid "Experience"
 msgstr "Experience"
 
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:75
+msgid "FRAMEWORKS:"
+msgstr "FRAMEWORKS:"
+
 #: src/constants/portfolio.ts:14
 msgid "Front-end"
 msgstr "Front-end"
@@ -64,6 +76,10 @@ msgstr "Front-end"
 #: src/features/about/about-view.tsx:34
 msgid "Front-end (React-JS) Developer"
 msgstr "Front-end (React-JS) Developer"
+
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:8
+msgid "Graduated as a Master of Architectural Design, took part at Hackathon-contest by MTS in 2015 when web-development by a side with the other things became my way of life."
+msgstr "Graduated as a Master of Architectural Design, took part at Hackathon-contest by MTS in 2015 when web-development by a side with the other things became my way of life."
 
 #: src/features/about/about-view.tsx:32
 msgid "Hello, I'm Stepan"
@@ -73,6 +89,14 @@ msgstr "Hello, I'm Stepan"
 #: src/constants/routes.ts:9
 msgid "Home"
 msgstr "Home"
+
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:36
+msgid "I've been working in Itransition Softvare Development Company as a Front-end Developer. This time allowed me to dive dipper in to front-end and understand how cool is it! Working in a team of developers I took part in making up really cool projects and features for our foreign customers."
+msgstr "I've been working in Itransition Softvare Development Company as a Front-end Developer. This time allowed me to dive dipper in to front-end and understand how cool is it! Working in a team of developers I took part in making up really cool projects and features for our foreign customers."
+
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:94
+msgid "JS Build Tools / JS Task Runners:"
+msgstr "JS Build Tools / JS Task Runners:"
 
 #: src/features/home/home-view.tsx:44
 msgid "Lagunovsky"
@@ -90,6 +114,10 @@ msgstr "Message"
 msgid "Name"
 msgstr "Name"
 
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:46
+msgid "Over 10 years I've been studying on architecture & design specialisations. I was lucky to improve my skills in such areas like: interior and brand design, modern and concept arts, i created a lot of cool creative projects and also got and expierence of presenting them to the customers! This expierence has became absolutely helpful in front-end, web-design, and even though in my whole life!"
+msgstr "Over 10 years I've been studying on architecture & design specialisations. I was lucky to improve my skills in such areas like: interior and brand design, modern and concept arts, i created a lot of cool creative projects and also got and expierence of presenting them to the customers! This expierence has became absolutely helpful in front-end, web-design, and even though in my whole life!"
+
 #: src/constants/page-titles.ts:7
 #: src/constants/routes.ts:13
 #: src/features/home/home-view.tsx:27
@@ -100,9 +128,21 @@ msgstr "Portfolio"
 msgid "Project:"
 msgstr "Project:"
 
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:67
+msgid "REACT FEATURES:"
+msgstr "REACT FEATURES:"
+
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:69
+msgid "Redux, ReduxSagas, Router5, ReactPose / FrameMotion - animations"
+msgstr "Redux, ReduxSagas, Router5, ReactPose / FrameMotion - animations"
+
 #: src/form-builder/validators.tsx:7
 msgid "Required"
 msgstr "Required"
+
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:61
+msgid "STACK:"
+msgstr "STACK:"
 
 #: src/features/contacts/components/contact-form-view.tsx:21
 msgid "Send message"
@@ -115,6 +155,18 @@ msgstr "Skills"
 #: src/features/home/home-view.tsx:41
 msgid "Stepan"
 msgstr "Stepan"
+
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:77
+msgid "Symfony, (LoopBack, Angular - experience just for my own portfolio web app)"
+msgstr "Symfony, (LoopBack, Angular - experience just for my own portfolio web app)"
+
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:88
+msgid "Virtual Machine Platforms & Containers:"
+msgstr "Virtual Machine Platforms & Containers:"
+
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:108
+msgid "WEB-DESIGN:"
+msgstr "WEB-DESIGN:"
 
 #: src/features/contacts/contacts-view.tsx:29
 msgid "Write me"

@@ -37,6 +37,14 @@ msgstr "Дизайн"
 msgid "COMING SOON ..."
 msgstr "В РАЗРАБОТКЕ ..."
 
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:24
+msgid "Closely related to design, front-end development process is always going on in creative way and i can always see the result of my job. And this is what i like so much!"
+msgstr "Тесно связанный с дизайном, процесс разработки интерфейса всегда идет творчески, и я всегда вижу результат своей работы. И это то, что мне так нравится!"
+
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:15
+msgid "Creating reactive applications for me is like making up some web ecosystems. But bricks here - are cutes of code, and component-structure - is the constructions. Using my arch-design and development skills, i combine this in to a real complex react web application!"
+msgstr "Создание реактивных приложений для меня похоже на создание некоторых веб-экосистем. Но кирпичи здесь - это кусочки кода, а компонент-структура - это конструкции. Используя свои навыки в области арх-дизайна и разработки, я совмещаю это с очень сложным веб-приложением реагирования!"
+
 #: src/features/contacts/components/contact-form-view.tsx:14
 msgid "Email"
 msgstr "Почта"
@@ -57,6 +65,10 @@ msgstr "Ваши инициалы"
 msgid "Experience"
 msgstr "Опыт"
 
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:75
+msgid "FRAMEWORKS:"
+msgstr "Фреймворки"
+
 #: src/constants/portfolio.ts:14
 msgid "Front-end"
 msgstr "Front-end"
@@ -64,6 +76,10 @@ msgstr "Front-end"
 #: src/features/about/about-view.tsx:34
 msgid "Front-end (React-JS) Developer"
 msgstr "Front-end (React-JS) Разработчик"
+
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:8
+msgid "Graduated as a Master of Architectural Design, took part at Hackathon-contest by MTS in 2015 when web-development by a side with the other things became my way of life."
+msgstr "Получил степень магистра архитектурного дизайна, принял участие в хакатоне-конкурсе МТС в 2015 году, когда разработка веб-сайтов наравне с другими вещами стала моим стилем жизни."
 
 #: src/features/about/about-view.tsx:32
 msgid "Hello, I'm Stepan"
@@ -73,6 +89,14 @@ msgstr "Привет, меня зовут Степан"
 #: src/constants/routes.ts:9
 msgid "Home"
 msgstr "Главная"
+
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:36
+msgid "I've been working in Itransition Softvare Development Company as a Front-end Developer. This time allowed me to dive dipper in to front-end and understand how cool is it! Working in a team of developers I took part in making up really cool projects and features for our foreign customers."
+msgstr "Я работал в компании Itransition Softvare Development в качестве фронт-разработчика. Это время позволило мне погрузиться в передний конец и понять, как это круто! Работая в команде разработчиков, я принимал участие в создании действительно интересных проектов и функций для наших зарубежных клиентов."
+
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:94
+msgid "JS Build Tools / JS Task Runners:"
+msgstr ""
 
 #: src/features/home/home-view.tsx:44
 msgid "Lagunovsky"
@@ -90,6 +114,10 @@ msgstr "Текст сообщения"
 msgid "Name"
 msgstr "Имя"
 
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:46
+msgid "Over 10 years I've been studying on architecture & design specialisations. I was lucky to improve my skills in such areas like: interior and brand design, modern and concept arts, i created a lot of cool creative projects and also got and expierence of presenting them to the customers! This expierence has became absolutely helpful in front-end, web-design, and even though in my whole life!"
+msgstr "Более 10 лет я учусь на специализацию архитектуры и дизайна. Мне повезло улучшить свои навыки в таких областях, как: дизайн интерьера и бренда, современный и концепт-арт, я создал много крутых креативных проектов, а также получил и испытал возможность представить их клиентам! Этот опыт стал абсолютно полезным в front-end, веб-дизайне и даже в моей жизни!"
+
 #: src/constants/page-titles.ts:7
 #: src/constants/routes.ts:13
 #: src/features/home/home-view.tsx:27
@@ -100,9 +128,21 @@ msgstr "Портфолио"
 msgid "Project:"
 msgstr "Проект: "
 
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:67
+msgid "REACT FEATURES:"
+msgstr "Фичи REACT"
+
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:69
+msgid "Redux, ReduxSagas, Router5, ReactPose / FrameMotion - animations"
+msgstr "Redux, ReduxSagas, Router5, ReactPose / FrameMotion - анимации"
+
 #: src/form-builder/validators.tsx:7
 msgid "Required"
 msgstr "Обязательное поле"
+
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:61
+msgid "STACK:"
+msgstr "Стек"
 
 #: src/features/contacts/components/contact-form-view.tsx:21
 msgid "Send message"
@@ -115,6 +155,18 @@ msgstr "Профессиональные навыки"
 #: src/features/home/home-view.tsx:41
 msgid "Stepan"
 msgstr "Степан"
+
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:77
+msgid "Symfony, (LoopBack, Angular - experience just for my own portfolio web app)"
+msgstr "Symfony, (LoopBack, Angular - опы в рамках этого проекта портфолио)"
+
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:88
+msgid "Virtual Machine Platforms & Containers:"
+msgstr ""
+
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:108
+msgid "WEB-DESIGN:"
+msgstr "Веб-дизайн"
 
 #: src/features/contacts/contacts-view.tsx:29
 msgid "Write me"
