@@ -16,6 +16,8 @@ const MotionBackdrop = styled(motion.div)`
   left: 0;
   right: 0;
   background: ${BLACK_20};
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
 `;
 
 export const Backdrop: FC<Props> = ({ onClick }) => {
@@ -31,12 +33,10 @@ export const Backdrop: FC<Props> = ({ onClick }) => {
             type: 'spring',
             stiffness: 100,
           },
-          backdropFilter: 'blur(0px)',
         },
         open: {
           opacity: 1,
           transition: { duration: 0.2 },
-          backdropFilter: 'blur(3px)',
         },
         closed: {
           opacity: 0,
@@ -45,7 +45,6 @@ export const Backdrop: FC<Props> = ({ onClick }) => {
             type: 'spring',
             stiffness: 100,
           },
-          backdropFilter: 'blur(0px)',
         },
       }}
       initial="initial"

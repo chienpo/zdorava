@@ -1,13 +1,9 @@
 import { createElement, useState, useEffect, FC } from 'react';
 import axios from 'axios';
-import firebase from 'firebase/app';
-import 'firebase/database';
 
-import {
-  FIREBASE_AUTH_DOMAIN,
-  FIREBASE_DATABASE_URL,
-  FIREBASE_DATABASE_REF,
-} from 'constants/api';
+import { auth, firebaseInstance } from 'features/auth';
+
+import { FIREBASE_DATABASE_URL, FIREBASE_DATABASE_REF } from 'constants/api';
 import {
   PORTFOLIO_CATEGORY_DEFAULT_TAB_NAME,
   // PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND,
@@ -55,7 +51,7 @@ export const Portfolio: FC = () => {
         ? (DATA_CHANK_SIZE + DATA_CHANK_SIZE).toString()
         : DATA_CHANK_SIZE.toString();
 
-    firebase
+    firebaseInstance
       .database()
       .ref(FIREBASE_DATABASE_REF)
       .orderByKey()
@@ -85,7 +81,7 @@ export const Portfolio: FC = () => {
 
     const artOffset = selectedCategory === 'art' ? 0 : 6;
 
-    firebase
+    firebaseInstance
       .database()
       .ref(FIREBASE_DATABASE_REF)
       .orderByKey()
@@ -144,12 +140,7 @@ export const Portfolio: FC = () => {
   };
 
   useEffect(() => {
-    if (!firebase.apps.length) {
-      firebase.initializeApp({
-        authDomain: FIREBASE_AUTH_DOMAIN,
-        databaseURL: FIREBASE_DATABASE_URL,
-      });
-    }
+    auth();
   }, []);
 
   useEffect(() => {

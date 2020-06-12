@@ -1,15 +1,10 @@
 import { useEffect, createElement, useState, useCallback } from 'react';
 import { useRouteNode } from 'react-router5';
-import firebase from 'firebase/app';
-import 'firebase/database';
 
 import { PortfolioItemModel } from 'models/portfolio-item.model';
 
-import {
-  FIREBASE_DATABASE_REF,
-  FIREBASE_AUTH_DOMAIN,
-  FIREBASE_DATABASE_URL,
-} from 'constants/api';
+import { auth, firebaseInstance } from 'features/auth';
+import { FIREBASE_DATABASE_REF } from 'constants/api';
 import { SingleProjectView } from './single-project-view';
 
 export const SingleProject = () => {
@@ -20,7 +15,7 @@ export const SingleProject = () => {
 
   const getDataChunk = useCallback(async () => {
     if (route.params.id) {
-      firebase
+      firebaseInstance
         .database()
         .ref(FIREBASE_DATABASE_REF)
         .orderByChild('alt')
@@ -41,12 +36,7 @@ export const SingleProject = () => {
   }, [route.params.id]);
 
   useEffect(() => {
-    if (!firebase.apps.length) {
-      firebase.initializeApp({
-        authDomain: FIREBASE_AUTH_DOMAIN,
-        databaseURL: FIREBASE_DATABASE_URL,
-      });
-    }
+    auth();
   }, []);
 
   useEffect(() => {
