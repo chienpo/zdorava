@@ -7,8 +7,11 @@ import { H2 } from 'ui/headings';
 
 export const StyledMotionContactFormWrapper = styled(motion.div)`
   position: fixed;
-  z-index: 5;
   top: 0;
+  z-index: 5;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
 `;
 
 export const SectionControls = styled.div`

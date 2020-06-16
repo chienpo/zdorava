@@ -8,11 +8,10 @@ import { KEY_CODE_ESCAPE } from 'constants/key-codes';
 
 interface Props {
   onClick: () => void;
+  fixed?: boolean;
 }
 
 const MotionBackdrop = styled(motion.div)`
-  position: fixed;
-  height: 100vh;
   left: 0;
   right: 0;
   background: ${BLACK_20};
@@ -20,11 +19,17 @@ const MotionBackdrop = styled(motion.div)`
   backdrop-filter: blur(3px);
 `;
 
-export const Backdrop: FC<Props> = ({ onClick }) => {
+export const Backdrop: FC<Props> = ({ onClick, fixed = true }) => {
   useKeyPress(KEY_CODE_ESCAPE, onClick);
+
+  const fixedStyles: { [key: string]: string } | {} = {
+    position: 'fixed',
+    height: '100vh',
+  };
 
   return (
     <MotionBackdrop
+      style={fixed ? fixedStyles : {}}
       variants={{
         initial: {
           opacity: 0,

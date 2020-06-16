@@ -24,9 +24,6 @@ export const ContactsView: FC<Props> = ({ opened, onClose }) => (
     animate={opened ? 'open' : 'closed'}
   >
     <AnimatePresence>
-      {opened && <Backdrop onClick={onClose} />}
-    </AnimatePresence>
-    <AnimatePresence>
       {opened && (
         <motion.div
           initial="closed"
@@ -34,11 +31,11 @@ export const ContactsView: FC<Props> = ({ opened, onClose }) => (
           exit="closed"
           variants={{
             open: {
-              y: '0',
+              marginTop: '0%',
               transition: { duration: 0.4 },
             },
             closed: {
-              y: '-100%',
+              marginTop: '-100%',
               transition: { duration: 0.4, delay: 0.4 },
             },
           }}
@@ -56,6 +53,9 @@ export const ContactsView: FC<Props> = ({ opened, onClose }) => (
           </FormSection>
         </motion.div>
       )}
+    </AnimatePresence>
+    <AnimatePresence>
+      {opened && <Backdrop fixed={false} onClick={onClose} />}
     </AnimatePresence>
   </StyledMotionContactFormWrapper>
 );
