@@ -1,12 +1,8 @@
 {
-  "name": "cra-project",
+  "name": "zdorava",
   "version": "0.1.0",
   "main": "index.js",
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:doasync/cra-project.git"
-  },
   "scripts": {
     "start": "SKIP_PREFLIGHT_CHECK=true react-scripts start",
     "build": "SKIP_PREFLIGHT_CHECK=true GENERATE_SOURCEMAP=false react-scripts build",
