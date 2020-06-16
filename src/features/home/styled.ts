@@ -8,27 +8,20 @@ import overlayBlackDot from 'assets/images/overlay_black.png';
 import overlayWhiteDot from 'assets/images/overlay_white_four.png';
 import homepageGlitchBg from 'assets/images/homepage-yellow-background.jpg';
 
-export const MotionWrap = styled(motion.div)`
+export const MotionWrap = styled(motion.section)`
   position: relative;
   height: 100%;
 `;
 
-export const Divider = styled.div`
-  display: flex;
-  flex-grow: 1;
-`;
-
-export const HomepageContentWrapper = styled.div`
+export const DottedOverlay = styled.div`
   background: ${({ theme }) =>
     theme.mode === DARK_MODE
       ? `${BLACK_90} url(${overlayBlackDot}) repeat scroll 0 0;`
       : `${WHITE_80} url(${overlayWhiteDot}) repeat scroll 0 0;`};
-
+  position: absolute;
+  width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
   z-index: 2;
-  position: relative;
 `;
 
 const blink = keyframes`
@@ -58,19 +51,24 @@ export const Image = styled.div<{ bgIsToggling: boolean }>`
 `;
 
 export const HomepageHGroup = styled.div`
-  padding: 20px 0 50px;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
   align-items: center;
   width: 100%;
   height: 100%;
+  padding: 50px 0 20px;
+  position: relative;
+  z-index: 2;
 `;
 
-export const HomepageTitle = styled.h1`
+export const StyledH1 = styled.h1`
+  @media only screen and (min-width: 767px) {
+    font-size: 65px;
+    line-height: 80px;
+  }
+
   color: black;
-  font-size: 65px;
-  line-height: 80px;
   letter-spacing: 0;
   display: flex;
   flex-wrap: wrap;
@@ -80,26 +78,9 @@ export const HomepageTitle = styled.h1`
   font-weight: 400;
   color: ${DARK_SLATE_GREY};
   color: rgba(200, 200, 200, 0.7);
-
-  @media only screen and (max-width: 767px) {
-    font-size: 30px;
-    line-height: 36px;
-  }
-`;
-
-export const Name = styled.div`
+  font-size: 30px;
+  line-height: 36px;
   display: inline;
-
-  @media only screen and (min-width: 991px) {
-    margin-left: 15px;
-    margin-right: 30px;
-  }
-
-  margin-right: 20px;
-`;
-
-export const SurName = styled(Name)`
-  margin-top: auto;
 `;
 
 export const HomepageSubtitle = styled.div`

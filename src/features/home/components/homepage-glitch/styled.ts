@@ -14,6 +14,7 @@ export const GlitchContainer = styled.div`
 
     & > div {
       height: 100vh;
+      width: 100vw;
     }
   }
 `;

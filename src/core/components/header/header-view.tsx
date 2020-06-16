@@ -2,7 +2,6 @@ import React from 'react';
 import { I18n } from '@lingui/react';
 import { languageMiddleware } from 'providers/language-provider';
 
-import { LIGHT_MODE } from 'constants/theme';
 import { ROUTE_NAME_HOME } from 'constants/routes';
 import { Navigation } from './navigation';
 import { StyledHeader } from './styled';
@@ -54,9 +53,6 @@ export const HeaderView: React.FC<Props> = ({
     animate="enter"
     exit="exit"
     variants={activeRouteName === ROUTE_NAME_HOME ? homePageVariants : variants}
-    style={{
-      height: theme === LIGHT_MODE ? '70px' : '50px',
-    }}
   >
     <I18n>
       {({ i18n }) => (

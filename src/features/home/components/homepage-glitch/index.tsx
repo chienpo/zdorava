@@ -14,12 +14,18 @@ export const HomepageGlitch = () => {
     return () => {
       clearInterval(setGlitchIntervalOn);
     };
-  }, []);
+  }, [toggleDisabled]);
 
   useEffect(() => {
+    let setGlitchIntervalOn: ReturnType<typeof setTimeout>;
+
     if (!disabled) {
-      setTimeout(() => toggleDisabled(true), 2000);
+      setGlitchIntervalOn = setTimeout(() => toggleDisabled(true), 2000);
     }
+
+    return () => {
+      clearInterval(setGlitchIntervalOn);
+    };
   }, [disabled]);
 
   return (

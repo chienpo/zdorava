@@ -98,7 +98,7 @@ msgstr "I've been working in Itransition Softvare Development Company as a Front
 msgid "JS Build Tools / JS Task Runners:"
 msgstr "JS Build Tools / JS Task Runners:"
 
-#: src/features/home/home-view.tsx:44
+#: src/features/home/home-view.tsx:34
 msgid "Lagunovsky"
 msgstr "Lagunovsky"
 
@@ -152,7 +152,7 @@ msgstr "Send message"
 msgid "Skills"
 msgstr "Skills"
 
-#: src/features/home/home-view.tsx:41
+#: src/features/home/home-view.tsx:33
 msgid "Stepan"
 msgstr "Stepan"
 
