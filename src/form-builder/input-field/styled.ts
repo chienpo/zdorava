@@ -29,7 +29,7 @@ export const LabelText = styled.span`
 
 const inputStyles = `
   padding: 6px 12px;
-  font-family: Orbitron-Medium, sans-serif;
+  font-family: MontserratRegular, sans-serif;
   font-size: 14px;
   color: ${GRAY};
   border: 1px solid ${GRAY_LIGHT};

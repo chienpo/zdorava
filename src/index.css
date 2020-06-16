@@ -1,24 +1,25 @@
 @font-face {
-  font-family: 'Orbitron-Bold';
-  src: local('Orbitron-Bold'),
-    url('assets/fonts/Orbitron-Bold/Orbitron-Bold.woff') format('woff');
+  font-family: 'MontserratThin';
+  src: local('MontserratThin'),
+    url('assets/fonts/MontserratThin/fonts/MontserratThin.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'Orbitron-Medium';
-  src: local('Orbitron-Bold'),
-    url('assets/fonts/Orbitron-Medium/Orbitron-Medium.woff') format('woff');
+  font-family: 'MontserratRegular';
+  src: local('MontserratRegular'),
+    url('assets/fonts/MontserratRegular/fonts/MontserratRegular.woff')
+      format('woff');
 }
 
 @font-face {
-  font-family: 'Orbitron-Light';
-  src: local('Orbitron-Bold'),
-    url('assets/fonts/Orbitron-Light/Orbitron-Light.woff') format('woff');
+  font-family: 'MontserratBold';
+  src: local('MontserratBold'),
+    url('assets/fonts/MontserratBold/fonts/MontserratBold.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Font-Awesome';
-  src: local('Orbitron-Bold'),
+  src: local('Font-Awesome'),
     url('assets/fonts/Font-Awesome/Font-Awesome.woff') format('woff');
 }
 
@@ -31,7 +32,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, Orbitron-Medium, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: -apple-system, MontserratRegular, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;

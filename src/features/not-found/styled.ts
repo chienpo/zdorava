@@ -30,5 +30,5 @@ export const Overlay = styled.figure`
   font-size: 500px;
   color: rgba(10, 10, 10, 0.05);
   font-weight: 100;
-  font-family: Orbitron-Light, sans-serif;
+  font-family: MontserratThin;
 `;
