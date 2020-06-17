@@ -6,6 +6,7 @@ export const SectionAbout = styled.section`
   height: 100%;
   display: flex;
   align-items: center;
+  padding-top: 70px;
 `;
 
 export const GridContent = styled.div`
@@ -39,23 +40,24 @@ export const DeveloperName = styled.h1`
   background: ${BLACK};
   color: ${WHITE};
   text-align: left;
-  font-size: 56px;
+  font-size: 53px;
   line-height: 66px;
   letter-spacing: 0;
   text-transform: uppercase;
   margin: 0 0 22px;
+  font-family: MontserratRegular;
 `;
 
 export const Position = styled.strong`
   display: block;
-  font-size: 30px;
+  font-size: 28px;
   line-height: 38px;
-  font-weight: normal;
   text-transform: none;
   font-weight: 100;
   text-transform: uppercase;
   color: white;
   margin-top: 10px;
+  font-family: MontserratThin;
 
   strong {
     color: ${RED};
