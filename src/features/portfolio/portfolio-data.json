@@ -11,10 +11,15 @@
       },
       "details": "front-end project",
       "title": {
-        "en": "'Capture' Landing",
-        "ru": "'Capture' Лендинг"
+        "en": "Capture",
+        "ru": "Capture"
       },
-      "projectLinks": [{ "href": "https://google.com", "label": "google.com" }]
+      "projectLinks": [
+        {
+          "href": "http://trainingone.zdorava.com/",
+          "label": "trainingone.zdorava.com/"
+        }
+      ]
     },
     {
       "category": "frontend",
@@ -27,10 +32,15 @@
       },
       "details": "front-end project",
       "title": {
-        "en": "'ASSASSIN'S CREED' Landing page",
-        "ru": "'ASSASSIN'S CREED' Лендинг"
+        "en": "ASSASSIN'S CREED",
+        "ru": "ASSASSIN'S CREED"
       },
-      "projectLinks": [{ "href": "https://google.com", "label": "google.com" }]
+      "projectLinks": [
+        {
+          "href": "http://trainingtwo.zdorava.com/",
+          "label": "trainingtwo.zdorava.com"
+        }
+      ]
     },
     {
       "category": "frontend",
@@ -38,15 +48,20 @@
       "thumbnailSrc": "grifstd-landing.png",
       "alt": "grifstd-landing",
       "description": {
-        "en": "This is one of my first commerce projects. It was created from scratch and this was a pretty cool experience for me! As a developer i paid attention to code quality and as and architect made up clean and really ui/ux friendly web design. Interactive item in services section underlines whole idea of this company, and enjoy 'GRIFFEL STUDIO' experience! This project is actually closed, but nonetheless with a great pleasure I suggest you:",
+        "en": "This is one of my first commerce projects. It was created from scratch and this was a pretty cool experience for me! As a developer i paid attention to code quality and as and architect made up clean and really UI/UX friendly web design. Interactive item in services section underlines whole idea of this company, and enjoy 'GRIFFEL STUDIO' experience! This project is actually closed, but nonetheless with a great pleasure I suggest you:",
         "ru": "Это один из моих первых коммерческих проектов. Он был создан с нуля, и это был довольно крутой опыт для меня! Как разработчик - уделил большое внимание качеству кода, а, как архитектор, разработал чистый и действительно удобный для пользователя веб-дизайн. Интерактивный пункт в разделе услуг подчеркивает всю идею этой компании и в целом проект вдохновляет пользователя скорее перенять опыт ребят из 'GRIFFEL STUDIO'! Проект уже, к сожалению, закрыт, но я с большим удовольствием делюсь с вами ссылкой на этот проект:"
       },
       "details": "front-end project",
       "title": {
-        "en": "'GRIFFEL STUDIO' Landing",
-        "ru": "'GRIFFEL STUDIO' Лендинг"
+        "en": "GRIFFEL STUDIO",
+        "ru": "GRIFFEL STUDIO"
       },
-      "projectLinks": [{ "href": "https://google.com", "label": "google.com" }]
+      "projectLinks": [
+        {
+          "href": "http://grifstd.zdorava.com/",
+          "label": "grifstd.zdorava.com"
+        }
+      ]
     },
     {
       "category": "frontend",
@@ -59,10 +74,12 @@
       },
       "details": "front-end project",
       "title": {
-        "en": "Проектное бюро Бетолит",
-        "ru": "BETOLIT Landing"
+        "en": "PB-BETOLIT",
+        "ru": "Проектное бюро Бетолит"
       },
-      "projectLinks": [{ "href": "https://google.com", "label": "google.com" }]
+      "projectLinks": [
+        { "href": "https://pb-betolit.ru/", "label": "pb-betolit.ru/" }
+      ]
     },
     {
       "category": "frontend",
@@ -78,7 +95,12 @@
         "en": "LAST MINUTE",
         "ru": "LAST MINUTE"
       },
-      "projectLinks": [{ "href": "https://google.com", "label": "google.com" }]
+      "projectLinks": [
+        {
+          "href": "https://www.lastminute.com/tickets/london-theatre/musicals/the-lion-king",
+          "label": "lastminute.com/tickets/london-theatre/musicals/the-lion-king"
+        }
+      ]
     },
     {
       "category": "frontend",
@@ -86,8 +108,8 @@
       "thumbnailSrc": "ipwe-platform-import-details-page.png",
       "alt": "ipwe-platform-import-details-page",
       "description": {
-        "en": "Take a look please on this cool and complex react project! This is some kind of patent administrating and sharing platform! It contains a lot of business logic, forms, tables and features. I joined to team when there was a lot of jQuery, twig templates cause of symfony framework, but soon we decided to remove jQuery and use react! So here got in to the game! This project is my first experience with React and here and i was really exited diving in to this cool library. After a year i successfully remove all jQuery, legacy code and soon we started create a new features with my teammates with React only! This is a really complex project where i used react with a great pleasure and got a lot of experience making up a lot of cool features using this awesome library! I suggest you:",
-        "ru": "Пожалуйста, взгляните на этот крутой и сложный проект на React! Это своего рода платформа администрирования и обмена патентами! Он содержит много бизнес-логики, форм, таблиц и фич. Я присоединился к команде, когда было много jQuery, шаблонов из-за фреймворка Symfony, но вскоре мы решили удалить jQuery и использовать React! Так я оказался в деле! Этот проект - мой первый опыт работы с React и здесь, и я был очень рад погружаться эту классную библиотеку. Через год я успешно удалил весь jQuery, устаревший код, и вскоре мы начали создавать новые функции с моими товарищами по команде уже только на React! Это действительно сложный проект, в котором я с большим удовольствием получил большой опыт создания множества интересных функций с помощью этой потрясающей библиотеки! С большим удовольствием предлагаю тебе"
+        "en": "Take a look please on this cool and complex react project! This is some kind of patent administrating and sharing platform! It contains a lot of business logic, forms, tables and features. I joined to team when there was a lot of jQuery, twig templates cause of symfony framework, but soon we decided to remove jQuery and use react! So here got in to the game! This project is my first experience with React and here and i was really exited diving in to this cool library. I used react with a great pleasure and got a lot of experience making up a lot of cool features using this awesome library! I suggest you:",
+        "ru": "Пожалуйста, взгляните на этот крутой и сложный проект на React! Это своего рода платформа администрирования и обмена патентами! Он содержит много бизнес-логики, форм, таблиц и фич. Я присоединился к команде, когда было много jQuery, шаблонов из-за фреймворка Symfony, но вскоре мы решили удалить jQuery и использовать React! Так я оказался в деле! Этот проект - мой первый опыт работы с React и здесь, и я был очень рад погружаться эту классную библиотеку. Я с большим удовольствием получил большой опыт создания множества интересных функций с помощью этой потрясающей библиотеки! С большим удовольствием предлагаю тебе"
       },
       "details": "front-end project",
       "title": {
@@ -104,8 +126,8 @@
       "thumbnailSrc": "ipwe-home-page.png",
       "alt": "ipwe-home-page",
       "description": {
-        "en": "Hello again in my portfolio room! IPWE customers team has an admin platform IPWE-PLATFORM to manage patents and admin account! IPWE-Marketplace - some place where you can not only create and share patents programs communicating with platform but also join to chat with the other users. This project uses React only. We have been working with a love and passion to make our US customer happy having such cool responsive app for their business! I wrote a lot of complex functionality like signup stepper, and cool UI features like chat, complex modals, and so on! I was really exited not only developing but also presenting features to the customers and always enjoy the result!  With a great pleasure I suggest you:",
-        "ru": "Привет еще раз в моей комнате портфолио! Заказчики IPWE имеют административную платформу IPWE-PLATFORM для управления патентами и учетную запись администратора! IPWE-Marketplace - это место, где вы можете не только создавать и обмениваться патентными программами, связываясь с платформой, но и вступать в чат с другими пользователями. Этот проект использует только React. Мы работали с большой любовью и страстью, чтобы наш американский клиент был счастлив, имея такое крутое адаптивное приложение для своего бизнеса! Я написал много сложного функционала, например регистратор степперов, классные фичи пользовательского интерфейса, такие как: чат, сложные модалы и многое другое! Я был действительно взволнован, не только развивая, но и представляя особенности проекта заказчикам, и всегда получаю удовлетворение от результата работы! С большим удовольствием предлагаю тебе"
+        "en": "Hello again in my portfolio room! IPWE customers team has an admin platform IPWE-PLATFORM! Also IPWE-Marketplace - some place where you can not only create and share patents programs communicating with platform but also join to chat with the other users. We have been working with a love and passion to make our US customer happy having such cool responsive app for their business! I wrote a lot of complex functionality like signup stepper, and cool UI features like chat, complex modals, and so on! I was also really exited presenting features to the customers!  With a great pleasure I suggest you:",
+        "ru": "Привет еще раз в моей комнате портфолио! Заказчики IPWE имеют административную платформу IPWE-PLATFORM для управления патентами а так же IPWE-Marketplace - это место, где вы можете не только создавать и обмениваться патентными программами, связываясь с платформой, но и вступать в чат с другими пользователями. Мы работали с большой любовью и страстью, чтобы наш американский клиент был счастлив, имея такое крутое адаптивное приложение для своего бизнеса! Я написал много сложного функционала, например регистратор степперов, фичи UI, такие как: чат, сложные модальные окна и многое другое! Классным опытом стала практика презентаций особенностей проекта заказчикам! С большим удовольствием предлагаю тебе"
       },
       "details": "front-end project",
       "title": {
@@ -123,7 +145,7 @@
         "en": "1000X1000 - Paper, eye pencil, pencil",
         "ru": "1000X1000 - Бумага, карандашь для гоаз, простой караншаш"
       },
-      "details": "",
+      "details": "1000X1000 - Paper, eye pencil, pencil",
       "title": {
         "en": "SKOTY CHOPS",
         "ru": "ЧОППЕРЫ У СКОТТИ"
@@ -215,8 +237,8 @@
       },
       "details": "1000X1500 - PAPER, SANGUINE",
       "title": {
-        "en": "'LADY'",
-        "ru": "'ЛЕДИ'"
+        "en": "LADY",
+        "ru": "ЛЕДИ"
       }
     },
     {
@@ -260,7 +282,7 @@
       },
       "details": "",
       "title": {
-        "en": "VENERE",
+        "en": "VENUS",
         "ru": "ВЕНЕРА"
       }
     },

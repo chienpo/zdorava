@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Tilt from 'react-parallax-tilt';
 import { motion, AnimatePresence } from 'framer-motion';
+import { I18n } from '@lingui/react';
 
 import {
   PageLinkStyled,
@@ -9,6 +10,7 @@ import {
   LinkOverlayMirrorEffect,
   MotionLinkOverlay,
 } from './styled';
+import { PAGE_TITLES } from '../../../../constants/page-titles';
 
 interface Props {
   position: string;
@@ -70,19 +72,23 @@ export const PageLinkFadeView = ({ title, position, routeName }: Props) => {
         )}
       </AnimatePresence>
 
-      <PageLinkStyled
-        title={routeName}
-        onMouseEnter={() => showOverlay(true)}
-        onBlur={() => showOverlay(false)}
-        onFocus={() => showOverlay(true)}
-        onMouseOver={() => showOverlay(true)}
-        onMouseOut={() => showOverlay(false)}
-        routeName={routeName}
-      >
-        <LinkMirrorEffectBox>
-          <Text title={routeName}>{title}</Text>
-        </LinkMirrorEffectBox>
-      </PageLinkStyled>
+      <I18n>
+        {({ i18n }) => (
+          <PageLinkStyled
+            title={i18n._(PAGE_TITLES[routeName])}
+            onMouseEnter={() => showOverlay(true)}
+            onBlur={() => showOverlay(false)}
+            onFocus={() => showOverlay(true)}
+            onMouseOver={() => showOverlay(true)}
+            onMouseOut={() => showOverlay(false)}
+            routeName={routeName}
+          >
+            <LinkMirrorEffectBox>
+              <Text>{title}</Text>
+            </LinkMirrorEffectBox>
+          </PageLinkStyled>
+        )}
+      </I18n>
     </>
   );
 };

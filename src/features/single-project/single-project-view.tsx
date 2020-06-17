@@ -62,6 +62,7 @@ export const SingleProjectView: React.FC<{
               {projectLinks &&
                 projectLinks.map(({ href, label }) => (
                   <StyledRealProjectLink
+                    key={label}
                     href={href}
                     target="_blank"
                     rel="noopener"

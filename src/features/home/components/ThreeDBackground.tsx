@@ -10,7 +10,8 @@ export const ThreeDBackground = () => (
       width: '100vw',
       height: '100vh',
       background:
-        'linear-gradient(#1c9edc 50%, #a048b9 0%) 100%/50% 100% no-repeat, linear-gradient(#ee8c25 50%, #d14730 0%)',
+        // 'linear-gradient(#1c9edc 50%, #a048b9 0%) 100%/50% 100% no-repeat, linear-gradient(#ee8c25 50%, #d14730 0%)',
+        'transparent',
     }}
   >
     <div
