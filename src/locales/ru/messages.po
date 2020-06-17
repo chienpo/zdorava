@@ -32,6 +32,10 @@ msgstr "Все проекты"
 msgid "Art"
 msgstr "Дизайн"
 
+#: src/features/single-project/single-project-view.tsx:34
+msgid "Back"
+msgstr "Назад"
+
 #: src/features/portfolio/portfolio-view.tsx:25
 msgid "COMING SOON ..."
 msgstr "В РАЗРАБОТКЕ ..."
@@ -165,10 +169,14 @@ msgstr ""
 msgid "WEB-DESIGN:"
 msgstr "Веб-дизайн"
 
+#: src/features/single-project/single-project-view.tsx:41
+msgid "With a great pleasure I suggest you"
+msgstr "С большим удовольствием предлагаю тебе"
+
 #: src/features/contacts/contacts-view.tsx:26
 msgid "Write me"
 msgstr "Напиши мне"
 
-#: src/features/single-project/single-project-view.tsx:39
+#: src/features/single-project/single-project-view.tsx:45
 msgid "watch real project"
 msgstr "посмотреть проект"

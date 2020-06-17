@@ -32,6 +32,10 @@ msgstr "All projects"
 msgid "Art"
 msgstr "Art"
 
+#: src/features/single-project/single-project-view.tsx:34
+msgid "Back"
+msgstr "Back"
+
 #: src/features/portfolio/portfolio-view.tsx:25
 msgid "COMING SOON ..."
 msgstr "COMING SOON ..."
@@ -165,10 +169,14 @@ msgstr "Virtual Machine Platforms & Containers:"
 msgid "WEB-DESIGN:"
 msgstr "WEB-DESIGN:"
 
+#: src/features/single-project/single-project-view.tsx:41
+msgid "With a great pleasure I suggest you"
+msgstr "With a great pleasure I suggest you"
+
 #: src/features/contacts/contacts-view.tsx:26
 msgid "Write me"
 msgstr "Write me"
 
-#: src/features/single-project/single-project-view.tsx:39
+#: src/features/single-project/single-project-view.tsx:45
 msgid "watch real project"
 msgstr "watch real project"

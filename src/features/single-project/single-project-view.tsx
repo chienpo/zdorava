@@ -54,11 +54,17 @@ export const SingleProjectView: React.FC<{
             />
           </StyledMotionFigure>
           <StyledMotionDescription variants={backVariants}>
-            <StyledLink routeName={ROUTE_NAME_PORTFOLIO}>← Back</StyledLink>
+            <StyledLink routeName={ROUTE_NAME_PORTFOLIO}>
+              ← &nbsp;
+              <Trans>Back</Trans>
+            </StyledLink>
 
             <Title>{title[i18n.language]}</Title>
             <Description>
               {description[i18n.language]}
+              <br />
+              <Trans>With a great pleasure I suggest you</Trans>
+              &nbsp;
               {projectLinks &&
                 projectLinks.map(({ href, label }) => (
                   <StyledRealProjectLink

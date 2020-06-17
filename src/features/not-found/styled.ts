@@ -4,7 +4,7 @@ import overlayBlackDot from 'assets/images/overlay_black.png';
 import overlayWhiteDot from 'assets/images/overlay_white.png';
 import homepageBg from 'assets/images/homepage-background.png';
 
-import { BLACK_90, WHITE_90 } from 'constants/colors';
+import { BLACK, BLACK_90, WHITE_90 } from 'constants/colors';
 import { DARK_MODE } from 'constants/theme';
 
 export const SectionNotFound = styled.section`
@@ -23,12 +23,20 @@ export const Overlay = styled.figure`
       ? `${BLACK_90} url(${overlayBlackDot}) repeat scroll 0 0;`
       : `${WHITE_90} url(${overlayWhiteDot}) repeat scroll 0 0;`};
 
+  @media screen and (min-width: 991px) {
+    font-size: 400px;
+  }
+
+  @media screen and (min-width: 481px) {
+    font-size: 240px;
+  }
+
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 500px;
-  color: rgba(10, 10, 10, 0.05);
+  font-size: 150px;
+  color: ${BLACK};
   font-weight: 100;
   font-family: MontserratThin;
 `;

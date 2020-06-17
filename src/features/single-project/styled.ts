@@ -7,6 +7,7 @@ import { RED, BLACK, WHITE_80, WHITE, RED_70 } from 'constants/colors';
 export const StyledMotionProjectSection = styled(motion.section)`
   display: grid;
   min-height: calc(100vh - 70px);
+  padding-top: 70px;
 `;
 
 export const StyledMotionFigure = styled(motion.figure)`
@@ -27,38 +28,59 @@ export const StyledImg = styled.img`
 `;
 
 export const StyledMotionDescription = styled(motion.div)`
+  @media screen and (min-width: 767px) {
+    max-width: 50vw;
+  }
+
+  @media screen and (min-width: 481px) {
+    max-width: 70vw;
+    padding: 0 50px 50px 0;
+  }
+
+  padding: 15px 15px 15px 15px;
+
   position: relative;
   height: 100%;
   margin-left: auto;
-  max-width: 50vw;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   text-align: right;
   background: ${WHITE_80};
   box-shadow: ${WHITE_80} 0px 0 130px 160px;
-  padding: 0 50px 50px 0;
   height: 100%;
 `;
 
 export const Title = styled.span`
-  font-size: 55px;
+  @media screen and (min-width: 767px) {
+    font-size: 55px;
+  }
+
+  font-size: 35px;
   text-transform: uppercase;
   margin-bottom: 30px;
 `;
 
 export const Description = styled.span`
-  font-size: 30px;
+  @media screen and (min-width: 767px) {
+    font-size: 30px;
+  }
+
+  font-size: 22px;
   margin-bottom: 50px;
 `;
 
 export const Category = styled.span`
+  @media screen and (min-width: 481px) {
+    margin-right: -50px;
+  }
+
+  margin-right: -15px;
   margin-top: auto;
   background: red;
   color: ${WHITE};
   padding: 10px 50px;
   font-size: 18px;
-  margin-right: -50px;
 `;
 
 export const StyledLink = styled(Link)`
