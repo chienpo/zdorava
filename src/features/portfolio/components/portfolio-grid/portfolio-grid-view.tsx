@@ -1,6 +1,7 @@
 import React from 'react';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
+import { AnimatePresence } from 'framer-motion';
 
 import { PortfolioItemModel } from 'models/portfolio-item.model';
 
@@ -102,47 +103,49 @@ export const PortfolioGridView: React.FC<Props & DataProps> = ({
           nextLabel="next-project"
         />
       )}
-      <MotionGridContainer initial="closed" animate="open">
-        {chunckedData.map((item: PortfolioItemModel[], ind) => (
-          <MotionChunkRow
-            className={`chunk ${selectedCategory}`}
-            key={item[0].imageSrc}
-            variants={variants}
-          >
-            {item.map(
-              (
-                {
-                  category,
-                  imageSrc,
-                  alt,
-                  name,
-                  description,
-                  thumbnailSrc,
-                  title,
-                }: PortfolioItemModel,
-                index
-              ) => (
-                <PortfolioChunkItem
-                  key={imageSrc}
-                  selectedCategory={selectedCategory}
-                  category={category}
-                  imageSrc={imageSrc}
-                  alt={alt}
-                  title={title}
-                  description={description}
-                  onItemClick={() => onItemClick(imageSrc)}
-                  thumbnailSrc={thumbnailSrc}
-                  index={index}
-                  originIndex={data.length}
-                  delayPerPixel={0.0002}
-                  originOffset={originOffset}
-                  chunkType={getChunkType(ind)}
-                />
-              )
-            )}
-          </MotionChunkRow>
-        ))}
-      </MotionGridContainer>
+      <AnimatePresence>
+        <MotionGridContainer initial="closed" animate="open">
+          {chunckedData.map((item: PortfolioItemModel[], ind) => (
+            <MotionChunkRow
+              className={`chunk ${selectedCategory}`}
+              key={item[0].imageSrc}
+              variants={variants}
+            >
+              {item.map(
+                (
+                  {
+                    category,
+                    imageSrc,
+                    alt,
+                    name,
+                    description,
+                    thumbnailSrc,
+                    title,
+                  }: PortfolioItemModel,
+                  index
+                ) => (
+                  <PortfolioChunkItem
+                    key={imageSrc}
+                    selectedCategory={selectedCategory}
+                    category={category}
+                    imageSrc={imageSrc}
+                    alt={alt}
+                    title={title}
+                    description={description}
+                    onItemClick={() => onItemClick(imageSrc)}
+                    thumbnailSrc={thumbnailSrc}
+                    index={index}
+                    originIndex={data.length}
+                    delayPerPixel={0.0002}
+                    originOffset={originOffset}
+                    chunkType={getChunkType(ind)}
+                  />
+                )
+              )}
+            </MotionChunkRow>
+          ))}
+        </MotionGridContainer>
+      </AnimatePresence>
     </>
   );
 };
