@@ -3,7 +3,7 @@ import { I18n } from '@lingui/react';
 import { languageMiddleware } from 'providers/language-provider';
 
 import { toggleLang } from 'store/language-store';
-import { ROUTE_NAME_HOME } from 'constants/routes';
+import { ROUTE_NAME_HOME } from 'router/routes';
 import { Navigation } from './navigation';
 import { StyledHeader } from './styled';
 

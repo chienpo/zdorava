@@ -1,0 +1,11 @@
+{
+  "Home": {
+    "origin": [["src/router/routes.ts", 7]]
+  },
+  "About": {
+    "origin": [["src/router/routes.ts", 8]]
+  },
+  "Portfolio": {
+    "origin": [["src/router/routes.ts", 11]]
+  }
+}

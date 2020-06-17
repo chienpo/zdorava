@@ -6,7 +6,7 @@ import {
   ROUTE_NAME_ABOUT,
   ROUTE_NAME_PORTFOLIO,
   ROUTE_NAME_PORTFOLIO_PROJECT,
-} from './routes';
+} from 'router/routes';
 
 export const PAGE_TITLES: { [key: string]: string } = {
   [ROUTE_NAME_HOME]: i18nMark('Home'),

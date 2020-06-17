@@ -9,7 +9,7 @@ import { PortfolioItemModel } from 'models/portfolio-item.model';
 
 import { PORTFOLIO_CATEGORIES_TABS_LABELS } from 'constants/portfolio';
 import { PORTFOLIO_IMAGES_PATH, SITE_URL } from 'constants/site';
-import { ROUTE_NAME_PORTFOLIO_PROJECT } from 'constants/routes';
+import { ROUTE_NAME_PORTFOLIO_PROJECT } from 'router/routes';
 import {
   Item,
   ItemTitle,

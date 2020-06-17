@@ -6,7 +6,7 @@ import { PortfolioItemModel } from 'models/portfolio-item.model';
 
 import { PORTFOLIO_CATEGORIES_TABS_LABELS } from 'constants/portfolio';
 import { SITE_URL, PORTFOLIO_IMAGES_PATH } from 'constants/site';
-import { ROUTE_NAME_PORTFOLIO } from 'constants/routes';
+import { ROUTE_NAME_PORTFOLIO } from 'router/routes';
 import {
   StyledMotionProjectSection,
   StyledMotionFigure,

@@ -19,9 +19,9 @@ msgid "404"
 msgstr "404"
 
 #: src/constants/page-titles.ts:6
-#: src/constants/routes.ts:10
 #: src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:9
 #: src/features/home/home-view.tsx:26
+#: src/router/routes.ts:8
 msgid "About"
 msgstr "About"
 
@@ -86,7 +86,7 @@ msgid "Hello, I'm Stepan"
 msgstr "Hello, I'm Stepan"
 
 #: src/constants/page-titles.ts:5
-#: src/constants/routes.ts:9
+#: src/router/routes.ts:7
 msgid "Home"
 msgstr "Home"
 
@@ -119,8 +119,8 @@ msgid "Over 10 years I've been studying on architecture & design specialisations
 msgstr "Over 10 years I've been studying on architecture & design specialisations. I was lucky to improve my skills in such areas like: interior and brand design, modern and concept arts, i created a lot of cool creative projects and also got and expierence of presenting them to the customers! This expierence has became absolutely helpful in front-end, web-design, and even though in my whole life!"
 
 #: src/constants/page-titles.ts:7
-#: src/constants/routes.ts:13
 #: src/features/home/home-view.tsx:27
+#: src/router/routes.ts:11
 msgid "Portfolio"
 msgstr "Portfolio"
 
@@ -168,7 +168,7 @@ msgstr "Virtual Machine Platforms & Containers:"
 msgid "WEB-DESIGN:"
 msgstr "WEB-DESIGN:"
 
-#: src/features/contacts/contacts-view.tsx:29
+#: src/features/contacts/contacts-view.tsx:26
 msgid "Write me"
 msgstr "Write me"
 

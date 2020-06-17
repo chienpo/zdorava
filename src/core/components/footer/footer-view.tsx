@@ -9,7 +9,7 @@ import {
   PHONE,
 } from 'constants/social';
 import { SITE_PUBLICATION_YEAR } from 'constants/site';
-import { ROUTE_NAME_HOME } from 'constants/routes';
+import { ROUTE_NAME_HOME } from 'router/routes';
 import { RED } from 'constants/colors';
 import { Contacts } from 'features/contacts';
 import {

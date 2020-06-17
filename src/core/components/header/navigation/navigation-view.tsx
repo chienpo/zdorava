@@ -6,7 +6,7 @@ import {
 } from 'ui/language-switch/language-switch';
 
 import { Route } from 'models/route.model';
-import { ROUTE_NAME_PORTFOLIO } from 'constants/routes';
+import { ROUTE_NAME_PORTFOLIO } from 'router/routes';
 import { BLACK } from 'constants/colors';
 import { BurgerMenu } from 'ui/burger-menu';
 import { NavigationListView } from './navigation-list-view';

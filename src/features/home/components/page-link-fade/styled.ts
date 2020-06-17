@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router5';
 
-import { ROUTE_NAME_ABOUT } from 'constants/routes';
+import { ROUTE_NAME_ABOUT } from 'router/routes';
 import { mirrorEffect } from 'helpers/mirror-effect';
 import { BLACK, GRAY_MEDIUM_10, RED, WHITE, WHITE_20 } from 'constants/colors';
 import { DARK_MODE } from 'constants/theme';

@@ -2,7 +2,7 @@ import React from 'react';
 import Typing from 'react-typing-animation';
 import { Trans } from '@lingui/macro';
 
-import { ROUTE_NAME_ABOUT, ROUTE_NAME_PORTFOLIO } from 'constants/routes';
+import { ROUTE_NAME_ABOUT, ROUTE_NAME_PORTFOLIO } from 'router/routes';
 import { PageLinkFadeView } from './components/page-link-fade/page-link-fade-view';
 import { ThreeDBackground } from './components/ThreeDBackground';
 import {

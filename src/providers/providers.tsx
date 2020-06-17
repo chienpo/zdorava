@@ -3,7 +3,7 @@ import { useRoute } from 'react-router5';
 import { Normalize } from 'styled-normalize';
 import { ThemeProvider } from 'styled-components';
 
-import { ROUTE_THEME_MODES } from 'constants/routes';
+import { ROUTE_THEME_MODES } from 'constants/theme';
 import { TitleProvider } from './title-provider';
 import { LanguageProvider } from './language-provider';
 

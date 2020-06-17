@@ -19,9 +19,9 @@ msgid "404"
 msgstr "404"
 
 #: src/constants/page-titles.ts:6
-#: src/constants/routes.ts:10
 #: src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:9
 #: src/features/home/home-view.tsx:26
+#: src/router/routes.ts:8
 msgid "About"
 msgstr "Обо мне"
 
@@ -86,7 +86,7 @@ msgid "Hello, I'm Stepan"
 msgstr "Привет, меня зовут Степан"
 
 #: src/constants/page-titles.ts:5
-#: src/constants/routes.ts:9
+#: src/router/routes.ts:7
 msgid "Home"
 msgstr "Главная"
 
@@ -119,8 +119,8 @@ msgid "Over 10 years I've been studying on architecture & design specialisations
 msgstr "Более 10 лет я учусь на специализацию архитектуры и дизайна. Мне повезло улучшить свои навыки в таких областях, как: дизайн интерьера и бренда, современный и концепт-арт, я создал много крутых креативных проектов, а также получил и испытал возможность представить их клиентам! Этот опыт стал абсолютно полезным в front-end, веб-дизайне и даже в моей жизни!"
 
 #: src/constants/page-titles.ts:7
-#: src/constants/routes.ts:13
 #: src/features/home/home-view.tsx:27
+#: src/router/routes.ts:11
 msgid "Portfolio"
 msgstr "Портфолио"
 
@@ -168,7 +168,7 @@ msgstr ""
 msgid "WEB-DESIGN:"
 msgstr "Веб-дизайн"
 
-#: src/features/contacts/contacts-view.tsx:29
+#: src/features/contacts/contacts-view.tsx:26
 msgid "Write me"
 msgstr "Напиши мне"
 

@@ -8,7 +8,7 @@ import {
   ROUTE_NAME_HOME,
   ROUTE_NAME_PORTFOLIO,
   ROUTE_NAME_PORTFOLIO_PROJECT,
-} from 'constants/routes';
+} from 'router/routes';
 import { NotFoundPage } from '../core/pages/not-found';
 import ProjectPage from '../core/pages/project/project-page';
 import { PageLoader } from '../ui/page-loader/page-loader';
