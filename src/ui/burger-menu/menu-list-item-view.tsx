@@ -6,6 +6,7 @@ import { BaseLink } from 'react-router5';
 
 import { GRAY, WHITE, RED } from 'constants/colors';
 import { DARK_MODE } from 'constants/theme';
+import { PAGE_TITLES } from 'constants/page-titles';
 
 const StyledMotionLi = styled(motion.li)`
   list-style: none;
@@ -75,15 +76,9 @@ interface Props {
   i: number;
   name: string;
   router: any;
-  title: string;
 }
 
-export const MenuListItemView: React.FC<Props> = ({
-  i,
-  name,
-  title,
-  router,
-}) => (
+export const MenuListItemView: React.FC<Props> = ({ i, name, router }) => (
   <I18n>
     {({ i18n }) => (
       <StyledMotionLi
@@ -92,7 +87,7 @@ export const MenuListItemView: React.FC<Props> = ({
         whileTap={{ scale: 0.95 }}
       >
         <NavLinkStyled title={i.toString()} router={router} routeName={name}>
-          {i18n._(title)}
+          {i18n._(PAGE_TITLES[name])}
         </NavLinkStyled>
       </StyledMotionLi>
     )}

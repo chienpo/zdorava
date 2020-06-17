@@ -21,15 +21,14 @@ msgstr "404"
 #: src/constants/page-titles.ts:6
 #: src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:9
 #: src/features/home/home-view.tsx:26
-#: src/router/routes.ts:8
 msgid "About"
 msgstr "Обо мне"
 
-#: src/constants/portfolio.ts:12
+#: src/constants/portfolio.ts:7
 msgid "All projects"
 msgstr "Все проекты"
 
-#: src/constants/portfolio.ts:13
+#: src/constants/portfolio.ts:8
 msgid "Art"
 msgstr "Дизайн"
 
@@ -69,7 +68,7 @@ msgstr "Опыт"
 msgid "FRAMEWORKS:"
 msgstr "Фреймворки"
 
-#: src/constants/portfolio.ts:14
+#: src/constants/portfolio.ts:9
 msgid "Front-end"
 msgstr "Front-end"
 
@@ -86,7 +85,6 @@ msgid "Hello, I'm Stepan"
 msgstr "Привет, меня зовут Степан"
 
 #: src/constants/page-titles.ts:5
-#: src/router/routes.ts:7
 msgid "Home"
 msgstr "Главная"
 
@@ -120,7 +118,6 @@ msgstr "Более 10 лет я учусь на специализацию ар�
 
 #: src/constants/page-titles.ts:7
 #: src/features/home/home-view.tsx:27
-#: src/router/routes.ts:11
 msgid "Portfolio"
 msgstr "Портфолио"
 

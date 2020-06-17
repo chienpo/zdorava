@@ -33,14 +33,8 @@ export const MenuListView: React.FC<Props> = ({ routes, router }) => (
   <StyledMotionUl variants={variants}>
     {routes
       .filter(({ name }) => name !== ROUTE_NAME_PORTFOLIO_PROJECT)
-      .map(({ name, title }, index) => (
-        <MenuListItemView
-          key={name}
-          i={index}
-          name={name}
-          router={router}
-          title={title}
-        />
+      .map(({ name }, index) => (
+        <MenuListItemView key={name} i={index} name={name} router={router} />
       ))}
   </StyledMotionUl>
 );

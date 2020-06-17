@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 
-import { CERTIFICATES_DATA } from 'constants/cartificates';
+import { CERTIFICATES_DATA } from 'constants/certificates';
 import { Figure, Img, GalleryRow } from './styled';
 
 const data = CERTIFICATES_DATA.map(({ src }) => src);

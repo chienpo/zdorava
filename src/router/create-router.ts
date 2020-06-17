@@ -1,13 +1,9 @@
 import createRouter5 from 'router5';
 import browserPlugin from 'router5-plugin-browser';
 
-interface RouteType {
-  name: string;
-  path: string;
-  title: string;
-}
+import { Route } from '../models/route.model';
 
-export const createRouter = (routes: RouteType[]) => {
+export const createRouter = (routes: Route[]) => {
   const router = createRouter5(routes, {
     allowNotFound: true,
   });
