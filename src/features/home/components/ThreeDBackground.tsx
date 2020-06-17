@@ -9,9 +9,7 @@ export const ThreeDBackground = () => (
       position: 'fixed',
       width: '100vw',
       height: '100vh',
-      background:
-        // 'linear-gradient(#1c9edc 50%, #a048b9 0%) 100%/50% 100% no-repeat, linear-gradient(#ee8c25 50%, #d14730 0%)',
-        'transparent',
+      background: 'transparent',
     }}
   >
     <div
@@ -26,6 +24,8 @@ export const ThreeDBackground = () => (
           position: 'absolute',
           top: '0',
           left: '0',
+          right: '0',
+          bottom: '0',
         }}
       >
         <Tilt
