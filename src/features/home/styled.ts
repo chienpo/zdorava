@@ -32,7 +32,7 @@ const blink = keyframes`
 
 export const Image = styled.div<{ bgIsToggling: boolean }>`
   position: fixed;
-  top: 50px;
+  top: 70px;
   left: 0;
   width: 100%;
   height: 100%;

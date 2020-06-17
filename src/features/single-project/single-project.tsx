@@ -43,9 +43,11 @@ export const SingleProject = () => {
 
   useEffect(() => {
     getDataChunk().catch(() => {
-      router.navigate(ROUTE_NAME_PORTFOLIO, {}, { reload: true });
+      if (route.name === ROUTE_NAME_PORTFOLIO) {
+        router.navigate(ROUTE_NAME_PORTFOLIO, {}, { reload: true });
+      }
     });
-  }, [getDataChunk, router]);
+  }, [getDataChunk, router, route.name]);
 
   if (pageLoading) {
     return null;
