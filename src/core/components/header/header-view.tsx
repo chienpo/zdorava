@@ -2,6 +2,7 @@ import React from 'react';
 import { I18n } from '@lingui/react';
 import { languageMiddleware } from 'providers/language-provider';
 
+import { toggleLang } from 'store/language-store';
 import { ROUTE_NAME_HOME } from 'constants/routes';
 import { Navigation } from './navigation';
 import { StyledHeader } from './styled';
@@ -60,6 +61,8 @@ export const HeaderView: React.FC<Props> = ({
           activeRouteName={activeRouteName}
           selectedLanguage={i18n.language}
           onChangeLanguage={val => {
+            toggleLang(val);
+
             return languageMiddleware.changeLanguage(val);
           }}
           theme={theme}
