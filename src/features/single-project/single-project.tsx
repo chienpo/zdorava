@@ -3,7 +3,6 @@ import { useRouteNode, useRoute } from 'react-router5';
 
 import { PortfolioItemModel } from 'models/portfolio-item.model';
 
-import portfolioData from 'features/portfolio/portfolio-data.json';
 import { ROUTE_NAME_PORTFOLIO } from 'router/routes';
 import { auth, firebaseInstance } from 'features/auth';
 import { FIREBASE_DATABASE_REF } from 'constants/api';
@@ -17,10 +16,6 @@ export const SingleProject = () => {
   const { router } = useRoute();
 
   const projectName = route.params.id;
-
-  const isProject = portfolioData.portfolio.find(({ alt }) =>
-    alt.includes(projectName)
-  );
 
   const getDataChunk = useCallback(async () => {
     firebaseInstance
@@ -37,24 +32,20 @@ export const SingleProject = () => {
         setData(results);
         setPageLoading(false);
       })
-      .catch(error => {
-        throw error;
+      .catch(() => {
+        router.navigate(ROUTE_NAME_PORTFOLIO, {}, { reload: true });
       });
-  }, [projectName]);
+  }, [projectName, router]);
 
   useEffect(() => {
     auth();
   }, []);
 
   useEffect(() => {
-    if (isProject) {
-      getDataChunk().catch(error => {
-        throw error;
-      });
-    } else {
+    getDataChunk().catch(() => {
       router.navigate(ROUTE_NAME_PORTFOLIO, {}, { reload: true });
-    }
-  }, [getDataChunk, router, isProject]);
+    });
+  }, [getDataChunk, router]);
 
   if (pageLoading) {
     return null;

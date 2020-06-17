@@ -73,12 +73,11 @@ const variants = {
 };
 
 interface Props {
-  i: number;
   name: string;
   router: any;
 }
 
-export const MenuListItemView: React.FC<Props> = ({ i, name, router }) => (
+export const MenuListItemView: React.FC<Props> = ({ name, router }) => (
   <I18n>
     {({ i18n }) => (
       <StyledMotionLi
@@ -86,7 +85,11 @@ export const MenuListItemView: React.FC<Props> = ({ i, name, router }) => (
         whileHover={{ color: RED }}
         whileTap={{ scale: 0.95 }}
       >
-        <NavLinkStyled title={i.toString()} router={router} routeName={name}>
+        <NavLinkStyled
+          title={i18n._(PAGE_TITLES[name])}
+          router={router}
+          routeName={name}
+        >
           {i18n._(PAGE_TITLES[name])}
         </NavLinkStyled>
       </StyledMotionLi>
