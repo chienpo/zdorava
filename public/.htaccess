@@ -35,7 +35,7 @@ RewriteRule . /index.html [L]
 #        Header set Cache-Control "max-age=2628000"
 #    </FilesMatch>
 #    # 6 month
-#    <FilesMatch "\.(ico|woff2|webp)$">
+#    <FilesMatch "\.(ico|woff|woff2|webp)$">
 #        Header set Cache-Control "max-age=15768000"
 #    </FilesMatch>
 #</IfModule>
