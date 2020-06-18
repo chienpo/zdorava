@@ -1,14 +1,14 @@
 import { createElement } from 'react';
 
-import aboutLogo1 from 'assets/images/selfies/1.jpg';
-import aboutLogo2 from 'assets/images/selfies/2.jpg';
-import aboutLogo3 from 'assets/images/selfies/3.jpg';
-import aboutLogo4 from 'assets/images/selfies/4.jpg';
-import aboutLogo5 from 'assets/images/selfies/centered.jpg';
-import aboutLogo6 from 'assets/images/selfies/5.jpg';
-import aboutLogo7 from 'assets/images/selfies/6.jpg';
-import aboutLogo8 from 'assets/images/selfies/7.jpg';
-import aboutLogo9 from 'assets/images/selfies/8.jpg';
+import aboutLogo1 from 'assets/images/selfies/1-600x600.webp';
+import aboutLogo2 from 'assets/images/selfies/2-600x600.webp';
+import aboutLogo3 from 'assets/images/selfies/3-600x600.webp';
+import aboutLogo4 from 'assets/images/selfies/4-600x600.webp';
+import aboutLogo5 from 'assets/images/selfies/centered-600x600.webp';
+import aboutLogo6 from 'assets/images/selfies/5-600x600.webp';
+import aboutLogo7 from 'assets/images/selfies/6-600x600.webp';
+import aboutLogo8 from 'assets/images/selfies/7-600x600.webp';
+import aboutLogo9 from 'assets/images/selfies/8-600x600.webp';
 import { AboutLogoView } from './about-logo-view';
 
 export const AboutLogo = () => {

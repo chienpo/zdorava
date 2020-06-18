@@ -5,8 +5,8 @@ import { ROUTE_NAME_ABOUT } from 'router/routes';
 import { mirrorEffect } from 'helpers/mirror-effect';
 import { BLACK, GRAY_MEDIUM_10, RED, WHITE, WHITE_20 } from 'constants/colors';
 import { DARK_MODE } from 'constants/theme';
-import navigationPortfolioBackground from 'assets/images/navigation-portfolio-background.png';
-import navigationAboutBackgroundLogo from 'assets/images/contacts-background.png';
+import navigationPortfolioBackground from 'assets/images/backgrounds/navigation-portfolio-background.webp';
+import navigationAboutBackgroundLogo from 'assets/images/backgrounds/navigation-contacts-background.webp';
 import { pulseAnim, pulseAnimWhite } from 'animations/keyframes/pulse';
 
 export const LinkOverlayMirrorEffect = styled.div`

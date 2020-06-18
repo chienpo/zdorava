@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import overlayBlackDot from 'assets/images/overlay_black.png';
 import overlayWhiteDot from 'assets/images/overlay_white.png';
-import homepageBg from 'assets/images/homepage-background.png';
+import homepageBg from 'assets/images/backgrounds/homepage-background.webp';
 
 import { BLACK, BLACK_90, WHITE_90 } from 'constants/colors';
 import { DARK_MODE } from 'constants/theme';
