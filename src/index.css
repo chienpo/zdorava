@@ -1,20 +1,48 @@
 @font-face {
   font-family: 'MontserratThin';
+  font-style: normal;
+  font-weight: 100;
   src: local('MontserratThin'),
-    url('assets/fonts/MontserratThin/fonts/MontserratThin.woff') format('woff');
+    url('assets/fonts/MontserratThin/MontserratThin.eot')
+      format('embedded-opentype'),
+    url('assets/fonts/MontserratThin/MontserratThin.woff2') format('woff2'),
+    url('assets/fonts/MontserratThin/MontserratThin.woff') format('woff'),
+    url('assets/fonts/MontserratThin/MontserratThin.ttf') format('truetype'),
+    url('assets/fonts/MontserratThin/MontserratThin.svg#MontserratThin')
+      format('svg');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'MontserratRegular';
+  font-style: normal;
+  font-weight: 400;
   src: local('MontserratRegular'),
-    url('assets/fonts/MontserratRegular/fonts/MontserratRegular.woff')
-      format('woff');
+    url('assets/fonts/MontserratRegular/MontserratRegular.eot')
+      format('embedded-opentype'),
+    url('assets/fonts/MontserratRegular/MontserratRegular.woff2')
+      format('woff2'),
+    url('assets/fonts/MontserratRegular/MontserratRegular.woff') format('woff'),
+    url('assets/fonts/MontserratRegular/MontserratRegular.ttf')
+      format('truetype'),
+    url('assets/fonts/MontserratRegular/MontserratRegular.svg#MontserratRegular')
+      format('svg');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'MontserratBold';
+  font-style: normal;
+  font-weight: 700;
   src: local('MontserratBold'),
-    url('assets/fonts/MontserratBold/fonts/MontserratBold.woff') format('woff');
+    url('assets/fonts/MontserratBold/MontserratBold.eot')
+      format('embedded-opentype'),
+    url('assets/fonts/MontserratBold/MontserratBold.woff2') format('woff2'),
+    url('assets/fonts/MontserratBold/MontserratBold.woff') format('woff'),
+    url('assets/fonts/MontserratBold/MontserratBold.ttf') format('truetype'),
+    url('assets/fonts/MontserratBold/MontserratBold.svg#MontserratBold')
+      format('svg');
+  font-display: swap;
 }
 
 @font-face {

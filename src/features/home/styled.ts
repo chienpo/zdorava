@@ -95,7 +95,6 @@ export const HomepageSubtitle = styled.div`
 
 export const WebsiteSubtitle = styled.div`
   font-family: MontserratBold;
-  font-weight: 700;
   letter-spacing: 33px;
   font-size: 18px;
   left: 13px;
