@@ -26,7 +26,7 @@ export const MotionLinkOverlay = styled.div`
       title === 'about'
         ? navigationAboutBackgroundLogo
         : navigationPortfolioBackground})
-    right center no-repeat;
+    center center no-repeat;
   background-size: cover;
   z-index: 1;
 `;

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const PortfolioTabs = styled.div`
+export const MotionPortfolioTabs = styled(motion.div)`
   padding: 80px 0 5px;
   width: 100%;
   margin: 0 auto;

@@ -1,13 +1,12 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-import overlayBlackDot from 'assets/images/overlay_black.png';
 import overlayWhiteDot from 'assets/images/overlay_white.png';
 import homepageBg from 'assets/images/backgrounds/homepage-background.webp';
 
-import { BLACK, BLACK_90, WHITE_90 } from 'constants/colors';
-import { DARK_MODE } from 'constants/theme';
+import { BLACK, WHITE_90 } from 'constants/colors';
 
-export const SectionNotFound = styled.section`
+export const SectionNotFound = styled(motion.section)`
   background: url(${homepageBg}) center center no-repeat;
   background-size: cover;
   height: 100%;
@@ -18,10 +17,7 @@ export const SectionNotFound = styled.section`
 `;
 
 export const Overlay = styled.figure`
-  background: ${({ theme }) =>
-    theme.mode === DARK_MODE
-      ? `${BLACK_90} url(${overlayBlackDot}) repeat scroll 0 0;`
-      : `${WHITE_90} url(${overlayWhiteDot}) repeat scroll 0 0;`};
+  background: ${WHITE_90} url(${overlayWhiteDot}) repeat scroll 0 0;
 
   @media screen and (min-width: 991px) {
     font-size: 400px;

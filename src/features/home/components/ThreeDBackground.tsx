@@ -28,18 +28,7 @@ export const ThreeDBackground = () => (
           bottom: '0',
         }}
       >
-        <Tilt
-          glareEnable
-          glareMaxOpacity={1}
-          glareColor="transparent"
-          glarePosition="all"
-          className="track-on-window"
-          perspective={7000}
-          trackOnWindow
-          transitionSpeed={2500}
-          tiltAxis="y"
-          tiltReverse
-        >
+        <Tilt>
           <HomepageGlitch />
         </Tilt>
       </div>

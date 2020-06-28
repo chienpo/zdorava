@@ -14,7 +14,7 @@ import {
 } from './styled';
 
 export const AboutView: React.FC = () => (
-  <SectionAbout className="123">
+  <SectionAbout>
     <GridContent>
       <LogoWrap>
         <AboutLogo />

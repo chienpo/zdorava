@@ -64,6 +64,7 @@ export const HomeView: React.FC<Props> = ({
     <HomepageHGroup>
       <StyledH1>
         <Trans>Stepan</Trans>
+        &nbsp;
         <Trans>Lagunovsky</Trans>
       </StyledH1>
       <Typing onFinishedTyping={() => toggleDefaultBg(true)}>

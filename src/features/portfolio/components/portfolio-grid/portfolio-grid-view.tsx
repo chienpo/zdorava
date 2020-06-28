@@ -1,7 +1,6 @@
 import React from 'react';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
-import { motion, AnimatePresence } from 'framer-motion';
 
 import { PortfolioItemModel } from 'models/portfolio-item.model';
 
@@ -72,8 +71,10 @@ export const PortfolioGridView: React.FC<Props & DataProps> = ({
     return arr.flat()[chunkInd];
   };
 
+  const newTabChecked = data.length > 0;
+
   return (
-    <motion.div animate="open" exit="closed">
+    <>
       {isOpen && (
         <Lightbox
           mainSrc={getImagePath(data[photoIndex])}
@@ -103,49 +104,52 @@ export const PortfolioGridView: React.FC<Props & DataProps> = ({
           nextLabel="next-project"
         />
       )}
-      <AnimatePresence>
-        <MotionGridContainer initial="closed">
-          {chunckedData.map((chunks: PortfolioItemModel[], ind) => (
-            <MotionChunkRow
-              className={`chunk ${selectedCategory}`}
-              key={chunks[0].imageSrc}
-              variants={variants}
-            >
-              {chunks.map(
-                (
-                  {
-                    category,
-                    imageSrc,
-                    alt,
-                    name,
-                    description,
-                    thumbnailSrc,
-                    title,
-                  }: PortfolioItemModel,
-                  index
-                ) => (
-                  <PortfolioChunkItem
-                    key={imageSrc}
-                    selectedCategory={selectedCategory}
-                    category={category}
-                    imageSrc={imageSrc}
-                    alt={alt}
-                    title={title}
-                    description={description}
-                    onItemClick={() => onItemClick(imageSrc)}
-                    thumbnailSrc={thumbnailSrc}
-                    index={index}
-                    originIndex={data.length}
-                    delayPerPixel={0.0002}
-                    originOffset={originOffset}
-                    chunkType={getChunkType(ind)}
-                  />
-                )
-              )}
-            </MotionChunkRow>
-          ))}
-        </MotionGridContainer>
-      </AnimatePresence>
-    </motion.div>
+      <MotionGridContainer
+        initial="closed"
+        animate={newTabChecked ? 'open' : 'closed'}
+        exit="closed"
+      >
+        {chunckedData.map((chunks: PortfolioItemModel[], ind) => (
+          <MotionChunkRow
+            className={`chunk ${selectedCategory}`}
+            key={chunks[0].imageSrc}
+            variants={variants}
+          >
+            {chunks.map(
+              (
+                {
+                  category,
+                  imageSrc,
+                  alt,
+                  name,
+                  description,
+                  thumbnailSrc,
+                  title,
+                }: PortfolioItemModel,
+                index
+              ) => (
+                <PortfolioChunkItem
+                  key={imageSrc}
+                  selectedCategory={selectedCategory}
+                  category={category}
+                  imageSrc={imageSrc}
+                  alt={alt}
+                  title={title}
+                  description={description}
+                  onItemClick={() => onItemClick(imageSrc)}
+                  thumbnailSrc={thumbnailSrc}
+                  index={index}
+                  originIndex={data.length}
+                  delayPerPixel={0.0002}
+                  originOffset={originOffset}
+                  chunkType={getChunkType(ind)}
+                  newTabChecked={newTabChecked}
+                />
+              )
+            )}
+          </MotionChunkRow>
+        ))}
+      </MotionGridContainer>
+    </>
   );
 };

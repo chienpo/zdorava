@@ -1,4 +1,4 @@
-import React, { Fragment, Suspense } from 'react';
+import React, { Suspense } from 'react';
 import { constants } from 'router5';
 import { useRouteNode } from 'react-router5';
 import { AnimatePresence } from 'framer-motion';
@@ -99,18 +99,16 @@ export const PageSwitch = () => {
         </MotionContent>
       )}
       {topRouteName === constants.UNKNOWN_ROUTE && (
-        <Suspense fallback={<PageLoader />}>
-          <MotionContent
-            key={topRouteName}
-            initial="initial"
-            animate="enter"
-            variants={pageVariants}
-          >
-            <Fragment key={topRouteName}>
-              <NotFoundPage />
-            </Fragment>
-          </MotionContent>
-        </Suspense>
+        <MotionContent
+          key={topRouteName}
+          initial="initial"
+          animate="enter"
+          variants={pageVariants}
+        >
+          <Suspense fallback={<PageLoader />}>
+            <NotFoundPage />
+          </Suspense>
+        </MotionContent>
       )}
     </AnimatePresence>
   );

@@ -3,7 +3,7 @@ import { I18n } from '@lingui/react';
 
 import { PORTFOLIO_CATEGORIES_TABS_LABELS } from 'constants/portfolio';
 import { Button } from 'ui/button/button';
-import { PortfolioTabs } from './styled';
+import { MotionPortfolioTabs } from './styled';
 
 interface Props {
   activeCategory: string;
@@ -22,7 +22,23 @@ export const PortfolioTabsView: React.FC<Props> = ({
 }: Props) => (
   <I18n>
     {({ i18n }) => (
-      <PortfolioTabs>
+      <MotionPortfolioTabs
+        variants={{
+          enter: {
+            opacity: 1,
+            transition: {
+              duration: 1,
+            },
+          },
+          exit: {
+            opacity: 0,
+            transition: { duration: 1.5 },
+          },
+        }}
+        initial="exit"
+        animate="enter"
+        exit="exit"
+      >
         {categories.map(({ label }) => (
           <Button
             key={label}
@@ -33,7 +49,7 @@ export const PortfolioTabsView: React.FC<Props> = ({
             {i18n._(PORTFOLIO_CATEGORIES_TABS_LABELS[label])}
           </Button>
         ))}
-      </PortfolioTabs>
+      </MotionPortfolioTabs>
     )}
   </I18n>
 );

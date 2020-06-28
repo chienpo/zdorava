@@ -14,7 +14,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: src/constants/page-titles.ts:9
-#: src/features/not-found/not-found-view.tsx:6
+#: src/features/not-found/not-found-view.tsx:17
 msgid "404"
 msgstr "404"
 
@@ -100,7 +100,7 @@ msgstr "Я работал в компании Itransition Softvare Development �
 msgid "JS Build Tools / JS Task Runners:"
 msgstr ""
 
-#: src/features/home/home-view.tsx:34
+#: src/features/home/home-view.tsx:35
 msgid "Lagunovsky"
 msgstr "Лагуновский"
 
