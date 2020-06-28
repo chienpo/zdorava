@@ -32,7 +32,7 @@ msgstr "All projects"
 msgid "Art"
 msgstr "Art"
 
-#: src/features/single-project/single-project-view.tsx:34
+#: src/features/single-project/single-project-view.tsx:36
 msgid "Back"
 msgstr "Back"
 
@@ -169,7 +169,7 @@ msgstr "Virtual Machine Platforms & Containers:"
 msgid "WEB-DESIGN:"
 msgstr "WEB-DESIGN:"
 
-#: src/features/single-project/single-project-view.tsx:41
+#: src/features/single-project/single-project-view.tsx:45
 msgid "With a great pleasure I suggest you"
 msgstr "With a great pleasure I suggest you"
 
@@ -177,6 +177,6 @@ msgstr "With a great pleasure I suggest you"
 msgid "Write me"
 msgstr "Write me"
 
-#: src/features/single-project/single-project-view.tsx:45
+#: src/features/single-project/single-project-view.tsx:49
 msgid "watch real project"
 msgstr "watch real project"

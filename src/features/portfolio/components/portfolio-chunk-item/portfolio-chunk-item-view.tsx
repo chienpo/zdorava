@@ -38,7 +38,6 @@ export const PortfolioChunkItemView: React.FC<Props> = ({
   alt,
   description,
   thumbnailSrc,
-  // For animation below
   delayPerPixel,
   index,
   originIndex,

@@ -10,7 +10,6 @@ import { SingleProjectView } from './single-project-view';
 
 export const SingleProject = () => {
   const [data, setData] = useState<PortfolioItemModel[]>([]);
-  const [pageLoading, setPageLoading] = useState<boolean>(true);
 
   const { route } = useRouteNode('');
   const { router } = useRoute();
@@ -30,7 +29,6 @@ export const SingleProject = () => {
         const results = arrayOfKeys.map(key => snapshot.val()[key]);
 
         setData(results);
-        setPageLoading(false);
       })
       .catch(() => {
         router.navigate(ROUTE_NAME_PORTFOLIO, {}, { reload: true });
@@ -48,10 +46,6 @@ export const SingleProject = () => {
       }
     });
   }, [getDataChunk, router, route.name]);
-
-  if (pageLoading) {
-    return null;
-  }
 
   return createElement(SingleProjectView, { data: data[0] });
 };

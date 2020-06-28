@@ -1,22 +1,23 @@
 import * as React from 'react';
 import { I18n } from '@lingui/react';
 import { Trans } from '@lingui/macro';
+import { AnimatePresence } from 'framer-motion';
 
 import { PortfolioItemModel } from 'models/portfolio-item.model';
 
+import { PORTFOLIO_IMAGES_PATH, SITE_URL } from 'constants/site';
 import { PORTFOLIO_CATEGORIES_TABS_LABELS } from 'constants/portfolio';
-import { SITE_URL, PORTFOLIO_IMAGES_PATH } from 'constants/site';
 import { ROUTE_NAME_PORTFOLIO } from 'router/routes';
+import { LazyImage } from './lazy-image';
 import {
   StyledMotionProjectSection,
-  StyledMotionFigure,
   StyledMotionDescription,
   Title,
   Description,
   Category,
   StyledLink,
-  StyledImg,
   StyledRealProjectLink,
+  StyledMotionFigure,
 } from './styled';
 
 const transition = {
@@ -33,56 +34,68 @@ const imageVariants = {
   },
 };
 
-const backVariants = {
+const descriptionVariants = {
   exit: { x: 100, opacity: 0, transition },
   enter: { x: 0, opacity: 1, transition: { delay: 1, ...transition } },
 };
 
-export const SingleProjectView: React.FC<{
-  data: PortfolioItemModel;
-}> = ({ data }) => {
-  const { category, imageSrc, alt, title, description, projectLinks } = data;
+export const SingleProjectView: React.FC<{ data: PortfolioItemModel }> = ({
+  data,
+}) => (
+  <StyledMotionProjectSection initial="exit" animate="enter" exit="exit">
+    {data && (
+      <AnimatePresence>
+        <StyledMotionFigure variants={imageVariants} initial="exit">
+          <LazyImage
+            alt={data.alt}
+            src={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${data.category}/${
+              data.imageSrc
+            }`}
+            srcThumbnail={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${
+              data.category
+            }-thumbnail/${data.thumbnailSrc}`}
+            style={{ maxWidth: '70vw' }}
+          />
+        </StyledMotionFigure>
+      </AnimatePresence>
+    )}
+    <AnimatePresence>
+      <StyledMotionDescription variants={descriptionVariants} initial="exit">
+        <StyledLink routeName={ROUTE_NAME_PORTFOLIO}>
+          ← &nbsp;
+          <Trans>Back</Trans>
+        </StyledLink>
 
-  return (
-    <I18n>
-      {({ i18n }) => (
-        <StyledMotionProjectSection initial="exit" animate="enter" exit="exit">
-          <StyledMotionFigure variants={imageVariants}>
-            <StyledImg
-              src={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${category}/${imageSrc}`}
-              alt={alt}
-            />
-          </StyledMotionFigure>
-          <StyledMotionDescription variants={backVariants}>
-            <StyledLink routeName={ROUTE_NAME_PORTFOLIO}>
-              ← &nbsp;
-              <Trans>Back</Trans>
-            </StyledLink>
-
-            <Title>{title[i18n.language]}</Title>
-            <Description>
-              {description[i18n.language]}
-              <br />
-              <Trans>With a great pleasure I suggest you</Trans>
-              &nbsp;
-              {projectLinks &&
-                projectLinks.map(({ href, label }) => (
-                  <StyledRealProjectLink
-                    key={label}
-                    href={href}
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <Trans>watch real project</Trans>
-                  </StyledRealProjectLink>
-                ))}
-            </Description>
-            <Category>
-              {i18n._(PORTFOLIO_CATEGORIES_TABS_LABELS[category])}
-            </Category>
-          </StyledMotionDescription>
-        </StyledMotionProjectSection>
-      )}
-    </I18n>
-  );
-};
+        {data && (
+          <I18n>
+            {({ i18n }) => (
+              <AnimatePresence>
+                <Title>{data.title[i18n.language]}</Title>
+                <Description>
+                  {data.description[i18n.language]}
+                  <br />
+                  <Trans>With a great pleasure I suggest you</Trans>
+                  &nbsp;
+                  {data.projectLinks &&
+                    data.projectLinks.map(({ href, label }) => (
+                      <StyledRealProjectLink
+                        key={label}
+                        href={href}
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        <Trans>watch real project</Trans>
+                      </StyledRealProjectLink>
+                    ))}
+                </Description>
+                <Category>
+                  {i18n._(PORTFOLIO_CATEGORIES_TABS_LABELS[data.category])}
+                </Category>
+              </AnimatePresence>
+            )}
+          </I18n>
+        )}
+      </StyledMotionDescription>
+    </AnimatePresence>
+  </StyledMotionProjectSection>
+);

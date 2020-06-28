@@ -32,7 +32,7 @@ msgstr "Все проекты"
 msgid "Art"
 msgstr "Дизайн"
 
-#: src/features/single-project/single-project-view.tsx:34
+#: src/features/single-project/single-project-view.tsx:36
 msgid "Back"
 msgstr "Назад"
 
@@ -169,7 +169,7 @@ msgstr ""
 msgid "WEB-DESIGN:"
 msgstr "Веб-дизайн"
 
-#: src/features/single-project/single-project-view.tsx:41
+#: src/features/single-project/single-project-view.tsx:45
 msgid "With a great pleasure I suggest you"
 msgstr "С большим удовольствием предлагаю тебе"
 
@@ -177,6 +177,6 @@ msgstr "С большим удовольствием предлагаю тебе
 msgid "Write me"
 msgstr "Напиши мне"
 
-#: src/features/single-project/single-project-view.tsx:45
+#: src/features/single-project/single-project-view.tsx:49
 msgid "watch real project"
 msgstr "посмотреть проект"

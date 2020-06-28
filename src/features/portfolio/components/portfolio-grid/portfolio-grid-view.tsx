@@ -1,7 +1,7 @@
 import React from 'react';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
-import { AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import { PortfolioItemModel } from 'models/portfolio-item.model';
 
@@ -73,7 +73,7 @@ export const PortfolioGridView: React.FC<Props & DataProps> = ({
   };
 
   return (
-    <>
+    <motion.div animate="open" exit="closed">
       {isOpen && (
         <Lightbox
           mainSrc={getImagePath(data[photoIndex])}
@@ -104,14 +104,14 @@ export const PortfolioGridView: React.FC<Props & DataProps> = ({
         />
       )}
       <AnimatePresence>
-        <MotionGridContainer initial="closed" animate="open">
-          {chunckedData.map((item: PortfolioItemModel[], ind) => (
+        <MotionGridContainer initial="closed">
+          {chunckedData.map((chunks: PortfolioItemModel[], ind) => (
             <MotionChunkRow
               className={`chunk ${selectedCategory}`}
-              key={item[0].imageSrc}
+              key={chunks[0].imageSrc}
               variants={variants}
             >
-              {item.map(
+              {chunks.map(
                 (
                   {
                     category,
@@ -146,6 +146,6 @@ export const PortfolioGridView: React.FC<Props & DataProps> = ({
           ))}
         </MotionGridContainer>
       </AnimatePresence>
-    </>
+    </motion.div>
   );
 };

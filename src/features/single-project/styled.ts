@@ -22,8 +22,8 @@ export const StyledMotionFigure = styled(motion.figure)`
 `;
 
 export const StyledImg = styled.img`
-  height: auto;
   width: 100%;
+  height: auto;
   max-width: 70vw;
 `;
 

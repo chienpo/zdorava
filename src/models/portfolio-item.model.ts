@@ -3,8 +3,8 @@ export interface PortfolioItemModel {
   imageSrc: string;
   alt: string;
   title: { [key: string]: string };
-  description: { [key: string]: string };
   thumbnailSrc: string;
+  description: { [key: string]: string };
   projectLinks?: { href: string; label: string }[];
   onItemClick?: () => void;
   name?: string;

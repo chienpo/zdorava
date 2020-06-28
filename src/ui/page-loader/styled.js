@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { motion } from 'framer-motion';
 
 import { DARK_MODE } from 'constants/theme';
 import { BLACK, BLACK_90, WHITE, WHITE_80 } from 'constants/colors';
@@ -22,7 +23,7 @@ const write3 = keyframes`
   70% { stroke-dashoffset: 0; }
 `;
 
-export const LoaderBox = styled.div`
+export const LoaderBox = styled(motion.div)`
   width: 100%;
   height: 100%;
   background: white;
