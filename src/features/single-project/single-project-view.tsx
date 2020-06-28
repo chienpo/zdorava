@@ -74,7 +74,9 @@ export const SingleProjectView: React.FC<{ data: PortfolioItemModel }> = ({
                 <Description>
                   {data.description[i18n.language]}
                   <br />
-                  <Trans>With a great pleasure I suggest you</Trans>
+                  {data.projectLinks && (
+                    <Trans>With a great pleasure I suggest you</Trans>
+                  )}
                   &nbsp;
                   {data.projectLinks &&
                     data.projectLinks.map(({ href, label }) => (
