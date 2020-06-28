@@ -13,27 +13,33 @@ interface Props {
 }
 
 export const ContactForm: React.FC<Props> = ({ onEscapeClicked }) => {
-  const [requestLoading, setRequestLoading] = useState(false);
+  const [requestLoading, setRequestLoading] = useState<boolean>(false);
+  const [messageSent, setMessageSent] = useState<boolean>(false);
 
   useKeyPress(KEY_CODE_ESCAPE, onEscapeClicked);
 
   const onSubmit = (values: { [key: string]: string }) => {
     setRequestLoading(true);
 
-    emailjs.send(SERVICE_ID, TEMPLATE_ID, values, USER_ID).then(
-      () => {
+    emailjs
+      .send(SERVICE_ID, TEMPLATE_ID, values, USER_ID)
+      .then(() => {
+        setMessageSent(true);
         setRequestLoading(false);
-      },
-      error => {
+      })
+      .finally(() => {
+        setTimeout(() => setMessageSent(false), 2000);
+      })
+      .catch(error => {
         setRequestLoading(false);
         throw error.text;
-      }
-    );
+      });
   };
 
   return createElement(ContactFormView, {
     onSubmit,
     initialValues,
     requestLoading,
+    messageSent,
   });
 };

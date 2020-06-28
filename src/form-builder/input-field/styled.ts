@@ -45,6 +45,14 @@ const inputStyles = `
     border-color: ${GRAY_LIGHT};
     box-shadow: inset 0 0 0 ${BLACK_50}, 0 0 8px ${GRAY_LIGHT};
   }
+
+  &:disabled {
+    border-color: ${GRAY_LIGHT};
+    box-shadow: none;
+    color: ${GRAY_LIGHT}
+    background: rgba(0,0,0,0.05);
+    opacity: 0.7;
+  }
 `;
 
 export const Input = styled.input`

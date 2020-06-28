@@ -17,6 +17,7 @@ interface Props {
   children: ReactNode;
   validate: (value: string) => void;
   placeholder?: string | '';
+  disabled?: boolean;
 }
 
 export const InputField: FC<Props> = ({

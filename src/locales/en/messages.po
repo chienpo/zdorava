@@ -48,19 +48,19 @@ msgstr "Closely related to design, front-end development process is always going
 msgid "Creating reactive applications for me is like making up some web ecosystems. But bricks here - are cutes of code, and component-structure - is the constructions. Using my arch-design and development skills, i combine this in to a real complex react web application!"
 msgstr "Creating reactive applications for me is like making up some web ecosystems. But bricks here - are cutes of code, and component-structure - is the constructions. Using my arch-design and development skills, i combine this in to a real complex react web application!"
 
-#: src/features/contacts/components/contact-form-view.tsx:14
+#: src/features/contacts/components/contact-form-view.tsx:31
 msgid "Email"
 msgstr "Email"
 
-#: src/features/contacts/components/contact-form-view.tsx:15
+#: src/features/contacts/components/contact-form-view.tsx:32
 msgid "Enter your email"
 msgstr "Enter your email"
 
-#: src/features/contacts/components/contact-form-view.tsx:18
+#: src/features/contacts/components/contact-form-view.tsx:35
 msgid "Enter your message"
 msgstr "Enter your message"
 
-#: src/features/contacts/components/contact-form-view.tsx:12
+#: src/features/contacts/components/contact-form-view.tsx:29
 msgid "Enter your name"
 msgstr "Enter your name"
 
@@ -108,11 +108,15 @@ msgstr "Lagunovsky"
 msgid "Languages & achievements letters"
 msgstr "Languages & achievements letters"
 
-#: src/features/contacts/components/contact-form-view.tsx:17
+#: src/features/contacts/components/contact-form-view.tsx:34
 msgid "Message"
 msgstr "Message"
 
-#: src/features/contacts/components/contact-form-view.tsx:11
+#: src/features/contacts/components/contact-form-view.tsx:38
+msgid "Message has been sent!"
+msgstr "Message has been sent!"
+
+#: src/features/contacts/components/contact-form-view.tsx:28
 msgid "Name"
 msgstr "Name"
 
@@ -145,7 +149,7 @@ msgstr "Required"
 msgid "STACK:"
 msgstr "STACK:"
 
-#: src/features/contacts/components/contact-form-view.tsx:21
+#: src/features/contacts/components/contact-form-view.tsx:41
 msgid "Send message"
 msgstr "Send message"
 
