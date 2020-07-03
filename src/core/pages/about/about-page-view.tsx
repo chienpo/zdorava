@@ -6,7 +6,7 @@ import { Header } from 'core/components/header';
 
 export const AboutPageView = () => (
   <>
-    <Header mobileByDefault />
+    <Header />
     <main>
       <About />
     </main>

@@ -3,6 +3,9 @@ import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { I18n } from '@lingui/react';
 import { BaseLink } from 'react-router5';
+import { useStore } from 'effector-react';
+
+import { $portfolioTabsStore } from 'store/portfolio-tabs-store';
 
 import { GRAY, WHITE, RED } from 'constants/colors';
 import { DARK_MODE } from 'constants/theme';
@@ -15,7 +18,7 @@ const StyledMotionLi = styled(motion.li)`
   cursor: pointer;
 `;
 
-const NavLinkStyled = styled(BaseLink)`
+const BaseLinkStyled = styled(BaseLink)`
   transition: all ease-in-out 0.4s;
   text-decoration: none;
   color: ${GRAY};
@@ -77,22 +80,27 @@ interface Props {
   router: any;
 }
 
-export const MenuListItemView: React.FC<Props> = ({ name, router }) => (
-  <I18n>
-    {({ i18n }) => (
-      <StyledMotionLi
-        variants={variants}
-        whileHover={{ color: RED }}
-        whileTap={{ scale: 0.95 }}
-      >
-        <NavLinkStyled
-          title={i18n._(PAGE_TITLES[name])}
-          router={router}
-          routeName={name}
+export const MenuListItemView: React.FC<Props> = ({ name, router }) => {
+  const category = useStore($portfolioTabsStore);
+
+  return (
+    <I18n>
+      {({ i18n }) => (
+        <StyledMotionLi
+          variants={variants}
+          whileHover={{ color: RED }}
+          whileTap={{ scale: 0.95 }}
         >
-          {i18n._(PAGE_TITLES[name])}
-        </NavLinkStyled>
-      </StyledMotionLi>
-    )}
-  </I18n>
-);
+          <BaseLinkStyled
+            title={i18n._(PAGE_TITLES[name])}
+            router={router}
+            routeName={name}
+            routeParams={{ category }}
+          >
+            {i18n._(PAGE_TITLES[name])}
+          </BaseLinkStyled>
+        </StyledMotionLi>
+      )}
+    </I18n>
+  );
+};

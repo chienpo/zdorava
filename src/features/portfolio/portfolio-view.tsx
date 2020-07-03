@@ -44,7 +44,10 @@ export const PortfolioView: React.FC<Props> = ({
   return (
     <SectionPortfolio>
       <PortfolioOverlay>
-        <PortfolioTabs activeCategoryPayload={activeCategoryPayload} />
+        <PortfolioTabs
+          selectedCategory={selectedCategory}
+          activeCategoryPayload={activeCategoryPayload}
+        />
         <motion.div initial="hidden" animate={controls} variants={{}}>
           <InfiniteScroll
             style={{ overflow: 'hidden' }}

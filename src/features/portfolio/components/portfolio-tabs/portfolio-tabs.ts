@@ -1,14 +1,16 @@
-import { createElement, useState, FC } from 'react';
+import { createElement, FC } from 'react';
 
-import { PortfolioTabsView } from './portfolio-tabs-view';
 import {
   PORTFOLIO_CATEGORY_TAB_NAME_ALL,
   PORTFOLIO_CATEGORY_TAB_NAME_ART,
   PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND,
 } from 'constants/portfolio';
 
+import { PortfolioTabsView } from './portfolio-tabs-view';
+
 interface Props {
   activeCategoryPayload: (name: string) => void;
+  selectedCategory: string;
 }
 
 const categories = [
@@ -17,18 +19,16 @@ const categories = [
   { label: PORTFOLIO_CATEGORY_TAB_NAME_ART },
 ];
 
-export const PortfolioTabs: FC<Props> = ({ activeCategoryPayload }: Props) => {
-  const [activeCategory, setCategory] = useState(
-    PORTFOLIO_CATEGORY_TAB_NAME_ALL
-  );
-
+export const PortfolioTabs: FC<Props> = ({
+  activeCategoryPayload,
+  selectedCategory,
+}: Props) => {
   const onSetCategory = (name: string) => {
-    setCategory(name);
     activeCategoryPayload(name);
   };
 
   return createElement(PortfolioTabsView, {
-    activeCategory,
+    activeCategory: selectedCategory,
     onSetCategory,
     categories,
   });

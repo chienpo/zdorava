@@ -69,7 +69,7 @@ export const SingleProjectView: React.FC<{ data: PortfolioItemModel }> = ({
         {data && (
           <I18n>
             {({ i18n }) => (
-              <AnimatePresence>
+              <>
                 <Title>{data.title[i18n.language]}</Title>
                 <Description>
                   {data.description[i18n.language]}
@@ -93,7 +93,7 @@ export const SingleProjectView: React.FC<{ data: PortfolioItemModel }> = ({
                 <Category>
                   {i18n._(PORTFOLIO_CATEGORIES_TABS_LABELS[data.category])}
                 </Category>
-              </AnimatePresence>
+              </>
             )}
           </I18n>
         )}

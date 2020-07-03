@@ -1,18 +1,21 @@
 import { createElement, useState, useEffect, FC } from 'react';
 import axios from 'axios';
+import { useStore } from 'effector-react';
 
-import { auth, firebaseInstance } from 'features/auth';
+import { PortfolioItemModel } from 'models/portfolio-item.model';
 
-import { FIREBASE_DATABASE_URL, FIREBASE_DATABASE_REF } from 'constants/api';
 import {
-  PORTFOLIO_CATEGORY_DEFAULT_TAB_NAME,
-  // PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND,
-} from 'constants/portfolio';
-import { PageLoader } from '../../ui/page-loader/page-loader';
+  $portfolioTabsStore,
+  setPortfolioCategory,
+} from 'store/portfolio-tabs-store';
+import { FIREBASE_DATABASE_URL, FIREBASE_DATABASE_REF } from 'constants/api';
+import { auth, firebaseInstance } from 'features/auth';
+import { PageLoader } from 'ui/page-loader/page-loader';
 import { PortfolioView } from './portfolio-view';
-import { PortfolioItemModel } from '../../models/portfolio-item.model';
 
 export const Portfolio: FC = () => {
+  const categoryFromStore = useStore($portfolioTabsStore);
+
   // eslint-disable-next-line max-len
   const [data, setData] = useState<PortfolioItemModel[]>([]);
   const [, /* projectsTotalCount */ setProjectsTotalCount] = useState<number>(
@@ -21,11 +24,13 @@ export const Portfolio: FC = () => {
   const [pageLoading, setPageLoading] = useState<boolean>(true);
   const [hasMore, setHasMore] = useState<boolean>(true);
   const [dataLoadCount, setDataLoadCount] = useState<number>(1);
-  const [selectedCategory, setCategory] = useState<string>(
-    PORTFOLIO_CATEGORY_DEFAULT_TAB_NAME
-  );
+  const [selectedCategory, setCategory] = useState<string>(categoryFromStore);
 
   const DATA_CHANK_SIZE = 6;
+
+  useEffect(() => {
+    setCategory(categoryFromStore);
+  }, [categoryFromStore]);
 
   const getProductsTotalCount = async () => {
     try {
@@ -130,10 +135,13 @@ export const Portfolio: FC = () => {
   };
 
   const onCategoryClick = (name: string) => {
+    setPortfolioCategory(name);
+
     setCategory(name);
     setDataLoadCount(1);
     setHasMore(true);
     setData([]);
+
     getDataChunk(name).catch(error => {
       throw error;
     });
@@ -144,17 +152,14 @@ export const Portfolio: FC = () => {
   }, []);
 
   useEffect(() => {
-    Promise.all([
-      getProductsTotalCount(),
-      getDataChunk(PORTFOLIO_CATEGORY_DEFAULT_TAB_NAME),
-    ])
+    Promise.all([getProductsTotalCount(), getDataChunk(categoryFromStore)])
       .then(() => {
         setPageLoading(false);
       })
       .catch(error => {
         throw error;
       });
-  }, []);
+  }, [categoryFromStore]);
 
   if (pageLoading) {
     return createElement(PageLoader);

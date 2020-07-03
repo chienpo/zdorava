@@ -19,7 +19,7 @@ export const NavigationList = styled.nav`
   padding-left: 170px;
 `;
 
-export const NavLinkStyled = styled(BaseLink)`
+export const BaseLinkStyled = styled(BaseLink)`
   transition: all ease-in-out 0.4s;
   text-decoration: none;
   color: ${GRAY};
@@ -47,7 +47,7 @@ export const NavigationWrapper = styled.div`
   left: 0;
   z-index: 1;
 
-  ${NavLinkStyled} {
+  ${BaseLinkStyled} {
     ${({ theme }) =>
       theme === DARK_MODE
         ? `

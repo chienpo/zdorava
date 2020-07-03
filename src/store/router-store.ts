@@ -7,6 +7,6 @@ const defaultState = {
   previousRoute: null,
 };
 
-export const $storeFromRouter = restore(fromObservable(router), defaultState);
+export const $router = restore(fromObservable(router), defaultState);
 
-// $storeFromRouter.watch(item => console.log('params', item.route.params));
+// $router.watch((item: any) => console.log('params', item.route.params));

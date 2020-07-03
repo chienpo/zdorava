@@ -6,7 +6,7 @@ import { Header } from 'core/components/header';
 
 export const PortfolioPageView = () => (
   <>
-    <Header mobileByDefault />
+    <Header />
     <main>
       <Portfolio />
     </main>

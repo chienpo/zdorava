@@ -6,17 +6,11 @@ export const SectionPortfolio = styled.section`
   background-size: cover;
   background-attachment: fixed;
   height: 100%;
-`;
-
-export const PortfolioOverlay = styled.div`
-  @media (min-width: 767px) {
-    padding: 0;
-  }
-
-  padding: 0 15px;
   background: ${BLACK};
-  height: 100%;
+  padding: 80px 15px 0;
 `;
+
+export const PortfolioOverlay = styled.div``;
 
 export const ItemsLoadingStateDescription = styled.div`
   padding: 10px 20px;
