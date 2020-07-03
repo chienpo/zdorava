@@ -13,17 +13,18 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/constants/page-titles.ts:9
+#: src/constants/page-titles.ts:10
 #: src/features/not-found/not-found-view.tsx:17
 msgid "404"
 msgstr "404"
 
-#: src/constants/page-titles.ts:6
+#: src/constants/page-titles.ts:7
 #: src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:9
 #: src/features/home/home-view.tsx:26
 msgid "About"
 msgstr "Обо мне"
 
+#: src/constants/page-titles.ts:13
 #: src/constants/portfolio.ts:7
 msgid "All projects"
 msgstr "Все проекты"
@@ -31,6 +32,10 @@ msgstr "Все проекты"
 #: src/constants/portfolio.ts:8
 msgid "Art"
 msgstr "Дизайн"
+
+#: src/constants/page-titles.ts:15
+msgid "Art projects"
+msgstr "Дизайн проекты"
 
 #: src/features/single-project/single-project-view.tsx:36
 msgid "Back"
@@ -72,6 +77,10 @@ msgstr "Опыт"
 msgid "FRAMEWORKS:"
 msgstr "Фреймворки"
 
+#: src/constants/page-titles.ts:14
+msgid "Front-End projects"
+msgstr "Front-End проекты"
+
 #: src/constants/portfolio.ts:9
 msgid "Front-end"
 msgstr "Front-end"
@@ -88,7 +97,7 @@ msgstr "Получил степень магистра архитектурно�
 msgid "Hello, I'm Stepan"
 msgstr "Привет, меня зовут Степан"
 
-#: src/constants/page-titles.ts:5
+#: src/constants/page-titles.ts:6
 msgid "Home"
 msgstr "Главная"
 
@@ -124,12 +133,12 @@ msgstr "Имя"
 msgid "Over 10 years I've been studying on architecture & design specialisations. I was lucky to improve my skills in such areas like: interior and brand design, modern and concept arts, i created a lot of cool creative projects and also got and expierence of presenting them to the customers! This expierence has became absolutely helpful in front-end, web-design, and even though in my whole life!"
 msgstr "Более 10 лет я учусь на специализацию архитектуры и дизайна. Мне повезло улучшить свои навыки в таких областях, как: дизайн интерьера и бренда, современный и концепт-арт, я создал много крутых креативных проектов, а также получил и испытал возможность представить их клиентам! Этот опыт стал абсолютно полезным в front-end, веб-дизайне и даже в моей жизни!"
 
-#: src/constants/page-titles.ts:7
+#: src/constants/page-titles.ts:8
 #: src/features/home/home-view.tsx:27
 msgid "Portfolio"
 msgstr "Портфолио"
 
-#: src/constants/page-titles.ts:8
+#: src/constants/page-titles.ts:9
 msgid "Project:"
 msgstr "Проект: "
 
