@@ -1,7 +1,10 @@
 import { useEffect, createElement, useState, useCallback } from 'react';
 import { useRouteNode, useRoute } from 'react-router5';
+import { useStore } from 'effector-react';
 
 import { PortfolioItemModel } from 'models/portfolio-item.model';
+
+import { $portfolioTabsStore } from 'store/portfolio-tabs-store';
 
 import { ROUTE_NAME_PORTFOLIO } from 'router/routes';
 import { auth, firebaseInstance } from 'features/auth';
@@ -13,6 +16,8 @@ export const SingleProject = () => {
 
   const { route } = useRouteNode('');
   const { router } = useRoute();
+
+  const portfolioSelectedCategory = useStore($portfolioTabsStore);
 
   const projectName = route.params.id;
 
@@ -47,5 +52,8 @@ export const SingleProject = () => {
     });
   }, [getDataChunk, router, route.name]);
 
-  return createElement(SingleProjectView, { data: data[0] });
+  return createElement(SingleProjectView, {
+    data: data[0],
+    portfolioSelectedCategory,
+  });
 };

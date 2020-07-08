@@ -16,9 +16,15 @@ interface Props {
   position: string;
   routeName: string;
   title: any;
+  routeParams?: { [key: string]: string };
 }
 
-export const PageLinkFadeView = ({ title, position, routeName }: Props) => {
+export const PageLinkFadeView = ({
+  title,
+  position,
+  routeName,
+  routeParams,
+}: Props) => {
   const [overlayVisible, showOverlay] = useState(false);
 
   return (
@@ -82,6 +88,7 @@ export const PageLinkFadeView = ({ title, position, routeName }: Props) => {
             onMouseOver={() => showOverlay(true)}
             onMouseOut={() => showOverlay(false)}
             routeName={routeName}
+            routeParams={routeParams}
           >
             <LinkMirrorEffectBox>
               <Text>{title}</Text>

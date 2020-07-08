@@ -44,16 +44,16 @@ export const PageSwitch = () => {
   return (
     <AnimatePresence exitBeforeEnter initial={false}>
       {topRouteName === ROUTE_NAME_HOME && (
-        <Suspense fallback={<PageLoader />}>
-          <MotionContent
-            key={topRouteName}
-            initial="initial"
-            animate="enter"
-            variants={pageVariants}
-          >
+        <MotionContent
+          key={topRouteName}
+          initial="initial"
+          animate="enter"
+          variants={pageVariants}
+        >
+          <Suspense fallback={<PageLoader />}>
             <HomePage />
-          </MotionContent>
-        </Suspense>
+          </Suspense>
+        </MotionContent>
       )}
       {topRouteName === ROUTE_NAME_ABOUT && (
         <MotionContent
@@ -68,16 +68,16 @@ export const PageSwitch = () => {
         </MotionContent>
       )}
       {topRouteName === ROUTE_NAME_PORTFOLIO && (
-        <Suspense fallback={<PageLoader />}>
-          <MotionContent
-            key={topRouteName}
-            initial="initial"
-            animate="enter"
-            variants={pageVariants}
-          >
+        <MotionContent
+          key={topRouteName}
+          initial="initial"
+          animate="enter"
+          variants={pageVariants}
+        >
+          <Suspense fallback={<PageLoader />}>
             <PortfolioPage />
-          </MotionContent>
-        </Suspense>
+          </Suspense>
+        </MotionContent>
       )}
       {topRouteName === ROUTE_NAME_PORTFOLIO_PROJECT && (
         <MotionContent

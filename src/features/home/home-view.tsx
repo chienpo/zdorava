@@ -2,7 +2,7 @@ import React from 'react';
 import Typing from 'react-typing-animation';
 import { Trans } from '@lingui/macro';
 
-import { ROUTE_NAME_ABOUT, ROUTE_NAME_PORTFOLIO } from 'router/routes';
+import { ROUTE_NAME_ABOUT, ROUTE_NAME_PORTFOLIO_CATEGORY } from 'router/routes';
 import { PageLinkFadeView } from './components/page-link-fade/page-link-fade-view';
 import { ThreeDBackground } from './components/ThreeDBackground';
 import {
@@ -18,11 +18,13 @@ import {
 interface Props {
   bgIsToggling: boolean;
   toggleDefaultBg: (value: boolean) => void;
+  portfolioSelectedCategory: string;
 }
 
 export const HomeView: React.FC<Props> = ({
   bgIsToggling,
   toggleDefaultBg,
+  portfolioSelectedCategory,
 }) => (
   <MotionWrap
     style={{ display: 'flex' }}
@@ -54,9 +56,10 @@ export const HomeView: React.FC<Props> = ({
         title={<Trans>About</Trans>}
       />
       <PageLinkFadeView
-        routeName={ROUTE_NAME_PORTFOLIO}
+        routeName={ROUTE_NAME_PORTFOLIO_CATEGORY}
         position="right"
         title={<Trans>Portfolio</Trans>}
+        routeParams={{ category: portfolioSelectedCategory }}
       />
       <ThreeDBackground />
       <DottedOverlay />

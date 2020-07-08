@@ -7,7 +7,7 @@ import { PortfolioItemModel } from 'models/portfolio-item.model';
 
 import { PORTFOLIO_IMAGES_PATH, SITE_URL } from 'constants/site';
 import { PORTFOLIO_CATEGORIES_TABS_LABELS } from 'constants/portfolio';
-import { ROUTE_NAME_PORTFOLIO } from 'router/routes';
+import { ROUTE_NAME_PORTFOLIO_CATEGORY } from 'router/routes';
 import { LazyImage } from './lazy-image';
 import {
   StyledMotionProjectSection,
@@ -19,6 +19,11 @@ import {
   StyledRealProjectLink,
   StyledMotionFigure,
 } from './styled';
+
+interface Props {
+  data: PortfolioItemModel;
+  portfolioSelectedCategory: string;
+}
 
 const transition = {
   duration: 1,
@@ -39,8 +44,9 @@ const descriptionVariants = {
   enter: { x: 0, opacity: 1, transition: { delay: 1, ...transition } },
 };
 
-export const SingleProjectView: React.FC<{ data: PortfolioItemModel }> = ({
+export const SingleProjectView: React.FC<Props> = ({
   data,
+  portfolioSelectedCategory,
 }) => (
   <StyledMotionProjectSection initial="exit" animate="enter" exit="exit">
     {data && (
@@ -61,7 +67,10 @@ export const SingleProjectView: React.FC<{ data: PortfolioItemModel }> = ({
     )}
     <AnimatePresence>
       <StyledMotionDescription variants={descriptionVariants} initial="exit">
-        <StyledLink routeName={ROUTE_NAME_PORTFOLIO}>
+        <StyledLink
+          routeName={ROUTE_NAME_PORTFOLIO_CATEGORY}
+          routeParams={{ category: portfolioSelectedCategory }}
+        >
           ← &nbsp;
           <Trans>Back</Trans>
         </StyledLink>
