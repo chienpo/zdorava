@@ -141,10 +141,6 @@ export const Portfolio: FC = () => {
     setDataLoadCount(1);
     setHasMore(true);
     setData([]);
-
-    getDataChunk(name).catch(error => {
-      throw error;
-    });
   };
 
   useEffect(() => {
