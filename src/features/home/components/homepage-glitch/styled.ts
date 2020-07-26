@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import homepageGlitchBackground from 'assets/images/backgrounds/homepage-background.webp';
+import homepageGlitchBackground from 'assets/images/backgrounds/homepage-background.png';
 
 export const GlitchContainer = styled.div`
   min-height: 100vh;

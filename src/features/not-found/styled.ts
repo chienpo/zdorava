@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 import overlayWhiteDot from 'assets/images/overlay_white.png';
-import homepageBg from 'assets/images/backgrounds/homepage-background.webp';
+import homepageBg from 'assets/images/backgrounds/homepage-background.png';
 
 import { BLACK, WHITE_90 } from 'constants/colors';
 
