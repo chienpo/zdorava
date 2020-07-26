@@ -34,10 +34,16 @@ export const MotionLinkOverlay = styled.div`
 export const Text = styled.span`
   display: block;
   position: relative;
-  padding-${({ title }) =>
-    title === ROUTE_NAME_ABOUT ? 'right' : 'left'}: 55px;
   ${({ title }) =>
-    title === ROUTE_NAME_ABOUT ? 'margin-bottom: 10vh;' : 'margin-top: 20vh;'}
+    title === ROUTE_NAME_ABOUT
+      ? `
+  padding-right: 55px;
+  margin-top: 5vh;
+  `
+      : `
+  padding-left: 55px;
+  margin-top: 20vh;
+  `};
   transition: color 0.6s;
 
   &::${({ title }) => (title === ROUTE_NAME_ABOUT ? 'after' : 'before')} {

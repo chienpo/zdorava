@@ -11,6 +11,7 @@ import {
   MotionLinkOverlay,
 } from './styled';
 import { PAGE_TITLES } from '../../../../constants/page-titles';
+import { ROUTE_NAME_PORTFOLIO } from '../../../../router/routes';
 
 interface Props {
   position: string;
@@ -81,7 +82,6 @@ export const PageLinkFadeView = ({
       <I18n>
         {({ i18n }) => (
           <PageLinkStyled
-            title={i18n._(PAGE_TITLES[routeName])}
             onMouseEnter={() => showOverlay(true)}
             onBlur={() => showOverlay(false)}
             onFocus={() => showOverlay(true)}
@@ -91,7 +91,15 @@ export const PageLinkFadeView = ({
             routeParams={routeParams}
           >
             <LinkMirrorEffectBox>
-              <Text>{title}</Text>
+              <Text
+                title={i18n._(
+                  routeName.includes(ROUTE_NAME_PORTFOLIO)
+                    ? PAGE_TITLES[ROUTE_NAME_PORTFOLIO]
+                    : PAGE_TITLES[routeName]
+                )}
+              >
+                {title}
+              </Text>
             </LinkMirrorEffectBox>
           </PageLinkStyled>
         )}
