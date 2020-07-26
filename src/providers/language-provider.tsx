@@ -1,9 +1,12 @@
 /* eslint-disable promise/always-return,promise/catch-or-return */
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, ReactNode } from 'react';
 import { I18nProvider } from '@lingui/react';
+import { useStore } from 'effector-react';
+
+import { $languageStore } from 'store/language-store';
 
 interface Props {
-  children: any;
+  children: ReactNode;
 }
 
 // noinspection JSFileReferences
@@ -12,22 +15,21 @@ const importCatalog = async (lang: string) =>
     ({ default: catalog }) => catalog
   );
 
-let languageMiddleware = {
-  changeLanguage: (lang: string) => {},
+const languageMiddleware = {
   loading: false,
 };
 
 const LanguageProvider: React.FC<Props> = ({ children }) => {
   const [catalog, setCatalog] = useState();
-  const [language, setLanguage] = useState('en');
-
-  languageMiddleware.changeLanguage = (lang: string) => setLanguage(lang);
+  const language = useStore($languageStore);
 
   useEffect(() => {
     languageMiddleware.loading = false;
     importCatalog(language)
       .then(setCatalog)
-      .then(() => (languageMiddleware.loading = true));
+      .then(() => {
+        languageMiddleware.loading = true;
+      });
   }, [catalog, language]);
 
   return (
@@ -38,4 +40,3 @@ const LanguageProvider: React.FC<Props> = ({ children }) => {
 };
 
 export { LanguageProvider };
-export { languageMiddleware };

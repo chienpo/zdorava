@@ -1,6 +1,5 @@
 import React from 'react';
 import { I18n } from '@lingui/react';
-import { languageMiddleware } from 'providers/language-provider';
 
 import { toggleLang } from 'store/language-store';
 import { ROUTE_NAME_HOME } from 'router/routes';
@@ -60,11 +59,7 @@ export const HeaderView: React.FC<Props> = ({
         <Navigation
           activeRouteName={activeRouteName}
           selectedLanguage={i18n.language}
-          onChangeLanguage={val => {
-            toggleLang(val);
-
-            return languageMiddleware.changeLanguage(val);
-          }}
+          onChangeLanguage={val => toggleLang(val)}
           theme={theme}
           mobileByDefault={mobileByDefault}
         />
