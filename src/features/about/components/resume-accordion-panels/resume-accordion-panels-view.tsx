@@ -75,22 +75,19 @@ export const PanelThreeView = () => (
         <Strong>
           <Trans>REACT FEATURES:</Trans>
         </Strong>
-        <Trans>
-          Redux, ReduxSagas, Router5, ReactPose / FrameMotion - animations
-        </Trans>
+        <Trans>Redux, Router5, FrameMotion</Trans>
       </li>
       <li>
         <Strong>
           <Trans>FRAMEWORKS:</Trans>
         </Strong>
         <Trans>
-          Symfony, (LoopBack, Angular - experience just for my own portfolio web
-          app)
+          Symfony, (LoopBack - experience just for my own portfolio web app)
         </Trans>
       </li>
       <li>
         <Strong>CSS:</Strong>
-        Flexbox, Grid
+        Flexbox, CSS-Grid
       </li>
       <li>
         <Strong style={{ textTransform: 'uppercase' }}>
@@ -102,11 +99,11 @@ export const PanelThreeView = () => (
         <Strong style={{ textTransform: 'uppercase' }}>
           <Trans>JS Build Tools / JS Task Runners:</Trans>
         </Strong>
-        Webpack4, Parcel, GULPq
+        Webpack4, Parcel, GULP
       </li>
       <li>
         <Strong>CRM:</Strong>
-        Wordpress,
+        Wordpress
       </li>
       <li>
         <Strong>VC:</Strong>
