@@ -5,6 +5,7 @@ import { LIGHT_MODE } from 'constants/theme';
 import { HeaderView } from './header-view';
 
 interface Props {
+  withShadow?: boolean;
   theme?: string;
   mobileByDefault?: boolean;
 }
@@ -12,6 +13,7 @@ interface Props {
 export const Header: FC<Props> = ({
   theme = LIGHT_MODE,
   mobileByDefault = false,
+  withShadow = false,
 }) => {
   const { route } = useRouteNode('');
   const [topRouteName] = route.name.split('.');
@@ -20,5 +22,6 @@ export const Header: FC<Props> = ({
     activeRouteName: topRouteName,
     theme,
     mobileByDefault,
+    withShadow,
   });
 };

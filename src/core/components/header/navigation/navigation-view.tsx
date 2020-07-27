@@ -6,7 +6,6 @@ import {
 } from 'ui/language-switch/language-switch';
 
 import { Route } from 'models/route.model';
-import { ROUTE_NAME_PORTFOLIO } from 'router/routes';
 import { BLACK } from 'constants/colors';
 import { BurgerMenu } from 'ui/burger-menu';
 import { NavigationListView } from './navigation-list-view';
@@ -18,8 +17,8 @@ interface Props extends LanguageSwitchProps {
   router: any;
   showMenu: boolean;
   headerHeight: string;
-  activeRouteName: string;
   theme: string;
+  withShadow: boolean;
 }
 
 export const NavigationView: React.FC<Props> = ({
@@ -30,17 +29,16 @@ export const NavigationView: React.FC<Props> = ({
   router,
   showMenu,
   headerHeight,
-  activeRouteName,
   theme,
+  withShadow,
 }) => (
   <NavigationWrapper
     theme={theme}
     style={{
       height: headerHeight,
-      boxShadow:
-        activeRouteName === ROUTE_NAME_PORTFOLIO
-          ? `0px -48px 35px 45px ${BLACK}`
-          : '0 -0 0 0 transparent',
+      boxShadow: withShadow
+        ? `0px -48px 35px 45px ${BLACK}`
+        : '0 -0 0 0 transparent',
     }}
   >
     {showMenu ? (

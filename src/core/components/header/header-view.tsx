@@ -10,6 +10,7 @@ interface Props {
   activeRouteName: string;
   theme: string;
   mobileByDefault: boolean;
+  withShadow: boolean;
 }
 
 const variants = {
@@ -47,6 +48,7 @@ export const HeaderView: React.FC<Props> = ({
   activeRouteName,
   theme,
   mobileByDefault,
+  withShadow,
 }) => (
   <StyledHeader
     initial="initial"
@@ -62,6 +64,7 @@ export const HeaderView: React.FC<Props> = ({
           onChangeLanguage={val => toggleLang(val)}
           theme={theme}
           mobileByDefault={mobileByDefault}
+          withShadow={withShadow}
         />
       )}
     </I18n>

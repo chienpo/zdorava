@@ -6,7 +6,7 @@ import { Header } from 'core/components/header';
 
 export const PortfolioPageView = () => (
   <>
-    <Header />
+    <Header withShadow />
     <main>
       <Portfolio />
     </main>

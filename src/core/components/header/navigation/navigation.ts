@@ -12,6 +12,7 @@ interface Props extends LanguageSwitchProps {
   activeRouteName: string;
   theme: string;
   mobileByDefault: boolean;
+  withShadow: boolean;
 }
 
 export const Navigation: FC<Props> = ({
@@ -20,6 +21,7 @@ export const Navigation: FC<Props> = ({
   activeRouteName,
   theme,
   mobileByDefault,
+  withShadow,
 }) => {
   const { router } = useRoute();
 
@@ -37,7 +39,7 @@ export const Navigation: FC<Props> = ({
     isMobile: mobileByDefault || isMobile.any || !mediaMinWidthForLaptops,
     showMenu,
     headerHeight,
-    activeRouteName,
     theme,
+    withShadow,
   });
 };
