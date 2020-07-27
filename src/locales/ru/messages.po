@@ -18,6 +18,46 @@ msgstr ""
 msgid "404"
 msgstr "404"
 
+#: src/constants/certificates.ts:36
+msgid "\"Business english three course\" certificate, Itransition"
+msgstr "\"Курс аншлийского языка для бизнес-коммуникаций\" сертификат, Itransition"
+
+#: src/constants/certificates.ts:35
+msgid "\"Business english three english course\""
+msgstr "\"Курс аншлийского языка для бизнес-коммуникаций\""
+
+#: src/constants/certificates.ts:17
+msgid "\"JavaScript - The Complete Guide 2020 (Beginner + Advanced)\""
+msgstr "\"JavaScript - Полное Руководство 2020 (Начальный + Продвинутый уровни)\""
+
+#: src/constants/certificates.ts:18
+msgid "\"JavaScript - The Complete Guide 2020 certificate, \"UDEMY\""
+msgstr "\"JavaScript - Полное Руководство 2020\" certificate, \"UDEMY\""
+
+#: src/constants/certificates.ts:11
+msgid "\"React - The Complete Guide (incl Hooks, React Router, Redux)\""
+msgstr "\"React - Полное Руководство (включая Hooks, React Router, Redux)\""
+
+#: src/constants/certificates.ts:12
+msgid "\"React - The Complete Guide (incl Hooks, React Router, Redux)\" certificate, \"UDEMY\""
+msgstr "\"React - Полное Руководство (incl Hooks, React Router, Redux)\" certificate, \"UDEMY\""
+
+#: src/constants/certificates.ts:29
+msgid "\"Spoken intermediate english course\""
+msgstr "\"Курс разговоного английского\""
+
+#: src/constants/certificates.ts:30
+msgid "\"Spoken intermediate one course\" certificate, Itransition"
+msgstr "\"Курс разговорного английского\" серцификат, Itransition"
+
+#: src/constants/certificates.ts:23
+msgid "\"Understanding TypeScript - 2020 Edition\""
+msgstr "\"Понимание TypeScript - 2020 Издание\""
+
+#: src/constants/certificates.ts:24
+msgid "\"Understanding TypeScript - 2020 Edition\" certificate, \"UDEMY\""
+msgstr "\"Gjybvfybt TypeScript - 2020 Издание\" серцификат, \"UDEMY\""
+
 #: src/constants/page-titles.ts:7
 #: src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:9
 #: src/features/home/home-view.tsx:26
@@ -73,7 +113,7 @@ msgstr "Ваши инициалы"
 msgid "Experience"
 msgstr "Опыт"
 
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:75
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:73
 msgid "FRAMEWORKS:"
 msgstr "Фреймворки"
 
@@ -105,7 +145,7 @@ msgstr "Главная"
 msgid "I've been working in Itransition Softvare Development Company as a Front-end Developer. This time allowed me to dive dipper in to front-end and understand how cool is it! Working in a team of developers I took part in making up really cool projects and features for our foreign customers."
 msgstr "Я работал в компании Itransition Softvare Development в качестве фронт-разработчика. Это время позволило мне погрузиться в передний конец и понять, как это круто! Работая в команде разработчиков, я принимал участие в создании действительно интересных проектов и функций для наших зарубежных клиентов."
 
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:94
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:91
 msgid "JS Build Tools / JS Task Runners:"
 msgstr ""
 
@@ -147,8 +187,8 @@ msgid "REACT FEATURES:"
 msgstr "Фичи REACT"
 
 #: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:69
-msgid "Redux, ReduxSagas, Router5, ReactPose / FrameMotion - animations"
-msgstr "Redux, ReduxSagas, Router5, ReactPose / FrameMotion - анимации"
+msgid "Redux, Router5, FrameMotion"
+msgstr "Redux, Router5, FrameMotion"
 
 #: src/form-builder/validators.tsx:7
 msgid "Required"
@@ -170,15 +210,15 @@ msgstr "Профессиональные навыки"
 msgid "Stepan"
 msgstr "Степан"
 
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:77
-msgid "Symfony, (LoopBack, Angular - experience just for my own portfolio web app)"
-msgstr "Symfony, (LoopBack, Angular - опы в рамках этого проекта портфолио)"
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:75
+msgid "Symfony, (LoopBack - experience just for my own portfolio web app)"
+msgstr "Symfony, (LoopBack - в контексте портфолио веб сайта)"
 
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:88
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:85
 msgid "Virtual Machine Platforms & Containers:"
-msgstr ""
+msgstr "Виртуальные машины & контейнеры"
 
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:108
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:105
 msgid "WEB-DESIGN:"
 msgstr "Веб-дизайн"
 
@@ -189,6 +229,26 @@ msgstr "С большим удовольствием предлагаю тебе
 #: src/features/contacts/contacts-view.tsx:26
 msgid "Write me"
 msgstr "Напиши мне"
+
+#: src/constants/certificates.ts:34
+msgid "business english three english course certificate"
+msgstr "Курс английского для бизнес коммуникаций"
+
+#: src/constants/certificates.ts:16
+msgid "java-script course certificate"
+msgstr "java-script курс серцификат"
+
+#: src/constants/certificates.ts:10
+msgid "react course certificate"
+msgstr "react курс серцификат"
+
+#: src/constants/certificates.ts:28
+msgid "spoken intermediate one english course certificate"
+msgstr "Курс разговорного английского"
+
+#: src/constants/certificates.ts:22
+msgid "type-script course certificate"
+msgstr "type-script курс серцификат"
 
 #: src/features/single-project/single-project-view.tsx:49
 msgid "watch real project"
