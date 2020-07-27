@@ -4,8 +4,14 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { IconSignature } from './icon-signature';
 import { LoaderBox } from './styled';
 
-export const PageLoader = () => (
-  <motion.div animate="enter" exit="exit">
+export const PageLoader: React.FC<{ showSpinner?: boolean }> = ({
+  showSpinner = true,
+}) => (
+  <motion.div
+    animate="enter"
+    exit="exit"
+    style={{ width: '100vw', height: '100vh' }}
+  >
     <AnimatePresence>
       <LoaderBox
         variants={{
@@ -20,7 +26,7 @@ export const PageLoader = () => (
           },
         }}
       >
-        <IconSignature />
+        {showSpinner && <IconSignature />}
       </LoaderBox>
     </AnimatePresence>
   </motion.div>

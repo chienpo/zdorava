@@ -50,7 +50,7 @@ export const PageSwitch = () => {
           animate="enter"
           variants={pageVariants}
         >
-          <Suspense fallback={<PageLoader />}>
+          <Suspense fallback={<PageLoader showSpinner={false} />}>
             <HomePage />
           </Suspense>
         </MotionContent>
