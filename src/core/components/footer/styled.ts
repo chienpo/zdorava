@@ -79,7 +79,6 @@ export const FooterSocialLink = styled.a`
     color ? `${theme.mode === DARK_MODE ? WHITE : BLACK}` : GRAY};
   font-size: ${({ color }) => (color ? '34px' : '30px')};
   height: 34px;
-  width: 25px;
   animation: ${({ color }) => color && iconPulse} 4.4s infinite;
   background: none;
   border: none;

@@ -13,7 +13,7 @@ export const Figure = styled.figure`
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  display: flex;
+  display: block;
 
   &:hover {
     ${mirrorEffect}

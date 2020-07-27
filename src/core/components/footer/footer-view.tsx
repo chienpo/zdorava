@@ -102,7 +102,10 @@ export const FooterView: React.FC<Props> = ({
             as="button"
             color={RED}
           >
-            <FontAwesomeIcon icon={faEnvelope} />
+            <FontAwesomeIcon
+              style={{ position: 'absolute' }}
+              icon={faEnvelope}
+            />
           </FooterSocialLink>
         </FooterNav>
         <FooterCopy>
