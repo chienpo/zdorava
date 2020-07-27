@@ -5,12 +5,12 @@ import { motion, useAnimation } from 'framer-motion';
 
 import { PortfolioItemModel } from 'models/portfolio-item.model';
 
+import { BLACK, WHITE } from 'constants/colors';
 import { MoreLoader } from 'ui/more-loader/more-loader';
 import { PortfolioGrid } from './components/portfolio-grid/portfolio-grid';
 import { PortfolioTabs } from './components/portfolio-tabs/portfolio-tabs';
 import {
   SectionPortfolio,
-  PortfolioOverlay,
   ItemsLoadingStateDescription,
   ItemsLoadingSpinnerBox,
 } from './styled';
@@ -42,37 +42,51 @@ export const PortfolioView: React.FC<Props> = ({
   });
 
   return (
-    <SectionPortfolio>
-      <PortfolioOverlay>
-        <PortfolioTabs
-          selectedCategory={selectedCategory}
-          activeCategoryPayload={activeCategoryPayload}
-        />
-        <motion.div initial="hidden" animate={controls} variants={{}}>
-          <InfiniteScroll
-            style={{ overflow: 'hidden' }}
-            dataLength={data.length}
-            next={getNextDataChunk}
-            hasMore={hasMore}
-            loader={
-              <ItemsLoadingSpinnerBox>
-                <MoreLoader />
-              </ItemsLoadingSpinnerBox>
-            }
-            endMessage={
-              <ItemsLoadingStateDescription>
-                <Trans>COMING SOON ...</Trans>
-              </ItemsLoadingStateDescription>
-            }
-          >
-            <PortfolioGrid
-              data={data}
-              selectedCategory={selectedCategory}
-              originOffset={originOffset}
-            />
-          </InfiniteScroll>
-        </motion.div>
-      </PortfolioOverlay>
+    <SectionPortfolio
+      variants={{
+        enter: {
+          backgroundColor: BLACK,
+          transition: {
+            duration: 1,
+          },
+        },
+        exit: {
+          backgroundColor: WHITE,
+          transition: { duration: 0.4 },
+        },
+      }}
+      initial="exit"
+      animate="enter"
+      exit="exit"
+    >
+      <PortfolioTabs
+        selectedCategory={selectedCategory}
+        activeCategoryPayload={activeCategoryPayload}
+      />
+      <motion.div initial="hidden" animate={controls} variants={{}}>
+        <InfiniteScroll
+          style={{ overflow: 'hidden' }}
+          dataLength={data.length}
+          next={getNextDataChunk}
+          hasMore={hasMore}
+          loader={
+            <ItemsLoadingSpinnerBox>
+              <MoreLoader />
+            </ItemsLoadingSpinnerBox>
+          }
+          endMessage={
+            <ItemsLoadingStateDescription>
+              <Trans>COMING SOON ...</Trans>
+            </ItemsLoadingStateDescription>
+          }
+        >
+          <PortfolioGrid
+            data={data}
+            selectedCategory={selectedCategory}
+            originOffset={originOffset}
+          />
+        </InfiniteScroll>
+      </motion.div>
     </SectionPortfolio>
   );
 };

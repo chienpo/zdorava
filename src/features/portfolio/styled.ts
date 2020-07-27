@@ -1,16 +1,14 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-import { BLACK, WHITE } from 'constants/colors';
+import { WHITE } from 'constants/colors';
 
-export const SectionPortfolio = styled.section`
+export const SectionPortfolio = styled(motion.section)`
   background-size: cover;
   background-attachment: fixed;
   height: 100%;
-  background: ${BLACK};
   padding: 80px 15px 0;
 `;
-
-export const PortfolioOverlay = styled.div``;
 
 export const ItemsLoadingStateDescription = styled.div`
   padding: 10px 20px;
