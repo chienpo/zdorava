@@ -81,7 +81,7 @@ msgstr "Дизайн проекты"
 msgid "Back"
 msgstr "Назад"
 
-#: src/features/portfolio/portfolio-view.tsx:25
+#: src/features/portfolio/portfolio-view.tsx:36
 msgid "COMING SOON ..."
 msgstr "В РАЗРАБОТКЕ ..."
 

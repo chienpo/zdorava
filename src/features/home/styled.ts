@@ -63,6 +63,11 @@ export const HomepageHGroup = styled.div`
 `;
 
 export const StyledH1 = styled.h1`
+  @media only screen and (min-width: 479px) {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
   @media only screen and (min-width: 767px) {
     font-size: 65px;
     line-height: 80px;
@@ -78,8 +83,8 @@ export const StyledH1 = styled.h1`
   font-weight: 400;
   color: ${DARK_SLATE_GREY};
   color: rgba(200, 200, 200, 0.7);
-  font-size: 30px;
-  line-height: 36px;
+  font-size: 22px;
+  line-height: 28px;
   display: inline;
 `;
 

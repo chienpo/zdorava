@@ -81,7 +81,7 @@ msgstr "Art projects"
 msgid "Back"
 msgstr "Back"
 
-#: src/features/portfolio/portfolio-view.tsx:25
+#: src/features/portfolio/portfolio-view.tsx:36
 msgid "COMING SOON ..."
 msgstr "COMING SOON ..."
 
@@ -233,10 +233,6 @@ msgstr "Write me"
 #: src/constants/certificates.ts:34
 msgid "business english three english course certificate"
 msgstr "business english three english course certificate"
-
-#: src/constants/certificates.ts:17
-#~ msgid "java-script course"
-#~ msgstr "java-script course"
 
 #: src/constants/certificates.ts:16
 msgid "java-script course certificate"

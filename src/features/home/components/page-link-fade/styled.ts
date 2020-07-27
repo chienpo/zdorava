@@ -34,16 +34,8 @@ export const MotionLinkOverlay = styled.div`
 export const Text = styled.span`
   display: block;
   position: relative;
-  ${({ title }) =>
-    title === ROUTE_NAME_ABOUT
-      ? `
-  padding-right: 55px;
-  margin-top: 5vh;
-  `
-      : `
   padding-left: 55px;
   margin-top: 20vh;
-  `};
   transition: color 0.6s;
 
   &::${({ title }) => (title === ROUTE_NAME_ABOUT ? 'after' : 'before')} {
@@ -76,6 +68,17 @@ export const PageLinkStyled = styled(Link)`
   transition: box-shadow 0.2s, background 0.8s;
 
   ${Text} {
+    ${({ routeName }) =>
+      routeName === ROUTE_NAME_ABOUT
+        ? `
+    padding-right: 55px;
+    margin-top: 5vh;
+  `
+        : `
+    padding-left: 55px;
+    margin-top: 20vh;
+  `};
+
     color: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE_20 : BLACK)};
 
     &::before,
