@@ -55,15 +55,24 @@ export const Text = styled.span`
 `;
 
 export const PageLinkStyled = styled(Link)`
+  @media only screen and (min-width: 1199px) {
+    padding-left: 70px;
+    padding-right: 70px;
+    align-items: center;
+  }
+
+  width: 40%;
+  padding-top: 50px;
+  align-items: flex-start;
+  padding-left: 40px;
+  padding-right: 25px;
   z-index: 4;
   position: absolute;
   text-decoration: none;
-  display: flex;
-  padding: 0 70px;
   font-size: 30px;
   line-height: 38px;
+  display: flex;
   height: 100%;
-  width: 40%;
   box-sizing: border-box;
   transition: box-shadow 0.2s, background 0.8s;
 
@@ -101,14 +110,6 @@ export const PageLinkStyled = styled(Link)`
       }
     }
   }
-
-  @media only screen and (min-width: 991px) {
-    align-items: center;
-    padding-top: 0;
-  }
-
-  padding-top: 50px;
-  align-items: flex-start;
 
   ${({ routeName }: any) =>
     routeName === 'about'

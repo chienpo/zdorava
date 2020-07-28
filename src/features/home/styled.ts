@@ -51,6 +51,7 @@ export const Image = styled.div<{ bgIsToggling: boolean }>`
 `;
 
 export const HomepageHGroup = styled.div`
+  pointer-events: none;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
@@ -89,10 +90,14 @@ export const StyledH1 = styled.h1`
 `;
 
 export const HomepageSubtitle = styled.div`
+  @media only screen and (min-width: 479px) {
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 5px;
+  }
+
+  letter-spacing: 2px;
   text-align: center;
-  font-size: 22px;
-  line-height: 28px;
-  letter-spacing: 5px;
   font-weight: 700;
   color: red;
   height: 18px;
