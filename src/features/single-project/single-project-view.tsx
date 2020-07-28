@@ -8,7 +8,7 @@ import { PortfolioItemModel } from 'models/portfolio-item.model';
 import { PORTFOLIO_IMAGES_PATH, SITE_URL } from 'constants/site';
 import { PORTFOLIO_CATEGORIES_TABS_LABELS } from 'constants/portfolio';
 import { ROUTE_NAME_PORTFOLIO_CATEGORY } from 'router/routes';
-import { LazyImage } from './lazy-image';
+import { LazyImage } from 'ui/lazy-image';
 import {
   StyledMotionProjectSection,
   StyledMotionDescription,
@@ -57,7 +57,7 @@ export const SingleProjectView: React.FC<Props> = ({
             src={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${data.category}/${
               data.imageSrc
             }`}
-            srcThumbnail={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${
+            srcSet={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${
               data.category
             }-thumbnail/${data.thumbnailSrc}`}
             style={{ maxWidth: '70vw' }}

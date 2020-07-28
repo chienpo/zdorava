@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 import { BLACK_30 } from 'constants/colors';
-import { lazyBlurUp } from '../../../../animations/lazy/blur-up';
 
 export const GridLogoWrapper = styled(motion.div)`
   display: grid;
@@ -10,7 +9,7 @@ export const GridLogoWrapper = styled(motion.div)`
   grid-template-rows: 1fr 1fr 1fr;
 `;
 
-export const StyledMotionFigure = styled(motion.figure)<{ key: string }>`
+export const StyledMotionFigure = styled(motion.figure)`
   position: relative;
 
   &::after {
@@ -22,21 +21,15 @@ export const StyledMotionFigure = styled(motion.figure)<{ key: string }>`
     top: 0;
     right: 0;
     width: 100%;
-    ${({ key }) =>
-      key !== 'Hello logo' &&
+    ${({ title }) =>
+      title !== 'Hello logo' &&
       `
       box-shadow: inset 0px 0px 50px 25px ${BLACK_30};
     `};
   }
-`;
 
-export const StyledImg = styled.img`
-  ${lazyBlurUp};
-
-  &.blur-up.lazyloaded {
-    ${({ alt }) =>
-      alt === 'Hello logo' &&
-      `
-    filter: blur(0) contrast(125%);`};
-  }
+  ${({ title }) =>
+    title === 'Hello logo' &&
+    `
+    filter: contrast(125%);`};
 `;

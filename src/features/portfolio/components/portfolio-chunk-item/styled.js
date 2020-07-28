@@ -10,7 +10,11 @@ import {
   CHUNK_TYPE_THREE,
 } from 'constants/portfolio';
 import { mirrorEffect } from 'helpers/mirror-effect';
-import { lazyBlurUp } from 'animations/lazy/blur-up';
+import { LazyImage } from 'ui/lazy-image';
+
+export const LazyImageStyled = styled(LazyImage)`
+  display: block;
+`;
 
 export const ItemCategoryLabel = styled.span`
   margin-left: 10px;
@@ -44,10 +48,6 @@ export const ItemOrientationType = styled(Link)`
   display: flex;
 `;
 
-export const ItemImage = styled.img`
-  ${lazyBlurUp}
-`;
-
 export const Item = styled(motion.div)`
   margin: 0;
   padding: 0;
@@ -64,7 +64,7 @@ export const Item = styled(motion.div)`
         : '100%'};
   }
 
-  ${ItemImage} {
+  ${LazyImageStyled} {
     height: ${({ className }) =>
       className.includes(PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND)
         ? 'auto'
@@ -155,21 +155,20 @@ export const Item = styled(motion.div)`
   }
 `;
 
-export const ItemFigure = styled.div`
+export const ItemFigure = styled.figure`
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   overflow: hidden;
-  transition: all 0.8s ease 0s;
+  transition: filter 0.8s ease 0s;
+
+  filter: grayscale(100);
+  opacity: 1;
 
   &:hover {
+    filter: grayscale(0);
     ${mirrorEffect}
-
-    ${ItemImage} {
-      filter: grayscale(0);
-      opacity: 1;
-    }
   }
 `;

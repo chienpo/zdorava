@@ -1,8 +1,6 @@
 import React, { useRef, useLayoutEffect, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faImage } from '@fortawesome/free-solid-svg-icons';
-import lazySizes from 'lazysizes';
-import 'lazysizes/plugins/attrchange/ls.attrchange';
 import { I18n } from '@lingui/react';
 import { AnimatePresence } from 'framer-motion';
 
@@ -15,13 +13,11 @@ import {
   Item,
   ItemTitle,
   ItemFigure,
-  ItemImage,
   ItemCategoryName,
   ItemCategoryLabel,
   ItemOrientationType,
+  LazyImageStyled,
 } from './styled';
-
-lazySizes.cfg.lazyClass = 'lazyload';
 
 interface Props extends PortfolioItemModel {
   delayPerPixel: number;
@@ -116,11 +112,10 @@ export const PortfolioChunkItemView: React.FC<Props> = ({
               activeClassName="active"
             >
               <ItemFigure>
-                <ItemImage
-                  data-sizes="auto"
+                <LazyImageStyled
                   alt={alt}
+                  src={imgThumbnailSrc}
                   srcSet={imgThumbnailSrc}
-                  className="lazyload blur-up"
                 />
               </ItemFigure>
               <ItemCategoryName>

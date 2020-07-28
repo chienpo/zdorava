@@ -1,9 +1,8 @@
 import React from 'react';
-import lazySizes from 'lazysizes';
 import { motion, AnimatePresence } from 'framer-motion';
-import 'lazysizes/plugins/attrchange/ls.attrchange';
 
-import { GridLogoWrapper, StyledMotionFigure, StyledImg } from './styled';
+import { LazyImage } from 'ui/lazy-image';
+import { GridLogoWrapper, StyledMotionFigure } from './styled';
 
 interface Logo {
   left: number;
@@ -15,8 +14,6 @@ interface Logo {
 interface Props {
   logos: Logo[];
 }
-
-lazySizes.cfg.lazyClass = 'lazyload';
 
 export const AboutLogoView: React.FC<Props> = ({ logos }) => (
   <motion.div animate="enter" exit="exit">
@@ -40,6 +37,7 @@ export const AboutLogoView: React.FC<Props> = ({ logos }) => (
       >
         {logos.map(({ left, top, alt, src }) => (
           <StyledMotionFigure
+            title={alt}
             key={alt}
             variants={{
               enter: {
@@ -58,15 +56,7 @@ export const AboutLogoView: React.FC<Props> = ({ logos }) => (
               },
             }}
           >
-            <StyledImg
-              className="lazyload blur-up"
-              alt={alt}
-              data-sizes="auto"
-              data-srcset={`${src} 500w,
-            ${src} 640w,
-            ${src} 1024w`}
-              data-src={src}
-            />
+            <LazyImage alt={alt} src={src} srcSet={src} />
           </StyledMotionFigure>
         ))}
       </GridLogoWrapper>

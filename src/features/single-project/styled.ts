@@ -21,12 +21,6 @@ export const StyledMotionFigure = styled(motion.figure)`
   align-items: flex-start;
 `;
 
-export const StyledImg = styled.img`
-  width: 100%;
-  height: auto;
-  max-width: 70vw;
-`;
-
 export const StyledMotionDescription = styled(motion.div)`
   @media screen and (min-width: 767px) {
     max-width: 50vw;

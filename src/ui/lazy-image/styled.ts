@@ -1,9 +1,5 @@
 export const lazyBlurUp = `
-  display: block;
-  width: 100%;
-  max-width: none;
   transition: opacity 0.8s;
-  object-fit: cover;
 
   /* fade image in after load */
   &.lazyload,
@@ -27,13 +23,13 @@ export const lazyBlurUp = `
 
   /* other */
   &.blur-up {
-    filter: blur(5px) grayscale(0);
+    filter: blur(5px);
     visibility: hidden;
-    transition: filter 0.8s, visibility 0.8s;
+    transition: filter 1.6s, visibility 1.6s;
   }
 
   &.blur-up.lazyloaded {
     visibility: visible;
-    filter: blur(0) grayscale(100);
+    filter: blur(0);
   }
 `;
