@@ -59,7 +59,7 @@ export const AboutLogoView: React.FC<Props> = ({ logos }) => (
             }}
           >
             <StyledImg
-              className="lazyload"
+              className="lazyload blur-up"
               alt={alt}
               data-sizes="auto"
               data-srcset={`${src} 500w,
