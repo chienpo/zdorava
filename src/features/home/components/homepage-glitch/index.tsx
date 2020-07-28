@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import GlitchEffect from 'react-glitch-effect';
 
-import { GlitchContainer, GlitchBackground } from './styled';
+import homepageGlitchBackground from 'assets/images/backgrounds/homepage-background.png';
+import { GlitchContainer, LazyGlitchBackground } from './styled';
 
 export const HomepageGlitch = () => {
   const [disabled, toggleDisabled] = useState(true);
@@ -31,7 +32,11 @@ export const HomepageGlitch = () => {
   return (
     <GlitchContainer>
       <GlitchEffect duration="2s" iterationCount="infinite" disabled={disabled}>
-        <GlitchBackground />
+        <LazyGlitchBackground
+          src={homepageGlitchBackground}
+          srcSet={homepageGlitchBackground}
+          alt="Homepage glitch"
+        />
       </GlitchEffect>
     </GlitchContainer>
   );

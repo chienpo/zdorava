@@ -7,19 +7,19 @@ import { LoaderBox } from './styled';
 export const PageLoader: React.FC<{ showSpinner?: boolean }> = ({
   showSpinner = true,
 }) => (
-  <motion.div
-    animate="enter"
-    exit="exit"
-    style={{ width: '100vw', height: '100vh' }}
-  >
+  <motion.div style={{ width: '100vw', height: '100vh' }}>
     <AnimatePresence>
       <LoaderBox
+        initial="initial"
+        animate="enter"
+        exit="exit"
         variants={{
           initial: {
             opacity: 0,
           },
           enter: {
             opacity: 1,
+            transition: { duration: 0.4 },
           },
           exit: {
             opacity: 0,
