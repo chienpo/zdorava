@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import GlitchEffect from 'react-glitch-effect';
 
-import homepageGlitchBackground from 'assets/images/backgrounds/homepage-background.png';
+import homepageGlitchBackground from 'assets/images/backgrounds/homepage-background-tinyfied.jpg';
 import { GlitchContainer, LazyGlitchBackground } from './styled';
 
 export const HomepageGlitch = () => {

@@ -1,14 +1,14 @@
 import { createElement } from 'react';
 
-import aboutLogo1 from 'assets/images-default/selfies/tinified/1.png';
-import aboutLogo2 from 'assets/images-default/selfies/tinified/2.png';
-import aboutLogo3 from 'assets/images-default/selfies/tinified/3.png';
-import aboutLogo4 from 'assets/images-default/selfies/tinified/4.png';
-import aboutLogo5 from 'assets/images-default/selfies/tinified/centered.png';
-import aboutLogo6 from 'assets/images-default/selfies/tinified/5.png';
-import aboutLogo7 from 'assets/images-default/selfies/tinified/6.png';
-import aboutLogo8 from 'assets/images-default/selfies/tinified/7.png';
-import aboutLogo9 from 'assets/images-default/selfies/tinified/8.png';
+import aboutLogo1 from 'assets/images/selfies/1-320x320.png';
+import aboutLogo2 from 'assets/images/selfies/2-320x320.png';
+import aboutLogo3 from 'assets/images/selfies/3-320x320.png';
+import aboutLogo4 from 'assets/images/selfies/4-320x320.png';
+import aboutLogo5 from 'assets/images/selfies/centered-320x320.png';
+import aboutLogo6 from 'assets/images/selfies/5-320x320.png';
+import aboutLogo7 from 'assets/images/selfies/6-320x320.png';
+import aboutLogo8 from 'assets/images/selfies/7-320x320.png';
+import aboutLogo9 from 'assets/images/selfies/8-320x320.png';
 import { AboutLogoView } from './about-logo-view';
 
 export const AboutLogo = () => {

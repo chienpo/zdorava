@@ -10,24 +10,21 @@ export const SectionAbout = styled.section`
 `;
 
 export const GridContent = styled.div`
-  display: grid;
-  grid-template-columns: auto 50%;
-  width: 100%;
-
   @media screen and (min-width: 991px) {
     grid-template-columns: repeat(auto-fill, 50vw);
   }
-
+  display: grid;
+  width: 100%;
   grid-template-columns: 1fr;
 `;
 
 export const LogoWrap = styled.div`
   @media screen and (min-width: 991px) {
     width: 70%;
-    margin-bottom: 0;
+    margin: 0 auto;
   }
 
-  margin: 0 auto 50px;
+  margin-bottom: 50px;
 `;
 
 export const AccordionBox = styled.div`

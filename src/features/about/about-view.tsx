@@ -15,7 +15,7 @@ import {
 
 export const AboutView: React.FC = () => (
   <SectionAbout>
-    <GridContent>
+    <GridContent className="132">
       <LogoWrap>
         <AboutLogo />
       </LogoWrap>
