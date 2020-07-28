@@ -62,7 +62,6 @@ export const PageLinkStyled = styled(Link)`
   }
 
   width: 40%;
-  padding-top: 50px;
   align-items: flex-start;
   padding-left: 40px;
   padding-right: 25px;
