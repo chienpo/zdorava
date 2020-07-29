@@ -55,7 +55,7 @@
       ]
     ]
   },
-  "Redux, Router5, FrameMotion": {
+  "Redux - commercial experience": {
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx",
@@ -63,19 +63,27 @@
       ]
     ]
   },
+  "Effector state manager, Router5, FramerMotion - were used to create this app": {
+    "origin": [
+      [
+        "src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx",
+        71
+      ]
+    ]
+  },
   "FRAMEWORKS:": {
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx",
-        73
+        78
       ]
     ]
   },
-  "Symfony, (LoopBack - experience just for my own portfolio web app)": {
+  "Symfony - team-work experience": {
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx",
-        75
+        80
       ]
     ]
   },
@@ -83,7 +91,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx",
-        85
+        88
       ]
     ]
   },
@@ -91,7 +99,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx",
-        91
+        94
       ]
     ]
   },
@@ -99,7 +107,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx",
-        105
+        108
       ]
     ]
   }

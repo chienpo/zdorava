@@ -75,15 +75,18 @@ export const PanelThreeView = () => (
         <Strong>
           <Trans>REACT FEATURES:</Trans>
         </Strong>
-        <Trans>Redux, Router5, FrameMotion</Trans>
+        <Trans>Redux - commercial experience</Trans>
+        <br />
+        <Trans>
+          Effector state manager, Router5, FramerMotion - were used to create
+          this app
+        </Trans>
       </li>
       <li>
         <Strong>
           <Trans>FRAMEWORKS:</Trans>
         </Strong>
-        <Trans>
-          Symfony, (LoopBack - experience just for my own portfolio web app)
-        </Trans>
+        <Trans>Symfony - team-work experience</Trans>
       </li>
       <li>
         <Strong>CSS:</Strong>
@@ -113,7 +116,7 @@ export const PanelThreeView = () => (
         <Strong>
           <Trans>WEB-DESIGN:</Trans>
         </Strong>
-        PHOTOSHOP, GIMP, TinyPNG, PhotoPea
+        Photoshop, GIMP, TinyPNG, PhotoPea
       </li>
     </Ul>
   </PanelWrapper>

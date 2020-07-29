@@ -93,6 +93,10 @@ msgstr "Closely related to design, front-end development process is always going
 msgid "Creating reactive applications for me is like making up some web ecosystems. But bricks here - are cutes of code, and component-structure - is the constructions. Using my arch-design and development skills, i combine this in to a real complex react web application!"
 msgstr "Creating reactive applications for me is like making up some web ecosystems. But bricks here - are cutes of code, and component-structure - is the constructions. Using my arch-design and development skills, i combine this in to a real complex react web application!"
 
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:71
+msgid "Effector state manager, Router5, FramerMotion - were used to create this app"
+msgstr "Effector state manager, Router5, FramerMotion - were used to create this app"
+
 #: src/features/contacts/components/contact-form-view.tsx:15
 msgid "Email"
 msgstr "Email"
@@ -113,7 +117,7 @@ msgstr "Enter your name"
 msgid "Experience"
 msgstr "Experience"
 
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:73
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:78
 msgid "FRAMEWORKS:"
 msgstr "FRAMEWORKS:"
 
@@ -145,7 +149,7 @@ msgstr "Home"
 msgid "I've been working in Itransition Softvare Development Company as a Front-end Developer. This time allowed me to dive dipper in to front-end and understand how cool is it! Working in a team of developers I took part in making up really cool projects and features for our foreign customers."
 msgstr "I've been working in Itransition Softvare Development Company as a Front-end Developer. This time allowed me to dive dipper in to front-end and understand how cool is it! Working in a team of developers I took part in making up really cool projects and features for our foreign customers."
 
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:91
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:94
 msgid "JS Build Tools / JS Task Runners:"
 msgstr "JS Build Tools / JS Task Runners:"
 
@@ -187,8 +191,8 @@ msgid "REACT FEATURES:"
 msgstr "REACT FEATURES:"
 
 #: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:69
-msgid "Redux, Router5, FrameMotion"
-msgstr "Redux, Router5, FrameMotion"
+msgid "Redux - commercial experience"
+msgstr "Redux - commercial experience"
 
 #: src/form-builder/validators.tsx:7
 msgid "Required"
@@ -210,15 +214,15 @@ msgstr "Skills"
 msgid "Stepan"
 msgstr "Stepan"
 
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:75
-msgid "Symfony, (LoopBack - experience just for my own portfolio web app)"
-msgstr "Symfony, (LoopBack - experience just for my own portfolio web app)"
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:80
+msgid "Symfony - team-work experience"
+msgstr "Symfony - team-work experience"
 
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:85
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:88
 msgid "Virtual Machine Platforms & Containers:"
 msgstr "Virtual Machine Platforms & Containers:"
 
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:105
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:108
 msgid "WEB-DESIGN:"
 msgstr "WEB-DESIGN:"
 
