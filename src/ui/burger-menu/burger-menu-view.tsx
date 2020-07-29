@@ -80,7 +80,7 @@ export const BurgerMenuView: React.FC<Props> = ({
     animate={isOpen ? 'open' : 'closed'}
     custom={height}
     ref={containerRef}
-    style={{ width: isOpen ? '100%' : 'auto', zIndex: 5 }}
+    style={{ width: isOpen ? '300px' : '0', zIndex: 5 }}
   >
     <AnimatePresence>
       {isOpen && (
@@ -88,7 +88,6 @@ export const BurgerMenuView: React.FC<Props> = ({
           <Backdrop onClick={toggleOpen} />
           <StyledMotionMenuBackdrop
             initial="closed"
-            animate="open"
             exit="closed"
             variants={sidebar}
           />

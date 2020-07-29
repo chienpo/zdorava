@@ -39,7 +39,7 @@ export const NavigationView: React.FC<Props> = ({
       boxShadow: withShadow
         ? `0px -48px 35px 45px ${BLACK}`
         : '0 -0 0 0 transparent',
-      gridTemplateColumns: isMobile ? 'auto' : 'auto 200px',
+      gridTemplateColumns: isMobile || !showMenu ? 'auto' : 'auto 200px',
     }}
   >
     {showMenu && (

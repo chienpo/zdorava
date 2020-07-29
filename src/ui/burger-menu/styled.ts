@@ -5,9 +5,10 @@ import { motion } from 'framer-motion';
 
 export const SidebarSocial = styled(motion.address)`
   position: absolute;
-  bottom: 15px;
-  left: 15px;
-  width: 300px;
+  left: 0;
+  bottom: 0;
+  padding: 0 15px 15px;
+  width: 100%;
 `;
 
 export const StyledMotionSocialLink = styled.a`

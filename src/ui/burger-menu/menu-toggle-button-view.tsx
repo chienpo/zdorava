@@ -12,7 +12,7 @@ const BurgerButton = styled.button`
   -moz-user-select: none;
   -ms-user-select: none;
   cursor: pointer;
-  position: fixed;
+  position: absolute;
   top: 17px;
   left: 17px;
   background: transparent;

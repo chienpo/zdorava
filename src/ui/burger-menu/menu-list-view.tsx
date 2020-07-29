@@ -11,11 +11,15 @@ import {
 import { MenuListItemView } from './menu-list-item-view';
 
 const StyledMotionUl = styled(motion.ul)`
-  padding: 25px 15px;
-  position: absolute;
-  top: 100px;
   display: flex;
   flex-direction: column;
+`;
+
+const NavStyled = styled.nav`
+  padding: 25px 15px;
+  position: relative;
+  margin-top: 100px;
+  width: 100%;
 `;
 
 const variants = {
@@ -38,7 +42,7 @@ export const MenuListView: React.FC<Props> = ({
   routes,
   router,
 }) => (
-  <nav>
+  <NavStyled>
     <StyledMotionUl initial="closed" exit="closed" variants={variants}>
       {routes
         .filter(
@@ -55,5 +59,5 @@ export const MenuListView: React.FC<Props> = ({
           />
         ))}
     </StyledMotionUl>
-  </nav>
+  </NavStyled>
 );
