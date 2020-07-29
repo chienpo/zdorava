@@ -48,7 +48,7 @@ export const HomeView: React.FC<Props> = ({
       },
     }}
   >
-    <div>
+    <nav>
       {bgIsToggling && <Image bgIsToggling={bgIsToggling} />}
       <PageLinkFadeView
         routeName={ROUTE_NAME_ABOUT}
@@ -63,7 +63,7 @@ export const HomeView: React.FC<Props> = ({
       />
       <ThreeDBackground />
       <DottedOverlay />
-    </div>
+    </nav>
     <HomepageHGroup>
       <StyledH1>
         <Trans>Stepan</Trans>

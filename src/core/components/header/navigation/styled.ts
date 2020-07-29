@@ -8,7 +8,7 @@ export const LanguageSwitchBox = styled.div`
   z-index: 0;
   display: flex;
   justify-content: center;
-  width: 100%;
+  margin-left: auto;
 `;
 
 export const NavigationList = styled.nav`
@@ -32,7 +32,6 @@ export const BaseLinkStyled = styled(BaseLink)`
 `;
 
 export const NavigationWrapper = styled.div`
-  grid-template-columns: auto 170px;
   background: ${({ theme }) =>
     theme === DARK_MODE
       ? `${BLACK_30};`
@@ -40,7 +39,7 @@ export const NavigationWrapper = styled.div`
         ${WHITE};
       `};
   display: grid;
-  grid-template-columns: 1fr 170px;
+  //grid-template-columns: 1fr 170px;
   width: 100%;
   position: fixed;
   top: 0;

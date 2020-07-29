@@ -2,20 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
 import { Route } from 'models/route.model';
 
 import { DARK_MODE } from 'constants/theme';
 import { BLACK, BLACK_90, WHITE_20 } from 'constants/colors';
-import { PHONE } from 'constants/social';
+import { PHONE, SOCIAL_LINKED_IN_PATH } from 'constants/social';
 import { Backdrop } from 'ui/backdrop';
 import { MenuToggleButtonView } from './menu-toggle-button-view';
 import { MenuListView } from './menu-list-view';
 import { SidebarSocial, StyledMotionSocialLink } from './styled';
 
 interface RefObject {
-  current: null | HTMLElement;
+  current: null | HTMLDivElement;
 }
 
 interface Props {
@@ -27,7 +28,7 @@ interface Props {
   containerRef: RefObject;
 }
 
-const StyledMotionNav = styled(motion.nav)`
+const StyledMotionNavWrapper = styled(motion.div)`
   position: fixed;
   top: 0;
   left: 0;
@@ -74,7 +75,7 @@ export const BurgerMenuView: React.FC<Props> = ({
   routes,
   router,
 }) => (
-  <StyledMotionNav
+  <StyledMotionNavWrapper
     initial="closed"
     animate={isOpen ? 'open' : 'closed'}
     custom={height}
@@ -85,10 +86,17 @@ export const BurgerMenuView: React.FC<Props> = ({
       {isOpen && (
         <>
           <Backdrop onClick={toggleOpen} />
-
-          <StyledMotionMenuBackdrop variants={sidebar} />
-          <MenuListView routes={routes} router={router} />
-
+          <StyledMotionMenuBackdrop
+            initial="closed"
+            animate="open"
+            exit="closed"
+            variants={sidebar}
+          />
+          <MenuListView
+            toggleOpen={toggleOpen}
+            routes={routes}
+            router={router}
+          />
           <SidebarSocial
             variants={{
               initial: {
@@ -118,9 +126,19 @@ export const BurgerMenuView: React.FC<Props> = ({
             animate="open"
             exit="closed"
           >
-            <StyledMotionSocialLink href={`tel:${PHONE}`}>
+            <StyledMotionSocialLink
+              href={`tel:${PHONE}`}
+              target="_blank"
+              rel="noopener"
+            >
               <FontAwesomeIcon icon={faPhone} style={{ color: BLACK }} />
-              &nbsp;+375 (44) 721-37-70
+            </StyledMotionSocialLink>
+            <StyledMotionSocialLink
+              href={SOCIAL_LINKED_IN_PATH}
+              target="_blank"
+              rel="noopener"
+            >
+              <FontAwesomeIcon icon={faLinkedin} style={{ color: BLACK }} />
             </StyledMotionSocialLink>
           </SidebarSocial>
         </>
@@ -128,5 +146,5 @@ export const BurgerMenuView: React.FC<Props> = ({
     </AnimatePresence>
 
     <MenuToggleButtonView isOpen={isOpen} toggle={toggleOpen} />
-  </StyledMotionNav>
+  </StyledMotionNavWrapper>
 );

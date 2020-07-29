@@ -41,18 +41,14 @@ export const NavigationView: React.FC<Props> = ({
         : '0 -0 0 0 transparent',
     }}
   >
-    {showMenu ? (
+    {showMenu && (
       <>
         {isMobile ? (
-          <div>
-            <BurgerMenu routes={routes} />
-          </div>
+          <BurgerMenu routes={routes} />
         ) : (
           <NavigationListView router={router} routes={routes} />
         )}
       </>
-    ) : (
-      <div />
     )}
     <LanguageSwitchBox>
       <LanguageSwitch

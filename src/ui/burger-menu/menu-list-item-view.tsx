@@ -13,9 +13,13 @@ import { PAGE_TITLES } from 'constants/page-titles';
 
 const StyledMotionLi = styled(motion.li)`
   list-style: none;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   display: flex;
   cursor: pointer;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 `;
 
 const BaseLinkStyled = styled(BaseLink)`
@@ -26,7 +30,6 @@ const BaseLinkStyled = styled(BaseLink)`
   line-height: 30px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  padding: 5px 0;
 
   &.active {
     font-weight: bold;
@@ -77,10 +80,15 @@ const variants = {
 
 interface Props {
   name: string;
+  onClick: () => void;
   router: any;
 }
 
-export const MenuListItemView: React.FC<Props> = ({ name, router }) => {
+export const MenuListItemView: React.FC<Props> = ({
+  onClick,
+  name,
+  router,
+}) => {
   const category = useStore($portfolioTabsStore);
 
   return (
@@ -96,6 +104,7 @@ export const MenuListItemView: React.FC<Props> = ({ name, router }) => {
             router={router}
             routeName={name}
             routeParams={{ category }}
+            onClick={onClick}
           >
             {i18n._(PAGE_TITLES[name])}
           </BaseLinkStyled>

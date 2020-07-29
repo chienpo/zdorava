@@ -4,7 +4,10 @@ import styled from 'styled-components';
 
 import { Route } from 'models/route.model';
 
-import { ROUTE_NAME_PORTFOLIO_PROJECT } from 'router/routes';
+import {
+  ROUTE_NAME_PORTFOLIO_CATEGORY,
+  ROUTE_NAME_PORTFOLIO_PROJECT,
+} from 'router/routes';
 import { MenuListItemView } from './menu-list-item-view';
 
 const StyledMotionUl = styled(motion.ul)`
@@ -26,15 +29,31 @@ const variants = {
 
 interface Props {
   routes: Route[];
+  toggleOpen: () => void;
   router: any;
 }
 
-export const MenuListView: React.FC<Props> = ({ routes, router }) => (
-  <StyledMotionUl variants={variants}>
-    {routes
-      .filter(({ name }) => name !== ROUTE_NAME_PORTFOLIO_PROJECT)
-      .map(({ name }) => (
-        <MenuListItemView key={name} name={name} router={router} />
-      ))}
-  </StyledMotionUl>
+export const MenuListView: React.FC<Props> = ({
+  toggleOpen,
+  routes,
+  router,
+}) => (
+  <nav>
+    <StyledMotionUl initial="closed" exit="closed" variants={variants}>
+      {routes
+        .filter(
+          ({ name }) =>
+            name !== ROUTE_NAME_PORTFOLIO_PROJECT &&
+            name !== ROUTE_NAME_PORTFOLIO_CATEGORY
+        )
+        .map(({ name }) => (
+          <MenuListItemView
+            onClick={toggleOpen}
+            key={name}
+            name={name}
+            router={router}
+          />
+        ))}
+    </StyledMotionUl>
+  </nav>
 );

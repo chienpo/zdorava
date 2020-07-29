@@ -48,7 +48,7 @@ export const FooterWrapper = styled(motion.footer)`
   }
 `;
 
-export const FooterNav = styled.nav`
+export const FooterNav = styled.address`
   display: grid;
   grid-column-gap: 25px;
   grid-template-columns: auto auto auto auto;

@@ -2,21 +2,19 @@ import * as React from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-import { BLACK } from 'constants/colors';
+import { BLACK, WHITE } from 'constants/colors';
 
 const BurgerButton = styled.button`
+  display: flex;
   outline: none;
   border: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   cursor: pointer;
-  position: absolute;
-  top: 18px;
-  left: 15px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  position: fixed;
+  top: 17px;
+  left: 17px;
   background: transparent;
 `;
 
@@ -45,12 +43,14 @@ const Path: React.FC<PathInterface> = props => (
   />
 );
 
-export const MenuToggleButtonView: React.FC<{
+interface Props {
   toggle: () => void;
   isOpen: boolean;
-}> = ({ toggle, isOpen }) => (
+}
+
+export const MenuToggleButtonView: React.FC<Props> = ({ toggle, isOpen }) => (
   <BurgerButton type="button" onClick={toggle}>
-    <svg width="45" height="45" viewBox="0 0 23 23" color="white">
+    <svg width="45" height="45" viewBox="0 0 23 23" color={WHITE}>
       <Path
         stroke={isOpen ? BLACK : BLACK}
         variants={{

@@ -7,7 +7,7 @@ import { Route } from 'models/route.model';
 import { BurgerMenuView } from './burger-menu-view';
 
 interface RefObject {
-  current: HTMLElement;
+  current: HTMLDivElement;
 }
 
 const useDimensions = (ref: RefObject) => {
@@ -26,7 +26,7 @@ const useDimensions = (ref: RefObject) => {
 
 export const BurgerMenu: React.FC<{ routes: Route[] }> = ({ routes }) => {
   const [isOpen, toggleOpen] = useCycle(false, true);
-  const containerRef = useRef<HTMLElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const { height } = useDimensions(containerRef as RefObject);
   const { router } = useRoute();
 
