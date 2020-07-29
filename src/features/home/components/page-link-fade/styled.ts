@@ -80,11 +80,11 @@ export const PageLinkStyled = styled(Link)`
       routeName === ROUTE_NAME_ABOUT
         ? `
     padding-right: 55px;
-    margin-top: 8vh;
+    margin-top: 15vh;
   `
         : `
     padding-left: 55px;
-    margin-top: 20vh;
+    margin-top: 30vh;
   `};
 
     color: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE_20 : BLACK)};

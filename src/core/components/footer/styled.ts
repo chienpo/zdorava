@@ -56,7 +56,7 @@ export const FooterNav = styled.address`
   padding: 45px 0;
 `;
 
-export const FooterSocialLink = styled.a`
+export const FooterSocialLink = styled.a<{ as?: string }>`
   display: flex;
   align-items: center;
   color: ${({ color, theme }) =>
@@ -68,6 +68,7 @@ export const FooterSocialLink = styled.a`
   border: none;
   cursor: pointer;
   transition: color 0.4s;
+  ${({ as }) => as === 'button' && 'width: 30px; position: relative;'};
 
   &:hover {
     color: ${RED};

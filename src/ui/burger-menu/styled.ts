@@ -8,7 +8,7 @@ export const SidebarSocial = styled(motion.address)`
   left: 0;
   bottom: 0;
   padding: 0 15px 15px;
-  width: 100%;
+  width: 300px;
 `;
 
 export const StyledMotionSocialLink = styled.a`

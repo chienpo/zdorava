@@ -60,7 +60,7 @@ msgstr "\"Understanding TypeScript - 2020 Edition\" certificate, \"UDEMY\""
 
 #: src/constants/page-titles.ts:7
 #: src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:9
-#: src/features/home/home-view.tsx:26
+#: src/features/home/home-view.tsx:29
 msgid "About"
 msgstr "About"
 
@@ -149,7 +149,7 @@ msgstr "I've been working in Itransition Softvare Development Company as a Front
 msgid "JS Build Tools / JS Task Runners:"
 msgstr "JS Build Tools / JS Task Runners:"
 
-#: src/features/home/home-view.tsx:35
+#: src/features/home/home-view.tsx:38
 msgid "Lagunovsky"
 msgstr "Lagunovsky"
 
@@ -174,7 +174,7 @@ msgid "Over 10 years I've been studying on architecture & design specialisations
 msgstr "Over 10 years I've been studying on architecture & design specialisations. I was lucky to improve my skills in such areas like: interior and brand design, modern and concept arts, i created a lot of cool creative projects and also got and expierence of presenting them to the customers! This expierence has became absolutely helpful in front-end, web-design, and even though in my whole life!"
 
 #: src/constants/page-titles.ts:8
-#: src/features/home/home-view.tsx:27
+#: src/features/home/home-view.tsx:30
 msgid "Portfolio"
 msgstr "Portfolio"
 
@@ -206,7 +206,7 @@ msgstr "Send message"
 msgid "Skills"
 msgstr "Skills"
 
-#: src/features/home/home-view.tsx:33
+#: src/features/home/home-view.tsx:36
 msgid "Stepan"
 msgstr "Stepan"
 

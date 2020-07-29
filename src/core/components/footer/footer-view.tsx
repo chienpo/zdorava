@@ -1,13 +1,9 @@
 import * as React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { motion, AnimatePresence } from 'framer-motion';
 
-import {
-  SOCIAL_GITHUB_PATH,
-  SOCIAL_LINKED_IN_PATH,
-  PHONE,
-} from 'constants/social';
+import { SOCIAL_LINKS_DATA } from 'constants/social';
 import { SITE_PUBLICATION_YEAR } from 'constants/site';
 import { ROUTE_NAME_HOME } from 'router/routes';
 import { RED } from 'constants/colors';
@@ -28,32 +24,35 @@ interface Props {
 
 const variants = {
   initial: {
+    x: 0,
     opacity: 0,
   },
   enter: {
+    x: 0,
     opacity: 1,
     transition: { duration: 1 },
   },
   exit: {
+    x: 0,
     opacity: 0,
-    transition: { duration: 1.5 },
+    transition: { duration: 0.4 },
   },
 };
 
 const homePageVariants = {
   initial: {
-    opacity: 0,
     x: '-100%',
+    opacity: 0,
   },
   enter: {
-    opacity: 1,
     x: '0%',
+    opacity: 1,
     transition: { duration: 1 },
   },
   exit: {
+    x: '0%',
     opacity: 0,
-    x: '-100%',
-    transition: { duration: 1.5 },
+    transition: { duration: 0.4 },
   },
 };
 
@@ -63,56 +62,45 @@ export const FooterView: React.FC<Props> = ({
   theme,
   activeRouteName,
 }) => {
-  const footerNavigationLinks = [
-    { name: 'github', path: SOCIAL_GITHUB_PATH, icon: faGithub },
-    { name: 'linkedin', path: SOCIAL_LINKED_IN_PATH, icon: faLinkedin },
-  ];
-
   return (
     <>
       <Contacts
         opened={contactFormOpened}
         onClose={() => toggleContactForm(false)}
       />
-      <FooterWrapper
-        theme={theme}
-        initial="initial"
-        animate="enter"
-        exit="exit"
-        variants={
-          activeRouteName === ROUTE_NAME_HOME ? homePageVariants : variants
-        }
-      >
-        <FooterNav>
-          {footerNavigationLinks.map(({ path, icon, name }) => (
-            <FooterSocialLink
-              key={name}
-              href={path}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={icon} />
-            </FooterSocialLink>
-          ))}
-          <FooterSocialLink href={`tel:${PHONE}`}>
-            <FontAwesomeIcon icon={faPhone} />
-          </FooterSocialLink>
-          <FooterSocialLink
-            onClick={() => toggleContactForm(true)}
-            as="button"
-            color={RED}
+      <motion.div animate="enter" exit="exit">
+        <AnimatePresence>
+          <FooterWrapper
+            theme={theme}
+            initial="initial"
+            variants={
+              activeRouteName === ROUTE_NAME_HOME ? homePageVariants : variants
+            }
           >
-            <FontAwesomeIcon
-              style={{ position: 'absolute' }}
-              icon={faEnvelope}
-            />
-          </FooterSocialLink>
-        </FooterNav>
-        <FooterCopy>
-          © Zdorava &nbsp;
-          {SITE_PUBLICATION_YEAR}
-        </FooterCopy>
-      </FooterWrapper>
+            <FooterNav>
+              {SOCIAL_LINKS_DATA.map(({ path, icon, name, attrs }) => (
+                <FooterSocialLink key={name} href={path} {...attrs}>
+                  <FontAwesomeIcon icon={icon} />
+                </FooterSocialLink>
+              ))}
+              <FooterSocialLink
+                onClick={() => toggleContactForm(true)}
+                as="button"
+                color={RED}
+              >
+                <FontAwesomeIcon
+                  style={{ position: 'absolute' }}
+                  icon={faEnvelope}
+                />
+              </FooterSocialLink>
+            </FooterNav>
+            <FooterCopy>
+              © Zdorava &nbsp;
+              {SITE_PUBLICATION_YEAR}
+            </FooterCopy>
+          </FooterWrapper>
+        </AnimatePresence>
+      </motion.div>
     </>
   );
 };

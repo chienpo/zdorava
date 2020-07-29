@@ -8,7 +8,7 @@ import overlayBlackDot from 'assets/images/overlay_black.png';
 import overlayWhiteDot from 'assets/images/overlay_white_four.png';
 import homepageGlitchBg from 'assets/images/backgrounds/homepage-yellow-background.jpg';
 
-export const MotionWrap = styled(motion.section)`
+export const MotionWrap = styled(motion.div)`
   position: relative;
   height: 100%;
 `;

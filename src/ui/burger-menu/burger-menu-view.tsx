@@ -2,14 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
 import { Route } from 'models/route.model';
 
 import { DARK_MODE } from 'constants/theme';
 import { BLACK, BLACK_90, WHITE_20 } from 'constants/colors';
-import { PHONE, SOCIAL_LINKED_IN_PATH } from 'constants/social';
+import { SOCIAL_LINKS_DATA } from 'constants/social';
 import { Backdrop } from 'ui/backdrop';
 import { MenuToggleButtonView } from './menu-toggle-button-view';
 import { MenuListView } from './menu-list-view';
@@ -125,20 +123,16 @@ export const BurgerMenuView: React.FC<Props> = ({
             animate="open"
             exit="closed"
           >
-            <StyledMotionSocialLink
-              href={`tel:${PHONE}`}
-              target="_blank"
-              rel="noopener"
-            >
-              <FontAwesomeIcon icon={faPhone} style={{ color: BLACK }} />
-            </StyledMotionSocialLink>
-            <StyledMotionSocialLink
-              href={SOCIAL_LINKED_IN_PATH}
-              target="_blank"
-              rel="noopener"
-            >
-              <FontAwesomeIcon icon={faLinkedin} style={{ color: BLACK }} />
-            </StyledMotionSocialLink>
+            {SOCIAL_LINKS_DATA.map(({ name, path, icon }) => (
+              <StyledMotionSocialLink
+                key={name}
+                href={path}
+                target="_blank"
+                rel="noopener"
+              >
+                <FontAwesomeIcon icon={icon} style={{ color: BLACK }} />
+              </StyledMotionSocialLink>
+            ))}
           </SidebarSocial>
         </>
       )}
