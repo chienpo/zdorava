@@ -39,7 +39,6 @@ export const NavigationWrapper = styled.div`
         ${WHITE};
       `};
   display: grid;
-  //grid-template-columns: 1fr 170px;
   width: 100%;
   position: fixed;
   top: 0;
