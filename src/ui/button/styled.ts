@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 import { BLACK, BLACK_90, GRAY, RED, WHITE } from 'constants/colors';
 
-export const ButtonStyled = styled.button`
-  color: ${({ plain }: any) => (plain ? WHITE : 'white')};
-  border: 1px solid ${({ plain }: any) => (plain ? BLACK : 'white')};
-  background: ${({ plain }: any) => (plain ? `${BLACK}` : 'transparent')};
-  width: ${({ width }: any) => width || 'auto'};
+export const ButtonStyled = styled.button<{ plain: boolean; width: string }>`
+  color: ${({ plain }) => (plain ? WHITE : 'white')};
+  border: 1px solid ${({ plain }) => (plain ? BLACK : 'white')};
+  background: ${({ plain }) => (plain ? `${BLACK}` : 'transparent')};
+  width: ${({ width }) => width || 'auto'};
   font-weight: normal;
   text-decoration: none;
   font-size: 16px;
@@ -21,9 +21,9 @@ export const ButtonStyled = styled.button`
   }
 
   &:hover {
-    background: ${({ plain }: any) => plain && `${BLACK_90}`};
+    background: ${({ plain }) => plain && BLACK_90};
     color: ${RED};
-    border-color: ${({ plain }: any) => (plain ? BLACK_90 : RED)};
+    border-color: ${({ plain }) => (plain ? BLACK_90 : RED)};
   }
 
   &:focus {

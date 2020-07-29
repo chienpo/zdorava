@@ -1,10 +1,11 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 import overlayWhiteDot from 'assets/images/overlay_white_four.png';
 import overlayBlackDot from 'assets/images/overlay_black.png';
 
 import { DARK_MODE } from 'constants/theme';
+import { pulseIconAnim } from 'animations/keyframes/pulse';
 import {
   BLACK,
   GRAY,
@@ -14,24 +15,6 @@ import {
   WHITE_90,
   BLACK_40,
 } from 'constants/colors';
-
-const iconPulse = keyframes`
-  0% {
-    font-size: 30px;
-  }
-  40% {
-    font-size: 30px;
-  }
-  50% {
-    font-size: 34px;
-  }
-  70% {
-    font-size: 30px;
-  }
-  100% {
-    font-size: 30px;
-  }
-`;
 
 export const FooterCopy = styled.small`
   text-transform: uppercase;
@@ -54,6 +37,7 @@ export const FooterWrapper = styled(motion.footer)`
     theme === DARK_MODE
       ? `rgba(0,0,0,0.93) url(${overlayBlackDot}) repeat scroll 0 0;`
       : `${WHITE_90} url(${overlayWhiteDot}) repeat scroll 0 0;`};
+  position: relative;
   z-index: 1;
 
   ${FooterCopy} {
@@ -79,7 +63,7 @@ export const FooterSocialLink = styled.a`
     color ? `${theme.mode === DARK_MODE ? WHITE : BLACK}` : GRAY};
   font-size: ${({ color }) => (color ? '34px' : '30px')};
   height: 34px;
-  animation: ${({ color }) => color && iconPulse} 4.4s infinite;
+  animation: ${({ color }) => color && pulseIconAnim} 4.4s infinite;
   background: none;
   border: none;
   cursor: pointer;

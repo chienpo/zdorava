@@ -2,37 +2,16 @@ import React, { FC } from 'react';
 import { Trans } from '@lingui/macro';
 import { Form } from 'react-final-form';
 import { i18nMark, I18n } from '@lingui/react';
-import styled from 'styled-components';
 
 import { FIELD_NAME, FIELD_EMAIL, FIELD_MESSAGE } from 'constants/contacts';
-import { Button } from 'ui/button/button';
 import { MoreLoader } from 'ui/more-loader/more-loader';
 import { InputField } from 'form-builder';
 import { required } from 'form-builder/validators';
-import { RED } from '../../../constants/colors';
-
-const StyledButton = styled(Button)`
-  display: grid;
-  grid-template-columns: ${({ disabled }: { disabled: boolean }) =>
-    disabled ? '40px auto auto' : '1fr'};
-  padding: ${({ disabled }: { disabled: boolean }) => disabled && '9px'};
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-`;
-
-const SuccessMessage = styled.div`
-  font-size: 16px;
-  text-transform: uppercase;
-  padding: 15px 0;
-  color: ${RED};
-  width: 100%;
-  text-align: center;
-`;
+import { StyledButton, SuccessMessage } from './styled';
 
 interface Props {
-  initialValues: any;
-  onSubmit: (values: any) => any;
+  initialValues: { [key: string]: string };
+  onSubmit: (values: { [key: string]: string }) => void;
   requestLoading: boolean;
   messageSent: boolean;
 }

@@ -2,8 +2,7 @@ import React from 'react';
 import { I18n } from '@lingui/react';
 
 import { PORTFOLIO_CATEGORIES_TABS_LABELS } from 'constants/portfolio';
-import { Button } from 'ui/button/button';
-import { MotionPortfolioTabs } from './styled';
+import { MotionPortfolioTabs, ButtonStyled } from './styled';
 
 interface Props {
   activeCategory: string;
@@ -40,14 +39,14 @@ export const PortfolioTabsView: React.FC<Props> = ({
         exit="exit"
       >
         {categories.map(({ label }) => (
-          <Button
+          <ButtonStyled
             key={label}
             onClick={() => onSetCategory(label)}
             className={label === activeCategory ? 'active' : ''}
             disabled={label === activeCategory}
           >
             {i18n._(PORTFOLIO_CATEGORIES_TABS_LABELS[label])}
-          </Button>
+          </ButtonStyled>
         ))}
       </MotionPortfolioTabs>
     )}

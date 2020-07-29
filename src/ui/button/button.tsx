@@ -4,11 +4,11 @@ import { ButtonStyled } from './styled';
 
 interface Props {
   children: string;
-  plain: any;
-  width: any;
+  plain: boolean;
+  width: string;
   disabled: boolean;
 }
 
-export const Button: FC<any> = ({ children, ...props }: Props) => (
+export const Button: FC<any & Props> = ({ children, ...props }) => (
   <ButtonStyled {...props}>{children}</ButtonStyled>
 );

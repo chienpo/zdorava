@@ -55,7 +55,7 @@ export const Text = styled.span`
 `;
 
 export const PageLinkStyled = styled(Link)`
-  @media only screen and (min-width: 1199px) {
+  @media only screen and (min-width: 767px) {
     padding-left: 70px;
     padding-right: 70px;
     align-items: center;
