@@ -29,10 +29,20 @@ RewriteCond %{REQUEST_FILENAME} !-l
 RewriteRule . /index.html [L]
 
 # Enable cache in user's browsers
+# 2592000 1 month
+# 15552000 6 month
 <IfModule mod_headers.c>
-    # 2 month
+    # 6 month
+    <FilesMatch "\.(js)$">
+        Header set Cache-Control "max-age=15552000"
+    </FilesMatch>
+    # 6 month
     <FilesMatch "\.(css)$">
-        Header set Cache-Control "max-age=2628000"
+        Header set Cache-Control "max-age=15552000"
+    </FilesMatch>
+    # 6 month
+    <FilesMatch "\.(jpg|png)$">
+        Header set Cache-Control "max-age=15552000"
     </FilesMatch>
     # 6 month
     <FilesMatch "\.(ico|woff|woff2|webp)$">
