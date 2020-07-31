@@ -2,48 +2,58 @@
   "portfolio": [
     {
       "category": "frontend",
-      "imageSrc": "preview-doe-three.jpg",
-      "thumbnailSrc": "preview-doe-three.jpg",
-      "alt": "preview-doe-three",
+      "imageSrc": "ipwe-home-page.png",
+      "thumbnailSrc": "ipwe-home-page.png",
+      "alt": "ipwe-home-page",
       "description": {
-        "en": "Description",
-        "ru": "Описание"
+        "en": "Hello again in my portfolio room! IPWE customers team has an admin platform - IPWE-PLATFORM! IPWE-Marketplace - is some place where you can not only create and share patents programs, communicating with platform, but also join to chat with the other users. We have been working with love and passion to make our US customer happy having such cool responsive app for their business! I wrote a lot of complex functionality like sign-up stepper, and cool UI features like chat, complex modals, and so on! I was also really exited presenting features to the customers! ",
+        "ru": "Привет еще раз в моей комнате портфолио! Заказчики IPWE имеют административную платформу IPWE-PLATFORM для управления патентами а так же IPWE-Marketplace. Это место, где вы можете не только создавать и обмениваться патентными программами, связываясь с платформой, но и вступать в чат с другими пользователями. Мы работали с большой любовью и страстью, чтобы наш американский клиент был счастлив, имея такое крутое адаптивное приложение для своего бизнеса! Я написал много сложного функционала, например регистратор степперов, фичи UI, такие как: чат, сложные модальные окна и многое другое! Классным опытом стала практика презентаций особенностей проекта заказчикам!"
       },
       "details": "front-end project",
       "title": {
-        "en": "Patent management system",
-        "ru": "Система управления патентами"
-      }
+        "en": "IPWE-MARKETPLACE",
+        "ru": "IPWE-MARKETPLACE"
+      },
+      "projectLinks": [{ "href": "https://ipwe.com", "label": "ipwe.com" }]
     },
     {
       "category": "frontend",
-      "imageSrc": "preview-doe.jpg",
-      "thumbnailSrc": "preview-doe.jpg",
-      "alt": "preview-doe",
+      "imageSrc": "ipwe-platform-import-details-page.png",
+      "thumbnailSrc": "ipwe-platform-import-details-page.png",
+      "alt": "ipwe-platform-import-details-page",
       "description": {
-        "en": "Description",
-        "ru": "Описание"
+        "en": "Take a look please on this cool and complex react project! This is some kind of patent administrating and sharing platform! It contains a lot of business logic, forms, tables and features. I joined to team when there were a lot of jQuery, twig templates cause of symfony framework, but soon we decided to remove jQuery and use react! So here I got in to the game! This project is my first experience with React and here and i was really exited diving in to this cool library! I used react with a great pleasure and got a lot of experience making up a lot of cool features using this awesome library!",
+        "ru": "Пожалуйста, взгляните на этот крутой и сложный проект на React! Это своего рода платформа администрирования и обмена патентами! Он содержит много бизнес-логики, форм, таблиц и фич. Я присоединился к команде, когда было много jQuery, шаблонов из-за фреймворка Symfony, но вскоре мы решили удалить jQuery и использовать React! Так я оказался в деле! Этот проект - мой первый опыт работы с React и здесь, и я был очень рад погружаться эту классную библиотеку. Я с большим удовольствием получил большой опыт создания множества интересных функций с помощью этой потрясающей библиотеки!"
       },
       "details": "front-end project",
       "title": {
-        "en": "Title",
-        "ru": "Заголовок"
-      }
+        "en": "IPWE-PLATFORM",
+        "ru": "IPWE-PLATFORM"
+      },
+      "projectLinks": [
+        { "href": "https://platform.ipwe.com", "label": "platform.ipwe.com" }
+      ]
     },
     {
       "category": "frontend",
-      "imageSrc": "preview-doe-two.jpg",
-      "thumbnailSrc": "preview-doe-two.jpg",
-      "alt": "preview-doe-two",
+      "imageSrc": "lastminute-theatre-page.png",
+      "thumbnailSrc": "lastminute-theatre-page.png",
+      "alt": "lastminute-theatre-page",
       "description": {
-        "en": "Description",
-        "ru": "Описание"
+        "en": "Yep! Here you can see the one of my first projects when I was working at ITRANSITION software development company! I was over the roots of this project so I was really happy to make up it's frontend part for our сolleagues from London! I've been working in a team of cool backend developers and a great project manager! Front-end is written using jquery, sass and npm. Also i got a lot of CSS experience using flex-boxes, mixins and external libraries! And of course this project is fully mobile responsive.",
+        "ru": "Представляю вам один из проектов, со времени работы в компании по разработке программного обеспечения ITRANSITION! Я находился у истоков этого проекта и был очень рад работать над фронт-ендом для наших коллег из Лондона! Я работал в команде классных бэкэнд-разработчиков и отличного проектного менеджера! Проект написан с использованием jquery, sass и npm. Таким образом я получил большой опыт работы с CSS, используя flex-box, mixins и использование внешних библиотек! И, конечно же, этот проект полностью адаптирован для мобильных устройств «defacto»."
       },
       "details": "front-end project",
       "title": {
-        "en": "Title",
-        "ru": "Заголовок"
-      }
+        "en": "LAST MINUTE",
+        "ru": "LAST MINUTE"
+      },
+      "projectLinks": [
+        {
+          "href": "https://www.lastminute.com/tickets/london-theatre/musicals/the-lion-king",
+          "label": "lastminute.com/tickets/london-theatre/musicals/the-lion-king"
+        }
+      ]
     },
     {
       "category": "frontend",
