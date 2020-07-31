@@ -61,52 +61,48 @@ export const FooterView: React.FC<Props> = ({
   contactFormOpened,
   theme,
   activeRouteName,
-}) => {
-  return (
-    <>
-      <Contacts
-        opened={contactFormOpened}
-        onClose={() => toggleContactForm(false)}
-      />
-      <motion.div animate="enter" exit="exit">
-        <AnimatePresence>
-          <FooterWrapper
-            theme={theme}
-            initial="initial"
-            variants={
-              activeRouteName === ROUTE_NAME_HOME ? homePageVariants : variants
-            }
+}) => (
+  <motion.footer animate="enter" exit="exit">
+    <Contacts
+      opened={contactFormOpened}
+      onClose={() => toggleContactForm(false)}
+    />
+    <AnimatePresence>
+      <FooterWrapper
+        theme={theme}
+        initial="initial"
+        variants={
+          activeRouteName === ROUTE_NAME_HOME ? homePageVariants : variants
+        }
+      >
+        <FooterNav>
+          {SOCIAL_LINKS_DATA.map(({ path, icon, name, attrs }) => (
+            <FooterSocialLink
+              key={name}
+              href={path}
+              aria-label={name}
+              {...attrs}
+            >
+              <FontAwesomeIcon icon={icon} />
+            </FooterSocialLink>
+          ))}
+          <FooterSocialLink
+            aria-label="contacts"
+            onClick={() => toggleContactForm(true)}
+            as="button"
+            color={RED}
           >
-            <FooterNav>
-              {SOCIAL_LINKS_DATA.map(({ path, icon, name, attrs }) => (
-                <FooterSocialLink
-                  key={name}
-                  href={path}
-                  aria-label={name}
-                  {...attrs}
-                >
-                  <FontAwesomeIcon icon={icon} />
-                </FooterSocialLink>
-              ))}
-              <FooterSocialLink
-                aria-label="contacts"
-                onClick={() => toggleContactForm(true)}
-                as="button"
-                color={RED}
-              >
-                <FontAwesomeIcon
-                  style={{ position: 'absolute' }}
-                  icon={faEnvelope}
-                />
-              </FooterSocialLink>
-            </FooterNav>
-            <FooterCopy>
-              © Zdorava &nbsp;
-              {SITE_PUBLICATION_YEAR}
-            </FooterCopy>
-          </FooterWrapper>
-        </AnimatePresence>
-      </motion.div>
-    </>
-  );
-};
+            <FontAwesomeIcon
+              style={{ position: 'absolute' }}
+              icon={faEnvelope}
+            />
+          </FooterSocialLink>
+        </FooterNav>
+        <FooterCopy>
+          © Zdorava &nbsp;
+          {SITE_PUBLICATION_YEAR}
+        </FooterCopy>
+      </FooterWrapper>
+    </AnimatePresence>
+  </motion.footer>
+);

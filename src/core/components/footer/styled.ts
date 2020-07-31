@@ -27,7 +27,7 @@ export const FooterCopy = styled.small`
   padding: 4px 0;
 `;
 
-export const FooterWrapper = styled(motion.footer)`
+export const FooterWrapper = styled(motion.div)`
   display: grid;
   grid-template-rows: 1fr auto;
   grid-template-columns: 1fr;

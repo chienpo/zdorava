@@ -49,9 +49,6 @@ export const PageSwitch = () => {
           initial="initial"
           animate="enter"
           variants={pageVariants}
-          style={{
-            filter: 'brightness(150%)', // TODO: Update overlays and font-colors and remove this
-          }}
         >
           <Suspense fallback={<PageLoader showSpinner={false} />}>
             <HomePage />
