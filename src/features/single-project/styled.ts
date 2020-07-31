@@ -64,17 +64,17 @@ export const Description = styled.span`
   margin-bottom: 50px;
 `;
 
-export const Category = styled.span`
+export const Category = styled.div`
   @media screen and (min-width: 481px) {
     margin-right: -50px;
   }
 
   margin-right: -15px;
   margin-top: auto;
-  background: red;
+  background: ${RED};
   color: ${WHITE};
-  padding: 10px 50px;
-  font-size: 18px;
+  padding: 8px 50px;
+  font-size: 24px;
 `;
 
 export const StyledLink = styled(Link)`

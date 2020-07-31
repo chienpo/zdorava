@@ -49,7 +49,7 @@ interface Props {
 }
 
 export const MenuToggleButtonView: React.FC<Props> = ({ toggle, isOpen }) => (
-  <BurgerButton type="button" onClick={toggle}>
+  <BurgerButton aria-label="burger-menu-button" type="button" onClick={toggle}>
     <svg width="45" height="45" viewBox="0 0 23 23" color={WHITE}>
       <Path
         stroke={isOpen ? BLACK : BLACK}

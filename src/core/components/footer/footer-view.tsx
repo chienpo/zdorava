@@ -79,11 +79,17 @@ export const FooterView: React.FC<Props> = ({
           >
             <FooterNav>
               {SOCIAL_LINKS_DATA.map(({ path, icon, name, attrs }) => (
-                <FooterSocialLink key={name} href={path} {...attrs}>
+                <FooterSocialLink
+                  key={name}
+                  href={path}
+                  aria-label={name}
+                  {...attrs}
+                >
                   <FontAwesomeIcon icon={icon} />
                 </FooterSocialLink>
               ))}
               <FooterSocialLink
+                aria-label="contacts"
                 onClick={() => toggleContactForm(true)}
                 as="button"
                 color={RED}

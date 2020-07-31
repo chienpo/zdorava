@@ -12,7 +12,8 @@ export const Separator = styled.div`
 `;
 
 export const LangText = styled.span`
-  transition: color 0.2s, opacity 0.2s, font-size 0.2s;
+  color: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE : BLACK)};
+  transition: color 0.2s, font-size 0.2s;
 `;
 
 export const InputRadio = styled.input`
@@ -26,13 +27,13 @@ export const InputRadio = styled.input`
   }
 
   &:not(:checked) + ${LangText} {
-    opacity: 0.4;
+    opacity: 0.6;
     font-size: 14px;
 
     &:hover {
       opacity: 1;
       color: ${RED};
-      font-size: 18px;
+      font-size: 20px;
     }
   }
 `;
@@ -43,7 +44,6 @@ export const Label = styled.label`
   align-items: center;
   justify-content: center;
   line-height: 1;
-  color: ${WHITE};
   background: transparent;
   margin: 0 10px;
   width: 80px;
@@ -63,16 +63,10 @@ export const Switch = styled.div<{ theme: string }>`
     ${Separator} {
       background: ${WHITE};
     }
-    ${Label} {
-      color: ${WHITE};
-    }
   `
       : `
     ${Separator} {
       background: ${BLACK};
-    }
-    ${Label} {
-      color: ${BLACK};
     }
   `};
 `;
