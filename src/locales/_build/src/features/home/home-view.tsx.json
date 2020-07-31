@@ -1,14 +1,14 @@
 {
   "About": {
-    "origin": [["src/features/home/home-view.tsx", 29]]
+    "origin": [["src/features/home/home-view.tsx", 28]]
   },
   "Portfolio": {
-    "origin": [["src/features/home/home-view.tsx", 30]]
+    "origin": [["src/features/home/home-view.tsx", 29]]
   },
   "Stepan": {
-    "origin": [["src/features/home/home-view.tsx", 36]]
+    "origin": [["src/features/home/home-view.tsx", 35]]
   },
   "Lagunovsky": {
-    "origin": [["src/features/home/home-view.tsx", 38]]
+    "origin": [["src/features/home/home-view.tsx", 37]]
   }
 }

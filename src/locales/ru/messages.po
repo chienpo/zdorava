@@ -60,7 +60,7 @@ msgstr "\"Gjybvfybt TypeScript - 2020 Издание\" серцификат, \"U
 
 #: src/constants/page-titles.ts:7
 #: src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:9
-#: src/features/home/home-view.tsx:29
+#: src/features/home/home-view.tsx:28
 msgid "About"
 msgstr "Обо мне"
 
@@ -153,7 +153,7 @@ msgstr "Я работал в компании Itransition Softvare Development �
 msgid "JS Build Tools / JS Task Runners:"
 msgstr ""
 
-#: src/features/home/home-view.tsx:38
+#: src/features/home/home-view.tsx:37
 msgid "Lagunovsky"
 msgstr "Лагуновский"
 
@@ -178,7 +178,7 @@ msgid "Over 10 years I've been studying on architecture & design specialisations
 msgstr "Более 10 лет я учусь на специализацию архитектуры и дизайна. Мне повезло улучшить свои навыки в таких областях, как: дизайн интерьера и бренда, современный и концепт-арт, я создал много крутых креативных проектов, а также получил и испытал возможность представить их клиентам! Этот опыт стал абсолютно полезным в front-end, веб-дизайне и даже в моей жизни!"
 
 #: src/constants/page-titles.ts:8
-#: src/features/home/home-view.tsx:30
+#: src/features/home/home-view.tsx:29
 msgid "Portfolio"
 msgstr "Портфолио"
 
@@ -210,7 +210,7 @@ msgstr "Отправить сообщение"
 msgid "Skills"
 msgstr "Профессиональные навыки"
 
-#: src/features/home/home-view.tsx:36
+#: src/features/home/home-view.tsx:35
 msgid "Stepan"
 msgstr "Степан"
 
