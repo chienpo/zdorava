@@ -1,5 +1,4 @@
 import React from 'react';
-import Typing from 'react-typing-animation';
 import { Trans } from '@lingui/macro';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -18,13 +17,11 @@ import {
 
 interface Props {
   bgIsToggling: boolean;
-  toggleDefaultBg: (value: boolean) => void;
   portfolioSelectedCategory: string;
 }
 
 export const HomeView: React.FC<Props> = ({
   bgIsToggling,
-  toggleDefaultBg,
   portfolioSelectedCategory,
 }) => (
   <motion.section
@@ -75,9 +72,7 @@ export const HomeView: React.FC<Props> = ({
             &nbsp;
             <Trans>Lagunovsky</Trans>
           </StyledH1>
-          <Typing onFinishedTyping={() => toggleDefaultBg(true)}>
-            <HomepageSubtitle>web&art pro</HomepageSubtitle>
-          </Typing>
+          <HomepageSubtitle>web&art pro</HomepageSubtitle>
           <WebsiteSubtitle>Zdorava</WebsiteSubtitle>
         </HomepageHGroup>
       </MotionWrap>
