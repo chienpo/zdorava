@@ -2,7 +2,7 @@ import styled, { keyframes } from 'styled-components';
 import { motion } from 'framer-motion';
 
 import { DARK_MODE } from 'constants/theme';
-import { BLACK_90, DARK_SLATE_GREY, RED, WHITE_80 } from 'constants/colors';
+import { BLACK_85, RED, WHITE_80 } from 'constants/colors';
 import { noiseAnim, noiseAnimTwo } from 'animations/keyframes/noise';
 import overlayBlackDot from 'assets/images/overlay_black.png';
 import overlayWhiteDot from 'assets/images/overlay_white_four.png';
@@ -16,7 +16,7 @@ export const MotionWrap = styled(motion.div)`
 export const DottedOverlay = styled.div`
   background: ${({ theme }) =>
     theme.mode === DARK_MODE
-      ? `${BLACK_90} url(${overlayBlackDot}) repeat scroll 0 0;`
+      ? `${BLACK_85} url(${overlayBlackDot}) repeat scroll 0 0;`
       : `${WHITE_80} url(${overlayWhiteDot}) repeat scroll 0 0;`};
   position: absolute;
   width: 100%;
@@ -74,16 +74,11 @@ export const StyledH1 = styled.h1`
     line-height: 80px;
   }
 
-  color: black;
   letter-spacing: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   text-transform: uppercase;
   margin-bottom: 20px;
   font-weight: 400;
-  color: ${DARK_SLATE_GREY};
-  color: rgba(200, 200, 200, 0.7);
+  color: ${WHITE_80};
   font-size: 22px;
   line-height: 28px;
   display: inline;
@@ -96,6 +91,7 @@ export const HomepageSubtitle = styled.div`
     letter-spacing: 5px;
   }
 
+  filter: brightness(150%);
   letter-spacing: 2px;
   text-align: center;
   font-weight: 700;

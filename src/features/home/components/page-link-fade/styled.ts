@@ -3,7 +3,7 @@ import { Link } from 'react-router5';
 
 import { ROUTE_NAME_ABOUT } from 'router/routes';
 import { mirrorEffect } from 'helpers/mirror-effect';
-import { BLACK, GRAY_MEDIUM_10, RED, WHITE, WHITE_20 } from 'constants/colors';
+import { BLACK, RED, WHITE, WHITE_30 } from 'constants/colors';
 import { DARK_MODE } from 'constants/theme';
 import navigationPortfolioBackground from 'assets/images/backgrounds/navigation-portfolio-background.png';
 import navigationAboutBackgroundLogo from 'assets/images/backgrounds/navigation-contacts-background.png';
@@ -22,8 +22,8 @@ export const MotionLinkOverlay = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url(${({ title }: any) =>
-      title === 'about'
+  background: url(${({ title }) =>
+      title === ROUTE_NAME_ABOUT
         ? navigationAboutBackgroundLogo
         : navigationPortfolioBackground})
     center center no-repeat;
@@ -32,10 +32,13 @@ export const MotionLinkOverlay = styled.div`
 `;
 
 export const Text = styled.span`
+  filter: brightness(150%);
   display: block;
   position: relative;
   padding-left: 55px;
   margin-top: 20vh;
+  text-transform: uppercase;
+  color: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE_30 : BLACK)};
   transition: color 0.6s;
 
   &::${({ title }) => (title === ROUTE_NAME_ABOUT ? 'after' : 'before')} {
@@ -87,8 +90,6 @@ export const PageLinkStyled = styled(Link)`
     margin-top: 30vh;
   `};
 
-    color: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE_20 : BLACK)};
-
     &::before,
     &::after {
       animation: ${pulseAnimWhite} 5s linear infinite;
@@ -110,8 +111,8 @@ export const PageLinkStyled = styled(Link)`
     }
   }
 
-  ${({ routeName }: any) =>
-    routeName === 'about'
+  ${({ routeName }) =>
+    routeName === ROUTE_NAME_ABOUT
       ? `
     justify-content: flex-start;
     left: 0;
@@ -125,11 +126,5 @@ export const PageLinkStyled = styled(Link)`
 export const LinkMirrorEffectBox = styled.div`
   position: relative;
   display: flex;
-  justify-content: center;
   justify-content: unset;
-  transition: box-shadow 0.8s;
-  color: ${({ theme }) =>
-    theme.mode === DARK_MODE ? `rgba(255,255,255,0.1)` : `${GRAY_MEDIUM_10}`};
-  text-transform: uppercase;
-  transition: all 0.8s;
 `;

@@ -13,7 +13,9 @@ import {
   WHITE,
   WHITE_SMOKE_10,
   WHITE_90,
+  BLACK_89,
   BLACK_40,
+  WHITE_70,
 } from 'constants/colors';
 
 export const FooterCopy = styled.small`
@@ -22,8 +24,7 @@ export const FooterCopy = styled.small`
   letter-spacing: 0.5px;
   display: block;
   width: 100%;
-  color: ${GRAY};
-  background: ${WHITE_SMOKE_10};
+  color: ${WHITE_70};
   padding: 4px 0;
 `;
 
@@ -35,7 +36,7 @@ export const FooterWrapper = styled(motion.div)`
   align-items: center;
   background: ${({ theme }) =>
     theme === DARK_MODE
-      ? `rgba(0,0,0,0.93) url(${overlayBlackDot}) repeat scroll 0 0;`
+      ? `${BLACK_89} url(${overlayBlackDot}) repeat scroll 0 0;`
       : `${WHITE_90} url(${overlayWhiteDot}) repeat scroll 0 0;`};
   position: relative;
   z-index: 1;
@@ -61,6 +62,7 @@ export const FooterSocialLink = styled.a<{ as?: string }>`
   align-items: center;
   color: ${({ color, theme }) =>
     color ? `${theme.mode === DARK_MODE ? WHITE : BLACK}` : GRAY};
+  filter: brightness(150%);
   font-size: ${({ color }) => (color ? '34px' : '30px')};
   height: 34px;
   animation: ${({ color }) => color && pulseIconAnim} 4.4s infinite;
