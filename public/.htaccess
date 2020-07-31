@@ -31,9 +31,9 @@ RewriteRule . /index.html [L]
 # Enable cache in user's browsers
 <IfModule mod_headers.c>
     # 2 month
-    #<FilesMatch "\.(js|css|txt)$">
-    #    Header set Cache-Control "max-age=2628000"
-    #</FilesMatch>
+    <FilesMatch "\.(css)$">
+        Header set Cache-Control "max-age=2628000"
+    </FilesMatch>
     # 6 month
     <FilesMatch "\.(ico|woff|woff2|webp)$">
         Header set Cache-Control "max-age=15768000"
