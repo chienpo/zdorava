@@ -1,15 +1,14 @@
-import * as React from 'react';
+import React, { Suspense } from 'react';
 
-import {
-  LanguageSwitchProps,
-  LanguageSwitch,
-} from 'ui/language-switch/language-switch';
+import { LanguageSwitchProps } from 'ui/language-switch/language-switch';
 
 import { Route } from 'models/route.model';
 import { BLACK } from 'constants/colors';
 import { BurgerMenu } from 'ui/burger-menu';
 import { NavigationListView } from './navigation-list-view';
 import { NavigationWrapper, LanguageSwitchBox } from './styled';
+
+const LanguageSwitch = React.lazy(() => import('ui/language-switch/'));
 
 interface Props extends LanguageSwitchProps {
   routes: Route[];
@@ -52,10 +51,12 @@ export const NavigationView: React.FC<Props> = ({
       </>
     )}
     <LanguageSwitchBox>
-      <LanguageSwitch
-        selectedLanguage={selectedLanguage}
-        onChangeLanguage={onChangeLanguage}
-      />
+      <Suspense fallback={<div />}>
+        <LanguageSwitch
+          selectedLanguage={selectedLanguage}
+          onChangeLanguage={onChangeLanguage}
+        />
+      </Suspense>
     </LanguageSwitchBox>
   </NavigationWrapper>
 );

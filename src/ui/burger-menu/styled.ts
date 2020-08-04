@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 import { GRAY, RED } from 'constants/colors';
-import { motion } from 'framer-motion';
+import { AnimatedAddress } from 'animations/animated';
 
-export const SidebarSocial = styled(motion.address)`
+export const SidebarSocial = styled(AnimatedAddress)`
   position: absolute;
   left: 0;
   bottom: 0;

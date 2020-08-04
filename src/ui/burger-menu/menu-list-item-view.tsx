@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { I18n } from '@lingui/react';
 import { BaseLink } from 'react-router5';
@@ -10,8 +9,9 @@ import { $portfolioTabsStore } from 'store/portfolio-tabs-store';
 import { GRAY, WHITE, RED } from 'constants/colors';
 import { DARK_MODE } from 'constants/theme';
 import { PAGE_TITLES } from 'constants/page-titles';
+import { AnimatedLi } from 'animations/animated';
 
-const StyledMotionLi = styled(motion.li)`
+const StyledMotionLi = styled(AnimatedLi)`
   list-style: none;
   margin-bottom: 20px;
   display: flex;

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { Route } from 'models/route.model';
@@ -9,31 +9,26 @@ import { DARK_MODE } from 'constants/theme';
 import { BLACK, BLACK_90, WHITE_20 } from 'constants/colors';
 import { SOCIAL_LINKS_DATA } from 'constants/social';
 import { Backdrop } from 'ui/backdrop';
+import { AnimatedDiv } from 'animations/animated';
 import { MenuToggleButtonView } from './menu-toggle-button-view';
 import { MenuListView } from './menu-list-view';
 import { SidebarSocial, StyledMotionSocialLink } from './styled';
 
-interface RefObject {
-  current: null | HTMLDivElement;
-}
-
 interface Props {
   isOpen: boolean;
   toggleOpen: () => void;
-  height: number;
   routes: Route[];
   router: any;
-  containerRef: RefObject;
 }
 
-const StyledMotionNavWrapper = styled(motion.div)`
+const StyledMotionNavWrapper = styled(AnimatedDiv)`
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
 `;
 
-const StyledMotionMenuBackdrop = styled(motion.div)`
+const StyledMotionMenuBackdrop = styled(AnimatedDiv)`
   position: absolute;
   top: 0;
   left: 0;
@@ -68,16 +63,12 @@ const sidebar = {
 export const BurgerMenuView: React.FC<Props> = ({
   isOpen,
   toggleOpen,
-  containerRef,
-  height,
   routes,
   router,
 }) => (
   <StyledMotionNavWrapper
     initial="closed"
     animate={isOpen ? 'open' : 'closed'}
-    custom={height}
-    ref={containerRef}
     style={{ width: isOpen ? '300px' : '0', zIndex: 5 }}
   >
     <AnimatePresence>

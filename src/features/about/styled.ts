@@ -42,19 +42,16 @@ export const DeveloperName = styled.h1`
   letter-spacing: 0;
   text-transform: uppercase;
   margin: 0 0 22px;
-  font-family: MontserratRegular;
 `;
 
 export const Position = styled.strong`
   display: block;
   font-size: 28px;
   line-height: 38px;
-  text-transform: none;
-  font-weight: 100;
   text-transform: uppercase;
   color: white;
   margin-top: 10px;
-  font-family: MontserratThin;
+  font-weight: 100;
 
   strong {
     color: ${RED};

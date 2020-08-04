@@ -10,14 +10,14 @@ import { PORTFOLIO_CATEGORIES_TABS_LABELS } from 'constants/portfolio';
 import { ROUTE_NAME_PORTFOLIO_CATEGORY } from 'router/routes';
 import { LazyImage } from 'ui/lazy-image';
 import {
-  StyledMotionProjectSection,
-  StyledMotionDescription,
-  Title,
-  Description,
+  AnimatedDescriptionStyled,
+  AnimatedFigureStyled,
+  AnimatedSectionStyled,
   Category,
+  Description,
   StyledLink,
   StyledRealProjectLink,
-  StyledMotionFigure,
+  Title,
 } from './styled';
 
 interface Props {
@@ -48,10 +48,10 @@ export const SingleProjectView: React.FC<Props> = ({
   data,
   portfolioSelectedCategory,
 }) => (
-  <StyledMotionProjectSection initial="exit" animate="enter" exit="exit">
+  <AnimatedSectionStyled initial="exit" animate="enter" exit="exit">
     {data && (
       <AnimatePresence>
-        <StyledMotionFigure variants={imageVariants} initial="exit">
+        <AnimatedFigureStyled variants={imageVariants} initial="exit">
           <LazyImage
             alt={data.alt}
             src={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${data.category}/${
@@ -62,11 +62,11 @@ export const SingleProjectView: React.FC<Props> = ({
             }-thumbnail/${data.thumbnailSrc}`}
             style={{ maxWidth: '70vw' }}
           />
-        </StyledMotionFigure>
+        </AnimatedFigureStyled>
       </AnimatePresence>
     )}
     <AnimatePresence>
-      <StyledMotionDescription variants={descriptionVariants} initial="exit">
+      <AnimatedDescriptionStyled variants={descriptionVariants} initial="exit">
         <StyledLink
           routeName={ROUTE_NAME_PORTFOLIO_CATEGORY}
           routeParams={{ category: portfolioSelectedCategory }}
@@ -106,7 +106,7 @@ export const SingleProjectView: React.FC<Props> = ({
             )}
           </I18n>
         )}
-      </StyledMotionDescription>
+      </AnimatedDescriptionStyled>
     </AnimatePresence>
-  </StyledMotionProjectSection>
+  </AnimatedSectionStyled>
 );

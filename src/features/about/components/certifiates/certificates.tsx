@@ -10,8 +10,8 @@ import { Figure, Img, GalleryRow } from './styled';
 const data = CERTIFICATES_DATA.map(({ src }) => src);
 
 export const Certificates = () => {
-  const [photoIndex, setPhotoIndex] = useState(0);
-  const [isOpen, setIsOpen] = useState(false);
+  const [photoIndex, setPhotoIndex] = useState<number>(0);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const onItemClick = (index: number) => {
     setIsOpen(true);

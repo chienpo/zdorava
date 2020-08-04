@@ -1,16 +1,20 @@
 import styled from 'styled-components';
 import { Link } from 'react-router5';
-import { motion } from 'framer-motion';
 
 import { RED, BLACK, WHITE_80, WHITE, RED_70 } from 'constants/colors';
+import {
+  AnimatedDiv,
+  AnimatedFigure,
+  AnimatedSection,
+} from 'animations/animated';
 
-export const StyledMotionProjectSection = styled(motion.section)`
+export const AnimatedSectionStyled = styled(AnimatedSection)`
   display: grid;
   min-height: calc(100vh - 70px);
   padding-top: 70px;
 `;
 
-export const StyledMotionFigure = styled(motion.figure)`
+export const AnimatedFigureStyled = styled(AnimatedFigure)`
   position: fixed;
   z-index: 0;
   overflow-y: scroll;
@@ -21,7 +25,7 @@ export const StyledMotionFigure = styled(motion.figure)`
   align-items: flex-start;
 `;
 
-export const StyledMotionDescription = styled(motion.div)`
+export const AnimatedDescriptionStyled = styled(AnimatedDiv)`
   @media screen and (min-width: 767px) {
     max-width: 50vw;
   }
@@ -42,7 +46,6 @@ export const StyledMotionDescription = styled(motion.div)`
   text-align: right;
   background: ${WHITE_80};
   box-shadow: ${WHITE_80} 0px 0 130px 160px;
-  height: 100%;
 `;
 
 export const Title = styled.span`

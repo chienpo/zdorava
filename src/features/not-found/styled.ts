@@ -16,7 +16,7 @@ export const SectionNotFound = styled(motion.section)`
   left: 0;
 `;
 
-export const Overlay = styled.figure`
+export const Overlay = styled.div`
   background: ${WHITE_90} url(${overlayWhiteDot}) repeat scroll 0 0;
 
   @media screen and (min-width: 991px) {
@@ -34,5 +34,4 @@ export const Overlay = styled.figure`
   font-size: 150px;
   color: ${BLACK};
   font-weight: 100;
-  font-family: MontserratThin;
 `;

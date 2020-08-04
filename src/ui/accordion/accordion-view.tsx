@@ -1,21 +1,21 @@
 import React, { Fragment } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import { I18n } from '@lingui/react';
 
-import { BLACK, RED, RED_70 } from 'constants/colors';
+import { BLACK, RED, RED_70, WHITE } from 'constants/colors';
+import {
+  AnimatedDiv,
+  AnimatedHeader,
+  AnimatedSection,
+} from 'animations/animated';
 import { Panel } from './styled';
+
+import { AccordionData } from './accordion';
 
 interface Props {
   expanded: false | string;
   setExpanded: (a: false | string) => void;
   data: AccordionData;
-}
-
-interface AccordionData {
-  [key: string]: {
-    panelTitle: string;
-    content: () => any;
-  };
 }
 
 export const AccordionView: React.FC<Props> = ({
@@ -29,23 +29,23 @@ export const AccordionView: React.FC<Props> = ({
 
       return (
         <Fragment key={key}>
-          <motion.header
+          <AnimatedHeader
             initial={false}
             animate={{
-              backgroundColor: isOpen ? BLACK : 'transparent',
+              backgroundColor: isOpen ? BLACK : WHITE,
             }}
             whileHover={{ backgroundColor: RED }}
             whileTap={{ backgroundColor: RED_70 }}
             onClick={() => setExpanded(isOpen ? false : key)}
-            style={{ transition: 'background 0.4s' }}
+            style={{ transition: 'background0color 0.4s' }}
           >
             <Panel active={isOpen}>
               <I18n>{({ i18n }) => i18n._(panelTitle)}</I18n>
             </Panel>
-          </motion.header>
+          </AnimatedHeader>
           <AnimatePresence initial={false}>
             {isOpen && (
-              <motion.section
+              <AnimatedSection
                 key="content"
                 initial="collapsed"
                 animate="open"
@@ -57,17 +57,15 @@ export const AccordionView: React.FC<Props> = ({
                 transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
                 style={{ overflow: 'hidden' }}
               >
-                <motion.div
+                <AnimatedDiv
                   variants={{ collapsed: { scale: 0.8 }, open: { scale: 1 } }}
                   transition={{ duration: 0.8 }}
                   className="content-placeholder"
                   style={{ transformOrigin: 'top center' }}
                 >
-                  <div className="paragraph">
-                    <Component />
-                  </div>
-                </motion.div>
-              </motion.section>
+                  <Component />
+                </AnimatedDiv>
+              </AnimatedSection>
             )}
           </AnimatePresence>
         </Fragment>

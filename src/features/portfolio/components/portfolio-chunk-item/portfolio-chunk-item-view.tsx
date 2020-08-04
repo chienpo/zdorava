@@ -4,45 +4,44 @@ import { faImage } from '@fortawesome/free-solid-svg-icons';
 import { I18n } from '@lingui/react';
 import { AnimatePresence } from 'framer-motion';
 
-import { PortfolioItemModel } from 'models/portfolio-item.model';
+import { PortfolioPreviewItemModel } from 'models/portfolio-item.model';
 
 import { PORTFOLIO_CATEGORIES_TABS_LABELS } from 'constants/portfolio';
 import { PORTFOLIO_IMAGES_PATH, SITE_URL } from 'constants/site';
 import { ROUTE_NAME_PORTFOLIO_PROJECT } from 'router/routes';
 import {
   Item,
-  ItemTitle,
-  ItemFigure,
-  ItemCategoryName,
   ItemCategoryLabel,
+  ItemCategoryName,
+  ItemFigure,
   ItemOrientationType,
+  ItemTitle,
   LazyImageStyled,
 } from './styled';
 
-interface Props extends PortfolioItemModel {
+interface Props {
+  chunkType: string;
   delayPerPixel: number;
   index: number;
   originIndex: number;
-  originOffset: { current: { [key: string]: number } };
+  // originOffset: { current: { [key: string]: number } };
+  originOffset: any;
   selectedCategory: string;
-  chunkType: string;
-  newTabChecked: boolean;
 }
 
-export const PortfolioChunkItemView: React.FC<Props> = ({
-  onItemClick,
-  selectedCategory,
-  category,
+export const PortfolioChunkItemView: React.FC<
+  Props & PortfolioPreviewItemModel
+> = ({
   alt,
-  description,
-  thumbnailSrc,
+  category,
+  chunkType,
   delayPerPixel,
   index,
   originIndex,
   originOffset,
-  chunkType,
+  selectedCategory,
+  thumbnailSrc,
   title,
-  newTabChecked,
 }) => {
   const delayRef = useRef<number>(0);
   const offset = useRef<{ top: number; left: number }>({ top: 0, left: 0 });

@@ -1,11 +1,22 @@
-export interface PortfolioItemModel {
+export interface PortfolioPreviewItemModel {
+  alt: string;
   category: string;
   imageSrc: string;
-  alt: string;
   title: { [key: string]: string };
   thumbnailSrc: string;
-  description: { [key: string]: string };
-  projectLinks?: { href: string; label: string }[];
-  onItemClick?: () => void;
-  name?: string;
 }
+
+export interface PortfolioItemModel extends PortfolioPreviewItemModel {
+  description: { [key: string]: string };
+  name?: string;
+  onItemClick?: () => void;
+  projectLinks?: { href: string; label: string }[];
+}
+
+// alt
+// category
+// imageSrc
+// thumbnailSrc
+// description
+// details
+// title

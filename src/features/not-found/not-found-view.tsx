@@ -1,14 +1,15 @@
 import * as React from 'react';
 import { Trans } from '@lingui/macro';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
+import { AnimatedDiv } from 'animations/animated';
 import { SectionNotFound, Overlay } from './styled';
 
 export const NotFoundView = () => (
   <SectionNotFound animate="enter" exit="exit">
     <AnimatePresence>
       <Overlay>
-        <motion.div
+        <AnimatedDiv
           initial="exit"
           variants={{
             enter: {
@@ -21,7 +22,7 @@ export const NotFoundView = () => (
           }}
         >
           <Trans>404</Trans>
-        </motion.div>
+        </AnimatedDiv>
       </Overlay>
     </AnimatePresence>
   </SectionNotFound>

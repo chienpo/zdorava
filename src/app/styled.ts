@@ -1,7 +1,8 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 
 import { WHITE } from 'constants/colors';
+
+import { AnimatedDiv } from 'animations/animated';
 
 export const AppBox = styled.div`
   background: ${WHITE};
@@ -9,7 +10,7 @@ export const AppBox = styled.div`
   width: 100vw;
 `;
 
-export const MotionContent = styled(motion.div)`
+export const MotionContent = styled(AnimatedDiv)`
   overflow: hidden;
   display: grid;
   min-height: 100vh;

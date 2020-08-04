@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 
-export const StyledHeader = styled(motion.header)`
+import { AnimatedHeader } from 'animations/animated';
+
+export const StyledHeader = styled(AnimatedHeader)`
   z-index: 5;
 `;

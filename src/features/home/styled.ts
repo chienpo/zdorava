@@ -1,53 +1,11 @@
-import styled, { keyframes } from 'styled-components';
-import { motion } from 'framer-motion';
+import styled from 'styled-components';
 
-import { DARK_MODE } from 'constants/theme';
-import { BLACK_85, RED, WHITE_80 } from 'constants/colors';
+import { RED, WHITE_80 } from 'constants/colors';
 import { noiseAnim, noiseAnimTwo } from 'animations/keyframes/noise';
-import overlayBlackDot from 'assets/images/overlay_black.png';
-import overlayWhiteDot from 'assets/images/overlay_white_four.png';
-import homepageGlitchBg from 'assets/images/backgrounds/homepage-yellow-background.jpg';
 
-export const MotionWrap = styled(motion.div)`
+export const SectionHome = styled.section`
   position: relative;
   height: 100%;
-`;
-
-export const DottedOverlay = styled.div`
-  background: ${({ theme }) =>
-    theme.mode === DARK_MODE
-      ? `${BLACK_85} url(${overlayBlackDot}) repeat scroll 0 0;`
-      : `${WHITE_80} url(${overlayWhiteDot}) repeat scroll 0 0;`};
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-`;
-
-const blink = keyframes`
-  0% { opacity: 0; }
-  50% { opacity: 1; }
-  100% { opacity: 0; }
-`;
-
-export const Image = styled.div<{ bgIsToggling: boolean }>`
-  position: fixed;
-  top: 70px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-attachment: fixed;
-  animation: ${blink} 0.4s linear;
-  opacity: 0;
-  transition: opacity 0.4s;
-  z-index: 1;
-
-  ${({ bgIsToggling }) =>
-    bgIsToggling &&
-    `
-    background: url(${homepageGlitchBg}) center center no-repeat;
-    background-size: cover;
-  `};
 `;
 
 export const HomepageHGroup = styled.div`
@@ -100,7 +58,7 @@ export const HomepageSubtitle = styled.div`
 `;
 
 export const WebsiteSubtitle = styled.div`
-  font-family: MontserratBold;
+  font-weight: bold;
   letter-spacing: 33px;
   font-size: 18px;
   left: 13px;

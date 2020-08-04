@@ -1,31 +1,32 @@
 import React, { useEffect, useRef } from 'react';
 import { Trans } from '@lingui/macro';
 import InfiniteScroll from 'react-infinite-scroll-component';
-import { motion, useAnimation } from 'framer-motion';
+import { useAnimation } from 'framer-motion';
 
 import { PortfolioItemModel } from 'models/portfolio-item.model';
 
 import { BLACK, WHITE } from 'constants/colors';
 import { MoreLoader } from 'ui/more-loader/more-loader';
+import { AnimatedDiv } from 'animations/animated';
 import { PortfolioGrid } from './components/portfolio-grid/portfolio-grid';
 import { PortfolioTabs } from './components/portfolio-tabs/portfolio-tabs';
 import {
-  SectionPortfolio,
-  ItemsLoadingStateDescription,
+  AnimatedSectionStyled,
   ItemsLoadingSpinnerBox,
+  ItemsLoadingStateDescription,
 } from './styled';
 
 interface Props {
-  data: PortfolioItemModel[];
   activeCategoryPayload: (name: string) => void;
+  data: PortfolioItemModel[];
   getNextDataChunk: () => void;
   hasMore: boolean;
   selectedCategory: string;
 }
 
 export const PortfolioView: React.FC<Props> = ({
-  data,
   activeCategoryPayload,
+  data,
   getNextDataChunk,
   hasMore,
   selectedCategory,
@@ -42,7 +43,7 @@ export const PortfolioView: React.FC<Props> = ({
   });
 
   return (
-    <SectionPortfolio
+    <AnimatedSectionStyled
       variants={{
         enter: {
           backgroundColor: BLACK,
@@ -63,7 +64,7 @@ export const PortfolioView: React.FC<Props> = ({
         selectedCategory={selectedCategory}
         activeCategoryPayload={activeCategoryPayload}
       />
-      <motion.div initial="hidden" animate={controls} variants={{}}>
+      <AnimatedDiv initial="hidden" animate={controls} variants={{}}>
         <InfiniteScroll
           style={{ overflow: 'hidden' }}
           dataLength={data.length}
@@ -76,7 +77,7 @@ export const PortfolioView: React.FC<Props> = ({
           }
           endMessage={
             <ItemsLoadingStateDescription>
-              <Trans>COMING SOON ...</Trans>
+              <Trans>Coming soon ...</Trans>
             </ItemsLoadingStateDescription>
           }
         >
@@ -86,7 +87,7 @@ export const PortfolioView: React.FC<Props> = ({
             originOffset={originOffset}
           />
         </InfiniteScroll>
-      </motion.div>
-    </SectionPortfolio>
+      </AnimatedDiv>
+    </AnimatedSectionStyled>
   );
 };

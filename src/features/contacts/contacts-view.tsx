@@ -1,9 +1,10 @@
 import React, { FC } from 'react';
 import { Trans } from '@lingui/macro';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
 import { ButtonCloseAnimated } from 'ui/button-close-animated';
 import { Backdrop } from 'ui/backdrop';
+import { AnimatedDiv } from 'animations/animated';
 import { ContactForm } from './components/contact-form';
 import {
   FormSection,
@@ -25,7 +26,7 @@ export const ContactsView: FC<Props> = ({ opened, onClose }) => (
   >
     <AnimatePresence>
       {opened && (
-        <motion.div
+        <AnimatedDiv
           initial="closed"
           animate="open"
           exit="closed"
@@ -51,7 +52,7 @@ export const ContactsView: FC<Props> = ({ opened, onClose }) => (
               <ContactForm onEscapeClicked={onClose} />
             </FormBox>
           </FormSection>
-        </motion.div>
+        </AnimatedDiv>
       )}
     </AnimatePresence>
     <AnimatePresence>

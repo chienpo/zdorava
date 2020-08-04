@@ -1,11 +1,11 @@
-import { createElement, useState } from 'react';
+import { createElement, useState, ReactElement } from 'react';
 
 import { AccordionView } from './accordion-view';
 
-interface AccordionData {
+export interface AccordionData {
   [key: string]: {
     panelTitle: string;
-    content: any;
+    content: () => ReactElement;
   };
 }
 

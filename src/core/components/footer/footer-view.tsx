@@ -1,13 +1,12 @@
-import * as React from 'react';
+import React, { Suspense } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
 import { SOCIAL_LINKS_DATA } from 'constants/social';
 import { SITE_PUBLICATION_YEAR } from 'constants/site';
-import { ROUTE_NAME_HOME } from 'router/routes';
 import { RED } from 'constants/colors';
-import { Contacts } from 'features/contacts';
+import { AnimatedFooter } from 'animations/animated/animated';
 import {
   FooterWrapper,
   FooterNav,
@@ -15,11 +14,12 @@ import {
   FooterSocialLink,
 } from './styled';
 
+const Contacts = React.lazy(() => import('features/contacts'));
+
 interface Props {
   toggleContactForm: (prevState: boolean) => void;
   contactFormOpened: boolean;
   theme: string;
-  activeRouteName: string;
 }
 
 const variants = {
@@ -39,42 +39,20 @@ const variants = {
   },
 };
 
-const homePageVariants = {
-  initial: {
-    x: '-100%',
-    opacity: 0,
-  },
-  enter: {
-    x: '0%',
-    opacity: 1,
-    transition: { duration: 1 },
-  },
-  exit: {
-    x: '0%',
-    opacity: 0,
-    transition: { duration: 0.4 },
-  },
-};
-
 export const FooterView: React.FC<Props> = ({
   toggleContactForm,
   contactFormOpened,
   theme,
-  activeRouteName,
 }) => (
-  <motion.footer animate="enter" exit="exit">
-    <Contacts
-      opened={contactFormOpened}
-      onClose={() => toggleContactForm(false)}
-    />
+  <AnimatedFooter animate="enter" exit="exit">
+    <Suspense fallback={<div />}>
+      <Contacts
+        opened={contactFormOpened}
+        onClose={() => toggleContactForm(false)}
+      />
+    </Suspense>
     <AnimatePresence>
-      <FooterWrapper
-        theme={theme}
-        initial="initial"
-        variants={
-          activeRouteName === ROUTE_NAME_HOME ? homePageVariants : variants
-        }
-      >
+      <FooterWrapper theme={theme} initial="initial" variants={variants}>
         <FooterNav>
           {SOCIAL_LINKS_DATA.map(({ path, icon, name, attrs }) => (
             <FooterSocialLink
@@ -104,5 +82,5 @@ export const FooterView: React.FC<Props> = ({
         </FooterCopy>
       </FooterWrapper>
     </AnimatePresence>
-  </motion.footer>
+  </AnimatedFooter>
 );

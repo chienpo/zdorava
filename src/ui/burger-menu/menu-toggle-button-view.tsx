@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { motion } from 'framer-motion';
 import styled from 'styled-components';
+import { MotionProps } from 'framer-motion';
 
 import { BLACK, WHITE } from 'constants/colors';
+import { AnimatedPath } from 'animations/animated';
 
 const BurgerButton = styled.button`
   display: flex;
@@ -18,24 +19,13 @@ const BurgerButton = styled.button`
   background: transparent;
 `;
 
-interface PathInterface {
-  variants: {
-    open: {
-      d?: string;
-      opacity?: number;
-    };
-    closed: {
-      d?: string;
-      opacity?: number;
-    };
-  };
-  d?: string;
-  transition?: { [key: string]: number };
-  stroke: string;
-}
-
-const Path: React.FC<PathInterface> = props => (
-  <motion.path
+const Path: React.FC<
+  MotionProps & {
+    stroke: string;
+    d?: string;
+  }
+> = props => (
+  <AnimatedPath
     fill="transparent"
     strokeWidth="2"
     strokeLinecap="square"

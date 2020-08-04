@@ -1,8 +1,9 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
 import { LazyImage } from 'ui/lazy-image';
 import { GridLogoWrapper, StyledMotionFigure } from './styled';
+import { AnimatedDiv } from 'animations/animated';
 
 interface Logo {
   left: number;
@@ -16,7 +17,7 @@ interface Props {
 }
 
 export const AboutLogoView: React.FC<Props> = ({ logos }) => (
-  <motion.div animate="enter" exit="exit">
+  <AnimatedDiv animate="enter" exit="exit">
     <AnimatePresence>
       <GridLogoWrapper
         variants={{
@@ -61,5 +62,5 @@ export const AboutLogoView: React.FC<Props> = ({ logos }) => (
         ))}
       </GridLogoWrapper>
     </AnimatePresence>
-  </motion.div>
+  </AnimatedDiv>
 );

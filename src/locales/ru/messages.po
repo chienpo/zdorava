@@ -14,7 +14,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: src/constants/page-titles.ts:10
-#: src/features/not-found/not-found-view.tsx:17
+#: src/features/not-found/not-found-view.tsx:18
 msgid "404"
 msgstr "404"
 
@@ -60,7 +60,7 @@ msgstr "\"Gjybvfybt TypeScript - 2020 Издание\" серцификат, \"U
 
 #: src/constants/page-titles.ts:7
 #: src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:9
-#: src/features/home/home-view.tsx:28
+#: src/features/home/components/home-page-navigation.tsx:24
 msgid "About"
 msgstr "Обо мне"
 
@@ -81,13 +81,13 @@ msgstr "Дизайн проекты"
 msgid "Back"
 msgstr "Назад"
 
-#: src/features/portfolio/portfolio-view.tsx:36
-msgid "COMING SOON ..."
-msgstr "В РАЗРАБОТКЕ ..."
-
 #: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:24
 msgid "Closely related to design, front-end development process is always going on in creative way and i can always see the result of my job. And this is what i like so much!"
 msgstr "Тесно связанный с дизайном, процесс разработки интерфейса всегда идет творчески, и я всегда вижу результат своей работы. И это то, что мне так нравится!"
+
+#: src/features/portfolio/portfolio-view.tsx:37
+msgid "Coming soon ..."
+msgstr "В разработке ..."
 
 #: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:15
 msgid "Creating reactive applications for me is like making up some web ecosystems. But bricks here - are cutes of code, and component-structure - is the constructions. Using my arch-design and development skills, i combine this in to a real complex react web application!"
@@ -129,7 +129,7 @@ msgstr "Front-End проекты"
 msgid "Front-end"
 msgstr "Front-end"
 
-#: src/features/about/about-view.tsx:34
+#: src/features/about/about-view.tsx:35
 msgid "Front-end (React-JS) Developer"
 msgstr "Front-end (React-JS) Разработчик"
 
@@ -137,7 +137,7 @@ msgstr "Front-end (React-JS) Разработчик"
 msgid "Graduated as a Master of Architectural Design, took part at Hackathon-contest by MTS in 2015 when web-development by a side with the other things became my way of life."
 msgstr "Получил степень магистра архитектурного дизайна, принял участие в хакатоне-конкурсе МТС в 2015 году, когда разработка веб-сайтов наравне с другими вещами стала моим стилем жизни."
 
-#: src/features/about/about-view.tsx:32
+#: src/features/about/about-view.tsx:33
 msgid "Hello, I'm Stepan"
 msgstr "Привет, меня зовут Степан"
 
@@ -153,7 +153,7 @@ msgstr "Я работал в компании Itransition Softvare Development �
 msgid "JS Build Tools / JS Task Runners:"
 msgstr ""
 
-#: src/features/home/home-view.tsx:37
+#: src/features/home/home-view.tsx:13
 msgid "Lagunovsky"
 msgstr "Лагуновский"
 
@@ -178,7 +178,7 @@ msgid "Over 10 years I've been studying on architecture & design specialisations
 msgstr "Более 10 лет я учусь на специализацию архитектуры и дизайна. Мне повезло улучшить свои навыки в таких областях, как: дизайн интерьера и бренда, современный и концепт-арт, я создал много крутых креативных проектов, а также получил и испытал возможность представить их клиентам! Этот опыт стал абсолютно полезным в front-end, веб-дизайне и даже в моей жизни!"
 
 #: src/constants/page-titles.ts:8
-#: src/features/home/home-view.tsx:29
+#: src/features/home/components/home-page-navigation.tsx:25
 msgid "Portfolio"
 msgstr "Портфолио"
 
@@ -210,7 +210,7 @@ msgstr "Отправить сообщение"
 msgid "Skills"
 msgstr "Профессиональные навыки"
 
-#: src/features/home/home-view.tsx:35
+#: src/features/home/home-view.tsx:11
 msgid "Stepan"
 msgstr "Степан"
 
@@ -230,7 +230,7 @@ msgstr "Веб-дизайн"
 msgid "With a great pleasure I suggest you"
 msgstr "С большим удовольствием предлагаю тебе"
 
-#: src/features/contacts/contacts-view.tsx:26
+#: src/features/contacts/contacts-view.tsx:27
 msgid "Write me"
 msgstr "Напиши мне"
 

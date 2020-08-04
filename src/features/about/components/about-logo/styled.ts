@@ -2,8 +2,9 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 import { BLACK_30 } from 'constants/colors';
+import { AnimatedDiv } from 'animations/animated';
 
-export const GridLogoWrapper = styled(motion.div)`
+export const GridLogoWrapper = styled(AnimatedDiv)`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;

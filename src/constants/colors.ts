@@ -1,6 +1,6 @@
 import { rgba } from 'polished';
 
-export const BLACK = 'black';
+export const BLACK = '#000000';
 export const BLACK_90 = rgba(BLACK, 0.9);
 export const BLACK_85 = rgba(BLACK, 0.85);
 export const BLACK_89 = rgba(BLACK, 0.895);
@@ -10,9 +10,9 @@ export const BLACK_40 = rgba(BLACK, 0.4);
 export const BLACK_20 = rgba(BLACK, 0.2);
 export const GRAY = '#808080';
 export const GRAY_LIGHT = '#ccc';
-export const RED = 'red';
+export const RED = '#ff0000';
 export const RED_70 = rgba(RED, 0.7);
-export const WHITE = 'white';
+export const WHITE = '#ffffff';
 export const WHITE_20 = rgba(WHITE, 0.2);
 export const WHITE_30 = rgba(WHITE, 0.3);
 export const WHITE_70 = rgba(WHITE, 0.7);

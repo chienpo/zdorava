@@ -1,13 +1,16 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
+import { AnimatedDiv } from 'animations/animated';
 import { IconSignature } from './icon-signature';
 import { LoaderBox } from './styled';
 
-export const PageLoader: React.FC<{ showSpinner?: boolean }> = ({
-  showSpinner = true,
-}) => (
-  <motion.div style={{ width: '100vw', height: '100vh' }}>
+interface Props {
+  showSpinner?: boolean;
+}
+
+export const PageLoader: React.FC<Props> = ({ showSpinner = true }) => (
+  <AnimatedDiv style={{ width: '100vw', height: '100vh' }}>
     <AnimatePresence>
       <LoaderBox
         initial="initial"
@@ -29,5 +32,5 @@ export const PageLoader: React.FC<{ showSpinner?: boolean }> = ({
         {showSpinner && <IconSignature />}
       </LoaderBox>
     </AnimatePresence>
-  </motion.div>
+  </AnimatedDiv>
 );

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 
 import overlayWhiteDot from 'assets/images/overlay_white_four.png';
 import overlayBlackDot from 'assets/images/overlay_black.png';
@@ -17,6 +16,7 @@ import {
   BLACK_40,
   WHITE_70,
 } from 'constants/colors';
+import { AnimatedDiv } from 'animations/animated';
 
 export const FooterCopy = styled.small`
   text-transform: uppercase;
@@ -28,7 +28,7 @@ export const FooterCopy = styled.small`
   padding: 4px 0;
 `;
 
-export const FooterWrapper = styled(motion.div)`
+export const FooterWrapper = styled(AnimatedDiv)`
   display: grid;
   grid-template-rows: 1fr auto;
   grid-template-columns: 1fr;

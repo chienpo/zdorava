@@ -1,4 +1,4 @@
-import { createElement, FC, useState } from 'react';
+import { createElement, FC } from 'react';
 
 import { PortfolioItemModel } from 'models/portfolio-item.model';
 
@@ -15,17 +15,6 @@ export const PortfolioGrid: FC<Props> = ({
   selectedCategory,
   originOffset,
 }) => {
-  const [photoIndex, setPhotoIndex] = useState<number>(0);
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-
-  const onItemClick = (projectUrl: string) => {
-    const projectIndex = data.findIndex(
-      ({ imageSrc }) => imageSrc === projectUrl
-    );
-    setIsOpen(true);
-    setPhotoIndex(projectIndex);
-  };
-
   const chunckedData = data.reduce(
     (resultArray: PortfolioItemModel[][], item, index) => {
       const chunkIndex: number = Math.floor(index / 4);
@@ -42,14 +31,9 @@ export const PortfolioGrid: FC<Props> = ({
   );
 
   return createElement(PortfolioGridView, {
-    data,
-    selectedCategory,
-    onItemClick,
-    isOpen,
-    setIsOpen,
-    photoIndex,
-    setPhotoIndex,
-    originOffset,
     chunckedData,
+    data,
+    originOffset,
+    selectedCategory,
   });
 };

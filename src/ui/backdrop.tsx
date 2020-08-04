@@ -1,17 +1,17 @@
 import React, { FC } from 'react';
-import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
-import { BLACK_20 } from 'constants/colors';
 import { useKeyPress } from 'hooks/use-key-press';
+import { BLACK_20 } from 'constants/colors';
 import { KEY_CODE_ESCAPE } from 'constants/key-codes';
+import { AnimatedDiv } from 'animations/animated';
 
 interface Props {
   onClick: () => void;
   fixed?: boolean;
 }
 
-const MotionBackdrop = styled(motion.div)`
+const MotionBackdrop = styled(AnimatedDiv)`
   left: 0;
   right: 0;
   background: ${BLACK_20};

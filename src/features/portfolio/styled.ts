@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 
 import { WHITE } from 'constants/colors';
+import { AnimatedSection } from 'animations/animated';
 
-export const SectionPortfolio = styled(motion.section)`
+export const AnimatedSectionStyled = styled(AnimatedSection)`
   background-size: cover;
   background-attachment: fixed;
   height: 100%;
@@ -16,6 +16,7 @@ export const ItemsLoadingStateDescription = styled.div`
   align-items: center;
   justify-content: center;
   color: ${WHITE};
+  text-transform: uppercase;
 `;
 
 export const ItemsLoadingSpinnerBox = styled.div`

@@ -1,9 +1,10 @@
 import { createElement } from 'react';
 import { render } from 'react-dom';
 
-import './index.css';
 import { App } from 'app';
 import { router } from './router';
+
+import { getFonts } from './fonts';
 
 const rootElement = document.getElementById('root');
 
@@ -12,6 +13,13 @@ if (rootElement === null) {
 }
 
 const renderApp = (): void => {
+  getFonts().then(res =>
+    res.load({
+      google: {
+        families: ['Montserrat:100,400,700&display=swap'],
+      },
+    })
+  );
   render(createElement(App, { router }), rootElement);
 };
 

@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { Trans } from '@lingui/macro';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
 import { Accordion } from 'ui/accordion';
+import { AnimatedDiv } from 'animations/animated';
 import { AboutLogo, RESUME_PANELS, DEFAULT_RESUME_PANEL } from './components';
 import {
   SectionAbout,
@@ -15,13 +16,13 @@ import {
 
 export const AboutView: React.FC = () => (
   <SectionAbout>
-    <GridContent className="132">
+    <GridContent>
       <LogoWrap>
         <AboutLogo />
       </LogoWrap>
-      <motion.div animate="enter" exit="exit">
+      <AnimatedDiv animate="enter" exit="exit">
         <AnimatePresence>
-          <motion.div
+          <AnimatedDiv
             initial="initial"
             variants={{
               initial: {
@@ -52,9 +53,9 @@ export const AboutView: React.FC = () => (
                 defaultPanel={DEFAULT_RESUME_PANEL}
               />
             </AccordionBox>
-          </motion.div>
+          </AnimatedDiv>
         </AnimatePresence>
-      </motion.div>
+      </AnimatedDiv>
     </GridContent>
   </SectionAbout>
 );

@@ -12,6 +12,10 @@ import { FIREBASE_DATABASE_URL, FIREBASE_DATABASE_REF } from 'constants/api';
 import { auth, firebaseInstance } from 'features/auth';
 import { PageLoader } from 'ui/page-loader/page-loader';
 import { PortfolioView } from './portfolio-view';
+import {
+  PORTFOLIO_CATEGORY_TAB_NAME_ART,
+  PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND,
+} from '../../constants/portfolio';
 
 export const Portfolio: FC = () => {
   const categoryFromStore = useStore($portfolioTabsStore);
@@ -50,9 +54,10 @@ export const Portfolio: FC = () => {
   };
 
   const getDataChunk = async (categoryName: string) => {
-    const categoryStartIndex = categoryName === 'art' ? '7' : '0';
+    const categoryStartIndex =
+      categoryName === PORTFOLIO_CATEGORY_TAB_NAME_ART ? '7' : '0';
     const categoryEndIndex =
-      categoryName === 'art'
+      categoryName === PORTFOLIO_CATEGORY_TAB_NAME_ART
         ? (DATA_CHANK_SIZE + DATA_CHANK_SIZE).toString()
         : DATA_CHANK_SIZE.toString();
 
@@ -65,12 +70,7 @@ export const Portfolio: FC = () => {
       .once('value')
       .then(snapshot => {
         const arrayOfKeys = Object.keys(snapshot.val());
-        // TODO: Check and remove console
-        // console.info(arrayOfKeys);
-
         const results = arrayOfKeys.map(key => snapshot.val()[key]);
-        // TODO: Check and remove console
-        // console.info(results);
 
         setData(results);
         setPageLoading(false);
@@ -84,7 +84,8 @@ export const Portfolio: FC = () => {
   const getNextDataChunk = async () => {
     setDataLoadCount(prevState => prevState + 1);
 
-    const artOffset = selectedCategory === 'art' ? 0 : 6;
+    const artOffset =
+      selectedCategory === PORTFOLIO_CATEGORY_TAB_NAME_ART ? 0 : 6;
 
     firebaseInstance
       .database()
@@ -92,7 +93,7 @@ export const Portfolio: FC = () => {
       .orderByKey()
       .startAt((dataLoadCount * DATA_CHANK_SIZE + 1 - artOffset).toString())
       .endAt(
-        selectedCategory === 'frontend'
+        selectedCategory === PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND
           ? '6'
           : (
               dataLoadCount * DATA_CHANK_SIZE -
@@ -109,25 +110,9 @@ export const Portfolio: FC = () => {
         }
 
         const arrayOfKeys = Object.keys(snapshot.val());
-
         const results = arrayOfKeys.map(key => snapshot.val()[key]);
 
-        // TODO: Remove console
-        // console.info(results);
-
         setData(prevState => [...prevState, results].flatMap(item => item));
-
-        // TODO: Check later and remove console below
-        // const frontEndTotalLength = projectsTotalCount - 15;
-        // const artTotalLength = projectsTotalCount - 7;
-
-        // const maxDataLength = data.some(({ category }) =>
-        //   category.includes(PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND)
-        // )
-        //   ? frontEndTotalLength
-        //   : artTotalLength;
-
-        // console.info('maxDataLength', data, maxDataLength);
       })
       .catch(error => {
         throw error;

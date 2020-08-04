@@ -2,7 +2,6 @@ import React from 'react';
 import { I18n } from '@lingui/react';
 
 import { toggleLang } from 'store/language-store';
-import { ROUTE_NAME_HOME } from 'router/routes';
 import { Navigation } from './navigation';
 import { StyledHeader } from './styled';
 
@@ -27,20 +26,6 @@ const variants = {
   },
 };
 
-const homePageVariants = {
-  initial: {
-    opacity: 0,
-  },
-  enter: {
-    opacity: 1,
-    transition: { delay: 1 },
-  },
-  exit: {
-    opacity: 0,
-    transition: { duration: 0 },
-  },
-};
-
 export const HeaderView: React.FC<Props> = ({
   activeRouteName,
   theme,
@@ -51,7 +36,7 @@ export const HeaderView: React.FC<Props> = ({
     initial="initial"
     animate="enter"
     exit="exit"
-    variants={activeRouteName === ROUTE_NAME_HOME ? homePageVariants : variants}
+    variants={variants}
   >
     <I18n>
       {({ i18n }) => (

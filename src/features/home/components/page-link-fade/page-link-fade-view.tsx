@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import Tilt from 'react-parallax-tilt';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import { I18n } from '@lingui/react';
 
+import { PAGE_TITLES } from 'constants/page-titles';
+import { ROUTE_NAME_PORTFOLIO } from 'router/routes';
+import { AnimatedDiv } from 'animations/animated';
 import {
   PageLinkStyled,
   Text,
@@ -10,8 +13,6 @@ import {
   LinkOverlayMirrorEffect,
   MotionLinkOverlay,
 } from './styled';
-import { PAGE_TITLES } from '../../../../constants/page-titles';
-import { ROUTE_NAME_PORTFOLIO } from '../../../../router/routes';
 
 interface Props {
   position: string;
@@ -32,7 +33,7 @@ export const PageLinkFadeView = ({
     <>
       <AnimatePresence initial={false}>
         {overlayVisible && (
-          <motion.div
+          <AnimatedDiv
             initial="hidden"
             animate="visible"
             exit="hidden"
@@ -75,7 +76,7 @@ export const PageLinkFadeView = ({
                 <LinkOverlayMirrorEffect />
               </MotionLinkOverlay>
             </Tilt>
-          </motion.div>
+          </AnimatedDiv>
         )}
       </AnimatePresence>
 

@@ -1,6 +1,11 @@
 {
   "name": "zdorava",
+  "description": "Web&art portfolio",
   "version": "0.1.0",
+  "author": {
+    "name": "Stepan Lagunovsky",
+    "email": "stepan.lagunovsky@gmail.com"
+  },
   "main": "index.js",
   "private": true,
   "scripts": {
@@ -30,6 +35,7 @@
     "@lingui/react": "^2.8.3",
     "@types/ismobilejs": "^1.0.1",
     "@types/react-document-title": "^2.0.4",
+    "@types/webfontloader": "^1.6.32",
     "axios": "^0.19.2",
     "core-js": "^3.1.3",
     "effector": "^20.16.2",
@@ -58,7 +64,8 @@
     "router5-plugin-browser": "^7.0.2",
     "styled-components": "^4.2.0",
     "styled-normalize": "^8.0.6",
-    "styled-theming": "^2.2.0"
+    "styled-theming": "^2.2.0",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
@@ -116,6 +123,10 @@
     "typescript-eslint-parser": "^22.0.0",
     "webpack": "^4.32.2"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/chienpo/zdorava.git"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -135,5 +146,6 @@
     "Opera >= 57",
     "Edge >= 17",
     "ChromeAndroid >= 71"
-  ]
+  ],
+  "license": "MIT"
 }

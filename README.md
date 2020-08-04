@@ -1,4 +1,51 @@
-# React app
+# 🌎 ZDORAVA | Web&art portfolio
+
+Welcome to web&art portfolio station! Here I'd like to share you with my professional experience, BIO, and, of course, project-components! Please enjoy!
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `yarn start`
+
+Runs the app in the development mode
+
+### `yarn test`
+
+Launches the test runner
+
+### `yarn build`
+
+Builds the app for production to the `build` folder
+
+### `yarn lint`
+
+Run linters
+
+### `make serve`
+
+Serve files in folder and open browser
+
+### `make build-open`
+
+Build src and open your build in browser
+
+### `make build-info`
+
+Build src and open bundle analyzer in browser
+
+### `make jest-coverage`
+
+Get jest coverage and show report in browser
+
+### `yarn add-locale`
+Add locale 'yarn add-locale er ru...'
+
+### `yarn extract`
+Extract locale
+
+### `yarn compile`
+Compile translations
 
 ## Technology stack
 
@@ -65,48 +112,3 @@ A JavaScript library for building user interfaces. It's simple and declarative, 
 - react-hooks linting
 - styled-components setup
 - react-testing-library setup
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode
-
-### `yarn test`
-
-Launches the test runner
-
-### `yarn build`
-
-Builds the app for production to the `build` folder
-
-### `yarn lint`
-
-Run linters
-
-### `make serve`
-
-Serve files in folder and open browser
-
-### `make build-open`
-
-Build src and open your build in browser
-
-### `make build-info`
-
-Build src and open bundle analyzer in browser
-
-### `make jest-coverage`
-
-Get jest coverage and show report in browser
-
-### `yarn add-locale`
-Add locale 'yarn add-locale er ru...'
-
-### `yarn extract`
-Extract locale
-
-### `yarn compile`
-Compile translations

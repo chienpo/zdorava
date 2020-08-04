@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { FC } from 'react';
 
-import Tilt from 'react-parallax-tilt';
 import { HomepageGlitch } from './homepage-glitch';
 
-export const ThreeDBackground = () => (
+export const PerspectiveBanner: FC<{ src: string; srcSet: string }> = ({
+  src,
+  srcSet,
+}) => (
   <div
     style={{
       position: 'fixed',
@@ -28,9 +30,7 @@ export const ThreeDBackground = () => (
           bottom: '0',
         }}
       >
-        <Tilt>
-          <HomepageGlitch />
-        </Tilt>
+        <HomepageGlitch src={src} srcSet={srcSet} />
       </div>
     </div>
   </div>

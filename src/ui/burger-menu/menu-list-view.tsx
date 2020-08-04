@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
 import { Route } from 'models/route.model';
@@ -8,9 +7,10 @@ import {
   ROUTE_NAME_PORTFOLIO_CATEGORY,
   ROUTE_NAME_PORTFOLIO_PROJECT,
 } from 'router/routes';
+import { AnimatedUl } from 'animations/animated';
 import { MenuListItemView } from './menu-list-item-view';
 
-const StyledMotionUl = styled(motion.ul)`
+const StyledMotionUl = styled(AnimatedUl)`
   display: flex;
   flex-direction: column;
 `;
