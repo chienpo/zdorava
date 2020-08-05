@@ -42,19 +42,19 @@ const homePageVariants = {
     opacity: 0,
     height: '100%',
     x: '-100%',
-    transition: { duration: 0.4 },
+    transition: { duration: 0.2 },
   },
   enter: {
     opacity: 1,
     height: '100%',
     x: '0%',
-    transition: { duration: 1 },
+    transition: { duration: 0.8 },
   },
   exit: {
     opacity: 0,
     height: '100%',
     x: '-100%',
-    transition: { duration: 1 },
+    transition: { duration: 0.8 },
   },
 };
 
