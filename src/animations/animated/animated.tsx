@@ -1,7 +1,7 @@
 import React, { Suspense, lazy, FC, RefObject } from 'react';
 import { MotionProps } from 'framer-motion';
 
-// TODO: Create and move in to separate helper
+// TODO: Create helper to load motion elements to avoid code duplication
 const MotionDiv = lazy(() =>
   import('framer-motion').then(mod => ({
     default: mod.motion.div,
@@ -68,7 +68,7 @@ interface SvgPathProps extends Props, MotionProps {
   strokeLinecap?: 'round' | 'square';
 }
 
-// TODO: Move in to separate helper
+// TODO: Create helper, MotionProps & Props | SvgPathProps | ... to avoid code duplication
 export const AnimatedDiv: FC<MotionProps & Props> = ({
   className,
   children,

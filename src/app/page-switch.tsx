@@ -77,7 +77,6 @@ export const PageSwitch = () => {
           </Suspense>
         </MotionContent>
       )}
-
       {topRouteName === ROUTE_NAME_ABOUT && (
         <MotionContent
           key={topRouteName}
@@ -90,7 +89,6 @@ export const PageSwitch = () => {
           </Suspense>
         </MotionContent>
       )}
-
       {topRouteName === ROUTE_NAME_PORTFOLIO && (
         <MotionContent
           key={topRouteName}
@@ -103,7 +101,6 @@ export const PageSwitch = () => {
           </Suspense>
         </MotionContent>
       )}
-
       {topRouteName === ROUTE_NAME_PORTFOLIO_PROJECT && (
         <MotionContent
           key={topRouteName}
