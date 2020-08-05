@@ -112,3 +112,9 @@ A JavaScript library for building user interfaces. It's simple and declarative, 
 - react-hooks linting
 - styled-components setup
 - react-testing-library setup
+
+## License & copyright
+
+© Stepan Lagunovsky
+
+Licensed under the [MIT License](LICENSE)
