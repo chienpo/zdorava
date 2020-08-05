@@ -1,11 +1,21 @@
 import styled, { keyframes } from 'styled-components';
 
-import { BLACK_85 } from 'constants/colors';
+import { BLACK_85, WHITE_85 } from 'constants/colors';
+import { DEFAULT_THEME_MODE } from 'constants/theme';
 import overlayBlackDot from 'assets/images/overlay_black.png';
+import overlayWhiteDot from 'assets/images/overlay_white_four.png';
 import winkingImage from 'assets/images/backgrounds/homepage-yellow-background.jpg';
 
 export const DottedOverlay = styled.div`
-  background: ${BLACK_85} url(${overlayBlackDot}) repeat scroll 0 0;
+  background: ${({ theme }) =>
+    theme.mode === DEFAULT_THEME_MODE
+      ? `
+  ${BLACK_85} url(${overlayBlackDot}) repeat scroll 0 0;
+  `
+      : `
+  ${WHITE_85} url(${overlayWhiteDot}) repeat scroll 0 0
+  `};
+
   position: absolute;
   width: 100%;
   height: 100%;

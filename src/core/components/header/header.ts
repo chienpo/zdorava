@@ -1,17 +1,14 @@
 import { createElement, FC } from 'react';
 import { useRouteNode } from 'react-router5';
 
-import { LIGHT_MODE } from 'constants/theme';
 import { HeaderView } from './header-view';
 
 interface Props {
   withShadow?: boolean;
-  theme?: string;
   mobileByDefault?: boolean;
 }
 
 export const Header: FC<Props> = ({
-  theme = LIGHT_MODE,
   mobileByDefault = false,
   withShadow = false,
 }) => {
@@ -20,7 +17,6 @@ export const Header: FC<Props> = ({
 
   return createElement(HeaderView, {
     activeRouteName: topRouteName,
-    theme,
     mobileByDefault,
     withShadow,
   });

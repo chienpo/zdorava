@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-import { RED, WHITE_80 } from 'constants/colors';
+import { DARK_MODE } from 'constants/theme';
+import { BLACK_80, RED, WHITE_80 } from 'constants/colors';
 import { noiseAnim, noiseAnimTwo } from 'animations/keyframes/noise';
 
 export const SectionHome = styled.section`
@@ -36,10 +37,10 @@ export const StyledH1 = styled.h1`
   text-transform: uppercase;
   margin-bottom: 20px;
   font-weight: 400;
-  color: ${WHITE_80};
   font-size: 22px;
   line-height: 28px;
   display: inline;
+  color: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE_80 : BLACK_80)};
 `;
 
 export const HomepageSubtitle = styled.div`
@@ -53,7 +54,7 @@ export const HomepageSubtitle = styled.div`
   letter-spacing: 2px;
   text-align: center;
   font-weight: 700;
-  color: red;
+  color: ${RED};
   height: 18px;
 `;
 
@@ -75,7 +76,9 @@ export const WebsiteSubtitle = styled.div`
     position: absolute;
     right: 0;
     top: 0;
-    color: rgba(200, 200, 200, 0.7);
+    color: ${({ theme }) =>
+      theme.mode === DARK_MODE ? 'rgba(200, 200, 200, 0.7)' : BLACK_80};
+
     text-transform: uppercase;
     background: transparent;
     overflow: hidden;

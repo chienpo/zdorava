@@ -3,12 +3,14 @@ import React, { Suspense } from 'react';
 import { LanguageSwitchProps } from 'ui/language-switch/language-switch';
 
 import { Route } from 'models/route.model';
+
 import { BLACK } from 'constants/colors';
 import { BurgerMenu } from 'ui/burger-menu';
 import { NavigationListView } from './navigation-list-view';
 import { NavigationWrapper, LanguageSwitchBox } from './styled';
 
-const LanguageSwitch = React.lazy(() => import('ui/language-switch/'));
+const LanguageSwitch = React.lazy(() => import('ui/language-switch'));
+const ThemeSwitch = React.lazy(() => import('ui/theme-switch'));
 
 interface Props extends LanguageSwitchProps {
   routes: Route[];
@@ -16,8 +18,8 @@ interface Props extends LanguageSwitchProps {
   router: any;
   showMenu: boolean;
   headerHeight: string;
-  theme: string;
   withShadow: boolean;
+  disableThemeSwitch: boolean;
 }
 
 export const NavigationView: React.FC<Props> = ({
@@ -28,17 +30,16 @@ export const NavigationView: React.FC<Props> = ({
   router,
   showMenu,
   headerHeight,
-  theme,
   withShadow,
+  disableThemeSwitch,
 }) => (
   <NavigationWrapper
-    theme={theme}
     style={{
       height: headerHeight,
       boxShadow: withShadow
         ? `0px -48px 35px 45px ${BLACK}`
         : '0 -0 0 0 transparent',
-      gridTemplateColumns: isMobile || !showMenu ? 'auto' : 'auto 200px',
+      gridTemplateColumns: isMobile || !showMenu ? 'auto' : 'auto 335px',
     }}
   >
     {showMenu && (
@@ -51,6 +52,9 @@ export const NavigationView: React.FC<Props> = ({
       </>
     )}
     <LanguageSwitchBox>
+      <Suspense fallback={<div />}>
+        <ThemeSwitch disabled={disableThemeSwitch} />
+      </Suspense>
       <Suspense fallback={<div />}>
         <LanguageSwitch
           selectedLanguage={selectedLanguage}

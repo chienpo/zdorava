@@ -1,13 +1,14 @@
 import { rgba } from 'polished';
 
 export const BLACK = '#000000';
-export const BLACK_90 = rgba(BLACK, 0.9);
-export const BLACK_85 = rgba(BLACK, 0.85);
-export const BLACK_89 = rgba(BLACK, 0.895);
-export const BLACK_50 = rgba(BLACK, 0.5);
+export const BLACK_20 = rgba(BLACK, 0.2);
 export const BLACK_30 = rgba(BLACK, 0.3);
 export const BLACK_40 = rgba(BLACK, 0.4);
-export const BLACK_20 = rgba(BLACK, 0.2);
+export const BLACK_50 = rgba(BLACK, 0.5);
+export const BLACK_80 = rgba(BLACK, 0.8);
+export const BLACK_85 = rgba(BLACK, 0.85);
+export const BLACK_89 = rgba(BLACK, 0.895);
+export const BLACK_90 = rgba(BLACK, 0.9);
 export const GRAY = '#808080';
 export const GRAY_LIGHT = '#ccc';
 export const RED = '#ff0000';
@@ -17,6 +18,7 @@ export const WHITE_20 = rgba(WHITE, 0.2);
 export const WHITE_30 = rgba(WHITE, 0.3);
 export const WHITE_70 = rgba(WHITE, 0.7);
 export const WHITE_80 = rgba(WHITE, 0.8);
+export const WHITE_85 = rgba(WHITE, 0.85);
 export const WHITE_90 = rgba(WHITE, 0.9);
 export const WHITE_SMOKE = 'whitesmoke';
 export const WHITE_SMOKE_10 = rgba(WHITE_SMOKE, 0.1);

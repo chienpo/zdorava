@@ -19,7 +19,6 @@ const Contacts = React.lazy(() => import('features/contacts'));
 interface Props {
   toggleContactForm: (prevState: boolean) => void;
   contactFormOpened: boolean;
-  theme: string;
 }
 
 const variants = {
@@ -42,7 +41,6 @@ const variants = {
 export const FooterView: React.FC<Props> = ({
   toggleContactForm,
   contactFormOpened,
-  theme,
 }) => (
   <AnimatedFooter animate="enter" exit="exit">
     <Suspense fallback={<div />}>
@@ -52,7 +50,7 @@ export const FooterView: React.FC<Props> = ({
       />
     </Suspense>
     <AnimatePresence>
-      <FooterWrapper theme={theme} initial="initial" variants={variants}>
+      <FooterWrapper initial="initial" variants={variants}>
         <FooterNav>
           {SOCIAL_LINKS_DATA.map(({ path, icon, name, attrs }) => (
             <FooterSocialLink

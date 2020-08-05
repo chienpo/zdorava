@@ -10,7 +10,6 @@ import { NavigationView } from './navigation-view';
 
 interface Props extends LanguageSwitchProps {
   activeRouteName: string;
-  theme: string;
   mobileByDefault: boolean;
   withShadow: boolean;
 }
@@ -19,7 +18,6 @@ export const Navigation: FC<Props> = ({
   selectedLanguage,
   onChangeLanguage,
   activeRouteName,
-  theme,
   mobileByDefault,
   withShadow,
 }) => {
@@ -29,6 +27,7 @@ export const Navigation: FC<Props> = ({
 
   const showMenu = activeRouteName !== ROUTE_NAME_HOME;
   const headerHeight = activeRouteName === ROUTE_NAME_HOME ? '50px' : '70px';
+  const disableThemeSwitch = activeRouteName !== ROUTE_NAME_HOME;
 
   // TODO Move at the final return
   return createElement(NavigationView, {
@@ -39,7 +38,7 @@ export const Navigation: FC<Props> = ({
     isMobile: mobileByDefault || isMobile.any || !mediaMinWidthForLaptops,
     showMenu,
     headerHeight,
-    theme,
     withShadow,
+    disableThemeSwitch,
   });
 };

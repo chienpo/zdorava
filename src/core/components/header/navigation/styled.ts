@@ -2,13 +2,14 @@ import styled from 'styled-components';
 import { BaseLink } from 'react-router5';
 
 import { DARK_MODE } from 'constants/theme';
-import { BLACK_30, GRAY, RED, WHITE } from 'constants/colors';
+import { BLACK_30, GRAY, RED, WHITE, WHITE_70 } from 'constants/colors';
 
 export const LanguageSwitchBox = styled.div`
   z-index: 0;
   display: flex;
   justify-content: center;
   margin-left: auto;
+  align-items: center;
 `;
 
 export const NavigationList = styled.nav`
@@ -16,7 +17,7 @@ export const NavigationList = styled.nav`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding-left: 170px;
+  padding-left: 270px;
 `;
 
 export const BaseLinkStyled = styled(BaseLink)`
@@ -33,7 +34,7 @@ export const BaseLinkStyled = styled(BaseLink)`
 
 export const NavigationWrapper = styled.div`
   background: ${({ theme }) =>
-    theme === DARK_MODE
+    theme.mode === DARK_MODE
       ? `${BLACK_30};`
       : `
         ${WHITE};

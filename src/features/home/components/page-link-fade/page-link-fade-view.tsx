@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, ReactNode } from 'react';
 import Tilt from 'react-parallax-tilt';
 import { AnimatePresence } from 'framer-motion';
 import { I18n } from '@lingui/react';
@@ -17,7 +17,7 @@ import {
 interface Props {
   position: string;
   routeName: string;
-  title: any;
+  title: ReactNode;
   routeParams?: { [key: string]: string };
 }
 

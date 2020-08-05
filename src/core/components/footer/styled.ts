@@ -10,7 +10,6 @@ import {
   GRAY,
   RED,
   WHITE,
-  WHITE_SMOKE_10,
   WHITE_90,
   BLACK_89,
   BLACK_40,
@@ -24,8 +23,12 @@ export const FooterCopy = styled.small`
   letter-spacing: 0.5px;
   display: block;
   width: 100%;
-  color: ${WHITE_70};
   padding: 4px 0;
+  color: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE_70 : BLACK_89)};
+  background: ${({ theme }) =>
+    theme.mode === DARK_MODE
+      ? `${BLACK_40} url(${overlayBlackDot}) repeat scroll 0 0;`
+      : `${WHITE} url(${overlayWhiteDot}) repeat scroll 0 0;`};
 `;
 
 export const FooterWrapper = styled(AnimatedDiv)`
@@ -35,18 +38,11 @@ export const FooterWrapper = styled(AnimatedDiv)`
   text-align: center;
   align-items: center;
   background: ${({ theme }) =>
-    theme === DARK_MODE
+    theme.mode === DARK_MODE
       ? `${BLACK_89} url(${overlayBlackDot}) repeat scroll 0 0;`
       : `${WHITE_90} url(${overlayWhiteDot}) repeat scroll 0 0;`};
   position: relative;
   z-index: 1;
-
-  ${FooterCopy} {
-    background: ${({ theme }) =>
-      theme === DARK_MODE
-        ? `${BLACK_40} url(${overlayBlackDot}) repeat scroll 0 0;`
-        : `${WHITE_SMOKE_10}`};
-  }
 `;
 
 export const FooterNav = styled.address`
