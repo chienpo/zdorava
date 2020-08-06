@@ -12,7 +12,7 @@ export const SwitchBox = styled.div`
 export const SlideRaw = styled.div`
   width: 70px;
   height: 34px;
-  border-radius: 100px;
+  border-radius: 17px;
   display: flex;
   cursor: pointer;
   position: relative;

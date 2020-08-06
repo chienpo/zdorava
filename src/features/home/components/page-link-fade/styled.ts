@@ -77,6 +77,11 @@ export const PageLinkStyled = styled(Link)`
   height: 100%;
   box-sizing: border-box;
   transition: box-shadow 0.2s, background 0.8s;
+  outline: none;
+
+  &:focus {
+    box-shadow: 0 0 0 2px ${RED};
+  }
 
   ${Text} {
     ${({ routeName }) =>

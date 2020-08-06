@@ -87,6 +87,11 @@ export const StyledLink = styled(Link)`
   font-weight: bold;
   margin-bottom: 100px;
   transition: color 0.2s;
+  outline: none;
+
+  &:focus {
+    box-shadow: 0 0 0 2px ${RED};
+  }
 
   &:hover {
     color: ${RED};
@@ -100,6 +105,11 @@ export const StyledRealProjectLink = styled.a`
   font-weight: bold;
   margin-left: 5px;
   transition: color 0.2s;
+  outline: none;
+
+  &:focus {
+    box-shadow: 0 0 0 2px ${RED};
+  }
 
   &:hover {
     color: ${RED_70};

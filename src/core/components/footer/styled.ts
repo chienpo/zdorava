@@ -67,8 +67,13 @@ export const FooterSocialLink = styled.a<{ as?: string }>`
   cursor: pointer;
   transition: color 0.4s;
   ${({ as }) => as === 'button' && 'width: 30px; position: relative;'};
+  outline: none;
 
   &:hover {
     color: ${RED};
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px ${RED};
   }
 `;

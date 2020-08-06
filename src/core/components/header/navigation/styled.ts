@@ -23,7 +23,6 @@ export const NavUl = styled.ul`
 
 export const BaseLinkStyled = styled(BaseLink)`
   display: block;
-  transition: all ease-in-out 0.4s;
   text-decoration: none;
   color: ${GRAY};
   font-size: 14px;
@@ -32,6 +31,12 @@ export const BaseLinkStyled = styled(BaseLink)`
   text-transform: uppercase;
   padding: 0 35px;
   border-bottom: 1px solid transparent;
+  outline: none;
+  transition: all ease-in-out 0.4s;
+
+  &:focus {
+    box-shadow: 0 0 0 2px ${RED};
+  }
 
   ${({ theme }) =>
     theme.mode === DARK_MODE
