@@ -14,7 +14,7 @@ export interface Props {
 
 export const ThemeSwitch: FC<Props> = ({ disabled }) => {
   const theme = useStore($themeStore);
-  const toggledByDefault = theme === DARK_MODE;
+  const toggledByDefault = theme === DARK_MODE && !disabled;
 
   const [checked, toggleSwitch] = useState<boolean>(toggledByDefault);
 
