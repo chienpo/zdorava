@@ -24,9 +24,8 @@ export const ThemeSwitchView: React.FC<Props> = ({
         size={iconSize}
         icon={faSun}
       />
-      <SwitchLabel htmlFor="theme-switch">
+      <SwitchLabel>
         <InputCheckbox
-          id="theme-switch"
           type="checkbox"
           onChange={onChange}
           checked={checked}

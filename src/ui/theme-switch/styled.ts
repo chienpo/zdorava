@@ -43,6 +43,7 @@ export const InputCheckbox = styled.input`
   left: 0;
   bottom: 0;
   right: 0;
+  appearance: none;
 
   & + ${SlideRaw} {
     background: ${BLACK}
