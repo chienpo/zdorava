@@ -25,111 +25,57 @@ interface SvgPathProps extends Props, MotionProps {
   strokeLinecap?: 'round' | 'square';
 }
 
-// TODO: Create helper, MotionProps & Props | SvgPathProps | ... to avoid code duplication
-export const AnimatedDiv: FC<MotionProps & Props> = ({
-  className,
-  children,
+const SuspenseComponent: React.FC<any> = ({
+  animCmp: Comp,
+  fallbackTag,
   ...props
-}) => (
-  <Suspense fallback={<div className={className}>{children}</div>}>
-    <MotionDiv className={className} {...props}>
-      {children}
-    </MotionDiv>
-  </Suspense>
+}) => {
+  const { className, children } = props;
+
+  const FbComp: React.FC<{ className: string }> = fbProps =>
+    React.createElement(fallbackTag, fbProps);
+
+  return (
+    <Suspense fallback={<FbComp className={className}>{children}</FbComp>}>
+      <Comp className={className} {...props}>
+        {children}
+      </Comp>
+    </Suspense>
+  );
+};
+
+export const AnimatedDiv: FC<MotionProps & Props> = props => (
+  <SuspenseComponent animCmp={MotionDiv} fallbackTag="div" {...props} />
 );
 
-export const AnimatedHeader: FC<MotionProps & Props> = ({
-  className,
-  children,
-  ...props
-}) => (
-  <Suspense fallback={<header className={className}>{children}</header>}>
-    <MotionHeader className={className} {...props}>
-      {children}
-    </MotionHeader>
-  </Suspense>
+export const AnimatedHeader: FC<MotionProps & Props> = props => (
+  <SuspenseComponent animCmp={MotionHeader} fallbackTag="header" {...props} />
 );
 
-export const AnimatedFooter: FC<MotionProps & Props> = ({
-  className,
-  children,
-  ...props
-}) => (
-  <Suspense fallback={<footer className={className}>{children}</footer>}>
-    <MotionFooter className={className} {...props}>
-      {children}
-    </MotionFooter>
-  </Suspense>
+export const AnimatedFooter: FC<MotionProps & Props> = props => (
+  <SuspenseComponent animCmp={MotionFooter} fallbackTag="footer" {...props} />
 );
 
-export const AnimatedUl: FC<MotionProps & Props> = ({
-  className,
-  children,
-  ...props
-}) => (
-  <Suspense fallback={<ul className={className}>{children}</ul>}>
-    <MotionUl className={className} {...props}>
-      {children}
-    </MotionUl>
-  </Suspense>
+export const AnimatedUl: FC<MotionProps & Props> = props => (
+  <SuspenseComponent animCmp={MotionUl} fallbackTag="ul" {...props} />
 );
 
-export const AnimatedLi: FC<MotionProps & Props> = ({
-  className,
-  children,
-  ...props
-}) => (
-  <Suspense fallback={<li className={className}>{children}</li>}>
-    <MotionLi className={className} {...props}>
-      {children}
-    </MotionLi>
-  </Suspense>
+export const AnimatedLi: FC<MotionProps & Props> = props => (
+  <SuspenseComponent animCmp={MotionLi} fallbackTag="li" {...props} />
 );
 
-export const AnimatedAddress: FC<MotionProps & Props> = ({
-  className,
-  children,
-  ...props
-}) => (
-  <Suspense fallback={<address className={className}>{children}</address>}>
-    <MotionAddress className={className} {...props}>
-      {children}
-    </MotionAddress>
-  </Suspense>
+export const AnimatedAddress: FC<MotionProps & Props> = props => (
+  <SuspenseComponent animCmp={MotionAddress} fallbackTag="address" {...props} />
 );
 
-export const AnimatedPath: FC<SvgPathProps> = ({
-  className,
-  children,
-  ...props
-}) => (
-  <Suspense fallback={<path className={className}>{children}</path>}>
-    <MotionPath className={className} {...props}>
-      {children}
-    </MotionPath>
-  </Suspense>
+export const AnimatedPath: FC<SvgPathProps> = props => (
+  <MotionPath animCmp={MotionPath} fallbackTag="path" {...props} />
 );
 
-export const AnimatedSection: FC<MotionProps & Props> = ({
-  className,
-  children,
-  ...props
-}) => (
-  <Suspense fallback={<section className={className}>{children}</section>}>
-    <MotionSection className={className} {...props}>
-      {children}
-    </MotionSection>
-  </Suspense>
+export const AnimatedSection: FC<MotionProps & Props> = props => (
+  <MotionSection animCmp={MotionPath} fallbackTag="section" {...props} />
 );
 
-export const AnimatedFigure: FC<MotionProps & Props> = ({
-  className,
-  children,
-  ...props
-}) => (
-  <Suspense fallback={<figure className={className}>{children}</figure>}>
-    <MotionFigure className={className} {...props}>
-      {children}
-    </MotionFigure>
-  </Suspense>
+export const AnimatedFigure: FC<MotionProps & Props> = props => (
+  <MotionSection animCmp={MotionFigure} fallbackTag="figure" {...props} />
 );
