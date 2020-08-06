@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { BLACK, WHITE } from 'constants/colors';
+import { BLACK, RED, WHITE } from 'constants/colors';
 
 export const SwitchBox = styled.div`
   display: grid;
@@ -44,6 +44,7 @@ export const InputCheckbox = styled.input`
   bottom: 0;
   right: 0;
   appearance: none;
+  outline: none;
 
   & + ${SlideRaw} {
     background: ${BLACK}
@@ -57,6 +58,10 @@ export const InputCheckbox = styled.input`
   &:checked + ${SlideRaw}::after {
     transform: translateX(36px);
     background-color: ${BLACK}
+  }
+
+  &:focus + ${SlideRaw} {
+    box-shadow: 0 0 0 2px ${RED};
   }
 
   &:disabled {
