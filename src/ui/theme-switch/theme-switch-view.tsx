@@ -26,7 +26,7 @@ export const ThemeSwitchView: React.FC<Props> = ({
       />
       <SwitchLabel>
         <InputCheckbox
-          type="checkbox"
+          type="radio"
           onChange={onChange}
           checked={checked}
           disabled={disabled}
