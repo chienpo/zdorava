@@ -68,3 +68,11 @@ export const InputCheckbox = styled.input`
     }
   }
 `;
+
+// TODO: Check accessability behavior with label as wrapper
+export const HiddenSwitchLabel = styled.span`
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  display: block;
+`;
