@@ -21,6 +21,7 @@ export const InputRadio = styled.input`
   margin-right: 10px;
   position: absolute;
   opacity: 0;
+  appearance: none;
 
   &:focus + ${LangText} {
     font-weight: bold;
