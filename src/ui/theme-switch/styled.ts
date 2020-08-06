@@ -1,17 +1,18 @@
 import styled from 'styled-components';
 
-import { BLACK, RED, WHITE } from 'constants/colors';
+import { BLACK, RED, WHITE, WHITE_30, WHITE_70 } from 'constants/colors';
 
 export const SwitchBox = styled.div`
   display: grid;
   grid-template-columns: auto auto auto;
   grid-column-gap: 10px;
   align-items: center;
+  font-size: 20px;
 `;
 
 export const SlideRaw = styled.div`
-  width: 70px;
-  height: 34px;
+  width: 60px;
+  height: 28px;
   border-radius: 17px;
   display: flex;
   cursor: pointer;
@@ -22,8 +23,8 @@ export const SlideRaw = styled.div`
     position: absolute;
     width: 22px;
     height: 22px;
-    top: 6px;
-    left: 6px;
+    top: 3px;
+    left: 3px;
     border-radius: 50%;
     transform: translateX(0);
     background-color: ${WHITE};
@@ -52,11 +53,11 @@ export const InputCheckbox = styled.input`
   }
 
   &:checked + ${SlideRaw} {
-    background: ${WHITE}
+    background: ${WHITE_30}
   }
 
   &:checked + ${SlideRaw}::after {
-    transform: translateX(36px);
+    transform: translateX(32px);
     background-color: ${BLACK}
   }
 

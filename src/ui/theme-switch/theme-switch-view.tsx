@@ -20,14 +20,12 @@ export const ThemeSwitchView: React.FC<Props> = ({
 }) => {
   const sunColor = checked ? WHITE_30 : BLACK;
   const moonColor = checked ? WHITE : BLACK_30;
-  const iconSize = 'lg';
 
   return (
     <SwitchBox>
       <FontAwesomeIcon
         style={{ opacity: disabled ? 0.2 : 1 }}
         color={sunColor}
-        size={iconSize}
         icon={faSun}
       />
       <SwitchLabel>
@@ -43,7 +41,6 @@ export const ThemeSwitchView: React.FC<Props> = ({
       <FontAwesomeIcon
         style={{ opacity: disabled ? 0.2 : 1 }}
         color={moonColor}
-        size={iconSize}
         icon={faMoon}
       />
     </SwitchBox>
