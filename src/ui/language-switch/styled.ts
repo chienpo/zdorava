@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { DARK_MODE } from 'constants/theme';
-import { BLACK, RED, WHITE, WHITE_SMOKE_10 } from 'constants/colors';
+import { BLACK, RED, RED_70, WHITE, WHITE_SMOKE_10 } from 'constants/colors';
 
 export const Separator = styled.div`
   width: 2px;
@@ -24,7 +24,8 @@ export const InputRadio = styled.input`
   appearance: none;
 
   &:focus + ${LangText} {
-    font-weight: bold;
+    font-weight: 600;
+    color: ${RED_70};
   }
 
   & + ${LangText} {

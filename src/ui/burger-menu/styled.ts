@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { GRAY, RED } from 'constants/colors';
+import { BLACK, GRAY, RED, RED_70 } from 'constants/colors';
 import { AnimatedAddress } from 'animations/animated';
 
 export const SidebarSocial = styled(AnimatedAddress)`
@@ -11,7 +11,7 @@ export const SidebarSocial = styled(AnimatedAddress)`
   width: 300px;
 `;
 
-export const StyledMotionSocialLink = styled.a`
+export const StyledSocialLink = styled.a`
   transition: all ease-in-out 0.4s;
   text-decoration: none;
   color: ${GRAY};
@@ -21,6 +21,12 @@ export const StyledMotionSocialLink = styled.a`
   text-transform: uppercase;
   display: inline-block;
   margin-right: 15px;
+  outline: none;
+  color: ${BLACK};
+
+  &:focus {
+    color: ${RED_70};
+  }
 
   &:hover {
     color: ${RED};

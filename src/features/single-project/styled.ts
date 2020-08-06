@@ -90,7 +90,7 @@ export const StyledLink = styled(Link)`
   outline: none;
 
   &:focus {
-    box-shadow: 0 0 0 2px ${RED};
+    color: ${RED_70};
   }
 
   &:hover {
@@ -108,7 +108,7 @@ export const StyledRealProjectLink = styled.a`
   outline: none;
 
   &:focus {
-    box-shadow: 0 0 0 2px ${RED};
+    color: ${RED_70};
   }
 
   &:hover {

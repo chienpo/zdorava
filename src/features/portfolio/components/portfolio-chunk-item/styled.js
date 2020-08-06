@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 import { Link } from 'react-router5';
 
-import { RED, WHITE } from 'constants/colors';
+import { RED, RED_70, WHITE } from 'constants/colors';
 import {
   PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND,
   CHUNK_TYPE_ONE,
@@ -11,6 +10,7 @@ import {
 } from 'constants/portfolio';
 import { mirrorEffect } from 'helpers/mirror-effect';
 import { LazyImage } from 'ui/lazy-image';
+import { AnimatedDiv } from 'animations/animated';
 
 export const LazyImageStyled = styled(LazyImage)`
   display: block;
@@ -46,9 +46,14 @@ export const ItemOrientationType = styled(Link)`
   height: 100%;
   overflow: hidden;
   display: flex;
+  outline: none;
+
+  &:focus {
+    outline: 1px solid ${RED_70};
+  }
 `;
 
-export const Item = styled(motion.div)`
+export const Item = styled(AnimatedDiv)`
   margin: 0;
   padding: 0;
   box-sizing: border-box;

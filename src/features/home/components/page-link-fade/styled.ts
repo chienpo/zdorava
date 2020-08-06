@@ -3,7 +3,7 @@ import { Link } from 'react-router5';
 
 import { ROUTE_NAME_ABOUT } from 'router/routes';
 import { mirrorEffect } from 'helpers/mirror-effect';
-import { BLACK, RED, WHITE, WHITE_30 } from 'constants/colors';
+import { BLACK, RED, RED_70, WHITE, WHITE_30 } from 'constants/colors';
 import { DARK_MODE } from 'constants/theme';
 import navigationPortfolioBackground from 'assets/images/backgrounds/navigation-portfolio-background.png';
 import navigationAboutBackgroundLogo from 'assets/images/backgrounds/navigation-contacts-background.png';
@@ -79,10 +79,6 @@ export const PageLinkStyled = styled(Link)`
   transition: box-shadow 0.2s, background 0.8s;
   outline: none;
 
-  &:focus {
-    box-shadow: 0 0 0 2px ${RED};
-  }
-
   ${Text} {
     ${({ routeName }) =>
       routeName === ROUTE_NAME_ABOUT
@@ -98,6 +94,17 @@ export const PageLinkStyled = styled(Link)`
     &::before,
     &::after {
       animation: ${pulseAnimWhite} 5s linear infinite;
+    }
+  }
+
+  &:focus {
+    ${Text} {
+      color: ${RED_70};
+
+      &::before,
+      &::after {
+        border-color: ${RED_70};
+      }
     }
   }
 

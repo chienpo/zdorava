@@ -14,6 +14,7 @@ import {
   BLACK_89,
   BLACK_40,
   WHITE_70,
+  RED_70,
 } from 'constants/colors';
 import { AnimatedDiv } from 'animations/animated';
 
@@ -69,11 +70,11 @@ export const FooterSocialLink = styled.a<{ as?: string }>`
   ${({ as }) => as === 'button' && 'width: 30px; position: relative;'};
   outline: none;
 
-  &:hover {
-    color: ${RED};
+  &:focus {
+    color: ${RED_70};
   }
 
-  &:focus {
-    box-shadow: 0 0 0 2px ${RED};
+  &:hover {
+    color: ${RED};
   }
 `;

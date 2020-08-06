@@ -6,7 +6,7 @@ import { useStore } from 'effector-react';
 
 import { $portfolioTabsStore } from 'store/portfolio-tabs-store';
 
-import { GRAY, WHITE, RED } from 'constants/colors';
+import { GRAY, WHITE, RED, RED_70 } from 'constants/colors';
 import { DARK_MODE } from 'constants/theme';
 import { PAGE_TITLES } from 'constants/page-titles';
 import { AnimatedLi } from 'animations/animated';
@@ -30,33 +30,35 @@ const BaseLinkStyled = styled(BaseLink)`
   line-height: 30px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+  outline: none;
 
   &.active {
     font-weight: bold;
   }
 
+  &:focus {
+    color: ${RED_70};
+    border-color: ${RED_70};
+    font-weight: 600;
+  }
+
+  &:hover {
+    color: ${RED};
+    border-color: ${RED};
+  }
+
   ${({ theme }) =>
     theme.mode === DARK_MODE
       ? `
-      color: ${GRAY};
+        color: ${GRAY};
 
         &.active {
           color: ${WHITE};
-        }
-
-        &:hover {
-          color: ${RED};
-          border-color: ${RED};
         }
       `
       : `
         &.active {
           color: ${RED};
-        }
-
-        &:hover {
-          color: ${RED};
-          border-color: ${RED};
         }
       `};
 `;

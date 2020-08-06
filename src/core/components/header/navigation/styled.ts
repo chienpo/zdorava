@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { BaseLink } from 'react-router5';
 
 import { DARK_MODE } from 'constants/theme';
-import { BLACK_30, GRAY, RED, WHITE } from 'constants/colors';
+import { BLACK_30, GRAY, RED, RED_70, WHITE } from 'constants/colors';
 
 export const LanguageSwitchBox = styled.div`
   z-index: 0;
@@ -35,7 +35,8 @@ export const BaseLinkStyled = styled(BaseLink)`
   transition: all ease-in-out 0.4s;
 
   &:focus {
-    box-shadow: 0 0 0 2px ${RED};
+    color: ${RED_70};
+    font-weight: 600;
   }
 
   ${({ theme }) =>

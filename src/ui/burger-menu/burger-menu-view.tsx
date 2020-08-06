@@ -6,13 +6,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Route } from 'models/route.model';
 
 import { DARK_MODE } from 'constants/theme';
-import { BLACK, BLACK_90, WHITE_20 } from 'constants/colors';
+import { BLACK_90, WHITE_20 } from 'constants/colors';
 import { SOCIAL_LINKS_DATA } from 'constants/social';
 import { Backdrop } from 'ui/backdrop';
 import { AnimatedDiv } from 'animations/animated';
 import { MenuToggleButtonView } from './menu-toggle-button-view';
 import { MenuListView } from './menu-list-view';
-import { SidebarSocial, StyledMotionSocialLink } from './styled';
+import { SidebarSocial, StyledSocialLink } from './styled';
 
 interface Props {
   isOpen: boolean;
@@ -115,14 +115,14 @@ export const BurgerMenuView: React.FC<Props> = ({
             exit="closed"
           >
             {SOCIAL_LINKS_DATA.map(({ name, path, icon }) => (
-              <StyledMotionSocialLink
+              <StyledSocialLink
                 key={name}
                 href={path}
                 target="_blank"
                 rel="noopener"
               >
-                <FontAwesomeIcon icon={icon} style={{ color: BLACK }} />
-              </StyledMotionSocialLink>
+                <FontAwesomeIcon icon={icon} />
+              </StyledSocialLink>
             ))}
           </SidebarSocial>
         </>
