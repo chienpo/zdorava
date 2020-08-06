@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { BaseLink } from 'react-router5';
 
 import { DARK_MODE } from 'constants/theme';
-import { BLACK_30, GRAY, RED, WHITE, WHITE_70 } from 'constants/colors';
+import { BLACK_30, GRAY, RED, WHITE } from 'constants/colors';
 
 export const LanguageSwitchBox = styled.div`
   z-index: 0;
@@ -12,7 +12,8 @@ export const LanguageSwitchBox = styled.div`
   align-items: center;
 `;
 
-export const NavigationList = styled.nav`
+export const NavUl = styled.ul`
+  list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,6 +22,7 @@ export const NavigationList = styled.nav`
 `;
 
 export const BaseLinkStyled = styled(BaseLink)`
+  display: block;
   transition: all ease-in-out 0.4s;
   text-decoration: none;
   color: ${GRAY};
@@ -30,26 +32,10 @@ export const BaseLinkStyled = styled(BaseLink)`
   text-transform: uppercase;
   padding: 0 35px;
   border-bottom: 1px solid transparent;
-`;
 
-export const NavigationWrapper = styled.div`
-  background: ${({ theme }) =>
+  ${({ theme }) =>
     theme.mode === DARK_MODE
-      ? `${BLACK_30};`
-      : `
-        ${WHITE};
-      `};
-  display: grid;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-
-  ${BaseLinkStyled} {
-    ${({ theme }) =>
-      theme === DARK_MODE
-        ? `
+      ? `
         color: ${GRAY};
 
           &.active {
@@ -67,7 +53,7 @@ export const NavigationWrapper = styled.div`
             border-color: ${RED};
           }
         `
-        : `
+      : `
           &.active {
             color: ${RED};
             border-bottom: 1px solid ${RED};
@@ -83,5 +69,19 @@ export const NavigationWrapper = styled.div`
             border-color: ${RED};
           }
         `};
-  }
+`;
+
+export const NavigationWrapper = styled.div`
+  background: ${({ theme }) =>
+    theme.mode === DARK_MODE
+      ? `${BLACK_30};`
+      : `
+        ${WHITE};
+      `};
+  display: grid;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
 `;

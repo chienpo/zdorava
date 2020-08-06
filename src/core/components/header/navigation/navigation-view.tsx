@@ -47,7 +47,9 @@ export const NavigationView: React.FC<Props> = ({
         {isMobile ? (
           <BurgerMenu routes={routes} />
         ) : (
-          <NavigationListView router={router} routes={routes} />
+          <nav>
+            <NavigationListView router={router} routes={routes} />
+          </nav>
         )}
       </>
     )}
