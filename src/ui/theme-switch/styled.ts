@@ -11,9 +11,9 @@ export const SwitchBox = styled.div`
 `;
 
 export const SlideRaw = styled.div`
-  width: 60px;
+  width: 56px;
   height: 28px;
-  border-radius: 17px;
+  border-radius: 14px;
   display: flex;
   cursor: pointer;
   position: relative;
@@ -21,10 +21,10 @@ export const SlideRaw = styled.div`
   &:after {
     content: '';
     position: absolute;
-    width: 22px;
-    height: 22px;
-    top: 3px;
-    left: 3px;
+    width: 18px;
+    height: 18px;
+    top: 5px;
+    left: 5px;
     border-radius: 50%;
     transform: translateX(0);
     background-color: ${WHITE};
@@ -57,7 +57,7 @@ export const InputCheckbox = styled.input`
   }
 
   &:checked + ${SlideRaw}::after {
-    transform: translateX(32px);
+    transform: translateX(27px);
     background-color: ${BLACK}
   }
 

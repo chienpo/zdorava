@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 
-import { BLACK, BLACK_30, WHITE, WHITE_30 } from 'constants/colors';
+import { BLACK, BLACK_30, WHITE, WHITE_20, WHITE_30 } from 'constants/colors';
 import { Props } from './theme-switch';
 
 import {
@@ -18,7 +18,7 @@ export const ThemeSwitchView: React.FC<Props> = ({
   checked,
   disabled,
 }) => {
-  const sunColor = checked ? WHITE_30 : BLACK;
+  const sunColor = checked ? WHITE_20 : BLACK;
   const moonColor = checked ? WHITE : BLACK_30;
 
   return (
