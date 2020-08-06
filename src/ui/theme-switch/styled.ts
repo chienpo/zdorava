@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { BLACK, RED, WHITE, WHITE_30, WHITE_70 } from 'constants/colors';
+import { BLACK, RED, RED_70, WHITE, WHITE_70 } from 'constants/colors';
 
 export const SwitchBox = styled.div`
   display: grid;
@@ -21,10 +21,10 @@ export const SlideRaw = styled.div`
   &:after {
     content: '';
     position: absolute;
-    width: 18px;
-    height: 18px;
-    top: 5px;
-    left: 5px;
+    width: 16px;
+    height: 16px;
+    top: 6px;
+    left: 6px;
     border-radius: 50%;
     transform: translateX(0);
     background-color: ${WHITE};
@@ -53,7 +53,17 @@ export const InputCheckbox = styled.input`
   }
 
   &:checked + ${SlideRaw} {
-    background: ${WHITE_30}
+    background: ${WHITE_70}
+  }
+
+  & + ${SlideRaw} {
+    &:focus {
+      background: ${RED_70};
+    }
+
+    &:hover {
+      background: ${RED};
+    }
   }
 
   &:checked + ${SlideRaw}::after {
