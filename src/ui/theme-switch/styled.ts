@@ -21,10 +21,10 @@ export const SlideRaw = styled.div`
   &:after {
     content: '';
     position: absolute;
-    width: 16px;
-    height: 16px;
-    top: 6px;
-    left: 6px;
+    width: 18px;
+    height: 18px;
+    top: 5px;
+    left: 5px;
     border-radius: 50%;
     transform: translateX(0);
     background-color: ${WHITE};
