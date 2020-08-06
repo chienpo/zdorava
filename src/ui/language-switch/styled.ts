@@ -19,14 +19,15 @@ export const LangText = styled.span`
 export const InputRadio = styled.input`
   cursor: pointer;
   margin-right: 10px;
+  position: absolute;
+  opacity: 0;
+
+  &:focus + ${LangText} {
+    font-weight: bold;
+  }
 
   & + ${LangText} {
     text-transform: uppercase;
-    opacity: 1;
-    font-size: 20px;
-  }
-
-  &:not(:checked) + ${LangText} {
     opacity: 0.6;
     font-size: 14px;
 
@@ -35,6 +36,11 @@ export const InputRadio = styled.input`
       color: ${RED};
       font-size: 20px;
     }
+  }
+
+  &:checked + ${LangText} {
+    opacity: 1;
+    font-size: 20px;
   }
 `;
 
@@ -48,6 +54,7 @@ export const Label = styled.label`
   margin: 0 10px;
   width: 80px;
   height: 100%;
+  position: relative;
 `;
 
 export const Switch = styled.div<{ theme: string }>`

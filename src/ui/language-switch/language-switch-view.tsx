@@ -18,7 +18,6 @@ export const LanguageSwitchView: React.FC<LanguageSwitchProps> = ({
         onChange={(event: ChangeEvent<HTMLInputElement>) =>
           onChangeLanguage(event.target.value)
         }
-        hidden
       />
       <LangText>en</LangText>
     </Label>
@@ -32,7 +31,6 @@ export const LanguageSwitchView: React.FC<LanguageSwitchProps> = ({
         onChange={(event: ChangeEvent<HTMLInputElement>) =>
           onChangeLanguage(event.target.value)
         }
-        hidden
       />
       <LangText>ru</LangText>
     </Label>
