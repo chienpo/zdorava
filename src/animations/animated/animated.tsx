@@ -1,60 +1,17 @@
-import React, { Suspense, lazy, FC, RefObject } from 'react';
+import React, { Suspense, FC, RefObject } from 'react';
 import { MotionProps } from 'framer-motion';
 
-// TODO: Create helper to load motion elements to avoid code duplication
-const MotionDiv = lazy(() =>
-  import('framer-motion').then(mod => ({
-    default: mod.motion.div,
-  }))
-);
+import lazyLib from 'utils/lazy-lib';
 
-const MotionHeader = lazy(() =>
-  import('framer-motion').then(mod => ({
-    default: mod.motion.header,
-  }))
-);
-
-const MotionFooter = lazy(() =>
-  import('framer-motion').then(mod => ({
-    default: mod.motion.footer,
-  }))
-);
-
-const MotionUl = lazy(() =>
-  import('framer-motion').then(mod => ({
-    default: mod.motion.ul,
-  }))
-);
-
-const MotionLi = lazy(() =>
-  import('framer-motion').then(mod => ({
-    default: mod.motion.li,
-  }))
-);
-
-const MotionAddress = lazy(() =>
-  import('framer-motion').then(mod => ({
-    default: mod.motion.address,
-  }))
-);
-
-const MotionPath = lazy(() =>
-  import('framer-motion').then(mod => ({
-    default: mod.motion.path,
-  }))
-);
-
-const MotionSection = lazy(() =>
-  import('framer-motion').then(mod => ({
-    default: mod.motion.section,
-  }))
-);
-
-const MotionFigure = lazy(() =>
-  import('framer-motion').then(mod => ({
-    default: mod.motion.figure,
-  }))
-);
+const MotionDiv = lazyLib(() => import('framer-motion'), 'motion.div');
+const MotionHeader = lazyLib(() => import('framer-motion'), 'motion.header');
+const MotionFooter = lazyLib(() => import('framer-motion'), 'motion.footer');
+const MotionUl = lazyLib(() => import('framer-motion'), 'motion.ul');
+const MotionLi = lazyLib(() => import('framer-motion'), 'motion.li');
+const MotionAddress = lazyLib(() => import('framer-motion'), 'motion.address');
+const MotionPath = lazyLib(() => import('framer-motion'), 'motion.path');
+const MotionSection = lazyLib(() => import('framer-motion'), 'motion.section');
+const MotionFigure = lazyLib(() => import('framer-motion'), 'motion.figure');
 
 interface Props {
   className?: string;
