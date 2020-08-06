@@ -31,7 +31,7 @@ export const ThemeSwitchView: React.FC<Props> = ({
         icon={faSun}
       />
       <SwitchLabel>
-        <HiddenSwitchLabel>LanguageSwitch</HiddenSwitchLabel>
+        <HiddenSwitchLabel>Theme switch</HiddenSwitchLabel>
         <InputCheckbox
           type="checkbox"
           onChange={onChange}
