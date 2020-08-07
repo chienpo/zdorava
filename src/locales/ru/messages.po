@@ -18,43 +18,43 @@ msgstr ""
 msgid "404"
 msgstr "404"
 
-#: src/constants/certificates.ts:36
+#: src/features/about/components/certifiates/certificates-data.ts:36
 msgid "\"Business english three course\" certificate, Itransition"
 msgstr "\"Курс аншлийского языка для бизнес-коммуникаций\" сертификат, Itransition"
 
-#: src/constants/certificates.ts:35
+#: src/features/about/components/certifiates/certificates-data.ts:35
 msgid "\"Business english three english course\""
 msgstr "\"Курс аншлийского языка для бизнес-коммуникаций\""
 
-#: src/constants/certificates.ts:17
+#: src/features/about/components/certifiates/certificates-data.ts:17
 msgid "\"JavaScript - The Complete Guide 2020 (Beginner + Advanced)\""
 msgstr "\"JavaScript - Полное Руководство 2020 (Начальный + Продвинутый уровни)\""
 
-#: src/constants/certificates.ts:18
+#: src/features/about/components/certifiates/certificates-data.ts:18
 msgid "\"JavaScript - The Complete Guide 2020 certificate, \"UDEMY\""
 msgstr "\"JavaScript - Полное Руководство 2020\" certificate, \"UDEMY\""
 
-#: src/constants/certificates.ts:11
+#: src/features/about/components/certifiates/certificates-data.ts:11
 msgid "\"React - The Complete Guide (incl Hooks, React Router, Redux)\""
 msgstr "\"React - Полное Руководство (включая Hooks, React Router, Redux)\""
 
-#: src/constants/certificates.ts:12
+#: src/features/about/components/certifiates/certificates-data.ts:12
 msgid "\"React - The Complete Guide (incl Hooks, React Router, Redux)\" certificate, \"UDEMY\""
 msgstr "\"React - Полное Руководство (incl Hooks, React Router, Redux)\" certificate, \"UDEMY\""
 
-#: src/constants/certificates.ts:29
+#: src/features/about/components/certifiates/certificates-data.ts:29
 msgid "\"Spoken intermediate english course\""
 msgstr "\"Курс разговоного английского\""
 
-#: src/constants/certificates.ts:30
+#: src/features/about/components/certifiates/certificates-data.ts:30
 msgid "\"Spoken intermediate one course\" certificate, Itransition"
 msgstr "\"Курс разговорного английского\" серцификат, Itransition"
 
-#: src/constants/certificates.ts:23
+#: src/features/about/components/certifiates/certificates-data.ts:23
 msgid "\"Understanding TypeScript - 2020 Edition\""
 msgstr "\"Понимание TypeScript - 2020 Издание\""
 
-#: src/constants/certificates.ts:24
+#: src/features/about/components/certifiates/certificates-data.ts:24
 msgid "\"Understanding TypeScript - 2020 Edition\" certificate, \"UDEMY\""
 msgstr "\"Gjybvfybt TypeScript - 2020 Издание\" серцификат, \"UDEMY\""
 
@@ -234,23 +234,23 @@ msgstr "С большим удовольствием предлагаю тебе
 msgid "Write me"
 msgstr "Напиши мне"
 
-#: src/constants/certificates.ts:34
+#: src/features/about/components/certifiates/certificates-data.ts:34
 msgid "business english three english course certificate"
 msgstr "Курс английского для бизнес коммуникаций"
 
-#: src/constants/certificates.ts:16
+#: src/features/about/components/certifiates/certificates-data.ts:16
 msgid "java-script course certificate"
 msgstr "java-script курс серцификат"
 
-#: src/constants/certificates.ts:10
+#: src/features/about/components/certifiates/certificates-data.ts:10
 msgid "react course certificate"
 msgstr "react курс серцификат"
 
-#: src/constants/certificates.ts:28
+#: src/features/about/components/certifiates/certificates-data.ts:28
 msgid "spoken intermediate one english course certificate"
 msgstr "Курс разговорного английского"
 
-#: src/constants/certificates.ts:22
+#: src/features/about/components/certifiates/certificates-data.ts:22
 msgid "type-script course certificate"
 msgstr "type-script курс серцификат"
 
