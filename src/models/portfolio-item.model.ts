@@ -12,11 +12,3 @@ export interface PortfolioItemModel extends PortfolioPreviewItemModel {
   onItemClick?: () => void;
   projectLinks?: { href: string; label: string }[];
 }
-
-// alt
-// category
-// imageSrc
-// thumbnailSrc
-// description
-// details
-// title
