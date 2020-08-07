@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { MotionProps } from 'framer-motion';
 
-import { BLACK, WHITE } from 'constants/colors';
+import { BLACK, RED_70, RED } from 'constants/colors';
 import { AnimatedPath } from 'animations/animated';
 
 const BurgerButton = styled.button`
@@ -14,9 +14,21 @@ const BurgerButton = styled.button`
   -ms-user-select: none;
   cursor: pointer;
   position: absolute;
-  top: 17px;
+  top: 12px;
   left: 17px;
   background: transparent;
+
+  path {
+    transition: stroke 0.4s;
+  }
+
+  &:focus path {
+    stroke: ${RED_70};
+  }
+
+  &:hover path {
+    stroke: ${RED};
+  }
 `;
 
 const Path: React.FC<
@@ -34,23 +46,22 @@ const Path: React.FC<
 );
 
 interface Props {
-  toggle: () => void;
-  isOpen: boolean;
+  onClick: () => void;
 }
 
-export const MenuToggleButtonView: React.FC<Props> = ({ toggle, isOpen }) => (
-  <BurgerButton aria-label="burger-menu-button" type="button" onClick={toggle}>
-    <svg width="45" height="45" viewBox="0 0 23 23" color={WHITE}>
+export const MenuToggleButtonView: React.FC<Props> = ({ onClick }) => (
+  <BurgerButton aria-label="burger-menu-button" type="button" onClick={onClick}>
+    <svg height="46" viewBox="0 0 22 22">
       <Path
-        stroke={isOpen ? BLACK : BLACK}
+        stroke={BLACK}
         variants={{
-          closed: { d: 'M 2 2.5 L 20 2.5' },
-          open: { d: 'M 3 16.5 L 17 2.5' },
+          closed: { d: 'M 2 4 L 20 4' },
+          open: { d: 'M 4 18 L 18 4' },
         }}
       />
       <Path
-        stroke={isOpen ? BLACK : BLACK}
-        d="M 2 9.423 L 20 9.423"
+        stroke={BLACK}
+        d="M 2 10.923 L 20 10.923"
         variants={{
           closed: { opacity: 1 },
           open: { opacity: 0 },
@@ -58,10 +69,10 @@ export const MenuToggleButtonView: React.FC<Props> = ({ toggle, isOpen }) => (
         transition={{ duration: 0.1 }}
       />
       <Path
-        stroke={isOpen ? BLACK : BLACK}
+        stroke={BLACK}
         variants={{
-          closed: { d: 'M 2 16.346 L 20 16.346' },
-          open: { d: 'M 3 2.5 L 17 16.346' },
+          closed: { d: 'M 2 17.846 L 20 17.846' },
+          open: { d: 'M 4 4 L 18 18' },
         }}
       />
     </svg>

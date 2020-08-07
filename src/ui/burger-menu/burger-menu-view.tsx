@@ -129,6 +129,6 @@ export const BurgerMenuView: React.FC<Props> = ({
       )}
     </AnimatePresence>
 
-    <MenuToggleButtonView isOpen={isOpen} toggle={toggleOpen} />
+    <MenuToggleButtonView onClick={toggleOpen} />
   </StyledMotionNavWrapper>
 );
