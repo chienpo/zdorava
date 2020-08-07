@@ -4,10 +4,10 @@
       "category": "frontend",
       "imageSrc": "preview-doe-three.jpg",
       "thumbnailSrc": "preview-doe-three.jpg",
-      "alt": "preview-doe-three",
+      "alt": "patent-management-system",
       "description": {
-        "en": "Description",
-        "ru": "Описание"
+        "en": "Patent management system",
+        "ru": "Система управления патентами"
       },
       "details": "front-end project",
       "title": {
@@ -19,30 +19,30 @@
       "category": "frontend",
       "imageSrc": "preview-doe.jpg",
       "thumbnailSrc": "preview-doe.jpg",
-      "alt": "preview-doe",
+      "alt": "patent-management-system-cms",
       "description": {
         "en": "Description",
         "ru": "Описание"
       },
       "details": "front-end project",
       "title": {
-        "en": "Title",
-        "ru": "Заголовок"
+        "en": "Patent management system cms",
+        "ru": "Система управления патентами админка"
       }
     },
     {
       "category": "frontend",
       "imageSrc": "preview-doe-two.jpg",
       "thumbnailSrc": "preview-doe-two.jpg",
-      "alt": "preview-doe-two",
+      "alt": "company-project-three",
       "description": {
-        "en": "Description",
-        "ru": "Описание"
+        "en": "Leisure service",
+        "ru": "Сервис по организации досуга"
       },
       "details": "front-end project",
       "title": {
-        "en": "Title",
-        "ru": "Заголовок"
+        "en": "Leisure service",
+        "ru": "Сервис по организации досуга"
       }
     },
     {
