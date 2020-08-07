@@ -18,43 +18,43 @@ msgstr ""
 msgid "404"
 msgstr "404"
 
-#: src/features/about/components/certifiates/certificates-data.ts:36
+#: src/features/about/components/certifiates-list/certificates-data.ts:36
 msgid "\"Business english three course\" certificate, Itransition"
 msgstr "\"Business english three course\" certificate, Itransition"
 
-#: src/features/about/components/certifiates/certificates-data.ts:35
+#: src/features/about/components/certifiates-list/certificates-data.ts:35
 msgid "\"Business english three english course\""
 msgstr "\"Business english three english course\""
 
-#: src/features/about/components/certifiates/certificates-data.ts:17
+#: src/features/about/components/certifiates-list/certificates-data.ts:17
 msgid "\"JavaScript - The Complete Guide 2020 (Beginner + Advanced)\""
 msgstr "\"JavaScript - The Complete Guide 2020 (Beginner + Advanced)\""
 
-#: src/features/about/components/certifiates/certificates-data.ts:18
+#: src/features/about/components/certifiates-list/certificates-data.ts:18
 msgid "\"JavaScript - The Complete Guide 2020 certificate, \"UDEMY\""
 msgstr "\"JavaScript - The Complete Guide 2020 certificate, \"UDEMY\""
 
-#: src/features/about/components/certifiates/certificates-data.ts:11
+#: src/features/about/components/certifiates-list/certificates-data.ts:11
 msgid "\"React - The Complete Guide (incl Hooks, React Router, Redux)\""
 msgstr "\"React - The Complete Guide (incl Hooks, React Router, Redux)\""
 
-#: src/features/about/components/certifiates/certificates-data.ts:12
+#: src/features/about/components/certifiates-list/certificates-data.ts:12
 msgid "\"React - The Complete Guide (incl Hooks, React Router, Redux)\" certificate, \"UDEMY\""
 msgstr "\"React - The Complete Guide (incl Hooks, React Router, Redux)\" certificate, \"UDEMY\""
 
-#: src/features/about/components/certifiates/certificates-data.ts:29
+#: src/features/about/components/certifiates-list/certificates-data.ts:29
 msgid "\"Spoken intermediate english course\""
 msgstr "\"Spoken intermediate english course\""
 
-#: src/features/about/components/certifiates/certificates-data.ts:30
+#: src/features/about/components/certifiates-list/certificates-data.ts:30
 msgid "\"Spoken intermediate one course\" certificate, Itransition"
 msgstr "\"Spoken intermediate one course\" certificate, Itransition"
 
-#: src/features/about/components/certifiates/certificates-data.ts:23
+#: src/features/about/components/certifiates-list/certificates-data.ts:23
 msgid "\"Understanding TypeScript - 2020 Edition\""
 msgstr "\"Understanding TypeScript - 2020 Edition\""
 
-#: src/features/about/components/certifiates/certificates-data.ts:24
+#: src/features/about/components/certifiates-list/certificates-data.ts:24
 msgid "\"Understanding TypeScript - 2020 Edition\" certificate, \"UDEMY\""
 msgstr "\"Understanding TypeScript - 2020 Edition\" certificate, \"UDEMY\""
 
@@ -238,23 +238,23 @@ msgstr "With a great pleasure I suggest you"
 msgid "Write me"
 msgstr "Write me"
 
-#: src/features/about/components/certifiates/certificates-data.ts:34
+#: src/features/about/components/certifiates-list/certificates-data.ts:34
 msgid "business english three english course certificate"
 msgstr "business english three english course certificate"
 
-#: src/features/about/components/certifiates/certificates-data.ts:16
+#: src/features/about/components/certifiates-list/certificates-data.ts:16
 msgid "java-script course certificate"
 msgstr "java-script course certificate"
 
-#: src/features/about/components/certifiates/certificates-data.ts:10
+#: src/features/about/components/certifiates-list/certificates-data.ts:10
 msgid "react course certificate"
 msgstr "react course certificate"
 
-#: src/features/about/components/certifiates/certificates-data.ts:28
+#: src/features/about/components/certifiates-list/certificates-data.ts:28
 msgid "spoken intermediate one english course certificate"
 msgstr "spoken intermediate one english course certificate"
 
-#: src/features/about/components/certifiates/certificates-data.ts:22
+#: src/features/about/components/certifiates-list/certificates-data.ts:22
 msgid "type-script course certificate"
 msgstr "type-script course certificate"
 

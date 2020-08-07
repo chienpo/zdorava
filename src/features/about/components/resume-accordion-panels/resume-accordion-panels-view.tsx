@@ -1,7 +1,7 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
 
-import { Certificates } from '../certifiates/certificates';
+import { CertificatesList } from '../certifiates-list';
 import { Ul, Strong, PanelWrapper } from './styled';
 
 export const PanelOneView = () => (
@@ -124,6 +124,6 @@ export const PanelThreeView = () => (
 
 export const PanelFourView = () => (
   <PanelWrapper>
-    <Certificates />
+    <CertificatesList />
   </PanelWrapper>
 );

@@ -3,10 +3,11 @@ import styled from 'styled-components';
 import { mirrorEffect } from 'helpers/mirror-effect';
 import { BLACK } from 'constants/colors';
 
-export const GalleryRow = styled.div`
+export const List = styled.ul`
   display: grid;
   grid-template-columns: 20% 20% 20%;
   grid-gap: 10px;
+  list-style: none;
 `;
 
 export const Figure = styled.figure`
