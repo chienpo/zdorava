@@ -20,8 +20,7 @@ export const mirrorEffect = css`
   overflow: hidden;
 
   &:before {
-    background: ${({ theme }: any) =>
-      theme.mode === DARK_MODE ? WHITE : WHITE_20};
+    background: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE : WHITE_20)};
     box-sizing: border-box;
     content: '';
     height: 100%;
@@ -29,11 +28,9 @@ export const mirrorEffect = css`
     opacity: 0;
     position: absolute;
     top: 0;
-    transition: transform 0.8s ease 0s;
     width: 120%;
     z-index: 6;
-    transition: all 0.4s;
-    transition-delay: 0.8s;
     animation: ${linkOverlayMirrorEffect} 0.8s;
+    transition: transform 2s, visibility 2s, opacity 2s;
   }
 `;

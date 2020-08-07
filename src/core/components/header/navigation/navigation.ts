@@ -3,7 +3,7 @@ import { useRoute } from 'react-router5';
 import isMobile from 'ismobilejs/dist/isMobile.min';
 
 import { LAPTOPS } from 'constants/mediaDeviceMinWidths';
-import { useMediaMinWidth } from 'helpers/use-media-min-width';
+import { useMediaMinWidth } from 'hooks/use-media-min-width';
 import { LanguageSwitchProps } from 'ui/language-switch/language-switch';
 import { ROUTE_NAME_HOME, routes } from 'router/routes';
 import { NavigationView } from './navigation-view';
