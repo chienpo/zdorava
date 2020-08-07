@@ -19,7 +19,7 @@ interface Props extends LanguageSwitchProps {
   showMenu: boolean;
   headerHeight: string;
   withShadow: boolean;
-  disableThemeSwitch: boolean;
+  themeSwitchVisible: boolean;
 }
 
 export const NavigationView: React.FC<Props> = ({
@@ -31,7 +31,7 @@ export const NavigationView: React.FC<Props> = ({
   showMenu,
   headerHeight,
   withShadow,
-  disableThemeSwitch,
+  themeSwitchVisible,
 }) => (
   <NavigationWrapper
     style={{
@@ -54,9 +54,11 @@ export const NavigationView: React.FC<Props> = ({
       </>
     )}
     <LanguageSwitchBox>
-      <Suspense fallback={<div />}>
-        <ThemeSwitch disabled={disableThemeSwitch} />
-      </Suspense>
+      {themeSwitchVisible && (
+        <Suspense fallback={<div />}>
+          <ThemeSwitch disabled={!themeSwitchVisible} />
+        </Suspense>
+      )}
       <Suspense fallback={<div />}>
         <LanguageSwitch
           selectedLanguage={selectedLanguage}

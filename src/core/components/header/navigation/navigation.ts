@@ -27,7 +27,7 @@ export const Navigation: FC<Props> = ({
 
   const showMenu = activeRouteName !== ROUTE_NAME_HOME;
   const headerHeight = activeRouteName === ROUTE_NAME_HOME ? '50px' : '70px';
-  const disableThemeSwitch = activeRouteName !== ROUTE_NAME_HOME;
+  const themeSwitchVisible = activeRouteName === ROUTE_NAME_HOME;
 
   // TODO Move at the final return
   return createElement(NavigationView, {
@@ -39,6 +39,6 @@ export const Navigation: FC<Props> = ({
     showMenu,
     headerHeight,
     withShadow,
-    disableThemeSwitch,
+    themeSwitchVisible,
   });
 };

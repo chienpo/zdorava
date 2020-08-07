@@ -5,13 +5,7 @@ import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import { BLACK, BLACK_30, WHITE, WHITE_20 } from 'constants/colors';
 import { Props } from './theme-switch';
 
-import {
-  SwitchBox,
-  SwitchLabel,
-  InputCheckbox,
-  SlideRaw,
-  HiddenSwitchLabel,
-} from './styled';
+import { SwitchBox, SwitchLabel, InputCheckbox, SlideRaw } from './styled';
 
 export const ThemeSwitchView: React.FC<Props> = ({
   onChange,
@@ -29,7 +23,7 @@ export const ThemeSwitchView: React.FC<Props> = ({
         icon={faSun}
       />
       <SwitchLabel>
-        <HiddenSwitchLabel>Theme switch</HiddenSwitchLabel>
+        Theme switch
         <InputCheckbox
           type="checkbox"
           onChange={onChange}

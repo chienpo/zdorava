@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { BLACK, RED, RED_70, WHITE, WHITE_70 } from 'constants/colors';
+import { BLACK, RED, RED_70, WHITE, WHITE_30 } from 'constants/colors';
 
 export const SwitchBox = styled.div`
   display: grid;
@@ -11,12 +11,14 @@ export const SwitchBox = styled.div`
 `;
 
 export const SlideRaw = styled.div`
-  width: 56px;
-  height: 28px;
-  border-radius: 14px;
   display: flex;
   cursor: pointer;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.6s;
 
   &:after {
     content: '';
@@ -34,6 +36,11 @@ export const SlideRaw = styled.div`
 
 export const SwitchLabel = styled.label`
   position: relative;
+  width: 56px;
+  height: 28px;
+  border-radius: 14px;
+  overflow: hidden;
+  color: transparent;
 `;
 
 export const InputCheckbox = styled.input`
@@ -48,31 +55,24 @@ export const InputCheckbox = styled.input`
   outline: none;
 
   & + ${SlideRaw} {
-    background: ${BLACK}
-    transition: background 0.2s;
+    background-color: ${BLACK};
   }
 
   &:checked + ${SlideRaw} {
-    background: ${WHITE_70}
-  }
-
-  & + ${SlideRaw} {
-    &:focus {
-      background: ${RED_70};
-    }
-
-    &:hover {
-      background: ${RED};
-    }
+    background-color: ${WHITE_30};
   }
 
   &:checked + ${SlideRaw}::after {
     transform: translateX(27px);
-    background-color: ${BLACK}
+    background-color: ${BLACK};
   }
 
   &:focus + ${SlideRaw} {
-    box-shadow: 0 0 0 2px ${RED};
+    background-color: ${RED_70};
+  }
+
+  &:hover + ${SlideRaw} {
+    background-color: ${RED};
   }
 
   &:disabled {
@@ -83,12 +83,4 @@ export const InputCheckbox = styled.input`
       opacity: 0.2;
     }
   }
-`;
-
-// TODO: Check accessability behavior with label as wrapper
-export const HiddenSwitchLabel = styled.span`
-  height: 0;
-  width: 0;
-  overflow: hidden;
-  display: block;
 `;
