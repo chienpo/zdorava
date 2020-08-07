@@ -4,7 +4,7 @@ import { render } from 'react-dom';
 import { App } from 'app';
 import { router } from './router';
 
-import { getFonts } from './fonts';
+import { loadWebFonts } from './utils/web-font-loader';
 
 const rootElement = document.getElementById('root');
 
@@ -13,7 +13,7 @@ if (rootElement === null) {
 }
 
 const renderApp = (): void => {
-  getFonts().then(res =>
+  loadWebFonts().then(res =>
     res.load({
       google: {
         families: ['Montserrat:100,400,700&display=swap'],
