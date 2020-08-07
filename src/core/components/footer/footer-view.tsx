@@ -23,16 +23,13 @@ interface Props {
 
 const variants = {
   initial: {
-    x: 0,
     opacity: 0,
   },
   enter: {
-    x: 0,
     opacity: 1,
-    transition: { duration: 1 },
+    transition: { duration: 0.4 },
   },
   exit: {
-    x: 0,
     opacity: 0,
     transition: { duration: 0.4 },
   },
