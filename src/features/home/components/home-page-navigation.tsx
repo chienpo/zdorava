@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { Trans } from '@lingui/macro';
 import { useStore } from 'effector-react';
 
+import { $portfolioTabsStore } from 'store/portfolio-tabs-store';
+
 import homepageGlitchBackground from 'assets/images/backgrounds/home-bg.jpg';
 import homepageGlitchBackgroundMobile from 'assets/images/backgrounds/homepage-background-tinyfied-mobile.jpg';
 import { ROUTE_NAME_ABOUT, ROUTE_NAME_PORTFOLIO_CATEGORY } from 'router/routes';
 import { PageLinkFadeView } from './page-link-fade/page-link-fade-view';
 import { DottedOverlay, LazyWinkingBannerBg } from './styled';
-import { $portfolioTabsStore } from '../../../store/portfolio-tabs-store';
 import { PerspectiveBanner } from './perspective-banner';
 
 const HomePageNavigation = () => {

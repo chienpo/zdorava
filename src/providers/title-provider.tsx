@@ -1,4 +1,3 @@
-/* eslint-disable promise/always-return,promise/catch-or-return */
 import React, { ReactElement } from 'react';
 import DocumentTitle from 'react-document-title';
 import { I18n } from '@lingui/react';

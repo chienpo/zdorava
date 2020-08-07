@@ -9,4 +9,5 @@ const defaultState = {
 
 export const $router = restore(fromObservable(router), defaultState);
 
+// TODO: Watch routers
 // $router.watch((item: any) => console.log('params', item.route.params));

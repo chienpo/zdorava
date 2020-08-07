@@ -1,4 +1,3 @@
-/* eslint-disable promise/always-return,promise/catch-or-return */
 import React, { useState, useEffect, ReactNode } from 'react';
 import { I18nProvider } from '@lingui/react';
 import { useStore } from 'effector-react';

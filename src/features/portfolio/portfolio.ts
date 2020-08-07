@@ -8,14 +8,15 @@ import {
   $portfolioTabsStore,
   setPortfolioCategory,
 } from 'store/portfolio-tabs-store';
+
+import {
+  PORTFOLIO_CATEGORY_TAB_NAME_ART,
+  PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND,
+} from 'constants/portfolio';
 import { FIREBASE_DATABASE_URL, FIREBASE_DATABASE_REF } from 'constants/api';
 import { auth, firebaseInstance } from 'features/auth';
 import { PageLoader } from 'ui/page-loader/page-loader';
 import { PortfolioView } from './portfolio-view';
-import {
-  PORTFOLIO_CATEGORY_TAB_NAME_ART,
-  PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND,
-} from '../../constants/portfolio';
 
 export const Portfolio: FC = () => {
   const categoryFromStore = useStore($portfolioTabsStore);
