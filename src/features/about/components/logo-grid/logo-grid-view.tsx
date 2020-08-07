@@ -1,22 +1,13 @@
 import React from 'react';
 import { AnimatePresence } from 'framer-motion';
 
+import { getModernSrcSet } from 'helpers/get-modern-src-set';
 import { LazyImage } from 'ui/lazy-image';
-import { GridLogoWrapper, StyledMotionFigure } from './styled';
 import { AnimatedDiv } from 'animations/animated';
+import { LOGOS_DATA } from './logos-data';
+import { GridLogoWrapper, StyledMotionFigure } from './styled';
 
-interface Logo {
-  left: number;
-  top: number;
-  alt: string;
-  src: string;
-}
-
-interface Props {
-  logos: Logo[];
-}
-
-export const AboutLogoView: React.FC<Props> = ({ logos }) => (
+export const LogoGridView = () => (
   <AnimatedDiv animate="enter" exit="exit">
     <AnimatePresence>
       <GridLogoWrapper
@@ -36,7 +27,7 @@ export const AboutLogoView: React.FC<Props> = ({ logos }) => (
         }}
         initial="exit"
       >
-        {logos.map(({ left, top, alt, src }) => (
+        {LOGOS_DATA.map(({ left, top, alt, srcSet }) => (
           <StyledMotionFigure
             title={alt}
             key={alt}
@@ -57,7 +48,11 @@ export const AboutLogoView: React.FC<Props> = ({ logos }) => (
               },
             }}
           >
-            <LazyImage alt={alt} src={src} srcSet={src} />
+            <LazyImage
+              alt={alt}
+              src={getModernSrcSet(srcSet)}
+              srcSet={getModernSrcSet(srcSet)}
+            />
           </StyledMotionFigure>
         ))}
       </GridLogoWrapper>

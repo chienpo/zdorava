@@ -4,7 +4,7 @@ import { AnimatePresence } from 'framer-motion';
 
 import { Accordion } from 'ui/accordion';
 import { AnimatedDiv } from 'animations/animated';
-import { AboutLogo, RESUME_PANELS, DEFAULT_RESUME_PANEL } from './components';
+import { LogoGrid, RESUME_PANELS, DEFAULT_RESUME_PANEL } from './components';
 import {
   SectionAbout,
   GridContent,
@@ -18,7 +18,7 @@ export const AboutView: React.FC = () => (
   <SectionAbout>
     <GridContent>
       <LogoWrap>
-        <AboutLogo />
+        <LogoGrid />
       </LogoWrap>
       <AnimatedDiv animate="enter" exit="exit">
         <AnimatePresence>

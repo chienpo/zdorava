@@ -4,10 +4,8 @@ import { I18n } from '@lingui/react';
 import 'react-image-lightbox/style.css';
 
 import { RED } from 'constants/colors';
-import { CERTIFICATES_DATA } from 'constants/certificates';
+import { CERTIFICATES_DATA } from './certificates-data';
 import { Figure, Img, GalleryRow } from './styled';
-
-const data = CERTIFICATES_DATA.map(({ src }) => src);
 
 export const Certificates = () => {
   const [photoIndex, setPhotoIndex] = useState<number>(0);
@@ -31,13 +29,15 @@ export const Certificates = () => {
               }
               prevSrc={
                 CERTIFICATES_DATA[
-                  (photoIndex + data.length - 1) % CERTIFICATES_DATA.length
+                  (photoIndex + CERTIFICATES_DATA.length - 1) %
+                    CERTIFICATES_DATA.length
                 ].src
               }
               onCloseRequest={() => setIsOpen(false)}
               onMovePrevRequest={() =>
                 setPhotoIndex(
-                  (photoIndex + data.length - 1) % CERTIFICATES_DATA.length
+                  (photoIndex + CERTIFICATES_DATA.length - 1) %
+                    CERTIFICATES_DATA.length
                 )
               }
               onMoveNextRequest={() =>
