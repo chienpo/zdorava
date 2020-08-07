@@ -1,19 +1,21 @@
 import styled from 'styled-components';
 
 import { DARK_MODE } from 'constants/theme';
-import { BLACK, RED, RED_70, WHITE, WHITE_SMOKE_10 } from 'constants/colors';
-
-export const Separator = styled.div`
-  width: 2px;
-  background: ${WHITE};
-  display: block;
-  height: 20px;
-  opacity: 0.9;
-`;
+import {
+  BLACK,
+  RED,
+  RED_70,
+  WHITE,
+  WHITE_90,
+  WHITE_SMOKE_10,
+} from 'constants/colors';
 
 export const LangText = styled.span`
   color: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE : BLACK)};
   transition: color 0.2s, font-size 0.2s;
+  line-height: 20px;
+  display: block;
+  width: 100px;
 `;
 
 export const InputRadio = styled.input`
@@ -48,34 +50,30 @@ export const InputRadio = styled.input`
 
 export const Label = styled.label`
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  text-align: center;
   line-height: 1;
   background: transparent;
-  margin: 0 10px;
-  width: 80px;
   height: 100%;
   position: relative;
 `;
 
-export const Switch = styled.div<{ theme: string }>`
+export const SwitchBox = styled.div`
+  height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: ${({ theme }) =>
     theme.mode === DARK_MODE ? `transparent` : `${WHITE_SMOKE_10}`};
 
-  ${({ theme }) =>
-    theme.mode === DARK_MODE
-      ? `
-    ${Separator} {
-      background: ${WHITE};
-    }
-  `
-      : `
-    ${Separator} {
-      background: ${BLACK};
-    }
-  `};
+  ${Label}:first-child:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2px;
+    display: block;
+    height: 100%;
+    background: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE_90 : BLACK)};
+  }
 `;
