@@ -15,7 +15,7 @@ export const LanguageProvider: React.FC<Props> = ({ children }) => {
     );
 
   const language = useStore($languageStore);
-  const [catalog, setCatalog] = useState();
+  const [catalog, setCatalog] = useState<any>(null);
 
   useEffect(() => {
     importCatalog(language).then(setCatalog);

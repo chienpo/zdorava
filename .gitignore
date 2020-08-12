@@ -32,3 +32,6 @@ lerna-debug.log*
 
 # Htaccess
 /public/.htaccess
+
+# Storybook
+/storybook-static
