@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 
 import { DARK_MODE } from 'constants/theme';
-import { BLACK_0, BLACK_100, WHITE_0, WHITE_100 } from 'constants/colors';
+import {
+  BLACK_0,
+  BLACK_100,
+  BLACK_89,
+  WHITE_0,
+  WHITE_100,
+} from 'constants/colors';
 import { AnimatedDiv } from 'animations/animated';
 import overlayBlackDot from 'assets/images/overlay_black.png';
 import overlayWhiteDot from 'assets/images/overlay_white_four.png';
@@ -22,6 +28,16 @@ export const MotionPortfolioTabs = styled.div`
   position: relative;
   top: 0;
   height: 100%;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 100%;
+    height: 100%;
+    background: ${BLACK_89};
+  }
 
   &:before {
     content: '';
