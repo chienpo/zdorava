@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { ChangeEvent } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 
 import { BLACK, BLACK_30, WHITE, WHITE_20 } from 'constants/colors';
-import { Props } from './theme-switch';
+import { ThemeSwitchProps } from './theme-switch';
 
 import { SwitchBox, SwitchLabel, InputCheckbox, SlideRaw } from './styled';
 
-export const ThemeSwitchView: React.FC<Props> = ({
+export const ThemeSwitchView: React.FC<ThemeSwitchProps> = ({
   onChange,
   checked,
   disabled,

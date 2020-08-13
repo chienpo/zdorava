@@ -1,14 +1,7 @@
 import styled from 'styled-components';
 
 import { DARK_MODE } from 'constants/theme';
-import {
-  BLACK,
-  RED,
-  RED_70,
-  WHITE,
-  WHITE_90,
-  WHITE_SMOKE_10,
-} from 'constants/colors';
+import { BLACK, RED, RED_70, WHITE, WHITE_90 } from 'constants/colors';
 
 export const LangText = styled.span`
   color: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE : BLACK)};
@@ -20,10 +13,15 @@ export const LangText = styled.span`
 
 export const InputRadio = styled.input`
   cursor: pointer;
-  margin-right: 10px;
   position: absolute;
   opacity: 0;
   appearance: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  z-index: -1;
 
   &:focus + ${LangText} {
     font-weight: 600;
@@ -60,11 +58,9 @@ export const Label = styled.label`
 
 export const SwitchBox = styled.div`
   height: 20px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: ${({ theme }) =>
-    theme.mode === DARK_MODE ? `transparent` : `${WHITE_SMOKE_10}`};
 
   ${Label}:first-child:after {
     content: '';

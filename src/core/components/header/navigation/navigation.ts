@@ -16,7 +16,7 @@ interface Props extends LanguageSwitchProps {
 
 export const Navigation: FC<Props> = ({
   selectedLanguage,
-  onChangeLanguage,
+  onToggleLanguage,
   activeRouteName,
   mobileByDefault,
   withShadow,
@@ -33,7 +33,7 @@ export const Navigation: FC<Props> = ({
   return createElement(NavigationView, {
     router,
     selectedLanguage,
-    onChangeLanguage,
+    onToggleLanguage,
     routes,
     isMobile: mobileByDefault || isMobile.any || !mediaMinWidthForLaptops,
     showMenu,

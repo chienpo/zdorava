@@ -6,7 +6,7 @@ import { InputRadio, Label, LangText, SwitchBox } from './styled';
 
 export const LanguageSwitchView: React.FC<LanguageSwitchProps> = ({
   selectedLanguage,
-  onChangeLanguage,
+  onChange,
 }) => (
   <SwitchBox>
     <Label>
@@ -15,9 +15,7 @@ export const LanguageSwitchView: React.FC<LanguageSwitchProps> = ({
         name="lang"
         type="radio"
         value={EN}
-        onChange={(event: ChangeEvent<HTMLInputElement>) =>
-          onChangeLanguage(event.target.value)
-        }
+        onChange={onChange}
       />
       <LangText>en</LangText>
     </Label>
@@ -27,9 +25,7 @@ export const LanguageSwitchView: React.FC<LanguageSwitchProps> = ({
         name="lang"
         type="radio"
         value={RU}
-        onChange={(event: ChangeEvent<HTMLInputElement>) =>
-          onChangeLanguage(event.target.value)
-        }
+        onChange={onChange}
       />
       <LangText>ru</LangText>
     </Label>

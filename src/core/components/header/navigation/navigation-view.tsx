@@ -24,7 +24,7 @@ interface Props extends LanguageSwitchProps {
 
 export const NavigationView: React.FC<Props> = ({
   selectedLanguage,
-  onChangeLanguage,
+  onToggleLanguage,
   routes,
   isMobile,
   router,
@@ -62,7 +62,7 @@ export const NavigationView: React.FC<Props> = ({
       <Suspense fallback={<div />}>
         <LanguageSwitch
           selectedLanguage={selectedLanguage}
-          onChangeLanguage={onChangeLanguage}
+          onToggleLanguage={onToggleLanguage}
         />
       </Suspense>
     </LanguageSwitchBox>

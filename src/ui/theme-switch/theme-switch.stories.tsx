@@ -1,8 +1,10 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Story, Meta } from '@storybook/react';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { action } from '@storybook/addon-actions';
 
-import { ThemeSwitch, Props } from 'ui/theme-switch/theme-switch';
+import { ThemeSwitch, ThemeSwitchProps } from 'ui/theme-switch/theme-switch';
 
 // eslint-disable-next-line import/no-default-export
 export default {
@@ -10,9 +12,15 @@ export default {
   component: ThemeSwitch,
 } as Meta;
 
-const Template: Story<Props> = args => <ThemeSwitch {...args} />;
+const Template: Story<ThemeSwitchProps> = args => <ThemeSwitch {...args} />;
 
 export const Enabled = Template.bind({});
 Enabled.args = {
-  disabled: false,
+  onToggleTheme: action('onToggleTheme'),
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  disabled: true,
+  onToggleTheme: action('onToggleTheme'),
 };

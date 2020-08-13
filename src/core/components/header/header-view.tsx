@@ -41,7 +41,7 @@ export const HeaderView: React.FC<Props> = ({
         <Navigation
           activeRouteName={activeRouteName}
           selectedLanguage={i18n.language}
-          onChangeLanguage={val => toggleLang(val)}
+          onToggleLanguage={val => toggleLang(val)}
           mobileByDefault={mobileByDefault}
           withShadow={withShadow}
         />

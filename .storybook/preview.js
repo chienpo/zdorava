@@ -7,6 +7,7 @@ export const parameters = {
   docs: {
     theme: themes.dark,
   },
+  controls: { expanded: true },
 };
 
 export const decorators = [
