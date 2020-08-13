@@ -7,6 +7,7 @@ export const SwitchBox = styled.div`
   grid-template-columns: auto auto auto;
   grid-column-gap: 10px;
   align-items: center;
+  justify-content: center;
   font-size: 20px;
 `;
 
@@ -53,6 +54,7 @@ export const InputCheckbox = styled.input`
   right: 0;
   appearance: none;
   outline: none;
+  margin: 0;
 
   & + ${SlideRaw} {
     background-color: ${BLACK};
