@@ -2,8 +2,9 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { MotionProps } from 'framer-motion';
 
-import { BLACK, RED_70, RED } from 'constants/colors';
+import { BLACK, RED_70, RED, WHITE } from 'constants/colors';
 import { AnimatedPath } from 'animations/animated';
+import { DARK_MODE } from '../../constants/theme';
 
 const BurgerButton = styled.button`
   display: flex;
@@ -18,8 +19,11 @@ const BurgerButton = styled.button`
   left: 17px;
   background: transparent;
 
+  ${({ theme }) => (theme.mode === DARK_MODE ? `` : ``)};
+
   path {
     transition: stroke 0.4s;
+    stroke: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE : BLACK)};
   }
 
   &:focus path {
@@ -31,12 +35,10 @@ const BurgerButton = styled.button`
   }
 `;
 
-const Path: React.FC<
-  MotionProps & {
-    stroke: string;
-    d?: string;
-  }
-> = props => (
+const Path: React.FC<MotionProps & {
+  stroke: string;
+  d?: string;
+}> = props => (
   <AnimatedPath
     fill="transparent"
     strokeWidth="2"

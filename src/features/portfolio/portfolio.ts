@@ -31,7 +31,7 @@ export const Portfolio: FC = () => {
   const [dataLoadCount, setDataLoadCount] = useState<number>(1);
   const [selectedCategory, setCategory] = useState<string>(categoryFromStore);
 
-  const DATA_CHANK_SIZE = 6;
+  const DATA_CHUNK_SIZE = 6;
 
   useEffect(() => {
     setCategory(categoryFromStore);
@@ -59,8 +59,8 @@ export const Portfolio: FC = () => {
       categoryName === PORTFOLIO_CATEGORY_TAB_NAME_ART ? '7' : '0';
     const categoryEndIndex =
       categoryName === PORTFOLIO_CATEGORY_TAB_NAME_ART
-        ? (DATA_CHANK_SIZE + DATA_CHANK_SIZE).toString()
-        : DATA_CHANK_SIZE.toString();
+        ? (DATA_CHUNK_SIZE + DATA_CHUNK_SIZE).toString()
+        : DATA_CHUNK_SIZE.toString();
 
     firebaseInstance
       .database()
@@ -92,14 +92,14 @@ export const Portfolio: FC = () => {
       .database()
       .ref(FIREBASE_DATABASE_REF)
       .orderByKey()
-      .startAt((dataLoadCount * DATA_CHANK_SIZE + 1 - artOffset).toString())
+      .startAt((dataLoadCount * DATA_CHUNK_SIZE + 1 - artOffset).toString())
       .endAt(
         selectedCategory === PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND
           ? '6'
           : (
-              dataLoadCount * DATA_CHANK_SIZE -
+              dataLoadCount * DATA_CHUNK_SIZE -
               artOffset +
-              DATA_CHANK_SIZE
+              DATA_CHUNK_SIZE
             ).toString()
       )
       .once('value')

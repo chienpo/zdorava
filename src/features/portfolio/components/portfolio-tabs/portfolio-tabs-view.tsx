@@ -2,7 +2,8 @@ import React from 'react';
 import { I18n } from '@lingui/react';
 
 import { PORTFOLIO_CATEGORIES_TABS_LABELS } from 'constants/portfolio';
-import { MotionPortfolioTabs, ButtonStyled } from './styled';
+import { MotionPortfolioTabs, PortfolioTabsBox } from './styled';
+import { ButtonCircleStyled } from './button-circle/styled';
 
 interface Props {
   activeCategory: string;
@@ -21,7 +22,7 @@ export const PortfolioTabsView: React.FC<Props> = ({
 }: Props) => (
   <I18n>
     {({ i18n }) => (
-      <MotionPortfolioTabs
+      <PortfolioTabsBox
         variants={{
           enter: {
             opacity: 1,
@@ -38,17 +39,19 @@ export const PortfolioTabsView: React.FC<Props> = ({
         animate="enter"
         exit="exit"
       >
-        {categories.map(({ label }) => (
-          <ButtonStyled
-            key={label}
-            onClick={() => onSetCategory(label)}
-            className={label === activeCategory ? 'active' : ''}
-            disabled={label === activeCategory}
-          >
-            {i18n._(PORTFOLIO_CATEGORIES_TABS_LABELS[label])}
-          </ButtonStyled>
-        ))}
-      </MotionPortfolioTabs>
+        <MotionPortfolioTabs>
+          {categories.map(({ label }) => (
+            <ButtonCircleStyled
+              key={label}
+              onClick={() => onSetCategory(label)}
+              className={label === activeCategory ? 'active' : ''}
+              disabled={label === activeCategory}
+            >
+              {i18n._(PORTFOLIO_CATEGORIES_TABS_LABELS[label])}
+            </ButtonCircleStyled>
+          ))}
+        </MotionPortfolioTabs>
+      </PortfolioTabsBox>
     )}
   </I18n>
 );

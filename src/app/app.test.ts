@@ -3,6 +3,6 @@ import { render } from 'react-testing-library';
 import AppView from './app-view';
 
 test('renders container', () => {
-  const { container } = render(createElement(AppView));
+  const { container } = render(createElement(AppView, { router: {} }));
   expect(container).toBeInTheDocument();
 });

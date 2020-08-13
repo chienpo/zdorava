@@ -28,6 +28,16 @@ module.exports = {
         devDependencies: ['src/**/*.test.js', 'src/**/*.test.ts'],
       },
     ],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
     'import/prefer-default-export': 'off',
     'import/no-default-export': 'error',
     'no-plusplus': ['off', { allowForLoopAfterthoughts: true }],

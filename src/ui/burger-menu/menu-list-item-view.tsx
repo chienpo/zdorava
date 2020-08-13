@@ -6,8 +6,7 @@ import { useStore } from 'effector-react';
 
 import { $portfolioTabsStore } from 'store/portfolio-tabs-store';
 
-import { GRAY, WHITE, RED, RED_70 } from 'constants/colors';
-import { DARK_MODE } from 'constants/theme';
+import { GRAY, RED, RED_70 } from 'constants/colors';
 import { PAGE_TITLES } from 'constants/page-titles';
 import { AnimatedLi } from 'animations/animated';
 
@@ -47,20 +46,9 @@ const BaseLinkStyled = styled(BaseLink)`
     border-color: ${RED};
   }
 
-  ${({ theme }) =>
-    theme.mode === DARK_MODE
-      ? `
-        color: ${GRAY};
-
-        &.active {
-          color: ${WHITE};
-        }
-      `
-      : `
-        &.active {
-          color: ${RED};
-        }
-      `};
+  &.active {
+    color: ${RED};
+  }
 `;
 
 const variants = {

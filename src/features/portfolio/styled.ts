@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-import { WHITE } from 'constants/colors';
+import { BLACK, WHITE } from 'constants/colors';
 import { AnimatedSection } from 'animations/animated';
 
 export const AnimatedSectionStyled = styled(AnimatedSection)`
-  background-size: cover;
-  background-attachment: fixed;
   height: 100%;
-  padding: 80px 15px 0;
+  margin-top: 69px;
+  box-shadow: 0 0 35px 45px $ {BLACK};
+  background-color: ${BLACK};
 `;
 
 export const ItemsLoadingStateDescription = styled.div`
@@ -15,8 +15,9 @@ export const ItemsLoadingStateDescription = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${WHITE};
   text-transform: uppercase;
+  color: ${WHITE};
+  background: ${BLACK};
 `;
 
 export const ItemsLoadingSpinnerBox = styled.div`

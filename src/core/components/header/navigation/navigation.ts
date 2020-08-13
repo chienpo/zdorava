@@ -5,13 +5,17 @@ import isMobile from 'ismobilejs/dist/isMobile.min';
 import { LAPTOPS } from 'constants/mediaDeviceMinWidths';
 import { useMediaMinWidth } from 'hooks/use-media-min-width';
 import { LanguageSwitchProps } from 'ui/language-switch/language-switch';
-import { ROUTE_NAME_HOME, routes } from 'router/routes';
+import {
+  ROUTE_NAME_HOME,
+  ROUTE_NAME_PORTFOLIO,
+  ROUTE_NAME_PORTFOLIO_CATEGORY,
+  routes,
+} from 'router/routes';
 import { NavigationView } from './navigation-view';
 
 interface Props extends LanguageSwitchProps {
   activeRouteName: string;
   mobileByDefault: boolean;
-  withShadow: boolean;
 }
 
 export const Navigation: FC<Props> = ({
@@ -19,7 +23,6 @@ export const Navigation: FC<Props> = ({
   onToggleLanguage,
   activeRouteName,
   mobileByDefault,
-  withShadow,
 }) => {
   const { router } = useRoute();
 
@@ -27,7 +30,10 @@ export const Navigation: FC<Props> = ({
 
   const showMenu = activeRouteName !== ROUTE_NAME_HOME;
   const headerHeight = activeRouteName === ROUTE_NAME_HOME ? '50px' : '70px';
-  const themeSwitchVisible = activeRouteName === ROUTE_NAME_HOME;
+  const themeSwitchVisible =
+    activeRouteName === ROUTE_NAME_HOME ||
+    activeRouteName === ROUTE_NAME_PORTFOLIO ||
+    activeRouteName === ROUTE_NAME_PORTFOLIO_CATEGORY;
 
   // TODO Move at the final return
   return createElement(NavigationView, {
@@ -38,7 +44,6 @@ export const Navigation: FC<Props> = ({
     isMobile: mobileByDefault || isMobile.any || !mediaMinWidthForLaptops,
     showMenu,
     headerHeight,
-    withShadow,
     themeSwitchVisible,
   });
 };

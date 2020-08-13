@@ -5,11 +5,10 @@ import { useAnimation } from 'framer-motion';
 
 import { PortfolioItemModel } from 'models/portfolio-item.model';
 
-import { BLACK, WHITE } from 'constants/colors';
+import { WHITE } from 'constants/colors';
 import { MoreLoader } from 'ui/more-loader/more-loader';
 import { AnimatedDiv } from 'animations/animated';
-import { PortfolioGrid } from './components/portfolio-grid/portfolio-grid';
-import { PortfolioTabs } from './components/portfolio-tabs/portfolio-tabs';
+import { PortfolioGrid, PortfolioTabs } from './components';
 import {
   AnimatedSectionStyled,
   ItemsLoadingSpinnerBox,
@@ -34,7 +33,9 @@ export const PortfolioView: React.FC<Props> = ({
   const controls = useAnimation();
 
   useEffect(() => {
-    controls.start('visible');
+    const promise = controls.start('visible');
+
+    promise.then(res => res);
   }, [controls]);
 
   const originOffset = useRef<{ top: number; left: number }>({
@@ -46,7 +47,6 @@ export const PortfolioView: React.FC<Props> = ({
     <AnimatedSectionStyled
       variants={{
         enter: {
-          backgroundColor: BLACK,
           transition: {
             duration: 1,
           },
@@ -56,7 +56,7 @@ export const PortfolioView: React.FC<Props> = ({
           transition: { duration: 0.4 },
         },
       }}
-      initial="exit"
+      initial="enter"
       animate="enter"
       exit="exit"
     >

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { BLACK, RED, RED_70, WHITE, WHITE_30 } from 'constants/colors';
 
 export const SwitchBox = styled.div`
-  display: grid;
+  display: inline-grid;
   grid-template-columns: auto auto auto;
   grid-column-gap: 10px;
   align-items: center;

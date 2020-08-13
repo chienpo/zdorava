@@ -6,7 +6,7 @@ import Footer from 'core/components/footer';
 
 export const PortfolioPageView = () => (
   <>
-    <Header withShadow />
+    <Header />
     <main>
       <Portfolio />
     </main>

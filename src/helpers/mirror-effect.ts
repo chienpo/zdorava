@@ -1,6 +1,6 @@
 import { css, keyframes } from 'styled-components';
 
-import { WHITE, WHITE_20 } from 'constants/colors';
+import { BLACK_20, WHITE_20 } from 'constants/colors';
 import { DARK_MODE } from 'constants/theme';
 
 const linkOverlayMirrorEffect = keyframes`
@@ -20,7 +20,8 @@ export const mirrorEffect = css`
   overflow: hidden;
 
   &:before {
-    background: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE : WHITE_20)};
+    background: ${({ theme }) =>
+      theme.mode === DARK_MODE ? BLACK_20 : WHITE_20};
     box-sizing: border-box;
     content: '';
     height: 100%;

@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from 'react';
+import React from 'react';
 
 import { EN, RU } from 'constants/languages';
 import { LanguageSwitchProps } from './language-switch';
