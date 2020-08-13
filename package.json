@@ -24,8 +24,8 @@
     "add-locale": "lingui add-locale",
     "extract": "lingui extract",
     "compile": "lingui compile",
-    "storybook": "NODE_PATH=src start-storybook -p 6006 -c .storybook -s ./public",
-    "build-storybook": "build-storybook"
+    "storybook": "NODE_PATH=src start-storybook -p 6006 -s public",
+    "build-storybook": "NODE_PATH=src build-storybook -s public"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",

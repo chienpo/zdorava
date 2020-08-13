@@ -1,8 +1,8 @@
+import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Story, Meta } from '@storybook/react';
 
 import { ThemeSwitch, Props } from 'ui/theme-switch/theme-switch';
-import React from 'react';
 
 // eslint-disable-next-line import/no-default-export
 export default {
