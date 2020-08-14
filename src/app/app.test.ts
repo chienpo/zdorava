@@ -1,5 +1,5 @@
 import { createElement } from 'react';
-import { render } from 'react-testing-library';
+import { render } from '@testing-library/react';
 import AppView from './app-view';
 
 test('renders container', () => {
