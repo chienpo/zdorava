@@ -13,6 +13,7 @@ export const GridContent = styled.div`
   @media screen and (min-width: 991px) {
     grid-template-columns: repeat(auto-fill, 50vw);
   }
+
   display: grid;
   width: 100%;
   grid-template-columns: 1fr;

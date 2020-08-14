@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { BLACK, GRAY, RED, RED_70 } from 'constants/colors';
+import { BLACK, RED, RED_70 } from 'constants/colors';
 import { AnimatedAddress } from 'animations/animated';
 
 export const SidebarSocial = styled(AnimatedAddress)`
@@ -14,7 +14,6 @@ export const SidebarSocial = styled(AnimatedAddress)`
 export const StyledSocialLink = styled.a`
   transition: all ease-in-out 0.4s;
   text-decoration: none;
-  color: ${GRAY};
   font-size: 30px;
   line-height: 36px;
   letter-spacing: 0.5px;

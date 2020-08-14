@@ -46,7 +46,7 @@ const BaseLinkStyled = styled(BaseLink)`
     border-color: ${RED};
   }
 
-  &.active {
+  &&.active {
     color: ${RED};
   }
 `;

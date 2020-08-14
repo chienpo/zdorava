@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { BLACK, BLACK_90, GRAY, RED, WHITE } from 'constants/colors';
+import { BLACK, BLACK_90, RED, WHITE } from 'constants/colors';
 
 export const ButtonStyled = styled.button<{ plain: boolean; width: string }>`
   color: ${({ plain }) => (plain ? WHITE : 'white')};
@@ -27,11 +27,8 @@ export const ButtonStyled = styled.button<{ plain: boolean; width: string }>`
   }
 
   &:focus {
-    color: ${GRAY};
-    border-color: ${GRAY};
-
-    color: ${'rgba(255,0,0,0.7)'};
-    border-color: ${'rgba(255,0,0,0.7)'};
+    color: rgba(255, 0, 0, 0.7);
+    border-color: rgba(255, 0, 0, 0.7);
   }
 
   &:disabled {
@@ -41,7 +38,6 @@ export const ButtonStyled = styled.button<{ plain: boolean; width: string }>`
 
   &.active {
     color: ${WHITE};
-
     border-color: ${RED};
     background: ${RED};
 

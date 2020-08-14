@@ -21,7 +21,7 @@ export const SlideRaw = styled.div`
   height: 100%;
   transition: background-color 0.6s;
 
-  &:after {
+  &::after {
     content: '';
     position: absolute;
     width: 18px;
@@ -64,9 +64,10 @@ export const InputCheckbox = styled.input`
     background-color: ${WHITE_30};
   }
 
-  &:checked + ${SlideRaw}::after {
-    transform: translateX(27px);
-    background-color: ${BLACK};
+  &:checked + ${SlideRaw} {
+    &::after {
+      background-color: ${BLACK};
+    }
   }
 
   &:focus + ${SlideRaw} {

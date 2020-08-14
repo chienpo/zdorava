@@ -7,9 +7,7 @@ import { AnimatedPath } from 'animations/animated';
 
 const BurgerMotionButton = styled(motion.button)`
   border: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+  user-select: none;
   cursor: pointer;
   background: transparent;
   display: flex;

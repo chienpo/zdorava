@@ -12,20 +12,16 @@ export const Ul = styled.ul`
   font-size: 18px;
   line-height: 24px;
 
+  strong {
+    margin-right: 5px;
+  }
+
   li {
     list-style: none;
     margin-bottom: 10px;
 
     &:last-child {
       margin-bottom: 0;
-    }
-  }
-
-  ul > li {
-    margin-bottom: 12px;
-
-    strong {
-      margin-right: 5px;
     }
   }
 `;

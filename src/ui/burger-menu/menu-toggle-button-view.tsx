@@ -10,15 +10,12 @@ const BurgerButton = styled.button`
   display: flex;
   outline: none;
   border: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+  user-select: none;
   cursor: pointer;
   position: absolute;
   top: 12px;
   left: 17px;
   background: transparent;
-
   ${({ theme }) => (theme.mode === DARK_MODE ? `` : ``)};
 
   path {

@@ -29,7 +29,7 @@ export const MotionPortfolioTabs = styled.div`
   top: 0;
   height: 100%;
 
-  &:after {
+  &::after {
     content: '';
     position: absolute;
     left: 0;
@@ -39,14 +39,13 @@ export const MotionPortfolioTabs = styled.div`
     background: ${BLACK_89};
   }
 
-  &:before {
+  &::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-
     ${({ theme }) =>
       theme.mode === DARK_MODE
         ? `

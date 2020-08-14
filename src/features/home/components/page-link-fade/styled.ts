@@ -12,7 +12,6 @@ import { pulseAnim, pulseAnimWhite } from 'animations/keyframes/pulse';
 export const LinkOverlayMirrorEffect = styled.div`
   width: 100%;
   height: 100%;
-
   ${mirrorEffect}
 `;
 
@@ -41,15 +40,15 @@ export const Text = styled.span`
   color: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE_30 : BLACK)};
   transition: color 0.6s;
 
-  &::${({ title }) => (title === ROUTE_NAME_ABOUT ? 'after' : 'before')} {
+  ${({ title }) => (title === ROUTE_NAME_ABOUT ? '&::after' : '&::before')} {
     position: absolute;
     content: '';
     display: block;
     width: 22px;
     height: 22px;
     border-radius: 50%;
-    border: 8px solid  ${({ theme }) =>
-      theme.mode === DARK_MODE ? WHITE : BLACK};
+    border: 8px solid
+      ${({ theme }) => (theme.mode === DARK_MODE ? WHITE : BLACK)};
     ${({ title }) => (title === ROUTE_NAME_ABOUT ? 'right: 0' : 'left: 0')};
     top: 50%;
     transform: translateY(-50%);

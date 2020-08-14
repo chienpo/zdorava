@@ -18,6 +18,5 @@ export const LazyImage = styled.img.attrs(({ style, alt, srcSet, src }) => ({
   width: 100%;
   height: auto;
   object-fit: cover;
-
   ${lazyBlurUp};
 `;

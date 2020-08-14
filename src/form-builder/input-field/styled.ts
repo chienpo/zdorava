@@ -61,7 +61,6 @@ export const Input = styled.input`
   padding: 0 10px;
   width: 100%;
   box-sizing: border-box;
-
   ${inputStyles}
 `;
 
@@ -73,7 +72,6 @@ export const Textarea = styled.textarea`
   width: 100%;
   box-sizing: border-box;
   resize: none;
-
   ${inputStyles}
 `;
 

@@ -3,6 +3,37 @@ import styled from 'styled-components';
 import { DARK_MODE } from 'constants/theme';
 import { BLACK, RED, RED_70, WHITE, WHITE_90 } from 'constants/colors';
 
+export const Label = styled.label`
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  line-height: 1;
+  background: transparent;
+  height: 100%;
+  position: relative;
+`;
+
+export const SwitchBox = styled.div`
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  ${Label} {
+    &:first-child::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 2px;
+      display: block;
+      height: 100%;
+      background: ${({ theme }) =>
+        theme.mode === DARK_MODE ? WHITE_90 : BLACK};
+    }
+  }
+`;
+
 export const LangText = styled.span`
   color: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE : BLACK)};
   transition: color 0.2s, font-size 0.2s;
@@ -43,33 +74,5 @@ export const InputRadio = styled.input`
   &:checked + ${LangText} {
     opacity: 1;
     font-size: 20px;
-  }
-`;
-
-export const Label = styled.label`
-  cursor: pointer;
-  display: block;
-  text-align: center;
-  line-height: 1;
-  background: transparent;
-  height: 100%;
-  position: relative;
-`;
-
-export const SwitchBox = styled.div`
-  height: 20px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  ${Label}:first-child:after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 2px;
-    display: block;
-    height: 100%;
-    background: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE_90 : BLACK)};
   }
 `;

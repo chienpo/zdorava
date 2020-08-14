@@ -22,7 +22,7 @@ export const SectionControls = styled.div`
 
 export const FormSection = styled.section`
   width: 100vw;
-  box-shadow: 0px -48px 35px 45px ${({ theme }) => theme.mode === LIGHT_MODE && BLACK};
+  box-shadow: 0 -48px 35px 45px ${({ theme }) => theme.mode === LIGHT_MODE && BLACK};
   position: relative;
 `;
 

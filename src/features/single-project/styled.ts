@@ -36,7 +36,6 @@ export const AnimatedDescriptionStyled = styled(AnimatedDiv)`
   }
 
   padding: 15px 15px 15px 15px;
-
   position: relative;
   height: 100%;
   margin-left: auto;
@@ -45,7 +44,7 @@ export const AnimatedDescriptionStyled = styled(AnimatedDiv)`
   align-items: flex-end;
   text-align: right;
   background: ${WHITE_80};
-  box-shadow: ${WHITE_80} 0px 0 130px 160px;
+  box-shadow: ${WHITE_80} 0 0 130px 160px;
 `;
 
 export const Title = styled.span`

@@ -168,7 +168,6 @@ export const ItemFigure = styled.figure`
   left: 0;
   overflow: hidden;
   transition: filter 0.8s ease 0s;
-
   filter: grayscale(100);
   opacity: 1;
 

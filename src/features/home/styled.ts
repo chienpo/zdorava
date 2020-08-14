@@ -70,28 +70,27 @@ export const WebsiteSubtitle = styled.div`
   position: relative;
   margin: 5px auto 0;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: 'zdorava';
     position: absolute;
     right: 0;
     top: 0;
     color: ${({ theme }) =>
       theme.mode === DARK_MODE ? 'rgba(200, 200, 200, 0.7)' : BLACK_80};
-
     text-transform: uppercase;
     background: transparent;
     overflow: hidden;
     clip: rect(0, 900px, 0, 0);
   }
 
-  &:before {
+  &::before {
     left: -2px;
     text-shadow: 1px 0 rgba(47, 79, 79, 0.8);
     animation: ${noiseAnimTwo} 3s infinite linear alternate-reverse;
   }
 
-  &:after {
+  &::after {
     left: 2px;
     text-shadow: -1px 0 ${RED};
     animation: ${noiseAnim} 4s infinite alternate-reverse;

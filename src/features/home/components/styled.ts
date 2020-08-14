@@ -15,7 +15,6 @@ export const DottedOverlay = styled.div`
       : `
   ${WHITE_85} url(${overlayWhiteDot}) repeat scroll 0 0
   `};
-
   position: absolute;
   width: 100%;
   height: 100%;
@@ -38,7 +37,6 @@ export const LazyWinkingBannerBg = styled.div<{ bgIsToggling: boolean }>`
   opacity: 0;
   transition: opacity 0.4s;
   z-index: 1;
-
   ${({ bgIsToggling }) =>
     bgIsToggling &&
     `

@@ -6,12 +6,12 @@ import { DARK_MODE } from 'constants/theme';
 const linkOverlayMirrorEffect = keyframes`
   0% {
     transform: scale3d(3.5, 3, 2) rotate3d(0, 0, 1, 135deg)
-    translate3d(0px, 50%, 0px);
+    translate3d(0, 50%, 0);
     visibility: hidden;
   }
   100% {
     opacity: 1;
-    transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 135deg) translate3d(0px, -130%, 0px);
+    transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 135deg) translate3d(0, -130%, 0);
     visibility: initial;
   }
 `;
@@ -19,9 +19,9 @@ const linkOverlayMirrorEffect = keyframes`
 export const mirrorEffect = css`
   overflow: hidden;
 
-  &:before {
+  &::before {
     background: ${({ theme }) =>
-      theme.mode === DARK_MODE ? BLACK_20 : WHITE_20};
+      theme.mode === DARK_MODE ? WHITE_20 : BLACK_20};
     box-sizing: border-box;
     content: '';
     height: 100%;
