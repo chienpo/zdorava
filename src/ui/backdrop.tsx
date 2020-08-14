@@ -22,7 +22,7 @@ const MotionBackdrop = styled(AnimatedDiv)`
 export const Backdrop: FC<Props> = ({ onClick, fixed = true }) => {
   useKeyPress(KEY_CODE_ESCAPE, onClick);
 
-  const fixedStyles: { [key: string]: string } | {} = {
+  const fixedStyles: { [key: string]: string } | null = {
     position: 'fixed',
     height: '100vh',
   };

@@ -18,7 +18,9 @@ const PortfolioPage = React.lazy(() =>
   import('core/pages/portfolio/portfolio-page')
 );
 const ProjectPage = React.lazy(() => import('core/pages/project/project-page'));
-const NotFoundPage = React.lazy(() => import('core/pages/not-found/not-found'));
+const NotFoundPage = React.lazy(() =>
+  import('core/pages/not-found/not-found-page')
+);
 
 const pageVariants = {
   initial: {

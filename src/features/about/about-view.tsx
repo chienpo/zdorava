@@ -43,7 +43,7 @@ export const AboutView: React.FC = () => (
           >
             <AccordionBox>
               <DeveloperName>
-                <Trans>Hello, I'm Stepan</Trans>
+                <Trans>Hello, I&apos;m Stepan</Trans>
                 <Position>
                   <Trans>Front-end (React-JS) Developer</Trans>
                 </Position>

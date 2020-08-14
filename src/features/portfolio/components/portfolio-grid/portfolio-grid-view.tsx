@@ -73,7 +73,6 @@ export const PortfolioGridView: React.FC<Props & DataProps> = ({
                   category,
                   imageSrc,
                   alt,
-                  name,
                   thumbnailSrc,
                   title,
                 }: PortfolioItemModel,

@@ -89,7 +89,7 @@ msgstr "Back"
 msgid "Closely related to design, front-end development process is always going on in creative way and i can always see the result of my job. And this is what i like so much!"
 msgstr "Closely related to design, front-end development process is always going on in creative way and i can always see the result of my job. And this is what i like so much!"
 
-#: src/features/portfolio/portfolio-view.tsx:37
+#: src/features/portfolio/portfolio-view.tsx:36
 msgid "Coming soon ..."
 msgstr "Coming soon ..."
 

@@ -38,20 +38,16 @@ export const Portfolio: FC = () => {
   }, [categoryFromStore]);
 
   const getProductsTotalCount = async () => {
-    try {
-      const response = await axios.get(
-        `${FIREBASE_DATABASE_URL}/portfolio.json`,
-        {
-          params: {
-            shallow: true,
-          },
-        }
-      );
+    const response = await axios.get(
+      `${FIREBASE_DATABASE_URL}/portfolio.json`,
+      {
+        params: {
+          shallow: true,
+        },
+      }
+    );
 
-      setProjectsTotalCount(Object.keys(response.data).length);
-    } catch (error) {
-      throw error;
-    }
+    setProjectsTotalCount(Object.keys(response.data).length);
   };
 
   const getDataChunk = async (categoryName: string) => {

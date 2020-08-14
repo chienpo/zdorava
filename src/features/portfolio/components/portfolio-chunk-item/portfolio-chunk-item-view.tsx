@@ -29,9 +29,8 @@ interface Props {
   selectedCategory: string;
 }
 
-export const PortfolioChunkItemView: React.FC<
-  Props & PortfolioPreviewItemModel
-> = ({
+export const PortfolioChunkItemView: React.FC<Props &
+  PortfolioPreviewItemModel> = ({
   alt,
   category,
   chunkType,
@@ -57,6 +56,8 @@ export const PortfolioChunkItemView: React.FC<
     };
 
     if (index === originIndex) {
+      // TODO: Check this according to the lint
+      // eslint-disable-next-line no-param-reassign
       originOffset.current = offset.current;
     }
   }, [delayPerPixel, index, originIndex, originOffset]);

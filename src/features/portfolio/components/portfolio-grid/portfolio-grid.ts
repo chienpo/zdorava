@@ -20,6 +20,8 @@ export const PortfolioGrid: FC<Props> = ({
       const chunkIndex: number = Math.floor(index / 4);
 
       if (!resultArray[chunkIndex]) {
+        // TODO: Check this method to fix the rule
+        // eslint-disable-next-line no-param-reassign
         resultArray[chunkIndex] = [];
       }
 

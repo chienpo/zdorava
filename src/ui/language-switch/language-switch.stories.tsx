@@ -1,7 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { Story, Meta } from '@storybook/react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { action } from '@storybook/addon-actions';
 
 import {
@@ -9,7 +7,7 @@ import {
   LanguageSwitchProps,
 } from 'ui/language-switch/language-switch';
 
-// eslint-disable-next-line import/no-default-export,@typescript-eslint/no-object-literal-type-assertion
+// eslint-disable-next-line import/no-default-export
 export default {
   title: 'UI/LanguageSwitch',
   component: LanguageSwitch,

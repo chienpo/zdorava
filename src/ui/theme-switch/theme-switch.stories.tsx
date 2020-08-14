@@ -1,7 +1,5 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { Story, Meta } from '@storybook/react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { action } from '@storybook/addon-actions';
 
 import { ThemeSwitch, ThemeSwitchProps } from 'ui/theme-switch/theme-switch';

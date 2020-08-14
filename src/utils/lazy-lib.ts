@@ -1,11 +1,11 @@
 import { lazy } from 'react';
 
 export const lazyLib = (
-  promisedLibImport: () => Promise<{}>,
+  promisedLibImport: () => Promise<any>,
   compPathStr: string
 ) =>
   lazy(() =>
-    promisedLibImport().then((module: {}) => {
+    promisedLibImport().then((module: any) => {
       const compPathParts = compPathStr.split('.');
 
       const object = compPathParts.reduce((acc: any, currVal: string) => {

@@ -1,7 +1,7 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: './tsconfig.json',
+    project: ['tsconfig.eslint.json'],
     tsconfigRootDir: './',
   },
   env: {
@@ -11,7 +11,7 @@ module.exports = {
     jest: true,
   },
   extends: ['airbnb', 'plugin:@typescript-eslint/recommended', 'prettier'],
-  plugins: ['@typescript-eslint', 'react-hooks', 'filenames'],
+  plugins: ['@typescript-eslint', 'react-hooks'],
   settings: {
     'import/resolver': {
       'babel-module': {},
@@ -25,7 +25,11 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: ['src/**/*.test.js', 'src/**/*.test.ts'],
+        devDependencies: [
+          'src/**/*.test.js',
+          'src/**/*.test.ts',
+          'src/**/*.stories.tsx',
+        ],
       },
     ],
     'import/extensions': [
@@ -64,20 +68,17 @@ module.exports = {
         ignoreRegExpLiterals: true,
       },
     ],
-    'filenames/match-exported': ['error', 'kebab'],
-    'filenames/match-regex': [
-      'error',
-      '^[a-z]+(?:-[a-z0-9]+)*(?:.[a-z]+)*$',
-      false,
-    ],
     indent: 'off',
-
-    // TypeScript
     'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx'] }],
     '@typescript-eslint/indent': 'off',
     '@typescript-eslint/prefer-interface': 'off',
     'react/prop-types': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     'react/jsx-wrap-multilines': 'off',
+    // TODO: Fix rules
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    '@typescript-eslint/no-object-literal-type-assertion': 'off',
+    'react/jsx-curly-newline': 'off',
   },
 };

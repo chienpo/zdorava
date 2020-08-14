@@ -40,8 +40,8 @@ export const PanelTwoView = () => (
       <li>
         <Strong>2018-2020</Strong>
         <Trans>
-          I've been working in Itransition Softvare Development Company as a
-          Front-end Developer. This time allowed me to dive dipper in to
+          I&apos;ve been working in Itransition Softvare Development Company as
+          a Front-end Developer. This time allowed me to dive dipper in to
           front-end and understand how cool is it! Working in a team of
           developers I took part in making up really cool projects and features
           for our foreign customers.
@@ -50,7 +50,7 @@ export const PanelTwoView = () => (
       <li>
         <Strong>2008-2019</Strong>
         <Trans>
-          Over 10 years I've been studying on architecture & design
+          Over 10 years I&apos;ve been studying on architecture & design
           specialisations. I was lucky to improve my skills in such areas like:
           interior and brand design, modern and concept arts, i created a lot of
           cool creative projects and also got and expierence of presenting them
