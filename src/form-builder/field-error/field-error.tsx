@@ -1,12 +1,10 @@
 import React, { FC } from 'react';
+import { FormSubscription } from 'final-form';
 
 import { ErrorBox, IconError } from './styled';
 
 interface Props {
-  meta: {
-    error: string;
-    touched: boolean;
-  };
+  meta: FormSubscription;
 }
 
 export const FieldError: FC<Props> = ({ meta }) => {

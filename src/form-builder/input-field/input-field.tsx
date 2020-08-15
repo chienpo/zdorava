@@ -26,27 +26,25 @@ export const InputField: FC<Props> = ({
   type,
   children,
   ...props
-}) => {
-  return (
-    <Field
-      name={name}
-      validate={validate}
-      render={({ input, meta }: any) => (
-        <FieldWrapper>
-          <Label>
-            <LabelText>
-              {children}
-              {validate && <RequiredStar>*</RequiredStar>}
-            </LabelText>
-            {type === 'textarea' ? (
-              <Textarea rows={4} {...input} {...props} />
-            ) : (
-              <Input {...input} {...props} />
-            )}
-          </Label>
-          {meta && <FieldError meta={meta} />}
-        </FieldWrapper>
-      )}
-    />
-  );
-};
+}) => (
+  <Field
+    name={name}
+    validate={validate}
+    render={({ input, meta }) => (
+      <FieldWrapper>
+        <Label>
+          <LabelText>
+            {children}
+            {validate && <RequiredStar>*</RequiredStar>}
+          </LabelText>
+          {type === 'textarea' ? (
+            <Textarea rows={4} {...input} {...props} />
+          ) : (
+            <Input {...input} {...props} />
+          )}
+        </Label>
+        {meta && <FieldError meta={meta} />}
+      </FieldWrapper>
+    )}
+  />
+);
