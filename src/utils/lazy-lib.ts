@@ -1,16 +1,16 @@
 import { lazy } from 'react';
 
-interface Module {
+interface DefaultModule {
   default: () => void;
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type ModuleEntries = any;
 
+type Module = DefaultModule | ModuleEntries;
+
 export const lazyLib = (
-  promisedLibImport: () => Promise<
-    Module | { default: never } | { default: Module } | ModuleEntries
-  >,
+  promisedLibImport: () => Promise<Module>,
   compPathStr?: string
 ) =>
   lazy(() =>
