@@ -7,7 +7,7 @@ import { $portfolioTabsStore } from 'store/portfolio-tabs-store';
 import homepageGlitchBackground from 'assets/images/backgrounds/home-bg.jpg';
 import homepageGlitchBackgroundMobile from 'assets/images/backgrounds/homepage-background-tinyfied-mobile.jpg';
 import { ROUTE_NAME_ABOUT, ROUTE_NAME_PORTFOLIO_CATEGORY } from 'router/routes';
-import { PageLinkFadeView } from './page-link-fade/page-link-fade-view';
+import { PageLinkFadeView as PageLinkFade } from './page-link-fade/page-link-fade-view';
 import { DottedOverlay, LazyWinkingBannerBg } from './styled';
 import { PerspectiveBanner } from './perspective-banner';
 
@@ -29,12 +29,12 @@ const HomePageNavigation = () => {
   return (
     <nav>
       {bgIsToggling && <LazyWinkingBannerBg bgIsToggling={bgIsToggling} />}
-      <PageLinkFadeView
+      <PageLinkFade
         routeName={ROUTE_NAME_ABOUT}
         position="left"
         title={<Trans>About</Trans>}
       />
-      <PageLinkFadeView
+      <PageLinkFade
         routeName={ROUTE_NAME_PORTFOLIO_CATEGORY}
         position="right"
         title={<Trans>Portfolio</Trans>}

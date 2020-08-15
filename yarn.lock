@@ -2006,7 +2006,7 @@
     jest-validate "^24.8.0"
     pkg-conf "^3.1.0"
 
-"@lingui/core@2.9.1":
+"@lingui/core@2.9.1", "@lingui/core@^2.9.1":
   version "2.9.1"
   resolved "https://registry.yarnpkg.com/@lingui/core/-/core-2.9.1.tgz#e0edf9ad628bd49a0c42958390317834f0283636"
   integrity sha512-oygikacnRlfR2p8Q30q9z7jBASvVd8JXgoq7q2Ao/NdZyk3YIYbDhBICxAtwlCbm1hSROh2xMS2Ygx3Ezwzp1Q==
@@ -3149,7 +3149,7 @@
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
 
-"@types/lingui__core@*":
+"@types/lingui__core@*", "@types/lingui__core@^2.7.0":
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/@types/lingui__core/-/lingui__core-2.7.0.tgz#a93e53338a5a7ae5aa8cdb22ef0111d2053c6ef0"
   integrity sha512-4gx/msI4cVlx1/RI1g6bDREZqflWh4HflMX3A5mMnvM6ymohg5SOzWk+R18N6/44ONPqOI+pcP8xjKLrI2tQhQ==

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, ReactNode } from 'react';
 import { I18nProvider } from '@lingui/react';
+import { Catalog, Catalogs } from '@lingui/core';
 import { useStore } from 'effector-react';
 
 import { $languageStore } from 'store/language-store';
@@ -15,14 +16,17 @@ export const LanguageProvider: React.FC<Props> = ({ children }) => {
     );
 
   const language = useStore($languageStore);
-  const [catalog, setCatalog] = useState<any>(null);
+  const [catalog, setCatalog] = useState<Catalog | null>(null);
 
   useEffect(() => {
     importCatalog(language).then(setCatalog);
   }, [language]);
 
   return (
-    <I18nProvider language={language} catalogs={{ [language]: catalog }}>
+    <I18nProvider
+      language={language}
+      catalogs={{ [language]: catalog } as Catalogs}
+    >
       {children}
     </I18nProvider>
   );

@@ -19,7 +19,7 @@ interface Props {
   srcSet: string;
 }
 
-export const HomepageGlitch: React.FC<Props> = ({ src, srcSet }) => {
+export const HomepageGlitchView: React.FC<Props> = ({ src, srcSet }) => {
   const [disabled, toggleDisabled] = useState(true);
 
   useEffect(() => {

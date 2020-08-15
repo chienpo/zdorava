@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import { HomepageGlitch } from './homepage-glitch';
+import { HomepageGlitchView as HomepageGlitch } from './homepage-glitch/homepage-glitch-view';
 
 export const PerspectiveBanner: FC<{ src: string; srcSet: string }> = ({
   src,

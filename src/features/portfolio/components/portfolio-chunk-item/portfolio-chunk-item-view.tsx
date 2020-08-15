@@ -24,8 +24,7 @@ interface Props {
   delayPerPixel: number;
   index: number;
   originIndex: number;
-  // originOffset: { current: { [key: string]: number } };
-  originOffset: any;
+  originOffset: { current: { [key: string]: number } };
   selectedCategory: string;
 }
 
