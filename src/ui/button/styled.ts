@@ -1,17 +1,13 @@
 import styled from 'styled-components';
 
-import { BLACK, BLACK_90, RED, WHITE } from 'constants/colors';
+import { BLACK, BLACK_90, RED, RED_70, WHITE } from 'constants/colors';
 
 import { ButtonProps } from './button';
 
 export const ButtonStyled = styled.button<ButtonProps>`
-  color: ${({ plain }) => (plain ? WHITE : 'white')};
-  border: 1px solid
-    ${({ plain }) => {
-      console.log(plain);
-      return plain ? BLACK : 'white';
-    }};
-  background: ${({ plain }) => (plain ? `${BLACK}` : 'transparent')};
+  color: ${WHITE};
+  border: 1px solid ${({ plain }) => (plain ? BLACK : WHITE)};
+  background: ${({ plain }) => (plain ? BLACK : 'transparent')};
   width: ${({ width }) => width || 'auto'};
   font-weight: normal;
   text-decoration: none;
@@ -33,8 +29,8 @@ export const ButtonStyled = styled.button<ButtonProps>`
   }
 
   &:focus {
-    color: rgba(255, 0, 0, 0.7);
-    border-color: rgba(255, 0, 0, 0.7);
+    color: ${RED_70};
+    border-color: ${RED_70};
   }
 
   &:disabled {
