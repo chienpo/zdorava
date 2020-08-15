@@ -2,19 +2,22 @@ import { lazy } from 'react';
 
 export const lazyLib = (
   promisedLibImport: () => Promise<any>,
-  compPathStr: string
+  compPathStr?: string
 ) =>
   lazy(() =>
     promisedLibImport().then((module: any) => {
-      const compPathParts = compPathStr.split('.');
+      if (compPathStr) {
+        const compPathParts = compPathStr.split('.');
 
-      const object = compPathParts.reduce((acc: any, currVal: string) => {
-        return acc ? acc[currVal] : null;
-      }, module);
+        const object = compPathParts.reduce((acc: any, currVal: string) => {
+          return acc ? acc[currVal] : null;
+        }, module);
 
-      return {
-        default: object,
-      };
+        return {
+          default: object,
+        };
+      }
+      return { default: module };
     })
   );
 

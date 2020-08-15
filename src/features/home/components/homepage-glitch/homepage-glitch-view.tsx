@@ -1,18 +1,9 @@
-import React, { useState, useEffect, lazy, Suspense } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 
+import lazyLib from 'utils/lazy-lib';
 import { GlitchContainer, LazyGlitchBackground } from './styled';
 
-const GlitchEffect = lazy(() => import('react-glitch-effect').then(mod => mod));
-
-const GlitchBox = (props: any) => {
-  const { className, children } = props;
-
-  return (
-    <Suspense fallback={<div className={className}>{children}</div>}>
-      <GlitchEffect {...props} />
-    </Suspense>
-  );
-};
+const GlitchEffect = lazyLib(() => import('react-glitch-effect'));
 
 interface Props {
   src: string;
@@ -46,9 +37,19 @@ export const HomepageGlitchView: React.FC<Props> = ({ src, srcSet }) => {
 
   return (
     <GlitchContainer>
-      <GlitchBox duration="2s" iterationCount="infinite" disabled={disabled}>
-        <LazyGlitchBackground src={src} srcSet={srcSet} alt="Homepage glitch" />
-      </GlitchBox>
+      <Suspense fallback={<div />}>
+        <GlitchEffect
+          duration="2s"
+          iterationCount="infinite"
+          disabled={disabled}
+        >
+          <LazyGlitchBackground
+            src={src}
+            srcSet={srcSet}
+            alt="Homepage glitch"
+          />
+        </GlitchEffect>
+      </Suspense>
     </GlitchContainer>
   );
 };
