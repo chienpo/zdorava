@@ -2,6 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 import { I18n } from '@lingui/react';
 import { BaseLink } from 'react-router5';
+import { Router } from 'router5';
 import { useStore } from 'effector-react';
 
 import { $portfolioTabsStore } from 'store/portfolio-tabs-store';
@@ -71,7 +72,7 @@ const variants = {
 interface Props {
   name: string;
   onClick: () => void;
-  router: any;
+  router: Router;
 }
 
 export const MenuListItemView: React.FC<Props> = ({

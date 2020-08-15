@@ -2,7 +2,7 @@ import { FC, createElement } from 'react';
 import { useRoute } from 'react-router5';
 import { useCycle } from 'framer-motion';
 
-import { Route } from 'models/route.model';
+import { Route } from 'router5';
 
 import { BurgerMenuView } from './burger-menu-view';
 

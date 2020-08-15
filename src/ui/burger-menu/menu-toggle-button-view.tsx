@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { MotionProps } from 'framer-motion';
 
 import { BLACK, RED_70, RED, WHITE } from 'constants/colors';
+import { DARK_MODE } from 'constants/theme';
 import { AnimatedPath } from 'animations/animated';
-import { DARK_MODE } from '../../constants/theme';
 
 const BurgerButton = styled.button`
   display: flex;

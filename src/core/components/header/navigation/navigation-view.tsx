@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 
 import { LanguageSwitchProps } from 'ui/language-switch/language-switch';
 
-import { Route } from 'models/route.model';
+import { Route, Router } from 'router5';
 
 import { BurgerMenu } from 'ui/burger-menu';
 import { NavigationListView } from './navigation-list-view';
@@ -14,7 +14,7 @@ const ThemeSwitch = React.lazy(() => import('ui/theme-switch'));
 interface Props extends LanguageSwitchProps {
   routes: Route[];
   isMobile: boolean;
-  router: any;
+  router: Router;
   showMenu: boolean;
   headerHeight: string;
   themeSwitchVisible: boolean;

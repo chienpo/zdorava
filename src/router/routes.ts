@@ -1,4 +1,4 @@
-import { Route } from 'models/route.model';
+import { Route } from 'router5';
 
 export const ROUTE_NAME_HOME = 'home';
 export const ROUTE_NAME_ABOUT = 'about';

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { AnimatePresence } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { Route } from 'models/route.model';
+import { Route, Router } from 'router5';
 
 import { DARK_MODE } from 'constants/theme';
 import { BLACK_90, WHITE_20 } from 'constants/colors';
@@ -18,7 +18,7 @@ interface Props {
   isOpen: boolean;
   toggleOpen: () => void;
   routes: Route[];
-  router: any;
+  router: Router;
 }
 
 const StyledMotionNavWrapper = styled(AnimatedDiv)`

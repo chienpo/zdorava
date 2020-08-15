@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-import { Route } from 'models/route.model';
+import { Route, Router } from 'router5';
 
 import {
   ROUTE_NAME_PORTFOLIO_CATEGORY,
@@ -34,7 +34,7 @@ const variants = {
 interface Props {
   routes: Route[];
   toggleOpen: () => void;
-  router: any;
+  router: Router;
 }
 
 export const MenuListView: React.FC<Props> = ({
