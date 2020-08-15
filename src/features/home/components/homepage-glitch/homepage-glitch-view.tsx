@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Suspense } from 'react';
 
-import lazyLib from 'utils/lazy-lib';
+import { lazyLib } from 'utils/lazy-lib';
 import { GlitchContainer, LazyGlitchBackground } from './styled';
 
 const GlitchEffect = lazyLib(() => import('react-glitch-effect'));

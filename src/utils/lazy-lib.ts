@@ -1,15 +1,24 @@
 import { lazy } from 'react';
 
+interface Module {
+  default: () => void;
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type ModuleEntries = any;
+
 export const lazyLib = (
-  promisedLibImport: () => Promise<any>,
+  promisedLibImport: () => Promise<
+    Module | { default: never } | { default: Module } | ModuleEntries
+  >,
   compPathStr?: string
 ) =>
   lazy(() =>
-    promisedLibImport().then((module: any) => {
+    promisedLibImport().then(module => {
       if (compPathStr) {
         const compPathParts = compPathStr.split('.');
 
-        const object = compPathParts.reduce((acc: any, currVal: string) => {
+        const object = compPathParts.reduce((acc, currVal: string) => {
           return acc ? acc[currVal] : null;
         }, module);
 
@@ -20,6 +29,3 @@ export const lazyLib = (
       return module;
     })
   );
-
-// eslint-disable-next-line import/no-default-export
-export default lazyLib;

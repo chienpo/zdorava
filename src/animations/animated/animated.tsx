@@ -1,7 +1,7 @@
 import React, { Suspense, FC, RefObject } from 'react';
 import { MotionProps } from 'framer-motion';
 
-import lazyLib from 'utils/lazy-lib';
+import { lazyLib } from 'utils/lazy-lib';
 
 const MotionDiv = lazyLib(() => import('framer-motion'), 'motion.div');
 const MotionHeader = lazyLib(() => import('framer-motion'), 'motion.header');
