@@ -17,7 +17,7 @@ export const lazyLib = (
           default: object,
         };
       }
-      return { default: module };
+      return module;
     })
   );
 
