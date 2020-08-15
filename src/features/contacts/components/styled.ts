@@ -4,12 +4,15 @@ import { RED } from 'constants/colors';
 
 export const StyledButton = styled(Button)`
   display: grid;
-  grid-template-columns: ${({ disabled }) =>
-    disabled ? '40px auto auto' : '1fr'};
-  padding: ${({ disabled }) => disabled && '9px'};
+  grid-template-columns: 1fr;
   width: 100%;
   justify-content: center;
   align-items: center;
+
+  &:disabled {
+    grid-template-columns: 40px auto auto;
+    padding: 9px;
+  }
 `;
 
 export const SuccessMessage = styled.div`
