@@ -2,9 +2,15 @@ import styled from 'styled-components';
 
 import { BLACK, BLACK_90, RED, WHITE } from 'constants/colors';
 
-export const ButtonStyled = styled.button<any>`
+import { ButtonProps } from './button';
+
+export const ButtonStyled = styled.button<ButtonProps>`
   color: ${({ plain }) => (plain ? WHITE : 'white')};
-  border: 1px solid ${({ plain }) => (plain ? BLACK : 'white')};
+  border: 1px solid
+    ${({ plain }) => {
+      console.log(plain);
+      return plain ? BLACK : 'white';
+    }};
   background: ${({ plain }) => (plain ? `${BLACK}` : 'transparent')};
   width: ${({ width }) => width || 'auto'};
   font-weight: normal;

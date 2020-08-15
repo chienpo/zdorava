@@ -1,15 +1,20 @@
-import React, { FC } from 'react';
+import React, { ButtonHTMLAttributes, FC } from 'react';
 
 import { ButtonStyled } from './styled';
 
-interface Props {
-  type: string;
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   plain?: boolean;
   width?: string;
-  disabled?: boolean;
-  className?: string;
 }
 
-export const Button: FC<Props> = ({ children, ...props }) => {
-  return <ButtonStyled {...props}>{children}</ButtonStyled>;
-};
+export const Button: FC<ButtonProps> = ({
+  className,
+  plain,
+  width,
+  children,
+  ...props
+}) => (
+  <ButtonStyled plain={plain} width={width} className={className} {...props}>
+    {children}
+  </ButtonStyled>
+);
