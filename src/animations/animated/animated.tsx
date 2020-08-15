@@ -1,4 +1,4 @@
-import React, { Suspense, FC, RefObject } from 'react';
+import React, { Suspense, FC, RefObject, ReactNode } from 'react';
 import { MotionProps } from 'framer-motion';
 
 import { lazyLib } from 'utils/lazy-lib';
@@ -16,7 +16,7 @@ const MotionFigure = lazyLib(() => import('framer-motion'), 'motion.figure');
 interface Props {
   className?: string;
   onClick?: () => void;
-  ref?: RefObject<any>;
+  ref?: RefObject<HTMLDivElement | unknown>;
 }
 
 interface SvgPathProps extends Props, MotionProps {
@@ -25,14 +25,21 @@ interface SvgPathProps extends Props, MotionProps {
   strokeLinecap?: 'round' | 'square';
 }
 
-const SuspenseComponent: React.FC<any> = ({
+interface SuspenseComponentProps {
+  animCmp: FC;
+  fallbackTag: string;
+  children?: ReactNode;
+  className?: string;
+}
+
+const SuspenseComponent: React.FC<SuspenseComponentProps> = ({
   animCmp: Comp,
   fallbackTag,
   ...props
 }) => {
   const { className, children } = props;
 
-  const FbComp: React.FC<{ className: string }> = fbProps =>
+  const FbComp: React.FC<{ className?: string }> = fbProps =>
     React.createElement(fallbackTag, fbProps);
 
   return (
