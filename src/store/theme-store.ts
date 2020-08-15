@@ -10,7 +10,7 @@ const defaultThemeMode =
 
 export const $themeStore = createStore(defaultThemeMode);
 
-$themeStore.on(toggleTheme, (state: string, toggled: any) => {
+$themeStore.on(toggleTheme, (state: string, toggled: boolean) => {
   const theme = toggled ? LIGHT_MODE : DARK_MODE;
 
   localStorage.setItem(STORAGE_SITE_THEME_KEY, theme);

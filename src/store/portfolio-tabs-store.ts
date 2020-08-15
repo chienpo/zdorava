@@ -10,7 +10,7 @@ export const $portfolioTabsStore = createStore(
   PORTFOLIO_CATEGORY_TAB_NAME_ALL
 ).on(setPortfolioCategory, (state: string, category: string) => category);
 
-$router.watch(({ route }: any) => {
+$router.watch(({ route }) => {
   if (router.isActive('portfolio')) {
     setPortfolioCategory(
       route.params.category || $portfolioTabsStore.defaultState
