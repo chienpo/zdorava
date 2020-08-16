@@ -78,7 +78,6 @@ module.exports = {
     // TODO: Fix rules
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'react/jsx-props-no-spreading': 'off',
-    '@typescript-eslint/no-object-literal-type-assertion': 'off',
     'react/jsx-curly-newline': 'off',
   },
 };

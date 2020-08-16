@@ -5,6 +5,7 @@ import {
   BLACK_0,
   BLACK_100,
   BLACK_89,
+  WHITE,
   WHITE_0,
   WHITE_100,
 } from 'constants/colors';
@@ -36,7 +37,7 @@ export const MotionPortfolioTabs = styled.div`
     width: 100%;
     bottom: 100%;
     height: 100%;
-    background: ${BLACK_89};
+    background: ${({ theme }) => (theme.mode === DARK_MODE ? BLACK_89 : WHITE)};
   }
 
   &::before {
