@@ -11,7 +11,7 @@ interface Props {
   router: Router;
 }
 
-const AppView: React.FC<Props> = ({ router }) => (
+export const AppView: React.FC<Props> = ({ router }) => (
   <Suspense fallback={<PageLoader showSpinner={false} />}>
     <RouterProvider router={router}>
       <Providers>
@@ -22,6 +22,3 @@ const AppView: React.FC<Props> = ({ router }) => (
     </RouterProvider>
   </Suspense>
 );
-
-// eslint-disable-next-line import/no-default-export
-export default AppView;
