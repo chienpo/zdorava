@@ -6,7 +6,7 @@ import { AnimatedSection } from 'animations/animated';
 export const AnimatedSectionStyled = styled(AnimatedSection)`
   height: 100%;
   padding-top: 69px;
-  background-color: $ {BLACK};
+  background-color: ${BLACK};
   box-shadow: 0 0 20px 10px ${BLACK};
   z-index: 2;
   position: relative;
