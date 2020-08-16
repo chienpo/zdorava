@@ -4,6 +4,7 @@ import { BaseLink } from 'react-router5';
 import { DARK_MODE } from 'constants/theme';
 import { BLACK_30, GRAY, RED, RED_70, WHITE } from 'constants/colors';
 import overlayBlackDot from 'assets/images/overlay_black.png';
+import overlayWhiteDot from 'assets/images/overlay_white_four.png';
 
 export const LanguageSwitchBox = styled.div`
   z-index: 0;
@@ -82,7 +83,9 @@ export const NavigationWrapper = styled.div`
   background: ${({ theme }) =>
     theme.mode === DARK_MODE
       ? `${BLACK_30} url(${overlayBlackDot}) repeat scroll 0 -2px;`
-      : WHITE};
+      : `${WHITE} url(${overlayWhiteDot}) repeat scroll 0 -2px;`};
+  transition: background 2s;
+  transition-delay: 2s;
   display: grid;
   width: 100%;
   position: fixed;
