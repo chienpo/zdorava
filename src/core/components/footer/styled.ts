@@ -42,8 +42,6 @@ export const FooterWrapper = styled(AnimatedDiv)`
     theme.mode === DARK_MODE
       ? `${BLACK_89} url(${overlayBlackDot}) repeat scroll 0 0;`
       : `${WHITE_90} url(${overlayWhiteDot}) repeat scroll 0 0;`};
-  transition: background 2s;
-  transition-delay: 2s;
   position: relative;
   z-index: 1;
 `;
