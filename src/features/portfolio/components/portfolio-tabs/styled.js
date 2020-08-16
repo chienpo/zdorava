@@ -24,11 +24,15 @@ export const PortfolioTabsBox = styled(AnimatedDiv)`
 export const MotionPortfolioTabs = styled.div`
   display: grid;
   grid-template-columns: repeat(3, auto);
-  column-gap: 30px;
+  column-gap: 10px;
   justify-content: center;
   position: relative;
   top: 0;
   height: 100%;
+
+  @media only screen and (min-width: 400px) {
+    column-gap: 30px;
+  }
 
   &::after {
     content: '';

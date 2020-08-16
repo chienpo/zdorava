@@ -7,7 +7,7 @@ export const PORTFOLIO_CATEGORY_TAB_NAME_ART = 'art';
 export const PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND = 'frontend';
 
 export const PORTFOLIO_CATEGORIES_TABS_LABELS: { [key: string]: string } = {
-  [PORTFOLIO_CATEGORY_TAB_NAME_ALL]: i18nMark('All projects'),
+  [PORTFOLIO_CATEGORY_TAB_NAME_ALL]: i18nMark('All'),
   [PORTFOLIO_CATEGORY_TAB_NAME_ART]: i18nMark('Art'),
   [PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND]: i18nMark('Front-end'),
 };

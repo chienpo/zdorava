@@ -39,7 +39,11 @@ export const LangText = styled.span`
   transition: color 0.2s, font-size 0.2s;
   line-height: 20px;
   display: block;
-  width: 100px;
+  width: 65px;
+
+  @media only screen and (min-width: 400px) {
+    width: 100px;
+  }
 `;
 
 export const InputRadio = styled.input`

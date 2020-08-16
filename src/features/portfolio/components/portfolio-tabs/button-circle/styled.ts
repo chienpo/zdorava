@@ -10,10 +10,14 @@ export const ButtonCircleStyled = styled.button`
     font-size: 16px;
   }
 
+  @media only screen and (min-width: 400px) {
+    padding-left: 55px;
+  }
+
   font-size: 13px;
   display: block;
   position: relative;
-  padding-left: 55px;
+  padding-left: 45px;
   text-transform: uppercase;
   color: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE : BLACK)};
   transition: color 0.6s;

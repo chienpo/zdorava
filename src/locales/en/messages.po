@@ -64,12 +64,15 @@ msgstr "\"Understanding TypeScript - 2020 Edition\" certificate, \"UDEMY\""
 msgid "About"
 msgstr "About"
 
+#: src/constants/portfolio.ts:8
+msgid "All"
+msgstr "All"
+
 #: src/constants/page-titles.ts:13
-#: src/constants/portfolio.ts:7
 msgid "All projects"
 msgstr "All projects"
 
-#: src/constants/portfolio.ts:8
+#: src/constants/portfolio.ts:9
 msgid "Art"
 msgstr "Art"
 
@@ -80,10 +83,6 @@ msgstr "Art projects"
 #: src/features/single-project/single-project-view.tsx:36
 msgid "Back"
 msgstr "Back"
-
-#: src/features/portfolio/portfolio-view.tsx:36
-#~ msgid "COMING SOON ..."
-#~ msgstr "COMING SOON ..."
 
 #: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:24
 msgid "Closely related to design, front-end development process is always going on in creative way and i can always see the result of my job. And this is what i like so much!"
@@ -129,7 +128,7 @@ msgstr "FRAMEWORKS:"
 msgid "Front-End projects"
 msgstr "Front-End projects"
 
-#: src/constants/portfolio.ts:9
+#: src/constants/portfolio.ts:10
 msgid "Front-end"
 msgstr "Front-end"
 

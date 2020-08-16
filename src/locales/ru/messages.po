@@ -64,18 +64,21 @@ msgstr "\"Gjybvfybt TypeScript - 2020 Издание\" серцификат, \"U
 msgid "About"
 msgstr "Обо мне"
 
+#: src/constants/portfolio.ts:8
+msgid "All"
+msgstr "Все"
+
 #: src/constants/page-titles.ts:13
-#: src/constants/portfolio.ts:7
 msgid "All projects"
 msgstr "Все проекты"
 
-#: src/constants/portfolio.ts:8
+#: src/constants/portfolio.ts:9
 msgid "Art"
-msgstr "Дизайн"
+msgstr "Aрт"
 
 #: src/constants/page-titles.ts:15
 msgid "Art projects"
-msgstr "Дизайн проекты"
+msgstr "Арт проекты"
 
 #: src/features/single-project/single-project-view.tsx:36
 msgid "Back"
@@ -125,7 +128,7 @@ msgstr "Фреймворки"
 msgid "Front-End projects"
 msgstr "Front-End проекты"
 
-#: src/constants/portfolio.ts:9
+#: src/constants/portfolio.ts:10
 msgid "Front-end"
 msgstr "Front-end"
 
