@@ -12,16 +12,12 @@ type Props = {
 };
 
 // eslint-disable-next-line import/no-default-export
-export default ({ children, router }: Props) => {
-  const routerState = router.getState();
-
-  return (
-    <RouterProvider router={router}>
-      <ThemeProvider routerStateName={routerState.name}>
-        <LanguageProvider>
-          <TitleProvider routerState={routerState}>{children}</TitleProvider>
-        </LanguageProvider>
-      </ThemeProvider>
-    </RouterProvider>
-  );
-};
+export default ({ children, router }: Props) => (
+  <RouterProvider router={router}>
+    <ThemeProvider>
+      <LanguageProvider>
+        <TitleProvider>{children}</TitleProvider>
+      </LanguageProvider>
+    </ThemeProvider>
+  </RouterProvider>
+);
