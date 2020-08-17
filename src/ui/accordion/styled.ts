@@ -11,7 +11,7 @@ export const Panel = styled.div<{ active: boolean }>`
   transition: background 0.4s, color 0.4s;
 
   &:hover {
-    ${({ active }) => !active && `background: ${RED}; color: ${WHITE}`};
+    ${({ active }) => !active && `background: ${RED}; color: ${WHITE};`};
   }
 
   ${({ active }) =>
@@ -21,7 +21,7 @@ export const Panel = styled.div<{ active: boolean }>`
     padding-left: 10px;
   `
       : `
-    color: ${BLACK}
+    color: ${BLACK};
     font-weight: bold;
     padding-left: 10px;
   `};

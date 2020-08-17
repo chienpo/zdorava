@@ -56,7 +56,7 @@ msgstr "\"Понимание TypeScript - 2020 Издание\""
 
 #: src/features/about/components/certifiates-list/certificates-data.ts:24
 msgid "\"Understanding TypeScript - 2020 Edition\" certificate, \"UDEMY\""
-msgstr "\"Gjybvfybt TypeScript - 2020 Издание\" серцификат, \"UDEMY\""
+msgstr "\"Понимание TypeScript - 2020 Издание\" серцификат, \"UDEMY\""
 
 #: src/constants/page-titles.ts:7
 #: src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:9

@@ -1,4 +1,4 @@
-import { createElement, useState, ReactElement } from 'react';
+import { createElement, useState, ReactElement, FC } from 'react';
 
 import { AccordionView } from './accordion-view';
 
@@ -14,7 +14,7 @@ interface Props {
   defaultPanel?: string;
 }
 
-export const Accordion: React.FC<Props> = ({ data, defaultPanel }) => {
+export const Accordion: FC<Props> = ({ data, defaultPanel }) => {
   const [expanded, setExpanded] = useState<false | string>(
     defaultPanel || false
   );

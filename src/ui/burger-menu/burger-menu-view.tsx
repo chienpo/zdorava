@@ -38,6 +38,12 @@ const StyledMotionMenuBackdrop = styled(AnimatedDiv)`
     theme.mode === DARK_MODE ? WHITE_20 : BLACK_90};
 `;
 
+const NavStyled = styled.nav`
+  padding: 25px 15px;
+  margin-top: 100px;
+  width: 100%;
+`;
+
 const sidebar = {
   open: (height = 1080) => ({
     clipPath: `polygon(0px 0px, 300px 0px, 300px ${height}px, 0px ${height}px)`,
@@ -66,11 +72,7 @@ export const BurgerMenuView: React.FC<Props> = ({
   routes,
   router,
 }) => (
-  <StyledMotionNavWrapper
-    initial="closed"
-    animate={isOpen ? 'open' : 'closed'}
-    style={{ width: isOpen ? '300px' : '0', zIndex: 5 }}
-  >
+  <StyledMotionNavWrapper initial="closed" animate={isOpen ? 'open' : 'closed'}>
     <AnimatePresence>
       {isOpen && (
         <>
@@ -79,52 +81,55 @@ export const BurgerMenuView: React.FC<Props> = ({
             initial="closed"
             exit="closed"
             variants={sidebar}
-          />
-          <MenuListView
-            toggleOpen={toggleOpen}
-            routes={routes}
-            router={router}
-          />
-          <SidebarSocial
-            variants={{
-              initial: {
-                y: 50,
-                opacity: 0,
-                transition: {
-                  y: { stiffness: 1000 },
-                },
-              },
-              open: {
-                y: 0,
-                opacity: 1,
-                transition: {
-                  y: { stiffness: 1000, velocity: -100 },
-                  delay: 0.8,
-                },
-              },
-              closed: {
-                y: 50,
-                opacity: 0,
-                transition: {
-                  y: { stiffness: 1000 },
-                },
-              },
-            }}
-            initial="initial"
-            animate="open"
-            exit="closed"
           >
-            {SOCIAL_LINKS_DATA.map(({ name, path, icon }) => (
-              <StyledSocialLink
-                key={name}
-                href={path}
-                target="_blank"
-                rel="noopener"
-              >
-                <FontAwesomeIcon icon={icon} />
-              </StyledSocialLink>
-            ))}
-          </SidebarSocial>
+            <NavStyled>
+              <MenuListView
+                toggleOpen={toggleOpen}
+                routes={routes}
+                router={router}
+              />
+            </NavStyled>
+            <SidebarSocial
+              variants={{
+                initial: {
+                  y: 50,
+                  opacity: 0,
+                  transition: {
+                    y: { stiffness: 1000 },
+                  },
+                },
+                open: {
+                  y: 0,
+                  opacity: 1,
+                  transition: {
+                    y: { stiffness: 1000, velocity: -100 },
+                    delay: 0.8,
+                  },
+                },
+                closed: {
+                  y: 50,
+                  opacity: 0,
+                  transition: {
+                    y: { stiffness: 1000 },
+                  },
+                },
+              }}
+              initial="initial"
+              animate="open"
+              exit="closed"
+            >
+              {SOCIAL_LINKS_DATA.map(({ name, path, icon }) => (
+                <StyledSocialLink
+                  key={name}
+                  href={path}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <FontAwesomeIcon icon={icon} />
+                </StyledSocialLink>
+              ))}
+            </SidebarSocial>
+          </StyledMotionMenuBackdrop>
         </>
       )}
     </AnimatePresence>

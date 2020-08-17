@@ -25,12 +25,24 @@ export const LogoWrap = styled.div`
     margin: 0 auto;
   }
 
-  margin-bottom: 50px;
+  @media screen and (min-width: 480px) {
+    margin-bottom: 60px;
+  }
+
+  margin-bottom: 15px;
 `;
 
 export const AccordionBox = styled.div`
+  @media (min-width: 480px) {
+    padding-left: 60px;
+  }
+
+  @media screen and (min-width: 991px) {
+    padding-left: 0;
+  }
+
   width: 100%;
-  padding-left: 50px;
+  padding-left: 15px;
 `;
 
 export const DeveloperName = styled.h1`

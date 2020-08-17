@@ -15,13 +15,6 @@ const StyledMotionUl = styled(AnimatedUl)`
   flex-direction: column;
 `;
 
-const NavStyled = styled.nav`
-  padding: 25px 15px;
-  position: relative;
-  margin-top: 100px;
-  width: 100%;
-`;
-
 const variants = {
   open: {
     transition: { staggerChildren: 0.07, delayChildren: 0.2 },
@@ -42,22 +35,20 @@ export const MenuListView: React.FC<Props> = ({
   routes,
   router,
 }) => (
-  <NavStyled>
-    <StyledMotionUl initial="closed" exit="closed" variants={variants}>
-      {routes
-        .filter(
-          ({ name }) =>
-            name !== ROUTE_NAME_PORTFOLIO_PROJECT &&
-            name !== ROUTE_NAME_PORTFOLIO_CATEGORY
-        )
-        .map(({ name }) => (
-          <MenuListItemView
-            onClick={toggleOpen}
-            key={name}
-            name={name}
-            router={router}
-          />
-        ))}
-    </StyledMotionUl>
-  </NavStyled>
+  <StyledMotionUl initial="closed" exit="closed" variants={variants}>
+    {routes
+      .filter(
+        ({ name }) =>
+          name !== ROUTE_NAME_PORTFOLIO_PROJECT &&
+          name !== ROUTE_NAME_PORTFOLIO_CATEGORY
+      )
+      .map(({ name }) => (
+        <MenuListItemView
+          onClick={toggleOpen}
+          key={name}
+          name={name}
+          router={router}
+        />
+      ))}
+  </StyledMotionUl>
 );

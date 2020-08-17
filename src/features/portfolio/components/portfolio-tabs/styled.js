@@ -22,17 +22,19 @@ export const PortfolioTabsBox = styled(AnimatedDiv)`
 `;
 
 export const MotionPortfolioTabs = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  column-gap: 10px;
-  justify-content: center;
+  @media screen and (min-width: 400px) {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 30px;
+    justify-content: center;
+  }
+
   position: relative;
   top: 0;
   height: 100%;
-
-  @media only screen and (min-width: 400px) {
-    column-gap: 30px;
-  }
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
 
   &::after {
     content: '';
