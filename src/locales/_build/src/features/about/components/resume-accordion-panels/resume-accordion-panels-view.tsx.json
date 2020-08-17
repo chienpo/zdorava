@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx",
-        8
+        10
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx",
-        15
+        17
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx",
-        24
+        26
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx",
-        36
+        38
       ]
     ]
   },
@@ -35,79 +35,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx",
-        46
-      ]
-    ]
-  },
-  "STACK:": {
-    "origin": [
-      [
-        "src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx",
-        61
-      ]
-    ]
-  },
-  "REACT FEATURES:": {
-    "origin": [
-      [
-        "src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx",
-        67
-      ]
-    ]
-  },
-  "Redux - commercial experience": {
-    "origin": [
-      [
-        "src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx",
-        69
-      ]
-    ]
-  },
-  "Effector state manager, Router5, FramerMotion - were used to create this app": {
-    "origin": [
-      [
-        "src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx",
-        71
-      ]
-    ]
-  },
-  "FRAMEWORKS:": {
-    "origin": [
-      [
-        "src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx",
-        78
-      ]
-    ]
-  },
-  "Symfony - team-work experience": {
-    "origin": [
-      [
-        "src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx",
-        80
-      ]
-    ]
-  },
-  "Virtual Machine Platforms & Containers:": {
-    "origin": [
-      [
-        "src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx",
-        88
-      ]
-    ]
-  },
-  "JS Build Tools / JS Task Runners:": {
-    "origin": [
-      [
-        "src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx",
-        94
-      ]
-    ]
-  },
-  "WEB-DESIGN:": {
-    "origin": [
-      [
-        "src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx",
-        108
+        48
       ]
     ]
   }

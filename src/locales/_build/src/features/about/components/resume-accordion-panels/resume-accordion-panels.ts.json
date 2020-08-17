@@ -15,11 +15,11 @@
       ]
     ]
   },
-  "Skills": {
+  "Technology stack & skills": {
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts",
-        14
+        15
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts",
-        16
+        19
       ]
     ]
   }

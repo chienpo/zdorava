@@ -20,7 +20,10 @@ export const RESUME_PANELS = {
     panelTitle: i18nMark('Experience'),
     content: PanelTwoView,
   },
-  [PANEL_SKILLS]: { panelTitle: i18nMark('Skills'), content: PanelThreeView },
+  [PANEL_SKILLS]: {
+    panelTitle: i18nMark('Technology stack & skills'),
+    content: PanelThreeView,
+  },
   [PANEL_CERTIFICATES]: {
     panelTitle: i18nMark('Languages & achievements letters'),
     content: PanelFourView,

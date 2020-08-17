@@ -1,0 +1,47 @@
+{
+  "Priorities": {
+    "origin": [
+      ["src/features/about/components/resume-accordion-panels/panel-data.ts", 4]
+    ]
+  },
+  "Hand's on experience": {
+    "origin": [
+      [
+        "src/features/about/components/resume-accordion-panels/panel-data.ts",
+        34
+      ]
+    ]
+  },
+  "Code quality tools": {
+    "origin": [
+      [
+        "src/features/about/components/resume-accordion-panels/panel-data.ts",
+        64
+      ]
+    ]
+  },
+  "Platforms and bundlers": {
+    "origin": [
+      [
+        "src/features/about/components/resume-accordion-panels/panel-data.ts",
+        79
+      ]
+    ]
+  },
+  "Development environment setup": {
+    "origin": [
+      [
+        "src/features/about/components/resume-accordion-panels/panel-data.ts",
+        94
+      ]
+    ]
+  },
+  "UI/UX tools": {
+    "origin": [
+      [
+        "src/features/about/components/resume-accordion-panels/panel-data.ts",
+        119
+      ]
+    ]
+  }
+}

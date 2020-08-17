@@ -1,20 +1,31 @@
 import React from 'react';
 import { Trans } from '@lingui/macro';
+import { I18n } from '@lingui/react';
 
+import { SKILLS_PANEL_DATA } from './panel-data';
 import { CertificatesList } from '../certifiates-list';
-import { Ul, Strong, PanelWrapper } from './styled';
+import {
+  Ul,
+  Li,
+  LiInline,
+  StackList,
+  StackListItem,
+  Strong,
+  PanelWrapper,
+  H4,
+} from './styled';
 
 export const PanelOneView = () => (
   <PanelWrapper>
     <Ul>
-      <li>
+      <Li>
         <Trans>
           Graduated as a Master of Architectural Design, took part at
           Hackathon-contest by MTS in 2015 when web-development by a side with
           the other things became my way of life.
         </Trans>
-      </li>
-      <li>
+      </Li>
+      <Li>
         <Trans>
           Creating reactive applications for me is like making up some web
           ecosystems. But bricks here - are cutes of code, and
@@ -22,14 +33,14 @@ export const PanelOneView = () => (
           development skills, i combine this in to a real complex react web
           application!
         </Trans>
-      </li>
-      <li>
+      </Li>
+      <Li>
         <Trans>
           Closely related to design, front-end development process is always
           going on in creative way and i can always see the result of my job.
           And this is what i like so much!
         </Trans>
-      </li>
+      </Li>
     </Ul>
   </PanelWrapper>
 );
@@ -37,7 +48,7 @@ export const PanelOneView = () => (
 export const PanelTwoView = () => (
   <PanelWrapper>
     <Ul>
-      <li>
+      <Li>
         <Strong>2018-2020</Strong>
         <Trans>
           I&apos;ve been working in Itransition Softvare Development Company as
@@ -46,8 +57,8 @@ export const PanelTwoView = () => (
           developers I took part in making up really cool projects and features
           for our foreign customers.
         </Trans>
-      </li>
-      <li>
+      </Li>
+      <Li>
         <Strong>2008-2019</Strong>
         <Trans>
           Over 10 years I&apos;ve been studying on architecture & design
@@ -57,69 +68,35 @@ export const PanelTwoView = () => (
           to the customers! This expierence has became absolutely helpful in
           front-end, web-design, and even though in my whole life!
         </Trans>
-      </li>
+      </Li>
     </Ul>
   </PanelWrapper>
 );
 
 export const PanelThreeView = () => (
-  <PanelWrapper>
-    <Ul>
-      <li>
-        <Strong>
-          <Trans>STACK:</Trans>
-        </Strong>
-        HTML/CSS, JavaScript/TypeScript, ReactJS
-      </li>
-      <li>
-        <Strong>
-          <Trans>REACT FEATURES:</Trans>
-        </Strong>
-        <Trans>Redux - commercial experience</Trans>
-        <br />
-        <Trans>
-          Effector state manager, Router5, FramerMotion - were used to create
-          this app
-        </Trans>
-      </li>
-      <li>
-        <Strong>
-          <Trans>FRAMEWORKS:</Trans>
-        </Strong>
-        <Trans>Symfony - team-work experience</Trans>
-      </li>
-      <li>
-        <Strong>CSS:</Strong>
-        Flexbox, CSS-Grid
-      </li>
-      <li>
-        <Strong style={{ textTransform: 'uppercase' }}>
-          <Trans>Virtual Machine Platforms & Containers:</Trans>
-        </Strong>
-        Docker
-      </li>
-      <li>
-        <Strong style={{ textTransform: 'uppercase' }}>
-          <Trans>JS Build Tools / JS Task Runners:</Trans>
-        </Strong>
-        Webpack4, Parcel, GULP
-      </li>
-      <li>
-        <Strong>CRM:</Strong>
-        Wordpress
-      </li>
-      <li>
-        <Strong>VC:</Strong>
-        Git
-      </li>
-      <li>
-        <Strong>
-          <Trans>WEB-DESIGN:</Trans>
-        </Strong>
-        Photoshop, GIMP, TinyPNG, PhotoPea
-      </li>
-    </Ul>
-  </PanelWrapper>
+  <I18n>
+    {({ i18n }) => (
+      <PanelWrapper>
+        <Ul>
+          {SKILLS_PANEL_DATA.map(({ title, images }) => (
+            <LiInline key={title}>
+              <H4>
+                {i18n._(title)}
+                &#x0003A; &nbsp;
+              </H4>
+              <StackList>
+                {images.map(({ alt, src, height }) => (
+                  <StackListItem key={alt}>
+                    <img title={alt} height={height} alt={alt} src={src} />
+                  </StackListItem>
+                ))}
+              </StackList>
+            </LiInline>
+          ))}
+        </Ul>
+      </PanelWrapper>
+    )}
+  </I18n>
 );
 
 export const PanelFourView = () => (
