@@ -1,6 +1,5 @@
 import React, { Suspense } from 'react';
 import { Router } from 'router5';
-import { RouterProvider } from 'react-router5';
 
 import Providers from 'providers/providers';
 import { PageLoader } from 'ui/page-loader/page-loader';
@@ -13,12 +12,10 @@ interface Props {
 
 export const AppView: React.FC<Props> = ({ router }) => (
   <Suspense fallback={<PageLoader showSpinner={false} />}>
-    <RouterProvider router={router}>
-      <Providers>
-        <AppBox>
-          <PageSwitch />
-        </AppBox>
-      </Providers>
-    </RouterProvider>
+    <Providers router={router}>
+      <AppBox>
+        <PageSwitch />
+      </AppBox>
+    </Providers>
   </Suspense>
 );
