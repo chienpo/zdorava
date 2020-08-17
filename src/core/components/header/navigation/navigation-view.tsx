@@ -11,6 +11,7 @@ import {
   LanguageSwitchBox,
   AnimatedNavigationBox,
 } from './styled';
+
 const LanguageSwitch = React.lazy(() => import('ui/language-switch'));
 const ThemeSwitch = React.lazy(() => import('ui/theme-switch'));
 
