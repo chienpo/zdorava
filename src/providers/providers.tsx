@@ -13,13 +13,13 @@ type Props = {
 
 // eslint-disable-next-line import/no-default-export
 export default ({ children, router }: Props) => {
-  const curRouter = router.getState();
+  const routerState = router.getState();
 
   return (
     <RouterProvider router={router}>
-      <ThemeProvider currentRouterStateName={curRouter.name}>
+      <ThemeProvider routerStateName={routerState.name}>
         <LanguageProvider>
-          <TitleProvider curRouter={curRouter}>{children}</TitleProvider>
+          <TitleProvider routerState={routerState}>{children}</TitleProvider>
         </LanguageProvider>
       </ThemeProvider>
     </RouterProvider>

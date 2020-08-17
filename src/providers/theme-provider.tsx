@@ -8,20 +8,17 @@ import { DEFAULT_ROUTE_THEME_MODES } from 'constants/theme';
 
 type Props = {
   children: ReactElement;
-  currentRouterStateName: string;
+  routerStateName: string;
 };
 
-export const ThemeProvider: FC<Props> = ({
-  children,
-  currentRouterStateName,
-}) => {
+export const ThemeProvider: FC<Props> = ({ children, routerStateName }) => {
   const themeMode = useStore($themeStore);
 
   return (
     <ThemeProviderLib
       theme={{
         // TODO: Decide later. If all pages will be available for theming path just themeMode and that it
-        mode: DEFAULT_ROUTE_THEME_MODES[currentRouterStateName] || themeMode,
+        mode: DEFAULT_ROUTE_THEME_MODES[routerStateName] || themeMode,
       }}
     >
       <Normalize />
