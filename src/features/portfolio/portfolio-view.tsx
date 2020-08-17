@@ -5,7 +5,7 @@ import { useAnimation } from 'framer-motion';
 
 import { PortfolioItemModel } from 'models/portfolio-item.model';
 
-import { WHITE } from 'constants/colors';
+import { BLACK_100, WHITE_100 } from 'constants/colors';
 import { MoreLoader } from 'ui/more-loader/more-loader';
 import { AnimatedDiv } from 'animations/animated';
 import { PortfolioGrid, PortfolioTabs } from './components';
@@ -47,12 +47,13 @@ export const PortfolioView: React.FC<Props> = ({
     <AnimatedSectionStyled
       variants={{
         enter: {
+          backgroundColor: BLACK_100,
           transition: {
             duration: 1,
           },
         },
         exit: {
-          backgroundColor: WHITE,
+          backgroundColor: WHITE_100,
           transition: { duration: 0.4 },
         },
       }}

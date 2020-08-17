@@ -92,7 +92,7 @@ msgstr "Тесно связанный с дизайном, процесс раз
 msgid "Code quality tools"
 msgstr "Инструменты качества кода"
 
-#: src/features/portfolio/portfolio-view.tsx:36
+#: src/features/portfolio/portfolio-view.tsx:37
 msgid "Coming soon ..."
 msgstr "В разработке ..."
 

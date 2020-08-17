@@ -92,7 +92,7 @@ msgstr "Closely related to design, front-end development process is always going
 msgid "Code quality tools"
 msgstr "Code quality tools"
 
-#: src/features/portfolio/portfolio-view.tsx:36
+#: src/features/portfolio/portfolio-view.tsx:37
 msgid "Coming soon ..."
 msgstr "Coming soon ..."
 

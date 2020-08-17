@@ -21,20 +21,6 @@ interface Props {
   contactFormOpened: boolean;
 }
 
-const variants = {
-  initial: {
-    opacity: 0,
-  },
-  enter: {
-    opacity: 1,
-    transition: { duration: 0.4 },
-  },
-  exit: {
-    opacity: 0,
-    transition: { duration: 0.4 },
-  },
-};
-
 export const FooterView: React.FC<Props> = ({
   toggleContactForm,
   contactFormOpened,
@@ -47,7 +33,18 @@ export const FooterView: React.FC<Props> = ({
       />
     </Suspense>
     <AnimatePresence>
-      <FooterWrapper initial="initial" variants={variants}>
+      <FooterWrapper
+        variants={{
+          enter: {
+            opacity: 1,
+            transition: { duration: 0.4 },
+          },
+          exit: {
+            opacity: 0,
+            transition: { duration: 0 },
+          },
+        }}
+      >
         <FooterNav>
           {SOCIAL_LINKS_DATA.map(({ path, icon, name, attrs }) => (
             <FooterSocialLink

@@ -5,6 +5,7 @@ import { DARK_MODE } from 'constants/theme';
 import { BLACK_30, GRAY, RED, RED_70, WHITE } from 'constants/colors';
 import overlayBlackDot from 'assets/images/overlay_black.png';
 import overlayWhiteDot from 'assets/images/overlay_white_four.png';
+import { AnimatedDiv } from 'animations/animated';
 
 export const LanguageSwitchBox = styled.div`
   z-index: 0;
@@ -20,7 +21,7 @@ export const NavUl = styled.ul`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding-left: 270px;
+  padding-left: 335px;
 `;
 
 export const BaseLinkStyled = styled(BaseLink)`
@@ -80,14 +81,19 @@ export const BaseLinkStyled = styled(BaseLink)`
 `;
 
 export const NavigationWrapper = styled.div`
-  background: ${({ theme }) =>
-    theme.mode === DARK_MODE
-      ? `${BLACK_30} url(${overlayBlackDot}) repeat scroll 0 -2px;`
-      : `${WHITE} url(${overlayWhiteDot}) repeat scroll 0 -2px;`};
-  display: grid;
-  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   z-index: 1;
+`;
+
+export const AnimatedNavigationBox = styled(AnimatedDiv)`
+  display: grid;
+  width: 100%;
+  height: 100%;
+  background: ${({ theme }) =>
+    theme.mode === DARK_MODE
+      ? `${BLACK_30} url(${overlayBlackDot}) repeat scroll 0 -2px;`
+      : `${WHITE} url(${overlayWhiteDot}) repeat scroll 0 -2px;`}};
 `;

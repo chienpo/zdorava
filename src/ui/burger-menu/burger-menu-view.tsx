@@ -26,6 +26,8 @@ const StyledMotionNavWrapper = styled(AnimatedDiv)`
   top: 0;
   left: 0;
   bottom: 0;
+  height: 100%;
+  z-index: 1;
 `;
 
 const StyledMotionMenuBackdrop = styled(AnimatedDiv)`
