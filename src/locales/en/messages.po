@@ -104,10 +104,6 @@ msgstr "Creating reactive applications for me is like making up some web ecosyst
 msgid "Development environment setup"
 msgstr "Development environment setup"
 
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:71
-#~ msgid "Effector state manager, Router5, FramerMotion - were used to create this app"
-#~ msgstr "Effector state manager, Router5, FramerMotion - were used to create this app"
-
 #: src/features/contacts/components/contact-form-view.tsx:15
 msgid "Email"
 msgstr "Email"
@@ -164,10 +160,6 @@ msgstr "Home"
 msgid "I've been working in Itransition Softvare Development Company as a Front-end Developer. This time allowed me to dive dipper in to front-end and understand how cool is it! Working in a team of developers I took part in making up really cool projects and features for our foreign customers."
 msgstr "I've been working in Itransition Softvare Development Company as a Front-end Developer. This time allowed me to dive dipper in to front-end and understand how cool is it! Working in a team of developers I took part in making up really cool projects and features for our foreign customers."
 
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:94
-#~ msgid "JS Build Tools / JS Task Runners:"
-#~ msgstr "JS Build Tools / JS Task Runners:"
-
 #: src/features/home/home-view.tsx:13
 msgid "Lagunovsky"
 msgstr "Lagunovsky"
@@ -209,37 +201,17 @@ msgstr "Priorities"
 msgid "Project:"
 msgstr "Project:"
 
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:67
-#~ msgid "REACT FEATURES:"
-#~ msgstr "REACT FEATURES:"
-
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:69
-#~ msgid "Redux - commercial experience"
-#~ msgstr "Redux - commercial experience"
-
 #: src/form-builder/validators.tsx:7
 msgid "Required"
 msgstr "Required"
-
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:61
-#~ msgid "STACK:"
-#~ msgstr "STACK:"
 
 #: src/features/contacts/components/contact-form-view.tsx:25
 msgid "Send message"
 msgstr "Send message"
 
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:14
-#~ msgid "Skills"
-#~ msgstr "Skills"
-
 #: src/features/home/home-view.tsx:11
 msgid "Stepan"
 msgstr "Stepan"
-
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:80
-#~ msgid "Symfony - team-work experience"
-#~ msgstr "Symfony - team-work experience"
 
 #: src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:15
 msgid "Technology stack & skills"
@@ -248,14 +220,6 @@ msgstr "Technology stack & skills"
 #: src/features/about/components/resume-accordion-panels/panel-data.ts:119
 msgid "UI/UX tools"
 msgstr "UI/UX tools"
-
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:88
-#~ msgid "Virtual Machine Platforms & Containers:"
-#~ msgstr "Virtual Machine Platforms & Containers:"
-
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:108
-#~ msgid "WEB-DESIGN:"
-#~ msgstr "WEB-DESIGN:"
 
 #: src/features/single-project/single-project-view.tsx:45
 msgid "With a great pleasure I suggest you"

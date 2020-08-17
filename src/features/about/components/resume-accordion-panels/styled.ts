@@ -41,6 +41,7 @@ export const LiInline = styled(Li)`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  margin-bottom: 10px;
 `;
 
 export const Ul = styled.ul`
