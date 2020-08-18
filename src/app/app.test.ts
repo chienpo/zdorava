@@ -1,8 +1,10 @@
 import { createElement } from 'react';
 import { render } from '@testing-library/react';
-import AppView from './app-view';
+import { $router } from 'store/router-store';
 
-test('renders container', () => {
-  const { container } = render(createElement(AppView, { router: {} }));
+import { App } from './app';
+
+test('Renders app', () => {
+  const { container } = render(createElement(App, { router: $router }));
   expect(container).toBeInTheDocument();
 });

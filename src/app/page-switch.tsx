@@ -60,7 +60,7 @@ const homePageVariants = {
 
 export const PageSwitch = () => {
   const { route } = useRouteNode('');
-  const topRouteName = route.name.split('.')[0];
+  const topRouteName = !route.name ? ROUTE_NAME_HOME : route.name.split('.')[0];
 
   return (
     <AnimatePresence exitBeforeEnter initial={topRouteName === ROUTE_NAME_HOME}>
