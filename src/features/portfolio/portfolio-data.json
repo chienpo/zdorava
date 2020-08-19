@@ -2,8 +2,8 @@
   "portfolio": [
     {
       "category": "frontend",
-      "imageSrc": "preview-doe-three.jpg",
-      "thumbnailSrc": "preview-doe-three.jpg",
+      "imageSrc": "preview-doe-three.png",
+      "thumbnailSrc": "preview-doe-three.png",
       "alt": "patent-management-system",
       "description": {
         "en": "I bounded by NDA demonstrate this ITRANSITION project. So this time I was working on React features for two projects in patent management area. This is the first one. I was really exiting to make up some frontend part for our customer's business. I got experience in such areas like:",
