@@ -18,6 +18,7 @@ import {
   StyledLink,
   StyledRealProjectLink,
   Title,
+  DescriptionList,
 } from './styled';
 
 interface Props {
@@ -54,12 +55,8 @@ export const SingleProjectView: React.FC<Props> = ({
         <AnimatedFigureStyled variants={imageVariants} initial="exit">
           <LazyImage
             alt={data.alt}
-            src={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${data.category}/${
-              data.imageSrc
-            }`}
-            srcSet={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${
-              data.category
-            }-thumbnail/${data.thumbnailSrc}`}
+            src={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${data.category}/${data.imageSrc}`}
+            srcSet={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${data.category}-thumbnail/${data.thumbnailSrc}`}
             style={{ maxWidth: '70vw' }}
           />
         </AnimatedFigureStyled>
@@ -82,6 +79,17 @@ export const SingleProjectView: React.FC<Props> = ({
                 <Title>{data.title[i18n.language]}</Title>
                 <Description>
                   {data.description[i18n.language]}
+                  {data.descriptionList && (
+                    <DescriptionList>
+                      {data.descriptionList[i18n.language].map(item => (
+                        <li>
+                          <b>&bull;</b>
+                          &nbsp;
+                          {item}
+                        </li>
+                      ))}
+                    </DescriptionList>
+                  )}
                   <br />
                   {data.projectLinks && (
                     <Trans>With a great pleasure I suggest you</Trans>

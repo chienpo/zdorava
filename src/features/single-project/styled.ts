@@ -57,7 +57,7 @@ export const Title = styled.span`
   margin-bottom: 30px;
 `;
 
-export const Description = styled.span`
+export const Description = styled.div`
   @media screen and (min-width: 767px) {
     font-size: 30px;
   }
@@ -113,4 +113,10 @@ export const StyledRealProjectLink = styled.a`
   &:hover {
     color: ${RED_70};
   }
+`;
+
+export const DescriptionList = styled.ul`
+  display: inline-block;
+  width: 70%;
+  list-style: none;
 `;

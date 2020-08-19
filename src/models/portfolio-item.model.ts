@@ -8,6 +8,7 @@ export interface PortfolioPreviewItemModel {
 
 export interface PortfolioItemModel extends PortfolioPreviewItemModel {
   description: { [key: string]: string };
+  descriptionList?: { [key: string]: string[] };
   name?: string;
   onItemClick?: () => void;
   projectLinks?: { href: string; label: string }[];
