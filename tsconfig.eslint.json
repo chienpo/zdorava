@@ -1,4 +1,4 @@
 {
   "extends": "./tsconfig.json",
-  "include": ["src", ".eslintrc.js", "docz.config.js", "babel.config.js", "webstorm.config.js", "stylelint.config.js", "jest.config.js", "jest/file-mock.js", "jest/style-mock.js"]
+  "include": ["src", "config/setupTest.ts", ".eslintrc.js", "docz.config.js", "babel.config.js", "webstorm.config.js", "stylelint.config.js", "jest.config.js", "jest/file-mock.js", "jest/style-mock.js"]
 }
