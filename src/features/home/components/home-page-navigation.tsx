@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Trans } from '@lingui/macro';
+import { Trans } from '@lingui/react';
 import { useStore } from 'effector-react';
 
 import { $portfolioTabsStore } from 'store/portfolio-tabs-store';

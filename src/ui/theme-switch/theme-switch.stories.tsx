@@ -4,7 +4,6 @@ import { action } from '@storybook/addon-actions';
 
 import { ThemeSwitch, ThemeSwitchProps } from 'ui/theme-switch/theme-switch';
 
-// eslint-disable-next-line import/no-default-export
 export default {
   title: 'UI/ThemeSwitch',
   component: ThemeSwitch,

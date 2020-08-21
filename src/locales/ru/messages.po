@@ -80,11 +80,11 @@ msgstr "Aрт"
 msgid "Art projects"
 msgstr "Арт проекты"
 
-#: src/features/single-project/single-project-view.tsx:36
+#: src/features/single-project/single-project-view.tsx:35
 msgid "Back"
 msgstr "Назад"
 
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:26
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:25
 msgid "Closely related to design, front-end development process is always going on in creative way and i can always see the result of my job. And this is what i like so much!"
 msgstr "Тесно связанный с дизайном, процесс разработки интерфейса всегда идет творчески, и я всегда вижу результат своей работы. И это то, что мне так нравится!"
 
@@ -96,7 +96,7 @@ msgstr "Инструменты качества кода"
 msgid "Coming soon ..."
 msgstr "В разработке ..."
 
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:17
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:16
 msgid "Creating reactive applications for me is like making up some web ecosystems. But bricks here - are cutes of code, and component-structure - is the constructions. Using my arch-design and development skills, i combine this in to a real complex react web application!"
 msgstr "Создание реактивных приложений для меня похоже на создание некоторых веб-экосистем. Но кирпичи здесь - это кусочки кода, а компонент-структура - это конструкции. Используя свои навыки в области арх-дизайна и разработки, я совмещаю это с очень сложным веб-приложением реагирования!"
 
@@ -104,19 +104,19 @@ msgstr "Создание реактивных приложений для мен
 msgid "Development environment setup"
 msgstr "Рабочее окружение"
 
-#: src/features/contacts/components/contact-form-view.tsx:15
+#: src/features/contacts/components/contact-form-view.tsx:14
 msgid "Email"
 msgstr "Почта"
 
-#: src/features/contacts/components/contact-form-view.tsx:16
+#: src/features/contacts/components/contact-form-view.tsx:15
 msgid "Enter your email"
 msgstr "Почта"
 
-#: src/features/contacts/components/contact-form-view.tsx:19
+#: src/features/contacts/components/contact-form-view.tsx:18
 msgid "Enter your message"
 msgstr "Сообщение"
 
-#: src/features/contacts/components/contact-form-view.tsx:13
+#: src/features/contacts/components/contact-form-view.tsx:12
 msgid "Enter your name"
 msgstr "Ваши инициалы"
 
@@ -136,7 +136,7 @@ msgstr "Front-end"
 msgid "Front-end (React-JS) Developer"
 msgstr "Front-end (React-JS) Разработчик"
 
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:10
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:9
 msgid "Graduated as a Master of Architectural Design, took part at Hackathon-contest by MTS in 2015 when web-development by a side with the other things became my way of life."
 msgstr "Получил степень магистра архитектурного дизайна, принял участие в хакатоне-конкурсе МТС в 2015 году, когда разработка веб-сайтов наравне с другими вещами стала моим стилем жизни."
 
@@ -152,7 +152,7 @@ msgstr "Привет, меня зовут Степан"
 msgid "Home"
 msgstr "Главная"
 
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:38
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:37
 msgid "I've been working in Itransition Softvare Development Company as a Front-end Developer. This time allowed me to dive dipper in to front-end and understand how cool is it! Working in a team of developers I took part in making up really cool projects and features for our foreign customers."
 msgstr "Я работал в компании Itransition Softvare Development в качестве фронт-разработчика. Это время позволило мне погрузиться в передний конец и понять, как это круто! Работая в команде разработчиков, я принимал участие в создании действительно интересных проектов и функций для наших зарубежных клиентов."
 
@@ -164,19 +164,19 @@ msgstr "Лагуновский"
 msgid "Languages & achievements letters"
 msgstr "Языки, сертификаты"
 
-#: src/features/contacts/components/contact-form-view.tsx:18
+#: src/features/contacts/components/contact-form-view.tsx:17
 msgid "Message"
 msgstr "Текст сообщения"
 
-#: src/features/contacts/components/contact-form-view.tsx:22
+#: src/features/contacts/components/contact-form-view.tsx:21
 msgid "Message has been sent!"
 msgstr "Письмо отправлено!"
 
-#: src/features/contacts/components/contact-form-view.tsx:12
+#: src/features/contacts/components/contact-form-view.tsx:11
 msgid "Name"
 msgstr "Имя"
 
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:48
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:47
 msgid "Over 10 years I've been studying on architecture & design specialisations. I was lucky to improve my skills in such areas like: interior and brand design, modern and concept arts, i created a lot of cool creative projects and also got and expierence of presenting them to the customers! This expierence has became absolutely helpful in front-end, web-design, and even though in my whole life!"
 msgstr "Более 10 лет я обучался по специальностям архитектура и архитектурного-дизайна. Мне повезло улучшить свои навыки в таких областях, как: дизайн интерьера и бренда, современный и концепт-арт, я создал много крутых креативных проектов, а также получил и испытал возможность представить их клиентам! Этот опыт стал абсолютно полезным в front-end, веб-дизайне и даже в моей жизни!"
 
@@ -201,7 +201,7 @@ msgstr "Проект: "
 msgid "Required"
 msgstr "Обязательное поле"
 
-#: src/features/contacts/components/contact-form-view.tsx:25
+#: src/features/contacts/components/contact-form-view.tsx:24
 msgid "Send message"
 msgstr "Отправить сообщение"
 
@@ -217,7 +217,7 @@ msgstr "Стек технологий"
 msgid "UI/UX tools"
 msgstr "Инструменты UI/UX"
 
-#: src/features/single-project/single-project-view.tsx:45
+#: src/features/single-project/single-project-view.tsx:51
 msgid "With a great pleasure I suggest you"
 msgstr "С большим удовольствием предлагаю тебе"
 
@@ -245,6 +245,6 @@ msgstr "Курс разговорного английского"
 msgid "type-script course certificate"
 msgstr "type-script курс серцификат"
 
-#: src/features/single-project/single-project-view.tsx:49
+#: src/features/single-project/single-project-view.tsx:55
 msgid "watch real project"
 msgstr "посмотреть проект"

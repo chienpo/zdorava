@@ -1,16 +1,20 @@
 # Dependencies
 node_modules
 
-# Build
-/dist
-/build
+# Build files
+build
+dist
+storybook-static
 
 #Coverage
 /coverage
 
 # IDE
 .idea
-.vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
 # Misc
 .temp
@@ -33,5 +37,5 @@ lerna-debug.log*
 # Htaccess
 /public/.htaccess
 
-# Storybook
-/storybook-static
+# DotEnv
+.env

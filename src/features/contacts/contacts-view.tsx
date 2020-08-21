@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Trans } from '@lingui/macro';
+import { Trans } from '@lingui/react';
 import { AnimatePresence } from 'framer-motion';
 
 import { ButtonCloseAnimated } from 'ui/button-close-animated';

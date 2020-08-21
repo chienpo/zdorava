@@ -1,8 +1,7 @@
-import 'react-hot-loader';
 import { createElement } from 'react';
 import { render } from 'react-dom';
 
-import App from 'app';
+import { HotApp } from './hot-app';
 import { router } from './router';
 
 import { loadWebFonts } from './utils/web-font-loader';
@@ -21,7 +20,12 @@ const renderApp = (): void => {
       },
     })
   );
-  render(createElement(App, { router }), rootElement);
+  render(createElement(HotApp, { router }), rootElement);
 };
 
 router.start(renderApp);
+
+// Hot reloading
+if (module.hot) {
+  module.hot.accept(renderApp);
+}

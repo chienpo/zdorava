@@ -13,7 +13,10 @@
     "noEmit": true,
     "strict": true,
     "alwaysStrict": true,
-    "baseUrl": "./src",
+    "baseUrl": "./",
+    "paths": {
+      "*": ["src/*"]
+    },
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "esModuleInterop": true,
@@ -22,7 +25,6 @@
     "allowSyntheticDefaultImports": true,
     "isolatedModules": true
   },
-  "include": [
-    "src"
-  ]
+  "include": ["./", ".*.js", ".storybook/*.ts", ".storybook/*.tsx"],
+  "exclude": ["node_modules", "build", "storybook-static"]
 }

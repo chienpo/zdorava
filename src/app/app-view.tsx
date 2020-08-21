@@ -1,7 +1,7 @@
 import React from 'react';
 import { Router } from 'router5';
 
-import Providers from 'providers/providers';
+import Providers from '../providers/providers';
 import { PageSwitch } from './page-switch';
 import { AppBox } from './styled';
 

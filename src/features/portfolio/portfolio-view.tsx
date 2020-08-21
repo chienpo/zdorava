@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Trans } from '@lingui/macro';
+import { Trans } from '@lingui/react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { useAnimation } from 'framer-motion';
 

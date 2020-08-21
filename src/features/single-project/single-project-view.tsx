@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { I18n } from '@lingui/react';
-import { Trans } from '@lingui/macro';
+import { I18n, Trans } from '@lingui/react';
 import { AnimatePresence } from 'framer-motion';
 
 import { PortfolioItemModel } from 'models/portfolio-item.model';
