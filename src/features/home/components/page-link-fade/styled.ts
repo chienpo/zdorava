@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { Link } from 'react-router5';
 
-import navigationPortfolioBackground from 'assets/images/backgrounds/navigation-portfolio-background.png';
-import navigationAboutBackgroundLogo from 'assets/images/backgrounds/navigation-contacts-background.png';
+import navigationPortfolioBackground from '~/assets/images/backgrounds/navigation-portfolio-background.png';
+import navigationAboutBackgroundLogo from '~/assets/images/backgrounds/navigation-contacts-background.png';
 import { ROUTE_NAME_ABOUT } from '~/router/routes';
 import { mirrorEffect } from '~/helpers/mirror-effect';
 import { BLACK, RED, RED_70, WHITE, WHITE_30 } from '~/constants/colors';
