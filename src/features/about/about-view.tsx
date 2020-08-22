@@ -2,8 +2,8 @@ import * as React from 'react';
 import { Trans } from '@lingui/react';
 import { AnimatePresence } from 'framer-motion';
 
-import { Accordion } from 'ui/accordion';
-import { AnimatedDiv } from 'animations/animated';
+import { Accordion } from '~/ui/accordion';
+import { AnimatedDiv } from '~/animations/animated';
 import { LogoGrid, RESUME_PANELS, DEFAULT_RESUME_PANEL } from './components';
 import {
   SectionAbout,

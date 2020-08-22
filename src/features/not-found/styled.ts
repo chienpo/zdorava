@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import overlayWhiteDot from 'assets/images/overlay_white.png';
 import homepageBg from 'assets/images/backgrounds/homepage-background-tinyfied.jpg';
 
-import { BLACK, WHITE_90 } from 'constants/colors';
+import { BLACK, WHITE_90 } from '~/constants/colors';
 
 export const SectionNotFound = styled(motion.section)`
   background: url(${homepageBg}) center center no-repeat;

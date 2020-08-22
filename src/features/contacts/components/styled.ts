@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import { Button } from 'ui/button/button';
-import { RED } from 'constants/colors';
+
+import { Button } from '~/ui/button/button';
+import { RED } from '~/constants/colors';
 
 export const StyledButton = styled(Button)`
   display: grid;

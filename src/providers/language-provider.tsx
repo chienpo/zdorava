@@ -3,7 +3,7 @@ import { I18nProvider } from '@lingui/react';
 import { Catalog, Catalogs } from '@lingui/core';
 import { useStore } from 'effector-react';
 
-import { $languageStore } from 'store/language-store';
+import { $languageStore } from '~/store/language-store';
 
 interface Props {
   children: ReactNode;

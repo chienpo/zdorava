@@ -8,18 +8,20 @@ import {
   ROUTE_NAME_HOME,
   ROUTE_NAME_PORTFOLIO,
   ROUTE_NAME_PORTFOLIO_PROJECT,
-} from 'router/routes';
-import { PageLoader } from 'ui/page-loader/page-loader';
+} from '~/router/routes';
+import { PageLoader } from '~/ui/page-loader/page-loader';
 import { MotionContent } from './styled';
 
-const HomePage = React.lazy(() => import('core/pages/home/home-page'));
-const AboutPage = React.lazy(() => import('core/pages/about/about-page'));
+const HomePage = React.lazy(() => import('~/core/pages/home/home-page'));
+const AboutPage = React.lazy(() => import('~/core/pages/about/about-page'));
 const PortfolioPage = React.lazy(() =>
-  import('core/pages/portfolio/portfolio-page')
+  import('~/core/pages/portfolio/portfolio-page')
 );
-const ProjectPage = React.lazy(() => import('core/pages/project/project-page'));
+const ProjectPage = React.lazy(() =>
+  import('~/core/pages/project/project-page')
+);
 const NotFoundPage = React.lazy(() =>
-  import('core/pages/not-found/not-found-page')
+  import('~/core/pages/not-found/not-found-page')
 );
 
 const pageVariants = {

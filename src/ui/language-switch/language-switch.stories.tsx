@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 import {
   LanguageSwitch,
   LanguageSwitchProps,
-} from 'ui/language-switch/language-switch';
+} from '~/ui/language-switch/language-switch';
 
 // eslint-disable-next-line import/no-default-export
 export default {

@@ -1,9 +1,9 @@
 import React from 'react';
 import { AnimatePresence } from 'framer-motion';
 
-import { getModernSrcSet } from 'helpers/get-modern-src-set';
-import { LazyImage } from 'ui/lazy-image';
-import { AnimatedDiv } from 'animations/animated';
+import { getModernSrcSet } from '~/helpers/get-modern-src-set';
+import { LazyImage } from '~/ui/lazy-image';
+import { AnimatedDiv } from '~/animations/animated';
 import { LOGOS_DATA } from './logos-data';
 import { GridLogoWrapper, StyledMotionFigure } from './styled';
 

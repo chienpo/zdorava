@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { $router, RouterStoreProps } from 'store/router-store';
+import { $router, RouterStoreProps } from '~/store/router-store';
 
 import { App } from './app';
 

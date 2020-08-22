@@ -1,6 +1,6 @@
 import { createStore, createEvent, Event } from 'effector';
 
-import { DARK_MODE, DEFAULT_THEME_MODE, LIGHT_MODE } from 'constants/theme';
+import { DARK_MODE, DEFAULT_THEME_MODE, LIGHT_MODE } from '~/constants/theme';
 
 export const toggleTheme: Event<boolean> = createEvent();
 

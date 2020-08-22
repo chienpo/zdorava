@@ -3,9 +3,9 @@ import Tilt from 'react-parallax-tilt';
 import { AnimatePresence } from 'framer-motion';
 import { I18n } from '@lingui/react';
 
-import { PAGE_TITLES } from 'constants/page-titles';
-import { ROUTE_NAME_PORTFOLIO } from 'router/routes';
-import { AnimatedDiv } from 'animations/animated';
+import { PAGE_TITLES } from '~/constants/page-titles';
+import { ROUTE_NAME_PORTFOLIO } from '~/router/routes';
+import { AnimatedDiv } from '~/animations/animated';
 import {
   PageLinkStyled,
   Text,

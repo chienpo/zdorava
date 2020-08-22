@@ -6,8 +6,7 @@ import {
   ROUTE_NAME_ABOUT,
   ROUTE_NAME_PORTFOLIO,
   ROUTE_NAME_PORTFOLIO_PROJECT,
-} from 'router/routes';
-
+} from '~/router/routes';
 import {
   PORTFOLIO_CATEGORY_TAB_NAME_ALL,
   PORTFOLIO_CATEGORY_TAB_NAME_ART,

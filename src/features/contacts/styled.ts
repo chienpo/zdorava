@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-import { LIGHT_MODE } from 'constants/theme';
-import { BLACK, WHITE } from 'constants/colors';
-import { H2 } from 'ui/headings';
-import { AnimatedDiv } from 'animations/animated';
+import { LIGHT_MODE } from '~/constants/theme';
+import { BLACK, WHITE } from '~/constants/colors';
+import { H2 } from '~/ui/headings';
+import { AnimatedDiv } from '~/animations/animated';
 
 export const StyledMotionContactFormWrapper = styled(AnimatedDiv)`
   position: fixed;

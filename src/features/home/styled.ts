@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import { DARK_MODE } from 'constants/theme';
-import { BLACK_80, RED, WHITE_80 } from 'constants/colors';
-import { noiseAnim, noiseAnimTwo } from 'animations/keyframes/noise';
+import { DARK_MODE } from '~/constants/theme';
+import { BLACK_80, RED, WHITE_80 } from '~/constants/colors';
+import { noiseAnim, noiseAnimTwo } from '~/animations/keyframes/noise';
 
 export const SectionHome = styled.section`
   position: relative;

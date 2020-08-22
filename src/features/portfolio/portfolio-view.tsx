@@ -3,11 +3,11 @@ import { Trans } from '@lingui/react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { useAnimation } from 'framer-motion';
 
-import { PortfolioItemModel } from 'models/portfolio-item.model';
+import { PortfolioItemModel } from '~/models/portfolio-item.model';
 
-import { BLACK_100, WHITE_100 } from 'constants/colors';
-import { MoreLoader } from 'ui/more-loader/more-loader';
-import { AnimatedDiv } from 'animations/animated';
+import { BLACK_100, WHITE_100 } from '~/constants/colors';
+import { MoreLoader } from '~/ui/more-loader/more-loader';
+import { AnimatedDiv } from '~/animations/animated';
 import { PortfolioGrid, PortfolioTabs } from './components';
 import {
   AnimatedSectionStyled,

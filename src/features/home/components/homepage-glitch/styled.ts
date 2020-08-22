@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { LazyImage } from 'ui/lazy-image';
+import { LazyImage } from '~/ui/lazy-image';
 
 export const GlitchContainer = styled.div`
   min-height: 100vh;

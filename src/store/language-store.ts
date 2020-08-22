@@ -1,6 +1,6 @@
 import { createStore, createEvent, Event } from 'effector';
 
-import { EN } from 'constants/languages';
+import { EN } from '~/constants/languages';
 
 export const toggleLang: Event<string> = createEvent();
 

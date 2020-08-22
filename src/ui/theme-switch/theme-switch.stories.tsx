@@ -2,7 +2,7 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
-import { ThemeSwitch, ThemeSwitchProps } from 'ui/theme-switch/theme-switch';
+import { ThemeSwitch, ThemeSwitchProps } from '~/ui/theme-switch/theme-switch';
 
 export default {
   title: 'UI/ThemeSwitch',

@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import { Link } from 'react-router5';
 
-import { ROUTE_NAME_ABOUT } from 'router/routes';
-import { mirrorEffect } from 'helpers/mirror-effect';
-import { BLACK, RED, RED_70, WHITE, WHITE_30 } from 'constants/colors';
-import { DARK_MODE } from 'constants/theme';
 import navigationPortfolioBackground from 'assets/images/backgrounds/navigation-portfolio-background.png';
 import navigationAboutBackgroundLogo from 'assets/images/backgrounds/navigation-contacts-background.png';
-import { pulseAnim, pulseAnimWhite } from 'animations/keyframes/pulse';
+import { ROUTE_NAME_ABOUT } from '~/router/routes';
+import { mirrorEffect } from '~/helpers/mirror-effect';
+import { BLACK, RED, RED_70, WHITE, WHITE_30 } from '~/constants/colors';
+import { DARK_MODE } from '~/constants/theme';
+import { pulseAnim, pulseAnimWhite } from '~/animations/keyframes/pulse';
 
 export const LinkOverlayMirrorEffect = styled.div`
   width: 100%;

@@ -2,20 +2,20 @@ import { createElement, useState, useEffect, FC } from 'react';
 import axios from 'axios';
 import { useStore } from 'effector-react';
 
-import { PortfolioItemModel } from 'models/portfolio-item.model';
+import { PortfolioItemModel } from '~/models/portfolio-item.model';
 
 import {
   $portfolioTabsStore,
   setPortfolioCategory,
-} from 'store/portfolio-tabs-store';
+} from '~/store/portfolio-tabs-store';
 
 import {
   PORTFOLIO_CATEGORY_TAB_NAME_ART,
   PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND,
-} from 'constants/portfolio';
-import { FIREBASE_DATABASE_URL, FIREBASE_DATABASE_REF } from 'constants/api';
-import { auth, firebaseInstance } from 'features/auth';
-import { PageLoader } from 'ui/page-loader/page-loader';
+} from '~/constants/portfolio';
+import { FIREBASE_DATABASE_URL, FIREBASE_DATABASE_REF } from '~/constants/api';
+import { auth, firebaseInstance } from '~/features/auth';
+import { PageLoader } from '~/ui/page-loader/page-loader';
 import { PortfolioView } from './portfolio-view';
 
 export const Portfolio: FC = () => {

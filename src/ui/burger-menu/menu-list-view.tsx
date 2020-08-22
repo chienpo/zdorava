@@ -6,8 +6,8 @@ import { Route, Router } from 'router5';
 import {
   ROUTE_NAME_PORTFOLIO_CATEGORY,
   ROUTE_NAME_PORTFOLIO_PROJECT,
-} from 'router/routes';
-import { AnimatedUl } from 'animations/animated';
+} from '~/router/routes';
+import { AnimatedUl } from '~/animations/animated';
 import { MenuListItemView } from './menu-list-item-view';
 
 const StyledMotionUl = styled(AnimatedUl)`

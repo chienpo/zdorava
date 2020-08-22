@@ -5,11 +5,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { Route, Router } from 'router5';
 
-import { DARK_MODE } from 'constants/theme';
-import { BLACK_90, WHITE_20 } from 'constants/colors';
-import { SOCIAL_LINKS_DATA } from 'constants/social';
-import { Backdrop } from 'ui/backdrop';
-import { AnimatedDiv } from 'animations/animated';
+import { DARK_MODE } from '~/constants/theme';
+import { BLACK_90, WHITE_20 } from '~/constants/colors';
+import { SOCIAL_LINKS_DATA } from '~/constants/social';
+import { Backdrop } from '~/ui/backdrop';
+import { AnimatedDiv } from '~/animations/animated';
 import { MenuToggleButtonView } from './menu-toggle-button-view';
 import { MenuListView } from './menu-list-view';
 import { SidebarSocial, StyledSocialLink } from './styled';

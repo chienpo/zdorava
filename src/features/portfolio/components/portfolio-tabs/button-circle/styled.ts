@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-import { ROUTE_NAME_ABOUT } from 'router/routes';
-import { BLACK, RED, RED_70, WHITE } from 'constants/colors';
-import { DARK_MODE } from 'constants/theme';
-import { pulseAnim, pulseAnimWhite } from 'animations/keyframes/pulse';
+import { ROUTE_NAME_ABOUT } from '~/router/routes';
+import { BLACK, RED, RED_70, WHITE } from '~/constants/colors';
+import { DARK_MODE } from '~/constants/theme';
+import { pulseAnim, pulseAnimWhite } from '~/animations/keyframes/pulse';
 
 export const ButtonCircleStyled = styled.button`
   @media (min-width: 991px) {

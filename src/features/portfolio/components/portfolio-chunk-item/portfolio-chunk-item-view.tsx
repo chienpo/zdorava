@@ -4,11 +4,11 @@ import { faImage } from '@fortawesome/free-solid-svg-icons';
 import { I18n } from '@lingui/react';
 import { AnimatePresence } from 'framer-motion';
 
-import { PortfolioPreviewItemModel } from 'models/portfolio-item.model';
+import { PortfolioPreviewItemModel } from '~/models/portfolio-item.model';
 
-import { PORTFOLIO_CATEGORIES_TABS_LABELS } from 'constants/portfolio';
-import { PORTFOLIO_IMAGES_PATH, SITE_URL } from 'constants/site';
-import { ROUTE_NAME_PORTFOLIO_PROJECT } from 'router/routes';
+import { PORTFOLIO_CATEGORIES_TABS_LABELS } from '~/constants/portfolio';
+import { PORTFOLIO_IMAGES_PATH, SITE_URL } from '~/constants/site';
+import { ROUTE_NAME_PORTFOLIO_PROJECT } from '~/router/routes';
 import {
   Item,
   ItemCategoryLabel,
