@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-import { DARK_MODE } from 'constants/theme';
+import overlayBlackDot from '~/assets/images/overlay_black.png';
+import overlayWhiteDot from '~/assets/images/overlay_white_four.png';
+import { DARK_MODE } from '~/constants/theme';
 import {
   BLACK_0,
   BLACK_100,
@@ -8,10 +10,8 @@ import {
   WHITE,
   WHITE_0,
   WHITE_100,
-} from 'constants/colors';
-import { AnimatedDiv } from 'animations/animated';
-import overlayBlackDot from 'assets/images/overlay_black.png';
-import overlayWhiteDot from 'assets/images/overlay_white_four.png';
+} from '~/constants/colors';
+import { AnimatedDiv } from '~/animations/animated';
 
 export const PortfolioTabsBox = styled(AnimatedDiv)`
   position: fixed;

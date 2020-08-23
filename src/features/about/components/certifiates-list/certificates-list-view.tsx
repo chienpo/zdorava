@@ -3,7 +3,7 @@ import Lightbox from 'react-image-lightbox';
 import { I18n } from '@lingui/react';
 import 'react-image-lightbox/style.css';
 
-import { RED } from 'constants/colors';
+import { RED } from '~/constants/colors';
 import { CERTIFICATES_DATA } from './certificates-data';
 import { List, Figure, Img } from './styled';
 

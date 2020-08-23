@@ -1,7 +1,7 @@
 import React from 'react';
 import { AnimatePresence } from 'framer-motion';
 
-import { AnimatedDiv } from 'animations/animated';
+import { AnimatedDiv } from '~/animations/animated';
 import { IconSignature } from './icon-signature';
 import { LoaderBox } from './styled';
 

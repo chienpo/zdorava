@@ -4,8 +4,8 @@ import { useRoute } from 'react-router5';
 import { ThemeProvider as ThemeProviderLib } from 'styled-components';
 import { useStore } from 'effector-react';
 
-import { $themeStore } from 'store/theme-store';
-import { DEFAULT_ROUTE_THEME_MODES } from 'constants/theme';
+import { $themeStore } from '~/store/theme-store';
+import { DEFAULT_ROUTE_THEME_MODES } from '~/constants/theme';
 
 type Props = {
   children: ReactElement;

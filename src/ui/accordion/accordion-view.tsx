@@ -2,12 +2,12 @@ import React, { Fragment } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { I18n } from '@lingui/react';
 
-import { BLACK, RED, RED_70, WHITE } from 'constants/colors';
+import { BLACK, RED, RED_70, WHITE } from '~/constants/colors';
 import {
   AnimatedDiv,
   AnimatedHeader,
   AnimatedSection,
-} from 'animations/animated';
+} from '~/animations/animated';
 import { Panel } from './styled';
 
 import { AccordionData } from './accordion';

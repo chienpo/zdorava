@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { BLACK, BLACK_90, RED, RED_70, WHITE } from 'constants/colors';
+import { BLACK, BLACK_90, RED, RED_70, WHITE } from '~/constants/colors';
 
 import { ButtonProps } from './button';
 

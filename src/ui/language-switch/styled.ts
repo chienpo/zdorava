@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import { DARK_MODE } from 'constants/theme';
-import { BLACK, RED, RED_70, WHITE, WHITE_90 } from 'constants/colors';
+import { DARK_MODE } from '~/constants/theme';
+import { BLACK, RED, RED_70, WHITE, WHITE_90 } from '~/constants/colors';
 
 export const Label = styled.label`
   cursor: pointer;

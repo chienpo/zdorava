@@ -4,13 +4,13 @@ import { useStore } from 'effector-react';
 
 import { Route, Router } from 'router5';
 
-import { $portfolioTabsStore } from 'store/portfolio-tabs-store';
+import { $portfolioTabsStore } from '~/store/portfolio-tabs-store';
 
+import { PAGE_TITLES } from '~/constants/page-titles';
 import {
   ROUTE_NAME_PORTFOLIO_CATEGORY,
   ROUTE_NAME_PORTFOLIO_PROJECT,
-} from 'router/routes';
-import { PAGE_TITLES } from 'constants/page-titles';
+} from '~/router/routes';
 import { NavUl, BaseLinkStyled } from './styled';
 
 interface Props {

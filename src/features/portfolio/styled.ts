@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import { BLACK, WHITE } from 'constants/colors';
-import { AnimatedSection } from 'animations/animated';
+import { BLACK, WHITE } from '~/constants/colors';
+import { AnimatedSection } from '~/animations/animated';
 
 export const AnimatedSectionStyled = styled(AnimatedSection)`
   height: 100%;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { I18n } from '@lingui/react';
 
-import { toggleLang } from 'store/language-store';
+import { toggleLang } from '~/store/language-store';
 import { Navigation } from './navigation';
 import { StyledHeader } from './styled';
 

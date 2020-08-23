@@ -2,13 +2,13 @@ import { useEffect, createElement, useState, useCallback } from 'react';
 import { useRouteNode, useRoute } from 'react-router5';
 import { useStore } from 'effector-react';
 
-import { PortfolioItemModel } from 'models/portfolio-item.model';
+import { PortfolioItemModel } from '~/models/portfolio-item.model';
 
-import { $portfolioTabsStore } from 'store/portfolio-tabs-store';
+import { $portfolioTabsStore } from '~/store/portfolio-tabs-store';
 
-import { ROUTE_NAME_PORTFOLIO } from 'router/routes';
-import { auth, firebaseInstance } from 'features/auth';
-import { FIREBASE_DATABASE_REF } from 'constants/api';
+import { ROUTE_NAME_PORTFOLIO } from '~/router/routes';
+import { auth, firebaseInstance } from '~/features/auth';
+import { FIREBASE_DATABASE_REF } from '~/constants/api';
 import { SingleProjectView } from './single-project-view';
 
 export const SingleProject = () => {

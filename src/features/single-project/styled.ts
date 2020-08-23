@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import { Link } from 'react-router5';
 
-import { RED, BLACK, WHITE_80, WHITE, RED_70 } from 'constants/colors';
+import { RED, BLACK, WHITE_80, WHITE, RED_70 } from '~/constants/colors';
 import {
   AnimatedDiv,
   AnimatedFigure,
   AnimatedSection,
-} from 'animations/animated';
+} from '~/animations/animated';
 
 export const AnimatedSectionStyled = styled(AnimatedSection)`
   display: grid;

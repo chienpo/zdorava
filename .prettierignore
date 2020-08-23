@@ -1,20 +1,61 @@
-# dependencies
+# Prettier
+yarn.lock
+.yarnclean
+.env.ref
+.editorconfig
+.gitattributes
+.browserslistrc
+.nvmrc
+*.*ignore
+*.jpg
+*.png
+*.gif
+*.svg
+*.woff2
+*.ttf
+*.txt
+*.pb
+
+# TS
+.typescript
+
+# Dependencies
 node_modules
 
-# production
-/dist
-/build
+# Ignore npm lock (use yarn.lock)
+package-lock.json
 
-# misc
+# Build files
+build
+dist
+storybook-static
+
+# Misc
+.coverage
 .temp
+.npm
+.cache
+.*-cache
+
+# DotEnv
+.env
+
+# VSCode
+.vscode
+
+# WebStorm
 .idea
-.docz
-/coverage
-yarn.lock
-Makefile
-LICENSE
-*.ico
-*.png
-*.sh
+
+# System
+*.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+*.lnk
+
+# Logs
 *.log
-*.woff2
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

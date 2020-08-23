@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { Trans } from '@lingui/macro';
+import { Trans } from '@lingui/react';
 
 import {
   StyledH1,

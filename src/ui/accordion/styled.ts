@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { BLACK, RED, WHITE } from 'constants/colors';
+import { BLACK, RED, WHITE } from '~/constants/colors';
 
 export const Panel = styled.div<{ active: boolean }>`
   font-size: 21px;

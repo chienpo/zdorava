@@ -1,12 +1,11 @@
 import React, { FC } from 'react';
-import { Trans } from '@lingui/macro';
 import { Form } from 'react-final-form';
-import { i18nMark, I18n } from '@lingui/react';
+import { i18nMark, I18n, Trans } from '@lingui/react';
 
-import { FIELD_NAME, FIELD_EMAIL, FIELD_MESSAGE } from 'constants/contacts';
-import { MoreLoader } from 'ui/more-loader/more-loader';
-import { InputField } from 'form-builder';
-import { required } from 'form-builder/validators';
+import { FIELD_NAME, FIELD_EMAIL, FIELD_MESSAGE } from '~/constants/contacts';
+import { MoreLoader } from '~/ui/more-loader/more-loader';
+import { InputField } from '~/form-builder';
+import { required } from '~/form-builder/validators';
 import { StyledButton, SuccessMessage } from './styled';
 
 interface Props {

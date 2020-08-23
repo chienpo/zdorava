@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { BLACK, RED, RED_70, WHITE, WHITE_30 } from 'constants/colors';
+import { BLACK, RED, RED_70, WHITE, WHITE_30 } from '~/constants/colors';
 
 export const SwitchBox = styled.div`
   display: inline-grid;

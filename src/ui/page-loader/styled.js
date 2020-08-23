@@ -1,10 +1,10 @@
 import styled, { keyframes } from 'styled-components';
 import { motion } from 'framer-motion';
 
-import { DARK_MODE } from 'constants/theme';
-import { BLACK, BLACK_90, WHITE, WHITE_80 } from 'constants/colors';
-import overlayWhiteDot from 'assets/images/overlay_white.png';
-import overlayBlackDot from 'assets/images/overlay_black.png';
+import overlayWhiteDot from '~/assets/images/overlay_white.png';
+import overlayBlackDot from '~/assets/images/overlay_black.png';
+import { DARK_MODE } from '~/constants/theme';
+import { BLACK, BLACK_90, WHITE, WHITE_80 } from '~/constants/colors';
 
 const write1 = keyframes`
   0% { stroke-dashoffset: 1200; }

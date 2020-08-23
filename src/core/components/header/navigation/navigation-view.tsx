@@ -1,10 +1,9 @@
 import React, { Suspense } from 'react';
-
-import { LanguageSwitchProps } from 'ui/language-switch/language-switch';
-
 import { Route, Router } from 'router5';
 
-import { BurgerMenu } from 'ui/burger-menu';
+import { LanguageSwitchProps } from '~/ui/language-switch/language-switch';
+
+import { BurgerMenu } from '~/ui/burger-menu';
 import { NavigationListView } from './navigation-list-view';
 import {
   NavigationWrapper,
@@ -12,8 +11,8 @@ import {
   AnimatedNavigationBox,
 } from './styled';
 
-const LanguageSwitch = React.lazy(() => import('ui/language-switch'));
-const ThemeSwitch = React.lazy(() => import('ui/theme-switch'));
+const LanguageSwitch = React.lazy(() => import('~/ui/language-switch'));
+const ThemeSwitch = React.lazy(() => import('~/ui/theme-switch'));
 
 interface Props extends LanguageSwitchProps {
   routes: Route[];

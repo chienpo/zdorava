@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { EN, RU } from 'constants/languages';
+import { EN, RU } from '~/constants/languages';
 import { LanguageSwitchProps } from './language-switch';
 import { InputRadio, Label, LangText, SwitchBox } from './styled';
 

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import { BLACK, RED, RED_70 } from 'constants/colors';
-import { AnimatedAddress } from 'animations/animated';
+import { BLACK, RED, RED_70 } from '~/constants/colors';
+import { AnimatedAddress } from '~/animations/animated';
 
 export const SidebarSocial = styled(AnimatedAddress)`
   position: absolute;

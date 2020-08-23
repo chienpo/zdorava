@@ -3,10 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { AnimatePresence } from 'framer-motion';
 
-import { SOCIAL_LINKS_DATA } from 'constants/social';
-import { SITE_PUBLICATION_YEAR } from 'constants/site';
-import { RED } from 'constants/colors';
-import { AnimatedFooter } from 'animations/animated/animated';
+import { SOCIAL_LINKS_DATA } from '~/constants/social';
+import { SITE_PUBLICATION_YEAR } from '~/constants/site';
+import { RED } from '~/constants/colors';
+import { AnimatedFooter } from '~/animations/animated/animated';
 import {
   FooterWrapper,
   FooterNav,
@@ -14,7 +14,7 @@ import {
   FooterSocialLink,
 } from './styled';
 
-const Contacts = React.lazy(() => import('features/contacts'));
+const Contacts = React.lazy(() => import('~/features/contacts'));
 
 interface Props {
   toggleContactForm: (prevState: boolean) => void;

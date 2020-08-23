@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { PortfolioItemModel } from 'models/portfolio-item.model';
+import { PortfolioItemModel } from '~/models/portfolio-item.model';
 
 import {
   CHUNK_TYPE_ONE,
   CHUNK_TYPE_TWO,
   CHUNK_TYPE_THREE,
-} from 'constants/portfolio';
+} from '~/constants/portfolio';
 import { PortfolioChunkItem } from '../portfolio-chunk-item';
 import { MotionChunkRow, MotionGridContainer } from './styled';
 

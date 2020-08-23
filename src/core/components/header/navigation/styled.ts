@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { BaseLink } from 'react-router5';
 
-import { DARK_MODE } from 'constants/theme';
-import { BLACK_30, GRAY, RED, RED_70, WHITE } from 'constants/colors';
-import overlayBlackDot from 'assets/images/overlay_black.png';
-import overlayWhiteDot from 'assets/images/overlay_white_four.png';
-import { AnimatedDiv } from 'animations/animated';
+import overlayBlackDot from '~/assets/images/overlay_black.png';
+import overlayWhiteDot from '~/assets/images/overlay_white_four.png';
+import { DARK_MODE } from '~/constants/theme';
+import { BLACK_30, GRAY, RED, RED_70, WHITE } from '~/constants/colors';
+import { AnimatedDiv } from '~/animations/animated';
 
 export const LanguageSwitchBox = styled.div`
   z-index: 0;

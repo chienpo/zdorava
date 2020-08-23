@@ -1,14 +1,13 @@
 import * as React from 'react';
-import { I18n } from '@lingui/react';
-import { Trans } from '@lingui/macro';
+import { I18n, Trans } from '@lingui/react';
 import { AnimatePresence } from 'framer-motion';
 
-import { PortfolioItemModel } from 'models/portfolio-item.model';
+import { PortfolioItemModel } from '~/models/portfolio-item.model';
 
-import { PORTFOLIO_IMAGES_PATH, SITE_URL } from 'constants/site';
-import { PORTFOLIO_CATEGORIES_TABS_LABELS } from 'constants/portfolio';
-import { ROUTE_NAME_PORTFOLIO_CATEGORY } from 'router/routes';
-import { LazyImage } from 'ui/lazy-image';
+import { PORTFOLIO_IMAGES_PATH, SITE_URL } from '~/constants/site';
+import { PORTFOLIO_CATEGORIES_TABS_LABELS } from '~/constants/portfolio';
+import { ROUTE_NAME_PORTFOLIO_CATEGORY } from '~/router/routes';
+import { LazyImage } from '~/ui/lazy-image';
 import {
   AnimatedDescriptionStyled,
   AnimatedFigureStyled,

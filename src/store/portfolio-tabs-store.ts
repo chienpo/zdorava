@@ -1,7 +1,7 @@
 import { createStore, createEvent, Event } from 'effector';
 
-import { PORTFOLIO_CATEGORY_TAB_NAME_ALL } from 'constants/portfolio';
-import { router } from '../router';
+import { PORTFOLIO_CATEGORY_TAB_NAME_ALL } from '~/constants/portfolio';
+import { router } from '~/router';
 import { $router } from './router-store';
 
 export const setPortfolioCategory: Event<string> = createEvent();

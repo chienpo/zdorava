@@ -1,12 +1,34 @@
+# TS
+.typescript
+
+# Storybook
+!.storybook
+
 # Dependencies
 node_modules
 
-# Build
-/dist
-/build
+# Build files
+build
+dist
+storybook-static
 
 # Misc
 .temp
 .idea
 .docz
-/coverage
+.coverage
+
+# DotEnv
+.env
+
+# VSCode
+.vscode
+
+# WebStorm
+.idea
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

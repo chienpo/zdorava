@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-import { BLACK_30 } from 'constants/colors';
-import { AnimatedDiv } from 'animations/animated';
+import { BLACK_30 } from '~/constants/colors';
+import { AnimatedDiv } from '~/animations/animated';
 
 export const GridLogoWrapper = styled(AnimatedDiv)`
   display: grid;

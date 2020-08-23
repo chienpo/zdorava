@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-import { PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND } from 'constants/portfolio';
+import { PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND } from '~/constants/portfolio';
 
 export const MotionGridContainer = styled(motion.div)`
   display: grid;

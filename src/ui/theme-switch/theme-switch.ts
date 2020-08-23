@@ -1,9 +1,9 @@
 import { FC, createElement, useState, ChangeEvent } from 'react';
 import { useStore } from 'effector-react';
 
-import { $themeStore, toggleTheme } from 'store/theme-store';
+import { $themeStore, toggleTheme } from '~/store/theme-store';
 
-import { DARK_MODE } from 'constants/theme';
+import { DARK_MODE } from '~/constants/theme';
 import { ThemeSwitchView } from './theme-switch-view';
 
 export interface ThemeSwitchProps {

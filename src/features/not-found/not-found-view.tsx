@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { Trans } from '@lingui/macro';
+import { Trans } from '@lingui/react';
 import { AnimatePresence } from 'framer-motion';
 
-import { AnimatedDiv } from 'animations/animated';
+import { AnimatedDiv } from '~/animations/animated';
 import { SectionNotFound, Overlay } from './styled';
 
 export const NotFoundView = () => (

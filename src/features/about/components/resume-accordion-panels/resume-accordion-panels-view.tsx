@@ -1,6 +1,5 @@
 import React from 'react';
-import { Trans } from '@lingui/macro';
-import { I18n } from '@lingui/react';
+import { I18n, Trans } from '@lingui/react';
 
 import { SKILLS_PANEL_DATA } from './panel-data';
 import { CertificatesList } from '../certifiates-list';

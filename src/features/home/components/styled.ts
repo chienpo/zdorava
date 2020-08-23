@@ -1,10 +1,10 @@
 import styled, { keyframes } from 'styled-components';
 
-import { BLACK_85, WHITE_85 } from 'constants/colors';
-import { DEFAULT_THEME_MODE } from 'constants/theme';
-import overlayBlackDot from 'assets/images/overlay_black.png';
-import overlayWhiteDot from 'assets/images/overlay_white_four.png';
-import winkingImage from 'assets/images/backgrounds/homepage-yellow-background.jpg';
+import overlayBlackDot from '~/assets/images/overlay_black.png';
+import overlayWhiteDot from '~/assets/images/overlay_white_four.png';
+import winkingImage from '~/assets/images/backgrounds/homepage-yellow-background.jpg';
+import { BLACK_85, WHITE_85 } from '~/constants/colors';
+import { DEFAULT_THEME_MODE } from '~/constants/theme';
 
 export const DottedOverlay = styled.div`
   background: ${({ theme }) =>

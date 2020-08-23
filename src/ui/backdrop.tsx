@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 
-import { useKeyPress } from 'hooks/use-key-press';
-import { BLACK_20 } from 'constants/colors';
-import { KEY_CODE_ESCAPE } from 'constants/key-codes';
-import { AnimatedDiv } from 'animations/animated';
+import { useKeyPress } from '~/hooks/use-key-press';
+import { BLACK_20 } from '~/constants/colors';
+import { KEY_CODE_ESCAPE } from '~/constants/key-codes';
+import { AnimatedDiv } from '~/animations/animated';
 
 interface Props {
   onClick: () => void;

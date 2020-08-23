@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 import { Link } from 'react-router5';
 
-import { RED, RED_70, WHITE } from 'constants/colors';
+import { RED, RED_70, WHITE } from '~/constants/colors';
 import {
   PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND,
   CHUNK_TYPE_ONE,
   CHUNK_TYPE_TWO,
   CHUNK_TYPE_THREE,
-} from 'constants/portfolio';
-import { mirrorEffect } from 'helpers/mirror-effect';
-import { LazyImage } from 'ui/lazy-image';
-import { AnimatedDiv } from 'animations/animated';
+} from '~/constants/portfolio';
+import { mirrorEffect } from '~/helpers/mirror-effect';
+import { LazyImage } from '~/ui/lazy-image';
+import { AnimatedDiv } from '~/animations/animated';
 
 export const LazyImageStyled = styled(LazyImage)`
   display: block;

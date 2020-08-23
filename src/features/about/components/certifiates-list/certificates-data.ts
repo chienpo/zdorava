@@ -1,10 +1,10 @@
 import { i18nMark } from '@lingui/react';
 
-import reactUdemyCourse from 'assets/images/sertificates/react-udemy-course.jpg';
-import javaScriptUdemyCourse from 'assets/images/sertificates/java-script-udemy-course.jpg';
-import typeScriptUdemyCourse from 'assets/images/sertificates/type-script-udemy-course.jpg';
-import spokenIntermediateOneCourseCertificate from 'assets/images/sertificates/spoken-intermediate-one-course-lagunovsky.png';
-import businessEnglishThreeCourseCertificate from 'assets/images/sertificates/business-english-three-course-lagunovsky.png';
+import reactUdemyCourse from '~/assets/images/sertificates/react-udemy-course.jpg';
+import javaScriptUdemyCourse from '~/assets/images/sertificates/java-script-udemy-course.jpg';
+import typeScriptUdemyCourse from '~/assets/images/sertificates/type-script-udemy-course.jpg';
+import spokenIntermediateOneCourseCertificate from '~/assets/images/sertificates/spoken-intermediate-one-course-lagunovsky.png';
+import businessEnglishThreeCourseCertificate from '~/assets/images/sertificates/business-english-three-course-lagunovsky.png';
 
 interface Certificate {
   src: string;

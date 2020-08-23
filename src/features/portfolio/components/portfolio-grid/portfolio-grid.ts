@@ -1,6 +1,6 @@
 import { createElement, FC } from 'react';
 
-import { PortfolioItemModel } from 'models/portfolio-item.model';
+import { PortfolioItemModel } from '~/models/portfolio-item.model';
 
 import { PortfolioGridView } from './portfolio-grid-view';
 

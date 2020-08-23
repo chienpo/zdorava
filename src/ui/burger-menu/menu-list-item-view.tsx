@@ -5,11 +5,11 @@ import { BaseLink } from 'react-router5';
 import { Router } from 'router5';
 import { useStore } from 'effector-react';
 
-import { $portfolioTabsStore } from 'store/portfolio-tabs-store';
+import { $portfolioTabsStore } from '~/store/portfolio-tabs-store';
 
-import { GRAY, RED, RED_70 } from 'constants/colors';
-import { PAGE_TITLES } from 'constants/page-titles';
-import { AnimatedLi } from 'animations/animated';
+import { GRAY, RED, RED_70 } from '~/constants/colors';
+import { PAGE_TITLES } from '~/constants/page-titles';
+import { AnimatedLi } from '~/animations/animated';
 
 const StyledMotionLi = styled(AnimatedLi)`
   list-style: none;

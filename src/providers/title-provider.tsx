@@ -3,10 +3,10 @@ import DocumentTitle from 'react-document-title';
 import { I18n } from '@lingui/react';
 import { useRoute } from 'react-router5';
 
-import { PAGE_TITLES, PORTFOLIO_PAGE_TITLES } from 'constants/page-titles';
-import { SITE_NAME } from 'constants/site';
-import { ROUTE_NAME_PORTFOLIO_CATEGORY } from 'router/routes';
-import { getProjectPageTitle } from 'helpers/get-project-page-title';
+import { PAGE_TITLES, PORTFOLIO_PAGE_TITLES } from '~/constants/page-titles';
+import { SITE_NAME } from '~/constants/site';
+import { ROUTE_NAME_PORTFOLIO_CATEGORY } from '~/router/routes';
+import { getProjectPageTitle } from '~/helpers/get-project-page-title';
 
 interface Props {
   children: ReactElement;

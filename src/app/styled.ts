@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
-import { WHITE } from 'constants/colors';
-
-import { AnimatedDiv } from 'animations/animated';
+import { WHITE } from '~/constants/colors';
+import { AnimatedDiv } from '~/animations/animated';
 
 export const AppBox = styled.div`
   background: ${WHITE};

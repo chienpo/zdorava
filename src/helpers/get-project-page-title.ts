@@ -1,6 +1,6 @@
-import portfolioData from 'features/portfolio/portfolio-data.json';
+import portfolioData from '~/features/portfolio/portfolio-data.json';
 
-import { PortfolioItemModel } from 'models/portfolio-item.model';
+import { PortfolioItemModel } from '~/models/portfolio-item.model';
 
 export const getProjectPageTitle = (projectName: string, locale: string) => {
   const projects = portfolioData.portfolio;
