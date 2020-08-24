@@ -4,17 +4,17 @@ import { WHITE } from '~/constants/colors';
 import { AnimatedDiv } from '~/animations/animated';
 
 export const AppBox = styled.div`
-  background: ${WHITE};
-  min-height: 100vh;
   width: 100vw;
+  min-height: 100vh;
+  background: ${WHITE};
 `;
 
 export const MotionContent = styled(AnimatedDiv)`
-  overflow: hidden;
   display: grid;
-  min-height: 100vh;
-  width: 100vw;
-  grid-template-columns: minmax(320px, 1fr);
   grid-template-rows: auto 1fr auto;
+  grid-template-columns: minmax(320px, 1fr);
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
   background: ${WHITE};
 `;

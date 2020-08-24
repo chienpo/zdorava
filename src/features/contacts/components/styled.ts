@@ -6,9 +6,9 @@ import { RED } from '~/constants/colors';
 export const StyledButton = styled(Button)`
   display: grid;
   grid-template-columns: 1fr;
-  width: 100%;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  width: 100%;
 
   &:disabled {
     grid-template-columns: 40px auto auto;
@@ -17,10 +17,10 @@ export const StyledButton = styled(Button)`
 `;
 
 export const SuccessMessage = styled.div`
-  font-size: 16px;
-  text-transform: uppercase;
+  width: 100%;
   padding: 15px 0;
   color: ${RED};
-  width: 100%;
+  font-size: 16px;
   text-align: center;
+  text-transform: uppercase;
 `;

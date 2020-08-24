@@ -5,16 +5,16 @@ import { BLACK } from '~/constants/colors';
 
 export const List = styled.ul`
   display: grid;
-  grid-template-columns: 20% 20% 20%;
   grid-gap: 10px;
+  grid-template-columns: 20% 20% 20%;
   list-style: none;
 `;
 
 export const Figure = styled.figure`
   position: relative;
+  display: block;
   overflow: hidden;
   cursor: pointer;
-  display: block;
 
   &:hover {
     ${mirrorEffect}

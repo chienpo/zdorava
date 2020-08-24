@@ -19,6 +19,7 @@ export const MotionLinkOverlay = styled.div`
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
   width: 100vw;
   height: 100vh;
   background: url(${({ title }) =>
@@ -27,56 +28,55 @@ export const MotionLinkOverlay = styled.div`
         : navigationPortfolioBackground})
     center center no-repeat;
   background-size: cover;
-  z-index: 1;
 `;
 
 export const Text = styled.span`
-  filter: brightness(150%);
-  display: block;
   position: relative;
-  padding-left: 55px;
+  display: block;
   margin-top: 20vh;
-  text-transform: uppercase;
+  padding-left: 55px;
   color: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE_30 : BLACK)};
+  text-transform: uppercase;
+  filter: brightness(150%);
   transition: color 0.6s;
 
   ${({ title }) => (title === ROUTE_NAME_ABOUT ? '&::after' : '&::before')} {
     position: absolute;
-    content: '';
+    ${({ title }) => (title === ROUTE_NAME_ABOUT ? 'right: 0' : 'left: 0')};
+    top: 50%;
     display: block;
     width: 22px;
     height: 22px;
-    border-radius: 50%;
     border: 8px solid
       ${({ theme }) => (theme.mode === DARK_MODE ? WHITE : BLACK)};
-    ${({ title }) => (title === ROUTE_NAME_ABOUT ? 'right: 0' : 'left: 0')};
-    top: 50%;
+    border-radius: 50%;
     transform: translateY(-50%);
     transition: border-color 0.6s;
+    content: '';
   }
 `;
 
 export const PageLinkStyled = styled(Link)`
   @media only screen and (min-width: 767px) {
-    padding-left: 70px;
-    padding-right: 70px;
     align-items: center;
+    padding-right: 70px;
+    padding-left: 70px;
   }
 
-  width: 40%;
-  align-items: flex-start;
-  padding-left: 40px;
-  padding-right: 25px;
-  z-index: 4;
   position: absolute;
-  text-decoration: none;
+  z-index: 4;
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+  width: 40%;
+  height: 100%;
+  padding-right: 25px;
+  padding-left: 40px;
   font-size: 30px;
   line-height: 38px;
-  display: flex;
-  height: 100%;
-  box-sizing: border-box;
-  transition: box-shadow 0.2s, background 0.8s;
+  text-decoration: none;
   outline: none;
+  transition: box-shadow 0.2s, background 0.8s;
 
   ${Text} {
     ${({ routeName }) =>
@@ -108,8 +108,8 @@ export const PageLinkStyled = styled(Link)`
   }
 
   &:hover {
-    cursor: pointer;
     background: none;
+    cursor: pointer;
 
     ${Text} {
       color: ${RED};

@@ -15,8 +15,8 @@ import { AnimatedDiv } from '~/animations/animated';
 
 export const PortfolioTabsBox = styled(AnimatedDiv)`
   position: fixed;
-  z-index: 2;
   top: 70px;
+  z-index: 2;
   width: 100%;
   height: 103px;
 `;
@@ -25,34 +25,34 @@ export const MotionPortfolioTabs = styled.div`
   @media screen and (min-width: 400px) {
     display: grid;
     grid-template-columns: repeat(3, auto);
-    column-gap: 30px;
     justify-content: center;
+    column-gap: 30px;
   }
 
   position: relative;
   top: 0;
-  height: 100%;
   display: flex;
   justify-content: space-between;
+  height: 100%;
   padding: 0 15px;
 
   &::after {
-    content: '';
     position: absolute;
+    bottom: 100%;
     left: 0;
     width: 100%;
-    bottom: 100%;
     height: 100%;
     background: ${({ theme }) => (theme.mode === DARK_MODE ? BLACK_89 : WHITE)};
+    content: '';
   }
 
   &::before {
-    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    content: '';
     ${({ theme }) =>
       theme.mode === DARK_MODE
         ? `

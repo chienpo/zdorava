@@ -6,27 +6,27 @@ import { AnimatedDiv } from '~/animations/animated';
 
 export const GridLogoWrapper = styled(AnimatedDiv)`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 `;
 
 export const StyledMotionFigure = styled(motion.figure)`
   position: relative;
 
   &::after {
-    content: '';
-    padding-bottom: 100%;
-    display: inline-block;
-    vertical-align: top;
     position: absolute;
     top: 0;
     right: 0;
+    display: inline-block;
     width: 100%;
+    padding-bottom: 100%;
+    vertical-align: top;
     ${({ title }) =>
       title !== 'Hello logo' &&
       `
       box-shadow: inset 0px 0px 50px 25px ${BLACK_30};
     `};
+    content: '';
   }
 
   ${({ title }) =>

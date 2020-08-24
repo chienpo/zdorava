@@ -24,26 +24,26 @@ interface Props {
 const StyledMotionNavWrapper = styled(AnimatedDiv)`
   position: fixed;
   top: 0;
-  left: 0;
   bottom: 0;
-  height: 100%;
+  left: 0;
   z-index: 1;
+  height: 100%;
 `;
 
 const StyledMotionMenuBackdrop = styled(AnimatedDiv)`
   position: absolute;
   top: 0;
-  left: 0;
   bottom: 0;
+  left: 0;
   width: 300px;
   background: ${({ theme }) =>
     theme.mode === DARK_MODE ? WHITE_20 : BLACK_90};
 `;
 
 const NavStyled = styled.nav`
-  padding: 25px 15px;
-  margin-top: 100px;
   width: 100%;
+  margin-top: 100px;
+  padding: 25px 15px;
 `;
 
 const sidebar = {

@@ -12,9 +12,9 @@ import { PAGE_TITLES } from '~/constants/page-titles';
 import { AnimatedLi } from '~/animations/animated';
 
 const StyledMotionLi = styled(AnimatedLi)`
-  list-style: none;
-  margin-bottom: 20px;
   display: flex;
+  margin-bottom: 20px;
+  list-style: none;
   cursor: pointer;
 
   &:last-child {
@@ -23,14 +23,14 @@ const StyledMotionLi = styled(AnimatedLi)`
 `;
 
 const BaseLinkStyled = styled(BaseLink)`
-  transition: all ease-in-out 0.4s;
-  text-decoration: none;
   color: ${GRAY};
   font-size: 30px;
   line-height: 30px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+  text-decoration: none;
   outline: none;
+  transition: all ease-in-out 0.4s;
 
   &.active {
     font-weight: bold;
@@ -38,8 +38,8 @@ const BaseLinkStyled = styled(BaseLink)`
 
   &:focus {
     color: ${RED_70};
-    border-color: ${RED_70};
     font-weight: 600;
+    border-color: ${RED_70};
   }
 
   &:hover {

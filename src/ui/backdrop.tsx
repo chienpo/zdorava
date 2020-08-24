@@ -12,8 +12,8 @@ interface Props {
 }
 
 const MotionBackdrop = styled(AnimatedDiv)`
-  left: 0;
   right: 0;
+  left: 0;
   background: ${BLACK_20};
   backdrop-filter: blur(3px);
 `;

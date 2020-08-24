@@ -7,16 +7,15 @@ import { DARK_MODE } from '~/constants/theme';
 import { AnimatedPath } from '~/animations/animated';
 
 const BurgerButton = styled.button`
-  display: flex;
-  outline: none;
-  border: none;
-  user-select: none;
-  cursor: pointer;
   position: absolute;
   top: 12px;
   left: 17px;
+  display: flex;
   background: transparent;
-  ${({ theme }) => (theme.mode === DARK_MODE ? `` : ``)};
+  border: none;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
 
   path {
     transition: stroke 0.4s;

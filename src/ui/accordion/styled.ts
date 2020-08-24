@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import { BLACK, RED, WHITE } from '~/constants/colors';
 
 export const Panel = styled.div<{ active: boolean }>`
+  width: 100%;
   font-size: 21px;
   line-height: 38px;
   text-transform: uppercase;
-  width: 100%;
   cursor: pointer;
   transition: background 0.4s, color 0.4s;
 

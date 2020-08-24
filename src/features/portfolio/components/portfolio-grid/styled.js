@@ -5,8 +5,8 @@ import { PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND } from '~/constants/portfolio';
 
 export const MotionGridContainer = styled(motion.div)`
   display: grid;
-  grid-template-columns: 1fr;
   grid-row-gap: 8px;
+  grid-template-columns: 1fr;
 `;
 
 export const MotionChunkRow = styled(motion.div)`

@@ -4,34 +4,34 @@ import { BLACK, RED, RED_70, WHITE, WHITE_30 } from '~/constants/colors';
 
 export const SwitchBox = styled.div`
   display: inline-grid;
-  grid-template-columns: auto auto auto;
   grid-column-gap: 10px;
+  grid-template-columns: auto auto auto;
   align-items: center;
   justify-content: center;
   font-size: 20px;
 `;
 
 export const SlideRaw = styled.div`
-  display: flex;
-  cursor: pointer;
   position: absolute;
   top: 0;
   left: 0;
+  display: flex;
   width: 100%;
   height: 100%;
+  cursor: pointer;
   transition: background-color 0.6s;
 
   &::after {
-    content: '';
     position: absolute;
-    width: 18px;
-    height: 18px;
     top: 5px;
     left: 5px;
+    width: 18px;
+    height: 18px;
+    background-color: ${WHITE};
     border-radius: 50%;
     transform: translateX(0);
-    background-color: ${WHITE};
     transition: background-color 0.4s, transform 0.4s;
+    content: '';
   }
 `;
 
@@ -39,22 +39,22 @@ export const SwitchLabel = styled.label`
   position: relative;
   width: 56px;
   height: 28px;
-  border-radius: 14px;
   overflow: hidden;
   color: transparent;
+  border-radius: 14px;
 `;
 
 export const InputCheckbox = styled.input`
-  width: 100%;
-  height: 100%;
   position: absolute;
   top: 0;
-  left: 0;
-  bottom: 0;
   right: 0;
-  appearance: none;
-  outline: none;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   margin: 0;
+  outline: none;
+  appearance: none;
 
   & + ${SlideRaw} {
     background-color: ${BLACK};
@@ -66,8 +66,8 @@ export const InputCheckbox = styled.input`
 
   &:checked + ${SlideRaw} {
     &::after {
-      transform: translateX(27px);
       background-color: ${BLACK};
+      transform: translateX(27px);
     }
   }
 

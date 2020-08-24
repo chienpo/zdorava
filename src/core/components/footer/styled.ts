@@ -18,13 +18,13 @@ import {
 import { AnimatedDiv } from '~/animations/animated';
 
 export const FooterCopy = styled.small`
-  text-transform: uppercase;
-  font-size: 11px;
-  letter-spacing: 0.5px;
   display: block;
   width: 100%;
   padding: 4px 0;
   color: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE_70 : BLACK_89)};
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
   background: ${({ theme }) =>
     theme.mode === DARK_MODE
       ? `${BLACK_40} url(${overlayBlackDot}) repeat scroll 0 0;`
@@ -32,17 +32,17 @@ export const FooterCopy = styled.small`
 `;
 
 export const FooterWrapper = styled(AnimatedDiv)`
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-rows: 1fr auto;
   grid-template-columns: 1fr;
-  text-align: center;
   align-items: center;
+  text-align: center;
   background: ${({ theme }) =>
     theme.mode === DARK_MODE
       ? `${BLACK_89} url(${overlayBlackDot}) repeat scroll 0 0;`
       : `${WHITE_90} url(${overlayWhiteDot}) repeat scroll 0 0;`};
-  position: relative;
-  z-index: 1;
 `;
 
 export const FooterNav = styled.address`
@@ -54,20 +54,20 @@ export const FooterNav = styled.address`
 `;
 
 export const FooterSocialLink = styled.a<{ as?: string }>`
+  ${({ as }) => as === 'button' && 'width: 30px; position: relative;'};
   display: flex;
   align-items: center;
+  height: 34px;
   color: ${({ color, theme }) =>
     color ? `${theme.mode === DARK_MODE ? WHITE : BLACK}` : GRAY};
-  filter: brightness(150%);
   font-size: ${({ color }) => (color ? '34px' : '30px')};
-  height: 34px;
-  animation: ${({ color }) => color && pulseIconAnim} 4.4s infinite;
   background: none;
   border: none;
-  cursor: pointer;
-  transition: color 0.4s;
-  ${({ as }) => as === 'button' && 'width: 30px; position: relative;'};
   outline: none;
+  cursor: pointer;
+  filter: brightness(150%);
+  transition: color 0.4s;
+  animation: ${({ color }) => color && pulseIconAnim} 4.4s infinite;
 
   &:focus {
     color: ${RED_70};

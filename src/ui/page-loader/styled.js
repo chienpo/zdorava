@@ -29,12 +29,12 @@ export const LoaderBox = styled(motion.div)`
   background: white;
 
   #signature {
-    left: 45%;
-    top: 45%;
     position: absolute;
+    top: 45%;
+    left: 45%;
     width: 10%;
-    padding: 2em 0;
     margin: 0 auto;
+    padding: 2em 0;
   }
 
   path {

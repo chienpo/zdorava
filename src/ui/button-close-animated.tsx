@@ -6,11 +6,11 @@ import { BLACK, RED, WHITE } from '~/constants/colors';
 import { AnimatedPath } from '~/animations/animated';
 
 const BurgerMotionButton = styled(motion.button)`
-  border: none;
-  user-select: none;
-  cursor: pointer;
-  background: transparent;
   display: flex;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  user-select: none;
 
   path {
     transition: stroke 0.2s;

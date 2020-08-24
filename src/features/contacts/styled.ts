@@ -9,32 +9,32 @@ export const StyledMotionContactFormWrapper = styled(AnimatedDiv)`
   position: fixed;
   top: 0;
   z-index: 5;
-  min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr;
+  min-height: 100vh;
 `;
 
 export const SectionControls = styled.div`
   position: absolute;
-  right: 15px;
   top: 15px;
+  right: 15px;
 `;
 
 export const FormSection = styled.section`
+  position: relative;
   width: 100vw;
   box-shadow: 0 -48px 35px 45px ${({ theme }) => theme.mode === LIGHT_MODE && BLACK};
-  position: relative;
 `;
 
 export const FormBox = styled.div`
-  background: ${WHITE};
-  padding: 50px 15px;
   box-sizing: border-box;
   margin: 0 auto;
+  padding: 50px 15px;
+  background: ${WHITE};
 `;
 
 export const H2Styled = styled(H2)`
-  text-align: center;
   margin-bottom: 20px;
+  text-align: center;
   text-transform: uppercase;
 `;

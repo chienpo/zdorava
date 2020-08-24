@@ -5,23 +5,23 @@ import { AnimatedAddress } from '~/animations/animated';
 
 export const SidebarSocial = styled(AnimatedAddress)`
   position: absolute;
-  left: 0;
   bottom: 0;
-  padding: 0 15px 15px;
+  left: 0;
   width: 300px;
+  padding: 0 15px 15px;
 `;
 
 export const StyledSocialLink = styled.a`
-  transition: all ease-in-out 0.4s;
-  text-decoration: none;
+  display: inline-block;
+  margin-right: 15px;
+  color: ${BLACK};
   font-size: 30px;
   line-height: 36px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  display: inline-block;
-  margin-right: 15px;
+  text-decoration: none;
   outline: none;
-  color: ${BLACK};
+  transition: all ease-in-out 0.4s;
 
   &:focus {
     color: ${RED_70};

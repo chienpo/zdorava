@@ -10,9 +10,9 @@ const linkOverlayMirrorEffect = keyframes`
     visibility: hidden;
   }
   100% {
-    opacity: 1;
     transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 135deg) translate3d(0, -130%, 0);
     visibility: initial;
+    opacity: 1;
   }
 `;
 
@@ -20,18 +20,18 @@ export const mirrorEffect = css`
   overflow: hidden;
 
   &::before {
-    background: ${({ theme }) =>
-      theme.mode === DARK_MODE ? WHITE_20 : BLACK_20};
-    box-sizing: border-box;
-    content: '';
-    height: 100%;
-    left: -10%;
-    opacity: 0;
     position: absolute;
     top: 0;
-    width: 120%;
+    left: -10%;
     z-index: 6;
-    animation: ${linkOverlayMirrorEffect} 0.8s;
+    box-sizing: border-box;
+    width: 120%;
+    height: 100%;
+    background: ${({ theme }) =>
+      theme.mode === DARK_MODE ? WHITE_20 : BLACK_20};
+    opacity: 0;
     transition: transform 2s, visibility 2s, opacity 2s;
+    animation: ${linkOverlayMirrorEffect} 0.8s;
+    content: '';
   }
 `;

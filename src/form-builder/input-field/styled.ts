@@ -16,14 +16,14 @@ export const FieldWrapper = styled.div`
 `;
 
 export const Label = styled.label`
-  width: 100%;
   display: block;
+  width: 100%;
 `;
 
 export const LabelText = styled.span`
   display: block;
-  font-weight: bold;
   padding-bottom: 5px;
+  font-weight: bold;
   font-size: 14px;
 `;
 
@@ -57,25 +57,25 @@ const inputStyles = `
 export const Input = styled.input`
   display: flex;
   justify-content: center;
-  line-height: 30px;
-  padding: 0 10px;
-  width: 100%;
   box-sizing: border-box;
+  width: 100%;
+  padding: 0 10px;
+  line-height: 30px;
   ${inputStyles}
 `;
 
 export const Textarea = styled.textarea`
   display: flex;
   justify-content: center;
-  line-height: 30px;
-  padding: 0 10px;
-  width: 100%;
   box-sizing: border-box;
+  width: 100%;
+  padding: 0 10px;
+  line-height: 30px;
   resize: none;
   ${inputStyles}
 `;
 
 export const RequiredStar = styled.span`
-  color: ${RED};
   margin-left: 5px;
+  color: ${RED};
 `;

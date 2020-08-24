@@ -10,29 +10,29 @@ import { AnimatedDiv } from '~/animations/animated';
 export const LanguageSwitchBox = styled.div`
   z-index: 0;
   display: flex;
+  align-items: center;
   justify-content: center;
   margin-left: auto;
-  align-items: center;
 `;
 
 export const NavUl = styled.ul`
-  list-style: none;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   padding-left: 335px;
+  list-style: none;
 `;
 
 export const BaseLinkStyled = styled(BaseLink)`
   display: block;
-  text-decoration: none;
+  padding: 0 35px;
   color: ${GRAY};
   font-size: 14px;
   line-height: 70px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  padding: 0 35px;
+  text-decoration: none;
   border-bottom: 1px solid transparent;
   outline: none;
   transition: all ease-in-out 0.4s;
@@ -83,8 +83,8 @@ export const BaseLinkStyled = styled(BaseLink)`
 export const NavigationWrapper = styled.div`
   position: fixed;
   top: 0;
-  left: 0;
   right: 0;
+  left: 0;
   z-index: 1;
 `;
 

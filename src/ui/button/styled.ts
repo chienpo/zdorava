@@ -5,17 +5,17 @@ import { BLACK, BLACK_90, RED, RED_70, WHITE } from '~/constants/colors';
 import { ButtonProps } from './button';
 
 export const ButtonStyled = styled.button<ButtonProps>`
-  color: ${WHITE};
-  border: 1px solid ${({ plain }) => (plain ? BLACK : WHITE)};
-  background: ${({ plain }) => (plain ? BLACK : 'transparent')};
   width: ${({ width }) => width || 'auto'};
+  padding: 15px 0;
+  color: ${WHITE};
   font-weight: normal;
-  text-decoration: none;
   font-size: 16px;
   text-transform: uppercase;
+  text-decoration: none;
+  background: ${({ plain }) => (plain ? BLACK : 'transparent')};
+  border: 1px solid ${({ plain }) => (plain ? BLACK : WHITE)};
   outline: none;
   cursor: pointer;
-  padding: 15px 0;
   transition: background 0.2s, color 0.2s, border-color 0.2s, opacity 0.2s;
 
   @media (min-width: 767px) {
@@ -23,8 +23,8 @@ export const ButtonStyled = styled.button<ButtonProps>`
   }
 
   &:hover {
-    background: ${({ plain }) => plain && BLACK_90};
     color: ${RED};
+    background: ${({ plain }) => plain && BLACK_90};
     border-color: ${({ plain }) => (plain ? BLACK_90 : RED)};
   }
 
@@ -40,8 +40,8 @@ export const ButtonStyled = styled.button<ButtonProps>`
 
   &.active {
     color: ${WHITE};
-    border-color: ${RED};
     background: ${RED};
+    border-color: ${RED};
 
     &:disabled {
       opacity: 1;

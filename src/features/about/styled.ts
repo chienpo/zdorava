@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { BLACK, RED, WHITE } from '~/constants/colors';
 
 export const SectionAbout = styled.section`
-  height: 100%;
   display: flex;
   align-items: center;
+  height: 100%;
   padding-top: 70px;
 `;
 
@@ -15,8 +15,8 @@ export const GridContent = styled.div`
   }
 
   display: grid;
-  width: 100%;
   grid-template-columns: 1fr;
+  width: 100%;
 `;
 
 export const LogoWrap = styled.div`
@@ -46,25 +46,25 @@ export const AccordionBox = styled.div`
 `;
 
 export const DeveloperName = styled.h1`
+  margin: 0 0 22px;
   padding: 10px 0 10px 20px;
-  background: ${BLACK};
   color: ${WHITE};
-  text-align: left;
   font-size: 53px;
   line-height: 66px;
   letter-spacing: 0;
+  text-align: left;
   text-transform: uppercase;
-  margin: 0 0 22px;
+  background: ${BLACK};
 `;
 
 export const Position = styled.strong`
   display: block;
+  margin-top: 10px;
+  color: white;
+  font-weight: 100;
   font-size: 28px;
   line-height: 38px;
   text-transform: uppercase;
-  color: white;
-  margin-top: 10px;
-  font-weight: 100;
 
   strong {
     color: ${RED};

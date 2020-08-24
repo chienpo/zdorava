@@ -21,31 +21,31 @@ export const ItemCategoryLabel = styled.span`
 `;
 
 export const ItemTitle = styled.h4`
-  transition: left 0.2s, left 0.2s;
-  background: ${RED};
-  color: ${WHITE};
   padding: 5px 10px;
+  color: ${WHITE};
+  background: ${RED};
+  transition: left 0.2s, left 0.2s;
 `;
 
 export const ItemCategoryName = styled.span`
+  padding: 5px 10px;
   color: ${WHITE};
+  font-weight: bold;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 2px;
-  font-weight: bold;
-  outline: 0;
-  transition: all 0.8s ease-in-out;
   background: ${RED};
   border-right: 1px solid transparent;
-  padding: 5px 10px;
+  outline: 0;
+  transition: all 0.8s ease-in-out;
 `;
 
 export const ItemOrientationType = styled(Link)`
   position: relative;
+  display: flex;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  display: flex;
   outline: none;
 
   &:focus {
@@ -54,19 +54,19 @@ export const ItemOrientationType = styled(Link)`
 `;
 
 export const Item = styled(AnimatedDiv)`
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   width: 100%;
+  margin: 0;
+  padding: 0;
   border: 1px solid black;
 
   ${ItemOrientationType} {
-    padding-bottom: ${({ className }) =>
-      className.includes(PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND) ? '0' : '100%'};
     height: ${({ className }) =>
       className.includes(PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND)
         ? '50vh'
         : '100%'};
+    padding-bottom: ${({ className }) =>
+      className.includes(PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND) ? '0' : '100%'};
   }
 
   ${LazyImageStyled} {
@@ -144,9 +144,9 @@ export const Item = styled(AnimatedDiv)`
   }
 
   &:hover {
+    border: 1px solid ${RED};
     cursor: pointer;
     opacity: 1;
-    border: 1px solid ${RED};
 
     ${ItemCategoryName} {
       right: 0;
@@ -167,9 +167,9 @@ export const ItemFigure = styled.figure`
   bottom: 0;
   left: 0;
   overflow: hidden;
-  transition: filter 0.8s ease 0s;
-  filter: grayscale(100);
   opacity: 1;
+  filter: grayscale(100);
+  transition: filter 0.8s ease 0s;
 
   &:hover {
     filter: grayscale(0);

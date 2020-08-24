@@ -5,8 +5,8 @@ export const PanelWrapper = styled.div`
 `;
 
 export const H4 = styled.h4`
-  text-transform: uppercase;
   font-weight: normal;
+  text-transform: uppercase;
 `;
 
 export const Strong = styled.strong`
@@ -14,13 +14,13 @@ export const Strong = styled.strong`
 `;
 
 export const StackList = styled.ul`
-  list-style: none;
   display: inline-flex;
+  list-style: none;
 `;
 
 export const StackListItem = styled.li`
-  margin-right: 10px;
   display: flex;
+  margin-right: 10px;
 
   img {
     height: 30px;
@@ -28,19 +28,19 @@ export const StackListItem = styled.li`
 `;
 
 export const Li = styled.li`
-  list-style: none;
   margin-bottom: 10px;
+  list-style: none;
 `;
 
 export const LiInline = styled(Li)`
   @media screen and (min-width: 650px) {
-    align-items: flex-end;
     flex-direction: row;
+    align-items: flex-end;
   }
 
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
+  flex-wrap: wrap;
   margin-bottom: 10px;
 `;
 
@@ -53,8 +53,8 @@ export const Ul = styled.ul`
   }
 
   & > ${Li} {
-    list-style: none;
     margin-bottom: 10px;
+    list-style: none;
 
     &:last-child {
       margin-bottom: 0;

@@ -14,31 +14,31 @@ export const ButtonCircleStyled = styled.button`
     padding-left: 55px;
   }
 
-  font-size: 13px;
-  display: block;
   position: relative;
+  display: block;
   padding-left: 45px;
-  text-transform: uppercase;
   color: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE : BLACK)};
-  transition: color 0.6s;
+  font-weight: bold;
+  font-size: 13px;
+  text-transform: uppercase;
   background: transparent;
   border: none;
-  font-weight: bold;
+  transition: color 0.6s;
 
   &::before {
     position: absolute;
-    content: '';
+    top: 50%;
+    ${({ title }) => (title === ROUTE_NAME_ABOUT ? 'right: 0' : 'left: 0')};
     display: block;
     width: 22px;
     height: 22px;
-    border-radius: 50%;
     border: 8px solid
       ${({ theme }) => (theme.mode === DARK_MODE ? WHITE : BLACK)};
-    ${({ title }) => (title === ROUTE_NAME_ABOUT ? 'right: 0' : 'left: 0')};
-    top: 50%;
+    border-radius: 50%;
     transform: translateY(-50%);
     transition: border-color 0.6s;
     animation: ${pulseAnimWhite} 5s linear infinite;
+    content: '';
   }
 
   &.active {
@@ -60,9 +60,9 @@ export const ButtonCircleStyled = styled.button`
   }
 
   &:hover {
-    cursor: pointer;
-    background: none;
     color: ${RED};
+    background: none;
+    cursor: pointer;
 
     &::before,
     &::after {

@@ -6,18 +6,16 @@ import homepageBg from '~/assets/images/backgrounds/homepage-background-tinyfied
 import { BLACK, WHITE_90 } from '~/constants/colors';
 
 export const SectionNotFound = styled(motion.section)`
-  background: url(${homepageBg}) center center no-repeat;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(${homepageBg}) center center no-repeat;
+  background-size: cover;
 `;
 
 export const Overlay = styled.div`
-  background: ${WHITE_90} url(${overlayWhiteDot}) repeat scroll 0 0;
-
   @media screen and (min-width: 991px) {
     font-size: 400px;
   }
@@ -26,11 +24,12 @@ export const Overlay = styled.div`
     font-size: 240px;
   }
 
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 150px;
+  height: 100%;
   color: ${BLACK};
   font-weight: 100;
+  font-size: 150px;
+  background: ${WHITE_90} url(${overlayWhiteDot}) repeat scroll 0 0;
 `;
