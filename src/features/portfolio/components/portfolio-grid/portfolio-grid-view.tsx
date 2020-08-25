@@ -16,7 +16,7 @@ interface Props {
 }
 
 interface DataProps {
-  chunckedData: PortfolioItemModel[][];
+  chunkedData: PortfolioItemModel[][];
   data: PortfolioItemModel[];
 }
 
@@ -30,14 +30,14 @@ const variants = {
 };
 
 export const PortfolioGridView: React.FC<Props & DataProps> = ({
-  chunckedData,
+  chunkedData,
   data,
   originOffset,
   selectedCategory,
 }) => {
   // TODO: Update
   const getChunkType = (chunkInd: number) => {
-    const array = [...Array(data.length).keys()];
+    const array = [...new Array(data.length)].map((_, i) => i);
 
     const types: string[] = [CHUNK_TYPE_ONE, CHUNK_TYPE_TWO, CHUNK_TYPE_THREE];
 
@@ -61,7 +61,7 @@ export const PortfolioGridView: React.FC<Props & DataProps> = ({
         animate={newTabChecked ? 'open' : 'closed'}
         exit="closed"
       >
-        {chunckedData.map((chunks, ind) => (
+        {chunkedData.map((chunks, ind) => (
           <MotionChunkRow
             className={`chunk ${selectedCategory}`}
             key={chunks[0].imageSrc}

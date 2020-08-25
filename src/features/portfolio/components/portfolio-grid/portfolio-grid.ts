@@ -15,7 +15,7 @@ export const PortfolioGrid: FC<Props> = ({
   selectedCategory,
   originOffset,
 }) => {
-  const chunckedData = data.reduce(
+  const chunkedData = data.reduce(
     (resultArray: PortfolioItemModel[][], item, index) => {
       const chunkIndex: number = Math.floor(index / 4);
 
@@ -33,7 +33,7 @@ export const PortfolioGrid: FC<Props> = ({
   );
 
   return createElement(PortfolioGridView, {
-    chunckedData,
+    chunkedData,
     data,
     originOffset,
     selectedCategory,
