@@ -41,13 +41,15 @@ export const Portfolio: FC = () => {
         ? dbRef
         : dbRef.orderByChild('category').equalTo(categoryName);
 
-    queries
+    await queries
       .limitToFirst(DATA_CHUNK_SIZE)
       .once('value')
       .then(snap => {
-        const responseData: PortfolioItemModel[] = Object.values(snap.val());
+        if (snap.val()) {
+          const responseData: PortfolioItemModel[] = Object.values(snap.val());
 
-        setData(responseData);
+          setData(responseData);
+        }
       })
       .catch(error => {
         throw error;
@@ -66,7 +68,7 @@ export const Portfolio: FC = () => {
         ? dbRef
         : dbRef.orderByChild('category').equalTo(categoryFromStore);
 
-    queries
+    await queries
       .limitToFirst(DATA_CHUNK_SIZE * dataLoadCount)
       .once('value')
       .then(snap => {
