@@ -1,5 +1,4 @@
 import { createElement, useState, useEffect, FC } from 'react';
-import axios from 'axios';
 import { useStore } from 'effector-react';
 
 import { PortfolioItemModel } from '~/models/portfolio-item.model';
@@ -10,10 +9,11 @@ import {
 } from '~/store/portfolio-tabs-store';
 
 import {
+  PORTFOLIO_CATEGORY_TAB_NAME_ALL,
   PORTFOLIO_CATEGORY_TAB_NAME_ART,
   PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND,
 } from '~/constants/portfolio';
-import { FIREBASE_DATABASE_URL, FIREBASE_DATABASE_REF } from '~/constants/api';
+import { FIREBASE_DATABASE_REF } from '~/constants/api';
 import { auth, firebaseInstance } from '~/features/auth';
 import { PageLoader } from '~/ui/page-loader/page-loader';
 import { PortfolioView } from './portfolio-view';
@@ -21,11 +21,7 @@ import { PortfolioView } from './portfolio-view';
 export const Portfolio: FC = () => {
   const categoryFromStore = useStore($portfolioTabsStore);
 
-  // eslint-disable-next-line max-len
   const [data, setData] = useState<PortfolioItemModel[]>([]);
-  const [, /* projectsTotalCount */ setProjectsTotalCount] = useState<number>(
-    0
-  );
   const [pageLoading, setPageLoading] = useState<boolean>(true);
   const [hasMore, setHasMore] = useState<boolean>(true);
   const [dataLoadCount, setDataLoadCount] = useState<number>(1);
@@ -37,79 +33,46 @@ export const Portfolio: FC = () => {
     setCategory(categoryFromStore);
   }, [categoryFromStore]);
 
-  const getProductsTotalCount = async () => {
-    const response = await axios.get(
-      `${FIREBASE_DATABASE_URL}/portfolio.json`,
-      {
-        params: {
-          shallow: true,
-        },
-      }
-    );
-
-    setProjectsTotalCount(Object.keys(response.data).length);
-  };
-
   const getDataChunk = async (categoryName: string) => {
-    const categoryStartIndex =
-      categoryName === PORTFOLIO_CATEGORY_TAB_NAME_ART ? '7' : '0';
-    const categoryEndIndex =
-      categoryName === PORTFOLIO_CATEGORY_TAB_NAME_ART
-        ? (DATA_CHUNK_SIZE + DATA_CHUNK_SIZE).toString()
-        : DATA_CHUNK_SIZE.toString();
+    const dbRef = firebaseInstance.database().ref(FIREBASE_DATABASE_REF);
 
-    firebaseInstance
-      .database()
-      .ref(FIREBASE_DATABASE_REF)
-      .orderByKey()
-      .startAt(categoryStartIndex)
-      .endAt(categoryEndIndex)
+    const queries =
+      categoryName === PORTFOLIO_CATEGORY_TAB_NAME_ALL
+        ? dbRef
+        : dbRef.orderByChild('category').equalTo(categoryName);
+
+    queries
+      .limitToFirst(DATA_CHUNK_SIZE)
       .once('value')
-      .then(snapshot => {
-        const arrayOfKeys = Object.keys(snapshot.val());
-        const results = arrayOfKeys.map(key => snapshot.val()[key]);
+      .then(snap => {
+        const responseData: PortfolioItemModel[] = Object.values(snap.val());
 
-        setData(results);
-        setPageLoading(false);
-        setDataLoadCount(prevState => prevState + 1);
+        setData(responseData);
       })
       .catch(error => {
         throw error;
+      })
+      .finally(() => {
+        setDataLoadCount(prevState => prevState + 1);
       });
   };
 
   const getNextDataChunk = async () => {
     setDataLoadCount(prevState => prevState + 1);
+    const dbRef = firebaseInstance.database().ref(FIREBASE_DATABASE_REF);
 
-    const artOffset =
-      selectedCategory === PORTFOLIO_CATEGORY_TAB_NAME_ART ? 0 : 6;
+    const queries =
+      categoryFromStore === PORTFOLIO_CATEGORY_TAB_NAME_ALL
+        ? dbRef
+        : dbRef.orderByChild('category').equalTo(categoryFromStore);
 
-    firebaseInstance
-      .database()
-      .ref(FIREBASE_DATABASE_REF)
-      .orderByKey()
-      .startAt((dataLoadCount * DATA_CHUNK_SIZE + 1 - artOffset).toString())
-      .endAt(
-        selectedCategory === PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND
-          ? '6'
-          : (
-              dataLoadCount * DATA_CHUNK_SIZE -
-              artOffset +
-              DATA_CHUNK_SIZE
-            ).toString()
-      )
+    queries
+      .limitToFirst(DATA_CHUNK_SIZE * dataLoadCount)
       .once('value')
-      .then(snapshot => {
-        if (!snapshot.val()) {
-          setHasMore(false);
+      .then(snap => {
+        const responseData: PortfolioItemModel[] = Object.values(snap.val());
 
-          return;
-        }
-
-        const arrayOfKeys = Object.keys(snapshot.val());
-        const results = arrayOfKeys.map(key => snapshot.val()[key]);
-
-        setData(prevState => [...prevState, results].flatMap(item => item));
+        setData(responseData);
       })
       .catch(error => {
         throw error;
@@ -126,11 +89,29 @@ export const Portfolio: FC = () => {
   };
 
   useEffect(() => {
+    let maxItemsLength: number;
+    switch (categoryFromStore) {
+      case PORTFOLIO_CATEGORY_TAB_NAME_ART:
+        maxItemsLength = 15;
+        break;
+      case PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND:
+        maxItemsLength = 7;
+        break;
+      default:
+        maxItemsLength = 22;
+    }
+
+    if (data.length >= maxItemsLength) {
+      setHasMore(false);
+    }
+  }, [data]);
+
+  useEffect(() => {
     auth();
   }, []);
 
   useEffect(() => {
-    Promise.all([getProductsTotalCount(), getDataChunk(categoryFromStore)])
+    getDataChunk(categoryFromStore)
       .then(() => {
         setPageLoading(false);
       })

@@ -1,15 +1,20 @@
-module.exports = {
+/* eslint-disable @typescript-eslint/no-var-requires */
+const { pathsToModuleNameMapper } = require('ts-jest/utils');
+const { compilerOptions } = require('./tsconfig.json');
+
+const config = {
+  coverageDirectory: '.coverage',
   clearMocks: true,
+  testEnvironment: 'node',
+  setupFiles: ['jest-localstorage-mock'],
   setupFilesAfterEnv: [
-    '@testing-library/jest-dom/extend-expect',
-    '@testing-library/react/dont-cleanup-after-each',
     'jest-styled-components',
-    '<rootDir>/config/setupTest.ts',
+    `${__dirname}/config/setupTest.ts`,
   ],
-  moduleDirectories: ['<rootDir>/src', 'node_modules'],
-  moduleNameMapper: {
-    '\\.(jpg|png|svg|woff2)$': '<rootDir>/jest/file-mock.js',
-    '\\.(css|scss)$': '<rootDir>/jest/style-mock.js',
-  },
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
+    prefix: `${__dirname}/`,
+  }),
   snapshotSerializers: ['enzyme-to-json/serializer'],
 };
+
+module.exports = config;
