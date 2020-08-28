@@ -28,8 +28,7 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,mdx}": "eslint --fix",
-    "**/*.{css,scss,html,js,jsx,ts,tsx}": "stylelint --fix",
-    "**/*": "prettier --write"
+    "**/*.{css,scss,html,js,jsx,ts,tsx}": "stylelint --fix"
   },
   "husky": {
     "hooks": {

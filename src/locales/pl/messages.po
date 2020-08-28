@@ -1,0 +1,250 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2020-08-28 13:45+0300\n"
+"Mime-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: pl\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/constants/page-titles.ts:10
+#: src/features/not-found/not-found-view.tsx:18
+msgid "404"
+msgstr ""
+
+#: src/features/about/components/certifiates-list/certificates-data.ts:36
+msgid "\"Business english three course\" certificate, Itransition"
+msgstr ""
+
+#: src/features/about/components/certifiates-list/certificates-data.ts:35
+msgid "\"Business english three english course\""
+msgstr ""
+
+#: src/features/about/components/certifiates-list/certificates-data.ts:17
+msgid "\"JavaScript - The Complete Guide 2020 (Beginner + Advanced)\""
+msgstr ""
+
+#: src/features/about/components/certifiates-list/certificates-data.ts:18
+msgid "\"JavaScript - The Complete Guide 2020 certificate, \"UDEMY\""
+msgstr ""
+
+#: src/features/about/components/certifiates-list/certificates-data.ts:11
+msgid "\"React - The Complete Guide (incl Hooks, React Router, Redux)\""
+msgstr ""
+
+#: src/features/about/components/certifiates-list/certificates-data.ts:12
+msgid "\"React - The Complete Guide (incl Hooks, React Router, Redux)\" certificate, \"UDEMY\""
+msgstr ""
+
+#: src/features/about/components/certifiates-list/certificates-data.ts:29
+msgid "\"Spoken intermediate english course\""
+msgstr ""
+
+#: src/features/about/components/certifiates-list/certificates-data.ts:30
+msgid "\"Spoken intermediate one course\" certificate, Itransition"
+msgstr ""
+
+#: src/features/about/components/certifiates-list/certificates-data.ts:23
+msgid "\"Understanding TypeScript - 2020 Edition\""
+msgstr ""
+
+#: src/features/about/components/certifiates-list/certificates-data.ts:24
+msgid "\"Understanding TypeScript - 2020 Edition\" certificate, \"UDEMY\""
+msgstr ""
+
+#: src/constants/page-titles.ts:7
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:9
+#: src/features/home/components/home-page-navigation.tsx:24
+msgid "About"
+msgstr ""
+
+#: src/constants/portfolio.ts:8
+msgid "All"
+msgstr ""
+
+#: src/constants/page-titles.ts:13
+msgid "All projects"
+msgstr ""
+
+#: src/constants/portfolio.ts:9
+msgid "Art"
+msgstr ""
+
+#: src/constants/page-titles.ts:15
+msgid "Art projects"
+msgstr ""
+
+#: src/features/single-project/single-project-view.tsx:35
+msgid "Back"
+msgstr ""
+
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:25
+msgid "Closely related to design, front-end development process is always going on in creative way and i can always see the result of my job. And this is what i like so much!"
+msgstr ""
+
+#: src/features/about/components/resume-accordion-panels/panel-data.ts:64
+msgid "Code quality tools"
+msgstr ""
+
+#: src/features/portfolio/portfolio-view.tsx:37
+msgid "Coming soon ..."
+msgstr ""
+
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:16
+msgid "Creating reactive applications for me is like making up some web ecosystems. But bricks here - are cutes of code, and component-structure - is the constructions. Using my arch-design and development skills, i combine this in to a real complex react web application!"
+msgstr ""
+
+#: src/features/about/components/resume-accordion-panels/panel-data.ts:94
+msgid "Development environment setup"
+msgstr ""
+
+#: src/features/contacts/components/contact-form-view.tsx:14
+msgid "Email"
+msgstr ""
+
+#: src/features/contacts/components/contact-form-view.tsx:15
+msgid "Enter your email"
+msgstr ""
+
+#: src/features/contacts/components/contact-form-view.tsx:18
+msgid "Enter your message"
+msgstr ""
+
+#: src/features/contacts/components/contact-form-view.tsx:12
+msgid "Enter your name"
+msgstr ""
+
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:11
+msgid "Experience"
+msgstr ""
+
+#: src/constants/page-titles.ts:14
+msgid "Front-End projects"
+msgstr ""
+
+#: src/constants/portfolio.ts:10
+msgid "Front-end"
+msgstr ""
+
+#: src/features/about/about-view.tsx:35
+msgid "Front-end (React-JS) Developer"
+msgstr ""
+
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:9
+msgid "Graduated as a Master of Architectural Design, took part at Hackathon-contest by MTS in 2015 when web-development by a side with the other things became my way of life."
+msgstr ""
+
+#: src/features/about/components/resume-accordion-panels/panel-data.ts:34
+msgid "Hand's on experience"
+msgstr ""
+
+#: src/features/about/about-view.tsx:33
+msgid "Hello, I'm Stepan"
+msgstr ""
+
+#: src/constants/page-titles.ts:6
+msgid "Home"
+msgstr ""
+
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:37
+msgid "I've been working in Itransition Softvare Development Company as a Front-end Developer. This time allowed me to dive dipper in to front-end and understand how cool is it! Working in a team of developers I took part in making up really cool projects and features for our foreign customers."
+msgstr ""
+
+#: src/features/home/home-view.tsx:13
+msgid "Lagunovsky"
+msgstr ""
+
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:19
+msgid "Languages & achievements letters"
+msgstr ""
+
+#: src/features/contacts/components/contact-form-view.tsx:17
+msgid "Message"
+msgstr ""
+
+#: src/features/contacts/components/contact-form-view.tsx:21
+msgid "Message has been sent!"
+msgstr ""
+
+#: src/features/contacts/components/contact-form-view.tsx:11
+msgid "Name"
+msgstr ""
+
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:47
+msgid "Over 10 years I've been studying on architecture & design specialisations. I was lucky to improve my skills in such areas like: interior and brand design, modern and concept arts, i created a lot of cool creative projects and also got and expierence of presenting them to the customers! This expierence has became absolutely helpful in front-end, web-design, and even though in my whole life!"
+msgstr ""
+
+#: src/features/about/components/resume-accordion-panels/panel-data.ts:79
+msgid "Platforms and bundlers"
+msgstr ""
+
+#: src/constants/page-titles.ts:8
+#: src/features/home/components/home-page-navigation.tsx:25
+msgid "Portfolio"
+msgstr ""
+
+#: src/features/about/components/resume-accordion-panels/panel-data.ts:4
+msgid "Priorities"
+msgstr ""
+
+#: src/constants/page-titles.ts:9
+msgid "Project:"
+msgstr ""
+
+#: src/form-builder/validators.tsx:7
+msgid "Required"
+msgstr ""
+
+#: src/features/contacts/components/contact-form-view.tsx:24
+msgid "Send message"
+msgstr ""
+
+#: src/features/home/home-view.tsx:11
+msgid "Stepan"
+msgstr ""
+
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:15
+msgid "Technology stack & skills"
+msgstr ""
+
+#: src/features/about/components/resume-accordion-panels/panel-data.ts:119
+msgid "UI/UX tools"
+msgstr ""
+
+#: src/features/single-project/single-project-view.tsx:51
+msgid "With a great pleasure I suggest you"
+msgstr ""
+
+#: src/features/contacts/contacts-view.tsx:27
+msgid "Write me"
+msgstr ""
+
+#: src/features/about/components/certifiates-list/certificates-data.ts:34
+msgid "business english three english course certificate"
+msgstr ""
+
+#: src/features/about/components/certifiates-list/certificates-data.ts:16
+msgid "java-script course certificate"
+msgstr ""
+
+#: src/features/about/components/certifiates-list/certificates-data.ts:10
+msgid "react course certificate"
+msgstr ""
+
+#: src/features/about/components/certifiates-list/certificates-data.ts:28
+msgid "spoken intermediate one english course certificate"
+msgstr ""
+
+#: src/features/about/components/certifiates-list/certificates-data.ts:22
+msgid "type-script course certificate"
+msgstr ""
+
+#: src/features/single-project/single-project-view.tsx:55
+msgid "watch real project"
+msgstr ""
