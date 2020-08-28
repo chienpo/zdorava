@@ -1,3 +1,1 @@
-export {
-  PortfolioChunkItemView as PortfolioChunkItem,
-} from './portfolio-chunk-item-view';
+export { PortfolioChunkItemView as PortfolioChunkItem } from './portfolio-chunk-item-view';

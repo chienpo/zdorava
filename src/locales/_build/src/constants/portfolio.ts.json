@@ -1,26 +1,11 @@
 {
   "All": {
-    "origin": [
-      [
-        "src/constants/portfolio.ts",
-        8
-      ]
-    ]
+    "origin": [["src/constants/portfolio.ts", 8]]
   },
   "Art": {
-    "origin": [
-      [
-        "src/constants/portfolio.ts",
-        9
-      ]
-    ]
+    "origin": [["src/constants/portfolio.ts", 9]]
   },
   "Front-end": {
-    "origin": [
-      [
-        "src/constants/portfolio.ts",
-        10
-      ]
-    ]
+    "origin": [["src/constants/portfolio.ts", 10]]
   }
 }
