@@ -20,7 +20,7 @@ export const SwitchBox = styled.div`
   height: 20px;
 
   ${Label} {
-    &:first-child::after {
+    &:not(:last-child)::after {
       position: absolute;
       top: 0;
       right: 0;
@@ -67,12 +67,19 @@ export const InputRadio = styled.input`
     font-size: 14px;
     text-transform: uppercase;
     opacity: 0.6;
+  }
 
+  &:not(:disabled) + ${LangText} {
     &:hover {
       color: ${RED};
       font-size: 20px;
       opacity: 1;
     }
+  }
+
+  &:disabled + ${LangText} {
+    opacity: 0.2;
+    cursor: not-allowed;
   }
 
   &:checked + ${LangText} {
