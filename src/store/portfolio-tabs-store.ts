@@ -19,7 +19,7 @@ $router.watch(({ route }) => {
 });
 
 // Watcher
-$portfolioTabsStore.watch(category => {
+$portfolioTabsStore.watch((category) => {
   if (router.isActive('portfolio')) {
     router.navigate('portfolio.category', { category });
   }

@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { ChangeEvent } from 'react';
 
 import { EN, RU, PL } from '~/constants/languages';
-import { LanguageSwitchProps } from './language-switch';
 import { InputRadio, Label, LangText, SwitchBox } from './styled';
+
+export interface LanguageSwitchProps {
+  selectedLanguage: string;
+  onChange?: ({ target }: ChangeEvent<HTMLInputElement>) => void;
+  onToggleLanguage?: (lang: string) => void;
+}
 
 export const LanguageSwitchView: React.FC<LanguageSwitchProps> = ({
   selectedLanguage,

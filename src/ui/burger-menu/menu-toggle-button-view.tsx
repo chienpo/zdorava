@@ -31,10 +31,12 @@ const BurgerButton = styled.button`
   }
 `;
 
-const Path: React.FC<MotionProps & {
-  stroke: string;
-  d?: string;
-}> = props => (
+const Path: React.FC<
+  MotionProps & {
+    stroke: string;
+    d?: string;
+  }
+> = (props) => (
   <AnimatedPath
     fill="transparent"
     strokeWidth="2"

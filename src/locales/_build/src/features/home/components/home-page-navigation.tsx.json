@@ -1,18 +1,8 @@
 {
   "About": {
-    "origin": [
-      [
-        "src/features/home/components/home-page-navigation.tsx",
-        24
-      ]
-    ]
+    "origin": [["src/features/home/components/home-page-navigation.tsx", 24]]
   },
   "Portfolio": {
-    "origin": [
-      [
-        "src/features/home/components/home-page-navigation.tsx",
-        25
-      ]
-    ]
+    "origin": [["src/features/home/components/home-page-navigation.tsx", 25]]
   }
 }

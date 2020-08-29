@@ -28,8 +28,9 @@ interface Props {
   selectedCategory: string;
 }
 
-export const PortfolioChunkItemView: React.FC<Props &
-  PortfolioPreviewItemModel> = ({
+export const PortfolioChunkItemView: React.FC<
+  Props & PortfolioPreviewItemModel
+> = ({
   alt,
   category,
   chunkType,

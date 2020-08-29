@@ -6,7 +6,7 @@ import { ThemeSwitchView as ThemeSwitch } from './theme-switch-view';
 describe('ThemeSwitch component', () => {
   it('should render ThemeSwitch component with props', () => {
     const wrapper = shallow(
-      <ThemeSwitch onChange={val => val} checked disabled />
+      <ThemeSwitch onChange={(val) => val} checked disabled />
     );
     expect(wrapper).toMatchSnapshot();
   });

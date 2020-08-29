@@ -78,8 +78,8 @@ export const InputRadio = styled.input`
   }
 
   &:disabled + ${LangText} {
-    opacity: 0.2;
     cursor: not-allowed;
+    opacity: 0.2;
   }
 
   &:checked + ${LangText} {

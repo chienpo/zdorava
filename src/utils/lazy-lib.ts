@@ -14,7 +14,7 @@ export const lazyLib = (
   compPathStr?: string
 ) =>
   lazy(() =>
-    promisedLibImport().then(module => {
+    promisedLibImport().then((module) => {
       if (compPathStr) {
         const compPathParts = compPathStr.split('.');
 

@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { Route, Router } from 'router5';
 
-import { LanguageSwitchProps } from '~/ui/language-switch/language-switch';
+import { LanguageSwitchProps } from '~/ui/language-switch/language-switch-view';
 
 import { BurgerMenu } from '~/ui/burger-menu';
 import { NavigationListView } from './navigation-list-view';

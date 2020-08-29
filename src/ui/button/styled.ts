@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import { BLACK, BLACK_90, RED, RED_70, WHITE } from '~/constants/colors';
+import { ButtonProps } from './types';
 
-import { ButtonProps } from './button';
+import { BLACK, BLACK_90, RED, RED_70, WHITE } from '~/constants/colors';
 
 export const ButtonStyled = styled.button<ButtonProps>`
   width: ${({ width }) => width || 'auto'};

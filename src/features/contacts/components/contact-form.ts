@@ -30,7 +30,7 @@ export const ContactForm: React.FC<Props> = ({ onEscapeClicked }) => {
       .finally(() => {
         setTimeout(() => setMessageSent(false), 2000);
       })
-      .catch(error => {
+      .catch((error) => {
         setRequestLoading(false);
         throw error.text;
       });

@@ -2,14 +2,16 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
-import { ThemeSwitch, ThemeSwitchProps } from '~/ui/theme-switch/theme-switch';
+import { ThemeSwitchProps } from './theme-switch-view';
+
+import { ThemeSwitch } from '~/ui/theme-switch/theme-switch';
 
 export default {
   title: 'UI/ThemeSwitch',
   component: ThemeSwitch,
 } as Meta;
 
-const Template: Story<ThemeSwitchProps> = args => <ThemeSwitch {...args} />;
+const Template: Story<ThemeSwitchProps> = (args) => <ThemeSwitch {...args} />;
 
 export const Enabled = Template.bind({});
 Enabled.args = {

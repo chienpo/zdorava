@@ -13,7 +13,7 @@ if (rootElement === null) {
 }
 
 const renderApp = (): void => {
-  loadWebFonts().then(res =>
+  loadWebFonts().then((res) =>
     res.load({
       google: {
         families: ['Montserrat:100,400,700&display=swap'],

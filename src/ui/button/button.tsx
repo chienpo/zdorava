@@ -1,11 +1,8 @@
-import React, { ButtonHTMLAttributes, FC } from 'react';
+import React, { FC } from 'react';
+
+import { ButtonProps } from './types';
 
 import { ButtonStyled } from './styled';
-
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  plain?: boolean;
-  width?: string;
-}
 
 export const Button: FC<ButtonProps> = ({
   className,

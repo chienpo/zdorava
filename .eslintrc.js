@@ -16,7 +16,15 @@ module.exports = {
     node: true,
     jest: true,
   },
-  extends: ['airbnb', 'plugin:@typescript-eslint/recommended', 'prettier'],
+  extends: [
+    'airbnb',
+    'airbnb-typescript',
+    'airbnb/hooks',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
+    'prettier/react',
+    'prettier/@typescript-eslint',
+  ],
   overrides: [
     {
       files: ['.storybook/**/*.ts', 'webpack/**/*.ts', '**/*.d.ts'],

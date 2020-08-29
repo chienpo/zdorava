@@ -2,10 +2,9 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
-import {
-  LanguageSwitch,
-  LanguageSwitchProps,
-} from '~/ui/language-switch/language-switch';
+import { LanguageSwitchProps } from './language-switch-view';
+
+import { LanguageSwitch } from '~/ui/language-switch/language-switch';
 
 // eslint-disable-next-line import/no-default-export
 export default {
@@ -21,7 +20,7 @@ export default {
   },
 } as Meta;
 
-const Template: Story<LanguageSwitchProps> = args => (
+const Template: Story<LanguageSwitchProps> = (args) => (
   <LanguageSwitch {...args} />
 );
 

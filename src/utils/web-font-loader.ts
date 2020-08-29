@@ -4,5 +4,5 @@ export const loadWebFonts = () => {
       ({ default: defaultCatalog }) => defaultCatalog
     );
 
-  return importCatalog().then(res => res);
+  return importCatalog().then((res) => res);
 };

@@ -1,10 +1,7 @@
 {
   "Priorities": {
     "origin": [
-      [
-        "src/features/about/components/resume-accordion-panels/panel-data.ts",
-        4
-      ]
+      ["src/features/about/components/resume-accordion-panels/panel-data.ts", 4]
     ]
   },
   "Hand's on experience": {

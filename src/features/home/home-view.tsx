@@ -9,8 +9,8 @@ import {
   HomepageHGroup,
 } from './styled';
 
-const HomepageNavigation = React.lazy(() =>
-  import('./components/home-page-navigation')
+const HomepageNavigation = React.lazy(
+  () => import('./components/home-page-navigation')
 );
 
 export const HomeView = () => (

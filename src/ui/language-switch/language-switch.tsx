@@ -1,12 +1,9 @@
 import { FC, createElement, useState, ChangeEvent } from 'react';
 
-import { LanguageSwitchView } from './language-switch-view';
-
-export interface LanguageSwitchProps {
-  selectedLanguage: string;
-  onChange?: ({ target }: ChangeEvent<HTMLInputElement>) => void;
-  onToggleLanguage?: (lang: string) => void;
-}
+import {
+  LanguageSwitchView,
+  LanguageSwitchProps,
+} from './language-switch-view';
 
 export const LanguageSwitch: FC<LanguageSwitchProps> = ({
   selectedLanguage,

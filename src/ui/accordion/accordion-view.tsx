@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, ReactElement } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { I18n } from '@lingui/react';
 
@@ -10,7 +10,12 @@ import {
 } from '~/animations/animated';
 import { Panel } from './styled';
 
-import { AccordionData } from './accordion';
+export interface AccordionData {
+  [key: string]: {
+    panelTitle: string;
+    content: () => ReactElement;
+  };
+}
 
 interface Props {
   expanded: false | string;

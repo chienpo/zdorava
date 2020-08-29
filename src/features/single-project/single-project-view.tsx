@@ -80,7 +80,7 @@ export const SingleProjectView: React.FC<Props> = ({
                   {data.description[i18n.language]}
                   {data.descriptionList && (
                     <DescriptionList>
-                      {data.descriptionList[i18n.language].map(item => (
+                      {data.descriptionList[i18n.language].map((item) => (
                         <li>
                           <b>&bull;</b>
                           &nbsp;

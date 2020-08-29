@@ -1,13 +1,6 @@
-import { createElement, useState, ReactElement, FC } from 'react';
+import { createElement, useState, FC } from 'react';
 
-import { AccordionView } from './accordion-view';
-
-export interface AccordionData {
-  [key: string]: {
-    panelTitle: string;
-    content: () => ReactElement;
-  };
-}
+import { AccordionView, AccordionData } from './accordion-view';
 
 interface Props {
   data: AccordionData;

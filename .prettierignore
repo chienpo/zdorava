@@ -7,14 +7,20 @@ yarn.lock
 .browserslistrc
 .nvmrc
 *.*ignore
+*.ico
 *.jpg
 *.png
+*.webp
 *.gif
 *.svg
-*.woff2
 *.ttf
 *.txt
 *.pb
+*.snap
+*.eot
+*.woff
+*.woff2
+*.po
 
 # TS
 .typescript
@@ -59,3 +65,10 @@ ehthumbs.db
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Project specific
+.htaccess
+.linguirc
+.npmrc
+Makefile
+LICENSE

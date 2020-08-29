@@ -44,23 +44,23 @@ export const Portfolio: FC = () => {
     await queries
       .limitToFirst(DATA_CHUNK_SIZE)
       .once('value')
-      .then(snap => {
+      .then((snap) => {
         if (snap.val()) {
           const responseData: PortfolioItemModel[] = Object.values(snap.val());
 
           setData(responseData);
         }
       })
-      .catch(error => {
+      .catch((error) => {
         throw error;
       })
       .finally(() => {
-        setDataLoadCount(prevState => prevState + 1);
+        setDataLoadCount((prevState) => prevState + 1);
       });
   };
 
   const getNextDataChunk = async () => {
-    setDataLoadCount(prevState => prevState + 1);
+    setDataLoadCount((prevState) => prevState + 1);
     const dbRef = firebaseInstance.database().ref(FIREBASE_DATABASE_REF);
 
     const queries =
@@ -71,12 +71,12 @@ export const Portfolio: FC = () => {
     await queries
       .limitToFirst(DATA_CHUNK_SIZE * dataLoadCount)
       .once('value')
-      .then(snap => {
+      .then((snap) => {
         const responseData: PortfolioItemModel[] = Object.values(snap.val());
 
         setData(responseData);
       })
-      .catch(error => {
+      .catch((error) => {
         throw error;
       });
   };
@@ -106,7 +106,7 @@ export const Portfolio: FC = () => {
     if (data.length >= maxItemsLength) {
       setHasMore(false);
     }
-  }, [data]);
+  }, [data, categoryFromStore]);
 
   useEffect(() => {
     auth();
@@ -117,7 +117,7 @@ export const Portfolio: FC = () => {
       .then(() => {
         setPageLoading(false);
       })
-      .catch(error => {
+      .catch((error) => {
         throw error;
       });
   }, [categoryFromStore]);

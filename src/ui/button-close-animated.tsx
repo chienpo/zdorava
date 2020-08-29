@@ -27,7 +27,7 @@ interface Props {
   clicked: () => void;
 }
 
-const Path: React.FC<MotionProps & { stroke: string }> = props => (
+const Path: React.FC<MotionProps & { stroke: string }> = (props) => (
   <AnimatedPath fill="transparent" strokeLinecap="square" {...props} />
 );
 

@@ -28,10 +28,10 @@ export const SingleProject = () => {
       .orderByChild('alt')
       .equalTo(projectName)
       .once('value')
-      .then(snapshot => {
+      .then((snapshot) => {
         const arrayOfKeys = Object.keys(snapshot.val());
 
-        const results = arrayOfKeys.map(key => snapshot.val()[key]);
+        const results = arrayOfKeys.map((key) => snapshot.val()[key]);
 
         setData(results);
       })

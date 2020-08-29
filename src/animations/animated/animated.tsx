@@ -39,7 +39,7 @@ const SuspenseComponent: React.FC<SuspenseComponentProps> = ({
 }) => {
   const { className, children } = props;
 
-  const FbComp: React.FC<{ className?: string }> = fbProps =>
+  const FbComp: React.FC<{ className?: string }> = (fbProps) =>
     React.createElement(fallbackTag, fbProps);
 
   return (
@@ -51,38 +51,38 @@ const SuspenseComponent: React.FC<SuspenseComponentProps> = ({
   );
 };
 
-export const AnimatedDiv: FC<MotionProps & Props> = props => (
+export const AnimatedDiv: FC<MotionProps & Props> = (props) => (
   <SuspenseComponent animCmp={MotionDiv} fallbackTag="div" {...props} />
 );
 
-export const AnimatedHeader: FC<MotionProps & Props> = props => (
+export const AnimatedHeader: FC<MotionProps & Props> = (props) => (
   <SuspenseComponent animCmp={MotionHeader} fallbackTag="header" {...props} />
 );
 
-export const AnimatedFooter: FC<MotionProps & Props> = props => (
+export const AnimatedFooter: FC<MotionProps & Props> = (props) => (
   <SuspenseComponent animCmp={MotionFooter} fallbackTag="footer" {...props} />
 );
 
-export const AnimatedUl: FC<MotionProps & Props> = props => (
+export const AnimatedUl: FC<MotionProps & Props> = (props) => (
   <SuspenseComponent animCmp={MotionUl} fallbackTag="ul" {...props} />
 );
 
-export const AnimatedLi: FC<MotionProps & Props> = props => (
+export const AnimatedLi: FC<MotionProps & Props> = (props) => (
   <SuspenseComponent animCmp={MotionLi} fallbackTag="li" {...props} />
 );
 
-export const AnimatedAddress: FC<MotionProps & Props> = props => (
+export const AnimatedAddress: FC<MotionProps & Props> = (props) => (
   <SuspenseComponent animCmp={MotionAddress} fallbackTag="address" {...props} />
 );
 
-export const AnimatedPath: FC<SvgPathProps> = props => (
+export const AnimatedPath: FC<SvgPathProps> = (props) => (
   <MotionPath animCmp={MotionPath} fallbackTag="path" {...props} />
 );
 
-export const AnimatedSection: FC<MotionProps & Props> = props => (
+export const AnimatedSection: FC<MotionProps & Props> = (props) => (
   <MotionSection animCmp={MotionPath} fallbackTag="section" {...props} />
 );
 
-export const AnimatedFigure: FC<MotionProps & Props> = props => (
+export const AnimatedFigure: FC<MotionProps & Props> = (props) => (
   <MotionSection animCmp={MotionFigure} fallbackTag="figure" {...props} />
 );

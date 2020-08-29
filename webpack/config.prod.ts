@@ -34,7 +34,7 @@ const productionPlugins: Plugin[] = [
 
 const testModules = (names: string[]) => (chunk: loader.LoaderContext) =>
   Boolean(chunk.resource) &&
-  names.some(name =>
+  names.some((name) =>
     chunk.resource.startsWith(`${paths.root}/node_modules/${name}/`)
   );
 

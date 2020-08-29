@@ -18,8 +18,7 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true,
-    "isolatedModules": true
+    "allowSyntheticDefaultImports": true
   },
   "include": ["./", ".*.js", ".storybook/*.ts", ".storybook/*.tsx"],
   "exclude": ["node_modules", "build", "storybook-static"]
