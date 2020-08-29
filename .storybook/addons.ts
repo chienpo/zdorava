@@ -1,7 +1,8 @@
-import { create } from '@storybook/theming/create';
+import { create } from '@storybook/theming';
 import { addons } from '@storybook/addons';
 
 const mainTheme = create({
+  base: 'light',
   fontBase: '"Montserrat", sans-serif',
   fontCode: 'monospace',
   appBorderRadius: 4,

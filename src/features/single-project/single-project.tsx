@@ -22,7 +22,7 @@ export const SingleProject = () => {
   const projectName = route.params.id;
 
   const getDataChunk = useCallback(async () => {
-    firebaseInstance
+    await firebaseInstance
       .database()
       .ref(FIREBASE_DATABASE_REF)
       .orderByChild('alt')
