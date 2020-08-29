@@ -11,7 +11,7 @@ export interface LanguageSwitchProps {
 
 export const LanguageSwitchView: React.FC<LanguageSwitchProps> = ({
   selectedLanguage,
-  onChange
+  onChange,
 }) => (
   <SwitchBox>
     <Label>
