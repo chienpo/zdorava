@@ -29,6 +29,7 @@ export const ButtonCircleStyled = styled.button`
     position: absolute;
     top: 50%;
     ${({ title }) => (title === ROUTE_NAME_ABOUT ? 'right: 0' : 'left: 0')};
+
     display: block;
     width: 22px;
     height: 22px;

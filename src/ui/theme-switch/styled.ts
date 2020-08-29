@@ -62,9 +62,7 @@ export const InputCheckbox = styled.input`
 
   &:checked + ${SlideRaw} {
     background-color: ${WHITE_30};
-  }
 
-  &:checked + ${SlideRaw} {
     &::after {
       background-color: ${BLACK};
       transform: translateX(27px);

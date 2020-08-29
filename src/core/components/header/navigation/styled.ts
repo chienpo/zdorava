@@ -94,6 +94,6 @@ export const AnimatedNavigationBox = styled(AnimatedDiv)`
   height: 100%;
   background: ${({ theme }) =>
     theme.mode === DARK_MODE
-      ? `${BLACK_30} url(${overlayBlackDot}) repeat scroll 0 -2px;`
-      : `${WHITE} url(${overlayWhiteDot}) repeat scroll 0 -2px;`};
+      ? `${BLACK_30} url(${overlayBlackDot}) repeat scroll 0 -2px`
+      : `${WHITE} url(${overlayWhiteDot}) repeat scroll 0 -2px`};
 `;

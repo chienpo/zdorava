@@ -27,8 +27,8 @@ export const FooterCopy = styled.small`
   text-transform: uppercase;
   background: ${({ theme }) =>
     theme.mode === DARK_MODE
-      ? `${BLACK_40} url(${overlayBlackDot}) repeat scroll 0 0;`
-      : `${WHITE} url(${overlayWhiteDot}) repeat scroll 0 0;`};
+      ? `${BLACK_40} url(${overlayBlackDot}) repeat scroll 0 0`
+      : `${WHITE} url(${overlayWhiteDot}) repeat scroll 0 0`};
 `;
 
 export const FooterWrapper = styled(AnimatedDiv)`
@@ -41,8 +41,8 @@ export const FooterWrapper = styled(AnimatedDiv)`
   text-align: center;
   background: ${({ theme }) =>
     theme.mode === DARK_MODE
-      ? `${BLACK_89} url(${overlayBlackDot}) repeat scroll 0 0;`
-      : `${WHITE_90} url(${overlayWhiteDot}) repeat scroll 0 0;`};
+      ? `${BLACK_89} url(${overlayBlackDot}) repeat scroll 0 0`
+      : `${WHITE_90} url(${overlayWhiteDot}) repeat scroll 0 0`};
 `;
 
 export const FooterNav = styled.address`
@@ -55,6 +55,7 @@ export const FooterNav = styled.address`
 
 export const FooterSocialLink = styled.a<{ as?: string }>`
   ${({ as }) => as === 'button' && 'width: 30px; position: relative;'};
+
   display: flex;
   align-items: center;
   height: 34px;

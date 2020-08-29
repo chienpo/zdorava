@@ -26,6 +26,7 @@ export const StyledMotionFigure = styled(motion.figure)`
       `
       box-shadow: inset 0px 0px 50px 25px ${BLACK_30};
     `};
+
     content: '';
   }
 

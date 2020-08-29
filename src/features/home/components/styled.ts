@@ -14,7 +14,7 @@ export const DottedOverlay = styled.div`
   background: ${({ theme }) =>
     theme.mode === DEFAULT_THEME_MODE
       ? `
-  ${BLACK_85} url(${overlayBlackDot}) repeat scroll 0 0;
+  ${BLACK_85} url(${overlayBlackDot}) repeat scroll 0 0
   `
       : `
   ${WHITE_85} url(${overlayWhiteDot}) repeat scroll 0 0
@@ -39,6 +39,7 @@ export const LazyWinkingBannerBg = styled.div<{ bgIsToggling: boolean }>`
     background: url(${winkingImage}) center center no-repeat;
     background-size: cover;
   `};
+
   background-attachment: fixed;
   opacity: 0;
   transition: opacity 0.4s;

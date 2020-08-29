@@ -43,6 +43,7 @@ export const Text = styled.span`
   ${({ title }) => (title === ROUTE_NAME_ABOUT ? '&::after' : '&::before')} {
     position: absolute;
     ${({ title }) => (title === ROUTE_NAME_ABOUT ? 'right: 0' : 'left: 0')};
+
     top: 50%;
     display: block;
     width: 22px;

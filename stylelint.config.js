@@ -10,7 +10,17 @@ const config = {
   ],
   rules: {
     // From stylelint-config-standard
-    'value-keyword-case': ['lower', { ignoreKeywords: ['dummyValue'] }],
+    'value-keyword-case': [
+      'lower',
+      {
+        ignoreKeywords: [
+          '/^[A-Z].*$/',
+          '/^(\\D+|[a-z])+((\\d)|([A-Z0-9][a-z0-9]+))*([A-Z])?/',
+        ],
+      },
+    ],
+    'function-name-case': ['lower', { ignoreFunctions: '/^class.*$/' }],
+    'unit-no-unknown': [true, { ignoreUnits: ['`', 'px`'] }],
   },
 };
 
