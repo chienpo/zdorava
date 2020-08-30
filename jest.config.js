@@ -2,10 +2,9 @@
 const { pathsToModuleNameMapper } = require('ts-jest/utils');
 const { compilerOptions } = require('./tsconfig.json');
 
+/** @type import('@jest/types').Config.InitialOptions */
 const config = {
   coverageDirectory: '.coverage',
-  clearMocks: true,
-  testEnvironment: 'node',
   setupFiles: ['jest-localstorage-mock'],
   setupFilesAfterEnv: [
     'jest-styled-components',
