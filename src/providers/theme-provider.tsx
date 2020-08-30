@@ -1,5 +1,4 @@
 import React, { ReactElement, FC } from 'react';
-import { Normalize } from 'styled-normalize';
 import { useRoute } from 'react-router5';
 import { ThemeProvider as ThemeProviderRoot } from 'styled-components';
 import { useStore } from 'effector-react';
@@ -22,7 +21,6 @@ export const ThemeProvider: FC<Props> = ({ children }) => {
         mode: DEFAULT_ROUTE_THEME_MODES[route.name] || themeMode,
       }}
     >
-      <Normalize />
       {children}
     </ThemeProviderRoot>
   );

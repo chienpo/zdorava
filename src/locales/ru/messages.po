@@ -80,7 +80,7 @@ msgstr "Aрт"
 msgid "Art projects"
 msgstr "Арт проекты"
 
-#: src/features/single-project/single-project-view.tsx:35
+#: src/features/single-project/single-project-view.tsx:39
 msgid "Back"
 msgstr "Назад"
 
@@ -92,7 +92,7 @@ msgstr "Тесно связанный с дизайном, процесс раз
 msgid "Code quality tools"
 msgstr "Инструменты качества кода"
 
-#: src/features/portfolio/portfolio-view.tsx:37
+#: src/features/portfolio/portfolio-view.tsx:42
 msgid "Coming soon ..."
 msgstr "В разработке ..."
 
@@ -217,7 +217,7 @@ msgstr "Стек технологий"
 msgid "UI/UX tools"
 msgstr "Инструменты UI/UX"
 
-#: src/features/single-project/single-project-view.tsx:51
+#: src/features/single-project/single-project-view.tsx:55
 msgid "With a great pleasure I suggest you"
 msgstr "С большим удовольствием предлагаю тебе"
 
@@ -245,6 +245,6 @@ msgstr "Курс разговорного английского"
 msgid "type-script course certificate"
 msgstr "type-script курс серцификат"
 
-#: src/features/single-project/single-project-view.tsx:55
+#: src/features/single-project/single-project-view.tsx:59
 msgid "watch real project"
 msgstr "посмотреть проект"

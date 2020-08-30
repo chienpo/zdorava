@@ -80,7 +80,7 @@ msgstr ""
 msgid "Art projects"
 msgstr ""
 
-#: src/features/single-project/single-project-view.tsx:35
+#: src/features/single-project/single-project-view.tsx:39
 msgid "Back"
 msgstr ""
 
@@ -92,7 +92,7 @@ msgstr ""
 msgid "Code quality tools"
 msgstr ""
 
-#: src/features/portfolio/portfolio-view.tsx:37
+#: src/features/portfolio/portfolio-view.tsx:42
 msgid "Coming soon ..."
 msgstr ""
 
@@ -217,7 +217,7 @@ msgstr ""
 msgid "UI/UX tools"
 msgstr ""
 
-#: src/features/single-project/single-project-view.tsx:51
+#: src/features/single-project/single-project-view.tsx:55
 msgid "With a great pleasure I suggest you"
 msgstr ""
 
@@ -245,6 +245,6 @@ msgstr ""
 msgid "type-script course certificate"
 msgstr ""
 
-#: src/features/single-project/single-project-view.tsx:55
+#: src/features/single-project/single-project-view.tsx:59
 msgid "watch real project"
 msgstr ""
