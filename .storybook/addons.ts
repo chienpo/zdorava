@@ -2,7 +2,7 @@ import { create } from '@storybook/theming';
 import { addons } from '@storybook/addons';
 
 const mainTheme = create({
-  base: 'light',
+  base: 'dark',
   fontBase: '"Montserrat", sans-serif',
   fontCode: 'monospace',
   appBorderRadius: 4,

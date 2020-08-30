@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { StorybookConfig } from '@storybook/core/types';
 
 import { configureWebpack } from './webpack';

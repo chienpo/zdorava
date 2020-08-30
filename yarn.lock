@@ -2230,7 +2230,7 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@storybook/addon-actions@6.0.20", "@storybook/addon-actions@^6.0.4":
+"@storybook/addon-actions@6.0.20", "@storybook/addon-actions@^6.0.20":
   version "6.0.20"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-6.0.20.tgz#4fcf83ec7f961a90a0836633cdf18ecf37d9ed51"
   integrity sha512-zO0iol1FQya3cPuVjkq5/YWmmmgXuElIcVQpxndACHGIF6ktwmMJSLToLjfz9Gi5l9LA9/m8j/7FUZrORFtWQQ==
@@ -2328,7 +2328,7 @@
     ts-dedent "^1.1.1"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-essentials@^6.0.4":
+"@storybook/addon-essentials@^6.0.20":
   version "6.0.20"
   resolved "https://registry.yarnpkg.com/@storybook/addon-essentials/-/addon-essentials-6.0.20.tgz#e18b9f149b0bb62ecee1f333b5efda6f1602ac9b"
   integrity sha512-+OQOvANxsOZ7iD6iiMo1SGb8xDsXjEBzhORbhJ62hCAwo34oSXzwh5kETUM3AvTG3gl3BTxJuOLzBtsd9wwuiQ==
@@ -2346,7 +2346,7 @@
     regenerator-runtime "^0.13.3"
     ts-dedent "^1.1.1"
 
-"@storybook/addon-links@^6.0.4":
+"@storybook/addon-links@^6.0.20":
   version "6.0.20"
   resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-6.0.20.tgz#cfe9cc3faa4a57cc128b9c5949c4af8bb76f8b75"
   integrity sha512-vlMw77OnYhBmodbT5cRmOvEN1Op5RgmhrVbTCID3TSQpQzABC6/cFwTpTUwTbQVIPSWHrcYd2MtvfWgSY58NnA==
@@ -2392,7 +2392,7 @@
     prop-types "^15.7.2"
     regenerator-runtime "^0.13.3"
 
-"@storybook/addons@6.0.20", "@storybook/addons@^6.0.4":
+"@storybook/addons@6.0.20", "@storybook/addons@^6.0.20":
   version "6.0.20"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-6.0.20.tgz#2c21655db9ffe7606dcabbaf85216f72f4799616"
   integrity sha512-UdImOL9+oFgZKjvdpq5Lu9P+UcUm8N6eJzbC8T/eRVomYj1e7sjHs7PyVRsyDiDmhrCKZ5KpNFw3r2yRnav04g==
@@ -2521,7 +2521,7 @@
   dependencies:
     core-js "^3.0.1"
 
-"@storybook/core@6.0.20":
+"@storybook/core@6.0.20", "@storybook/core@^6.0.20":
   version "6.0.20"
   resolved "https://registry.yarnpkg.com/@storybook/core/-/core-6.0.20.tgz#8ba3d9e128287e004654b8480b650e8f3ccddc8a"
   integrity sha512-FvoHQ03YvTXVaGPqsZ98CBESZGQ69cZh+0K4kbOEfSY76xXpCbY9kIQ6ynHHQEPJdC2kFX97YRsOuSTY1AZqVQ==
@@ -2649,7 +2649,7 @@
   dependencies:
     core-js "^3.0.1"
 
-"@storybook/react@^6.0.4":
+"@storybook/react@^6.0.20":
   version "6.0.20"
   resolved "https://registry.yarnpkg.com/@storybook/react/-/react-6.0.20.tgz#bf5ab1f291918ad74f1f7777af494b85eec993dd"
   integrity sha512-+OQwsCY0IFG2HnirwcoSACJiLQK4F0iJxaJO1xzXkouYHNOLeCpRt9fjn8OdhPNyDZSr0SvU7U9k5p1U+6N0Og==
@@ -2711,7 +2711,7 @@
     prettier "~2.0.5"
     regenerator-runtime "^0.13.3"
 
-"@storybook/theming@6.0.20", "@storybook/theming@^6.0.4":
+"@storybook/theming@6.0.20", "@storybook/theming@^6.0.20":
   version "6.0.20"
   resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-6.0.20.tgz#a7d4b953552dc9cc7431497ec7920774d21ae24f"
   integrity sha512-gTDq3Qu/LuJ04/4quld0/oFnW2gIaKEYxwIyAoIjZ3wKOsGyleBEFPZEtyQaKZkzQMh4mkmO020ckDz9+XH0jg==
@@ -5475,10 +5475,15 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30000989, caniuse-lite@^1.0.30001035, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001111:
+caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30000989, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001111:
   version "1.0.30001119"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001119.tgz#99185d04bc00e76a86c9ff731dc5ec8e53aefca1"
   integrity sha512-Hpwa4obv7EGP+TjkCh/wVvbtNJewxmtg4yVJBLFnxo35vbPapBr138bUWENkb5j5L9JZJ9RXLn4OrXRG/cecPQ==
+
+caniuse-lite@^1.0.30001035:
+  version "1.0.30001120"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001120.tgz#cd21d35e537214e19f7b9f4f161f7b0f2710d46c"
+  integrity sha512-JBP68okZs1X8D7MQTY602jxMYBmXEKOFkzTBaNSkubooMPFOAv2TXWaKle7qgHpjLDhUzA/TMT0qsNleVyXGUQ==
 
 capitalize@^2.0.0:
   version "2.0.3"
