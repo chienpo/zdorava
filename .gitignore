@@ -7,7 +7,7 @@ dist
 storybook-static
 
 #Coverage
-/coverage
+.coverage
 
 # IDE
 .idea
