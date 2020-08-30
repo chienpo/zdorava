@@ -17,6 +17,7 @@ module.exports = {
     jest: true,
   },
   extends: [
+    'plugin:jest/recommended',
     'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:@typescript-eslint/recommended',
