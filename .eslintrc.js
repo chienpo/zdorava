@@ -1,3 +1,4 @@
+/** @type import('@typescript-eslint/types').ParserOptions */
 const parserOptions = {
   ecmaVersion: 2020,
   sourceType: 'module',
@@ -6,7 +7,8 @@ const parserOptions = {
   extraFileExtensions: ['.mdx'],
 };
 
-module.exports = {
+/** @type import('eslint').Linter.Config */
+const config = {
   root: true,
   parser: '@typescript-eslint/parser',
   parserOptions,
@@ -15,6 +17,16 @@ module.exports = {
     browser: true,
     node: true,
     jest: true,
+  },
+  settings: {
+    'import/resolver': {
+      typescript: {
+        alwaysTryTypes: true,
+      },
+      node: {
+        paths: ['src'],
+      },
+    },
   },
   extends: [
     'plugin:jest/recommended',
@@ -156,16 +168,6 @@ module.exports = {
     },
   ],
   plugins: ['@typescript-eslint', 'react-hooks'],
-  settings: {
-    'import/resolver': {
-      typescript: {
-        alwaysTryTypes: true,
-      },
-      node: {
-        paths: ['src'],
-      },
-    },
-  },
   rules: {
     'import/extensions': [
       'error',
@@ -235,3 +237,5 @@ module.exports = {
     '@typescript-eslint/restrict-template-expressions': 'off',
   },
 };
+
+module.exports = config;
