@@ -1,26 +1,11 @@
 {
   "Back": {
-    "origin": [
-      [
-        "src/features/single-project/single-project-view.tsx",
-        39
-      ]
-    ]
+    "origin": [["src/features/single-project/single-project-view.tsx", 39]]
   },
   "With a great pleasure I suggest you": {
-    "origin": [
-      [
-        "src/features/single-project/single-project-view.tsx",
-        55
-      ]
-    ]
+    "origin": [["src/features/single-project/single-project-view.tsx", 55]]
   },
   "watch real project": {
-    "origin": [
-      [
-        "src/features/single-project/single-project-view.tsx",
-        59
-      ]
-    ]
+    "origin": [["src/features/single-project/single-project-view.tsx", 59]]
   }
 }
