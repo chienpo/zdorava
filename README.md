@@ -112,15 +112,6 @@ JavaScript codebase. It allows you to write tests with an approachable, familiar
 and feature-rich API that gives you results quickly. Jest is well-documented,
 requires little configuration and can be extended to match your requirements.
 
-### react-testing-library
-
-The react-testing-library is a very light-weight solution for testing React
-components. It helps to avoid including implementation details of your
-components and rather focus on making your tests give you the confidence for
-which they are intended. As part of this, your testbase becomes maintainable in
-the long run so refactors of your components (changes to implementation but not
-functionality) don't break your tests and slow you and your team down.
-
 ### styled-components
 
 styled-components allows you to write traditional CSS to style your components
@@ -148,7 +139,6 @@ it uses just plain JavaScript to build reusable components.
 - filenames linting
 - react-hooks linting
 - styled-components setup
-- react-testing-library setup
 
 ## License & copyright
 
