@@ -20,6 +20,7 @@
     "fix": "yarn eslint --fix && yarn stylelint --fix",
     "qa": "yarn lint && yarn codestyle && yarn tsc && yarn test",
     "test": "jest --no-cache",
+    "test-silent": "jest --reporters=jest-silent-reporter",
     "test-coverage": "jest --coverage",
     "docz": "NODE_PATH=src docz dev",
     "docz-build": "NODE_PATH=src docz build",
@@ -37,7 +38,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn && yarn ts && lint-staged"
+      "pre-commit": "yarn && yarn ts && yarn test-silent && lint-staged"
     }
   },
   "dependencies": {
@@ -154,6 +155,7 @@
     "husky": "^2.3.0",
     "jest": "^26.4.0",
     "jest-localstorage-mock": "^2.4.3",
+    "jest-silent-reporter": "^0.2.1",
     "jest-styled-components": "^7.0.2",
     "lint-staged": "^8.1.7",
     "mini-css-extract-plugin": "^0.10.0",
