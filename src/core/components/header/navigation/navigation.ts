@@ -1,6 +1,6 @@
 import { createElement, FC } from 'react';
 import { useRoute } from 'react-router5';
-import isMobile from 'ismobilejs/dist/isMobile.min';
+import isMobile from 'ismobilejs';
 
 import { LAPTOPS } from '~/constants/media-device-min-widths';
 import { useMediaMinWidth } from '~/hooks/use-media-min-width';
@@ -40,7 +40,10 @@ export const Navigation: FC<Props> = ({
     selectedLanguage,
     onToggleLanguage,
     routes,
-    isMobile: mobileByDefault || isMobile.any || !mediaMinWidthForLaptops,
+    isMobile:
+      mobileByDefault ||
+      isMobile(window.navigator).any ||
+      !mediaMinWidthForLaptops,
     showMenu,
     headerHeight,
     themeSwitchVisible,
