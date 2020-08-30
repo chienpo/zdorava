@@ -9,6 +9,7 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack/config.dev.ts",
     "build": "webpack --config webpack/config.prod.ts",
+    "build-info": "webpack --config webpack/config.info.ts",
     "ts": "tsc -p tsconfig.json",
     "eslint": "eslint '**/*.+(js|jsx|ts|tsx)'",
     "stylelint": "stylelint '**/*.+(css|scss|js|jsx|ts|tsx)'",
@@ -119,6 +120,7 @@
     "@types/terser-webpack-plugin": "^4.1.0",
     "@types/webfontloader": "^1.6.32",
     "@types/webpack": "^4.41.21",
+    "@types/webpack-bundle-analyzer": "^3.8.0",
     "@types/webpack-dev-server": "^3.11.0",
     "@types/webpack-env": "^1.13.9",
     "@types/webpack-merge": "^4.1.5",
@@ -178,6 +180,7 @@
     "ts-jest": "^26.2.0",
     "tsconfig-paths-webpack-plugin": "^3.3.0",
     "webpack": "^4.44.1",
+    "webpack-bundle-analyzer": "^3.8.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.1.2"
