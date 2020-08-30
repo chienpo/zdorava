@@ -16,7 +16,7 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
   const [checked, toggleSwitch] = useState<boolean>(toggledByDefault);
 
   const onChangeHandler = ({ target }: ChangeEvent<HTMLInputElement>) => {
-    toggleSwitch((prevState) => !prevState);
+    toggleSwitch((previousState) => !previousState);
     toggleTheme(checked);
 
     if (onToggleTheme) {

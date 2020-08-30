@@ -6,15 +6,15 @@ import { router } from './router';
 
 import { loadWebFonts } from './utils/web-font-loader';
 
-const rootElement = document.getElementById('root');
+const rootElement = document.querySelector('#root');
 
 if (rootElement === null) {
   throw new Error('No root element');
 }
 
 const renderApp = (): void => {
-  loadWebFonts().then((res) =>
-    res.load({
+  loadWebFonts().then((response) =>
+    response.load({
       google: {
         families: ['Montserrat:100,400,700&display=swap'],
       },

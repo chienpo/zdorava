@@ -35,7 +35,7 @@ export const PortfolioView: React.FC<Props> = ({
   useEffect(() => {
     const promise = controls.start('visible');
 
-    promise.then((res) => res);
+    promise.then((result) => result);
   }, [controls]);
 
   const originOffset = useRef<{ top: number; left: number }>({

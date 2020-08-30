@@ -1,17 +1,32 @@
 import React, { Suspense, FC, RefObject, ReactNode } from 'react';
 import { MotionProps } from 'framer-motion';
 
-import { lazyLib } from '~/utils/lazy-lib';
+import { lazyLibrary } from '~/utils/lazy-library';
 
-const MotionDiv = lazyLib(() => import('framer-motion'), 'motion.div');
-const MotionHeader = lazyLib(() => import('framer-motion'), 'motion.header');
-const MotionFooter = lazyLib(() => import('framer-motion'), 'motion.footer');
-const MotionUl = lazyLib(() => import('framer-motion'), 'motion.ul');
-const MotionLi = lazyLib(() => import('framer-motion'), 'motion.li');
-const MotionAddress = lazyLib(() => import('framer-motion'), 'motion.address');
-const MotionPath = lazyLib(() => import('framer-motion'), 'motion.path');
-const MotionSection = lazyLib(() => import('framer-motion'), 'motion.section');
-const MotionFigure = lazyLib(() => import('framer-motion'), 'motion.figure');
+const MotionDiv = lazyLibrary(() => import('framer-motion'), 'motion.div');
+const MotionHeader = lazyLibrary(
+  () => import('framer-motion'),
+  'motion.header'
+);
+const MotionFooter = lazyLibrary(
+  () => import('framer-motion'),
+  'motion.footer'
+);
+const MotionUl = lazyLibrary(() => import('framer-motion'), 'motion.ul');
+const MotionLi = lazyLibrary(() => import('framer-motion'), 'motion.li');
+const MotionAddress = lazyLibrary(
+  () => import('framer-motion'),
+  'motion.address'
+);
+const MotionPath = lazyLibrary(() => import('framer-motion'), 'motion.path');
+const MotionSection = lazyLibrary(
+  () => import('framer-motion'),
+  'motion.section'
+);
+const MotionFigure = lazyLibrary(
+  () => import('framer-motion'),
+  'motion.figure'
+);
 
 interface Props {
   className?: string;

@@ -69,7 +69,7 @@ export const PortfolioChunkItemView: React.FC<
     delayRef.current = d * delayPerPixel;
   }, [delayPerPixel, originOffset]);
 
-  const imgThumbnailSrc = `${SITE_URL}${PORTFOLIO_IMAGES_PATH}${category}-thumbnail/${thumbnailSrc}`;
+  const imgThumbnailSource = `${SITE_URL}${PORTFOLIO_IMAGES_PATH}${category}-thumbnail/${thumbnailSrc}`;
 
   return (
     <AnimatePresence>
@@ -114,8 +114,8 @@ export const PortfolioChunkItemView: React.FC<
               <ItemFigure>
                 <LazyImageStyled
                   alt={alt}
-                  src={imgThumbnailSrc}
-                  srcSet={imgThumbnailSrc}
+                  src={imgThumbnailSource}
+                  srcSet={imgThumbnailSource}
                 />
               </ItemFigure>
               <ItemCategoryName>

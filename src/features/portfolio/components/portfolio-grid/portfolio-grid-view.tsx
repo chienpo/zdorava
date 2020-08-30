@@ -43,13 +43,13 @@ export const PortfolioGridView: React.FC<Props & DataProps> = ({
 
     const chunksNumber = array.length / types.length;
 
-    const arr: string[][] = [];
+    const resultArray: string[][] = [];
 
     for (let i = 0; i < chunksNumber; i++) {
-      arr.push(types);
+      resultArray.push(types);
     }
 
-    return arr.flat()[chunkInd];
+    return resultArray.flat()[chunkInd];
   };
 
   const newTabChecked = data.length > 0;

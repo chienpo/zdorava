@@ -9,12 +9,12 @@ interface Props {
   children: ReactNode;
 }
 
-export const LanguageProvider: React.FC<Props> = ({ children }) => {
-  const importCatalog = async (lang: string) =>
-    import(`@lingui/loader!../locales/${lang}/messages.po`).then(
-      ({ default: defaultCatalog }) => defaultCatalog
-    );
+const importCatalog = (lang: string) =>
+  import(`@lingui/loader!../locales/${lang}/messages.po`).then(
+    ({ default: defaultCatalog }) => defaultCatalog
+  );
 
+export const LanguageProvider: React.FC<Props> = ({ children }) => {
   const language = useStore($languageStore);
   const [catalog, setCatalog] = useState<Catalog | null>(null);
 

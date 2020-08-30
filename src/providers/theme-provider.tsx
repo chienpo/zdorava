@@ -1,7 +1,7 @@
 import React, { ReactElement, FC } from 'react';
 import { Normalize } from 'styled-normalize';
 import { useRoute } from 'react-router5';
-import { ThemeProvider as ThemeProviderLib } from 'styled-components';
+import { ThemeProvider as ThemeProviderRoot } from 'styled-components';
 import { useStore } from 'effector-react';
 
 import { $themeStore } from '~/store/theme-store';
@@ -16,7 +16,7 @@ export const ThemeProvider: FC<Props> = ({ children }) => {
   const { route } = useRoute();
 
   return (
-    <ThemeProviderLib
+    <ThemeProviderRoot
       theme={{
         // TODO: Decide later. If all pages will be available for theming path just themeMode and that it
         mode: DEFAULT_ROUTE_THEME_MODES[route.name] || themeMode,
@@ -24,6 +24,6 @@ export const ThemeProvider: FC<Props> = ({ children }) => {
     >
       <Normalize />
       {children}
-    </ThemeProviderLib>
+    </ThemeProviderRoot>
   );
 };

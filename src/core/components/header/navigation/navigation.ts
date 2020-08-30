@@ -2,7 +2,7 @@ import { createElement, FC } from 'react';
 import { useRoute } from 'react-router5';
 import isMobile from 'ismobilejs/dist/isMobile.min';
 
-import { LAPTOPS } from '~/constants/mediaDeviceMinWidths';
+import { LAPTOPS } from '~/constants/media-device-min-widths';
 import { useMediaMinWidth } from '~/hooks/use-media-min-width';
 import { LanguageSwitchProps } from '~/ui/language-switch/language-switch-view';
 import {

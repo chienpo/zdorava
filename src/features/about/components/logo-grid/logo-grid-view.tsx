@@ -1,7 +1,7 @@
 import React from 'react';
 import { AnimatePresence } from 'framer-motion';
 
-import { getModernSrcSet } from '~/helpers/get-modern-src-set';
+import { getModernSourceSet } from '~/helpers/get-modern-source-set';
 import { LazyImage } from '~/ui/lazy-image';
 import { AnimatedDiv } from '~/animations/animated';
 import { LOGOS_DATA } from './logos-data';
@@ -50,8 +50,8 @@ export const LogoGridView = () => (
           >
             <LazyImage
               alt={alt}
-              src={getModernSrcSet(srcSet)}
-              srcSet={getModernSrcSet(srcSet)}
+              src={getModernSourceSet(srcSet)}
+              srcSet={getModernSourceSet(srcSet)}
             />
           </StyledMotionFigure>
         ))}

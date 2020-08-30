@@ -1,9 +1,9 @@
 import React, { useState, useEffect, Suspense } from 'react';
 
-import { lazyLib } from '~/utils/lazy-lib';
+import { lazyLibrary } from '~/utils/lazy-library';
 import { GlitchContainer, LazyGlitchBackground } from './styled';
 
-const GlitchEffect = lazyLib(() => import('react-glitch-effect'));
+const GlitchEffect = lazyLibrary(() => import('react-glitch-effect'));
 
 interface Props {
   src: string;

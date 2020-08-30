@@ -15,6 +15,7 @@ export const PortfolioGrid: FC<Props> = ({
   selectedCategory,
   originOffset,
 }) => {
+  // eslint-disable-next-line unicorn/no-reduce
   const chunkedData = data.reduce(
     (resultArray: PortfolioItemModel[][], item, index) => {
       const chunkIndex: number = Math.floor(index / 4);

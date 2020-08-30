@@ -34,12 +34,12 @@ export const Portfolio: FC = () => {
   }, [categoryFromStore]);
 
   const getDataChunk = async (categoryName: string) => {
-    const dbRef = firebaseInstance.database().ref(FIREBASE_DATABASE_REF);
+    const databaseRef = firebaseInstance.database().ref(FIREBASE_DATABASE_REF);
 
     const queries =
       categoryName === PORTFOLIO_CATEGORY_TAB_NAME_ALL
-        ? dbRef
-        : dbRef.orderByChild('category').equalTo(categoryName);
+        ? databaseRef
+        : databaseRef.orderByChild('category').equalTo(categoryName);
 
     await queries
       .limitToFirst(DATA_CHUNK_SIZE)
@@ -55,18 +55,18 @@ export const Portfolio: FC = () => {
         throw error;
       })
       .finally(() => {
-        setDataLoadCount((prevState) => prevState + 1);
+        setDataLoadCount((previousState) => previousState + 1);
       });
   };
 
   const getNextDataChunk = async () => {
-    setDataLoadCount((prevState) => prevState + 1);
-    const dbRef = firebaseInstance.database().ref(FIREBASE_DATABASE_REF);
+    setDataLoadCount((previousState) => previousState + 1);
+    const databaseRef = firebaseInstance.database().ref(FIREBASE_DATABASE_REF);
 
     const queries =
       categoryFromStore === PORTFOLIO_CATEGORY_TAB_NAME_ALL
-        ? dbRef
-        : dbRef.orderByChild('category').equalTo(categoryFromStore);
+        ? databaseRef
+        : databaseRef.orderByChild('category').equalTo(categoryFromStore);
 
     await queries
       .limitToFirst(DATA_CHUNK_SIZE * dataLoadCount)

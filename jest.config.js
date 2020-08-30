@@ -6,10 +6,7 @@ const { compilerOptions } = require('./tsconfig.json');
 const config = {
   coverageDirectory: '.coverage',
   setupFiles: ['jest-localstorage-mock'],
-  setupFilesAfterEnv: [
-    'jest-styled-components',
-    `${__dirname}/config/setupTest.ts`,
-  ],
+  setupFilesAfterEnv: ['jest-styled-components', `${__dirname}/setup-test.ts`],
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
     prefix: `${__dirname}/`,
   }),
