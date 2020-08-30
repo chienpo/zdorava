@@ -1,16 +1,13 @@
 import React from 'react';
 
-import Home from '~/features/home';
+import { HomeView } from './home-view';
 import Header from '~/core/components/header';
 import Footer from '~/core/components/footer';
 
-const HomePage = () => (
+export const Home = () => (
   <>
     <Header />
-    <Home />
+    <HomeView />
     <Footer />
   </>
 );
-
-// eslint-disable-next-line import/no-default-export
-export default HomePage;

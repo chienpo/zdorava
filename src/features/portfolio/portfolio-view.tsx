@@ -7,6 +7,8 @@ import { PortfolioItemModel } from '~/models/portfolio-item.model';
 
 import { BLACK_100, WHITE_100 } from '~/constants/colors';
 import { MoreLoader } from '~/ui/more-loader/more-loader';
+import Header from '~/core/components/header';
+import Footer from '~/core/components/footer';
 import { AnimatedDiv } from '~/animations/animated';
 import { PortfolioGrid, PortfolioTabs } from './components';
 import {
@@ -44,51 +46,57 @@ export const PortfolioView: React.FC<Props> = ({
   });
 
   return (
-    <AnimatedSectionStyled
-      variants={{
-        enter: {
-          backgroundColor: BLACK_100,
-          transition: {
-            duration: 1,
-          },
-        },
-        exit: {
-          backgroundColor: WHITE_100,
-          transition: { duration: 0.4 },
-        },
-      }}
-      initial="enter"
-      animate="enter"
-      exit="exit"
-    >
-      <PortfolioTabs
-        selectedCategory={selectedCategory}
-        activeCategoryPayload={activeCategoryPayload}
-      />
-      <AnimatedDiv initial="hidden" animate={controls} variants={{}}>
-        <InfiniteScroll
-          style={{ overflow: 'hidden' }}
-          dataLength={data.length}
-          next={getNextDataChunk}
-          hasMore={hasMore}
-          loader={
-            <ItemsLoadingSpinnerBox>
-              <MoreLoader />
-            </ItemsLoadingSpinnerBox>
-          }
-          endMessage={
-            <ItemsLoadingStateDescription>
-              <Trans>Coming soon ...</Trans>
-            </ItemsLoadingStateDescription>
-          }
+    <>
+      <Header />
+      <main>
+        <AnimatedSectionStyled
+          variants={{
+            enter: {
+              backgroundColor: BLACK_100,
+              transition: {
+                duration: 1,
+              },
+            },
+            exit: {
+              backgroundColor: WHITE_100,
+              transition: { duration: 0.4 },
+            },
+          }}
+          initial="enter"
+          animate="enter"
+          exit="exit"
         >
-          <PortfolioGrid
-            data={data}
+          <PortfolioTabs
             selectedCategory={selectedCategory}
-            originOffset={originOffset}
+            activeCategoryPayload={activeCategoryPayload}
           />
-        </InfiniteScroll>
-      </AnimatedDiv>
-    </AnimatedSectionStyled>
+          <AnimatedDiv initial="hidden" animate={controls} variants={{}}>
+            <InfiniteScroll
+              style={{ overflow: 'hidden' }}
+              dataLength={data.length}
+              next={getNextDataChunk}
+              hasMore={hasMore}
+              loader={
+                <ItemsLoadingSpinnerBox>
+                  <MoreLoader />
+                </ItemsLoadingSpinnerBox>
+              }
+              endMessage={
+                <ItemsLoadingStateDescription>
+                  <Trans>Coming soon ...</Trans>
+                </ItemsLoadingStateDescription>
+              }
+            >
+              <PortfolioGrid
+                data={data}
+                selectedCategory={selectedCategory}
+                originOffset={originOffset}
+              />
+            </InfiniteScroll>
+          </AnimatedDiv>
+        </AnimatedSectionStyled>
+      </main>
+      <Footer />
+    </>
   );
 };

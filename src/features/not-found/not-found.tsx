@@ -1,18 +1,15 @@
 import React from 'react';
 
-import { NotFound } from '~/features/not-found';
+import { NotFoundView } from './not-found-view';
 import Header from '~/core/components/header';
 import Footer from '~/core/components/footer';
 
-const NotFoundPage = () => (
+export const NotFound = () => (
   <>
     <Header />
     <main>
-      <NotFound />
+      <NotFoundView />
     </main>
     <Footer />
   </>
 );
-
-// eslint-disable-next-line import/no-default-export
-export default NotFoundPage;

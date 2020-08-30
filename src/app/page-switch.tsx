@@ -12,11 +12,11 @@ import {
 import { PageLoader } from '~/ui/page-loader/page-loader';
 import { MotionContent } from './styled';
 
-const HomePage = React.lazy(() => import('~/core/pages/home-page'));
-const AboutPage = React.lazy(() => import('~/core/pages/about-page'));
-const PortfolioPage = React.lazy(() => import('~/core/pages/portfolio-page'));
-const ProjectPage = React.lazy(() => import('~/core/pages/project-page'));
-const NotFoundPage = React.lazy(() => import('~/core/pages/not-found-page'));
+const HomePage = React.lazy(() => import('~/features/home'));
+const AboutPage = React.lazy(() => import('~/features/about'));
+const PortfolioPage = React.lazy(() => import('~/features/portfolio'));
+const ProjectPage = React.lazy(() => import('~/features/single-project'));
+const NotFoundPage = React.lazy(() => import('~/features/not-found'));
 
 const pageVariants = {
   initial: {
