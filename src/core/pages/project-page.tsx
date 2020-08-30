@@ -3,7 +3,7 @@ import React from 'react';
 import { SingleProject } from '~/features/single-project/single-project';
 import Header from '~/core/components/header';
 
-export const ProjectPageView = () => (
+const ProjectPage = () => (
   <>
     <Header mobileByDefault />
     <main>
@@ -11,3 +11,6 @@ export const ProjectPageView = () => (
     </main>
   </>
 );
+
+// eslint-disable-next-line import/no-default-export
+export default ProjectPage;

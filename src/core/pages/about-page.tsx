@@ -1,15 +1,18 @@
 import React from 'react';
 
-import { Portfolio } from '~/features/portfolio';
+import { About } from '~/features/about';
 import Header from '~/core/components/header';
 import Footer from '~/core/components/footer';
 
-export const PortfolioPageView = () => (
+const AboutPage = () => (
   <>
     <Header />
     <main>
-      <Portfolio />
+      <About />
     </main>
     <Footer />
   </>
 );
+
+// eslint-disable-next-line import/no-default-export
+export default AboutPage;

@@ -4,7 +4,7 @@ import { NotFound } from '~/features/not-found';
 import Header from '~/core/components/header';
 import Footer from '~/core/components/footer';
 
-export const NotFoundPageView = () => (
+const NotFoundPage = () => (
   <>
     <Header />
     <main>
@@ -13,3 +13,6 @@ export const NotFoundPageView = () => (
     <Footer />
   </>
 );
+
+// eslint-disable-next-line import/no-default-export
+export default NotFoundPage;

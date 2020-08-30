@@ -4,10 +4,13 @@ import Home from '~/features/home';
 import Header from '~/core/components/header';
 import Footer from '~/core/components/footer';
 
-export const HomePageView = () => (
+const HomePage = () => (
   <>
     <Header />
     <Home />
     <Footer />
   </>
 );
+
+// eslint-disable-next-line import/no-default-export
+export default HomePage;
