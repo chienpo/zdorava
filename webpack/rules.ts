@@ -63,6 +63,25 @@ export const createRules = (options: Options = {}): RuleSetRule[] => {
     ],
   };
 
+  const svg = {
+    test: paths.svgPattern,
+    use: [
+      'babel-loader',
+      {
+        loader: '@svgr/webpack',
+        options: {
+          ref: true,
+          memo: true,
+          babel: false,
+          prettier: false,
+          svgoConfig: {
+            plugins: [{ removeViewBox: false }],
+          },
+        },
+      },
+    ],
+  };
+
   const assets = {
     test: paths.filePattern,
     use: {
@@ -74,5 +93,7 @@ export const createRules = (options: Options = {}): RuleSetRule[] => {
     },
   };
 
-  return options.excludeJs ? [css, scss, assets] : [js, css, scss, assets];
+  return options.excludeJs
+    ? [css, scss, svg, assets]
+    : [js, css, scss, svg, assets];
 };

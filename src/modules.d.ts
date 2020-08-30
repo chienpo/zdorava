@@ -24,6 +24,11 @@ declare module '*.woff2' {
   // noinspection all
   export default url;
 }
+declare module '*.svg' {
+  const Component: React.ComponentType<Record<string, unknown>>;
+  // noinspection all
+  export default Component;
+}
 declare module '*.css';
 
 declare module 'react-glitch-effect';
