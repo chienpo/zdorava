@@ -19,7 +19,7 @@ export const lazyLibrary = (
         const compPathParts = compPathString.split('.');
 
         // eslint-disable-next-line unicorn/no-reduce
-        const object = compPathParts.reduce(
+        const moduleDefault = compPathParts.reduce(
           (accumulator, currentValue: string) => {
             return accumulator ? accumulator[currentValue] : null;
           },
@@ -27,7 +27,7 @@ export const lazyLibrary = (
         );
 
         return {
-          default: object,
+          default: moduleDefault,
         };
       }
       return module;
