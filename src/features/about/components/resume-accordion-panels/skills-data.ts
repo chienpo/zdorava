@@ -1,6 +1,6 @@
 import { i18nMark } from '@lingui/react';
 
-export const SKILLS_PANEL_DATA = [
+export const SKILLS_DATA = [
   {
     title: i18nMark('Priorities'),
     images: [

@@ -1,17 +1,17 @@
 import React, { FC } from 'react';
-import { Trans } from '@lingui/react';
 import { AnimatePresence } from 'framer-motion';
+import { Trans } from '@lingui/react';
 
-import { ButtonCloseAnimated } from '~/ui/button-close-animated';
-import { Backdrop } from '~/ui/backdrop';
 import { AnimatedDiv } from '~/animations/animated';
-import { ContactForm } from './components/contact-form';
+import { Backdrop } from '~/ui/backdrop';
+import { ButtonCloseAnimated } from '~/ui/button-close-animated';
+import { ContactForm } from '~/features/contacts/components/contact-form';
 import {
   FormSection,
   H2Styled,
   FormBox,
   SectionControls,
-  StyledMotionContactFormWrapper,
+  MotionContactFormWrapper,
 } from './styled';
 
 interface Props {
@@ -19,8 +19,8 @@ interface Props {
   onClose: () => void;
 }
 
-export const ContactsView: FC<Props> = ({ opened, onClose }) => (
-  <StyledMotionContactFormWrapper
+export const Contacts: FC<Props> = ({ opened, onClose }) => (
+  <MotionContactFormWrapper
     initial="closed"
     animate={opened ? 'open' : 'closed'}
   >
@@ -58,5 +58,5 @@ export const ContactsView: FC<Props> = ({ opened, onClose }) => (
     <AnimatePresence>
       {opened && <Backdrop fixed={false} onClick={onClose} />}
     </AnimatePresence>
-  </StyledMotionContactFormWrapper>
+  </MotionContactFormWrapper>
 );

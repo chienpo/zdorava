@@ -7,7 +7,7 @@ import { AnimatedDiv } from '~/animations/animated';
 import { LOGOS_DATA } from './logos-data';
 import { GridLogoWrapper, StyledMotionFigure } from './styled';
 
-export const LogoGridView = () => (
+export const LogoGrid = () => (
   <AnimatedDiv animate="enter" exit="exit">
     <AnimatePresence>
       <GridLogoWrapper

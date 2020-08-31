@@ -1,1 +1,1 @@
-export { LogoGridView as LogoGrid } from './logo-grid-view';
+export { LogoGrid } from './logo-grid';

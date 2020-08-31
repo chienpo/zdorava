@@ -1,8 +1,8 @@
 import React from 'react';
 import { I18n, Trans } from '@lingui/react';
 
-import { SKILLS_PANEL_DATA } from './panel-data';
-import { CertificatesList } from '../certifiates-list';
+import { SKILLS_DATA } from './skills-data';
+import { CertificatesList } from './certifiates-list';
 import {
   Ul,
   Li,
@@ -77,7 +77,7 @@ export const PanelThreeView = () => (
     {({ i18n }) => (
       <PanelWrapper>
         <Ul>
-          {SKILLS_PANEL_DATA.map(({ title, images }) => (
+          {SKILLS_DATA.map(({ title, images }) => (
             <LiInline key={title}>
               <H4>
                 {i18n._(title)}

@@ -5,7 +5,7 @@ import { BLACK, WHITE } from '~/constants/colors';
 import { H2 } from '~/ui/headings';
 import { AnimatedDiv } from '~/animations/animated';
 
-export const StyledMotionContactFormWrapper = styled(AnimatedDiv)`
+export const MotionContactFormWrapper = styled(AnimatedDiv)`
   position: fixed;
   top: 0;
   z-index: 5;
