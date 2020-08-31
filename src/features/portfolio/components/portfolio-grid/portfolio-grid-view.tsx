@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { AnimatePresence } from 'framer-motion';
 import { PortfolioItemModel } from '~/models/portfolio-item.model';
 
 import {
@@ -9,7 +10,6 @@ import {
 } from '~/constants/portfolio';
 import { PortfolioChunkItem } from './portfolio-chunk-item';
 import { MotionChunkRow, MotionGridContainer } from './styled';
-import { AnimatePresence } from 'framer-motion';
 
 interface Props {
   activeCategory: string;
@@ -59,7 +59,6 @@ export const PortfolioGridView: React.FC<Props & DataProps> = ({
         <AnimatePresence key={chunks[0].imageSrc}>
           <MotionChunkRow
             className={`chunk ${activeCategory}`}
-            key={chunks[0].imageSrc}
             variants={variants}
             initial="closed"
             exit="closed"
