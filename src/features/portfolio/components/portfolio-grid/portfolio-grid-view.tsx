@@ -1,4 +1,5 @@
 import React from 'react';
+import { AnimatePresence } from 'framer-motion';
 
 import { PortfolioItemModel } from '~/models/portfolio-item.model';
 
@@ -55,7 +56,7 @@ export const PortfolioGridView: React.FC<Props & DataProps> = ({
   const newTabChecked = data.length > 0;
 
   return (
-    <>
+    <AnimatePresence>
       <MotionGridContainer
         initial="closed"
         animate={newTabChecked ? 'open' : 'closed'}
@@ -97,6 +98,6 @@ export const PortfolioGridView: React.FC<Props & DataProps> = ({
           </MotionChunkRow>
         ))}
       </MotionGridContainer>
-    </>
+    </AnimatePresence>
   );
 };
