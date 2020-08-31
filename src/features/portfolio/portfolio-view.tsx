@@ -18,7 +18,7 @@ import {
 } from './styled';
 
 interface Props {
-  activeCategoryPayload: (name: string) => void;
+  onCategoryClick: (categoryName: string) => void;
   data: PortfolioItemModel[];
   getNextDataChunk: () => void;
   hasMore: boolean;
@@ -27,7 +27,7 @@ interface Props {
 
 export const PortfolioView: React.FC<Props> = ({
   activeCategory,
-  activeCategoryPayload,
+  onCategoryClick,
   data,
   getNextDataChunk,
   hasMore,
@@ -68,7 +68,7 @@ export const PortfolioView: React.FC<Props> = ({
         >
           <PortfolioTabList
             activeCategory={activeCategory}
-            activeCategoryPayload={activeCategoryPayload}
+            onCategoryClick={onCategoryClick}
           />
           <AnimatedDiv initial="hidden" animate={controls} variants={{}}>
             <InfiniteScroll

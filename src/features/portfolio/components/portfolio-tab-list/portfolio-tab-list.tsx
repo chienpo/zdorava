@@ -17,53 +17,47 @@ const CATEGORIES_DATA: { [key: string]: string }[] = [
 ];
 
 interface Props {
-  activeCategoryPayload: (name: string) => void;
+  onCategoryClick: (categoryName: string) => void;
   activeCategory: string;
 }
 
 export const PortfolioTabList: FC<Props> = ({
-  activeCategoryPayload,
+  onCategoryClick,
   activeCategory,
-}) => {
-  const onSetCategory = (name: string) => {
-    activeCategoryPayload(name);
-  };
-
-  return (
-    <I18n>
-      {({ i18n }) => (
-        <PortfolioTabsBox
-          variants={{
-            enter: {
-              opacity: 1,
-              transition: {
-                duration: 1,
-              },
+}) => (
+  <I18n>
+    {({ i18n }) => (
+      <PortfolioTabsBox
+        variants={{
+          enter: {
+            opacity: 1,
+            transition: {
+              duration: 1,
             },
-            exit: {
-              opacity: 0,
-              transition: { duration: 1.5 },
-            },
-          }}
-          initial="exit"
-          animate="enter"
-          exit="exit"
-        >
-          <MotionPortfolioTabs>
-            {CATEGORIES_DATA.map(({ label }) => (
-              <PortfolioTab
-                key={label}
-                onClick={() => onSetCategory(label)}
-                className={label === activeCategory ? 'active' : ''}
-                disabled={label === activeCategory}
-                title={i18n._(PORTFOLIO_CATEGORIES_TABS_LABELS[label])}
-              >
-                {i18n._(PORTFOLIO_CATEGORIES_TABS_LABELS[label])}
-              </PortfolioTab>
-            ))}
-          </MotionPortfolioTabs>
-        </PortfolioTabsBox>
-      )}
-    </I18n>
-  );
-};
+          },
+          exit: {
+            opacity: 0,
+            transition: { duration: 1.5 },
+          },
+        }}
+        initial="exit"
+        animate="enter"
+        exit="exit"
+      >
+        <MotionPortfolioTabs>
+          {CATEGORIES_DATA.map(({ label }) => (
+            <PortfolioTab
+              key={label}
+              onClick={() => onCategoryClick(label)}
+              className={label === activeCategory ? 'active' : ''}
+              disabled={label === activeCategory}
+              title={i18n._(PORTFOLIO_CATEGORIES_TABS_LABELS[label])}
+            >
+              {i18n._(PORTFOLIO_CATEGORIES_TABS_LABELS[label])}
+            </PortfolioTab>
+          ))}
+        </MotionPortfolioTabs>
+      </PortfolioTabsBox>
+    )}
+  </I18n>
+);

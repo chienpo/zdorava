@@ -81,10 +81,10 @@ export const Portfolio: FC = () => {
       });
   };
 
-  const onCategoryClick = (name: string) => {
-    setPortfolioCategory(name);
+  const onCategoryClick = (categoryName: string) => {
+    setPortfolioCategory(categoryName);
 
-    setCategory(name);
+    setCategory(categoryName);
     setDataLoadCount(1);
     setHasMore(true);
     setData([]);
@@ -128,7 +128,7 @@ export const Portfolio: FC = () => {
 
   return createElement(PortfolioView, {
     data,
-    activeCategoryPayload: onCategoryClick,
+    onCategoryClick,
     getNextDataChunk,
     hasMore,
     activeCategory,
