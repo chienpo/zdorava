@@ -1,26 +1,66 @@
 {
   "Name": {
-    "origin": [["src/features/contacts/components/contact-form-view.tsx", 11]]
+    "origin": [
+      [
+        "src/features/contacts/components/contact-form-view.tsx",
+        11
+      ]
+    ]
   },
   "Enter your name": {
-    "origin": [["src/features/contacts/components/contact-form-view.tsx", 12]]
+    "origin": [
+      [
+        "src/features/contacts/components/contact-form-view.tsx",
+        12
+      ]
+    ]
   },
   "Email": {
-    "origin": [["src/features/contacts/components/contact-form-view.tsx", 14]]
+    "origin": [
+      [
+        "src/features/contacts/components/contact-form-view.tsx",
+        14
+      ]
+    ]
   },
   "Enter your email": {
-    "origin": [["src/features/contacts/components/contact-form-view.tsx", 15]]
+    "origin": [
+      [
+        "src/features/contacts/components/contact-form-view.tsx",
+        15
+      ]
+    ]
   },
   "Message": {
-    "origin": [["src/features/contacts/components/contact-form-view.tsx", 17]]
+    "origin": [
+      [
+        "src/features/contacts/components/contact-form-view.tsx",
+        17
+      ]
+    ]
   },
   "Enter your message": {
-    "origin": [["src/features/contacts/components/contact-form-view.tsx", 18]]
+    "origin": [
+      [
+        "src/features/contacts/components/contact-form-view.tsx",
+        18
+      ]
+    ]
   },
   "Message has been sent!": {
-    "origin": [["src/features/contacts/components/contact-form-view.tsx", 21]]
+    "origin": [
+      [
+        "src/features/contacts/components/contact-form-view.tsx",
+        21
+      ]
+    ]
   },
   "Send message": {
-    "origin": [["src/features/contacts/components/contact-form-view.tsx", 24]]
+    "origin": [
+      [
+        "src/features/contacts/components/contact-form-view.tsx",
+        24
+      ]
+    ]
   }
 }

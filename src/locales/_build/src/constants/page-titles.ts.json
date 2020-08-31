@@ -1,26 +1,66 @@
 {
   "404": {
-    "origin": [["src/constants/page-titles.ts", 10]]
+    "origin": [
+      [
+        "src/constants/page-titles.ts",
+        10
+      ]
+    ]
   },
   "Home": {
-    "origin": [["src/constants/page-titles.ts", 6]]
+    "origin": [
+      [
+        "src/constants/page-titles.ts",
+        6
+      ]
+    ]
   },
   "About": {
-    "origin": [["src/constants/page-titles.ts", 7]]
+    "origin": [
+      [
+        "src/constants/page-titles.ts",
+        7
+      ]
+    ]
   },
   "Portfolio": {
-    "origin": [["src/constants/page-titles.ts", 8]]
+    "origin": [
+      [
+        "src/constants/page-titles.ts",
+        8
+      ]
+    ]
   },
   "Project:": {
-    "origin": [["src/constants/page-titles.ts", 9]]
+    "origin": [
+      [
+        "src/constants/page-titles.ts",
+        9
+      ]
+    ]
   },
   "All projects": {
-    "origin": [["src/constants/page-titles.ts", 13]]
+    "origin": [
+      [
+        "src/constants/page-titles.ts",
+        13
+      ]
+    ]
   },
   "Front-End projects": {
-    "origin": [["src/constants/page-titles.ts", 14]]
+    "origin": [
+      [
+        "src/constants/page-titles.ts",
+        14
+      ]
+    ]
   },
   "Art projects": {
-    "origin": [["src/constants/page-titles.ts", 15]]
+    "origin": [
+      [
+        "src/constants/page-titles.ts",
+        15
+      ]
+    ]
   }
 }
