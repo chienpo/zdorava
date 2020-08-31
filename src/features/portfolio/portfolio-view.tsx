@@ -10,7 +10,7 @@ import { MoreLoader } from '~/ui/more-loader/more-loader';
 import Header from '~/core/components/header';
 import Footer from '~/core/components/footer';
 import { AnimatedDiv } from '~/animations/animated';
-import { PortfolioGrid, PortfolioTabs } from './components';
+import { PortfolioGrid, PortfolioTabList } from './components';
 import {
   AnimatedSectionStyled,
   ItemsLoadingSpinnerBox,
@@ -22,15 +22,15 @@ interface Props {
   data: PortfolioItemModel[];
   getNextDataChunk: () => void;
   hasMore: boolean;
-  selectedCategory: string;
+  activeCategory: string;
 }
 
 export const PortfolioView: React.FC<Props> = ({
+  activeCategory,
   activeCategoryPayload,
   data,
   getNextDataChunk,
   hasMore,
-  selectedCategory,
 }) => {
   const controls = useAnimation();
 
@@ -66,8 +66,8 @@ export const PortfolioView: React.FC<Props> = ({
           animate="enter"
           exit="exit"
         >
-          <PortfolioTabs
-            selectedCategory={selectedCategory}
+          <PortfolioTabList
+            activeCategory={activeCategory}
             activeCategoryPayload={activeCategoryPayload}
           />
           <AnimatedDiv initial="hidden" animate={controls} variants={{}}>
@@ -89,7 +89,7 @@ export const PortfolioView: React.FC<Props> = ({
             >
               <PortfolioGrid
                 data={data}
-                selectedCategory={selectedCategory}
+                activeCategory={activeCategory}
                 originOffset={originOffset}
               />
             </InfiniteScroll>

@@ -11,7 +11,7 @@ import { PortfolioChunkItem } from '../portfolio-chunk-item';
 import { MotionChunkRow, MotionGridContainer } from './styled';
 
 interface Props {
-  selectedCategory: string;
+  activeCategory: string;
   originOffset: { current: { [key: string]: number } };
 }
 
@@ -33,7 +33,7 @@ export const PortfolioGridView: React.FC<Props & DataProps> = ({
   chunkedData,
   data,
   originOffset,
-  selectedCategory,
+  activeCategory,
 }) => {
   // TODO: Update
   const getChunkType = (chunkInd: number) => {
@@ -63,7 +63,7 @@ export const PortfolioGridView: React.FC<Props & DataProps> = ({
       >
         {chunkedData.map((chunks, ind) => (
           <MotionChunkRow
-            className={`chunk ${selectedCategory}`}
+            className={`chunk ${activeCategory}`}
             key={chunks[0].imageSrc}
             variants={variants}
           >
@@ -88,7 +88,7 @@ export const PortfolioGridView: React.FC<Props & DataProps> = ({
                   index={index}
                   originIndex={data.length}
                   originOffset={originOffset}
-                  selectedCategory={selectedCategory}
+                  activeCategory={activeCategory}
                   thumbnailSrc={thumbnailSrc}
                   title={title}
                 />

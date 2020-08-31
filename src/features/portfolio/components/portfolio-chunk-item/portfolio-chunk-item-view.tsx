@@ -25,7 +25,7 @@ interface Props {
   index: number;
   originIndex: number;
   originOffset: { current: { [key: string]: number } };
-  selectedCategory: string;
+  activeCategory: string;
 }
 
 export const PortfolioChunkItemView: React.FC<
@@ -38,7 +38,7 @@ export const PortfolioChunkItemView: React.FC<
   index,
   originIndex,
   originOffset,
-  selectedCategory,
+  activeCategory,
   thumbnailSrc,
   title,
 }) => {
@@ -76,7 +76,7 @@ export const PortfolioChunkItemView: React.FC<
       <I18n>
         {({ i18n }) => (
           <Item
-            className={`${chunkType} ${selectedCategory}`}
+            className={`${chunkType} ${activeCategory}`}
             ref={ref}
             variants={{
               open: {
@@ -121,7 +121,7 @@ export const PortfolioChunkItemView: React.FC<
               <ItemCategoryName>
                 <FontAwesomeIcon icon={faImage} />
                 <ItemCategoryLabel>
-                  {i18n._(PORTFOLIO_CATEGORIES_TABS_LABELS[selectedCategory])}
+                  {i18n._(PORTFOLIO_CATEGORIES_TABS_LABELS[activeCategory])}
                 </ItemCategoryLabel>
               </ItemCategoryName>
               <ItemTitle>{title[i18n.language]}</ItemTitle>

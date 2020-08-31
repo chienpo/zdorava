@@ -5,7 +5,7 @@ import { BLACK, RED, RED_70, WHITE } from '~/constants/colors';
 import { DARK_MODE } from '~/constants/theme';
 import { pulseAnim, pulseAnimWhite } from '~/animations/keyframes/pulse';
 
-export const ButtonCircleStyled = styled.button`
+export const PortfolioTab = styled.button`
   @media (min-width: 991px) {
     font-size: 16px;
   }

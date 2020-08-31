@@ -6,13 +6,13 @@ import { PortfolioGridView } from './portfolio-grid-view';
 
 interface Props {
   data: PortfolioItemModel[];
-  selectedCategory: string;
+  activeCategory: string;
   originOffset: { current: { [key: string]: number } };
 }
 
 export const PortfolioGrid: FC<Props> = ({
   data,
-  selectedCategory,
+  activeCategory,
   originOffset,
 }) => {
   // eslint-disable-next-line unicorn/no-reduce
@@ -37,6 +37,6 @@ export const PortfolioGrid: FC<Props> = ({
     chunkedData,
     data,
     originOffset,
-    selectedCategory,
+    activeCategory,
   });
 };

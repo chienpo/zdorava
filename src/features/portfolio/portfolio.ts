@@ -25,7 +25,7 @@ export const Portfolio: FC = () => {
   const [pageLoading, setPageLoading] = useState<boolean>(true);
   const [hasMore, setHasMore] = useState<boolean>(true);
   const [dataLoadCount, setDataLoadCount] = useState<number>(1);
-  const [selectedCategory, setCategory] = useState<string>(categoryFromStore);
+  const [activeCategory, setCategory] = useState<string>(categoryFromStore);
 
   const DATA_CHUNK_SIZE = 6;
 
@@ -131,6 +131,6 @@ export const Portfolio: FC = () => {
     activeCategoryPayload: onCategoryClick,
     getNextDataChunk,
     hasMore,
-    selectedCategory,
+    activeCategory,
   });
 };
