@@ -9,6 +9,7 @@ import {
 } from '~/constants/portfolio';
 import { PortfolioChunkItem } from './portfolio-chunk-item';
 import { MotionChunkRow, MotionGridContainer } from './styled';
+import { AnimatePresence } from 'framer-motion';
 
 interface Props {
   activeCategory: string;
@@ -52,48 +53,46 @@ export const PortfolioGridView: React.FC<Props & DataProps> = ({
     return resultArray.flat()[chunkInd];
   };
 
-  const newTabChecked = data.length > 0;
-
   return (
-    <MotionGridContainer
-      initial="closed"
-      animate={newTabChecked ? 'open' : 'closed'}
-      exit="closed"
-    >
+    <MotionGridContainer initial="closed" animate="open" exit="closed">
       {chunkedData.map((chunks, ind) => (
-        <MotionChunkRow
-          className={`chunk ${activeCategory}`}
-          key={chunks[0].imageSrc}
-          variants={variants}
-        >
-          {chunks.map(
-            (
-              {
-                category,
-                imageSrc,
-                alt,
-                thumbnailSrc,
-                title,
-              }: PortfolioItemModel,
-              index
-            ) => (
-              <PortfolioChunkItem
-                key={imageSrc}
-                alt={alt}
-                category={category}
-                chunkType={getChunkType(ind)}
-                delayPerPixel={0.0002}
-                imageSrc={imageSrc}
-                index={index}
-                originIndex={data.length}
-                originOffset={originOffset}
-                activeCategory={activeCategory}
-                thumbnailSrc={thumbnailSrc}
-                title={title}
-              />
-            )
-          )}
-        </MotionChunkRow>
+        <AnimatePresence key={chunks[0].imageSrc}>
+          <MotionChunkRow
+            className={`chunk ${activeCategory}`}
+            key={chunks[0].imageSrc}
+            variants={variants}
+            initial="closed"
+            exit="closed"
+          >
+            {chunks.map(
+              (
+                {
+                  category,
+                  imageSrc,
+                  alt,
+                  thumbnailSrc,
+                  title,
+                }: PortfolioItemModel,
+                index
+              ) => (
+                <PortfolioChunkItem
+                  key={imageSrc}
+                  alt={alt}
+                  category={category}
+                  chunkType={getChunkType(ind)}
+                  delayPerPixel={0.0002}
+                  imageSrc={imageSrc}
+                  index={index}
+                  originIndex={data.length}
+                  originOffset={originOffset}
+                  activeCategory={activeCategory}
+                  thumbnailSrc={thumbnailSrc}
+                  title={title}
+                />
+              )
+            )}
+          </MotionChunkRow>
+        </AnimatePresence>
       ))}
     </MotionGridContainer>
   );
