@@ -7,7 +7,7 @@ import {
   CHUNK_TYPE_TWO,
   CHUNK_TYPE_THREE,
 } from '~/constants/portfolio';
-import { PortfolioChunkItem } from '../portfolio-chunk-item';
+import { PortfolioChunkItem } from './portfolio-chunk-item';
 import { MotionChunkRow, MotionGridContainer } from './styled';
 
 interface Props {

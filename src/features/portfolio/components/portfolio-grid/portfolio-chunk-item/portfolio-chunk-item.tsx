@@ -28,7 +28,7 @@ interface Props {
   activeCategory: string;
 }
 
-export const PortfolioChunkItemView: React.FC<
+export const PortfolioChunkItem: React.FC<
   Props & PortfolioPreviewItemModel
 > = ({
   alt,
