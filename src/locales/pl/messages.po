@@ -18,43 +18,43 @@ msgstr ""
 msgid "404"
 msgstr ""
 
-#: src/features/about/components/certifiates-list/certificates-data.ts:36
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:36
 msgid "\"Business english three course\" certificate, Itransition"
 msgstr ""
 
-#: src/features/about/components/certifiates-list/certificates-data.ts:35
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:35
 msgid "\"Business english three english course\""
 msgstr ""
 
-#: src/features/about/components/certifiates-list/certificates-data.ts:17
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:17
 msgid "\"JavaScript - The Complete Guide 2020 (Beginner + Advanced)\""
 msgstr ""
 
-#: src/features/about/components/certifiates-list/certificates-data.ts:18
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:18
 msgid "\"JavaScript - The Complete Guide 2020 certificate, \"UDEMY\""
 msgstr ""
 
-#: src/features/about/components/certifiates-list/certificates-data.ts:11
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:11
 msgid "\"React - The Complete Guide (incl Hooks, React Router, Redux)\""
 msgstr ""
 
-#: src/features/about/components/certifiates-list/certificates-data.ts:12
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:12
 msgid "\"React - The Complete Guide (incl Hooks, React Router, Redux)\" certificate, \"UDEMY\""
 msgstr ""
 
-#: src/features/about/components/certifiates-list/certificates-data.ts:29
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:29
 msgid "\"Spoken intermediate english course\""
 msgstr ""
 
-#: src/features/about/components/certifiates-list/certificates-data.ts:30
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:30
 msgid "\"Spoken intermediate one course\" certificate, Itransition"
 msgstr ""
 
-#: src/features/about/components/certifiates-list/certificates-data.ts:23
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:23
 msgid "\"Understanding TypeScript - 2020 Edition\""
 msgstr ""
 
-#: src/features/about/components/certifiates-list/certificates-data.ts:24
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:24
 msgid "\"Understanding TypeScript - 2020 Edition\" certificate, \"UDEMY\""
 msgstr ""
 
@@ -88,7 +88,7 @@ msgstr ""
 msgid "Closely related to design, front-end development process is always going on in creative way and i can always see the result of my job. And this is what i like so much!"
 msgstr ""
 
-#: src/features/about/components/resume-accordion-panels/panel-data.ts:64
+#: src/features/about/components/resume-accordion-panels/skills-data.ts:64
 msgid "Code quality tools"
 msgstr ""
 
@@ -100,7 +100,7 @@ msgstr ""
 msgid "Creating reactive applications for me is like making up some web ecosystems. But bricks here - are cutes of code, and component-structure - is the constructions. Using my arch-design and development skills, i combine this in to a real complex react web application!"
 msgstr ""
 
-#: src/features/about/components/resume-accordion-panels/panel-data.ts:94
+#: src/features/about/components/resume-accordion-panels/skills-data.ts:94
 msgid "Development environment setup"
 msgstr ""
 
@@ -140,7 +140,7 @@ msgstr ""
 msgid "Graduated as a Master of Architectural Design, took part at Hackathon-contest by MTS in 2015 when web-development by a side with the other things became my way of life."
 msgstr ""
 
-#: src/features/about/components/resume-accordion-panels/panel-data.ts:34
+#: src/features/about/components/resume-accordion-panels/skills-data.ts:34
 msgid "Hand's on experience"
 msgstr ""
 
@@ -153,7 +153,7 @@ msgid "Home"
 msgstr ""
 
 #: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:37
-msgid "I've been working in Itransition Softvare Development Company as a Front-end Developer. This time allowed me to dive dipper in to front-end and understand how cool is it! Working in a team of developers I took part in making up really cool projects and features for our foreign customers."
+msgid "I've been working in Itransition Software Development Company as a Front-end Developer. This time allowed me to dive dipper in to front-end and understand how cool is it! Working in a team of developers I took part in making up really cool projects and features for our foreign customers."
 msgstr ""
 
 #: src/features/home/home-view.tsx:13
@@ -180,7 +180,7 @@ msgstr ""
 msgid "Over 10 years I've been studying on architecture & design specialisations. I was lucky to improve my skills in such areas like: interior and brand design, modern and concept arts, i created a lot of cool creative projects and also got and expierence of presenting them to the customers! This expierence has became absolutely helpful in front-end, web-design, and even though in my whole life!"
 msgstr ""
 
-#: src/features/about/components/resume-accordion-panels/panel-data.ts:79
+#: src/features/about/components/resume-accordion-panels/skills-data.ts:79
 msgid "Platforms and bundlers"
 msgstr ""
 
@@ -189,7 +189,7 @@ msgstr ""
 msgid "Portfolio"
 msgstr ""
 
-#: src/features/about/components/resume-accordion-panels/panel-data.ts:4
+#: src/features/about/components/resume-accordion-panels/skills-data.ts:4
 msgid "Priorities"
 msgstr ""
 
@@ -213,7 +213,7 @@ msgstr ""
 msgid "Technology stack & skills"
 msgstr ""
 
-#: src/features/about/components/resume-accordion-panels/panel-data.ts:119
+#: src/features/about/components/resume-accordion-panels/skills-data.ts:119
 msgid "UI/UX tools"
 msgstr ""
 
@@ -221,27 +221,27 @@ msgstr ""
 msgid "With a great pleasure I suggest you"
 msgstr ""
 
-#: src/features/contacts/contacts-view.tsx:27
+#: src/features/contacts/contacts.tsx:27
 msgid "Write me"
 msgstr ""
 
-#: src/features/about/components/certifiates-list/certificates-data.ts:34
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:34
 msgid "business english three english course certificate"
 msgstr ""
 
-#: src/features/about/components/certifiates-list/certificates-data.ts:16
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:16
 msgid "java-script course certificate"
 msgstr ""
 
-#: src/features/about/components/certifiates-list/certificates-data.ts:10
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:10
 msgid "react course certificate"
 msgstr ""
 
-#: src/features/about/components/certifiates-list/certificates-data.ts:28
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:28
 msgid "spoken intermediate one english course certificate"
 msgstr ""
 
-#: src/features/about/components/certifiates-list/certificates-data.ts:22
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:22
 msgid "type-script course certificate"
 msgstr ""
 

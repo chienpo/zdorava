@@ -14,7 +14,7 @@ import {
   H4,
 } from './styled';
 
-export const PanelOneView = () => (
+export const PanelAboutView = () => (
   <PanelWrapper>
     <Ul>
       <Li>
@@ -44,13 +44,13 @@ export const PanelOneView = () => (
   </PanelWrapper>
 );
 
-export const PanelTwoView = () => (
+export const PanelExperienceView = () => (
   <PanelWrapper>
     <Ul>
       <Li>
         <Strong>2018-2020</Strong>
         <Trans>
-          I&apos;ve been working in Itransition Softvare Development Company as
+          I&apos;ve been working in Itransition Software Development Company as
           a Front-end Developer. This time allowed me to dive dipper in to
           front-end and understand how cool is it! Working in a team of
           developers I took part in making up really cool projects and features
@@ -72,7 +72,7 @@ export const PanelTwoView = () => (
   </PanelWrapper>
 );
 
-export const PanelThreeView = () => (
+export const PanelTechnologyStackView = () => (
   <I18n>
     {({ i18n }) => (
       <PanelWrapper>
@@ -98,7 +98,7 @@ export const PanelThreeView = () => (
   </I18n>
 );
 
-export const PanelFourView = () => (
+export const PanelLanguagesAndCertificatesView = () => (
   <PanelWrapper>
     <CertificatesList />
   </PanelWrapper>

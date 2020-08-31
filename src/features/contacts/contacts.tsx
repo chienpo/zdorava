@@ -5,7 +5,7 @@ import { Trans } from '@lingui/react';
 import { AnimatedDiv } from '~/animations/animated';
 import { Backdrop } from '~/ui/backdrop';
 import { ButtonCloseAnimated } from '~/ui/button-close-animated';
-import { ContactForm } from '~/features/contacts/components/contact-form';
+import { ContactForm } from './components';
 import {
   FormSection,
   H2Styled,
