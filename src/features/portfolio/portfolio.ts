@@ -1,4 +1,4 @@
-import { createElement, useState, useEffect, FC } from 'react';
+import { FC, createElement, useState, useEffect } from 'react';
 import { useStore } from 'effector-react';
 
 import { PortfolioItemModel } from '~/models/portfolio-item.model';

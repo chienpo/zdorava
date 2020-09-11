@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { Trans } from '@lingui/react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { useAnimation } from 'framer-motion';
@@ -39,11 +39,6 @@ export const PortfolioView: React.FC<Props> = ({
 
     promise.then((result) => result);
   }, [controls]);
-
-  const originOffset = useRef<{ top: number; left: number }>({
-    top: 0,
-    left: 0,
-  });
 
   return (
     <>
@@ -87,11 +82,7 @@ export const PortfolioView: React.FC<Props> = ({
                 </ItemsLoadingStateDescription>
               }
             >
-              <PortfolioGrid
-                data={data}
-                activeCategory={activeCategory}
-                originOffset={originOffset}
-              />
+              <PortfolioGrid data={data} activeCategory={activeCategory} />
             </InfiniteScroll>
           </AnimatedDiv>
         </AnimatedSectionStyled>

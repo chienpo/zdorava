@@ -1,42 +1,39 @@
-import React from 'react';
-
+import React, { FC } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import { PortfolioItemModel } from '~/models/portfolio-item.model';
 
+import { PortfolioItemModel } from '~/models/portfolio-item.model';
 import {
   CHUNK_TYPE_ONE,
-  CHUNK_TYPE_TWO,
   CHUNK_TYPE_THREE,
+  CHUNK_TYPE_TWO,
 } from '~/constants/portfolio';
 import { PortfolioChunkItem } from './portfolio-chunk-item';
 import { MotionChunkRow, MotionGridContainer } from './styled';
 
 interface Props {
-  activeCategory: string;
-  originOffset: { current: { [key: string]: number } };
-}
-
-interface DataProps {
-  chunkedData: PortfolioItemModel[][];
   data: PortfolioItemModel[];
+  activeCategory: string;
 }
 
-const variants = {
-  open: {
-    transition: { staggerChildren: 0.07, delayChildren: 0.2 },
-  },
-  closed: {
-    transition: { staggerChildren: 0.05, staggerDirection: -1 },
-  },
-};
+export const PortfolioGrid: FC<Props> = ({ data, activeCategory }) => {
+  // eslint-disable-next-line unicorn/no-reduce
+  const chunkedData = data.reduce(
+    (resultArray: PortfolioItemModel[][], item, index) => {
+      const chunkIndex: number = Math.floor(index / 4);
 
-export const PortfolioGridView: React.FC<Props & DataProps> = ({
-  chunkedData,
-  data,
-  originOffset,
-  activeCategory,
-}) => {
-  // TODO: Update
+      if (!resultArray[chunkIndex]) {
+        // TODO: Check this method to fix the rule
+        // eslint-disable-next-line no-param-reassign
+        resultArray[chunkIndex] = [];
+      }
+
+      resultArray[chunkIndex].push(item);
+
+      return resultArray;
+    },
+    []
+  );
+
   const getChunkType = (chunkInd: number) => {
     const array = [...new Array(data.length)].map((_, i) => i);
 
@@ -59,31 +56,31 @@ export const PortfolioGridView: React.FC<Props & DataProps> = ({
         <AnimatePresence key={chunks[0].imageSrc}>
           <MotionChunkRow
             className={`chunk ${activeCategory}`}
-            variants={variants}
+            variants={{
+              open: {
+                transition: { staggerChildren: 0.07, delayChildren: 0.2 },
+              },
+              closed: {
+                transition: { staggerChildren: 0.05, staggerDirection: -1 },
+              },
+            }}
             initial="closed"
             exit="closed"
           >
             {chunks.map(
-              (
-                {
-                  category,
-                  imageSrc,
-                  alt,
-                  thumbnailSrc,
-                  title,
-                }: PortfolioItemModel,
-                index
-              ) => (
+              ({
+                category,
+                imageSrc,
+                alt,
+                thumbnailSrc,
+                title,
+              }: PortfolioItemModel) => (
                 <PortfolioChunkItem
                   key={imageSrc}
                   alt={alt}
                   category={category}
                   chunkType={getChunkType(ind)}
-                  delayPerPixel={0.0002}
                   imageSrc={imageSrc}
-                  index={index}
-                  originIndex={data.length}
-                  originOffset={originOffset}
                   activeCategory={activeCategory}
                   thumbnailSrc={thumbnailSrc}
                   title={title}

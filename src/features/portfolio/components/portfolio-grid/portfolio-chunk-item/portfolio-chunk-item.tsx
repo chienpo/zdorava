@@ -1,4 +1,4 @@
-import React, { useRef, useLayoutEffect, useEffect } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faImage } from '@fortawesome/free-solid-svg-icons';
 import { I18n } from '@lingui/react';
@@ -21,54 +21,12 @@ import {
 
 interface Props {
   chunkType: string;
-  delayPerPixel: number;
-  index: number;
-  originIndex: number;
-  originOffset: { current: { [key: string]: number } };
   activeCategory: string;
 }
 
 export const PortfolioChunkItem: React.FC<
   Props & PortfolioPreviewItemModel
-> = ({
-  alt,
-  category,
-  chunkType,
-  delayPerPixel,
-  index,
-  originIndex,
-  originOffset,
-  activeCategory,
-  thumbnailSrc,
-  title,
-}) => {
-  const delayRef = useRef<number>(0);
-  const offset = useRef<{ top: number; left: number }>({ top: 0, left: 0 });
-  const ref = useRef<HTMLDivElement>(null);
-
-  useLayoutEffect(() => {
-    const element = ref.current;
-    if (!element) return;
-
-    offset.current = {
-      top: element.offsetTop,
-      left: element.offsetLeft,
-    };
-
-    if (index === originIndex) {
-      // TODO: Check this according to the lint
-      // eslint-disable-next-line no-param-reassign
-      originOffset.current = offset.current;
-    }
-  }, [delayPerPixel, index, originIndex, originOffset]);
-
-  useEffect(() => {
-    const dx = Math.abs(offset.current.left - originOffset.current.left);
-    const dy = Math.abs(offset.current.top - originOffset.current.top);
-    const d = Math.sqrt(Math.sqrt(dx ** 2 + dy ** 2));
-    delayRef.current = d * delayPerPixel;
-  }, [delayPerPixel, originOffset]);
-
+> = ({ alt, category, chunkType, activeCategory, thumbnailSrc, title }) => {
   const imgThumbnailSource = `${SITE_URL}${PORTFOLIO_IMAGES_PATH}${category}-thumbnail/${thumbnailSrc}`;
 
   return (
@@ -77,7 +35,6 @@ export const PortfolioChunkItem: React.FC<
         {({ i18n }) => (
           <Item
             className={`${chunkType} ${activeCategory}`}
-            ref={ref}
             variants={{
               open: {
                 x: 0,
@@ -104,7 +61,6 @@ export const PortfolioChunkItem: React.FC<
                 },
               },
             }}
-            custom={delayRef}
           >
             <ItemOrientationType
               routeName={ROUTE_NAME_PORTFOLIO_PROJECT}
