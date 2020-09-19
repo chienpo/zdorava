@@ -47,7 +47,7 @@ export const Root = () => {
             animate="enter"
             variants={pageVariants}
           >
-            <Suspense fallback={<PageLoader showSpinner={true} />}>
+            <Suspense fallback={<PageLoader showSpinner={false} />}>
               <HomePage />
             </Suspense>
           </MotionContent>
