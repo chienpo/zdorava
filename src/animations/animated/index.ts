@@ -4,6 +4,7 @@ export {
   AnimatedFigure,
   AnimatedHeader,
   AnimatedLi,
+  AnimatedMain,
   AnimatedPath,
   AnimatedSection,
   AnimatedUl,

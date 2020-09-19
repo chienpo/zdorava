@@ -33,46 +33,21 @@ const pageVariants = {
   },
 };
 
-const homePageVariants = {
-  initial: {
-    opacity: 0,
-    height: '100%',
-    x: '-100%',
-    transition: { duration: 0.2 },
-  },
-  enter: {
-    opacity: 1,
-    height: '100%',
-    x: '0%',
-    transition: { duration: 0.8 },
-  },
-  exit: {
-    opacity: 0,
-    height: '100%',
-    x: '-100%',
-    transition: { duration: 0.8 },
-  },
-};
-
 export const Root = () => {
   const { route } = useRouteNode('');
   const topRouteName = !route.name ? ROUTE_NAME_HOME : route.name.split('.')[0];
 
   return (
     <AppBox>
-      <AnimatePresence
-        exitBeforeEnter
-        initial={topRouteName === ROUTE_NAME_HOME}
-      >
+      <AnimatePresence exitBeforeEnter initial={false}>
         {topRouteName === ROUTE_NAME_HOME && (
           <MotionContent
             key={topRouteName}
             initial="initial"
             animate="enter"
-            exit="exit"
-            variants={homePageVariants}
+            variants={pageVariants}
           >
-            <Suspense fallback={<PageLoader showSpinner={false} />}>
+            <Suspense fallback={<PageLoader showSpinner={true} />}>
               <HomePage />
             </Suspense>
           </MotionContent>

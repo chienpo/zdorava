@@ -6,7 +6,7 @@ import {
   HomepageSubtitle,
   WebsiteSubtitle,
   SectionHome,
-  HomepageHGroup,
+  MainMotionStyled,
 } from './styled';
 
 const HomepageNavigation = React.lazy(
@@ -14,11 +14,28 @@ const HomepageNavigation = React.lazy(
 );
 
 export const HomeView = () => (
-  <SectionHome>
+  <MainMotionStyled
+    initial="initial"
+    animate="enter"
+    exit="exit"
+    variants={{
+      initial: {
+        opacity: 0,
+      },
+      enter: {
+        opacity: 1,
+        transition: { duration: 1 },
+      },
+      exit: {
+        opacity: 0,
+        transition: { duration: 1.5 },
+      },
+    }}
+  >
     <Suspense fallback={<nav />}>
       <HomepageNavigation />
     </Suspense>
-    <HomepageHGroup>
+    <SectionHome>
       <StyledH1>
         <Trans>Stepan</Trans>
         &nbsp;
@@ -26,6 +43,6 @@ export const HomeView = () => (
       </StyledH1>
       <HomepageSubtitle>web&art pro</HomepageSubtitle>
       <WebsiteSubtitle>Zdorava</WebsiteSubtitle>
-    </HomepageHGroup>
-  </SectionHome>
+    </SectionHome>
+  </MainMotionStyled>
 );

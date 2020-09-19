@@ -27,6 +27,7 @@ const MotionFigure = lazyLibrary(
   () => import('framer-motion'),
   'motion.figure'
 );
+const MotionMain = lazyLibrary(() => import('framer-motion'), 'motion.main');
 
 interface Props {
   className?: string;
@@ -65,6 +66,10 @@ const SuspenseComponent: React.FC<SuspenseComponentProps> = ({
     </Suspense>
   );
 };
+
+export const AnimatedMain: FC<MotionProps & Props> = (props) => (
+  <SuspenseComponent animCmp={MotionMain} fallbackTag="main" {...props} />
+);
 
 export const AnimatedDiv: FC<MotionProps & Props> = (props) => (
   <SuspenseComponent animCmp={MotionDiv} fallbackTag="div" {...props} />

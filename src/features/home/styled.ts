@@ -3,13 +3,14 @@ import styled from 'styled-components';
 import { DARK_MODE } from '~/constants/theme';
 import { BLACK_80, RED, WHITE_80 } from '~/constants/colors';
 import { noiseAnim, noiseAnimTwo } from '~/animations/keyframes/noise';
+import { AnimatedMain } from '~/animations/animated';
 
-export const SectionHome = styled.section`
+export const MainMotionStyled = styled(AnimatedMain)`
   position: relative;
   height: 100%;
 `;
 
-export const HomepageHGroup = styled.div`
+export const SectionHome = styled.section`
   position: relative;
   z-index: 2;
   display: flex;
