@@ -7,7 +7,9 @@ import Footer from '~/core/components/footer';
 export const Home = () => (
   <>
     <Header />
-    <HomeView />
+    <main>
+      <HomeView />
+    </main>
     <Footer />
   </>
 );
