@@ -1,8 +1,8 @@
 {
   "Stepan": {
-    "origin": [["src/features/home/home-view.tsx", 11]]
+    "origin": [["src/features/home/home-view.tsx", 24]]
   },
   "Lagunovsky": {
-    "origin": [["src/features/home/home-view.tsx", 13]]
+    "origin": [["src/features/home/home-view.tsx", 26]]
   }
 }

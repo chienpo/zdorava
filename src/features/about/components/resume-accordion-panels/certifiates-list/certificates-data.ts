@@ -5,6 +5,7 @@ import javaScriptUdemyCourse from '~/assets/images/sertificates/java-script-udem
 import typeScriptUdemyCourse from '~/assets/images/sertificates/type-script-udemy-course.jpg';
 import spokenIntermediateOneCourseCertificate from '~/assets/images/sertificates/spoken-intermediate-one-course-lagunovsky.png';
 import businessEnglishThreeCourseCertificate from '~/assets/images/sertificates/business-english-three-course-lagunovsky.png';
+import avaScriptAlgorithmsTheFundamentalsCourseCertificate from '~/assets/images/sertificates/certificate-of-completion-for-javascript-algorithms-the-fundamentals-course-lagunovsky.png';
 
 interface Certificate {
   src: string;
@@ -56,6 +57,14 @@ export const CERTIFICATES_DATA: Certificate[] = [
     title: i18nMark('"Business english three english course"'),
     description: i18nMark(
       '"Business english three course" certificate, Itransition'
+    ),
+  },
+  {
+    src: avaScriptAlgorithmsTheFundamentalsCourseCertificate,
+    alt: i18nMark('java script algorithms - the fundamentals" certificate'),
+    title: i18nMark('"JavaScript Algorithms - The Fundamentals"'),
+    description: i18nMark(
+      '"JavaScript Algorithms - The Fundamentals" certificate, "ACADEMIND"'
     ),
   },
 ];
