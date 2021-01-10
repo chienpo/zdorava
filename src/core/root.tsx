@@ -8,6 +8,7 @@ import {
   ROUTE_NAME_HOME,
   ROUTE_NAME_PORTFOLIO,
   ROUTE_NAME_PORTFOLIO_PROJECT,
+  ROUTE_NAME_SIGH_IN,
 } from '~/router/routes';
 import { PageLoader } from '~/ui/page-loader/page-loader';
 import { AppBox, MotionContent } from './styled';
@@ -17,6 +18,7 @@ const AboutPage = React.lazy(() => import('~/features/about'));
 const PortfolioPage = React.lazy(() => import('~/features/portfolio'));
 const ProjectPage = React.lazy(() => import('~/features/single-project'));
 const NotFoundPage = React.lazy(() => import('~/features/not-found'));
+const AuthPage = React.lazy(() => import('~/features/auth'));
 
 const pageVariants = {
   initial: {
@@ -85,6 +87,18 @@ export const Root = () => {
           >
             <Suspense fallback={<PageLoader />}>
               <ProjectPage key={topRouteName} />
+            </Suspense>
+          </MotionContent>
+        )}
+        {topRouteName === ROUTE_NAME_SIGH_IN && (
+          <MotionContent
+            key={topRouteName}
+            initial="initial"
+            animate="enter"
+            variants={pageVariants}
+          >
+            <Suspense fallback={<PageLoader />}>
+              <AuthPage />
             </Suspense>
           </MotionContent>
         )}

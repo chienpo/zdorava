@@ -40,7 +40,7 @@ export const InputField: FC<Props> = ({
           {type === 'textarea' ? (
             <Textarea rows={4} {...input} {...props} />
           ) : (
-            <Input {...input} {...props} />
+            <Input type={type} {...input} {...props} />
           )}
         </Label>
         {meta && <FieldError meta={meta} />}

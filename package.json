@@ -48,7 +48,7 @@
     "@fortawesome/react-fontawesome": "^0.1.9",
     "@lingui/core": "^2.9.1",
     "@lingui/react": "^2.9.1",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "effector": "^20.16.2",
     "effector-react": "^20.8.0",

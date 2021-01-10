@@ -149,6 +149,7 @@ msgid "Front-end"
 msgstr ""
 
 #: src/features/about/about-view.tsx:35
+#: src/features/auth/auth-view.tsx:35
 msgid "Front-end (React-JS) Developer"
 msgstr ""
 
@@ -161,6 +162,7 @@ msgid "Hand's on experience"
 msgstr ""
 
 #: src/features/about/about-view.tsx:33
+#: src/features/auth/auth-view.tsx:33
 msgid "Hello, I'm Stepan"
 msgstr ""
 
@@ -219,6 +221,14 @@ msgstr ""
 
 #: src/features/contacts/components/contact-form-view.tsx:24
 msgid "Send message"
+msgstr ""
+
+#: src/features/auth/components/auth-button.tsx:9
+msgid "Sign in"
+msgstr ""
+
+#: src/features/auth/components/auth-button.tsx:13
+msgid "Sign out"
 msgstr ""
 
 #: src/features/home/home-view.tsx:24

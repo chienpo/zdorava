@@ -15,7 +15,7 @@ export const LanguageSwitchBox = styled.div`
   margin-left: auto;
 `;
 
-export const NavUl = styled.ul`
+export const Ul = styled.ul`
   display: flex;
   flex-wrap: wrap;
   align-items: center;

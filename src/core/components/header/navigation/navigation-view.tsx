@@ -5,6 +5,7 @@ import { LanguageSwitchProps } from '~/ui/language-switch/language-switch-view';
 
 import { BurgerMenu } from '~/ui/burger-menu';
 import { NavigationListView } from './navigation-list-view';
+import { AuthButton } from '~/features/auth/components';
 import {
   NavigationWrapper,
   LanguageSwitchBox,
@@ -58,6 +59,8 @@ export const NavigationView: React.FC<Props> = ({
         </nav>
       )}
       <LanguageSwitchBox>
+        {/* TODO: Update with store */}
+        <AuthButton isAuthenticated={Boolean(localStorage.getItem('token'))} />
         {themeSwitchVisible && (
           <Suspense fallback={<div />}>
             <ThemeSwitch disabled={!themeSwitchVisible} />

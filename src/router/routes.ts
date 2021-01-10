@@ -5,10 +5,12 @@ export const ROUTE_NAME_ABOUT = 'about';
 export const ROUTE_NAME_PORTFOLIO = 'portfolio';
 export const ROUTE_NAME_PORTFOLIO_CATEGORY = 'portfolio.category';
 export const ROUTE_NAME_PORTFOLIO_PROJECT = 'project';
+export const ROUTE_NAME_SIGH_IN = 'sign-in';
 
 export const routes: Route[] = [
   { name: ROUTE_NAME_HOME, path: '/' },
   { name: ROUTE_NAME_ABOUT, path: '/about' },
+  { name: ROUTE_NAME_SIGH_IN, path: '/sign-in' },
   { name: ROUTE_NAME_PORTFOLIO, path: '/portfolio' },
   { name: ROUTE_NAME_PORTFOLIO_CATEGORY, path: '/:category' },
   { name: ROUTE_NAME_PORTFOLIO_PROJECT, path: '/project/:id' },
