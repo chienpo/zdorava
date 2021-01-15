@@ -18,51 +18,59 @@ msgstr ""
 msgid "404"
 msgstr "404"
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:37
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:38
 msgid "\"Business english three course\" certificate, Itransition"
 msgstr "\"Business english three course\" certificate, Itransition"
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:36
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:37
 msgid "\"Business english three english course\""
 msgstr "\"Business english three english course\""
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:18
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:19
 msgid "\"JavaScript - The Complete Guide 2020 (Beginner + Advanced)\""
 msgstr "\"JavaScript - The Complete Guide 2020 (Beginner + Advanced)\""
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:19
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:20
 msgid "\"JavaScript - The Complete Guide 2020 certificate, \"UDEMY\""
 msgstr "\"JavaScript - The Complete Guide 2020 certificate, \"UDEMY\""
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:42
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:43
 msgid "\"JavaScript Algorithms - The Fundamentals\""
 msgstr "\"JavaScript Algorithms - The Fundamentals\""
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:43
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:44
 msgid "\"JavaScript Algorithms - The Fundamentals\" certificate, \"ACADEMIND\""
 msgstr "\"JavaScript Algorithms - The Fundamentals\" certificate, \"ACADEMIND\""
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:12
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:49
+msgid "\"JavaScript Data Structures - The Fundamentals\""
+msgstr "\"JavaScript Data Structures - The Fundamentals\""
+
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:50
+msgid "\"JavaScript Data Structures - The Fundamentals\" certificate, \"ACADEMIND\""
+msgstr "\"JavaScript Data Structures - The Fundamentals\" certificate, \"ACADEMIND\""
+
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:13
 msgid "\"React - The Complete Guide (incl Hooks, React Router, Redux)\""
 msgstr "\"React - The Complete Guide (incl Hooks, React Router, Redux)\""
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:13
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:14
 msgid "\"React - The Complete Guide (incl Hooks, React Router, Redux)\" certificate, \"UDEMY\""
 msgstr "\"React - The Complete Guide (incl Hooks, React Router, Redux)\" certificate, \"UDEMY\""
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:30
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:31
 msgid "\"Spoken intermediate english course\""
 msgstr "\"Spoken intermediate english course\""
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:31
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:32
 msgid "\"Spoken intermediate one course\" certificate, Itransition"
 msgstr "\"Spoken intermediate one course\" certificate, Itransition"
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:24
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:25
 msgid "\"Understanding TypeScript - 2020 Edition\""
 msgstr "\"Understanding TypeScript - 2020 Edition\""
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:25
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:26
 msgid "\"Understanding TypeScript - 2020 Edition\" certificate, \"UDEMY\""
 msgstr "\"Understanding TypeScript - 2020 Edition\" certificate, \"UDEMY\""
 
@@ -233,27 +241,31 @@ msgstr "With a great pleasure I suggest you"
 msgid "Write me"
 msgstr "Write me"
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:35
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:36
 msgid "business english three english course certificate"
 msgstr "business english three english course certificate"
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:41
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:42
 msgid "java script algorithms - the fundamentals\" certificate"
 msgstr "java script algorithms - the fundamentals\" certificate"
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:17
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:48
+msgid "java script data structures - the fundamentals\" certificate"
+msgstr "java script data structures - the fundamentals\" certificate"
+
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:18
 msgid "java-script course certificate"
 msgstr "java-script course certificate"
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:11
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:12
 msgid "react course certificate"
 msgstr "react course certificate"
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:29
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:30
 msgid "spoken intermediate one english course certificate"
 msgstr "spoken intermediate one english course certificate"
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:23
+#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:24
 msgid "type-script course certificate"
 msgstr "type-script course certificate"
 

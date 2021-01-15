@@ -6,6 +6,7 @@ import typeScriptUdemyCourse from '~/assets/images/sertificates/type-script-udem
 import spokenIntermediateOneCourseCertificate from '~/assets/images/sertificates/spoken-intermediate-one-course-lagunovsky.png';
 import businessEnglishThreeCourseCertificate from '~/assets/images/sertificates/business-english-three-course-lagunovsky.png';
 import avaScriptAlgorithmsTheFundamentalsCourseCertificate from '~/assets/images/sertificates/certificate-of-completion-for-javascript-algorithms-the-fundamentals-course-lagunovsky.png';
+import javaScriptDataStructuresTheFundamentalsCourseCertificate from '~/assets/images/sertificates/certificate-of-completion-for-javascript-data-structures-the-fundamentals-course-lagunovsky.png';
 
 interface Certificate {
   src: string;
@@ -65,6 +66,16 @@ export const CERTIFICATES_DATA: Certificate[] = [
     title: i18nMark('"JavaScript Algorithms - The Fundamentals"'),
     description: i18nMark(
       '"JavaScript Algorithms - The Fundamentals" certificate, "ACADEMIND"'
+    ),
+  },
+  {
+    src: javaScriptDataStructuresTheFundamentalsCourseCertificate,
+    alt: i18nMark(
+      'java script data structures - the fundamentals" certificate'
+    ),
+    title: i18nMark('"JavaScript Data Structures - The Fundamentals"'),
+    description: i18nMark(
+      '"JavaScript Data Structures - The Fundamentals" certificate, "ACADEMIND"'
     ),
   },
 ];

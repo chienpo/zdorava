@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        11
+        12
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        12
+        13
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        13
+        14
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        17
+        18
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        18
+        19
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        19
+        20
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        23
+        24
       ]
     ]
   },
@@ -59,7 +59,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        24
+        25
       ]
     ]
   },
@@ -67,7 +67,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        25
+        26
       ]
     ]
   },
@@ -75,7 +75,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        29
+        30
       ]
     ]
   },
@@ -83,7 +83,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        30
+        31
       ]
     ]
   },
@@ -91,7 +91,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        31
+        32
       ]
     ]
   },
@@ -99,7 +99,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        35
+        36
       ]
     ]
   },
@@ -107,7 +107,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        36
+        37
       ]
     ]
   },
@@ -115,7 +115,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        37
+        38
       ]
     ]
   },
@@ -123,7 +123,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        41
+        42
       ]
     ]
   },
@@ -131,7 +131,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        42
+        43
       ]
     ]
   },
@@ -139,7 +139,31 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        43
+        44
+      ]
+    ]
+  },
+  "java script data structures - the fundamentals\" certificate": {
+    "origin": [
+      [
+        "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
+        48
+      ]
+    ]
+  },
+  "\"JavaScript Data Structures - The Fundamentals\"": {
+    "origin": [
+      [
+        "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
+        49
+      ]
+    ]
+  },
+  "\"JavaScript Data Structures - The Fundamentals\" certificate, \"ACADEMIND\"": {
+    "origin": [
+      [
+        "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
+        50
       ]
     ]
   }

@@ -1,5 +1,10 @@
 {
   "Coming soon ...": {
-    "origin": [["src/features/portfolio/portfolio-view.tsx", 38]]
+    "origin": [
+      [
+        "src/features/portfolio/portfolio-view.tsx",
+        38
+      ]
+    ]
   }
 }

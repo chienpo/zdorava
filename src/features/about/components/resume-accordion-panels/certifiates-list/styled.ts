@@ -6,7 +6,7 @@ import { BLACK } from '~/constants/colors';
 export const List = styled.ul`
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: 20% 20% 20%;
+  grid-template-columns: 20% 20% 20% 20%;
   list-style: none;
 `;
 
