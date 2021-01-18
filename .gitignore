@@ -39,3 +39,4 @@ lerna-debug.log*
 
 # DotEnv
 .env
+/src/locales/_build/
