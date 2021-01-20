@@ -9,6 +9,7 @@ import { $portfolioTabsStore } from '~/store/portfolio-tabs-store';
 
 import {
   ROUTE_NAME_ABOUT,
+  ROUTE_NAME_PORTFOLIO,
   ROUTE_NAME_PORTFOLIO_CATEGORY,
 } from '~/router/routes';
 import { PageLinkFadeView as PageLinkFade } from './page-link-fade/page-link-fade-view';
@@ -39,7 +40,7 @@ const HomePageNavigation = () => {
         title={<Trans>About</Trans>}
       />
       <PageLinkFade
-        routeName={ROUTE_NAME_PORTFOLIO_CATEGORY}
+        routeName={`${ROUTE_NAME_PORTFOLIO}.${ROUTE_NAME_PORTFOLIO_CATEGORY}`}
         position="right"
         title={<Trans>Portfolio</Trans>}
         routeParams={{ category: portfolioSelectedCategory }}

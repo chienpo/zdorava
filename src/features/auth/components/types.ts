@@ -1,5 +1,5 @@
 export interface AuthButtonProps {
-  isAuthenticated?: boolean;
+  isAuthenticated: boolean;
   userName?: string;
   logoUrl?: string;
 }

@@ -4,12 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignInAlt, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 
 import { AuthButtonProps } from './types';
+import { ROUTE_NAME_HOME, ROUTE_NAME_SIGH_IN } from '~/router/routes';
 import authLogo from './logo.png';
 import { ButtonStyled, LogoStyled } from './styled';
-import { ROUTE_NAME_HOME, ROUTE_NAME_SIGH_IN } from '~/router/routes';
+
+import { signOut } from '~/store/auth-store';
 
 export const AuthButton: FC<AuthButtonProps> = ({
-  isAuthenticated = false,
+  isAuthenticated,
   userName = 'Stepan',
   logoUrl = authLogo,
 }) => {
@@ -21,11 +23,7 @@ export const AuthButton: FC<AuthButtonProps> = ({
         <>
           {isAuthenticated ? (
             <ButtonStyled
-              onClick={() => {
-                localStorage.removeItem('token');
-                localStorage.removeItem('expirationDate');
-                localStorage.removeItem('userId');
-              }}
+              onClick={signOut}
               routeName={authPath}
               title={i18n._(i18nMark('Sign out'))}
             >
