@@ -1,1 +1,2 @@
-export { InputField } from './input-field/input-field';
+export { InputField, SelectField } from './input-field';
+export { FieldError } from './field-error';
