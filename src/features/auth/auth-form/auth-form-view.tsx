@@ -1,108 +1,86 @@
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 import { Form } from 'react-final-form';
 import { i18nMark, I18n, Trans } from '@lingui/react';
-import axios from 'axios';
+import { useStore } from 'effector-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 
+import { AuthFormSubmitValues } from './types';
 import { FIELD_EMAIL, FIELD_PASSWORD } from './constants';
+import { BLACK_20 } from '~/constants/colors';
+import {
+  EMAIL_NOT_FOUND,
+  TOO_MANY_ATTEMPTS_TRY_LATER,
+} from '~/form-builder/errors';
 import { MoreLoader } from '~/ui/more-loader/more-loader';
-import { InputField } from '~/form-builder';
+import { InputField, FieldError } from '~/form-builder';
 import { required } from '~/form-builder/validators';
+import { H1 } from '~/ui/headings';
 import { StyledButton } from './styled';
-import { H1 } from '~/features/auth/styled';
+
+import { fetchAuthData } from '~/store/auth-fetch';
+import { $authStore } from '~/store/auth-store';
 
 const initialValues = {};
 
-export const AuthFormView: FC = () => {
-  const isLogIn = true;
-  let url =
-    'https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyCFb_IYOGeXg6-5cy9oJ9Uq4WeEg1oHTiM';
-
-  if (isLogIn) {
-    url =
-      'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyCFb_IYOGeXg6-5cy9oJ9Uq4WeEg1oHTiM';
-  }
-
-  const [requestLoading, setRequestLoading] = useState<boolean>(false);
-  const [errorText, setErrorText] = useState<string>('');
-
-  // TODO: Update with store
-  // const logout = () => {
-  //   localStorage.removeItem('token');
-  //   localStorage.removeItem('expirationDate');
-  //   localStorage.removeItem('userId');
-  //   return {
-  //     // type: actionTypes.AUTH_LOGOUT
-  //   };
-  // };
-  //
-  // const checkAuthTimeout = (expirationTime: any) => {
-  //   return (dispatch: any) => {
-  //     setTimeout(() => {
-  //       // dispatch(logout());
-  //     }, expirationTime * 1000);
-  //   };
-  // };
-
-  const onSubmit = (values: { [key: string]: string }) => {
-    setRequestLoading(true);
-
-    axios
-      .post(url, { returnSecureToken: true, ...values })
-      .then((response) => {
-        const expirationDate: Date = new Date(
-          new Date().getTime() + response.data.expiresIn * 1000
-        );
-
-        localStorage.setItem('token', response.data.idToken);
-        localStorage.setItem('expirationDate', expirationDate.toString());
-        localStorage.setItem('userId', response.data.localId);
-
-        // yield put(actions.authSuccess(response.data.idToken, response.data.localId));
-        // yield put(actions.checkAuthTimeout(response.data.expiresIn));
-        // TODO: Remove next line
-        window.location.reload();
-        setRequestLoading(false);
-      })
-      .catch((error) => {
-        setRequestLoading(false);
-        setErrorText(error.message);
-      });
+interface Error {
+  error: {
+    message: string;
   };
+}
 
-  // const authCheckState = () => {
-  //   return (dispatch: any) => {
-  //     const token = localStorage.getItem('token');
-  //
-  //     if (!token) {
-  //       // dispatch(logout());
-  //     } else {
-  //       const storageExpirationDate: any = localStorage.getItem(
-  //         'expirationDate'
-  //       );
-  //       const expirationDate = new Date(storageExpirationDate);
-  //
-  //       if (expirationDate <= new Date()) {
-  //         // dispatch(logout());
-  //       } else {
-  //         const userId = localStorage.getItem('userId');
-  //         // dispatch(authSuccess(token, userId));
-  //         // dispatch(checkAuthTimeout((expirationDate.getTime() - new Date().getTime()) / 1000 ));
-  //       }
-  //     }
-  //   };
-  // };
+interface AuthError {
+  error?: {
+    message: string | { [key: string]: string };
+  };
+}
+
+export const AuthFormView: FC = () => {
+  const { loading: requestLoading } = useStore($authStore);
+
+  const onSubmit = (values: AuthFormSubmitValues) => {
+    return fetchAuthData({ ...values }).then((error: Error | AuthError) => {
+      if (error.error) {
+        let fieldErrors;
+
+        if (
+          (error as Error).error.message.includes(TOO_MANY_ATTEMPTS_TRY_LATER)
+        ) {
+          fieldErrors = <Trans>To many attempts</Trans>;
+        } else if ((error as Error).error.message.includes(EMAIL_NOT_FOUND)) {
+          fieldErrors = { email: error.error.message };
+        } else {
+          fieldErrors = { password: error.error.message };
+        }
+
+        return fieldErrors;
+      }
+
+      return error;
+    });
+  };
 
   return (
     <>
-      <H1>
-        <Trans>Sign in</Trans>
+      <H1 style={{ textAlign: 'center' }}>
+        <FontAwesomeIcon icon={faSignOutAlt} size="2x" color={BLACK_20} />
+        <span
+          style={{
+            display: 'block',
+            width: '0',
+            height: '0',
+            overflow: 'hidden',
+          }}
+        >
+          <Trans>Sign in</Trans>
+        </span>
       </H1>
       <I18n>
         {({ i18n }) => (
           <Form
             onSubmit={onSubmit}
             initialValues={initialValues}
-            render={({ handleSubmit }) => (
+            render={({ handleSubmit, submitError }) => (
               <form onSubmit={handleSubmit}>
                 <InputField
                   name={FIELD_EMAIL}
@@ -133,7 +111,7 @@ export const AuthFormView: FC = () => {
                   )}
                   <Trans>Sign in</Trans>
                 </StyledButton>
-                {errorText && <p>{errorText}</p>}
+                <FieldError meta={submitError} />
               </form>
             )}
           />
