@@ -1,6 +1,6 @@
 import React, { ChangeEvent } from 'react';
 
-import { EN, RU } from '~/constants/languages';
+import { Languages } from '~/constants/languages';
 import { InputRadio, Label, LangText, SwitchBox } from './styled';
 
 export interface LanguageSwitchProps {
@@ -14,25 +14,17 @@ export const LanguageSwitchView: React.FC<LanguageSwitchProps> = ({
   onChange,
 }) => (
   <SwitchBox>
-    <Label>
-      <InputRadio
-        checked={selectedLanguage === EN}
-        name="lang"
-        type="radio"
-        value={EN}
-        onChange={onChange}
-      />
-      <LangText>en</LangText>
-    </Label>
-    <Label>
-      <InputRadio
-        checked={selectedLanguage === RU}
-        name="lang"
-        type="radio"
-        value={RU}
-        onChange={onChange}
-      />
-      <LangText>ru</LangText>
-    </Label>
+    {Object.values(Languages).map((lang) => (
+      <Label>
+        <InputRadio
+          checked={selectedLanguage === lang}
+          name="lang"
+          type="radio"
+          value={lang}
+          onChange={onChange}
+        />
+        <LangText>{lang}</LangText>
+      </Label>
+    ))}
   </SwitchBox>
 );

@@ -19,7 +19,7 @@ export const SlideRaw = styled.div`
   width: 100%;
   height: 100%;
   cursor: pointer;
-  transition: background-color 0.6s;
+  transition: background-color 0.4s;
 
   &::after {
     position: absolute;
@@ -30,7 +30,7 @@ export const SlideRaw = styled.div`
     background-color: ${WHITE};
     border-radius: 50%;
     transform: translateX(0);
-    transition: background-color 0.4s, transform 0.4s;
+    transition: background-color 0.2s, transform 0.2s;
     content: '';
   }
 `;
