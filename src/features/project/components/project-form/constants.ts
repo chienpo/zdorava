@@ -1,0 +1,10 @@
+export const FIELD_ALT = 'alt';
+export const FIELD_CATEGORY = 'category';
+export const FIELD_DESCRIPTION = 'description';
+export const FIELD_DETAILS = 'details';
+export const FIELD_IMAGE_SRC = 'imageSrc';
+export const FIELD_PROJECT_URL = 'projectLinks';
+export const FIELD_PROJECT_URL_LABEL = 'projectUrlLabel';
+export const FIELD_PROJECT_URL_HREF = 'projectUrlHref';
+export const FIELD_THUMBNAIL_SRC = 'thumbnailSrc';
+export const FIELD_TITLE = 'title';
