@@ -7,18 +7,20 @@ import {
   ROUTE_NAME_ABOUT,
   ROUTE_NAME_HOME,
   ROUTE_NAME_PORTFOLIO,
-  ROUTE_NAME_PORTFOLIO_PROJECT,
+  ROUTE_NAME_PROJECT,
+  ROUTE_NAME_PROJECTS_ADD,
   ROUTE_NAME_SIGH_IN,
 } from '~/router/routes';
 import { PageLoader } from '~/ui/page-loader/page-loader';
 import { AppBox, MotionContent } from './styled';
 
-const HomePage = React.lazy(() => import('~/features/home'));
 const AboutPage = React.lazy(() => import('~/features/about'));
-const PortfolioPage = React.lazy(() => import('~/features/portfolio'));
-const ProjectPage = React.lazy(() => import('~/features/single-project'));
-const NotFoundPage = React.lazy(() => import('~/features/not-found'));
 const AuthPage = React.lazy(() => import('~/features/auth'));
+const HomePage = React.lazy(() => import('~/features/home'));
+const NewProject = React.lazy(() => import('~/features/project-new'));
+const NotFoundPage = React.lazy(() => import('~/features/not-found'));
+const PortfolioPage = React.lazy(() => import('~/features/portfolio'));
+const ProjectPage = React.lazy(() => import('~/features/project'));
 
 const pageVariants = {
   initial: {
@@ -78,7 +80,8 @@ export const Root = () => {
             </Suspense>
           </MotionContent>
         )}
-        {topRouteName === ROUTE_NAME_PORTFOLIO_PROJECT && (
+
+        {topRouteName === ROUTE_NAME_PROJECT && (
           <MotionContent
             key={topRouteName}
             initial="initial"
@@ -90,6 +93,20 @@ export const Root = () => {
             </Suspense>
           </MotionContent>
         )}
+
+        {topRouteName === ROUTE_NAME_PROJECTS_ADD && (
+          <MotionContent
+            key={topRouteName}
+            initial="initial"
+            animate="enter"
+            variants={pageVariants}
+          >
+            <Suspense fallback={<PageLoader />}>
+              <NewProject key={topRouteName} />
+            </Suspense>
+          </MotionContent>
+        )}
+
         {topRouteName === ROUTE_NAME_SIGH_IN && (
           <MotionContent
             key={topRouteName}

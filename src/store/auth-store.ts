@@ -29,7 +29,7 @@ export interface AuthState {
 
 const initialState = {
   token: '',
-  userId: '',
+  userId: localStorage.getItem('userId') || '',
   error: '',
   loading: false,
   authRedirectPath: '/',

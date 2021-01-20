@@ -1,10 +1,10 @@
 import { createStore, createEvent, Event } from 'effector';
 
 import { Languages } from '~/constants/languages';
+import { STORAGE_SITE_LANGUAGE_KEY } from '~/store/constants';
 
 export const toggleLang: Event<string> = createEvent();
 
-const STORAGE_SITE_LANGUAGE_KEY = 'SITE_LANGUAGE';
 export const defaultLang =
   localStorage.getItem(STORAGE_SITE_LANGUAGE_KEY) || Languages.En;
 

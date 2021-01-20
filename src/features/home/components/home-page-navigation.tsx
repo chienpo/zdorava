@@ -1,24 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Trans } from '@lingui/react';
-import { useStore } from 'effector-react';
 
 import homepageGlitchBackground from '~/assets/images/backgrounds/home-bg.jpg';
 import homepageGlitchBackgroundMobile from '~/assets/images/backgrounds/homepage-background-tinyfied-mobile.jpg';
 
-import { $portfolioTabsStore } from '~/store/portfolio-tabs-store';
-
-import {
-  ROUTE_NAME_ABOUT,
-  ROUTE_NAME_PORTFOLIO,
-  ROUTE_NAME_PORTFOLIO_CATEGORY,
-} from '~/router/routes';
+import { ROUTE_NAME_ABOUT, ROUTE_NAME_PORTFOLIO } from '~/router/routes';
 import { PageLinkFadeView as PageLinkFade } from './page-link-fade/page-link-fade-view';
 import { DottedOverlay, LazyWinkingBannerBg } from './styled';
 import { PerspectiveBanner } from './perspective-banner';
 
 const HomePageNavigation = () => {
-  const portfolioSelectedCategory = useStore($portfolioTabsStore);
-
   const [bgIsToggling, toggleDefaultBg] = useState(false);
 
   useEffect(() => {
@@ -40,10 +31,9 @@ const HomePageNavigation = () => {
         title={<Trans>About</Trans>}
       />
       <PageLinkFade
-        routeName={`${ROUTE_NAME_PORTFOLIO}.${ROUTE_NAME_PORTFOLIO_CATEGORY}`}
+        routeName={ROUTE_NAME_PORTFOLIO}
         position="right"
         title={<Trans>Portfolio</Trans>}
-        routeParams={{ category: portfolioSelectedCategory }}
       />
       <PerspectiveBanner
         src={homepageGlitchBackground}

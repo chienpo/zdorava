@@ -39,24 +39,24 @@ export const AuthFormView: FC = () => {
   const { loading: requestLoading } = useStore($authStore);
 
   const onSubmit = (values: AuthFormSubmitValues) => {
-    return fetchAuthData({ ...values }).then((error: Error | AuthError) => {
-      if (error.error) {
+    return fetchAuthData({ ...values }).then((data: Error | AuthError) => {
+      if (data.error) {
         let fieldErrors;
 
         if (
-          (error as Error).error.message.includes(TOO_MANY_ATTEMPTS_TRY_LATER)
+          (data as Error).error.message.includes(TOO_MANY_ATTEMPTS_TRY_LATER)
         ) {
           fieldErrors = <Trans>To many attempts</Trans>;
-        } else if ((error as Error).error.message.includes(EMAIL_NOT_FOUND)) {
-          fieldErrors = { email: error.error.message };
+        } else if ((data as Error).error.message.includes(EMAIL_NOT_FOUND)) {
+          fieldErrors = { email: data.error.message };
         } else {
-          fieldErrors = { password: error.error.message };
+          fieldErrors = { password: data.error.message };
         }
 
         return fieldErrors;
       }
 
-      return error;
+      return {};
     });
   };
 

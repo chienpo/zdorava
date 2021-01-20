@@ -30,7 +30,6 @@ export const Navigation: FC<Props> = ({
 }) => {
   const { router } = useRoute();
   const { userId } = useStore($authStore);
-
   const isAuthenticated = Boolean(userId);
 
   const mediaMinWidthForLaptops = useMediaMinWidth(LAPTOPS);
