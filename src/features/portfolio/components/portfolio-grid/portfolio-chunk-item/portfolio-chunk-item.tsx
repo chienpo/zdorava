@@ -6,9 +6,9 @@ import { AnimatePresence } from 'framer-motion';
 
 import { PortfolioPreviewItemModel } from '~/models/portfolio-item.model';
 
+import { ROUTE_NAME_PROJECT } from '~/router/routes';
 import { PORTFOLIO_CATEGORIES_TABS_LABELS } from '~/constants/portfolio';
 import { PORTFOLIO_IMAGES_PATH, SITE_URL } from '~/constants/site';
-import { ROUTE_NAME_PORTFOLIO_PROJECT } from '~/router/routes';
 import {
   Item,
   ItemCategoryLabel,
@@ -63,8 +63,8 @@ export const PortfolioChunkItem: React.FC<
             }}
           >
             <ItemOrientationType
-              routeName={ROUTE_NAME_PORTFOLIO_PROJECT}
-              routeParams={{ id: alt }}
+              routeName={ROUTE_NAME_PROJECT}
+              routeParams={{ id: alt, category: activeCategory }}
               activeClassName="active"
             >
               <ItemFigure>
