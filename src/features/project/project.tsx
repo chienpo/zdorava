@@ -3,15 +3,14 @@ import { useRouteNode, useRoute } from 'react-router5';
 import { useStore } from 'effector-react';
 
 import { PortfolioItemModel } from '~/models/portfolio-item.model';
-
 import { $portfolioTabsStore } from '~/store/portfolio-tabs-store';
 
-import { ROUTE_NAME_PORTFOLIO } from '~/router/routes';
+import { ROUTE_NAME_PORTFOLIO, ROUTE_NAME_PROJECT } from '~/router/routes';
 import { auth, firebaseInstance } from '~/features/auth';
 import { FIREBASE_DATABASE_REF } from '~/constants/api';
-import { SingleProjectView } from './single-project-view';
+import { ProjectView } from './project-view';
 
-export const SingleProject = () => {
+export const Project = () => {
   const [data, setData] = useState<PortfolioItemModel[]>([]);
 
   const { route } = useRouteNode('');
@@ -19,14 +18,16 @@ export const SingleProject = () => {
 
   const portfolioSelectedCategory = useStore($portfolioTabsStore);
 
-  const projectName = route.params.id;
+  const projectId = route.params.id;
+
+  const isEditState = Boolean(route.name === 'project.edit');
 
   const getDataChunk = useCallback(async () => {
     await firebaseInstance
       .database()
       .ref(FIREBASE_DATABASE_REF)
       .orderByChild('alt')
-      .equalTo(projectName)
+      .equalTo(projectId)
       .once('value')
       .then((snapshot) => {
         const arrayOfKeys = Object.keys(snapshot.val());
@@ -38,7 +39,7 @@ export const SingleProject = () => {
       .catch(() => {
         router.navigate(ROUTE_NAME_PORTFOLIO, {}, { reload: true });
       });
-  }, [projectName, router]);
+  }, [projectId, router]);
 
   useEffect(() => {
     auth();
@@ -52,8 +53,25 @@ export const SingleProject = () => {
     });
   }, [getDataChunk, router, route.name]);
 
-  return createElement(SingleProjectView, {
+  const onEditProjectSuccess = (values: PortfolioItemModel) => {
+    // eslint-disable-next-line no-console
+    console.log('On edit project success', values);
+
+    // TODO: Send request to edit project
+    setTimeout(() => {
+      router.navigate(
+        ROUTE_NAME_PROJECT,
+        { id: data[0].alt },
+        { reload: true }
+      );
+    }, 1000);
+  };
+
+  return createElement(ProjectView, {
     data: data[0],
     portfolioSelectedCategory,
+    isEditState,
+    router,
+    onEditProjectSuccess,
   });
 };
