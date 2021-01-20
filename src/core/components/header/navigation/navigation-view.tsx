@@ -1,8 +1,8 @@
 import React, { Suspense } from 'react';
 import { Route, Router } from 'router5';
 
-import { LanguageSwitchProps } from '~/ui/language-switch/language-switch-view';
-
+import { LanguageSelectProps } from '~/ui/select/language-select/types';
+import { LanguageSelect } from '~/ui/select';
 import { BurgerMenu } from '~/ui/burger-menu';
 import { NavigationListView } from './navigation-list-view';
 import { AuthButton } from '~/features/auth/components';
@@ -10,18 +10,19 @@ import {
   NavigationWrapper,
   LanguageSwitchBox,
   AnimatedNavigationBox,
+  LanguageSelectBox,
 } from './styled';
 
-const LanguageSwitch = React.lazy(() => import('~/ui/language-switch'));
 const ThemeSwitch = React.lazy(() => import('~/ui/theme-switch'));
 
-interface Props extends LanguageSwitchProps {
+interface Props extends LanguageSelectProps {
   routes: Route[];
   isMobile: boolean;
   router: Router;
   showMenu: boolean;
   headerHeight: string;
   themeSwitchVisible: boolean;
+  isAuthenticated: boolean;
 }
 
 export const NavigationView: React.FC<Props> = ({
@@ -33,6 +34,7 @@ export const NavigationView: React.FC<Props> = ({
   showMenu,
   headerHeight,
   themeSwitchVisible,
+  isAuthenticated,
 }) => (
   <NavigationWrapper>
     {showMenu && isMobile && <BurgerMenu routes={routes} />}
@@ -59,19 +61,20 @@ export const NavigationView: React.FC<Props> = ({
         </nav>
       )}
       <LanguageSwitchBox>
-        {/* TODO: Update with store */}
-        <AuthButton isAuthenticated={Boolean(localStorage.getItem('token'))} />
+        <AuthButton isAuthenticated={isAuthenticated} />
         {themeSwitchVisible && (
           <Suspense fallback={<div />}>
             <ThemeSwitch disabled={!themeSwitchVisible} />
           </Suspense>
         )}
-        <Suspense fallback={<div />}>
-          <LanguageSwitch
-            selectedLanguage={selectedLanguage}
-            onToggleLanguage={onToggleLanguage}
-          />
-        </Suspense>
+        <LanguageSelectBox>
+          <Suspense fallback={<div />}>
+            <LanguageSelect
+              selectedLanguage={selectedLanguage}
+              onToggleLanguage={onToggleLanguage}
+            />
+          </Suspense>
+        </LanguageSelectBox>
       </LanguageSwitchBox>
     </AnimatedNavigationBox>
   </NavigationWrapper>

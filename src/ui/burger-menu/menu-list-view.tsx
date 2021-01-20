@@ -1,14 +1,16 @@
 import * as React from 'react';
 import styled from 'styled-components';
-
+import { Trans } from '@lingui/react';
+import { faSignInAlt, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useStore } from 'effector-react';
 import { Route, Router } from 'router5';
 
-import {
-  ROUTE_NAME_PORTFOLIO_CATEGORY,
-  ROUTE_NAME_PORTFOLIO_PROJECT,
-} from '~/router/routes';
+import { ROUTE_NAME_HOME, ROUTE_NAME_SIGH_IN } from '~/router/routes';
 import { AnimatedUl } from '~/animations/animated';
 import { MenuListItemView } from './menu-list-item-view';
+
+import { $authStore, signOut } from '~/store/auth-store';
 
 const StyledMotionUl = styled(AnimatedUl)`
   display: flex;
@@ -34,15 +36,19 @@ export const MenuListView: React.FC<Props> = ({
   toggleOpen,
   routes,
   router,
-}) => (
-  <StyledMotionUl initial="closed" exit="closed" variants={variants}>
-    {routes
-      .filter(
-        ({ name }) =>
-          name !== ROUTE_NAME_PORTFOLIO_PROJECT &&
-          name !== ROUTE_NAME_PORTFOLIO_CATEGORY
-      )
-      .map(({ name }) => (
+}) => {
+  const { userId } = useStore($authStore);
+  const isAuthenticated = Boolean(userId);
+
+  const onSignOutClick = () => {
+    if (isAuthenticated) {
+      signOut();
+    }
+  };
+
+  return (
+    <StyledMotionUl initial="closed" exit="closed" variants={variants}>
+      {routes.map(({ name }) => (
         <MenuListItemView
           onClick={toggleOpen}
           key={name}
@@ -50,5 +56,21 @@ export const MenuListView: React.FC<Props> = ({
           router={router}
         />
       ))}
-  </StyledMotionUl>
-);
+      <MenuListItemView
+        onClick={onSignOutClick}
+        name={isAuthenticated ? ROUTE_NAME_HOME : ROUTE_NAME_SIGH_IN}
+        router={router}
+        label={
+          <>
+            <FontAwesomeIcon
+              icon={isAuthenticated ? faSignOutAlt : faSignInAlt}
+              size="1x"
+              style={{ marginRight: '15px' }}
+            />
+            {isAuthenticated ? <Trans>Sign Out</Trans> : <Trans>Sign in</Trans>}
+          </>
+        }
+      />
+    </StyledMotionUl>
+  );
+};

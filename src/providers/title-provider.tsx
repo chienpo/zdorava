@@ -5,7 +5,10 @@ import { useRoute } from 'react-router5';
 
 import { PAGE_TITLES, PORTFOLIO_PAGE_TITLES } from '~/constants/page-titles';
 import { SITE_NAME } from '~/constants/site';
-import { ROUTE_NAME_PORTFOLIO_CATEGORY } from '~/router/routes';
+import {
+  ROUTE_NAME_PORTFOLIO,
+  ROUTE_NAME_PORTFOLIO_CATEGORY,
+} from '~/router/routes';
 import { getProjectPageTitle } from '~/helpers/get-project-page-title';
 
 interface Props {
@@ -25,7 +28,8 @@ export const TitleProvider: React.FC<Props> = ({ children }) => {
           : '';
 
         const pageTitle =
-          name === ROUTE_NAME_PORTFOLIO_CATEGORY && params.category
+          name === `${ROUTE_NAME_PORTFOLIO}.${ROUTE_NAME_PORTFOLIO_CATEGORY}` &&
+          params.category
             ? PORTFOLIO_PAGE_TITLES[params.category]
             : PAGE_TITLES[name];
 

@@ -7,11 +7,6 @@ import { Route, Router } from 'router5';
 import { $portfolioTabsStore } from '~/store/portfolio-tabs-store';
 
 import { PAGE_TITLES } from '~/constants/page-titles';
-import {
-  ROUTE_NAME_PORTFOLIO_CATEGORY,
-  ROUTE_NAME_PORTFOLIO_PROJECT,
-  ROUTE_NAME_SIGH_IN,
-} from '~/router/routes';
 import { Ul, BaseLinkStyled } from './styled';
 
 interface Props {
@@ -22,16 +17,11 @@ interface Props {
 export const NavigationListView: React.FC<Props> = ({ router, routes }) => {
   const category = useStore($portfolioTabsStore);
 
-  const topNavigationRoutes = routes
-    .filter(({ name }) => name !== ROUTE_NAME_PORTFOLIO_PROJECT)
-    .filter(({ name }) => name !== ROUTE_NAME_PORTFOLIO_CATEGORY)
-    .filter(({ name }) => name !== ROUTE_NAME_SIGH_IN);
-
   return (
     <I18n>
       {({ i18n }) => (
         <Ul>
-          {topNavigationRoutes.map(({ name }) => (
+          {routes.map(({ name }) => (
             <li key={name}>
               <BaseLinkStyled
                 routeParams={{ category }}
