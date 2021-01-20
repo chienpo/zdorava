@@ -1,20 +1,9 @@
 import React, { FC } from 'react';
 import { I18n } from '@lingui/react';
 
-import {
-  PORTFOLIO_CATEGORIES_TABS_LABELS,
-  PORTFOLIO_CATEGORY_TAB_NAME_ALL,
-  PORTFOLIO_CATEGORY_TAB_NAME_ART,
-  PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND,
-} from '~/constants/portfolio';
+import { CATEGORIES_DATA } from '~/constants/portfolio';
 import { PortfolioTab } from './portfolio-tab';
 import { MotionPortfolioTabs, PortfolioTabsBox } from './styled';
-
-const CATEGORIES_DATA: { [key: string]: string }[] = [
-  { label: PORTFOLIO_CATEGORY_TAB_NAME_ALL },
-  { label: PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND },
-  { label: PORTFOLIO_CATEGORY_TAB_NAME_ART },
-];
 
 interface Props {
   onCategoryClick: (categoryName: string) => void;
@@ -45,15 +34,15 @@ export const PortfolioTabList: FC<Props> = ({
         exit="exit"
       >
         <MotionPortfolioTabs>
-          {CATEGORIES_DATA.map(({ label }) => (
+          {CATEGORIES_DATA.map(({ label, value }) => (
             <PortfolioTab
-              key={label}
-              onClick={() => onCategoryClick(label)}
-              className={label === activeCategory ? 'active' : ''}
-              disabled={label === activeCategory}
-              title={i18n._(PORTFOLIO_CATEGORIES_TABS_LABELS[label])}
+              key={value}
+              onClick={() => onCategoryClick(value)}
+              className={value === activeCategory ? 'active' : ''}
+              disabled={value === activeCategory}
+              title={i18n._(label)}
             >
-              {i18n._(PORTFOLIO_CATEGORIES_TABS_LABELS[label])}
+              {i18n._(label)}
             </PortfolioTab>
           ))}
         </MotionPortfolioTabs>
