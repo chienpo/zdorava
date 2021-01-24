@@ -35,7 +35,7 @@ const StyledMotionMenuBackdrop = styled(AnimatedDiv)`
   top: 0;
   bottom: 0;
   left: 0;
-  width: 300px;
+  width: 320px;
   background: ${({ theme }) =>
     theme.mode === DARK_MODE ? WHITE_20 : BLACK_90};
 `;
@@ -48,7 +48,7 @@ const NavStyled = styled.nav`
 
 const sidebar = {
   open: (height = 1080) => ({
-    clipPath: `polygon(0px 0px, 300px 0px, 300px ${height}px, 0px ${height}px)`,
+    clipPath: `polygon(0px 0px, 320px 0px, 320px ${height}px, 0px ${height}px)`,
     transition: {
       type: 'spring',
       stiffness: 20,
@@ -59,7 +59,7 @@ const sidebar = {
   closed: {
     clipPath: 'polygon(0px 0px, 60px 0px, 60px 55px, 0px 55px)',
     transition: {
-      delay: 0.5,
+      delay: 0.4,
       type: 'spring',
       stiffness: 400,
       damping: 40,
