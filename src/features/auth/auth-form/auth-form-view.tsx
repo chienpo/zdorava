@@ -1,11 +1,16 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import { Form } from 'react-final-form';
 import { i18nMark, I18n, Trans } from '@lingui/react';
 import { useStore } from 'effector-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 
+import { fetchAuthData } from '~/store/auth-fetch';
+import { $authStore } from '~/store/auth-store';
+import { router } from '~/router';
+
 import { AuthFormSubmitValues } from './types';
+import { ROUTE_NAME_HOME } from '~/router/routes';
 import { FIELD_EMAIL, FIELD_PASSWORD } from './constants';
 import { BLACK_20 } from '~/constants/colors';
 import {
@@ -17,9 +22,6 @@ import { InputField, FieldError } from '~/form-builder';
 import { required } from '~/form-builder/validators';
 import { H1 } from '~/ui/headings';
 import { StyledButton } from './styled';
-
-import { fetchAuthData } from '~/store/auth-fetch';
-import { $authStore } from '~/store/auth-store';
 
 const initialValues = {};
 
@@ -36,7 +38,14 @@ interface AuthError {
 }
 
 export const AuthFormView: FC = () => {
-  const { loading: requestLoading } = useStore($authStore);
+  const { loading: requestLoading, userId } = useStore($authStore);
+  const isAuthenticated = Boolean(userId);
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      router.navigate(ROUTE_NAME_HOME, { reload: true });
+    }
+  }, [isAuthenticated]);
 
   const onSubmit = (values: AuthFormSubmitValues) => {
     return fetchAuthData({ ...values }).then((data: Error | AuthError) => {
