@@ -5,7 +5,7 @@ import { useStore } from 'effector-react';
 import { PortfolioItemModel } from '~/models/portfolio-item.model';
 import { $portfolioTabsStore } from '~/store/portfolio-tabs-store';
 
-import { ROUTE_NAME_PORTFOLIO, ROUTE_NAME_PROJECT } from '~/router/routes';
+import { ROUTE_NAME_PORTFOLIO } from '~/router/routes';
 import { auth, firebaseInstance } from '~/features/auth';
 import { FIREBASE_DATABASE_REF } from '~/constants/api';
 import { ProjectView } from './project-view';
@@ -26,7 +26,7 @@ export const Project = () => {
     await firebaseInstance
       .database()
       .ref(FIREBASE_DATABASE_REF)
-      .orderByChild('alt')
+      .orderByChild('imageName')
       .equalTo(projectId)
       .once('value')
       .then((snapshot) => {
@@ -53,25 +53,10 @@ export const Project = () => {
     });
   }, [getDataChunk, router, route.name]);
 
-  const onEditProjectSuccess = (values: PortfolioItemModel) => {
-    // eslint-disable-next-line no-console
-    console.log('On edit project success', values);
-
-    // TODO: Send request to edit project
-    setTimeout(() => {
-      router.navigate(
-        ROUTE_NAME_PROJECT,
-        { id: data[0].alt },
-        { reload: true }
-      );
-    }, 1000);
-  };
-
   return createElement(ProjectView, {
     data: data[0],
     portfolioSelectedCategory,
     isEditState,
     router,
-    onEditProjectSuccess,
   });
 };

@@ -1,15 +1,18 @@
+export interface PortfolioItemField {
+  [key: string]: string;
+}
+
 export interface PortfolioPreviewItemModel {
-  alt: string;
   category: string;
+  imageName: string;
   imageSrc: string;
-  title: { [key: string]: string };
   thumbnailSrc: string;
+  title: PortfolioItemField;
 }
 
 export interface PortfolioItemModel extends PortfolioPreviewItemModel {
-  description: { [key: string]: string };
+  description: PortfolioItemField;
   descriptionList?: { [key: string]: string[] };
   name?: string;
-  details?: string;
-  projectLinks?: { [key: string]: string }[];
+  projectUrl?: PortfolioItemField;
 }

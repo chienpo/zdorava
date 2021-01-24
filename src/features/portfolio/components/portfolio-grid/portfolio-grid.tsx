@@ -71,13 +71,13 @@ export const PortfolioGrid: FC<Props> = ({ data, activeCategory }) => {
               ({
                 category,
                 imageSrc,
-                alt,
+                imageName,
                 thumbnailSrc,
                 title,
               }: PortfolioItemModel) => (
                 <PortfolioChunkItem
                   key={imageSrc}
-                  alt={alt}
+                  imageName={imageName}
                   category={category}
                   chunkType={getChunkType(ind)}
                   imageSrc={imageSrc}

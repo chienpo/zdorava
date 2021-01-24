@@ -8,10 +8,7 @@ import { faEdit } from '@fortawesome/free-solid-svg-icons';
 import { PortfolioItemModel } from '~/models/portfolio-item.model';
 
 import { PORTFOLIO_IMAGES_PATH, SITE_URL } from '~/constants/site';
-import {
-  ROUTE_NAME_PORTFOLIO,
-  ROUTE_NAME_PORTFOLIO_CATEGORY,
-} from '~/router/routes';
+import { ROUTE_NAME_PORTFOLIO } from '~/router/routes';
 import { PORTFOLIO_CATEGORIES_TABS_LABELS } from '~/constants/portfolio';
 import { LazyImage } from '~/ui/lazy-image';
 import Header from '~/core/components/header';
@@ -33,8 +30,7 @@ interface Props {
   data: PortfolioItemModel;
   portfolioSelectedCategory: string;
   isEditState: boolean;
-  router: Router; // TODO: Check props
-  onEditProjectSuccess: (values: PortfolioItemModel) => void;
+  router: Router;
 }
 
 const transition = {
@@ -61,7 +57,6 @@ export const ProjectView: React.FC<Props> = ({
   portfolioSelectedCategory,
   isEditState,
   router,
-  onEditProjectSuccess,
 }) => (
   <>
     <Header mobileByDefault />
@@ -71,7 +66,7 @@ export const ProjectView: React.FC<Props> = ({
           <AnimatePresence>
             <AnimatedFigureStyled variants={imageVariants} initial="exit">
               <LazyImage
-                alt={data.alt}
+                alt={data.imageName}
                 src={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${data.category}/${data.imageSrc}`}
                 srcSet={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${data.category}-thumbnail/${data.thumbnailSrc}`}
                 style={{ maxWidth: '70vw' }}
@@ -89,7 +84,7 @@ export const ProjectView: React.FC<Props> = ({
                 {isEditState ? (
                   <StyledLink
                     routeName="project"
-                    routeParams={{ id: data.alt }}
+                    routeParams={{ id: data.imageName }}
                     routeOptions={{ reload: true }}
                     router={router}
                   >
@@ -98,7 +93,7 @@ export const ProjectView: React.FC<Props> = ({
                   </StyledLink>
                 ) : (
                   <StyledLink
-                    routeName={`${ROUTE_NAME_PORTFOLIO}.${ROUTE_NAME_PORTFOLIO_CATEGORY}`}
+                    routeName={ROUTE_NAME_PORTFOLIO}
                     routeParams={{ category: portfolioSelectedCategory }}
                     routeOptions={{ reload: true }}
                     router={router}
@@ -115,11 +110,7 @@ export const ProjectView: React.FC<Props> = ({
                 <Title>
                   <Trans>Edit</Trans>
                 </Title>
-                <ProjectForm
-                  data={data}
-                  inEditState={isEditState}
-                  onSubmitSuccess={onEditProjectSuccess}
-                />
+                <ProjectForm data={data} inEditState={isEditState} />
               </>
             )}
 
@@ -132,7 +123,7 @@ export const ProjectView: React.FC<Props> = ({
                         <EditProjectLink
                           routeName="project.edit"
                           routeParams={{
-                            id: data.alt,
+                            id: data.imageName,
                             category: data.category,
                           }}
                           routeOptions={{ reload: true }}
@@ -157,20 +148,19 @@ export const ProjectView: React.FC<Props> = ({
                         </DescriptionList>
                       )}
                       <br />
-                      {data.projectLinks && (
-                        <Trans>With a great pleasure I suggest you</Trans>
+                      {data.projectUrl && (
+                        <>
+                          <Trans>With a great pleasure I suggest you</Trans>
+                          &nbsp;
+                          <StyledRealProjectLink
+                            href={data.projectUrl[i18n.language]}
+                            target="_blank"
+                            rel="noopener"
+                          >
+                            <Trans>watch real project</Trans>
+                          </StyledRealProjectLink>
+                        </>
                       )}
-                      &nbsp;
-                      {data.projectLinks?.map(({ href, label }) => (
-                        <StyledRealProjectLink
-                          key={label}
-                          href={href}
-                          target="_blank"
-                          rel="noopener"
-                        >
-                          <Trans>watch real project</Trans>
-                        </StyledRealProjectLink>
-                      ))}
                     </Description>
                     <Category>
                       {i18n._(PORTFOLIO_CATEGORIES_TABS_LABELS[data.category])}
