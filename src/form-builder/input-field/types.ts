@@ -16,3 +16,7 @@ export interface InputFieldProps {
   placeholder?: string | '';
   disabled?: boolean;
 }
+
+export interface InputFieldLocalizedProps extends InputFieldProps {
+  selectedLanguage: string;
+}
