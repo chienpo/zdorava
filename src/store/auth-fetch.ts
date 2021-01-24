@@ -46,7 +46,7 @@ fetchAuthData.use(async ({ email, password }) => {
     returnSecureToken: true,
   };
 
-  const url = `https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=${FIREBASE_API_KEY}`;
+  const url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${FIREBASE_API_KEY}`;
 
   const request = await fetch(url, {
     method: 'POST',
