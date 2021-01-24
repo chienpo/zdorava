@@ -9,7 +9,6 @@ import { LanguageSelectProps } from '~/ui/select/language-select/types';
 import {
   ROUTE_NAME_HOME,
   ROUTE_NAME_PORTFOLIO,
-  ROUTE_NAME_PORTFOLIO_CATEGORY,
   menuRoutes,
   ROUTE_NAME_PROJECTS_ADD,
 } from '~/router/routes';
@@ -37,9 +36,7 @@ export const Navigation: FC<Props> = ({
   const headerHeight = activeRouteName === ROUTE_NAME_HOME ? '50px' : '70px';
   const themeSwitchVisible =
     activeRouteName === ROUTE_NAME_HOME ||
-    activeRouteName === ROUTE_NAME_PORTFOLIO ||
-    activeRouteName === ROUTE_NAME_PORTFOLIO_CATEGORY;
-
+    activeRouteName === ROUTE_NAME_PORTFOLIO;
   const prepareMenuRotes = !isAuthenticated
     ? menuRoutes.filter(({ name }) => name !== ROUTE_NAME_PROJECTS_ADD)
     : menuRoutes;
