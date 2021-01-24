@@ -1,22 +1,24 @@
 import { PortfolioItemModel } from '~/models/portfolio-item.model';
 
 const mockedProjectDataItem: PortfolioItemModel = {
-  category: 'test',
-  imageSrc: 'test',
-  thumbnailSrc: 'test',
-  alt: 'test',
+  category: 'frontend',
   description: {
-    en: 'test',
-    ru: 'test',
+    en: 'en description',
+    ru: 'ru description',
+    pl: 'pl description',
   },
   descriptionList: {
-    en: ['test', 'test'],
-    ru: ['test', 'test'],
+    en: ['en', 'descriptionList', 'descriptionList'],
+    ru: ['ru', 'descriptionList', 'descriptionList'],
+    pl: ['pl', 'descriptionList', 'descriptionList'],
   },
-  details: 'test',
+  imageName: 'projectId',
+  imageSrc: 'test',
+  thumbnailSrc: 'test',
   title: {
-    en: 'test',
-    ru: 'test',
+    en: 'en title',
+    ru: 'ru title',
+    pl: 'pl title',
   },
 };
 
