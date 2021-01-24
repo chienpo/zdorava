@@ -3,10 +3,8 @@ import { I18n, Trans } from '@lingui/react';
 import { AnimatePresence } from 'framer-motion';
 import { useStore } from 'effector-react';
 
-import { mockedPortfolioData } from '~/features/portfolio/mocks';
 import { $portfolioTabsStore } from '~/store/portfolio-tabs-store';
 
-import { PortfolioItemModel } from '~/models/portfolio-item.model';
 import { PAGE_TITLES } from '~/constants/page-titles';
 import { ROUTE_NAME_PORTFOLIO, ROUTE_NAME_PROJECTS_ADD } from '~/router/routes';
 import Header from '~/core/components/header';
@@ -31,14 +29,6 @@ const descriptionVariants = {
 export const ProjectNewView = () => {
   const selectedCategory = useStore($portfolioTabsStore);
 
-  // eslint-disable-next-line unicorn/consistent-function-scoping
-  const onEditSuccess = (values: PortfolioItemModel) => {
-    setTimeout(() => {
-      // eslint-disable-next-line no-console
-      console.log('Project added', values);
-    }, 1000);
-  };
-
   return (
     <>
       <Header mobileByDefault />
@@ -59,8 +49,8 @@ export const ProjectNewView = () => {
             </StyledLink>
             <H2>Add project form</H2>
             <ProjectForm
-              data={mockedPortfolioData[0]}
-              onSubmitSuccess={onEditSuccess}
+              // TODO: JUST REMOVE AFTER SETTING UP HANDLER
+              initialValues={{ category: 'frontend' }}
             />
           </AnimatedSectionStyled>
         </AnimatePresence>
