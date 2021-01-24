@@ -25,7 +25,7 @@ export const RESUME_PANELS = {
     content: PanelTechnologyStackView,
   },
   [PANEL_CERTIFICATES]: {
-    panelTitle: i18nMark('Languages & achievements letters'),
+    panelTitle: i18nMark('Certificates'),
     content: PanelLanguagesAndCertificatesView,
   },
 };

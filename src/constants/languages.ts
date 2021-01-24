@@ -1,5 +1,5 @@
 export enum Languages {
   En = 'en',
+  Pl = 'pl',
   Ru = 'ru',
-  // Pl = 'pl', // TODO: Enable PL
 }

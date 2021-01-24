@@ -6,7 +6,7 @@ import { STORAGE_SITE_LANGUAGE_KEY } from '~/store/constants';
 export const toggleLang: Event<string> = createEvent();
 
 export const defaultLang =
-  localStorage.getItem(STORAGE_SITE_LANGUAGE_KEY) || Languages.En;
+  localStorage.getItem(STORAGE_SITE_LANGUAGE_KEY) || Languages.Pl;
 
 export const $languageStore = createStore(defaultLang);
 
