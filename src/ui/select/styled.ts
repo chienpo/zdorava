@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { BLACK_50, GRAY, GRAY_LIGHT, WHITE } from '~/constants/colors';
+import { BLACK_50, GRAY, GRAY_LIGHT, RED, WHITE } from '~/constants/colors';
 
 export const SelectBox = styled.div`
   width: 100%;
@@ -25,7 +25,7 @@ export const SelectBox = styled.div`
     }
 
     &:hover {
-      border-color: ${GRAY_LIGHT};
+      border-color: ${RED};
       box-shadow: inset 0 0 0 ${BLACK_50}, 0 0 8px ${GRAY_LIGHT};
       cursor: pointer;
     }
