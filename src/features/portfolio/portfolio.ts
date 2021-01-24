@@ -7,6 +7,7 @@ import {
   $portfolioTabsStore,
   setPortfolioCategory,
 } from '~/store/portfolio-tabs-store';
+import { $authStore } from '~/store/auth-store';
 
 import {
   PORTFOLIO_CATEGORY_TAB_NAME_ALL,
@@ -20,6 +21,8 @@ import { PortfolioView } from './portfolio-view';
 
 export const Portfolio: FC = () => {
   const categoryFromStore = useStore($portfolioTabsStore);
+  const { userId } = useStore($authStore);
+  const isAuthenticated = Boolean(userId);
 
   const [data, setData] = useState<PortfolioItemModel[]>([]);
   const [pageLoading, setPageLoading] = useState<boolean>(true);
@@ -132,5 +135,6 @@ export const Portfolio: FC = () => {
     getNextDataChunk,
     hasMore,
     activeCategory,
+    isAuthenticated,
   });
 };

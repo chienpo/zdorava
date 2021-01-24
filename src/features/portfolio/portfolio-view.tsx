@@ -3,27 +3,21 @@ import { Trans } from '@lingui/react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { useAnimation } from 'framer-motion';
 
-import { PortfolioItemModel } from '~/models/portfolio-item.model';
+import { Props } from './types';
 
 import { BLACK_100, WHITE_100 } from '~/constants/colors';
+import { ROUTE_NAME_PROJECTS_ADD } from '~/router/routes';
 import { MoreLoader } from '~/ui/more-loader/more-loader';
 import Header from '~/core/components/header';
 import Footer from '~/core/components/footer';
+import { LinkAdd } from '~/ui/link-add';
 import { AnimatedDiv } from '~/animations/animated';
 import { PortfolioGrid, PortfolioTabList } from './components';
 import {
   AnimatedSectionStyled,
   ItemsLoadingSpinnerBox,
-  ItemsLoadingStateDescription,
+  ItemsLoadingStateDescriptionAnimated,
 } from './styled';
-
-interface Props {
-  onCategoryClick: (categoryName: string) => void;
-  data: PortfolioItemModel[];
-  getNextDataChunk: () => void;
-  hasMore: boolean;
-  activeCategory: string;
-}
 
 export const PortfolioView: React.FC<Props> = ({
   activeCategory,
@@ -31,6 +25,7 @@ export const PortfolioView: React.FC<Props> = ({
   data,
   getNextDataChunk,
   hasMore,
+  isAuthenticated,
 }) => {
   const controls = useAnimation();
 
@@ -61,6 +56,7 @@ export const PortfolioView: React.FC<Props> = ({
           animate="enter"
           exit="exit"
         >
+          {isAuthenticated && <LinkAdd routeName={ROUTE_NAME_PROJECTS_ADD} />}
           <PortfolioTabList
             activeCategory={activeCategory}
             onCategoryClick={onCategoryClick}
@@ -77,9 +73,23 @@ export const PortfolioView: React.FC<Props> = ({
                 </ItemsLoadingSpinnerBox>
               }
               endMessage={
-                <ItemsLoadingStateDescription>
+                <ItemsLoadingStateDescriptionAnimated
+                  variants={{
+                    enter: {
+                      opacity: 1,
+                      transition: { duration: 0.4 },
+                    },
+                    exit: {
+                      opacity: 0,
+                      transition: { duration: 0.4 },
+                    },
+                  }}
+                  initial="exit"
+                  animate="enter"
+                  exit="exit"
+                >
                   <Trans>Coming soon ...</Trans>
-                </ItemsLoadingStateDescription>
+                </ItemsLoadingStateDescriptionAnimated>
               }
             >
               <PortfolioGrid data={data} activeCategory={activeCategory} />

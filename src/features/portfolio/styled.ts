@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { BLACK, WHITE } from '~/constants/colors';
-import { AnimatedSection } from '~/animations/animated';
+import { AnimatedDiv, AnimatedSection } from '~/animations/animated';
 
 export const AnimatedSectionStyled = styled(AnimatedSection)`
   position: relative;
@@ -12,7 +12,7 @@ export const AnimatedSectionStyled = styled(AnimatedSection)`
   box-shadow: 0 0 20px 10px ${BLACK};
 `;
 
-export const ItemsLoadingStateDescription = styled.div`
+export const ItemsLoadingStateDescriptionAnimated = styled(AnimatedDiv)`
   display: flex;
   align-items: center;
   justify-content: center;
