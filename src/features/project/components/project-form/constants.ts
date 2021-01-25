@@ -1,5 +1,6 @@
 export const FIELD_CATEGORY = 'category';
 export const FIELD_DESCRIPTION = 'description';
+export const FIELD_DESCRIPTION_LIST = 'descriptionList';
 export const FIELD_IMAGE_NAME = 'imageName';
 export const FIELD_IMAGE_SRC = 'imageSrc';
 export const FIELD_PROJECT_URL = 'projectUrl';

@@ -13,6 +13,7 @@ import { FIREBASE_DATABASE_URL, FIREBASE_DATABASE_REF } from '~/constants/api';
 import {
   FIELD_CATEGORY,
   FIELD_DESCRIPTION,
+  FIELD_DESCRIPTION_LIST,
   FIELD_IMAGE_SRC,
   FIELD_THUMBNAIL_SRC,
   FIELD_TITLE,
@@ -45,7 +46,6 @@ const prepareSubmitValues = (
 ) => {
   const { projectUrlLabel, projectUrlHref, projectUrl, ...restValues } = values;
 
-  // TODO: Prepare form values depends on language and check submittingValues
   const submittingValues: PortfolioItemModel = {
     ...restValues,
   };
@@ -136,6 +136,14 @@ export const ProjectForm: FC<Props> = ({
                   disabled={requestLoading}
                 >
                   <Trans>Description</Trans>
+                </InputField>
+                <InputField
+                  name={`${FIELD_DESCRIPTION_LIST}.${formLanguage}`}
+                  type="textarea"
+                  placeholder={i18n._(i18nMark('Description list'))}
+                  disabled={requestLoading}
+                >
+                  <Trans>Description list</Trans>
                 </InputField>
                 <SelectField
                   name={FIELD_CATEGORY}
