@@ -1,6 +1,6 @@
 import { Route, Router } from 'router5';
 
-import { STORAGE_ACTIVE_PORTFOLIO_CATEGORY_KEY } from '~/store/constants';
+import { STORAGE_KEY_ACTIVE_PORTFOLIO_CATEGORY } from '~/store/constants';
 
 export const ROUTE_NAME_HOME = 'home';
 export const ROUTE_NAME_ABOUT = 'about';
@@ -12,7 +12,7 @@ export const ROUTE_NAME_SIGH_IN = 'sign-in';
 
 const canActivate = (dispatch: Router) => () => {
   const selectedCategory = Boolean(
-    localStorage.getItem(STORAGE_ACTIVE_PORTFOLIO_CATEGORY_KEY)
+    localStorage.getItem(STORAGE_KEY_ACTIVE_PORTFOLIO_CATEGORY)
   );
 
   if (!localStorage.getItem('userId')) {

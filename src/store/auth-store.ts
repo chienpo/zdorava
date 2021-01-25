@@ -1,5 +1,11 @@
 import { createStore, createEvent, Event } from 'effector';
 
+import {
+  STORAGE_KEY_USER_ID,
+  STORAGE_KEY_USER_TOKEN,
+  STORAGE_KEY_USER_EXPIRATION_DATE,
+} from './constants';
+
 export const authUser: Event<{
   email: string;
   password: string;
@@ -29,7 +35,7 @@ export interface AuthState {
 
 const initialState = {
   token: '',
-  userId: localStorage.getItem('userId') || '',
+  userId: localStorage.getItem(STORAGE_KEY_USER_ID) || '',
   error: '',
   loading: false,
   authRedirectPath: '/',
@@ -54,9 +60,9 @@ $authStore
     return { ...state, error: action.error, loading: false };
   })
   .on(signOut, (state) => {
-    localStorage.removeItem('token');
-    localStorage.removeItem('expirationDate');
-    localStorage.removeItem('userId');
+    localStorage.removeItem(STORAGE_KEY_USER_TOKEN);
+    localStorage.removeItem(STORAGE_KEY_USER_EXPIRATION_DATE);
+    localStorage.removeItem(STORAGE_KEY_USER_ID);
 
     return {
       ...state,
@@ -72,3 +78,18 @@ $authStore
   .on(setAuthRedirectPath, (state, action) => {
     return { ...state, authRedirectPath: action.path };
   });
+
+export const checkAuthLogoutHandler = () => {
+  const expirationTime = localStorage.getItem(STORAGE_KEY_USER_EXPIRATION_DATE);
+
+  if (expirationTime) {
+    const logoutTime = new Date(expirationTime);
+    const currentTime = new Date();
+
+    if (currentTime > logoutTime) {
+      localStorage.removeItem(STORAGE_KEY_USER_ID);
+      localStorage.removeItem(STORAGE_KEY_USER_TOKEN);
+      localStorage.removeItem(STORAGE_KEY_USER_EXPIRATION_DATE);
+    }
+  }
+};
