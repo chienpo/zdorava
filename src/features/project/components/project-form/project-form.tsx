@@ -71,15 +71,12 @@ export const ProjectForm: FC<Props> = ({
     const submitValues = prepareSubmitValues(values, inEditState);
 
     try {
-      // TODO: Get project id
-      const projectId = '-MR_wjfXYb6gjV0jKyg9';
-
       const token = localStorage.getItem('token');
       const authQuery = `?auth=${token}`;
 
       if (inEditState) {
-        await axios.patch(
-          `${FIREBASE_DATABASE_URL}/${FIREBASE_DATABASE_REF}/${projectId}.json${authQuery}`,
+        await axios.put(
+          `${FIREBASE_DATABASE_URL}/${FIREBASE_DATABASE_REF}/${data?.uniqueId}.json${authQuery}`,
           submitValues
         );
       } else {

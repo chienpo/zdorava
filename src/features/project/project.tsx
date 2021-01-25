@@ -32,8 +32,10 @@ export const Project = () => {
       .then((snapshot) => {
         const arrayOfKeys = Object.keys(snapshot.val());
 
-        const results = arrayOfKeys.map((key) => snapshot.val()[key]);
-
+        const results = arrayOfKeys.map((key) => ({
+          ...snapshot.val()[key],
+          uniqueId: key,
+        }));
         setData(results);
       })
       .catch(() => {
