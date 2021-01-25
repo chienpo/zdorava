@@ -1,9 +1,16 @@
-import { PortfolioItemModel } from '~/models/portfolio-item.model';
+import {
+  PortfolioItemModel,
+  PortfolioItemField,
+} from '~/models/portfolio-item.model';
+
+interface ProjectFormInitialValues {
+  [key: string]: string | PortfolioItemField;
+}
 
 export interface Props {
   data?: PortfolioItemModel;
   inEditState?: boolean;
-  initialValues?: { [key: string]: string };
+  initialValues?: ProjectFormInitialValues;
 }
 
 export interface ProjectEditFormValues extends PortfolioItemModel {

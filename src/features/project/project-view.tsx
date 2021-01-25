@@ -104,7 +104,6 @@ export const ProjectView: React.FC<Props> = ({
                 )}
               </>
             )}
-
             {isEditState && data && (
               <>
                 <Title>
@@ -113,7 +112,6 @@ export const ProjectView: React.FC<Props> = ({
                 <ProjectForm data={data} inEditState={isEditState} />
               </>
             )}
-
             {data && !isEditState && (
               <I18n>
                 {({ i18n }) => (
@@ -135,16 +133,19 @@ export const ProjectView: React.FC<Props> = ({
                       {data.title[i18n.language]}
                     </Title>
                     <Description>
-                      {data.description[i18n.language]}
+                      <div>{data.description[i18n.language]}</div>
                       {data.descriptionList && (
                         <DescriptionList>
-                          {data.descriptionList[i18n.language].map((item) => (
-                            <li key={item}>
-                              <b>&bull;</b>
-                              &nbsp;
-                              {item}
-                            </li>
-                          ))}
+                          {data.descriptionList[i18n.language]
+                            .split('.')
+                            .filter((it) => it !== '')
+                            .map((item: string) => (
+                              <li key={item}>
+                                <b>&bull;</b>
+                                &nbsp;
+                                {item}
+                              </li>
+                            ))}
                         </DescriptionList>
                       )}
                       <br />

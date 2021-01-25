@@ -8,9 +8,9 @@ const mockedProjectDataItem: PortfolioItemModel = {
     pl: 'pl description',
   },
   descriptionList: {
-    en: ['en', 'descriptionList', 'descriptionList'],
-    ru: ['ru', 'descriptionList', 'descriptionList'],
-    pl: ['pl', 'descriptionList', 'descriptionList'],
+    en: 'descriptionList descriptionList',
+    ru: 'descriptionList descriptionList',
+    pl: 'descriptionList descriptionList',
   },
   imageName: 'projectId',
   imageSrc: 'test',

@@ -12,7 +12,7 @@ export interface PortfolioPreviewItemModel {
 
 export interface PortfolioItemModel extends PortfolioPreviewItemModel {
   description: PortfolioItemField;
-  descriptionList?: { [key: string]: string[] };
+  descriptionList?: PortfolioItemField;
   name?: string;
   projectUrl?: PortfolioItemField;
   uniqueId?: string; // TODO: Update with MERN
