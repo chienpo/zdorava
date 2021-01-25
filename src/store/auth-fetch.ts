@@ -1,6 +1,11 @@
 import { createEffect, Effect } from 'effector';
 
 import { FIREBASE_API_KEY } from '~/constants/api';
+import {
+  STORAGE_KEY_USER_ID,
+  STORAGE_KEY_USER_EXPIRATION_DATE,
+  STORAGE_KEY_USER_TOKEN,
+} from '~/store/constants';
 import { AuthFormSubmitValues } from '~/features/auth/auth-form/types';
 
 import {
@@ -68,9 +73,12 @@ fetchAuthData.done.watch((response: AuthResponse) => {
     new Date().getTime() + Number(response.result.expiresIn) * 1000
   );
 
-  localStorage.setItem('token', response.result.idToken);
-  localStorage.setItem('expirationDate', expirationDate.toString());
-  localStorage.setItem('userId', response.result.localId);
+  localStorage.setItem(STORAGE_KEY_USER_TOKEN, response.result.idToken);
+  localStorage.setItem(
+    STORAGE_KEY_USER_EXPIRATION_DATE,
+    expirationDate.toString()
+  );
+  localStorage.setItem(STORAGE_KEY_USER_ID, response.result.localId);
 
   authSuccess({
     idToken: response.result.idToken,

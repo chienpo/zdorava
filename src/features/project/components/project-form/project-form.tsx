@@ -65,13 +65,12 @@ export const ProjectForm: FC<Props> = ({
   inEditState = false,
   initialValues = {},
 }) => {
-  const { loading: requestLoading } = useStore($authStore);
+  const { loading: requestLoading, token } = useStore($authStore);
 
   const onSubmitProjectFormHandler = async (values: ProjectEditFormValues) => {
     const submitValues = prepareSubmitValues(values, inEditState);
 
     try {
-      const token = localStorage.getItem('token');
       const authQuery = `?auth=${token}`;
 
       if (inEditState) {
