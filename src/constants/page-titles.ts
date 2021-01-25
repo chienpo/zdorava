@@ -22,11 +22,9 @@ export const PAGE_TITLES: { [key: string]: string } = {
   [ROUTE_NAME_PORTFOLIO]: i18nMark('Portfolio'),
   [ROUTE_NAME_SIGH_IN]: i18nMark('Sign in'),
   [ROUTE_NAME_PROJECT]: i18nMark('Project:'),
-  // TODO: Check routes
   [`${ROUTE_NAME_PROJECT}.${ROUTE_NAME_PROJECT_EDIT}`]: i18nMark(
     'Edit project:'
   ),
-  [ROUTE_NAME_PROJECT_EDIT]: i18nMark('Edit project:'),
   [ROUTE_NAME_PROJECTS_ADD]: i18nMark('Add project'),
   [constants.UNKNOWN_ROUTE]: i18nMark('404'),
 };
