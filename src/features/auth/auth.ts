@@ -5,7 +5,7 @@ import { FIREBASE_AUTH_DOMAIN, FIREBASE_DATABASE_URL } from '~/constants/api';
 
 export const firebaseInstance = firebase;
 
-// TODO: Use loop-back admin platform and AWS
+// TODO: Upgrade with MERN
 export const auth = () => {
   if (!firebase.apps.length) {
     firebase.initializeApp({

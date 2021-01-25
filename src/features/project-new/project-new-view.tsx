@@ -5,9 +5,11 @@ import { useStore } from 'effector-react';
 
 import { $portfolioTabsStore } from '~/store/portfolio-tabs-store';
 
+import { PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND } from '~/constants/portfolio';
 import { PAGE_TITLES } from '~/constants/page-titles';
 import { ROUTE_NAME_PORTFOLIO, ROUTE_NAME_PROJECTS_ADD } from '~/router/routes';
 import Header from '~/core/components/header';
+import Footer from '~/core/components/footer';
 import { ProjectForm } from '~/features/project/components/project-form';
 import { H1, H2 } from '~/ui/headings';
 import {
@@ -47,14 +49,16 @@ export const ProjectNewView = () => {
               ← &nbsp;
               <Trans>Back</Trans>
             </StyledLink>
-            <H2>Add project form</H2>
+            <H2>
+              <Trans>Add project form</Trans>
+            </H2>
             <ProjectForm
-              // TODO: JUST REMOVE AFTER SETTING UP HANDLER
-              initialValues={{ category: 'frontend' }}
+              initialValues={{ category: PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND }}
             />
           </AnimatedSectionStyled>
         </AnimatePresence>
       </AnimatedMainStyled>
+      <Footer />
     </>
   );
 };

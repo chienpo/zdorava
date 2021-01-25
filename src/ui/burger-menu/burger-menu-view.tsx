@@ -48,7 +48,7 @@ const NavStyled = styled.nav`
 
 const sidebar = {
   open: (height = 1080) => ({
-    clipPath: `polygon(0px 0px, 320px 0px, 320px ${height}px, 0px ${height}px)`,
+    clipPath: `polygon(0px 0px, 320px 0px, 320px ${height}vh, 0px ${height}vh)`,
     transition: {
       type: 'spring',
       stiffness: 20,
