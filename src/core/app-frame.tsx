@@ -4,7 +4,6 @@ import { Router } from 'router5';
 import { loadWebFonts } from '~/utils/web-font-loader';
 
 import Providers from '~/providers/providers';
-import { checkAuthLogoutHandler } from '~/store/auth-store';
 import { Root } from './root';
 import { GlobalStyle } from './global-style';
 
@@ -13,10 +12,6 @@ interface Props {
 }
 
 export const AppFrame: FC<Props> = ({ router }) => {
-  useEffect(() => {
-    checkAuthLogoutHandler();
-  }, []);
-
   useEffect(() => {
     loadWebFonts().then((response) =>
       response.load({

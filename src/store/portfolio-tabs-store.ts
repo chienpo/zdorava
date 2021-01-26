@@ -3,6 +3,9 @@ import { createStore, createEvent, Event } from 'effector';
 import { PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND } from '~/constants/portfolio';
 import { STORAGE_KEY_ACTIVE_PORTFOLIO_CATEGORY } from './constants';
 
+import { $router } from './router-store';
+import { checkAuthLogoutHandler } from '~/store/auth-store';
+
 export const setPortfolioCategory: Event<string> = createEvent();
 
 const defaultCategory =
@@ -17,3 +20,5 @@ export const $portfolioTabsStore = createStore(defaultCategory).on(
     return category;
   }
 );
+
+$router.watch(checkAuthLogoutHandler);
