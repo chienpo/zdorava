@@ -1,8 +1,0 @@
-{
-  "Hello, I'm Stepan": {
-    "origin": [["src/features/auth/auth-view.tsx", 33]]
-  },
-  "Front-end (React-JS) Developer": {
-    "origin": [["src/features/auth/auth-view.tsx", 35]]
-  }
-}

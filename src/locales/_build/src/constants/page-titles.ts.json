@@ -3,25 +3,15 @@
     "origin": [
       [
         "src/constants/page-titles.ts",
-        10
+        13
       ]
     ]
   },
   "Home": {
-    "origin": [
-      [
-        "src/constants/page-titles.ts",
-        6
-      ]
-    ]
+    "origin": [["src/constants/page-titles.ts", 6]]
   },
   "About": {
-    "origin": [
-      [
-        "src/constants/page-titles.ts",
-        7
-      ]
-    ]
+    "origin": [["src/constants/page-titles.ts", 7]]
   },
   "Portfolio": {
     "origin": [
@@ -31,7 +21,7 @@
       ]
     ]
   },
-  "Project:": {
+  "Sign in": {
     "origin": [
       [
         "src/constants/page-titles.ts",
@@ -39,11 +29,35 @@
       ]
     ]
   },
+  "Project:": {
+    "origin": [
+      [
+        "src/constants/page-titles.ts",
+        10
+      ]
+    ]
+  },
+  "Edit project:": {
+    "origin": [
+      [
+        "src/constants/page-titles.ts",
+        11
+      ]
+    ]
+  },
+  "Add project": {
+    "origin": [
+      [
+        "src/constants/page-titles.ts",
+        12
+      ]
+    ]
+  },
   "All projects": {
     "origin": [
       [
         "src/constants/page-titles.ts",
-        13
+        16
       ]
     ]
   },
@@ -51,7 +65,7 @@
     "origin": [
       [
         "src/constants/page-titles.ts",
-        14
+        17
       ]
     ]
   },
@@ -59,7 +73,7 @@
     "origin": [
       [
         "src/constants/page-titles.ts",
-        15
+        18
       ]
     ]
   }

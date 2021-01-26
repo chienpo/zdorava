@@ -3,15 +3,11 @@
     "origin": [
       [
         "src/constants/portfolio.ts",
-        8
-      ]
-    ]
-  },
-  "Art": {
-    "origin": [
+        6
+      ],
       [
         "src/constants/portfolio.ts",
-        9
+        11
       ]
     ]
   },
@@ -19,7 +15,23 @@
     "origin": [
       [
         "src/constants/portfolio.ts",
-        10
+        7
+      ],
+      [
+        "src/constants/portfolio.ts",
+        13
+      ]
+    ]
+  },
+  "Art": {
+    "origin": [
+      [
+        "src/constants/portfolio.ts",
+        8
+      ],
+      [
+        "src/constants/portfolio.ts",
+        12
       ]
     ]
   }

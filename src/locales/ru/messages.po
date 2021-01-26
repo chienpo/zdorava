@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/constants/page-titles.ts:15
+#: src/constants/page-titles.ts:13
 #: src/features/not-found/not-found-view.tsx:18
 msgid "404"
 msgstr "404"
@@ -80,17 +80,21 @@ msgstr "\"Понимание TypeScript - 2020 Издание\" серцифик
 msgid "About"
 msgstr "Обо мне"
 
-#: src/constants/page-titles.ts:14
-#: src/features/project/components/project-form/project-form.tsx:119
+#: src/constants/page-titles.ts:12
+#: src/features/project/components/project-form/project-form.tsx:118
 msgid "Add project"
 msgstr "Добавить проект"
+
+#: src/features/project-new/project-new-view.tsx:37
+msgid "Add project form"
+msgstr ""
 
 #: src/constants/portfolio.ts:6
 #: src/constants/portfolio.ts:11
 msgid "All"
 msgstr "Все"
 
-#: src/constants/page-titles.ts:18
+#: src/constants/page-titles.ts:16
 msgid "All projects"
 msgstr "Все проекты"
 
@@ -99,18 +103,22 @@ msgstr "Все проекты"
 msgid "Art"
 msgstr "Aрт"
 
-#: src/constants/page-titles.ts:20
+#: src/constants/page-titles.ts:18
 msgid "Art projects"
 msgstr "Арт проекты"
 
 #: src/features/project/project-view.tsx:46
-#: src/features/project-new/project-new-view.tsx:32
+#: src/features/project-new/project-new-view.tsx:34
 msgid "Back"
 msgstr "Назад"
 
-#: src/features/project/components/project-form/project-form.tsx:90
+#: src/features/project/components/project-form/project-form.tsx:89
 msgid "Category"
 msgstr "Категория"
+
+#: src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:19
+msgid "Certificates"
+msgstr "Cертификаты"
 
 #: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:25
 msgid "Closely related to design, front-end development process is always going on in creative way and i can always see the result of my job. And this is what i like so much!"
@@ -120,7 +128,7 @@ msgstr "Тесно связанный с дизайном, процесс раз
 msgid "Code quality tools"
 msgstr "Инструменты качества кода"
 
-#: src/features/portfolio/portfolio-view.tsx:38
+#: src/features/portfolio/portfolio-view.tsx:50
 msgid "Coming soon ..."
 msgstr "В разработке ..."
 
@@ -128,25 +136,29 @@ msgstr "В разработке ..."
 msgid "Creating reactive applications for me is like making up some web ecosystems. But bricks here - are cutes of code, and component-structure - is the constructions. Using my arch-design and development skills, i combine this in to a real complex react web application!"
 msgstr "Создание реактивных приложений для меня похоже на создание некоторых веб-экосистем. Но кирпичи здесь - это кусочки кода, а компонент-структура - это конструкции. Используя свои навыки в области арх-дизайна и разработки, я совмещаю это с очень сложным веб-приложением реагирования!"
 
-#: src/features/project/components/project-form/project-form.tsx:83
-#: src/features/project/components/project-form/project-form.tsx:84
+#: src/features/project/components/project-form/project-form.tsx:79
+#: src/features/project/components/project-form/project-form.tsx:80
 msgid "Description"
 msgstr "Описание"
+
+#: src/features/project/components/project-form/project-form.tsx:82
+#: src/features/project/components/project-form/project-form.tsx:83
+msgid "Description list"
+msgstr ""
 
 #: src/features/about/components/resume-accordion-panels/skills-data.ts:94
 msgid "Development environment setup"
 msgstr "Рабочее окружение"
 
-#: src/features/project/project-view.tsx:52
+#: src/features/project/project-view.tsx:51
 msgid "Edit"
 msgstr "Редактировать"
 
-#: src/constants/page-titles.ts:12
-#: src/constants/page-titles.ts:13
+#: src/constants/page-titles.ts:11
 msgid "Edit project:"
 msgstr "Редактировать проект:"
 
-#: src/features/auth/auth-form/auth-form-view.tsx:59
+#: src/features/auth/auth-form/auth-form-view.tsx:60
 #: src/features/contacts/components/contact-form-view.tsx:14
 msgid "Email"
 msgstr "Почта"
@@ -155,7 +167,7 @@ msgstr "Почта"
 msgid "Email not found"
 msgstr "Почта не найдена"
 
-#: src/features/auth/auth-form/auth-form-view.tsx:60
+#: src/features/auth/auth-form/auth-form-view.tsx:61
 #: src/features/contacts/components/contact-form-view.tsx:15
 msgid "Enter your email"
 msgstr "Почта"
@@ -168,7 +180,7 @@ msgstr "Сообщение"
 msgid "Enter your name"
 msgstr "Имя"
 
-#: src/features/auth/auth-form/auth-form-view.tsx:63
+#: src/features/auth/auth-form/auth-form-view.tsx:64
 msgid "Enter your password"
 msgstr "Пароль"
 
@@ -176,7 +188,7 @@ msgstr "Пароль"
 msgid "Experience"
 msgstr "Опыт"
 
-#: src/constants/page-titles.ts:19
+#: src/constants/page-titles.ts:17
 msgid "Front-End projects"
 msgstr "Front-End проекты"
 
@@ -209,18 +221,18 @@ msgstr "Главная"
 msgid "I've been working in Itransition Software Development Company as a Front-end Developer. This time allowed me to dive dipper in to front-end and understand how cool is it! Working in a team of developers I took part in making up really cool projects and features for our foreign customers."
 msgstr "Я работал в компании Itransition Software Development в качестве Front-end разработчика. Это время позволило мне погрузиться в передний конец и понять, как это круто! Работая в команде разработчиков, я принимал участие в создании действительно интересных проектов и фич для наших зарубежных клиентов."
 
+#: src/features/project/components/project-form/project-form.tsx:101
 #: src/features/project/components/project-form/project-form.tsx:102
-#: src/features/project/components/project-form/project-form.tsx:103
 msgid "Image"
 msgstr "Изображение"
 
-#: src/features/project/components/project-form/project-form.tsx:80
-#: src/features/project/components/project-form/project-form.tsx:81
+#: src/features/project/components/project-form/project-form.tsx:76
+#: src/features/project/components/project-form/project-form.tsx:77
 msgid "Image name"
 msgstr "Имя изображения"
 
+#: src/features/project/components/project-form/project-form.tsx:108
 #: src/features/project/components/project-form/project-form.tsx:109
-#: src/features/project/components/project-form/project-form.tsx:110
 msgid "Image src"
 msgstr "Путь изображения"
 
@@ -235,10 +247,6 @@ msgstr "Неправильный пароль"
 #: src/features/home/home-view.tsx:26
 msgid "Lagunovsky"
 msgstr "Лагуновский"
-
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:19
-msgid "Certificates"
-msgstr "Cертификаты"
 
 #: src/features/contacts/components/contact-form-view.tsx:17
 msgid "Message"
@@ -256,7 +264,7 @@ msgstr "Имя"
 msgid "Over 10 years I've been studying on architecture & design specialisations. I was lucky to improve my skills in such areas like: interior and brand design, modern and concept arts, i created a lot of cool creative projects and also got and expierence of presenting them to the customers! This expierence has became absolutely helpful in front-end, web-design, and even though in my whole life!"
 msgstr "Более 10 лет я обучался по специальностям архитектура и архитектурного-дизайна. Мне повезло улучшить свои навыки в таких областях, как: дизайн интерьера и бренда, современный и концепт-арт, я создал много крутых креативных проектов, а также получил и испытал возможность представить их клиентам! Этот опыт стал абсолютно полезным в front-end, веб-дизайне и даже в моей жизни!"
 
-#: src/features/auth/auth-form/auth-form-view.tsx:62
+#: src/features/auth/auth-form/auth-form-view.tsx:63
 msgid "Password"
 msgstr "Пароль"
 
@@ -269,7 +277,7 @@ msgstr "ВИРТУАЛЬНЫЕ МАШИНЫ & КОНТЕЙНЕРЫ"
 msgid "Portfolio"
 msgstr "Портфолио"
 
-#: src/features/project/components/project-form/project-form.tsx:112
+#: src/features/project/components/project-form/project-form.tsx:111
 msgid "Preview src"
 msgstr "Превью src"
 
@@ -277,13 +285,13 @@ msgstr "Превью src"
 msgid "Priorities"
 msgstr "Приоритет"
 
+#: src/features/project/components/project-form/project-form.tsx:96
 #: src/features/project/components/project-form/project-form.tsx:97
-#: src/features/project/components/project-form/project-form.tsx:98
 msgid "Project url label"
 msgstr "Лейбл url проекта"
 
+#: src/features/project/components/project-form/project-form.tsx:93
 #: src/features/project/components/project-form/project-form.tsx:94
-#: src/features/project/components/project-form/project-form.tsx:95
 msgid "Project url src"
 msgstr "Путь url проекта"
 
@@ -305,8 +313,8 @@ msgid "Sign Out"
 msgstr "Выйти из аккаунта"
 
 #: src/constants/page-titles.ts:9
-#: src/features/auth/auth-form/auth-form-view.tsx:54
-#: src/features/auth/auth-form/auth-form-view.tsx:67
+#: src/features/auth/auth-form/auth-form-view.tsx:55
+#: src/features/auth/auth-form/auth-form-view.tsx:68
 #: src/features/auth/components/auth-button.tsx:18
 #: src/ui/burger-menu/menu-list-view.tsx:35
 msgid "Sign in"
@@ -324,21 +332,21 @@ msgstr "Степан"
 msgid "Technology stack & skills"
 msgstr "Стек технологий"
 
+#: src/features/project/components/project-form/project-form.tsx:104
 #: src/features/project/components/project-form/project-form.tsx:105
-#: src/features/project/components/project-form/project-form.tsx:106
 msgid "Thumbnail"
 msgstr "Миниатюра"
 
-#: src/features/project/components/project-form/project-form.tsx:113
+#: src/features/project/components/project-form/project-form.tsx:112
 msgid "Thumbnail src"
 msgstr "src миниатюры"
 
-#: src/features/project/components/project-form/project-form.tsx:77
-#: src/features/project/components/project-form/project-form.tsx:78
+#: src/features/project/components/project-form/project-form.tsx:73
+#: src/features/project/components/project-form/project-form.tsx:74
 msgid "Title"
 msgstr "Заголовок"
 
-#: src/features/auth/auth-form/auth-form-view.tsx:32
+#: src/features/auth/auth-form/auth-form-view.tsx:33
 msgid "To many attempts"
 msgstr "Совершено слишком много попыток входа в аккаунт"
 
@@ -350,11 +358,11 @@ msgstr "Перейти к проекту"
 msgid "UI/UX tools"
 msgstr "Инструменты UI/UX"
 
-#: src/features/project/components/project-form/project-form.tsx:119
+#: src/features/project/components/project-form/project-form.tsx:118
 msgid "Update project"
 msgstr "Обновить проект"
 
-#: src/features/project/project-view.tsx:79
+#: src/features/project/project-view.tsx:80
 msgid "With a great pleasure I suggest you"
 msgstr "С большим удовольствием предлагаю тебе"
 
@@ -390,7 +398,7 @@ msgstr "Курс разговорного английского"
 msgid "type-script course certificate"
 msgstr "type-script курс серцификат"
 
-#: src/features/project/project-view.tsx:82
+#: src/features/project/project-view.tsx:83
 msgid "watch real project"
 msgstr "посмотреть проект"
 

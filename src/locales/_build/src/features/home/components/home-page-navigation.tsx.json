@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/features/home/components/home-page-navigation.tsx",
-        24
+        21
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/features/home/components/home-page-navigation.tsx",
-        25
+        22
       ]
     ]
   }
