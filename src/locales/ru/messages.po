@@ -167,6 +167,10 @@ msgstr "Почта"
 msgid "Email not found"
 msgstr "Почта не найдена"
 
+#: src/constants/languages.ts:9
+msgid "En"
+msgstr "En"
+
 #: src/features/auth/auth-form/auth-form-view.tsx:61
 #: src/features/contacts/components/contact-form-view.tsx:15
 msgid "Enter your email"
@@ -268,6 +272,10 @@ msgstr "Более 10 лет я обучался по специальностя
 msgid "Password"
 msgstr "Пароль"
 
+#: src/constants/languages.ts:10
+msgid "Pl"
+msgstr "Pl"
+
 #: src/features/about/components/resume-accordion-panels/skills-data.ts:79
 msgid "Platforms and bundlers"
 msgstr "ВИРТУАЛЬНЫЕ МАШИНЫ & КОНТЕЙНЕРЫ"
@@ -303,6 +311,10 @@ msgstr "Проект:"
 #: src/form-builder/validators.tsx:7
 msgid "Required"
 msgstr "Обязательное поле"
+
+#: src/constants/languages.ts:11
+msgid "Ru"
+msgstr "Ру"
 
 #: src/features/contacts/components/contact-form-view.tsx:24
 msgid "Send message"

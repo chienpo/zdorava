@@ -4,6 +4,7 @@ import { useStore } from 'effector-react';
 
 import { PortfolioItemModel } from '~/models/portfolio-item.model';
 import { $portfolioTabsStore } from '~/store/portfolio-tabs-store';
+import { $authStore } from '~/store/auth-store';
 
 import { ROUTE_NAME_PORTFOLIO } from '~/router/routes';
 import { auth, firebaseInstance } from '~/features/auth';
@@ -17,6 +18,8 @@ export const Project = () => {
   const { router } = useRoute();
 
   const portfolioSelectedCategory = useStore($portfolioTabsStore);
+  const { userId } = useStore($authStore);
+  const isAuthenticated = Boolean(userId);
 
   const projectId = route.params.id;
 
@@ -60,5 +63,6 @@ export const Project = () => {
     portfolioSelectedCategory,
     isEditState,
     router,
+    isAuthenticated,
   });
 };

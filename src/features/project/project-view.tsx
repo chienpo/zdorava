@@ -31,6 +31,7 @@ interface Props {
   portfolioSelectedCategory: string;
   isEditState: boolean;
   router: Router;
+  isAuthenticated: boolean;
 }
 
 const transition = {
@@ -57,6 +58,7 @@ export const ProjectView: React.FC<Props> = ({
   portfolioSelectedCategory,
   isEditState,
   router,
+  isAuthenticated,
 }) => (
   <>
     <Header mobileByDefault />
@@ -117,7 +119,7 @@ export const ProjectView: React.FC<Props> = ({
                 {({ i18n }) => (
                   <>
                     <Title>
-                      {data && !isEditState && (
+                      {data && !isEditState && isAuthenticated && (
                         <EditProjectLink
                           routeName="project.edit"
                           routeParams={{
