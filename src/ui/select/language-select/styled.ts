@@ -4,14 +4,13 @@ import { DARK_MODE } from '~/constants/theme';
 import { BLACK, RED, RED_70, WHITE, WHITE_30 } from '~/constants/colors';
 
 export const SelectBox = styled.div`
-  min-width: 77px;
-  font-size: 20px;
+  min-width: 73px;
   text-transform: uppercase;
   cursor: pointer;
 
   .react-select {
     &__indicator {
-      padding: 0 4px 0 8px;
+      padding: 0 6px 0 8px;
       font-size: 22px;
 
       svg {
@@ -22,7 +21,7 @@ export const SelectBox = styled.div`
 
     &__single-value {
       color: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE : WHITE)};
-      font-size: 23px;
+      font-size: 20px;
       transition: color 0.2s;
     }
 
@@ -49,7 +48,8 @@ export const SelectBox = styled.div`
       background-color: ${({ theme }) =>
         theme.mode === DARK_MODE ? WHITE_30 : BLACK};
       border-color: transparent;
-      border-radius: 14px;
+      box-sizing: content-box;
+      border-radius: 16px;
       cursor: pointer;
       transition: background-color 0.2s, border-color 0.2s;
 
