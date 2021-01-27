@@ -1,10 +1,14 @@
 import { i18nMark } from '@lingui/react';
 
 export const PORTFOLIO_CATEGORY_TAB_NAME_ALL = 'all';
-// eslint-disable-next-line max-len
-export const PORTFOLIO_CATEGORY_DEFAULT_TAB_NAME = PORTFOLIO_CATEGORY_TAB_NAME_ALL;
 export const PORTFOLIO_CATEGORY_TAB_NAME_ART = 'art';
 export const PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND = 'frontend';
+
+export const CATEGORIES_DATA: { [key: string]: string }[] = [
+  { value: PORTFOLIO_CATEGORY_TAB_NAME_ALL, label: i18nMark('All') },
+  { value: PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND, label: i18nMark('Front-end') },
+  { value: PORTFOLIO_CATEGORY_TAB_NAME_ART, label: i18nMark('Art') },
+];
 
 export const PORTFOLIO_CATEGORIES_TABS_LABELS: { [key: string]: string } = {
   [PORTFOLIO_CATEGORY_TAB_NAME_ALL]: i18nMark('All'),

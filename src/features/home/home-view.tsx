@@ -42,7 +42,9 @@ export const HomeView = () => (
         &nbsp;
         <Trans>Lagunovsky</Trans>
       </StyledH1>
-      <HomepageSubtitle>web&art pro</HomepageSubtitle>
+      <HomepageSubtitle>
+        <Trans>web&art pro</Trans>
+      </HomepageSubtitle>
       <WebsiteSubtitle>Zdorava</WebsiteSubtitle>
     </SectionHome>
   </MainMotionStyled>

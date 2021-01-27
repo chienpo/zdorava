@@ -1,6 +1,8 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { themes } from '@storybook/theming';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { addDecorator } from '@storybook/react';
 import { ThemeProvider } from 'styled-components';
 
 export const parameters = {
@@ -11,12 +13,12 @@ export const parameters = {
   controls: { expanded: true },
 };
 
-export const decorators = [
-  // TODO: Check any
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  (Story: any) => (
-    <ThemeProvider theme={{ mode: 'LIGHT_MODE' }}>
-      <Story />
-    </ThemeProvider>
-  ),
-];
+type DecoratorFunction = Parameters<typeof addDecorator>[0];
+
+const withThemeProvider: DecoratorFunction = (Story, context) => (
+  <ThemeProvider theme={{ mode: 'LIGHT_MODE' }}>
+    <Story {...context} />
+  </ThemeProvider>
+);
+
+export const decorators = [withThemeProvider];

@@ -1,12 +1,23 @@
-import portfolioData from '~/features/portfolio/portfolio-data.json';
+import portfolioData from '~/features/portfolio/mocks/portfolio-data.json';
 
 import { PortfolioItemModel } from '~/models/portfolio-item.model';
 
+// TODO: Update without mock
 export const getProjectPageTitle = (projectName: string, locale: string) => {
-  const projects = portfolioData.portfolio;
-  const project = (projects as PortfolioItemModel[]).find(
-    ({ alt }) => alt === projectName
+  const { projects } = portfolioData;
+
+  // eslint-disable-next-line unicorn/no-reduce
+  const transformedData = Object.entries(projects).reduce(
+    (accumulator: { [key: string]: PortfolioItemModel }, [, value]) => ({
+      ...accumulator,
+      [value.imageName]: value,
+    }),
+    {}
   );
+
+  const projectsMap = new Map(Object.entries(transformedData));
+
+  const project = projectsMap.get(projectName);
 
   if (project) {
     return project.title[locale];

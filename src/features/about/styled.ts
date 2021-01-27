@@ -11,7 +11,7 @@ export const SectionAbout = styled.section`
 
 export const GridContent = styled.div`
   @media screen and (min-width: 991px) {
-    grid-template-columns: repeat(auto-fill, 50vw);
+    grid-template-columns: 50vw 50vw;
   }
 
   display: grid;

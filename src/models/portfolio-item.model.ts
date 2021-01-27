@@ -1,15 +1,19 @@
+export interface PortfolioItemField {
+  [key: string]: string;
+}
+
 export interface PortfolioPreviewItemModel {
-  alt: string;
   category: string;
+  imageName: string;
   imageSrc: string;
-  title: { [key: string]: string };
   thumbnailSrc: string;
+  title: PortfolioItemField;
 }
 
 export interface PortfolioItemModel extends PortfolioPreviewItemModel {
-  description: { [key: string]: string };
-  descriptionList?: { [key: string]: string[] };
+  description: PortfolioItemField;
+  descriptionList?: PortfolioItemField;
   name?: string;
-  onItemClick?: () => void;
-  projectLinks?: { href: string; label: string }[];
+  projectUrl?: PortfolioItemField;
+  uniqueId?: string; // TODO: Update with MERN
 }

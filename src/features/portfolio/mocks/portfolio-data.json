@@ -1,0 +1,387 @@
+{
+  "projects": {
+    "-MRj3xYvE39StNLao7vi": {
+      "category": "frontend",
+      "description": {
+        "en": "I bounded by NDA demonstrate this ITRANSITION project. So this time I was working on React features for two projects in patent management area. This is the first one. I was really exiting to make up some frontend part for our customer's business. I got experience in such areas like:",
+        "ru": "Я связан NDA чтобы продемонстрировать это проект компании ITRANSITION. Здесь я работал над React фичами для двух проектов в области управления патентами для бизнеса наших клиентов. Это первый из них. Получил опыт в таких областях как:",
+        "pl": "description"
+      },
+      "descriptionList": {
+        "en": "Implementing UI component in to complex SPA using React. Developing complex JS animations using modern motion libraries in a couple with styled components. Working with Redux state manager for complex projects. Organizing project structures (Redux/Features approaches).",
+        "ru": "Имплементация UI компонентов в сложных SPA на React. Разработка сложных JS анимаций изпользуя современные библиотеки React-pose, Framer-motion. Redux. Организация структуры проекта (Redux/Features подход).",
+        "pl": "Wdrażanie komponentów UI w Complex SPA React. Tworzenie złożonych animacji JS z wykorzystaniem nowoczesnych bibliotek React-pose, Framer-motion. Redux. Organizacja struktury projektu (podejście Redux / Features)."
+      },
+      "imageName": "patent-management-system",
+      "imageSrc": "preview-doe-three.png",
+      "thumbnailSrc": "preview-doe-three.png",
+      "title": {
+        "en": "Patent management system",
+        "ru": "Система управления патентами",
+        "pl": "System zarządzania patentami"
+      }
+    },
+    "-MRj426SYgKoPBM5TZqG": {
+      "category": "frontend",
+      "description": {
+        "en": "I bounded by NDA demonstrate this ITRANSITION project. So this time I was working on React features for two projects in patent management area. This is the second one. I was really exiting to make up some frontend part for our customer's business. I got experience in such areas like:",
+        "ru": "Я связан NDA чтобы продемонстрировать это проект компании ITRANSITION. Здесь я работал над React фичами для двух проектов в области управления патентами для бизнеса наших клиентов. Это второй из них. Получил опыт в таких областях как:",
+        "pl": "pl description"
+      },
+      "descriptionList": {
+        "en": "Refactoring and code optimization. Code support. Writing tests using Jest/Enzyme/Majestic. Working with front-end web application bundlers like WebPack, Parcel. Some of Docker teamwork-experience. Communication experience: I was really appreciated and excited to demos some feature to the foreign customers.",
+        "ru": "Рефакторинг и оптимизация кода. Поддержка кода. Написание тестов Jest/Enzyme/Majestic. WebPack, Parcel. Командный опыт Docker. Коммуникационные навыки: демо фич заказчикам.",
+        "pl": "Refaktoryzacja i optymalizacja kodu. Obsługa kodu. Pisanie testów Jest / Enzyme / Majestic. WebPack / Parcel. Doświadczenie zespołu Docker. Umiejętności komunikacyjne: demonstracyjne fich dla klientów."
+      },
+      "imageName": "patent-management-system-cms",
+      "imageSrc": "preview-doe.jpg",
+      "thumbnailSrc": "preview-doe.jpg",
+      "title": {
+        "en": "Patent management system cms",
+        "ru": "Система управления патентами админка",
+        "pl": "System zarządzania patentami cms"
+      }
+    },
+    "-MRj42BQ1YNP-1Z1bjAY": {
+      "category": "frontend",
+      "description": {
+        "en": "I bounded by NDA demonstrate this ITRANSITION project. So this time I was working on features for projects in entertainment and trade industries. I was really exiting to make up some frontend part for our customer's business. I got experience in such areas like:",
+        "ru": "Я связан NDA чтобы продемонстрировать это проект компании ITRANSITION. Здесь я работал над фичами для двух проектов в области торговли и отдыха для бизнеса наших клиентов. Получил опыт в таких областях как:",
+        "pl": "pl description"
+      },
+      "descriptionList": {
+        "en": "Teamwork under KANBAN. Self organizing and task planning skills. IDE experience to write clean and optimized code. Semantic HTML coding. Working with front-end build systems like GULP and it’s killer-feature GULP-RIGGER for HTML coding in the component-way. Correct code styling, using Prettier for code formatting and ESLint for Java Scrypt code analyzing. Working with SASS preprocessors to write modern, clean and reusable SCSS code, using Vriables&Mixins. Experience working with CSS Grid and Flex-boxes. Pixel-perfect. Page-speed optimizations. Dived in to React programming, it's ideas, principles and concepts. GIT.",
+        "ru": "Командная работа по KANBAN. Навыки самоорганизации и планирования. IDE опыт для написания чистого и оптимизированного кода. Семантический HTML кодинг. Разработка на GULP и ее киллер фиче GULP-RIGGER для шаблонизации HTML. Чистый код: Prettier для форматирования кода, ESLint/TSLint для анализа JS/TS кода. Работа с SASS для написания чистого и переиспользуемого кода, Variables/Mixins. CSS-Grid/Flex-boxes. Pixel-perfect. Lighthouse & Page-speed оптимизация. React, идеи, принципы и концепты. GIT.",
+        "pl": "Praca zespołowa w KANBAN. Umiejętności samoorganizacji i planowania. Środowisko IDE do pisania czystego i zoptymalizowanego kodu. Semantyczne kodowanie HTML. Rozwój na GULP i jego zabójczej funkcji GULP-RIGGER do tworzenia szablonów HTML. Czysty kod: Prettier do formatowania kodu, ESLint / TSLint do analizy JS / TS kodu. Praca z SASS przy pisaniu czystego i wielokrotnego użytku kodu Variables/Mixins. Skrzynki CSS-Grid / Flex Boxes. Perfekcyjne co do piksela Optymalizacja Lighthouse & Page-speed. Idee, zasady i koncepcje React. GIT."
+      },
+      "imageName": "company-project-three",
+      "imageSrc": "preview-doe-two.jpg",
+      "thumbnailSrc": "preview-doe-two.jpg",
+      "title": {
+        "en": "Leisure service",
+        "ru": "Сервис по организации досуга",
+        "pl": "pl title"
+      }
+    },
+    "-MRj42I-CWLJOj49ZzYi": {
+      "category": "frontend",
+      "description": {
+        "en": "I really enjoy to present you my first commercial project for a big project company! This was a little bit scary but I should start somehow my front-end career and i got my chance! This project was created from scratch. There were only some brand design features like logo, brand color and that it. This project globally done in some steps regarding how my skills grew! Firstly this was a simple static page, and after some time I combined it with mod-x platform. So i got some pretty cool experience in management, communication with the customer, presenting features and so on!",
+        "ru": "Мне очень приятно представить вам мой первый коммерческий проект для большой проектной компании! Это было немного волгительно, но я должен был как-то начать свой фронт-энд путь, и я не упустил свой шанс! Этот проект был создан с нуля. В моем распорядении были только элементы фирменного стиля компании, такие как: логотип, фирменный цвет. Этот проект сделан в несколько этапов, относительно того, как росли мои профессиональные навыки. Сначала это была простая статическая страница, и через некоторое время я сделал бэк-енд ее на платформе mod-x! Так что я получил довольно крутой опыт управления проектом, презентаций и общения с клиентом!",
+        "pl": "pl description"
+      },
+      "imageName": "pb-betolit-landing-page",
+      "imageSrc": "pb-betolit-landing-page.png",
+      "projectUrl": {
+        "href": "https://pb-betolit.ru/",
+        "label": "pb-betolit.ru/"
+      },
+      "thumbnailSrc": "pb-betolit-landing-page.png",
+      "title": {
+        "en": "PB-BETOLIT",
+        "ru": "Проектное бюро Бетолит",
+        "pl": "Biuro Projektów Betolit"
+      }
+    },
+    "-MRj42U8IhWFQLVBIe5I": {
+      "category": "frontend",
+      "description": {
+        "en": "This is one of my first complex mobile-responsive training projects where I dived dipper in to java-script, jquery and npm. I used here a lot of cool libs for animations, to make up really cool and complex sliders!",
+        "ru": "Это еще один из моих первых тренировочных и немного более комплексных проектов для мобильных устройств, в котором я погрузился в изучение java-script, jquery и npm. Я использовал здесь много библиотек для анимации, чтобы создать действительно интересные и динамические слайдеры!",
+        "pl": "pl description"
+      },
+      "imageName": "course-project-two",
+      "imageSrc": "course-project-two.png",
+      "projectUrl": {
+        "href": "http://trainingtwo.zdorava.com/",
+        "label": "trainingtwo.zdorava.com"
+      },
+      "thumbnailSrc": "course-project-two.png",
+      "title": {
+        "en": "ASSASSIN'S CREED",
+        "ru": "ASSASSIN'S CREED",
+        "pl": "ASSASSIN'S CREED"
+      }
+    },
+    "-MRj42Zk-AiIR0_sVM7u": {
+      "category": "frontend",
+      "description": {
+        "en": "This is one of my first complex mobile-responsive training projects, created when i've been studying on front-end course. Here I dived deeper in to html coding, app architecture, semantic, code structure and so on!",
+        "ru": "Это еще один из моих первых тренировочных проектов, созданных, когда я учился на курсе front-end. Здесь я углубился в HTML-кодинг, архитектуру приложения, структуру и семантику кода.",
+        "pl": "pl description"
+      },
+      "imageName": "course-project-one",
+      "imageSrc": "course-project-one.png",
+      "projectUrl": {
+        "href": "http://trainingone.zdorava.com/",
+        "label": "trainingone.zdorava.com/"
+      },
+      "thumbnailSrc": "course-project-one.png",
+      "title": {
+        "en": "Capture",
+        "ru": "pl title",
+        "pl": "pl title"
+      }
+    },
+    "-MRj42tbzoxC8n5yTHG9": {
+      "category": "frontend",
+      "description": {
+        "en": "This is one of my first commerce projects. It was created from scratch and this was a pretty cool experience for me! As a developer I paid attention to code quality and as an architect made up clean and really UI/UX friendly web design. Interactive item in services section underlines whole idea of this company, and enjoy 'GRIFFEL STUDIO' experience! This project is actually closed, but...",
+        "ru": "Это один из моих первых коммерческих проектов. Он был создан с нуля, и это был довольно крутой опыт для меня! Как разработчик, я уделил большое внимание качеству кода, а, как архитектор, разработал чистый и действительно удобный для пользователя веб-дизайн. Интерактивный пункт в разделе услуг подчеркивает всю идею этой компании и в целом проект вдохновляет пользователя скорее перенять опыт ребят из 'GRIFFEL STUDIO'! Проект уже, к сожалению, закрыт, но...",
+        "pl": "pl description"
+      },
+      "imageName": "grifstd-landing",
+      "imageSrc": "grifstd-landing.png",
+      "projectUrl": {
+        "href": "http://grifstd.zdorava.com/",
+        "label": "grifstd.zdorava.com"
+      },
+      "thumbnailSrc": "grifstd-landing.png",
+      "title": {
+        "en": "GRIFFEL STUDIO",
+        "ru": "GRIFFEL STUDIO",
+        "pl": "GRIFFEL STUDIO"
+      }
+    },
+    "-MRj433296GXj1RxXg6h": {
+      "category": "art",
+      "description": {
+        "en": "1000X1000 - Paper, eye pencil, pencil",
+        "ru": "1000X1000 - Бумага, карандашь для глаз, простой караншаш",
+        "pl": "1000X1000 - papier, eyeliner, zwykły ołówek"
+      },
+      "imageName": "cars-copy-2012",
+      "imageSrc": "cars-copy-2012.png",
+      "thumbnailSrc": "cars-copy-2012.png",
+      "title": {
+        "en": "SKOTY CHOPS",
+        "ru": "ЧОППЕРЫ У СКОТТИ",
+        "pl": "SCOTTI CHOPS"
+      }
+    },
+    "-MRj43DMVO2JxC955Gg8": {
+      "category": "art",
+      "description": {
+        "en": "300x1600 Ecorche",
+        "ru": "300x1600 Экорше",
+        "pl": "300x1600 Ekorshe"
+      },
+      "imageName": "ecorche",
+      "imageSrc": "ecorche.png",
+      "thumbnailSrc": "ecorche.png",
+      "title": {
+        "en": "ECORCHE",
+        "ru": "ЭКОРШЕ",
+        "pl": "EKORSHE"
+      }
+    },
+    "-MRj43Ox6gJG6_aJpcu3": {
+      "category": "art",
+      "description": {
+        "en": "500X800 Each - Paper, sanguine. This is an expression of human personality",
+        "ru": "500X800 Каждая - Бумага, сангина. Это образное выражение человеческой личности и интерпретируется в интерьере",
+        "pl": "500X800 Każdy - Papier sangwina. Jest to przenośny wyraz ludzkiej osobowości i jest interpretowany we wnętrzu"
+      },
+      "imageName": "faces-in-pastel-1",
+      "imageSrc": "faces-in-pastel.png",
+      "thumbnailSrc": "faces-in-pastel.png",
+      "title": {
+        "en": "FACES",
+        "ru": "FACES",
+        "pl": "FACES"
+      }
+    },
+    "-MRj43UcPpjm6PQ6ZzQS": {
+      "category": "art",
+      "description": {
+        "en": "1000X1000 - Paper, sanguine, photoshop. This is an expression of human personality and  interpreted in interior",
+        "ru": "1000X1000 - Бумага, сангина, photoshop. Это образное выражение человеческой личности и интерпретируется в интерьере",
+        "pl": "1000X1000 - Papier sangwina, photoshop. Jest to przenośny wyraz ludzkiej osobowości i jest interpretowany we wnętrzu"
+      },
+      "imageName": "head-portrait-2011",
+      "imageSrc": "head-portrait-2011.png",
+      "thumbnailSrc": "head-portrait-2011.png",
+      "title": {
+        "en": "'FACES' In interior",
+        "ru": "'FACES' В интерьере",
+        "pl": "'FACES' We wnętrzu"
+      }
+    },
+    "-MRj43bvyPaA4TEgfA10": {
+      "category": "art",
+      "description": {
+        "en": "1000X1000 - Paper, sanguine. This is an expression of human personality",
+        "ru": "1000X1000 - Бумага, сангина. Это образное выражение человеческой личности",
+        "pl": "1000X1000 - Papier sangwina. To jest przenośny wyraz ludzkiej osobowości"
+      },
+      "imageName": "head-square-2011",
+      "imageSrc": "head-square-2011.png",
+      "thumbnailSrc": "head-square-2011.png",
+      "title": {
+        "en": "FACE",
+        "ru": "FACE",
+        "pl": "FACE"
+      }
+    },
+    "-MRj43k0YWvlDoBthDCy": {
+      "category": "art",
+      "description": {
+        "en": "Height: A5 - Paper, pencil",
+        "ru": "Height: A5 - Бумага, карандаш",
+        "pl": "Wysokość: A5 - Papier, ołówek"
+      },
+      "imageName": "heads-2011",
+      "imageSrc": "heads-2011.png",
+      "thumbnailSrc": "heads-2011.png",
+      "title": {
+        "en": "'FACES' - Sketch",
+        "ru": "'FACES' - Эскизы",
+        "pl": "'FACES' - Szkice"
+      }
+    },
+    "-MRj43r8Bdws8nxgQPTh": {
+      "category": "art",
+      "description": {
+        "en": "1000X1500 - Paper, sanguine",
+        "ru": "1000X1500 - Бумага, сангина",
+        "pl": "1000X1500 - Papier sangwina"
+      },
+      "imageName": "lady-portrait-2011",
+      "imageSrc": "lady-portrait-2011.png",
+      "thumbnailSrc": "lady-portrait-2011.png",
+      "title": {
+        "en": "LADY",
+        "ru": "ЛЕДИ",
+        "pl": "DAMA"
+      }
+    },
+    "-MRj43yPXNd7a90qlbLH": {
+      "category": "art",
+      "description": {
+        "en": "Architectural drawing",
+        "ru": "Архитектурный рисунок",
+        "pl": "Rysunek architektoniczny"
+      },
+      "imageName": "same-wall-drowing-bntu",
+      "imageSrc": "same-wall-drowing-bntu.png",
+      "thumbnailSrc": "same-wall-drowing-bntu.png",
+      "title": {
+        "en": "Facade",
+        "ru": "Фасад",
+        "pl": "Fasada"
+      }
+    },
+    "-MRj444MStiWvFVKBnFJ": {
+      "category": "art",
+      "description": {
+        "en": "800x1000 Sanguine",
+        "ru": "800x1000 Сангина",
+        "pl": "800x1000 Sangwina"
+      },
+      "imageName": "something-in-pastel-1",
+      "imageSrc": "something-in-pastel-1.png",
+      "thumbnailSrc": "something-in-pastel-1.png",
+      "title": {
+        "en": "Something",
+        "ru": "Что-то",
+        "pl": "Coś"
+      }
+    },
+    "-MRj44CPLXDCRVpqWiVO": {
+      "category": "art",
+      "description": {
+        "en": "400x1200 Sanguine",
+        "ru": "400x1200 Сангина",
+        "pl": "400x1200 Sangwina"
+      },
+      "imageName": "venera-portrait-2011",
+      "imageSrc": "venera-portrait-2011.png",
+      "thumbnailSrc": "venera-portrait-2011.png",
+      "title": {
+        "en": "Venus",
+        "ru": "Венера",
+        "pl": "Wenus"
+      }
+    },
+    "-MRj44JxsyCDqnYtrE46": {
+      "category": "art",
+      "description": {
+        "en": "Arch-design visualization, 3d-max, corona-render",
+        "ru": "Арх-дизайн визуализация, 3d-max, corona-render",
+        "pl": "Wizualizacja, 3d-max, corona-render"
+      },
+      "imageName": "arch-design-same-interiorv-rendering-1",
+      "imageSrc": "arch-design-same-interiorv-rendering-1.png",
+      "thumbnailSrc": "arch-design-same-interiorv-rendering-1.png",
+      "title": {
+        "en": "Interior",
+        "ru": "Интерьер",
+        "pl": "Wnętrze"
+      }
+    },
+    "-MRj44RUIjkB3SvdUwAi": {
+      "category": "art",
+      "description": {
+        "en": "Design of architectural environment",
+        "ru": "Дизайн архитектурной среды",
+        "pl": "pl description"
+      },
+      "imageName": "arch-design-school-concept",
+      "imageSrc": "arch-design-school-concept.png",
+      "thumbnailSrc": "arch-design-school-concept.png",
+      "title": {
+        "en": "School concept",
+        "ru": "Концепт школы",
+        "pl": "Koncepcja szkoły"
+      }
+    },
+    "-MRj44bajRjWPOR_5rxX": {
+      "category": "art",
+      "description": {
+        "en": "Design of architectural environment",
+        "ru": "Дизайн архитектурной среды",
+        "pl": "pl description"
+      },
+      "imageName": "arch-design-sculpture_people",
+      "imageSrc": "arch-design-sculpture_people.png",
+      "thumbnailSrc": "arch-design-sculpture_people.png",
+      "title": {
+        "en": "Architecture sculpture",
+        "ru": "Архитектурная скульптура",
+        "pl": "Rzeźba architektoniczna"
+      }
+    },
+    "-MRj48bPRnNy4F1nxUtw": {
+      "category": "art",
+      "description": {
+        "en": "Design of architectural environment",
+        "ru": "Дизайн архитектурной среды",
+        "pl": "pl description"
+      },
+      "imageName": "arch-design-sculpture",
+      "imageSrc": "arch-design-sculpture.png",
+      "thumbnailSrc": "arch-design-sculpture.png",
+      "title": {
+        "en": "Facade",
+        "ru": "Фасад",
+        "pl": "Fasada"
+      }
+    },
+    "-MRj48qD1Ky-KtPYmXwJ": {
+      "category": "art",
+      "description": {
+        "en": "Interior visualization for the team of developers, concept",
+        "ru": "Визуализация интерьера для команды разработчиков, концепт",
+        "pl": "Wizualizacja wnętrza dla zespołu deweloperskiego, koncepcja"
+      },
+      "imageName": "arch-design-transit-2-int-day",
+      "imageSrc": "arch-design-transit-2-int-day.png",
+      "thumbnailSrc": "arch-design-transit-2-int-day.png",
+      "title": {
+        "en": "Developers room",
+        "ru": "Комната для разработчиков",
+        "pl": "Pokój deweloperów"
+      }
+    }
+  }
+}

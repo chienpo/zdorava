@@ -15,7 +15,11 @@ export const LanguageSwitchBox = styled.div`
   margin-left: auto;
 `;
 
-export const NavUl = styled.ul`
+export const LanguageSelectBox = styled.div`
+  margin: 0 20px;
+`;
+
+export const Ul = styled.ul`
   display: flex;
   flex-wrap: wrap;
   align-items: center;

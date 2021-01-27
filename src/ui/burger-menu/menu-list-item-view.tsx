@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 import { I18n } from '@lingui/react';
 import { BaseLink } from 'react-router5';
@@ -71,14 +71,16 @@ const variants = {
 
 interface Props {
   name: string;
-  onClick: () => void;
   router: Router;
+  onClick?: () => void;
+  label?: string | ReactNode;
 }
 
 export const MenuListItemView: React.FC<Props> = ({
   onClick,
   name,
   router,
+  label = '',
 }) => {
   const category = useStore($portfolioTabsStore);
 
@@ -97,7 +99,7 @@ export const MenuListItemView: React.FC<Props> = ({
             routeParams={{ category }}
             onClick={onClick}
           >
-            {i18n._(PAGE_TITLES[name])}
+            {label || i18n._(PAGE_TITLES[name])}
           </BaseLinkStyled>
         </StyledMotionLi>
       )}

@@ -6,9 +6,9 @@ import { AnimatePresence } from 'framer-motion';
 
 import { PortfolioPreviewItemModel } from '~/models/portfolio-item.model';
 
+import { ROUTE_NAME_PROJECT } from '~/router/routes';
 import { PORTFOLIO_CATEGORIES_TABS_LABELS } from '~/constants/portfolio';
 import { PORTFOLIO_IMAGES_PATH, SITE_URL } from '~/constants/site';
-import { ROUTE_NAME_PORTFOLIO_PROJECT } from '~/router/routes';
 import {
   Item,
   ItemCategoryLabel,
@@ -19,22 +19,28 @@ import {
   LazyImageStyled,
 } from './styled';
 
-interface Props {
+interface Props extends PortfolioPreviewItemModel {
   chunkType: string;
   activeCategory: string;
 }
 
-export const PortfolioChunkItem: React.FC<
-  Props & PortfolioPreviewItemModel
-> = ({ alt, category, chunkType, activeCategory, thumbnailSrc, title }) => {
+export const PortfolioChunkItem: React.FC<Props> = ({
+  imageName,
+  category,
+  chunkType,
+  activeCategory,
+  thumbnailSrc,
+  title,
+}) => {
   const imgThumbnailSource = `${SITE_URL}${PORTFOLIO_IMAGES_PATH}${category}-thumbnail/${thumbnailSrc}`;
+  const chunkClassName = `${chunkType} ${activeCategory}`;
 
   return (
     <AnimatePresence>
       <I18n>
         {({ i18n }) => (
           <Item
-            className={`${chunkType} ${activeCategory}`}
+            className={chunkClassName}
             variants={{
               open: {
                 x: 0,
@@ -63,13 +69,13 @@ export const PortfolioChunkItem: React.FC<
             }}
           >
             <ItemOrientationType
-              routeName={ROUTE_NAME_PORTFOLIO_PROJECT}
-              routeParams={{ id: alt }}
+              routeName={ROUTE_NAME_PROJECT}
+              routeParams={{ id: imageName, category: activeCategory }}
               activeClassName="active"
             >
               <ItemFigure>
                 <LazyImageStyled
-                  alt={alt}
+                  alt={imageName}
                   src={imgThumbnailSource}
                   srcSet={imgThumbnailSource}
                 />

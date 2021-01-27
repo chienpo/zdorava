@@ -7,11 +7,7 @@ import { Route, Router } from 'router5';
 import { $portfolioTabsStore } from '~/store/portfolio-tabs-store';
 
 import { PAGE_TITLES } from '~/constants/page-titles';
-import {
-  ROUTE_NAME_PORTFOLIO_CATEGORY,
-  ROUTE_NAME_PORTFOLIO_PROJECT,
-} from '~/router/routes';
-import { NavUl, BaseLinkStyled } from './styled';
+import { Ul, BaseLinkStyled } from './styled';
 
 interface Props {
   router: Router;
@@ -24,22 +20,19 @@ export const NavigationListView: React.FC<Props> = ({ router, routes }) => {
   return (
     <I18n>
       {({ i18n }) => (
-        <NavUl>
-          {routes
-            .filter(({ name }) => name !== ROUTE_NAME_PORTFOLIO_PROJECT)
-            .filter(({ name }) => name !== ROUTE_NAME_PORTFOLIO_CATEGORY)
-            .map(({ name }) => (
-              <li key={name}>
-                <BaseLinkStyled
-                  routeParams={{ category }}
-                  router={router}
-                  routeName={name}
-                >
-                  {i18n._(PAGE_TITLES[name])}
-                </BaseLinkStyled>
-              </li>
-            ))}
-        </NavUl>
+        <Ul>
+          {routes.map(({ name }) => (
+            <li key={name}>
+              <BaseLinkStyled
+                routeParams={{ category }}
+                router={router}
+                routeName={name}
+              >
+                {i18n._(PAGE_TITLES[name])}
+              </BaseLinkStyled>
+            </li>
+          ))}
+        </Ul>
       )}
     </I18n>
   );

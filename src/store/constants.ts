@@ -1,0 +1,8 @@
+export const STORAGE_KEY_SITE_THEME = 'SITE_THEME_KEY';
+export const STORAGE_KEY_SITE_LANGUAGE = 'SITE_LANGUAGE';
+export const STORAGE_KEY_ACTIVE_PORTFOLIO_CATEGORY =
+  'ACTIVE_PORTFOLIO_CATEGORY';
+
+export const STORAGE_KEY_USER_ID = 'userId';
+export const STORAGE_KEY_USER_TOKEN = 'token';
+export const STORAGE_KEY_USER_EXPIRATION_DATE = 'expirationDate';

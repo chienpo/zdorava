@@ -12,8 +12,8 @@
     "build-info": "webpack --config webpack/config.info.ts",
     "ts": "tsc -p tsconfig.json",
     "ts-coverage": "mkdirp .coverage/typescript && typescript-coverage-report -s -t 98 -o .coverage/typescript",
-    "eslint": "eslint '**/*.+(js|jsx|ts|tsx)'",
-    "stylelint": "stylelint '**/*.+(css|scss|js|jsx|ts|tsx)'",
+    "eslint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
+    "stylelint": "stylelint \"**/*.{css,scss,js,jsx,ts,tsx}\"",
     "lint": "yarn eslint && yarn stylelint",
     "codestyle": "prettier --check '**/*'",
     "format": "prettier --write '**/*'",
@@ -32,9 +32,9 @@
     "build-storybook": "build-storybook"
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx,mdx}": "eslint --fix",
-    "**/*.{css,scss,html,js,jsx,ts,tsx}": "stylelint --fix",
-    "**/*": "prettier --write"
+    "**/*.{js,jsx,ts,tsx,mdx}": "yarn eslint --fix",
+    "**/*.{css,scss,html,js,jsx,ts,tsx}": "yarn stylelint --fix",
+    "**/*": "yarn prettier --write"
   },
   "husky": {
     "hooks": {
@@ -48,7 +48,7 @@
     "@fortawesome/react-fontawesome": "^0.1.9",
     "@lingui/core": "^2.9.1",
     "@lingui/react": "^2.9.1",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "effector": "^20.16.2",
     "effector-react": "^20.8.0",
@@ -74,6 +74,7 @@
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-router5": "^7.1.0",
+    "react-select": "^3.2.0",
     "react-simple-img": "^2.3.9",
     "router5": "^7.0.2",
     "router5-plugin-browser": "^7.0.2",
@@ -118,6 +119,7 @@
     "@types/react": "^16.9.48",
     "@types/react-document-title": "^2.0.4",
     "@types/react-dom": "^16.9.8",
+    "@types/react-select": "^3.1.2",
     "@types/styled-components": "^5.1.2",
     "@types/styled-theming": "^2.2.1",
     "@types/stylelint": "^9.10.1",

@@ -1,20 +1,19 @@
 import React, { FC } from 'react';
 import { FormSubscription } from 'final-form';
 
-import { ErrorBox, IconError } from './styled';
+import { ErrorMessage } from '~/form-builder/field-error/error-message';
 
 interface Props {
   meta: FormSubscription;
+  name?: string;
 }
 
 export const FieldError: FC<Props> = ({ meta }) => {
-  if (meta.error && meta.touched) {
-    return (
-      <ErrorBox>
-        <IconError>i</IconError>
-        {meta.error}
-      </ErrorBox>
-    );
+  const errorMessage =
+    meta && ((meta.touched && meta.error) || meta.submitError || null);
+
+  if (meta && errorMessage) {
+    return <ErrorMessage message={errorMessage} />;
   }
 
   return null;

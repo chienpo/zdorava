@@ -1,26 +1,24 @@
 import { createStore, createEvent, Event } from 'effector';
 
-import { PORTFOLIO_CATEGORY_TAB_NAME_ALL } from '~/constants/portfolio';
-import { router } from '~/router';
+import { PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND } from '~/constants/portfolio';
+import { STORAGE_KEY_ACTIVE_PORTFOLIO_CATEGORY } from './constants';
+
 import { $router } from './router-store';
+import { checkAuthLogoutHandler } from '~/store/auth-store';
 
 export const setPortfolioCategory: Event<string> = createEvent();
 
-export const $portfolioTabsStore = createStore(
-  PORTFOLIO_CATEGORY_TAB_NAME_ALL
-).on(setPortfolioCategory, (state: string, category: string) => category);
+const defaultCategory =
+  localStorage.getItem(STORAGE_KEY_ACTIVE_PORTFOLIO_CATEGORY) ||
+  PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND;
 
-$router.watch(({ route }) => {
-  if (router.isActive('portfolio')) {
-    setPortfolioCategory(
-      route.params.category || $portfolioTabsStore.defaultState
-    );
-  }
-});
+export const $portfolioTabsStore = createStore(defaultCategory).on(
+  setPortfolioCategory,
+  (state: string, category: string) => {
+    localStorage.setItem(STORAGE_KEY_ACTIVE_PORTFOLIO_CATEGORY, category);
 
-// Watcher
-$portfolioTabsStore.watch((category) => {
-  if (router.isActive('portfolio')) {
-    router.navigate('portfolio.category', { category });
+    return category;
   }
-});
+);
+
+$router.watch(checkAuthLogoutHandler);

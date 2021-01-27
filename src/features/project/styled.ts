@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from 'react-router5';
+import { BaseLink } from 'react-router5';
 
 import { RED, BLACK, WHITE_80, WHITE, RED_70 } from '~/constants/colors';
 import {
@@ -79,7 +79,24 @@ export const Category = styled.div`
   background: ${RED};
 `;
 
-export const StyledLink = styled(Link)`
+export const EditProjectLink = styled(BaseLink)`
+  margin-right: 5px;
+  color: ${RED_70};
+  font-weight: bold;
+  text-decoration: none;
+  outline: none;
+  transition: color 0.2s;
+
+  &:focus {
+    color: ${RED_70};
+  }
+
+  &:hover {
+    color: ${RED};
+  }
+`;
+
+export const StyledLink = styled(BaseLink)`
   margin-bottom: 100px;
   color: ${BLACK};
   font-weight: bold;

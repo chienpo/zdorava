@@ -1,2 +1,5 @@
-export const EN = 'en';
-export const RU = 'ru';
+export enum Languages {
+  En = 'en',
+  Pl = 'pl',
+  Ru = 'ru',
+}
