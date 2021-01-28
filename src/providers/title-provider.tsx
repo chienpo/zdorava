@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import DocumentTitle from 'react-document-title';
+import { Helmet } from 'react-helmet';
 import { I18n } from '@lingui/react';
 import { useRoute } from 'react-router5';
 import { useStore } from 'effector-react';
@@ -34,14 +34,17 @@ export const TitleProvider: React.FC<Props> = ({ children }) => {
             ? PORTFOLIO_PAGE_TITLES[selectedCategory]
             : PAGE_TITLES[name];
 
+        const title = `${SITE_NAME} | ${i18n._(pageTitle)}${i18n._(
+          projectPageTitle
+        )}`;
+
         return (
-          <DocumentTitle
-            title={`${SITE_NAME} | ${i18n._(pageTitle)}${i18n._(
-              projectPageTitle
-            )}`}
-          >
+          <>
+            <Helmet>
+              <title>{title}</title>
+            </Helmet>
             {children}
-          </DocumentTitle>
+          </>
         );
       }}
     </I18n>

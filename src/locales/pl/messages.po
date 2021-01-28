@@ -202,7 +202,7 @@ msgstr "Doświadczenie"
 
 #: src/constants/page-titles.ts:17
 msgid "Front-End projects"
-msgstr "projekty Dront-End"
+msgstr "projekty Front-End"
 
 #: src/constants/portfolio.ts:7
 #: src/constants/portfolio.ts:13
