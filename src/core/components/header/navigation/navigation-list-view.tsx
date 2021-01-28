@@ -27,6 +27,7 @@ export const NavigationListView: React.FC<Props> = ({ router, routes }) => {
                 routeParams={{ category }}
                 router={router}
                 routeName={name}
+                title={i18n._(PAGE_TITLES[name])}
               >
                 {i18n._(PAGE_TITLES[name])}
               </BaseLinkStyled>

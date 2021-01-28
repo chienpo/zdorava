@@ -156,9 +156,10 @@ export const ProjectView: React.FC<Props> = ({
                           <Trans>With a great pleasure I suggest you</Trans>
                           &nbsp;
                           <StyledRealProjectLink
-                            href={data.projectUrl[i18n.language]}
+                            href={data.projectUrl.href}
                             target="_blank"
                             rel="noopener"
+                            title={i18n._('watch real project')}
                           >
                             <Trans>watch real project</Trans>
                           </StyledRealProjectLink>

@@ -422,6 +422,7 @@ msgstr "Курс разговорного английского"
 msgid "type-script course certificate"
 msgstr "type-script курс серцификат"
 
+#: src/features/project/project-view.tsx:82
 #: src/features/project/project-view.tsx:83
 msgid "watch real project"
 msgstr "посмотреть проект"

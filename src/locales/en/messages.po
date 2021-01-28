@@ -422,6 +422,7 @@ msgstr "spoken intermediate one english course certificate"
 msgid "type-script course certificate"
 msgstr "type-script course certificate"
 
+#: src/features/project/project-view.tsx:82
 #: src/features/project/project-view.tsx:83
 msgid "watch real project"
 msgstr "watch real project"
