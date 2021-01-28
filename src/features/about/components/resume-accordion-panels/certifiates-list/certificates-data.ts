@@ -7,6 +7,7 @@ import spokenIntermediateOneCourseCertificate from '~/assets/images/sertificates
 import businessEnglishThreeCourseCertificate from '~/assets/images/sertificates/business-english-three-course-lagunovsky.png';
 import avaScriptAlgorithmsTheFundamentalsCourseCertificate from '~/assets/images/sertificates/certificate-of-completion-for-javascript-algorithms-the-fundamentals-course-lagunovsky.png';
 import javaScriptDataStructuresTheFundamentalsCourseCertificate from '~/assets/images/sertificates/certificate-of-completion-for-javascript-data-structures-the-fundamentals-course-lagunovsky.png';
+import gitAndGitHubThePracticalGuideCourseCertificate from '~/assets/images/sertificates/git-and-github-the-practical-guide-course-lagunovsky.png';
 
 interface Certificate {
   src: string;
@@ -76,6 +77,14 @@ export const CERTIFICATES_DATA: Certificate[] = [
     title: i18nMark('"JavaScript Data Structures - The Fundamentals"'),
     description: i18nMark(
       '"JavaScript Data Structures - The Fundamentals" certificate, "ACADEMIND"'
+    ),
+  },
+  {
+    src: gitAndGitHubThePracticalGuideCourseCertificate,
+    alt: i18nMark('git and github - the practical guide" certificate'),
+    title: i18nMark('"Git & GitHub - The Practical Guide"'),
+    description: i18nMark(
+      '"Git & GitHub - The Practical Guide" certificate, "ACADEMIND"'
     ),
   },
 ];

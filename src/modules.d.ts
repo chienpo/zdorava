@@ -33,3 +33,4 @@ declare module '*.css';
 
 declare module 'react-glitch-effect';
 declare module 'lazysizes';
+declare module '*.po';

@@ -3,7 +3,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        12
+        13
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        13
+        14
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        14
+        15
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        18
+        19
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        19
+        20
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        20
+        21
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        24
+        25
       ]
     ]
   },
@@ -59,7 +59,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        25
+        26
       ]
     ]
   },
@@ -67,7 +67,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        26
+        27
       ]
     ]
   },
@@ -75,7 +75,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        30
+        31
       ]
     ]
   },
@@ -83,7 +83,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        31
+        32
       ]
     ]
   },
@@ -91,7 +91,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        32
+        33
       ]
     ]
   },
@@ -99,7 +99,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        36
+        37
       ]
     ]
   },
@@ -107,7 +107,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        37
+        38
       ]
     ]
   },
@@ -115,7 +115,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        38
+        39
       ]
     ]
   },
@@ -123,7 +123,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        42
+        43
       ]
     ]
   },
@@ -131,7 +131,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        43
+        44
       ]
     ]
   },
@@ -139,7 +139,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        44
+        45
       ]
     ]
   },
@@ -147,7 +147,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        48
+        49
       ]
     ]
   },
@@ -155,7 +155,7 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        49
+        50
       ]
     ]
   },
@@ -163,7 +163,31 @@
     "origin": [
       [
         "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
-        50
+        51
+      ]
+    ]
+  },
+  "git and github - the practical guide\" certificate": {
+    "origin": [
+      [
+        "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
+        55
+      ]
+    ]
+  },
+  "\"Git & GitHub - The Practical Guide\"": {
+    "origin": [
+      [
+        "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
+        56
+      ]
+    ]
+  },
+  "\"Git & GitHub - The Practical Guide\" certificate, \"ACADEMIND\"": {
+    "origin": [
+      [
+        "src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts",
+        57
       ]
     ]
   }
