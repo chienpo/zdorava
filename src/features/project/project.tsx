@@ -7,9 +7,8 @@ import { $portfolioTabsStore } from '~/store/portfolio-tabs-store';
 import { $authStore } from '~/store/auth-store';
 
 import { ROUTE_NAME_PORTFOLIO } from '~/router/routes';
-import { auth, firebaseInstance } from '~/features/auth';
-import { FIREBASE_DATABASE_REF } from '~/constants/api';
 import { ProjectView } from './project-view';
+import { getDataChunkEmmitPromise } from '~/features/portfolio/api';
 
 export const Project = () => {
   const [data, setData] = useState<PortfolioItemModel[]>([]);
@@ -26,29 +25,20 @@ export const Project = () => {
   const isEditState = Boolean(route.name === 'project.edit');
 
   const getDataChunk = useCallback(async () => {
-    await firebaseInstance
-      .database()
-      .ref(FIREBASE_DATABASE_REF)
-      .orderByChild('imageName')
-      .equalTo(projectId)
-      .once('value')
-      .then((snapshot) => {
-        const arrayOfKeys = Object.keys(snapshot.val());
+    const params = {
+      orderByChild: 'imageName',
+      limitToFirst: null,
+      equalTo: projectId,
+    };
 
-        const results = arrayOfKeys.map((key) => ({
-          ...snapshot.val()[key],
-          uniqueId: key,
-        }));
-        setData(results);
+    await getDataChunkEmmitPromise('', params)
+      .then((response) => {
+        setData(response as PortfolioItemModel[]);
       })
       .catch(() => {
         router.navigate(ROUTE_NAME_PORTFOLIO, {}, { reload: true });
       });
   }, [projectId, router]);
-
-  useEffect(() => {
-    auth();
-  }, []);
 
   useEffect(() => {
     getDataChunk().catch(() => {

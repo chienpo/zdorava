@@ -10,14 +10,12 @@ import {
 import { $authStore } from '~/store/auth-store';
 
 import {
-  PORTFOLIO_CATEGORY_TAB_NAME_ALL,
   PORTFOLIO_CATEGORY_TAB_NAME_ART,
   PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND,
 } from '~/constants/portfolio';
-import { FIREBASE_DATABASE_REF } from '~/constants/api';
-import { auth, firebaseInstance } from '~/features/auth';
 import { PageLoader } from '~/ui/page-loader/page-loader';
 import { PortfolioView } from './portfolio-view';
+import { getDataChunkEmmitPromise } from './api';
 
 export const Portfolio: FC = () => {
   const categoryFromStore = useStore($portfolioTabsStore);
@@ -37,22 +35,15 @@ export const Portfolio: FC = () => {
   }, [categoryFromStore]);
 
   const getDataChunk = async (categoryName: string) => {
-    const databaseRef = firebaseInstance.database().ref(FIREBASE_DATABASE_REF);
+    const params = {
+      orderByChild: categoryName,
+      limitToFirst: DATA_CHUNK_SIZE,
+      equalTo: '',
+    };
 
-    const queries =
-      categoryName === PORTFOLIO_CATEGORY_TAB_NAME_ALL
-        ? databaseRef
-        : databaseRef.orderByChild('category').equalTo(categoryName);
-
-    await queries
-      .limitToFirst(DATA_CHUNK_SIZE)
-      .once('value')
-      .then((snap) => {
-        if (snap.val()) {
-          const responseData: PortfolioItemModel[] = Object.values(snap.val());
-
-          setData(responseData);
-        }
+    await getDataChunkEmmitPromise('', params)
+      .then((response) => {
+        setData(response as PortfolioItemModel[]);
       })
       .catch((error) => {
         throw error;
@@ -64,20 +55,16 @@ export const Portfolio: FC = () => {
 
   const getNextDataChunk = async () => {
     setDataLoadCount((previousState) => previousState + 1);
-    const databaseRef = firebaseInstance.database().ref(FIREBASE_DATABASE_REF);
 
-    const queries =
-      categoryFromStore === PORTFOLIO_CATEGORY_TAB_NAME_ALL
-        ? databaseRef
-        : databaseRef.orderByChild('category').equalTo(categoryFromStore);
+    const params = {
+      orderByChild: activeCategory,
+      limitToFirst: DATA_CHUNK_SIZE * dataLoadCount,
+      equalTo: '',
+    };
 
-    await queries
-      .limitToFirst(DATA_CHUNK_SIZE * dataLoadCount)
-      .once('value')
-      .then((snap) => {
-        const responseData: PortfolioItemModel[] = Object.values(snap.val());
-
-        setData(responseData);
+    await getDataChunkEmmitPromise('', params)
+      .then((response) => {
+        setData(response as PortfolioItemModel[]);
       })
       .catch((error) => {
         throw error;
@@ -110,10 +97,6 @@ export const Portfolio: FC = () => {
       setHasMore(false);
     }
   }, [data, categoryFromStore]);
-
-  useEffect(() => {
-    auth();
-  }, []);
 
   useEffect(() => {
     getDataChunk(categoryFromStore)
