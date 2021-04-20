@@ -13,7 +13,7 @@ export const authUser: Event<{
 }> = createEvent();
 export const authStart = createEvent();
 export const authSuccess: Event<{
-  idToken: string;
+  token: string;
   userId: string;
 }> = createEvent();
 export const authFail: Event<{ error: string }> = createEvent();
@@ -34,7 +34,7 @@ export interface AuthState {
 }
 
 const initialState = {
-  token: '',
+  token: localStorage.getItem(STORAGE_KEY_USER_TOKEN) || '',
   userId: localStorage.getItem(STORAGE_KEY_USER_ID) || '',
   error: '',
   loading: false,
@@ -50,7 +50,7 @@ $authStore
   .on(authSuccess, (state: AuthState, action) => {
     return {
       ...state,
-      token: action.idToken,
+      token: action.token,
       userId: action.userId,
       error: '',
       loading: false,

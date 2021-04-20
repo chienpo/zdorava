@@ -1,6 +1,5 @@
 import { createEffect, Effect } from 'effector';
 
-import { FIREBASE_API_KEY } from '~/constants/api';
 import {
   STORAGE_KEY_USER_ID,
   STORAGE_KEY_USER_EXPIRATION_DATE,
@@ -19,9 +18,9 @@ interface AuthResponseData {
   displayName: string;
   email: string;
   expiresIn: string;
-  idToken: string;
+  token: string;
   kind: string;
-  localId: string;
+  userId: string;
   refreshToken: string;
   registered: true;
 }
@@ -48,10 +47,9 @@ fetchAuthData.use(async ({ email, password }) => {
   const authData = {
     email,
     password,
-    returnSecureToken: true,
   };
 
-  const url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${FIREBASE_API_KEY}`;
+  const url = `${process.env.REACT_APP_BACKEND_URL}/users/signin`;
 
   const request = await fetch(url, {
     method: 'POST',
@@ -64,46 +62,30 @@ fetchAuthData.use(async ({ email, password }) => {
   return request.json();
 });
 
-fetchAuthData.pending.watch((/* pending */) => {
-  // console.log(pending);
-});
-
 fetchAuthData.done.watch((response: AuthResponse) => {
+  const apiJWTExpiresIn = 60 * 60;
+
   const expirationDate: Date = new Date(
-    new Date().getTime() + Number(response.result.expiresIn) * 1000
+    new Date().getTime() + apiJWTExpiresIn * 1000
   );
 
-  localStorage.setItem(STORAGE_KEY_USER_TOKEN, response.result.idToken);
+  localStorage.setItem(STORAGE_KEY_USER_TOKEN, response.result.token);
   localStorage.setItem(
     STORAGE_KEY_USER_EXPIRATION_DATE,
     expirationDate.toString()
   );
-  localStorage.setItem(STORAGE_KEY_USER_ID, response.result.localId);
+  localStorage.setItem(STORAGE_KEY_USER_ID, response.result.userId);
 
   authSuccess({
-    idToken: response.result.idToken,
-    userId: response.result.localId,
+    token: response.result.token,
+    userId: response.result.userId,
   });
-  checkAuthTimeout({ expiresIn: Number(response.result.expiresIn) });
+
+  checkAuthTimeout({ expiresIn: apiJWTExpiresIn });
 
   if (response.result.error) {
     const { result } = response;
 
     authFail({ error: result.error });
-  }
-});
-
-fetchAuthData.fail.watch(({ error }) => {
-  // eslint-disable-next-line no-console
-  console.error('error, rejected value', error);
-});
-
-fetchAuthData.finally.watch((data) => {
-  if (data.status === 'done') {
-    // const { result } = data;
-    // console.log('result', result);
-  } else {
-    // const { error } = data;
-    // console.log('error', error);
   }
 });
