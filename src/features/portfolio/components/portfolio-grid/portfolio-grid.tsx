@@ -52,7 +52,7 @@ export const PortfolioGrid: FC<Props> = ({ data, activeCategory }) => {
 
   return (
     <MotionGridContainer initial="closed" animate="open" exit="closed">
-      {chunkedData.map((chunks, ind) => (
+      {chunkedData.map((chunks, index) => (
         <AnimatePresence key={chunks[0].imageSrc}>
           <MotionChunkRow
             className={`chunk ${activeCategory}`}
@@ -74,16 +74,18 @@ export const PortfolioGrid: FC<Props> = ({ data, activeCategory }) => {
                 imageName,
                 thumbnailSrc,
                 title,
+                id,
               }: PortfolioItemModel) => (
                 <PortfolioChunkItem
                   key={imageSrc}
                   imageName={imageName}
                   category={category}
-                  chunkType={getChunkType(ind)}
+                  chunkType={getChunkType(index)}
                   imageSrc={imageSrc}
                   activeCategory={activeCategory}
                   thumbnailSrc={thumbnailSrc}
                   title={title}
+                  id={id}
                 />
               )
             )}

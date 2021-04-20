@@ -20,6 +20,7 @@ const mockedProjectDataItem: PortfolioItemModel = {
     ru: 'ru title',
     pl: 'pl title',
   },
+  id: '1',
 };
 
 export const mockedPortfolioData = [...new Array(10)].map(

@@ -1,4 +1,4 @@
-import { FC, createElement, useState, useEffect } from 'react';
+import { FC, createElement, useState, useEffect, useCallback } from 'react';
 import { useStore } from 'effector-react';
 
 import { PortfolioItemModel } from '~/models/portfolio-item.model';
@@ -15,7 +15,7 @@ import {
 } from '~/constants/portfolio';
 import { PageLoader } from '~/ui/page-loader/page-loader';
 import { PortfolioView } from './portfolio-view';
-import { getDataChunkEmmitPromise } from './api';
+import { useHttpClient } from '~/hooks/use-http-client';
 
 export const Portfolio: FC = () => {
   const categoryFromStore = useStore($portfolioTabsStore);
@@ -34,26 +34,33 @@ export const Portfolio: FC = () => {
     setCategory(categoryFromStore);
   }, [categoryFromStore]);
 
-  const getDataChunk = async (categoryName: string) => {
-    const params = {
-      orderByChild: categoryName,
-      limitToFirst: DATA_CHUNK_SIZE,
-      equalTo: '',
-    };
+  const { sendRequest } = useHttpClient();
 
-    await getDataChunkEmmitPromise('', params)
-      .then((response) => {
-        setData(response as PortfolioItemModel[]);
-      })
-      .catch((error) => {
-        throw error;
-      })
-      .finally(() => {
+  const getDataChunk = useCallback(
+    async (/* categoryName: string */) => {
+      // const params = {
+      //   orderByChild: categoryName,
+      //   limitToFirst: DATA_CHUNK_SIZE,
+      //   equalTo: '',
+      // };
+
+      try {
+        const response = await sendRequest(
+          `${process.env.REACT_APP_BACKEND_URL}/projects`,
+          'GET'
+        );
+
+        setData(response.data as PortfolioItemModel[]);
+
         setDataLoadCount((previousState) => previousState + 1);
-      });
-  };
+      } finally {
+        setDataLoadCount((previousState) => previousState + 1);
+      }
+    },
+    [sendRequest]
+  );
 
-  const getNextDataChunk = async () => {
+  const getNextDataChunk = useCallback(async () => {
     setDataLoadCount((previousState) => previousState + 1);
 
     const params = {
@@ -62,14 +69,32 @@ export const Portfolio: FC = () => {
       equalTo: '',
     };
 
-    await getDataChunkEmmitPromise('', params)
-      .then((response) => {
-        setData(response as PortfolioItemModel[]);
-      })
-      .catch((error) => {
-        throw error;
-      });
-  };
+    // eslint-disable-next-line no-console
+    console.log(params);
+
+    try {
+      const response = await sendRequest(
+        `${process.env.REACT_APP_BACKEND_URL}/projects`
+      );
+      setData([response.data] as PortfolioItemModel[]);
+    } catch (error) {
+      return error;
+    } finally {
+      // eslint-disable-next-line no-console
+      console.log('finally');
+    }
+
+    // eslint-disable-next-line no-console
+    return console.log('finally');
+
+    // await getDataChunkEmmitPromise('', params)
+    //   .then((response) => {
+    //     setData(response as PortfolioItemModel[]);
+    //   })
+    //   .catch((error) => {
+    //     throw error;
+    //   });
+  }, [sendRequest, activeCategory, dataLoadCount]);
 
   const onCategoryClick = (categoryName: string) => {
     setPortfolioCategory(categoryName);
@@ -99,14 +124,14 @@ export const Portfolio: FC = () => {
   }, [data, categoryFromStore]);
 
   useEffect(() => {
-    getDataChunk(categoryFromStore)
+    getDataChunk(/* categoryFromStore */)
       .then(() => {
         setPageLoading(false);
       })
       .catch((error) => {
         throw error;
       });
-  }, [categoryFromStore]);
+  }, [getDataChunk, categoryFromStore]);
 
   if (pageLoading) {
     return createElement(PageLoader);

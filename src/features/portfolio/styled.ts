@@ -29,3 +29,8 @@ export const ItemsLoadingSpinnerBox = styled.div`
   padding: 50px 20px;
   color: ${WHITE};
 `;
+
+export const NoItemsFoundMessage = styled(ItemsLoadingSpinnerBox)`
+  min-height: 200px;
+  padding: 0;
+`;

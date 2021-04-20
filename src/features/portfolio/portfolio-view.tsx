@@ -17,6 +17,7 @@ import {
   AnimatedSectionStyled,
   ItemsLoadingSpinnerBox,
   ItemsLoadingStateDescriptionAnimated,
+  NoItemsFoundMessage,
 } from './styled';
 
 export const PortfolioView: React.FC<Props> = ({
@@ -69,7 +70,13 @@ export const PortfolioView: React.FC<Props> = ({
               hasMore={hasMore}
               loader={
                 <ItemsLoadingSpinnerBox>
-                  <MoreLoader />
+                  {!data.length ? (
+                    <NoItemsFoundMessage>
+                      <Trans>No items found ...</Trans>
+                    </NoItemsFoundMessage>
+                  ) : (
+                    <MoreLoader />
+                  )}
                 </ItemsLoadingSpinnerBox>
               }
               endMessage={

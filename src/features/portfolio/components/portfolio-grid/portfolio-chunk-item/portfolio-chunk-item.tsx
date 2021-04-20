@@ -22,6 +22,7 @@ import {
 interface Props extends PortfolioPreviewItemModel {
   chunkType: string;
   activeCategory: string;
+  id: string;
 }
 
 export const PortfolioChunkItem: React.FC<Props> = ({
@@ -31,6 +32,7 @@ export const PortfolioChunkItem: React.FC<Props> = ({
   activeCategory,
   thumbnailSrc,
   title,
+  id,
 }) => {
   const imgThumbnailSource = `${SITE_URL}${PORTFOLIO_IMAGES_PATH}${category}-thumbnail/${thumbnailSrc}`;
   const chunkClassName = `${chunkType} ${activeCategory}`;
@@ -70,7 +72,11 @@ export const PortfolioChunkItem: React.FC<Props> = ({
           >
             <ItemOrientationType
               routeName={ROUTE_NAME_PROJECT}
-              routeParams={{ id: imageName, category: activeCategory }}
+              routeParams={{
+                id,
+                imageName,
+                category: activeCategory,
+              }}
               activeClassName="active"
             >
               <ItemFigure>
