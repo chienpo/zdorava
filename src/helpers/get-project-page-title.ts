@@ -8,7 +8,7 @@ export const getProjectPageTitle = (projectName: string, locale: string) => {
 
   // eslint-disable-next-line unicorn/no-reduce
   const transformedData = Object.entries(projects).reduce(
-    (accumulator: { [key: string]: PortfolioItemModel }, [, value]) => ({
+    (accumulator, [, value]) => ({
       ...accumulator,
       [value.imageName]: value,
     }),
@@ -20,7 +20,7 @@ export const getProjectPageTitle = (projectName: string, locale: string) => {
   const project = projectsMap.get(projectName);
 
   if (project) {
-    return project.title[locale];
+    return (project as PortfolioItemModel).title[locale];
   }
 
   return '404';
