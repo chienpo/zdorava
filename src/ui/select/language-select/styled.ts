@@ -44,11 +44,11 @@ export const SelectBox = styled.div`
     }
 
     &__control {
+      box-sizing: content-box;
       min-height: 28px;
       background-color: ${({ theme }) =>
         theme.mode === DARK_MODE ? WHITE_30 : BLACK};
       border-color: transparent;
-      box-sizing: content-box;
       border-radius: 16px;
       cursor: pointer;
       transition: background-color 0.2s, border-color 0.2s;
