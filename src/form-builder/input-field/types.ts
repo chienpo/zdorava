@@ -17,6 +17,12 @@ export interface InputFieldProps {
   disabled?: boolean;
 }
 
+export type FileUrlType = string | ArrayBuffer | null;
+
+export interface InputFileFieldProps extends InputFieldProps {
+  onPreviewChange: (imageUrl: FileUrlType, fileLoading: boolean) => void;
+}
+
 export interface InputFieldLocalizedProps extends InputFieldProps {
   selectedLanguage: string;
 }

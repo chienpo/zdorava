@@ -15,5 +15,5 @@ export interface PortfolioItemModel extends PortfolioPreviewItemModel {
   descriptionList?: PortfolioItemField;
   name?: string;
   projectUrl?: PortfolioItemField;
-  uniqueId?: string; // TODO: Update with MERN
+  id: string;
 }

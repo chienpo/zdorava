@@ -1,11 +1,10 @@
 import * as React from 'react';
 import { I18n, Trans } from '@lingui/react';
 import { AnimatePresence } from 'framer-motion';
-import { Router } from 'router5';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
-import { PortfolioItemModel } from '~/models/portfolio-item.model';
+import { Props } from './types';
 
 import { PORTFOLIO_IMAGES_PATH, SITE_URL } from '~/constants/site';
 import { ROUTE_NAME_PORTFOLIO } from '~/router/routes';
@@ -25,14 +24,8 @@ import {
   DescriptionList,
   EditProjectLink,
 } from './styled';
-
-interface Props {
-  data: PortfolioItemModel;
-  portfolioSelectedCategory: string;
-  isEditState: boolean;
-  router: Router;
-  isAuthenticated: boolean;
-}
+import { MoreLoader } from '~/ui/more-loader/more-loader';
+import { RED } from '~/constants/colors';
 
 const transition = {
   duration: 1,
@@ -59,6 +52,9 @@ export const ProjectView: React.FC<Props> = ({
   isEditState,
   router,
   isAuthenticated,
+  onPreviewChange,
+  previewUrl,
+  previewUrlLoading,
 }) => (
   <>
     <Header mobileByDefault />
@@ -66,14 +62,44 @@ export const ProjectView: React.FC<Props> = ({
       <AnimatedSectionStyled initial="exit" animate="enter" exit="exit">
         {data && (
           <AnimatePresence>
-            <AnimatedFigureStyled variants={imageVariants} initial="exit">
-              <LazyImage
-                alt={data.imageName}
-                src={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${data.category}/${data.imageSrc}`}
-                srcSet={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${data.category}-thumbnail/${data.thumbnailSrc}`}
-                style={{ maxWidth: '70vw' }}
-              />
-            </AnimatedFigureStyled>
+            {isEditState ? (
+              <>
+                {previewUrlLoading && (
+                  <AnimatedFigureStyled variants={imageVariants} initial="exit">
+                    <MoreLoader color={RED} />
+                  </AnimatedFigureStyled>
+                )}
+                {!previewUrlLoading && !previewUrl && (
+                  <AnimatedFigureStyled variants={imageVariants} initial="exit">
+                    <LazyImage
+                      alt={data.imageName}
+                      src={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${data.category}/${data.imageSrc}`}
+                      srcSet={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${data.category}-thumbnail/${data.thumbnailSrc}`}
+                      style={{ maxWidth: '70vw' }}
+                    />
+                  </AnimatedFigureStyled>
+                )}
+                {!previewUrlLoading && previewUrl && (
+                  <AnimatedFigureStyled variants={imageVariants} initial="exit">
+                    <LazyImage
+                      alt={data.imageName}
+                      src={previewUrl}
+                      srcSet={previewUrl}
+                      style={{ maxWidth: '70vw' }}
+                    />
+                  </AnimatedFigureStyled>
+                )}
+              </>
+            ) : (
+              <AnimatedFigureStyled variants={imageVariants} initial="exit">
+                <LazyImage
+                  alt={data.imageName}
+                  src={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${data.category}/${data.imageSrc}`}
+                  srcSet={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${data.category}-thumbnail/${data.thumbnailSrc}`}
+                  style={{ maxWidth: '70vw' }}
+                />
+              </AnimatedFigureStyled>
+            )}
           </AnimatePresence>
         )}
         <AnimatePresence>
@@ -111,7 +137,11 @@ export const ProjectView: React.FC<Props> = ({
                 <Title>
                   <Trans>Edit</Trans>
                 </Title>
-                <ProjectForm data={data} inEditState={isEditState} />
+                <ProjectForm
+                  data={data}
+                  inEditState={isEditState}
+                  onPreviewChange={onPreviewChange}
+                />
               </>
             )}
             {data && !isEditState && (

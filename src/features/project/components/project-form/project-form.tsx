@@ -2,13 +2,10 @@ import React, { FC, useState } from 'react';
 import { Form } from 'react-final-form';
 import { i18nMark, I18n, Trans } from '@lingui/react';
 import { useStore } from 'effector-react';
-import axios from 'axios';
 
 import { Props, ProjectEditFormValues } from './types';
 import { $authStore } from '~/store/auth-store';
-import { PortfolioItemModel } from '~/models/portfolio-item.model';
 import { defaultLang } from '~/store/language-store';
-import { FIREBASE_DATABASE_URL, FIREBASE_DATABASE_REF } from '~/constants/api';
 
 import {
   FIELD_CATEGORY,
@@ -19,9 +16,9 @@ import {
   FIELD_TITLE,
   FIELD_PROJECT_URL_LABEL,
   FIELD_PROJECT_URL_HREF,
-  FIELD_PROJECT_URL,
   FIELD_IMAGE_NAME,
 } from './constants';
+import { useHttpClient } from '~/hooks/use-http-client';
 import { CATEGORIES_DATA } from '~/constants/portfolio';
 import { MoreLoader } from '~/ui/more-loader/more-loader';
 import {
@@ -40,56 +37,43 @@ import {
   FieldsRow,
 } from './styled';
 
-const prepareSubmitValues = (
-  values: ProjectEditFormValues,
-  inEditState: boolean
-) => {
-  const { projectUrlLabel, projectUrlHref, projectUrl, ...restValues } = values;
-
-  const submittingValues: PortfolioItemModel = {
-    ...restValues,
-  };
-
-  if (projectUrl && projectUrlHref && projectUrlLabel && inEditState) {
-    submittingValues[FIELD_PROJECT_URL] = {
-      href: projectUrlHref,
-      label: projectUrlLabel,
-    };
-  }
-
-  return submittingValues;
-};
-
 export const ProjectForm: FC<Props> = ({
   data,
   inEditState = false,
   initialValues = {},
+  onPreviewChange,
 }) => {
+  const [formLanguage, setFormLanguage] = useState<string>(defaultLang);
   const { loading: requestLoading, token } = useStore($authStore);
+  const { sendRequest } = useHttpClient();
 
   const onSubmitProjectFormHandler = async (values: ProjectEditFormValues) => {
-    const submitValues = prepareSubmitValues(values, inEditState);
-
     try {
-      const authQuery = `?auth=${token}`;
-
       if (inEditState) {
-        await axios.put(
-          `${FIREBASE_DATABASE_URL}/${FIREBASE_DATABASE_REF}/${data?.uniqueId}.json${authQuery}`,
-          submitValues
+        await sendRequest(
+          `${process.env.REACT_APP_BACKEND_URL}/projects/${data?.id}`,
+          'PATCH',
+          JSON.stringify(values),
+          {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`,
+          }
         );
       } else {
-        await axios.post(
-          `${FIREBASE_DATABASE_URL}/${FIREBASE_DATABASE_REF}.json${authQuery}`,
-          submitValues
+        await sendRequest(
+          `${process.env.REACT_APP_BACKEND_URL}/projects`,
+          'POST',
+          JSON.stringify(values),
+          {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`,
+          }
         );
       }
     } catch (error) {
       throw new Error(error);
     }
   };
-
-  const [formLanguage, setFormLanguage] = useState<string>(defaultLang);
 
   // TODO: Use with MERN
   const showUpload = false;
@@ -153,32 +137,46 @@ export const ProjectForm: FC<Props> = ({
                 >
                   <Trans>Category</Trans>
                 </SelectField>
-                {showUpload ||
-                  (data && data[FIELD_PROJECT_URL] && (
-                    <FieldsRow>
-                      <InputField
-                        name={FIELD_PROJECT_URL_HREF}
-                        type="text"
-                        placeholder={i18n._(i18nMark('Project url src'))}
-                        validate={required}
-                        disabled={requestLoading}
-                      >
-                        <Trans>Project url src</Trans>
-                      </InputField>
-                      <InputField
-                        name={FIELD_PROJECT_URL_LABEL}
-                        type="text"
-                        placeholder={i18n._(i18nMark('Project url label'))}
-                        validate={required}
-                        disabled={requestLoading}
-                      >
-                        <Trans>Project url label</Trans>
-                      </InputField>
-                    </FieldsRow>
-                  ))}
+                <FieldsRow>
+                  <InputField
+                    name={FIELD_PROJECT_URL_HREF}
+                    type="text"
+                    placeholder={i18n._(i18nMark('Project url src'))}
+                    validate={required}
+                    disabled={requestLoading}
+                  >
+                    <Trans>Project url src</Trans>
+                  </InputField>
+                  <InputField
+                    name={FIELD_PROJECT_URL_LABEL}
+                    type="text"
+                    placeholder={i18n._(i18nMark('Project url label'))}
+                    validate={required}
+                    disabled={requestLoading}
+                  >
+                    <Trans>Project url label</Trans>
+                  </InputField>
+                </FieldsRow>
+                <InputUpload
+                  onPreviewChange={(values, loading) => {
+                    if (onPreviewChange) {
+                      onPreviewChange(values, loading);
+                    }
+                  }}
+                  name={FIELD_IMAGE_SRC}
+                  placeholder={i18n._(i18nMark('Image'))}
+                  validate={required}
+                >
+                  <Trans>Image</Trans>
+                </InputUpload>
                 {showUpload ? (
                   <FieldGroup>
                     <InputUpload
+                      onPreviewChange={(values, loading) => {
+                        if (onPreviewChange) {
+                          onPreviewChange(values, loading);
+                        }
+                      }}
                       name={FIELD_IMAGE_SRC}
                       placeholder={i18n._(i18nMark('Image'))}
                       validate={required}
@@ -186,6 +184,11 @@ export const ProjectForm: FC<Props> = ({
                       <Trans>Image</Trans>
                     </InputUpload>
                     <InputUpload
+                      onPreviewChange={(values, loading) => {
+                        if (onPreviewChange) {
+                          onPreviewChange(values, loading);
+                        }
+                      }}
                       name={FIELD_THUMBNAIL_SRC}
                       placeholder={i18n._(i18nMark('Thumbnail'))}
                       validate={required}

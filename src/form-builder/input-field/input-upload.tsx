@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 import { Field } from 'react-final-form';
-
 import { faFileUpload } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { InputFieldProps } from '~/form-builder/input-field/types';
+
+import { InputFileFieldProps } from '~/form-builder/input-field/types';
 import { FieldError } from '~/form-builder';
 
 import {
@@ -14,10 +14,11 @@ import {
   InputFile,
 } from './styled';
 
-export const InputUpload: FC<InputFieldProps> = ({
+export const InputUpload: FC<InputFileFieldProps> = ({
   validate,
   name,
   children,
+  onPreviewChange,
   ...props
 }) => (
   <Field
@@ -29,15 +30,30 @@ export const InputUpload: FC<InputFieldProps> = ({
           <LabelText>{children}</LabelText>
           <InputFile
             type="file"
+            accept=".jpg,.png"
             onChange={(event) => {
               const { target } = event;
 
-              if (target.files) {
+              if (target.files && target.files.length === 1) {
                 const reader = new FileReader();
-                reader.readAsDataURL(target.files[0]);
                 reader.addEventListener('load', () => {
+                  onPreviewChange(reader.result, false);
                   input.onChange(reader.result);
                 });
+
+                reader.addEventListener('loadstart', () => {
+                  onPreviewChange(reader.result, false);
+                });
+
+                reader.addEventListener('progress', () => {
+                  onPreviewChange(reader.result, true);
+                });
+
+                reader.addEventListener('onloadend', () => {
+                  onPreviewChange(reader.result, false);
+                });
+
+                reader.readAsDataURL(target.files[0]);
               }
             }}
             {...props}
