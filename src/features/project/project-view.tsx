@@ -7,8 +7,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
 import { PortfolioItemModel } from '~/models/portfolio-item.model';
 
-import { PORTFOLIO_IMAGES_PATH, SITE_URL } from '~/constants/site';
 import { ROUTE_NAME_PORTFOLIO } from '~/router/routes';
+import { PROJECT_PREVIEW_URL, PROJECT_THUMBNAIL_URL } from '~/constants/api';
 import { PORTFOLIO_CATEGORIES_TABS_LABELS } from '~/constants/portfolio';
 import { LazyImage } from '~/ui/lazy-image';
 import Header from '~/core/components/header';
@@ -69,8 +69,8 @@ export const ProjectView: React.FC<Props> = ({
             <AnimatedFigureStyled variants={imageVariants} initial="exit">
               <LazyImage
                 alt={data.imageName}
-                src={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${data.category}/${data.imageSrc}`}
-                srcSet={`${SITE_URL}${PORTFOLIO_IMAGES_PATH}${data.category}-thumbnail/${data.thumbnailSrc}`}
+                src={PROJECT_PREVIEW_URL(data.category, data.imageSrc)}
+                srcSet={PROJECT_THUMBNAIL_URL(data.category, data.thumbnailSrc)}
                 style={{ maxWidth: '70vw' }}
               />
             </AnimatedFigureStyled>

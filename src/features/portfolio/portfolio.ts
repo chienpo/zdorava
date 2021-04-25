@@ -14,8 +14,7 @@ import {
   PORTFOLIO_CATEGORY_TAB_NAME_ART,
   PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND,
 } from '~/constants/portfolio';
-import { FIREBASE_DATABASE_REF } from '~/constants/api';
-import { auth, firebaseInstance } from '~/features/auth';
+import { auth, firebaseRefInstance } from '~/features/auth';
 import { PageLoader } from '~/ui/page-loader/page-loader';
 import { PortfolioView } from './portfolio-view';
 
@@ -37,12 +36,10 @@ export const Portfolio: FC = () => {
   }, [categoryFromStore]);
 
   const getDataChunk = async (categoryName: string) => {
-    const databaseRef = firebaseInstance.database().ref(FIREBASE_DATABASE_REF);
-
     const queries =
       categoryName === PORTFOLIO_CATEGORY_TAB_NAME_ALL
-        ? databaseRef
-        : databaseRef.orderByChild('category').equalTo(categoryName);
+        ? firebaseRefInstance()
+        : firebaseRefInstance().orderByChild('category').equalTo(categoryName);
 
     await queries
       .limitToFirst(DATA_CHUNK_SIZE)
@@ -64,12 +61,12 @@ export const Portfolio: FC = () => {
 
   const getNextDataChunk = async () => {
     setDataLoadCount((previousState) => previousState + 1);
-    const databaseRef = firebaseInstance.database().ref(FIREBASE_DATABASE_REF);
-
     const queries =
       categoryFromStore === PORTFOLIO_CATEGORY_TAB_NAME_ALL
-        ? databaseRef
-        : databaseRef.orderByChild('category').equalTo(categoryFromStore);
+        ? firebaseRefInstance()
+        : firebaseRefInstance()
+            .orderByChild('category')
+            .equalTo(categoryFromStore);
 
     await queries
       .limitToFirst(DATA_CHUNK_SIZE * dataLoadCount)

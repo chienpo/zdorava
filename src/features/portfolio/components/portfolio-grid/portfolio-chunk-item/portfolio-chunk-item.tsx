@@ -7,8 +7,8 @@ import { AnimatePresence } from 'framer-motion';
 import { PortfolioPreviewItemModel } from '~/models/portfolio-item.model';
 
 import { ROUTE_NAME_PROJECT } from '~/router/routes';
+import { PROJECT_THUMBNAIL_URL } from '~/constants/api';
 import { PORTFOLIO_CATEGORIES_TABS_LABELS } from '~/constants/portfolio';
-import { PORTFOLIO_IMAGES_PATH, SITE_URL } from '~/constants/site';
 import {
   Item,
   ItemCategoryLabel,
@@ -32,7 +32,7 @@ export const PortfolioChunkItem: React.FC<Props> = ({
   thumbnailSrc,
   title,
 }) => {
-  const imgThumbnailSource = `${SITE_URL}${PORTFOLIO_IMAGES_PATH}${category}-thumbnail/${thumbnailSrc}`;
+  const imgThumbnailSource = PROJECT_THUMBNAIL_URL(category, thumbnailSrc);
   const chunkClassName = `${chunkType} ${activeCategory}`;
 
   return (

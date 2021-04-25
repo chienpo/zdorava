@@ -7,8 +7,7 @@ import { $portfolioTabsStore } from '~/store/portfolio-tabs-store';
 import { $authStore } from '~/store/auth-store';
 
 import { ROUTE_NAME_PORTFOLIO } from '~/router/routes';
-import { auth, firebaseInstance } from '~/features/auth';
-import { FIREBASE_DATABASE_REF } from '~/constants/api';
+import { auth, firebaseRefInstance } from '~/features/auth';
 import { ProjectView } from './project-view';
 
 export const Project = () => {
@@ -26,9 +25,7 @@ export const Project = () => {
   const isEditState = Boolean(route.name === 'project.edit');
 
   const getDataChunk = useCallback(async () => {
-    await firebaseInstance
-      .database()
-      .ref(FIREBASE_DATABASE_REF)
+    await firebaseRefInstance()
       .orderByChild('imageName')
       .equalTo(projectId)
       .once('value')

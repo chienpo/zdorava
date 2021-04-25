@@ -8,7 +8,6 @@ import { Props, ProjectEditFormValues } from './types';
 import { $authStore } from '~/store/auth-store';
 import { PortfolioItemModel } from '~/models/portfolio-item.model';
 import { defaultLang } from '~/store/language-store';
-import { FIREBASE_DATABASE_URL, FIREBASE_DATABASE_REF } from '~/constants/api';
 
 import {
   FIELD_CATEGORY,
@@ -23,6 +22,7 @@ import {
   FIELD_IMAGE_NAME,
 } from './constants';
 import { CATEGORIES_DATA } from '~/constants/portfolio';
+import { NEW_PROJECT_URL, EDIT_PROJECT_URL } from '~/constants/api';
 import { MoreLoader } from '~/ui/more-loader/more-loader';
 import {
   FieldError,
@@ -71,18 +71,16 @@ export const ProjectForm: FC<Props> = ({
     const submitValues = prepareSubmitValues(values, inEditState);
 
     try {
-      const authQuery = `?auth=${token}`;
+      const params = { auth: token };
 
-      if (inEditState) {
-        await axios.put(
-          `${FIREBASE_DATABASE_URL}/${FIREBASE_DATABASE_REF}/${data?.uniqueId}.json${authQuery}`,
-          submitValues
-        );
+      if (inEditState && data?.uniqueId) {
+        await axios.put(`${EDIT_PROJECT_URL(data.uniqueId)}`, submitValues, {
+          params,
+        });
       } else {
-        await axios.post(
-          `${FIREBASE_DATABASE_URL}/${FIREBASE_DATABASE_REF}.json${authQuery}`,
-          submitValues
-        );
+        await axios.post(`${NEW_PROJECT_URL}`, submitValues, {
+          params,
+        });
       }
     } catch (error) {
       throw new Error(error);

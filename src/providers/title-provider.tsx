@@ -7,8 +7,8 @@ import { useStore } from 'effector-react';
 import { $portfolioTabsStore } from '~/store/portfolio-tabs-store';
 import { getProjectPageTitle } from '~/helpers/get-project-page-title';
 
+import { SITE_NAME } from '~/constants/constants';
 import { PAGE_TITLES, PORTFOLIO_PAGE_TITLES } from '~/constants/page-titles';
-import { SITE_NAME } from '~/constants/site';
 import { ROUTE_NAME_PORTFOLIO } from '~/router/routes';
 
 interface Props {

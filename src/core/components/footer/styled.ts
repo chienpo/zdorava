@@ -3,19 +3,16 @@ import styled from 'styled-components';
 import overlayWhiteDot from '~/assets/images/overlay_white_four.png';
 import overlayBlackDot from '~/assets/images/overlay_black.png';
 import { DARK_MODE } from '~/constants/theme';
-import { pulseIconAnim } from '~/animations/keyframes/pulse';
 import {
-  BLACK,
-  GRAY,
-  RED,
-  WHITE,
-  WHITE_90,
-  BLACK_89,
   BLACK_40,
+  BLACK_89,
+  GRAY,
+  WHITE,
   WHITE_70,
-  RED_70,
+  WHITE_90,
 } from '~/constants/colors';
 import { AnimatedDiv } from '~/animations/animated';
+import { SocialLinks } from '~/ui/common';
 
 export const FooterCopy = styled.small`
   display: block;
@@ -45,36 +42,11 @@ export const FooterWrapper = styled(AnimatedDiv)`
       : `${WHITE_90} url(${overlayWhiteDot}) repeat scroll 0 0`};
 `;
 
-export const FooterNav = styled.address`
-  display: grid;
-  grid-column-gap: 25px;
-  grid-template-columns: auto auto auto auto;
-  justify-content: center;
+export const SocialLinksStyled = styled(SocialLinks)`
   padding: 45px 0;
-`;
 
-export const FooterSocialLink = styled.a<{ as?: string }>`
-  ${({ as }) => as === 'button' && 'width: 30px; position: relative;'};
-
-  display: flex;
-  align-items: center;
-  height: 34px;
-  color: ${({ color, theme }) =>
-    color ? `${theme.mode === DARK_MODE ? WHITE : BLACK}` : GRAY};
-  font-size: ${({ color }) => (color ? '34px' : '30px')};
-  background: none;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  filter: brightness(150%);
-  transition: color 0.4s;
-  animation: ${({ color }) => color && pulseIconAnim} 4.4s infinite;
-
-  &:focus {
-    color: ${RED_70};
-  }
-
-  &:hover {
-    color: ${RED};
+  a {
+    color: ${GRAY};
+    filter: brightness(150%);
   }
 `;

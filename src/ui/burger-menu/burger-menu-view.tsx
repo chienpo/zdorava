@@ -1,18 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 import { AnimatePresence } from 'framer-motion';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { Route, Router } from 'router5';
 
 import { DARK_MODE } from '~/constants/theme';
 import { BLACK_90, WHITE_20 } from '~/constants/colors';
-import { SOCIAL_LINKS_DATA } from '~/constants/social';
-import { Backdrop } from '~/ui/backdrop';
 import { AnimatedDiv } from '~/animations/animated';
+import { SocialLinks } from '~/ui/common';
+import { Backdrop } from '~/ui/backdrop';
 import { MenuToggleButtonView } from './menu-toggle-button-view';
 import { MenuListView } from './menu-list-view';
-import { SidebarSocial, StyledSocialLink } from './styled';
+import { SocialLinksAnimatedWrapper } from './styled';
 
 interface Props {
   isOpen: boolean;
@@ -91,7 +90,7 @@ export const BurgerMenuView: React.FC<Props> = ({
                 router={router}
               />
             </NavStyled>
-            <SidebarSocial
+            <SocialLinksAnimatedWrapper
               variants={{
                 initial: {
                   y: 50,
@@ -120,17 +119,8 @@ export const BurgerMenuView: React.FC<Props> = ({
               animate="open"
               exit="closed"
             >
-              {SOCIAL_LINKS_DATA.map(({ name, path, icon }) => (
-                <StyledSocialLink
-                  key={name}
-                  href={path}
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <FontAwesomeIcon icon={icon} />
-                </StyledSocialLink>
-              ))}
-            </SidebarSocial>
+              <SocialLinks />
+            </SocialLinksAnimatedWrapper>
           </StyledMotionMenuBackdrop>
         </>
       )}

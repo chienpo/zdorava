@@ -19,7 +19,6 @@ export const WHITE = '#ffffff';
 export const WHITE_0 = rgba(WHITE, 0);
 export const WHITE_20 = rgba(WHITE, 0.2);
 export const WHITE_30 = rgba(WHITE, 0.3);
-export const WHITE_50 = rgba(WHITE, 0.5);
 export const WHITE_70 = rgba(WHITE, 0.7);
 export const WHITE_80 = rgba(WHITE, 0.8);
 export const WHITE_85 = rgba(WHITE, 0.85);

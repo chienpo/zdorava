@@ -1,6 +1,5 @@
 import { createEffect, Effect } from 'effector';
 
-import { FIREBASE_API_KEY } from '~/constants/api';
 import {
   STORAGE_KEY_USER_ID,
   STORAGE_KEY_USER_EXPIRATION_DATE,
@@ -14,6 +13,7 @@ import {
   authSuccess,
   checkAuthTimeout,
 } from '~/store/auth-store';
+import { AUTH_URL } from '~/constants/api';
 
 interface AuthResponseData {
   displayName: string;
@@ -51,9 +51,7 @@ fetchAuthData.use(async ({ email, password }) => {
     returnSecureToken: true,
   };
 
-  const url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${FIREBASE_API_KEY}`;
-
-  const request = await fetch(url, {
+  const request = await fetch(AUTH_URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

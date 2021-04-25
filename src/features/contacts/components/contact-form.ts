@@ -1,9 +1,14 @@
-import { createElement, useState } from 'react';
+import { createElement, useState, FC } from 'react';
 import emailjs from 'emailjs-com';
 
+import {
+  EMAIL_JS_SERVICE_ID,
+  EMAIL_JS_TEMPLATE_ID,
+  EMAIL_JS_USER_ID,
+} from '~/constants/constants';
 import { useKeyPress } from '~/hooks/use-key-press';
 import { KEY_CODE_ESCAPE } from '~/constants/key-codes';
-import { SERVICE_ID, TEMPLATE_ID, USER_ID } from '~/constants/contacts';
+import { MESSAGE_SENT_TIMEOUT } from '~/constants/contacts';
 import { ContactFormView } from './contact-form-view';
 
 const initialValues = {};
@@ -12,7 +17,7 @@ interface Props {
   onEscapeClicked: () => void;
 }
 
-export const ContactForm: React.FC<Props> = ({ onEscapeClicked }) => {
+export const ContactForm: FC<Props> = ({ onEscapeClicked }) => {
   const [requestLoading, setRequestLoading] = useState<boolean>(false);
   const [messageSent, setMessageSent] = useState<boolean>(false);
 
@@ -22,13 +27,18 @@ export const ContactForm: React.FC<Props> = ({ onEscapeClicked }) => {
     setRequestLoading(true);
 
     emailjs
-      .send(SERVICE_ID, TEMPLATE_ID, values, USER_ID)
+      .send(
+        `${EMAIL_JS_SERVICE_ID}`,
+        `${EMAIL_JS_TEMPLATE_ID}`,
+        values,
+        `${EMAIL_JS_USER_ID}`
+      )
       .then(() => {
         setMessageSent(true);
         setRequestLoading(false);
       })
       .finally(() => {
-        setTimeout(() => setMessageSent(false), 2000);
+        setTimeout(() => setMessageSent(false), MESSAGE_SENT_TIMEOUT);
       })
       .catch((error) => {
         setRequestLoading(false);
