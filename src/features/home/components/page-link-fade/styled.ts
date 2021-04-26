@@ -83,11 +83,9 @@ export const PageLinkStyled = styled(Link)`
     ${({ routeName }) =>
       routeName === ROUTE_NAME_ABOUT
         ? `
-    padding-right: 55px;
     margin-top: 15vh;
   `
         : `
-    padding-left: 55px;
     margin-top: 30vh;
   `};
 

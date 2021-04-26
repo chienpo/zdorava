@@ -18,6 +18,7 @@ interface Props {
   toggleOpen: () => void;
   routes: Route[];
   router: Router;
+  showMenu: boolean;
 }
 
 const StyledMotionNavWrapper = styled(AnimatedDiv)`
@@ -72,6 +73,7 @@ export const BurgerMenuView: React.FC<Props> = ({
   toggleOpen,
   routes,
   router,
+  showMenu,
 }) => (
   <StyledMotionNavWrapper initial="closed" animate={isOpen ? 'open' : 'closed'}>
     <AnimatePresence>
@@ -126,6 +128,17 @@ export const BurgerMenuView: React.FC<Props> = ({
       )}
     </AnimatePresence>
 
-    <MenuToggleButtonView onClick={toggleOpen} />
+    <AnimatePresence>
+      <AnimatedDiv
+        initial="closed"
+        exit="closed"
+        variants={{
+          open: { opacity: showMenu ? 1 : 0 },
+          closed: { opacity: showMenu ? 1 : 0 },
+        }}
+      >
+        {showMenu && <MenuToggleButtonView onClick={toggleOpen} />}
+      </AnimatedDiv>
+    </AnimatePresence>
   </StyledMotionNavWrapper>
 );

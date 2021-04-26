@@ -8,9 +8,10 @@ import { BurgerMenuView } from './burger-menu-view';
 
 interface Props {
   routes: Route[];
+  showMenu: boolean;
 }
 
-export const BurgerMenu: FC<Props> = ({ routes }) => {
+export const BurgerMenu: FC<Props> = ({ routes, showMenu }) => {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const { router } = useRoute();
 
@@ -19,5 +20,6 @@ export const BurgerMenu: FC<Props> = ({ routes }) => {
     toggleOpen,
     routes,
     router,
+    showMenu,
   });
 };

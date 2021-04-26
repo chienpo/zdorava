@@ -37,7 +37,7 @@ export const NavigationView: React.FC<Props> = ({
   isAuthenticated,
 }) => (
   <NavigationWrapper>
-    {showMenu && isMobile && <BurgerMenu routes={routes} />}
+    {isMobile && <BurgerMenu showMenu={showMenu} routes={routes} />}
     <AnimatedNavigationBox
       style={{
         height: headerHeight,
