@@ -89,11 +89,11 @@ msgid "About"
 msgstr "O mnie"
 
 #: src/constants/page-titles.ts:12
-#: src/features/project/components/project-form/project-form.tsx:118
+#: src/features/project/components/project-form/project-form.tsx:122
 msgid "Add project"
 msgstr "Dodaj projekt"
 
-#: src/features/project-new/project-new-view.tsx:37
+#: src/features/project-new/project-new-view.tsx:35
 msgid "Add project form"
 msgstr "Dodać nowy projekt"
 
@@ -115,12 +115,12 @@ msgstr "Sztuka"
 msgid "Art projects"
 msgstr "Projekty artystyczne"
 
-#: src/features/project/project-view.tsx:46
-#: src/features/project-new/project-new-view.tsx:34
+#: src/features/project/project-view.tsx:44
+#: src/features/project-new/project-new-view.tsx:32
 msgid "Back"
 msgstr "Powrót"
 
-#: src/features/project/components/project-form/project-form.tsx:89
+#: src/features/project/components/project-form/project-form.tsx:93
 msgid "Category"
 msgstr "Kategoria"
 
@@ -136,7 +136,7 @@ msgstr "Proces tworzenia interfejsu, ściśle związany z projektowaniem, jest z
 msgid "Code quality tools"
 msgstr "Jakośc kodu"
 
-#: src/features/portfolio/portfolio-view.tsx:50
+#: src/features/portfolio/portfolio-view.tsx:47
 msgid "Coming soon ..."
 msgstr "W budowie ..."
 
@@ -144,13 +144,13 @@ msgstr "W budowie ..."
 msgid "Creating reactive applications for me is like making up some web ecosystems. But bricks here - are cutes of code, and component-structure - is the constructions. Using my arch-design and development skills, i combine this in to a real complex react web application!"
 msgstr "Tworzenie aplikacji reaktywnych jest dla mnie jak tworzenie ekosystemów internetowych. Ale cegły tutaj - to fragmenty kodu, a struktura komponentów - to konstrukcje. Korzystając z moich umiejętności projektowania i rozwoju architektury, łączę to w naprawdę złożoną aplikację internetową reagującą!"
 
-#: src/features/project/components/project-form/project-form.tsx:79
-#: src/features/project/components/project-form/project-form.tsx:80
+#: src/features/project/components/project-form/project-form.tsx:83
+#: src/features/project/components/project-form/project-form.tsx:84
 msgid "Description"
 msgstr "Opis"
 
-#: src/features/project/components/project-form/project-form.tsx:82
-#: src/features/project/components/project-form/project-form.tsx:83
+#: src/features/project/components/project-form/project-form.tsx:86
+#: src/features/project/components/project-form/project-form.tsx:87
 msgid "Description list"
 msgstr "Opis, lista"
 
@@ -158,7 +158,7 @@ msgstr "Opis, lista"
 msgid "Development environment setup"
 msgstr "Środowisku programowania"
 
-#: src/features/project/project-view.tsx:51
+#: src/features/project/project-view.tsx:49
 msgid "Edit"
 msgstr "Edytować"
 
@@ -233,18 +233,18 @@ msgstr "Główna"
 msgid "I've been working in Itransition Software Development Company as a Front-end Developer. This time allowed me to dive dipper in to front-end and understand how cool is it! Working in a team of developers I took part in making up really cool projects and features for our foreign customers."
 msgstr "Pracowałem dla Itransition Software Development jako programista front-end. Ten czas pozwolił mi zagłębić się w Front-end i zrozumieć, jakie to niesamowite! Pracując w zespole deweloperskim brałem udział w tworzeniu naprawdę ciekawych projektów i funkcji dla naszych zagranicznych klientów."
 
-#: src/features/project/components/project-form/project-form.tsx:101
-#: src/features/project/components/project-form/project-form.tsx:102
+#: src/features/project/components/project-form/project-form.tsx:105
+#: src/features/project/components/project-form/project-form.tsx:106
 msgid "Image"
 msgstr "Obrazu"
 
-#: src/features/project/components/project-form/project-form.tsx:76
-#: src/features/project/components/project-form/project-form.tsx:77
+#: src/features/project/components/project-form/project-form.tsx:80
+#: src/features/project/components/project-form/project-form.tsx:81
 msgid "Image name"
 msgstr "Nazwą obrazu"
 
-#: src/features/project/components/project-form/project-form.tsx:108
-#: src/features/project/components/project-form/project-form.tsx:109
+#: src/features/project/components/project-form/project-form.tsx:112
+#: src/features/project/components/project-form/project-form.tsx:113
 msgid "Image src"
 msgstr "src obrazu"
 
@@ -272,6 +272,10 @@ msgstr "Wiadomość została wysłana"
 msgid "Name"
 msgstr "Nazwa"
 
+#: src/features/something-went-wrong/something-went-wrong.tsx:20
+msgid "Oops ;)"
+msgstr ""
+
 #: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:47
 msgid "Over 10 years I've been studying on architecture & design specialisations. I was lucky to improve my skills in such areas like: interior and brand design, modern and concept arts, i created a lot of cool creative projects and also got and expierence of presenting them to the customers! This expierence has became absolutely helpful in front-end, web-design, and even though in my whole life!"
 msgstr "Od ponad 10 lat studiuję architekturę i projektowanie architektoniczne. Miałem szczęście doskonalić swoje umiejętności w takich obszarach jak: projektowanie wnętrz i marek, sztuka nowoczesna i koncepcyjna, stworzyłem wiele fajnych projektów kreatywnych, a także dostałem i doświadczyłem możliwości zaprezentowania ich klientom! To doświadczenie stało się absolutnie przydatne we front-end, projektowaniu stron internetowych, a nawet w moim życiu!"
@@ -293,7 +297,7 @@ msgstr "Platforms i bundlers"
 msgid "Portfolio"
 msgstr "Portfolio"
 
-#: src/features/project/components/project-form/project-form.tsx:111
+#: src/features/project/components/project-form/project-form.tsx:115
 msgid "Preview src"
 msgstr "Podgląd src"
 
@@ -301,13 +305,13 @@ msgstr "Podgląd src"
 msgid "Priorities"
 msgstr "Priorytety"
 
-#: src/features/project/components/project-form/project-form.tsx:96
-#: src/features/project/components/project-form/project-form.tsx:97
+#: src/features/project/components/project-form/project-form.tsx:100
+#: src/features/project/components/project-form/project-form.tsx:101
 msgid "Project url label"
 msgstr "Project url label"
 
-#: src/features/project/components/project-form/project-form.tsx:93
-#: src/features/project/components/project-form/project-form.tsx:94
+#: src/features/project/components/project-form/project-form.tsx:97
+#: src/features/project/components/project-form/project-form.tsx:98
 msgid "Project url src"
 msgstr "Project url src"
 
@@ -352,17 +356,17 @@ msgstr "Stepan"
 msgid "Technology stack & skills"
 msgstr "Technologie & umiejętności"
 
-#: src/features/project/components/project-form/project-form.tsx:104
-#: src/features/project/components/project-form/project-form.tsx:105
+#: src/features/project/components/project-form/project-form.tsx:108
+#: src/features/project/components/project-form/project-form.tsx:109
 msgid "Thumbnail"
 msgstr "Miniatur"
 
-#: src/features/project/components/project-form/project-form.tsx:112
+#: src/features/project/components/project-form/project-form.tsx:116
 msgid "Thumbnail src"
 msgstr "Miniatur src"
 
-#: src/features/project/components/project-form/project-form.tsx:73
-#: src/features/project/components/project-form/project-form.tsx:74
+#: src/features/project/components/project-form/project-form.tsx:77
+#: src/features/project/components/project-form/project-form.tsx:78
 msgid "Title"
 msgstr "Tytuł"
 
@@ -370,7 +374,7 @@ msgstr "Tytuł"
 msgid "To many attempts"
 msgstr "Wiele prób"
 
-#: src/features/project/project-view.tsx:43
+#: src/features/project/project-view.tsx:41
 msgid "To project"
 msgstr "Przejdź do projektu"
 
@@ -378,11 +382,11 @@ msgstr "Przejdź do projektu"
 msgid "UI/UX tools"
 msgstr "UI/UX narzędzi programistycznych"
 
-#: src/features/project/components/project-form/project-form.tsx:118
+#: src/features/project/components/project-form/project-form.tsx:122
 msgid "Update project"
 msgstr "Zaktualizować projekt"
 
-#: src/features/project/project-view.tsx:80
+#: src/features/project/project-view.tsx:78
 msgid "With a great pleasure I suggest you"
 msgstr "Z ogromną przyjemnością proponuję ci"
 
@@ -422,8 +426,8 @@ msgstr "spoken intermediate one english certyfikatu kursu"
 msgid "type-script course certificate"
 msgstr "type-script certyfikatu kursu"
 
-#: src/features/project/project-view.tsx:82
-#: src/features/project/project-view.tsx:83
+#: src/features/project/project-view.tsx:80
+#: src/features/project/project-view.tsx:81
 msgid "watch real project"
 msgstr "spojrzeć na prawdziwy projekt"
 
