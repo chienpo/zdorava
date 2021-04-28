@@ -1,7 +1,8 @@
-import { FC, createElement, useState, useEffect } from 'react';
+import { FC, createElement, useState, useEffect, useMemo } from 'react';
 import { useStore } from 'effector-react';
 
 import { PortfolioItemModel } from '~/models/portfolio-item.model';
+import { PortfolioResponseDataModel } from '~/models/portfolio.model';
 
 import {
   $portfolioTabsStore,
@@ -14,77 +15,83 @@ import {
   PORTFOLIO_CATEGORY_TAB_NAME_ART,
   PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND,
 } from '~/constants/portfolio';
-import { auth, firebaseRefInstance } from '~/features/auth';
+import { PROJECTS_URL } from '~/constants/api';
+import { useHttp } from '~/hooks';
 import { PageLoader } from '~/ui/page-loader/page-loader';
 import { PortfolioView } from './portfolio-view';
+import { transformObjectValuesIntoArrayOfValues } from '~/features/portfolio/helpers';
+import { SomethingWentWrong } from '~/features/something-went-wrong';
 
 export const Portfolio: FC = () => {
-  const categoryFromStore = useStore($portfolioTabsStore);
+  const activePortfolioTab = useStore($portfolioTabsStore);
   const { userId } = useStore($authStore);
   const isAuthenticated = Boolean(userId);
 
   const [data, setData] = useState<PortfolioItemModel[]>([]);
-  const [pageLoading, setPageLoading] = useState<boolean>(true);
   const [hasMore, setHasMore] = useState<boolean>(true);
   const [dataLoadCount, setDataLoadCount] = useState<number>(1);
-  const [activeCategory, setCategory] = useState<string>(categoryFromStore);
 
   const DATA_CHUNK_SIZE = 6;
 
-  useEffect(() => {
-    setCategory(categoryFromStore);
-  }, [categoryFromStore]);
+  const { requestLoading, requestError, sendRequest } = useHttp();
 
-  const getDataChunk = async (categoryName: string) => {
-    const queries =
-      categoryName === PORTFOLIO_CATEGORY_TAB_NAME_ALL
-        ? firebaseRefInstance()
-        : firebaseRefInstance().orderByChild('category').equalTo(categoryName);
-
-    await queries
-      .limitToFirst(DATA_CHUNK_SIZE)
-      .once('value')
-      .then((snap) => {
-        if (snap.val()) {
-          const responseData: PortfolioItemModel[] = Object.values(snap.val());
-
-          setData(responseData);
-        }
-      })
-      .catch((error) => {
-        throw error;
-      })
-      .finally(() => {
-        setDataLoadCount((previousState) => previousState + 1);
-      });
+  const sendRequestCallback = (response: PortfolioResponseDataModel) => {
+    const dataUpdated = transformObjectValuesIntoArrayOfValues(response);
+    setData(dataUpdated);
   };
 
-  const getNextDataChunk = async () => {
+  const queries = useMemo(() => {
+    const defaultQueries = activePortfolioTab !==
+      PORTFOLIO_CATEGORY_TAB_NAME_ALL && {
+      orderByChild: 'category',
+      equalTo: activePortfolioTab,
+    };
+
+    return {
+      ...defaultQueries,
+      once: 'value',
+      orderBy: 'category',
+    };
+  }, [activePortfolioTab]);
+
+  useEffect(() => {
+    sendRequest(
+      {
+        url: `${PROJECTS_URL}`,
+        method: 'GET',
+        headers: null,
+        body: null,
+        queries: {
+          ...queries,
+          limitToFirst: DATA_CHUNK_SIZE,
+        },
+      },
+      sendRequestCallback
+    ).then(() => {
+      setDataLoadCount((previousState) => previousState + 1);
+    });
+  }, [queries, sendRequest, activePortfolioTab]);
+
+  const getNextDataChunk = () => {
     setDataLoadCount((previousState) => previousState + 1);
-    const queries =
-      categoryFromStore === PORTFOLIO_CATEGORY_TAB_NAME_ALL
-        ? firebaseRefInstance()
-        : firebaseRefInstance()
-            .orderByChild('category')
-            .equalTo(categoryFromStore);
 
-    await queries
-      .limitToFirst(DATA_CHUNK_SIZE * dataLoadCount)
-      .once('value')
-      .then((snap) => {
-        const responseData: PortfolioItemModel[] = Object.values(snap.val());
-
-        setData(responseData);
-      })
-      .catch((error) => {
-        throw error;
-      });
+    sendRequest(
+      {
+        url: `${PROJECTS_URL}`,
+        method: 'GET',
+        headers: null,
+        body: null,
+        queries: {
+          ...queries,
+          limitToFirst: DATA_CHUNK_SIZE * dataLoadCount,
+        },
+      },
+      sendRequestCallback
+    ).then(() => {});
   };
 
   const onCategoryClick = (categoryName: string) => {
     setPortfolioCategory(categoryName);
-
-    setCategory(categoryName);
     setDataLoadCount(1);
     setHasMore(true);
     setData([]);
@@ -92,7 +99,7 @@ export const Portfolio: FC = () => {
 
   useEffect(() => {
     let maxItemsLength: number;
-    switch (categoryFromStore) {
+    switch (activePortfolioTab) {
       case PORTFOLIO_CATEGORY_TAB_NAME_ART:
         maxItemsLength = 15;
         break;
@@ -106,24 +113,14 @@ export const Portfolio: FC = () => {
     if (data.length >= maxItemsLength) {
       setHasMore(false);
     }
-  }, [data, categoryFromStore]);
+  }, [data, activePortfolioTab]);
 
-  useEffect(() => {
-    auth();
-  }, []);
-
-  useEffect(() => {
-    getDataChunk(categoryFromStore)
-      .then(() => {
-        setPageLoading(false);
-      })
-      .catch((error) => {
-        throw error;
-      });
-  }, [categoryFromStore]);
-
-  if (pageLoading) {
+  if (requestLoading && !hasMore) {
     return createElement(PageLoader);
+  }
+
+  if (requestError) {
+    return createElement(SomethingWentWrong, {});
   }
 
   return createElement(PortfolioView, {
@@ -131,7 +128,7 @@ export const Portfolio: FC = () => {
     onCategoryClick,
     getNextDataChunk,
     hasMore,
-    activeCategory,
+    activeCategory: activePortfolioTab,
     isAuthenticated,
   });
 };

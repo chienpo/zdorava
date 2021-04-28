@@ -22,7 +22,7 @@ import {
   FIELD_IMAGE_NAME,
 } from './constants';
 import { CATEGORIES_DATA } from '~/constants/portfolio';
-import { NEW_PROJECT_URL, EDIT_PROJECT_URL } from '~/constants/api';
+import { PROJECTS_URL, PROJECT_EDIT_URL } from '~/constants/api';
 import { MoreLoader } from '~/ui/more-loader/more-loader';
 import {
   FieldError,
@@ -74,11 +74,11 @@ export const ProjectForm: FC<Props> = ({
       const params = { auth: token };
 
       if (inEditState && data?.uniqueId) {
-        await axios.put(`${EDIT_PROJECT_URL(data.uniqueId)}`, submitValues, {
+        await axios.put(`${PROJECT_EDIT_URL(data.uniqueId)}`, submitValues, {
           params,
         });
       } else {
-        await axios.post(`${NEW_PROJECT_URL}`, submitValues, {
+        await axios.post(`${PROJECTS_URL}`, submitValues, {
           params,
         });
       }

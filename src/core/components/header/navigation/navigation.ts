@@ -4,7 +4,7 @@ import isMobile from 'ismobilejs';
 import { useStore } from 'effector-react';
 
 import { LAPTOPS } from '~/constants/media-device-min-widths';
-import { useMediaMinWidth } from '~/hooks/use-media-min-width';
+import { useMediaMinWidth } from '~/hooks';
 import { LanguageSelectProps } from '~/ui/select/language-select/types';
 import {
   ROUTE_NAME_HOME,

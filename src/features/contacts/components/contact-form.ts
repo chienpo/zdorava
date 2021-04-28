@@ -6,7 +6,7 @@ import {
   EMAIL_JS_TEMPLATE_ID,
   EMAIL_JS_USER_ID,
 } from '~/constants/constants';
-import { useKeyPress } from '~/hooks/use-key-press';
+import { useKeyPress } from '~/hooks';
 import { KEY_CODE_ESCAPE } from '~/constants/key-codes';
 import { MESSAGE_SENT_TIMEOUT } from '~/constants/contacts';
 import { ContactFormView } from './contact-form-view';
