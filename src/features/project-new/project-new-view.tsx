@@ -8,8 +8,7 @@ import { $portfolioTabsStore } from '~/store/portfolio-tabs-store';
 import { PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND } from '~/constants/portfolio';
 import { PAGE_TITLES } from '~/constants/page-titles';
 import { ROUTE_NAME_PORTFOLIO, ROUTE_NAME_PROJECTS_ADD } from '~/router/routes';
-import Header from '~/core/components/header';
-import Footer from '~/core/components/footer';
+import { Layout } from '~/core/components';
 import { ProjectForm } from '~/features/project/components/project-form';
 import { H1, H2 } from '~/ui/headings';
 import {
@@ -32,8 +31,7 @@ export const ProjectNewView = () => {
   const selectedCategory = useStore($portfolioTabsStore);
 
   return (
-    <>
-      <Header mobileByDefault />
+    <Layout headerMobileByDefault>
       <AnimatedMainStyled initial="exit" animate="enter" exit="exit">
         <AnimatePresence>
           <AnimatedSectionStyled variants={descriptionVariants} initial="exit">
@@ -58,7 +56,6 @@ export const ProjectNewView = () => {
           </AnimatedSectionStyled>
         </AnimatePresence>
       </AnimatedMainStyled>
-      <Footer />
-    </>
+    </Layout>
   );
 };

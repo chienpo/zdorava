@@ -8,8 +8,7 @@ import { Props } from './types';
 import { BLACK_100, WHITE_100 } from '~/constants/colors';
 import { ROUTE_NAME_PROJECTS_ADD } from '~/router/routes';
 import { MoreLoader } from '~/ui/more-loader/more-loader';
-import Header from '~/core/components/header';
-import Footer from '~/core/components/footer';
+import { Layout } from '~/core/components';
 import { LinkAdd } from '~/ui/link-add';
 import { AnimatedDiv } from '~/animations/animated';
 import { PortfolioGrid, PortfolioTabList } from './components';
@@ -36,68 +35,64 @@ export const PortfolioView: React.FC<Props> = ({
   }, [controls]);
 
   return (
-    <>
-      <Header />
-      <main>
-        <AnimatedSectionStyled
-          variants={{
-            enter: {
-              backgroundColor: BLACK_100,
-              transition: {
-                duration: 1,
-              },
+    <Layout>
+      <AnimatedSectionStyled
+        variants={{
+          enter: {
+            backgroundColor: BLACK_100,
+            transition: {
+              duration: 1,
             },
-            exit: {
-              backgroundColor: WHITE_100,
-              transition: { duration: 0.4 },
-            },
-          }}
-          initial="enter"
-          animate="enter"
-          exit="exit"
-        >
-          {isAuthenticated && <LinkAdd routeName={ROUTE_NAME_PROJECTS_ADD} />}
-          <PortfolioTabList
-            activeCategory={activeCategory}
-            onCategoryClick={onCategoryClick}
-          />
-          <AnimatedDiv initial="hidden" animate={controls} variants={{}}>
-            <InfiniteScroll
-              style={{ overflow: 'hidden' }}
-              dataLength={data.length}
-              next={getNextDataChunk}
-              hasMore={hasMore}
-              loader={
-                <ItemsLoadingSpinnerBox>
-                  <MoreLoader />
-                </ItemsLoadingSpinnerBox>
-              }
-              endMessage={
-                <ItemsLoadingStateDescriptionAnimated
-                  variants={{
-                    enter: {
-                      opacity: 1,
-                      transition: { duration: 0.4 },
-                    },
-                    exit: {
-                      opacity: 0,
-                      transition: { duration: 0.4 },
-                    },
-                  }}
-                  initial="exit"
-                  animate="enter"
-                  exit="exit"
-                >
-                  <Trans>Coming soon ...</Trans>
-                </ItemsLoadingStateDescriptionAnimated>
-              }
-            >
-              <PortfolioGrid data={data} activeCategory={activeCategory} />
-            </InfiniteScroll>
-          </AnimatedDiv>
-        </AnimatedSectionStyled>
-      </main>
-      <Footer />
-    </>
+          },
+          exit: {
+            backgroundColor: WHITE_100,
+            transition: { duration: 0.4 },
+          },
+        }}
+        initial="enter"
+        animate="enter"
+        exit="exit"
+      >
+        {isAuthenticated && <LinkAdd routeName={ROUTE_NAME_PROJECTS_ADD} />}
+        <PortfolioTabList
+          activeCategory={activeCategory}
+          onCategoryClick={onCategoryClick}
+        />
+        <AnimatedDiv initial="hidden" animate={controls} variants={{}}>
+          <InfiniteScroll
+            style={{ overflow: 'hidden' }}
+            dataLength={data.length}
+            next={getNextDataChunk}
+            hasMore={hasMore}
+            loader={
+              <ItemsLoadingSpinnerBox>
+                <MoreLoader />
+              </ItemsLoadingSpinnerBox>
+            }
+            endMessage={
+              <ItemsLoadingStateDescriptionAnimated
+                variants={{
+                  enter: {
+                    opacity: 1,
+                    transition: { duration: 0.4 },
+                  },
+                  exit: {
+                    opacity: 0,
+                    transition: { duration: 0.4 },
+                  },
+                }}
+                initial="exit"
+                animate="enter"
+                exit="exit"
+              >
+                <Trans>Coming soon ...</Trans>
+              </ItemsLoadingStateDescriptionAnimated>
+            }
+          >
+            <PortfolioGrid data={data} activeCategory={activeCategory} />
+          </InfiniteScroll>
+        </AnimatedDiv>
+      </AnimatedSectionStyled>
+    </Layout>
   );
 };

@@ -1,4 +1,1 @@
-import { Footer } from './footer';
-
-// eslint-disable-next-line import/no-default-export
-export default Footer;
+export { Footer } from './footer';

@@ -17,7 +17,7 @@ import { AppBox, MotionContent } from './styled';
 const AboutPage = React.lazy(() => import('~/features/about'));
 const AuthPage = React.lazy(() => import('~/features/auth'));
 const HomePage = React.lazy(() => import('~/features/home'));
-const NewProject = React.lazy(() => import('~/features/project-new'));
+const ProjectNew = React.lazy(() => import('~/features/project-new'));
 const NotFoundPage = React.lazy(() => import('~/features/not-found'));
 const PortfolioPage = React.lazy(() => import('~/features/portfolio'));
 const ProjectPage = React.lazy(() => import('~/features/project'));
@@ -102,7 +102,7 @@ export const Root = () => {
             variants={pageVariants}
           >
             <Suspense fallback={<PageLoader />}>
-              <NewProject key={topRouteName} />
+              <ProjectNew key={topRouteName} />
             </Suspense>
           </MotionContent>
         )}
