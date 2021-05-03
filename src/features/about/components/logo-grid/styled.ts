@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 
 import { BLACK_30 } from '~/constants/colors';
-import { AnimatedDiv } from '~/animations/animated';
+import { AnimatedDiv, AnimatedFigure } from '~/animations/animated';
 
 export const GridLogoWrapper = styled(AnimatedDiv)`
   display: grid;
@@ -10,7 +9,7 @@ export const GridLogoWrapper = styled(AnimatedDiv)`
   grid-template-columns: 1fr 1fr 1fr;
 `;
 
-export const StyledMotionFigure = styled(motion.figure)`
+export const StyledMotionFigure = styled(AnimatedFigure)`
   position: relative;
 
   &::after {

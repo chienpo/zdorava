@@ -1,38 +1,13 @@
-import React, { Suspense, FC, RefObject, ReactNode } from 'react';
-import { MotionProps } from 'framer-motion';
+import React, { FC } from 'react';
+import { LazyMotion, m, MotionProps } from 'framer-motion';
 
-import { lazyLibrary } from '~/utils/lazy-library';
-
-const MotionDiv = lazyLibrary(() => import('framer-motion'), 'motion.div');
-const MotionHeader = lazyLibrary(
-  () => import('framer-motion'),
-  'motion.header'
-);
-const MotionFooter = lazyLibrary(
-  () => import('framer-motion'),
-  'motion.footer'
-);
-const MotionUl = lazyLibrary(() => import('framer-motion'), 'motion.ul');
-const MotionLi = lazyLibrary(() => import('framer-motion'), 'motion.li');
-const MotionAddress = lazyLibrary(
-  () => import('framer-motion'),
-  'motion.address'
-);
-const MotionPath = lazyLibrary(() => import('framer-motion'), 'motion.path');
-const MotionSection = lazyLibrary(
-  () => import('framer-motion'),
-  'motion.section'
-);
-const MotionFigure = lazyLibrary(
-  () => import('framer-motion'),
-  'motion.figure'
-);
-const MotionMain = lazyLibrary(() => import('framer-motion'), 'motion.main');
+const loadFeatures = () =>
+  import('./features').then((response) => response.default);
 
 interface Props {
   className?: string;
   onClick?: () => void;
-  ref?: RefObject<HTMLDivElement | unknown>;
+  title?: string;
 }
 
 interface SvgPathProps extends Props, MotionProps {
@@ -41,68 +16,62 @@ interface SvgPathProps extends Props, MotionProps {
   strokeLinecap?: 'round' | 'square';
 }
 
-interface SuspenseComponentProps {
-  animCmp: FC;
-  fallbackTag: string;
-  children?: ReactNode;
-  className?: string;
-}
-
-const SuspenseComponent: React.FC<SuspenseComponentProps> = ({
-  animCmp: Comp,
-  fallbackTag,
-  ...props
-}) => {
-  const { className, children } = props;
-
-  const FbComp: React.FC<{ className?: string }> = (fbProps) =>
-    React.createElement(fallbackTag, fbProps);
-
-  return (
-    <Suspense fallback={<FbComp className={className}>{children}</FbComp>}>
-      <Comp className={className} {...props}>
-        {children}
-      </Comp>
-    </Suspense>
-  );
-};
-
 export const AnimatedMain: FC<MotionProps & Props> = (props) => (
-  <SuspenseComponent animCmp={MotionMain} fallbackTag="main" {...props} />
+  <LazyMotion features={loadFeatures}>
+    <m.main {...props} />
+  </LazyMotion>
 );
 
 export const AnimatedDiv: FC<MotionProps & Props> = (props) => (
-  <SuspenseComponent animCmp={MotionDiv} fallbackTag="div" {...props} />
+  <LazyMotion features={loadFeatures}>
+    <m.div {...props} />
+  </LazyMotion>
 );
 
 export const AnimatedHeader: FC<MotionProps & Props> = (props) => (
-  <SuspenseComponent animCmp={MotionHeader} fallbackTag="header" {...props} />
+  <LazyMotion features={loadFeatures}>
+    <m.header {...props} />
+  </LazyMotion>
 );
 
 export const AnimatedFooter: FC<MotionProps & Props> = (props) => (
-  <SuspenseComponent animCmp={MotionFooter} fallbackTag="footer" {...props} />
+  <LazyMotion features={loadFeatures}>
+    <m.footer {...props} />
+  </LazyMotion>
 );
 
 export const AnimatedUl: FC<MotionProps & Props> = (props) => (
-  <SuspenseComponent animCmp={MotionUl} fallbackTag="ul" {...props} />
+  <LazyMotion features={loadFeatures}>
+    <m.ul {...props} />
+  </LazyMotion>
 );
 
 export const AnimatedLi: FC<MotionProps & Props> = (props) => (
-  <SuspenseComponent animCmp={MotionLi} fallbackTag="li" {...props} />
+  <LazyMotion features={loadFeatures}>
+    <m.li {...props} />
+  </LazyMotion>
 );
 
 export const AnimatedAddress: FC<MotionProps & Props> = (props) => (
-  <SuspenseComponent animCmp={MotionAddress} fallbackTag="address" {...props} />
+  <LazyMotion features={loadFeatures}>
+    <m.address {...props} />
+  </LazyMotion>
 );
 
 export const AnimatedPath: FC<SvgPathProps> = (props) => (
-  <MotionPath animCmp={MotionPath} fallbackTag="path" {...props} />
+  <LazyMotion features={loadFeatures}>
+    <m.path {...props} />
+  </LazyMotion>
 );
 
 export const AnimatedSection: FC<MotionProps & Props> = (props) => (
-  <MotionSection animCmp={MotionPath} fallbackTag="section" {...props} />
+  <LazyMotion features={loadFeatures}>
+    <m.section {...props} />
+  </LazyMotion>
 );
 
 export const AnimatedFigure: FC<MotionProps & Props> = (props) => (
-  <MotionSection animCmp={MotionFigure} fallbackTag="figure" {...props} />
+  <LazyMotion features={loadFeatures}>
+    <m.figure {...props} />
+  </LazyMotion>
 );
