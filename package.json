@@ -57,7 +57,7 @@
     "enzyme-adapter-react-16": "^1.15.3",
     "enzyme-to-json": "^3.5.0",
     "final-form": "^4.19.1",
-    "framer-motion": "^4.1.11",
+    "framer-motion": "^4.1.17",
     "ismobilejs": "^1.0.3",
     "lazysizes": "^5.2.2",
     "polished": "^3.5.1",
