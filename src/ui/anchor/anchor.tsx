@@ -14,8 +14,8 @@ export const Anchor = styled.a.attrs(() => ({
   font-size: 30px;
   line-height: 36px;
   letter-spacing: 0.5px;
-  background: none;
   text-decoration: none;
+  background: none;
   border: none;
   outline: none;
   cursor: pointer;

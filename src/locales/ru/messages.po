@@ -14,76 +14,76 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: src/constants/page-titles.ts:13
-#: src/features/not-found/not-found-view.tsx:18
+#: src/features/not-found/not-found.tsx:17
 msgid "404"
 msgstr "404"
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:39
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:39
 msgid "\"Business english three course\" certificate, Itransition"
 msgstr "\"Курс английского языка для бизнес-коммуникаций\" сертификат, Itransition"
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:38
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:38
 msgid "\"Business english three english course\""
 msgstr "\"Курс аншлийского языка для бизнес-коммуникаций\""
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:56
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:56
 msgid "\"Git & GitHub - The Practical Guide\""
 msgstr "\"Git & GitHub - Практическое Руководство\""
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:57
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:57
 msgid "\"Git & GitHub - The Practical Guide\" certificate, \"ACADEMIND\""
 msgstr "\"Git & GitHub - Практическое Руководство\" серцификат, \"ACADEMIND\""
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:20
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:20
 msgid "\"JavaScript - The Complete Guide 2020 (Beginner + Advanced)\""
 msgstr "\"JavaScript - Полное Руководство 2020 (Начальный + Продвинутый уровни)\""
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:21
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:21
 msgid "\"JavaScript - The Complete Guide 2020 certificate, \"UDEMY\""
 msgstr "\"JavaScript - Полное Руководство 2020\" certificate, \"UDEMY\""
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:44
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:44
 msgid "\"JavaScript Algorithms - The Fundamentals\""
 msgstr "\"JavaScript Алгоритмы - Основы\""
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:45
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:45
 msgid "\"JavaScript Algorithms - The Fundamentals\" certificate, \"ACADEMIND\""
 msgstr "\"JavaScript Алгоритмы - Основы\" серцификат, \"ACADEMIND\""
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:50
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:50
 msgid "\"JavaScript Data Structures - The Fundamentals\""
 msgstr "\"JavaScript Структуры Данных - Основы\""
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:51
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:51
 msgid "\"JavaScript Data Structures - The Fundamentals\" certificate, \"ACADEMIND\""
 msgstr "\"JavaScript Структуры Данных - Основы\" серцификат, \"ACADEMIND\""
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:14
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:14
 msgid "\"React - The Complete Guide (incl Hooks, React Router, Redux)\""
 msgstr "\"React - Полное Руководство (включая Hooks, React Router, Redux)\""
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:15
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:15
 msgid "\"React - The Complete Guide (incl Hooks, React Router, Redux)\" certificate, \"UDEMY\""
 msgstr "\"React - Полное Руководство (incl Hooks, React Router, Redux)\" certificate, \"UDEMY\""
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:32
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:32
 msgid "\"Spoken intermediate english course\""
 msgstr "\"Курс разговоного английского\""
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:33
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:33
 msgid "\"Spoken intermediate one course\" certificate, Itransition"
 msgstr "\"Курс разговорного английского\" серцификат, Itransition"
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:26
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:26
 msgid "\"Understanding TypeScript - 2020 Edition\""
 msgstr "\"Понимание TypeScript - 2020 Издание\""
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:27
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:27
 msgid "\"Understanding TypeScript - 2020 Edition\" certificate, \"UDEMY\""
 msgstr "\"Понимание TypeScript - 2020 Издание\" серцификат, \"UDEMY\""
 
 #: src/constants/page-titles.ts:7
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:9
+#: src/features/about/components/resume-accordion/resume-accordion-data.ts:6
 #: src/features/home/components/home-page-navigation.tsx:21
 msgid "About"
 msgstr "Обо мне"
@@ -97,8 +97,7 @@ msgstr "Добавить проект"
 msgid "Add project form"
 msgstr "Новый проект"
 
-#: src/constants/portfolio.ts:6
-#: src/constants/portfolio.ts:11
+#: src/constants/portfolio.ts:15
 msgid "All"
 msgstr "Все"
 
@@ -106,16 +105,15 @@ msgstr "Все"
 msgid "All projects"
 msgstr "Все проекты"
 
-#: src/constants/portfolio.ts:8
-#: src/constants/portfolio.ts:12
+#: src/constants/portfolio.ts:16
 msgid "Art"
 msgstr "Aрт"
 
-#: src/constants/page-titles.ts:18
+#: src/constants/page-titles.ts:17
 msgid "Art projects"
 msgstr "Арт проекты"
 
-#: src/features/project/project-view.tsx:44
+#: src/features/project/project-view.tsx:46
 #: src/features/project-new/project-new-view.tsx:32
 msgid "Back"
 msgstr "Назад"
@@ -124,15 +122,15 @@ msgstr "Назад"
 msgid "Category"
 msgstr "Категория"
 
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:19
+#: src/features/about/components/resume-accordion/resume-accordion-data.ts:18
 msgid "Certificates"
 msgstr "Cертификаты"
 
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:25
+#: src/features/about/components/resume-accordion/resume-accordion-panels.tsx:25
 msgid "Closely related to design, front-end development process is always going on in creative way and i can always see the result of my job. And this is what i like so much!"
 msgstr "Тесно связанный с дизайном, процесс разработки интерфейса всегда идет творчески, и я всегда вижу результат своей работы. И это то, что мне так нравится!"
 
-#: src/features/about/components/resume-accordion-panels/skills-data.ts:64
+#: src/features/about/components/resume-accordion/skills-data.ts:64
 msgid "Code quality tools"
 msgstr "Инструменты качества кода"
 
@@ -140,7 +138,7 @@ msgstr "Инструменты качества кода"
 msgid "Coming soon ..."
 msgstr "В разработке ..."
 
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:16
+#: src/features/about/components/resume-accordion/resume-accordion-panels.tsx:16
 msgid "Creating reactive applications for me is like making up some web ecosystems. But bricks here - are cutes of code, and component-structure - is the constructions. Using my arch-design and development skills, i combine this in to a real complex react web application!"
 msgstr "Создание реактивных приложений для меня похоже на создание некоторых веб-экосистем. Но кирпичи здесь - это кусочки кода, а компонент-структура - это конструкции. Используя свои навыки в области арх-дизайна и разработки, я совмещаю это с очень сложным веб-приложением реагирования!"
 
@@ -154,11 +152,11 @@ msgstr "Описание"
 msgid "Description list"
 msgstr "Описание, список"
 
-#: src/features/about/components/resume-accordion-panels/skills-data.ts:94
+#: src/features/about/components/resume-accordion/skills-data.ts:94
 msgid "Development environment setup"
 msgstr "Рабочее окружение"
 
-#: src/features/project/project-view.tsx:49
+#: src/features/project/project-view.tsx:51
 msgid "Edit"
 msgstr "Редактировать"
 
@@ -166,7 +164,7 @@ msgstr "Редактировать"
 msgid "Edit project:"
 msgstr "Редактировать проект:"
 
-#: src/features/auth/auth-form/auth-form-view.tsx:60
+#: src/features/auth/components/auth-form/auth-form.tsx:36
 #: src/features/contacts/components/contact-form-view.tsx:14
 msgid "Email"
 msgstr "Почта"
@@ -179,7 +177,7 @@ msgstr "Почта не найдена"
 msgid "En"
 msgstr "En"
 
-#: src/features/auth/auth-form/auth-form-view.tsx:61
+#: src/features/auth/components/auth-form/auth-form.tsx:37
 #: src/features/contacts/components/contact-form-view.tsx:15
 msgid "Enter your email"
 msgstr "Почта"
@@ -192,36 +190,35 @@ msgstr "Сообщение"
 msgid "Enter your name"
 msgstr "Имя"
 
-#: src/features/auth/auth-form/auth-form-view.tsx:64
+#: src/features/auth/components/auth-form/auth-form.tsx:40
 msgid "Enter your password"
 msgstr "Пароль"
 
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:11
+#: src/features/about/components/resume-accordion/resume-accordion-data.ts:10
 msgid "Experience"
 msgstr "Опыт"
 
-#: src/constants/page-titles.ts:17
+#: src/constants/page-titles.ts:18
 msgid "Front-End projects"
 msgstr "Front-End проекты"
 
-#: src/constants/portfolio.ts:7
-#: src/constants/portfolio.ts:13
+#: src/constants/portfolio.ts:17
 msgid "Front-end"
 msgstr "Front-end"
 
-#: src/features/about/about-view.tsx:35
+#: src/features/about/about.tsx:29
 msgid "Front-end (React-JS) Developer"
 msgstr "Front-end (React-JS) Разработчик"
 
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:9
+#: src/features/about/components/resume-accordion/resume-accordion-panels.tsx:9
 msgid "Graduated as a Master of Architectural Design, took part at Hackathon-contest by MTS in 2015 when web-development by a side with the other things became my way of life."
 msgstr "Получил степень магистра архитектурного дизайна, принял участие в хакатоне-конкурсе МТС в 2015 году, когда разработка веб-сайтов наравне с другими вещами стала моим стилем жизни."
 
-#: src/features/about/components/resume-accordion-panels/skills-data.ts:34
+#: src/features/about/components/resume-accordion/skills-data.ts:34
 msgid "Hand's on experience"
 msgstr "Практический опыт"
 
-#: src/features/about/about-view.tsx:33
+#: src/features/about/about.tsx:27
 msgid "Hello, I'm Stepan"
 msgstr "Привет, меня зовут Степан"
 
@@ -229,7 +226,7 @@ msgstr "Привет, меня зовут Степан"
 msgid "Home"
 msgstr "Главная"
 
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:37
+#: src/features/about/components/resume-accordion/resume-accordion-panels.tsx:37
 msgid "I've been working in Itransition Software Development Company as a Front-end Developer. This time allowed me to dive dipper in to front-end and understand how cool is it! Working in a team of developers I took part in making up really cool projects and features for our foreign customers."
 msgstr "Я работал в компании Itransition Software Development в качестве Front-end разработчика. Это время позволило мне погрузиться в передний конец и понять, как это круто! Работая в команде разработчиков, я принимал участие в создании действительно интересных проектов и фич для наших зарубежных клиентов."
 
@@ -276,11 +273,11 @@ msgstr "Имя"
 msgid "Oops ;)"
 msgstr ""
 
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels-view.tsx:47
+#: src/features/about/components/resume-accordion/resume-accordion-panels.tsx:47
 msgid "Over 10 years I've been studying on architecture & design specialisations. I was lucky to improve my skills in such areas like: interior and brand design, modern and concept arts, i created a lot of cool creative projects and also got and expierence of presenting them to the customers! This expierence has became absolutely helpful in front-end, web-design, and even though in my whole life!"
 msgstr "Более 10 лет я обучался по специальностям архитектура и архитектурного-дизайна. Мне повезло улучшить свои навыки в таких областях, как: дизайн интерьера и бренда, современный и концепт-арт, я создал много крутых креативных проектов, а также получил и испытал возможность представить их клиентам! Этот опыт стал абсолютно полезным в front-end, веб-дизайне и даже в моей жизни!"
 
-#: src/features/auth/auth-form/auth-form-view.tsx:63
+#: src/features/auth/components/auth-form/auth-form.tsx:39
 msgid "Password"
 msgstr "Пароль"
 
@@ -288,7 +285,7 @@ msgstr "Пароль"
 msgid "Pl"
 msgstr "Pl"
 
-#: src/features/about/components/resume-accordion-panels/skills-data.ts:79
+#: src/features/about/components/resume-accordion/skills-data.ts:79
 msgid "Platforms and bundlers"
 msgstr "ВИРТУАЛЬНЫЕ МАШИНЫ & КОНТЕЙНЕРЫ"
 
@@ -301,7 +298,7 @@ msgstr "Портфолио"
 msgid "Preview src"
 msgstr "Превью src"
 
-#: src/features/about/components/resume-accordion-panels/skills-data.ts:4
+#: src/features/about/components/resume-accordion/skills-data.ts:4
 msgid "Priorities"
 msgstr "Приоритет"
 
@@ -332,15 +329,15 @@ msgstr "Ру"
 msgid "Send message"
 msgstr "Отправить сообщение"
 
-#: src/ui/burger-menu/menu-list-view.tsx:35
+#: src/ui/burger-menu/burger-menu-nav.tsx:32
 msgid "Sign Out"
 msgstr "Выйти из аккаунта"
 
 #: src/constants/page-titles.ts:9
-#: src/features/auth/auth-form/auth-form-view.tsx:55
-#: src/features/auth/auth-form/auth-form-view.tsx:68
+#: src/features/auth/auth-view.tsx:34
 #: src/features/auth/components/auth-button.tsx:18
-#: src/ui/burger-menu/menu-list-view.tsx:35
+#: src/features/auth/components/auth-form/auth-form.tsx:44
+#: src/ui/burger-menu/burger-menu-nav.tsx:32
 msgid "Sign in"
 msgstr "Войти в аккаунт"
 
@@ -352,7 +349,7 @@ msgstr "Выйти из аккаунта"
 msgid "Stepan"
 msgstr "Степан"
 
-#: src/features/about/components/resume-accordion-panels/resume-accordion-panels.ts:15
+#: src/features/about/components/resume-accordion/resume-accordion-data.ts:14
 msgid "Technology stack & skills"
 msgstr "Стек технологий"
 
@@ -370,15 +367,15 @@ msgstr "src миниатюры"
 msgid "Title"
 msgstr "Заголовок"
 
-#: src/features/auth/auth-form/auth-form-view.tsx:33
+#: src/features/auth/components/auth-form/auth-form.tsx:21
 msgid "To many attempts"
 msgstr "Совершено слишком много попыток входа в аккаунт"
 
-#: src/features/project/project-view.tsx:41
+#: src/features/project/project-view.tsx:43
 msgid "To project"
 msgstr "Перейти к проекту"
 
-#: src/features/about/components/resume-accordion-panels/skills-data.ts:119
+#: src/features/about/components/resume-accordion/skills-data.ts:119
 msgid "UI/UX tools"
 msgstr "Инструменты UI/UX"
 
@@ -386,7 +383,7 @@ msgstr "Инструменты UI/UX"
 msgid "Update project"
 msgstr "Обновить проект"
 
-#: src/features/project/project-view.tsx:78
+#: src/features/project/project-view.tsx:80
 msgid "With a great pleasure I suggest you"
 msgstr "С большим удовольствием предлагаю тебе"
 
@@ -394,40 +391,40 @@ msgstr "С большим удовольствием предлагаю тебе
 msgid "Write me"
 msgstr "Напиши мне"
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:37
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:37
 msgid "business english three english course certificate"
 msgstr "Курс английского для бизнес коммуникаций"
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:55
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:55
 msgid "git and github - the practical guide\" certificate"
 msgstr "git and github - практическое руководство\" серцификат"
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:43
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:43
 msgid "java script algorithms - the fundamentals\" certificate"
 msgstr "java script алгоритмы - основы\" серцификат"
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:49
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:49
 msgid "java script data structures - the fundamentals\" certificate"
 msgstr "java script структуры данных - Основы\" серцификат"
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:19
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:19
 msgid "java-script course certificate"
 msgstr "java-script курс серцификат"
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:13
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:13
 msgid "react course certificate"
 msgstr "react курс серцификат"
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:31
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:31
 msgid "spoken intermediate one english course certificate"
 msgstr "Курс разговорного английского"
 
-#: src/features/about/components/resume-accordion-panels/certifiates-list/certificates-data.ts:25
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:25
 msgid "type-script course certificate"
 msgstr "type-script курс серцификат"
 
-#: src/features/project/project-view.tsx:80
-#: src/features/project/project-view.tsx:81
+#: src/features/project/project-view.tsx:82
+#: src/features/project/project-view.tsx:83
 msgid "watch real project"
 msgstr "посмотреть проект"
 

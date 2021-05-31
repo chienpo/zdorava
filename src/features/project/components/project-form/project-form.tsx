@@ -4,7 +4,8 @@ import { i18nMark, I18n, Trans } from '@lingui/react';
 import { useStore } from 'effector-react';
 import axios from 'axios';
 
-import { Props, ProjectEditFormValues } from './types';
+import { ProjectFormModel } from '~/models/project-form.model';
+import { Props } from './types';
 import { $authStore } from '~/store/auth-store';
 import { PortfolioItemModel } from '~/models/portfolio-item.model';
 import { defaultLang } from '~/store/language-store';
@@ -41,7 +42,7 @@ import {
 } from './styled';
 
 const prepareSubmitValues = (
-  values: ProjectEditFormValues,
+  values: ProjectFormModel,
   inEditState: boolean
 ) => {
   const { projectUrlLabel, projectUrlHref, projectUrl, ...restValues } = values;
@@ -67,7 +68,7 @@ export const ProjectForm: FC<Props> = ({
 }) => {
   const { loading: requestLoading, token } = useStore($authStore);
 
-  const onSubmitProjectFormHandler = async (values: ProjectEditFormValues) => {
+  const onSubmitProjectFormHandler = async (values: ProjectFormModel) => {
     const submitValues = prepareSubmitValues(values, inEditState);
 
     try {

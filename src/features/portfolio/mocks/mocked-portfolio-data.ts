@@ -1,4 +1,7 @@
 import { PortfolioItemModel } from '~/models/portfolio-item.model';
+import { PortfolioResponseDataModel } from '~/models/portfolio-response-data.model';
+
+import mockedImage from '~/assets/images/selfies/2-320x320.png';
 
 const mockedProjectDataItem: PortfolioItemModel = {
   category: 'frontend',
@@ -12,9 +15,9 @@ const mockedProjectDataItem: PortfolioItemModel = {
     ru: 'descriptionList descriptionList',
     pl: 'descriptionList descriptionList',
   },
-  imageName: 'projectId',
-  imageSrc: 'test',
-  thumbnailSrc: 'test',
+  imageName: `en ${Math.random()}-title`,
+  imageSrc: mockedImage,
+  thumbnailSrc: mockedImage,
   title: {
     en: 'en title',
     ru: 'ru title',
@@ -22,6 +25,18 @@ const mockedProjectDataItem: PortfolioItemModel = {
   },
 };
 
-export const mockedPortfolioData = [...new Array(10)].map(
-  () => mockedProjectDataItem
-);
+export const mockedPortfolioData = [...new Array(24)]
+  .map(() => mockedProjectDataItem)
+  // eslint-disable-next-line unicorn/no-reduce
+  .reduce((accumulator: PortfolioResponseDataModel, previous) => {
+    accumulator[Math.random().toString()] = previous;
+    return accumulator;
+  }, {});
+
+export const mockedPortfolioResponsePromise = new Promise<
+  PortfolioResponseDataModel
+>((resolve) => {
+  setTimeout(() => {
+    resolve(mockedPortfolioData);
+  }, 200);
+});

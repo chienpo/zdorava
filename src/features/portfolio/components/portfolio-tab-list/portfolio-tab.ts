@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { ROUTE_NAME_ABOUT } from '~/router/routes';
 import { BLACK, RED, RED_70, WHITE } from '~/constants/colors';
-import { DARK_MODE } from '~/constants/theme';
+import { ThemeModes } from '~/constants/theme';
 import { pulseAnim, pulseAnimWhite } from '~/animations/keyframes/pulse';
 
 export const PortfolioTab = styled.button`
@@ -17,7 +17,7 @@ export const PortfolioTab = styled.button`
   position: relative;
   display: block;
   padding-left: 45px;
-  color: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE : BLACK)};
+  color: ${({ theme }) => (theme.mode === ThemeModes.Dark ? WHITE : BLACK)};
   font-weight: bold;
   font-size: 13px;
   text-transform: uppercase;
@@ -34,7 +34,7 @@ export const PortfolioTab = styled.button`
     width: 22px;
     height: 22px;
     border: 8px solid
-      ${({ theme }) => (theme.mode === DARK_MODE ? WHITE : BLACK)};
+      ${({ theme }) => (theme.mode === ThemeModes.Dark ? WHITE : BLACK)};
     border-radius: 50%;
     transform: translateY(-50%);
     transition: border-color 0.6s;

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import overlayWhiteDot from '~/assets/images/overlay_white_four.png';
 import overlayBlackDot from '~/assets/images/overlay_black.png';
-import { DARK_MODE } from '~/constants/theme';
+import { ThemeModes } from '~/constants/theme';
 import {
   BLACK_40,
   BLACK_89,
@@ -12,18 +12,19 @@ import {
   WHITE_90,
 } from '~/constants/colors';
 import { AnimatedDiv } from '~/animations/animated';
-import { SocialLinks } from '~/ui/common';
+import { SocialLinks } from '~/ui/social-links';
 
 export const FooterCopy = styled.small`
   display: block;
   width: 100%;
   padding: 4px 0;
-  color: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE_70 : BLACK_89)};
+  color: ${({ theme }) =>
+    theme.mode === ThemeModes.Dark ? WHITE_70 : BLACK_89};
   font-size: 11px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   background: ${({ theme }) =>
-    theme.mode === DARK_MODE
+    theme.mode === ThemeModes.Dark
       ? `${BLACK_40} url(${overlayBlackDot}) repeat scroll 0 0`
       : `${WHITE} url(${overlayWhiteDot}) repeat scroll 0 0`};
 `;
@@ -37,7 +38,7 @@ export const FooterWrapper = styled(AnimatedDiv)`
   align-items: center;
   text-align: center;
   background: ${({ theme }) =>
-    theme.mode === DARK_MODE
+    theme.mode === ThemeModes.Dark
       ? `${BLACK_89} url(${overlayBlackDot}) repeat scroll 0 0`
       : `${WHITE_90} url(${overlayWhiteDot}) repeat scroll 0 0`};
 `;

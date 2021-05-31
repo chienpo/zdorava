@@ -2,7 +2,7 @@ import { useEffect, createElement, useState } from 'react';
 import { useRouteNode, useRoute } from 'react-router5';
 import { useStore } from 'effector-react';
 
-import { PortfolioResponseDataModel } from '~/models/portfolio.model';
+import { PortfolioResponseDataModel } from '~/models/portfolio-response-data.model';
 import { PortfolioItemModel } from '~/models/portfolio-item.model';
 import { $portfolioTabsStore } from '~/store/portfolio-tabs-store';
 import { $authStore } from '~/store/auth-store';

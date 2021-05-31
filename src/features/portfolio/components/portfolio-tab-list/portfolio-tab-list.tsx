@@ -3,7 +3,7 @@ import { I18n } from '@lingui/react';
 
 import { CATEGORIES_DATA } from '~/constants/portfolio';
 import { PortfolioTab } from './portfolio-tab';
-import { MotionPortfolioTabs, PortfolioTabsBox } from './styled';
+import { MotionPortfolioTabUl, PortfolioTabsBox } from './styled';
 
 interface Props {
   onCategoryClick: (categoryName: string) => void;
@@ -33,19 +33,20 @@ export const PortfolioTabList: FC<Props> = ({
         animate="enter"
         exit="exit"
       >
-        <MotionPortfolioTabs>
+        <MotionPortfolioTabUl>
           {CATEGORIES_DATA.map(({ label, value }) => (
-            <PortfolioTab
-              key={value}
-              onClick={() => onCategoryClick(value)}
-              className={value === activeCategory ? 'active' : ''}
-              disabled={value === activeCategory}
-              title={i18n._(label)}
-            >
-              {i18n._(label)}
-            </PortfolioTab>
+            <li key={value}>
+              <PortfolioTab
+                onClick={() => onCategoryClick(value)}
+                className={value === activeCategory ? 'active' : ''}
+                disabled={value === activeCategory}
+                title={i18n._(label)}
+              >
+                {i18n._(label)}
+              </PortfolioTab>
+            </li>
           ))}
-        </MotionPortfolioTabs>
+        </MotionPortfolioTabUl>
       </PortfolioTabsBox>
     )}
   </I18n>

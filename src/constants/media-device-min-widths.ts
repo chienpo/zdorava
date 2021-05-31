@@ -1,11 +1,13 @@
-export const SMART_PHONES = 'SMART_PHONES';
-export const I_PAD = 'I_PAD';
-export const LAPTOPS = 'LAPTOPS';
-export const SCREENS = 'SCREENS';
+export enum MinWidthResolutions {
+  MOBILE = 'MOBILE',
+  SM = 'SM',
+  LG = 'LG',
+  Screens = 'Screens'
+}
 
 export const MIN_WIDTH_RESOLUTIONS: { [key: string]: number } = {
-  [SMART_PHONES]: 321,
-  [I_PAD]: 768,
-  [LAPTOPS]: 1224,
-  [SCREENS]: 1824,
+  [MinWidthResolutions.MOBILE]: 321,
+  [MinWidthResolutions.SM]: 768,
+  [MinWidthResolutions.LG]: 1224,
+  [MinWidthResolutions.Screens]: 1824,
 };

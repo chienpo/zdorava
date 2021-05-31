@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import overlayBlackDot from '~/assets/images/overlay_black.png';
 import overlayWhiteDot from '~/assets/images/overlay_white_four.png';
-import { DARK_MODE } from '~/constants/theme';
+import { ThemeModes } from '~/constants/theme';
 import {
   BLACK_0,
   BLACK_100,
@@ -21,7 +21,7 @@ export const PortfolioTabsBox = styled(AnimatedDiv)`
   height: 103px;
 `;
 
-export const MotionPortfolioTabs = styled.div`
+export const MotionPortfolioTabUl = styled.ul`
   @media screen and (min-width: 400px) {
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -32,9 +32,11 @@ export const MotionPortfolioTabs = styled.div`
   position: relative;
   top: 0;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   height: 100%;
   padding: 0 15px;
+  list-style: none;
 
   &::after {
     position: absolute;
@@ -42,7 +44,8 @@ export const MotionPortfolioTabs = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background: ${({ theme }) => (theme.mode === DARK_MODE ? BLACK_89 : WHITE)};
+    background: ${({ theme }) =>
+      theme.mode === ThemeModes.Dark ? BLACK_89 : WHITE};
     content: '';
   }
 
@@ -54,7 +57,7 @@ export const MotionPortfolioTabs = styled.div`
     height: 100%;
     content: '';
     ${({ theme }) =>
-      theme.mode === DARK_MODE
+      theme.mode === ThemeModes.Dark
         ? `
   -webkit-mask-image: -webkit-gradient(
     linear,

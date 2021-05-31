@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 import { BLACK_30 } from '~/constants/colors';
-import { AnimatedDiv, AnimatedFigure } from '~/animations/animated';
+import { AnimatedFigure } from '~/animations/animated';
 
-export const GridLogoWrapper = styled(AnimatedDiv)`
+export const GridLogoWrapper = styled.div`
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;

@@ -71,7 +71,7 @@
       ]
     ]
   },
-  "Front-End projects": {
+  "Art projects": {
     "origin": [
       [
         "src/constants/page-titles.ts",
@@ -79,7 +79,7 @@
       ]
     ]
   },
-  "Art projects": {
+  "Front-End projects": {
     "origin": [
       [
         "src/constants/page-titles.ts",

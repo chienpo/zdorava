@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { DARK_MODE } from '~/constants/theme';
+import { ThemeModes } from '~/constants/theme';
 import { BLACK, RED, RED_70, WHITE, WHITE_30 } from '~/constants/colors';
 
 export const SelectBox = styled.div`
@@ -20,7 +20,7 @@ export const SelectBox = styled.div`
     }
 
     &__single-value {
-      color: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE : WHITE)};
+      color: ${({ theme }) => (theme.mode === ThemeModes.Dark ? WHITE : WHITE)};
       font-size: 20px;
       transition: color 0.2s;
     }
@@ -46,14 +46,15 @@ export const SelectBox = styled.div`
     &__control {
       min-height: 28px;
       background-color: ${({ theme }) =>
-        theme.mode === DARK_MODE ? WHITE_30 : BLACK};
+        theme.mode === ThemeModes.Dark ? WHITE_30 : BLACK};
       border-color: transparent;
       border-radius: 16px;
       cursor: pointer;
       transition: background-color 0.2s, border-color 0.2s;
 
       &--is-focused {
-        color: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE : BLACK)};
+        color: ${({ theme }) =>
+          theme.mode === ThemeModes.Dark ? WHITE : BLACK};
         background-color: ${RED_70};
         border: 1px solid ${RED};
         box-shadow: none;

@@ -25,6 +25,7 @@ import {
   DescriptionList,
   EditProjectLink,
 } from './styled';
+import { NoData } from '~/features/project/no-data';
 
 interface Props {
   data: PortfolioItemModel;
@@ -40,17 +41,17 @@ const transition = {
 };
 
 const imageVariants = {
-  exit: { y: '50%', opacity: 0, transition },
   enter: {
     y: '0%',
     opacity: 1,
     transition,
   },
+  exit: { y: '50%', opacity: 0, transition },
 };
 
 const descriptionVariants = {
-  exit: { x: 100, opacity: 0, transition },
   enter: { x: 0, opacity: 1, transition: { delay: 1, ...transition } },
+  exit: { x: 100, opacity: 0, transition },
 };
 
 export const ProjectView: React.FC<Props> = ({
@@ -62,9 +63,10 @@ export const ProjectView: React.FC<Props> = ({
 }) => (
   <Layout showFooter={false} headerMobileByDefault>
     <AnimatedSectionStyled initial="exit" animate="enter" exit="exit">
+      {!data && <NoData />}
       {data && (
         <AnimatePresence>
-          <AnimatedFigureStyled variants={imageVariants} initial="exit">
+          <AnimatedFigureStyled variants={imageVariants}>
             <LazyImage
               alt={data.imageName}
               src={PROJECT_PREVIEW_URL(data.category, data.imageSrc)}
@@ -75,10 +77,7 @@ export const ProjectView: React.FC<Props> = ({
         </AnimatePresence>
       )}
       <AnimatePresence>
-        <AnimatedDescriptionStyled
-          variants={descriptionVariants}
-          initial="exit"
-        >
+        <AnimatedDescriptionStyled variants={descriptionVariants}>
           {data && (
             <>
               {isEditState ? (

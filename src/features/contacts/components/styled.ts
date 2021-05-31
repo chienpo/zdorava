@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { pulseIconAnim } from '~/animations/keyframes/pulse';
 import { BLACK, RED, WHITE } from '~/constants/colors';
-import { DARK_MODE } from '~/constants/theme';
+import { ThemeModes } from '~/constants/theme';
 import { Button } from '~/ui/button/button';
 import { Anchor } from '~/ui/anchor';
 
@@ -20,7 +20,7 @@ export const StyledButton = styled(Button)`
 `;
 
 export const ContactFormTriggerStyled = styled(Anchor)`
-  color: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE : BLACK)};
+  color: ${({ theme }) => (theme.mode === ThemeModes.Dark ? WHITE : BLACK)};
   animation: ${pulseIconAnim} 4.4s infinite;
 `;
 

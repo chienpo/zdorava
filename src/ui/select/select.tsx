@@ -3,7 +3,7 @@ import ReactSelect, { Props } from 'react-select';
 import { useStore } from 'effector-react';
 
 import { $themeStore } from '~/store/theme-store';
-import { DARK_MODE } from '~/constants/theme';
+import { ThemeModes } from '~/constants/theme';
 import { BLACK, RED, RED_70 } from '~/constants/colors';
 import { SelectBox } from './styled';
 
@@ -11,7 +11,7 @@ export const Select: FC<Props> = (selectProps) => {
   const themeMode = useStore($themeStore);
 
   const themeColors =
-    themeMode === DARK_MODE
+    themeMode === ThemeModes.Dark
       ? {
           primary: RED,
           primary25: RED_70,

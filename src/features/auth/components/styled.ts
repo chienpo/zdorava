@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router5';
 
 import { BLACK_80, RED, RED_70, WHITE_80 } from '~/constants/colors';
-import { DARK_MODE } from '~/constants/theme';
+import { ThemeModes } from '~/constants/theme';
 
 export const LogoStyled = styled.figure`
   display: inline-flex;
@@ -17,7 +17,8 @@ export const ButtonStyled = styled(Link)`
   display: flex;
   align-items: center;
   margin: 0 20px;
-  color: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE_80 : BLACK_80)};
+  color: ${({ theme }) =>
+    theme.mode === ThemeModes.Dark ? WHITE_80 : BLACK_80};
   font-size: 20px;
   text-transform: uppercase;
   background: transparent;

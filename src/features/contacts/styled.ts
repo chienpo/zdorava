@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { LIGHT_MODE } from '~/constants/theme';
+import { ThemeModes } from '~/constants/theme';
 import { BLACK, WHITE } from '~/constants/colors';
 import { H2 } from '~/ui/headings';
 import { AnimatedDiv } from '~/animations/animated';
@@ -23,7 +23,7 @@ export const SectionControls = styled.div`
 export const FormSection = styled.section`
   position: relative;
   width: 100vw;
-  box-shadow: 0 -48px 35px 45px ${({ theme }) => theme.mode === LIGHT_MODE && BLACK};
+  box-shadow: 0 -48px 35px 45px ${({ theme }) => theme.mode === ThemeModes.Light && BLACK};
 `;
 
 export const FormBox = styled.div`

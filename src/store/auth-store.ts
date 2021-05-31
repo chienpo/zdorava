@@ -33,9 +33,11 @@ export interface AuthState {
   authRedirectPath: string;
 }
 
+export const INITIAL_USER_ID = localStorage.getItem(STORAGE_KEY_USER_ID) || '';
+
 const initialState = {
   token: '',
-  userId: localStorage.getItem(STORAGE_KEY_USER_ID) || '',
+  userId: INITIAL_USER_ID,
   error: '',
   loading: false,
   authRedirectPath: '/',

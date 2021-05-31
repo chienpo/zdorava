@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { DARK_MODE } from '~/constants/theme';
+import { ThemeModes } from '~/constants/theme';
 import { BLACK, RED, RED_70, WHITE, WHITE_90 } from '~/constants/colors';
 
 export const Label = styled.label`
@@ -28,7 +28,7 @@ export const SwitchBox = styled.div`
       width: 2px;
       height: 100%;
       background: ${({ theme }) =>
-        theme.mode === DARK_MODE ? WHITE_90 : BLACK};
+        theme.mode === ThemeModes.Dark ? WHITE_90 : BLACK};
       content: '';
     }
   }
@@ -37,7 +37,7 @@ export const SwitchBox = styled.div`
 export const LangText = styled.span`
   display: block;
   width: 65px;
-  color: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE : BLACK)};
+  color: ${({ theme }) => (theme.mode === ThemeModes.Dark ? WHITE : BLACK)};
   line-height: 20px;
   transition: color 0.2s, font-size 0.2s;
 

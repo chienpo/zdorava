@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-import { DARK_MODE } from '~/constants/theme';
+import { ThemeModes } from '~/constants/theme';
 import { BLACK_80, RED, WHITE_80 } from '~/constants/colors';
 import { noiseAnim, noiseAnimTwo } from '~/animations/keyframes/noise';
 
@@ -36,7 +36,8 @@ export const StyledH1 = styled.h1`
 
   display: inline;
   margin-bottom: 20px;
-  color: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE_80 : BLACK_80)};
+  color: ${({ theme }) =>
+    theme.mode === ThemeModes.Dark ? WHITE_80 : BLACK_80};
   font-weight: 400;
   font-size: 22px;
   line-height: 28px;
@@ -78,7 +79,7 @@ export const WebsiteSubtitle = styled.div`
     right: 0;
     overflow: hidden;
     color: ${({ theme }) =>
-      theme.mode === DARK_MODE ? 'rgba(200, 200, 200, 0.7)' : BLACK_80};
+      theme.mode === ThemeModes.Dark ? 'rgba(200, 200, 200, 0.7)' : BLACK_80};
     text-transform: uppercase;
     background: transparent;
     content: 'zdorava';

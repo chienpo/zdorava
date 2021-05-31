@@ -2,12 +2,12 @@ import React from 'react';
 
 import { getModernSourceSet } from '~/helpers/get-modern-source-set';
 import { LazyImage } from '~/ui/lazy-image';
-import { LOGOS_DATA } from './logos-data';
+import { LOGO_GRID_DATA } from './logo-grid-data';
 import { GridLogoWrapper, StyledMotionFigure } from './styled';
 
 export const LogoGrid = () => (
-  <GridLogoWrapper animate="enter" exit="exit">
-    {LOGOS_DATA.map(({ left, top, alt, srcSet }) => (
+  <GridLogoWrapper>
+    {LOGO_GRID_DATA.map(({ left, top, alt, srcSet }) => (
       <StyledMotionFigure
         title={alt}
         key={alt}

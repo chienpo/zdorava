@@ -1,7 +1,7 @@
 import { useCallback, useState } from 'react';
 
 import { generateQueryString } from '~/helpers';
-import { PortfolioResponseDataModel } from '~/models/portfolio.model';
+import { PortfolioResponseDataModel } from '~/models/portfolio-response-data.model';
 
 export const useHttp = () => {
   const [requestLoading, setRequestLoading] = useState<boolean>(false);
