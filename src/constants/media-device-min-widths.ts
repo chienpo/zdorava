@@ -2,7 +2,7 @@ export enum MinWidthResolutions {
   MOBILE = 'MOBILE',
   SM = 'SM',
   LG = 'LG',
-  Screens = 'Screens'
+  Screens = 'Screens',
 }
 
 export const MIN_WIDTH_RESOLUTIONS: { [key: string]: number } = {

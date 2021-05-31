@@ -3,7 +3,7 @@ import { i18nMark } from '@lingui/react';
 export enum PortfolioCategories {
   All = 'all',
   Art = 'art',
-  FrontEnd = 'frontend'
+  FrontEnd = 'frontend',
 }
 
 export enum ChunkType {
@@ -18,8 +18,9 @@ export const PORTFOLIO_CATEGORIES_TABS_LABELS: { [key: string]: string } = {
   [PortfolioCategories.FrontEnd]: i18nMark('Front-end'),
 };
 
-export const CATEGORIES_DATA = Object.entries(PortfolioCategories)
-  .map(([, value]) => ({
+export const CATEGORIES_DATA = Object.entries(PortfolioCategories).map(
+  ([, value]) => ({
     value,
-    label: PORTFOLIO_CATEGORIES_TABS_LABELS[value]
-  }))
+    label: PORTFOLIO_CATEGORIES_TABS_LABELS[value],
+  })
+);
