@@ -47,6 +47,16 @@ export const AnimatedDescriptionStyled = styled(AnimatedDiv)`
   box-shadow: ${WHITE_80} 0 0 130px 160px;
 `;
 
+export const AnimatedDescriptionContentStyled = styled(AnimatedDiv)`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 100%;
+  margin-left: auto;
+  text-align: right;
+`;
+
 export const Title = styled.span`
   @media screen and (min-width: 767px) {
     font-size: 55px;
@@ -134,6 +144,11 @@ export const StyledRealProjectLink = styled.a`
 
 export const DescriptionList = styled.ul`
   display: inline-block;
-  width: 70%;
   list-style: none;
+
+  li::before {
+    content: '●';
+    color: ${BLACK};
+    padding-right: 5px;
+  }
 `;

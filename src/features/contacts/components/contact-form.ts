@@ -10,12 +10,8 @@ import { useKeyPress } from '~/hooks';
 import { KEY_CODE_ESCAPE } from '~/constants/key-codes';
 import { MESSAGE_SENT_TIMEOUT } from '~/constants/contacts';
 import { ContactFormView } from './contact-form-view';
-
-const initialValues = {};
-
-interface Props {
-  onEscapeClicked: () => void;
-}
+import { ContactFormModel } from '~/models/contact-form.model';
+import { Props } from './types';
 
 export const ContactForm: FC<Props> = ({ onEscapeClicked }) => {
   const [requestLoading, setRequestLoading] = useState<boolean>(false);
@@ -23,7 +19,7 @@ export const ContactForm: FC<Props> = ({ onEscapeClicked }) => {
 
   useKeyPress(KEY_CODE_ESCAPE, onEscapeClicked);
 
-  const onSubmit = (values: { [key: string]: string }) => {
+  const onSubmit = (values: ContactFormModel) => {
     setRequestLoading(true);
 
     emailjs
@@ -48,7 +44,6 @@ export const ContactForm: FC<Props> = ({ onEscapeClicked }) => {
 
   return createElement(ContactFormView, {
     onSubmit,
-    initialValues,
     requestLoading,
     messageSent,
   });

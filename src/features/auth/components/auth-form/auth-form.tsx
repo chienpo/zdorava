@@ -6,9 +6,8 @@ import { useStore } from 'effector-react';
 import { fetchAuthData } from '~/store/auth-fetch';
 import { $authStore } from '~/store/auth-store';
 
-import { AuthFormModel } from '~/models/auth-form.model';
+import { AuthFormFields, AuthFormModel } from '~/models/auth-form.model';
 import { Error, AuthError } from './types';
-import { FIELD_EMAIL, FIELD_PASSWORD } from './constants';
 import {
   EMAIL_NOT_FOUND,
   TOO_MANY_ATTEMPTS_TRY_LATER,
@@ -17,8 +16,6 @@ import { MoreLoader } from '~/ui/more-loader/more-loader';
 import { InputField, FieldError } from '~/form-builder';
 import { required } from '~/form-builder/validators';
 import { StyledButton } from './styled';
-
-const initialValues = {};
 
 export const AuthForm: FC = () => {
   const { loading: requestLoading } = useStore($authStore);
@@ -50,11 +47,10 @@ export const AuthForm: FC = () => {
       {({ i18n }) => (
         <Form
           onSubmit={onSubmit}
-          initialValues={initialValues}
           render={({ handleSubmit, submitError }) => (
             <form onSubmit={handleSubmit}>
               <InputField
-                name={FIELD_EMAIL}
+                name={AuthFormFields.Email}
                 type="email"
                 placeholder={i18n._(i18nMark('Email'))}
                 validate={required}
@@ -63,7 +59,7 @@ export const AuthForm: FC = () => {
                 <Trans>Enter your email</Trans>
               </InputField>
               <InputField
-                name={FIELD_PASSWORD}
+                name={AuthFormFields.Password}
                 type="password"
                 placeholder={i18n._(i18nMark('Password'))}
                 validate={required}

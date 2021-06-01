@@ -12,6 +12,7 @@ import { ProjectView } from './project-view';
 import { PROJECTS_URL } from '~/constants/api';
 import { transformObjectValuesIntoArrayOfValues } from '~/features/portfolio/helpers';
 import { SomethingWentWrong } from '~/features/something-went-wrong';
+import { mockedPortfolioData } from '~/features/portfolio/mocks';
 
 export const Project = () => {
   const [data, setData] = useState<PortfolioItemModel[]>([]);
@@ -31,7 +32,13 @@ export const Project = () => {
 
   const sendRequestCallback = (response: PortfolioResponseDataModel) => {
     const dataUpdated = transformObjectValuesIntoArrayOfValues(response);
-    setData(dataUpdated);
+    const mockedData = transformObjectValuesIntoArrayOfValues(
+      mockedPortfolioData
+    );
+
+    const responseData =
+      process.env.ENVIRONMENT === 'DEV' ? mockedData : dataUpdated;
+    setData(responseData);
   };
 
   useEffect(() => {

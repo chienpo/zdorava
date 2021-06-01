@@ -1,4 +1,9 @@
+export enum AuthFormFields {
+  Email = 'email',
+  Password = 'password',
+}
+
 export interface AuthFormModel {
-  email: string;
-  password: string;
+  [AuthFormFields.Email]: string;
+  [AuthFormFields.Password]: string;
 }

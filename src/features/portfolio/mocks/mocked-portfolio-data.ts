@@ -6,14 +6,14 @@ import mockedImage from '~/assets/images/selfies/2-320x320.png';
 const mockedProjectDataItem: PortfolioItemModel = {
   category: 'frontend',
   description: {
-    en: 'en description',
-    ru: 'ru description',
+    en: 'description',
+    ru: 'описание',
     pl: 'pl description',
   },
   descriptionList: {
-    en: 'descriptionList descriptionList',
-    ru: 'descriptionList descriptionList',
-    pl: 'descriptionList descriptionList',
+    en: 'descriptionList.descriptionList',
+    ru: 'описание.описание',
+    pl: '',
   },
   imageName: `en ${Math.random()}-title`,
   imageSrc: mockedImage,

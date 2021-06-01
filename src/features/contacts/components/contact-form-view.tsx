@@ -2,22 +2,15 @@ import React, { FC } from 'react';
 import { Form } from 'react-final-form';
 import { i18nMark, I18n, Trans } from '@lingui/react';
 
-import { FIELD_NAME, FIELD_EMAIL, FIELD_MESSAGE } from '~/constants/contacts';
+import { ContactFormFields } from '~/models/contact-form.model';
+import { ContactFormViewProps } from './types';
 import { MoreLoader } from '~/ui/more-loader/more-loader';
 import { InputField } from '~/form-builder';
 import { required } from '~/form-builder/validators';
 import { StyledButton, SuccessMessage } from './styled';
 
-interface Props {
-  initialValues: { [key: string]: string };
-  onSubmit: (values: { [key: string]: string }) => void;
-  requestLoading: boolean;
-  messageSent: boolean;
-}
-
-export const ContactFormView: FC<Props> = ({
+export const ContactFormView: FC<ContactFormViewProps> = ({
   onSubmit,
-  initialValues,
   requestLoading,
   messageSent,
 }) => (
@@ -25,11 +18,10 @@ export const ContactFormView: FC<Props> = ({
     {({ i18n }) => (
       <Form
         onSubmit={onSubmit}
-        initialValues={initialValues}
         render={({ handleSubmit }) => (
           <form onSubmit={handleSubmit}>
             <InputField
-              name={FIELD_NAME}
+              name={ContactFormFields.Name}
               type="text"
               placeholder={i18n._(i18nMark('Name'))}
               validate={required}
@@ -38,7 +30,7 @@ export const ContactFormView: FC<Props> = ({
               <Trans>Enter your name</Trans>
             </InputField>
             <InputField
-              name={FIELD_EMAIL}
+              name={ContactFormFields.Email}
               type="email"
               placeholder={i18n._(i18nMark('Email'))}
               validate={required}
@@ -47,7 +39,7 @@ export const ContactFormView: FC<Props> = ({
               <Trans>Enter your email</Trans>
             </InputField>
             <InputField
-              name={FIELD_MESSAGE}
+              name={ContactFormFields.Message}
               type="textarea"
               placeholder={i18n._(i18nMark('Message'))}
               validate={required}
