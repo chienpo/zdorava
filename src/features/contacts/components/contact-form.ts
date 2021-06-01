@@ -1,11 +1,6 @@
 import { createElement, useState, FC } from 'react';
 import emailjs from 'emailjs-com';
 
-import {
-  EMAIL_JS_SERVICE_ID,
-  EMAIL_JS_TEMPLATE_ID,
-  EMAIL_JS_USER_ID,
-} from '~/constants/constants';
 import { useKeyPress } from '~/hooks';
 import { KEY_CODE_ESCAPE } from '~/constants/key-codes';
 import { MESSAGE_SENT_TIMEOUT } from '~/constants/contacts';
@@ -24,10 +19,10 @@ export const ContactForm: FC<Props> = ({ onEscapeClicked }) => {
 
     emailjs
       .send(
-        `${EMAIL_JS_SERVICE_ID}`,
-        `${EMAIL_JS_TEMPLATE_ID}`,
+        `${process.env.EMAIL_JS_SERVICE_ID}`,
+        `${process.env.EMAIL_JS_TEMPLATE_ID}`,
         values,
-        `${EMAIL_JS_USER_ID}`
+        `${process.env.EMAIL_JS_USER_ID}`
       )
       .then(() => {
         setMessageSent(true);

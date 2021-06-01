@@ -3,7 +3,6 @@ import { AnimatePresence } from 'framer-motion';
 import { useStore } from 'effector-react';
 
 import { SITE_PUBLICATION_YEAR } from '~/constants/site';
-import { SITE_NAME } from '~/constants/constants';
 import { AnimatedFooter } from '~/animations/animated/animated';
 import { FooterWrapper, SocialLinksStyled, FooterCopy } from './styled';
 import { $languageStore } from '~/store/language-store';
@@ -14,6 +13,7 @@ const Contacts = lazy(() => import('~/features/contacts'));
 export const Footer: FC = () => {
   const [contactFormOpened, toggleContactForm] = useState<boolean>(false);
   const language = useStore($languageStore);
+  const copy = `© ${process.env.SITE_NAME} ${SITE_PUBLICATION_YEAR}`;
 
   return (
     <AnimatedFooter animate="enter" exit="exit">
@@ -40,10 +40,7 @@ export const Footer: FC = () => {
             {/* TODO: Hide contactForm feature */}
             {/* <ContactFormTrigger toggleContactForm={toggleContactForm} /> */}
           </SocialLinksStyled>
-          <FooterCopy>
-            © ${SITE_NAME} &nbsp;
-            {SITE_PUBLICATION_YEAR}
-          </FooterCopy>
+          <FooterCopy>{copy}</FooterCopy>
         </FooterWrapper>
       </AnimatePresence>
     </AnimatedFooter>
