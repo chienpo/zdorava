@@ -1,5 +1,5 @@
-import { PortfolioItemModel } from '~/models/portfolio-item.model';
 import { Router } from 'router5';
+import { PortfolioItemModel } from '~/models/portfolio-item.model';
 
 export interface Props {
   data: PortfolioItemModel;

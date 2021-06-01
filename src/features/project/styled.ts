@@ -147,8 +147,8 @@ export const DescriptionList = styled.ul`
   list-style: none;
 
   li::before {
-    content: '●';
-    color: ${BLACK};
     padding-right: 5px;
+    color: ${BLACK};
+    content: '●';
   }
 `;
