@@ -113,7 +113,7 @@ msgstr "Sztuka"
 msgid "Art projects"
 msgstr "Projekty artystyczne"
 
-#: src/features/project/project-view.tsx:46
+#: src/features/project/project-view.tsx:71
 #: src/features/project-new/project-new-view.tsx:32
 msgid "Back"
 msgstr "Powrót"
@@ -156,7 +156,7 @@ msgstr "Opis, lista"
 msgid "Development environment setup"
 msgstr "Środowisku programowania"
 
-#: src/features/project/project-view.tsx:51
+#: src/features/project/project-view.tsx:61
 msgid "Edit"
 msgstr "Edytować"
 
@@ -164,7 +164,7 @@ msgstr "Edytować"
 msgid "Edit project:"
 msgstr "Edytuj projekt"
 
-#: src/features/auth/components/auth-form/auth-form.tsx:36
+#: src/features/auth/components/auth-form/auth-form.tsx:35
 #: src/features/contacts/components/contact-form-view.tsx:14
 msgid "Email"
 msgstr "Email"
@@ -177,7 +177,7 @@ msgstr "Nie znaleziono adresu e-mail"
 msgid "En"
 msgstr "En"
 
-#: src/features/auth/components/auth-form/auth-form.tsx:37
+#: src/features/auth/components/auth-form/auth-form.tsx:36
 #: src/features/contacts/components/contact-form-view.tsx:15
 msgid "Enter your email"
 msgstr "Wpisz swój adres e-mail"
@@ -190,7 +190,7 @@ msgstr "Wpisz swoją wiadomość"
 msgid "Enter your name"
 msgstr "Wpisz swoje imię"
 
-#: src/features/auth/components/auth-form/auth-form.tsx:40
+#: src/features/auth/components/auth-form/auth-form.tsx:39
 msgid "Enter your password"
 msgstr "Wpisz swoje hasło"
 
@@ -277,7 +277,7 @@ msgstr ""
 msgid "Over 10 years I've been studying on architecture & design specialisations. I was lucky to improve my skills in such areas like: interior and brand design, modern and concept arts, i created a lot of cool creative projects and also got and expierence of presenting them to the customers! This expierence has became absolutely helpful in front-end, web-design, and even though in my whole life!"
 msgstr "Od ponad 10 lat studiuję architekturę i projektowanie architektoniczne. Miałem szczęście doskonalić swoje umiejętności w takich obszarach jak: projektowanie wnętrz i marek, sztuka nowoczesna i koncepcyjna, stworzyłem wiele fajnych projektów kreatywnych, a także dostałem i doświadczyłem możliwości zaprezentowania ich klientom! To doświadczenie stało się absolutnie przydatne we front-end, projektowaniu stron internetowych, a nawet w moim życiu!"
 
-#: src/features/auth/components/auth-form/auth-form.tsx:39
+#: src/features/auth/components/auth-form/auth-form.tsx:38
 msgid "Password"
 msgstr "Hasło"
 
@@ -336,7 +336,7 @@ msgstr "Wylogować się"
 #: src/constants/page-titles.ts:9
 #: src/features/auth/auth-view.tsx:34
 #: src/features/auth/components/auth-button.tsx:18
-#: src/features/auth/components/auth-form/auth-form.tsx:44
+#: src/features/auth/components/auth-form/auth-form.tsx:43
 #: src/ui/burger-menu/burger-menu-nav.tsx:32
 msgid "Sign in"
 msgstr "Zaloguj się"
@@ -367,11 +367,11 @@ msgstr "Miniatur src"
 msgid "Title"
 msgstr "Tytuł"
 
-#: src/features/auth/components/auth-form/auth-form.tsx:21
+#: src/features/auth/components/auth-form/auth-form.tsx:20
 msgid "To many attempts"
 msgstr "Wiele prób"
 
-#: src/features/project/project-view.tsx:43
+#: src/features/project/project-view.tsx:58
 msgid "To project"
 msgstr "Przejdź do projektu"
 
@@ -383,7 +383,7 @@ msgstr "UI/UX narzędzi programistycznych"
 msgid "Update project"
 msgstr "Zaktualizować projekt"
 
-#: src/features/project/project-view.tsx:80
+#: src/features/project/project-view.tsx:92
 msgid "With a great pleasure I suggest you"
 msgstr "Z ogromną przyjemnością proponuję ci"
 
@@ -423,8 +423,8 @@ msgstr "spoken intermediate one english certyfikatu kursu"
 msgid "type-script course certificate"
 msgstr "type-script certyfikatu kursu"
 
-#: src/features/project/project-view.tsx:82
-#: src/features/project/project-view.tsx:83
+#: src/features/project/project-view.tsx:94
+#: src/features/project/project-view.tsx:95
 msgid "watch real project"
 msgstr "spojrzeć na prawdziwy projekt"
 

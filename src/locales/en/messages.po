@@ -113,7 +113,7 @@ msgstr "Art"
 msgid "Art projects"
 msgstr "Art projects"
 
-#: src/features/project/project-view.tsx:46
+#: src/features/project/project-view.tsx:71
 #: src/features/project-new/project-new-view.tsx:32
 msgid "Back"
 msgstr "Back"
@@ -156,7 +156,7 @@ msgstr "Description list"
 msgid "Development environment setup"
 msgstr "Development environment setup"
 
-#: src/features/project/project-view.tsx:51
+#: src/features/project/project-view.tsx:61
 msgid "Edit"
 msgstr "Edit"
 
@@ -164,7 +164,7 @@ msgstr "Edit"
 msgid "Edit project:"
 msgstr "Edit project:"
 
-#: src/features/auth/components/auth-form/auth-form.tsx:36
+#: src/features/auth/components/auth-form/auth-form.tsx:35
 #: src/features/contacts/components/contact-form-view.tsx:14
 msgid "Email"
 msgstr "Email"
@@ -177,7 +177,7 @@ msgstr "Email not found"
 msgid "En"
 msgstr "En"
 
-#: src/features/auth/components/auth-form/auth-form.tsx:37
+#: src/features/auth/components/auth-form/auth-form.tsx:36
 #: src/features/contacts/components/contact-form-view.tsx:15
 msgid "Enter your email"
 msgstr "Enter your email"
@@ -190,7 +190,7 @@ msgstr "Enter your message"
 msgid "Enter your name"
 msgstr "Enter your name"
 
-#: src/features/auth/components/auth-form/auth-form.tsx:40
+#: src/features/auth/components/auth-form/auth-form.tsx:39
 msgid "Enter your password"
 msgstr "Enter your password"
 
@@ -277,7 +277,7 @@ msgstr "Oops ;)"
 msgid "Over 10 years I've been studying on architecture & design specialisations. I was lucky to improve my skills in such areas like: interior and brand design, modern and concept arts, i created a lot of cool creative projects and also got and expierence of presenting them to the customers! This expierence has became absolutely helpful in front-end, web-design, and even though in my whole life!"
 msgstr "Over 10 years I've been studying on architecture & design specialisations. I was lucky to improve my skills in such areas like: interior and brand design, modern and concept arts, i created a lot of cool creative projects and also got and expierence of presenting them to the customers! This expierence has became absolutely helpful in front-end, web-design, and even though in my whole life!"
 
-#: src/features/auth/components/auth-form/auth-form.tsx:39
+#: src/features/auth/components/auth-form/auth-form.tsx:38
 msgid "Password"
 msgstr "Password"
 
@@ -336,7 +336,7 @@ msgstr "Sign Out"
 #: src/constants/page-titles.ts:9
 #: src/features/auth/auth-view.tsx:34
 #: src/features/auth/components/auth-button.tsx:18
-#: src/features/auth/components/auth-form/auth-form.tsx:44
+#: src/features/auth/components/auth-form/auth-form.tsx:43
 #: src/ui/burger-menu/burger-menu-nav.tsx:32
 msgid "Sign in"
 msgstr "Sign in"
@@ -367,11 +367,11 @@ msgstr "Thumbnail src"
 msgid "Title"
 msgstr "Title"
 
-#: src/features/auth/components/auth-form/auth-form.tsx:21
+#: src/features/auth/components/auth-form/auth-form.tsx:20
 msgid "To many attempts"
 msgstr "To many attempts"
 
-#: src/features/project/project-view.tsx:43
+#: src/features/project/project-view.tsx:58
 msgid "To project"
 msgstr "To project"
 
@@ -383,7 +383,7 @@ msgstr "UI/UX tools"
 msgid "Update project"
 msgstr "Update project"
 
-#: src/features/project/project-view.tsx:80
+#: src/features/project/project-view.tsx:92
 msgid "With a great pleasure I suggest you"
 msgstr "With a great pleasure I suggest you"
 
@@ -423,8 +423,8 @@ msgstr "spoken intermediate one english course certificate"
 msgid "type-script course certificate"
 msgstr "type-script course certificate"
 
-#: src/features/project/project-view.tsx:82
-#: src/features/project/project-view.tsx:83
+#: src/features/project/project-view.tsx:94
+#: src/features/project/project-view.tsx:95
 msgid "watch real project"
 msgstr "watch real project"
 

@@ -1,35 +1,90 @@
 {
   "404": {
-    "origin": [["src/constants/page-titles.ts", 13]]
+    "origin": [
+      [
+        "src/constants/page-titles.ts",
+        13
+      ]
+    ]
   },
   "Home": {
-    "origin": [["src/constants/page-titles.ts", 6]]
+    "origin": [
+      [
+        "src/constants/page-titles.ts",
+        6
+      ]
+    ]
   },
   "About": {
-    "origin": [["src/constants/page-titles.ts", 7]]
+    "origin": [
+      [
+        "src/constants/page-titles.ts",
+        7
+      ]
+    ]
   },
   "Portfolio": {
-    "origin": [["src/constants/page-titles.ts", 8]]
+    "origin": [
+      [
+        "src/constants/page-titles.ts",
+        8
+      ]
+    ]
   },
   "Sign in": {
-    "origin": [["src/constants/page-titles.ts", 9]]
+    "origin": [
+      [
+        "src/constants/page-titles.ts",
+        9
+      ]
+    ]
   },
   "Project:": {
-    "origin": [["src/constants/page-titles.ts", 10]]
+    "origin": [
+      [
+        "src/constants/page-titles.ts",
+        10
+      ]
+    ]
   },
   "Edit project:": {
-    "origin": [["src/constants/page-titles.ts", 11]]
+    "origin": [
+      [
+        "src/constants/page-titles.ts",
+        11
+      ]
+    ]
   },
   "Add project": {
-    "origin": [["src/constants/page-titles.ts", 12]]
+    "origin": [
+      [
+        "src/constants/page-titles.ts",
+        12
+      ]
+    ]
   },
   "All projects": {
-    "origin": [["src/constants/page-titles.ts", 16]]
+    "origin": [
+      [
+        "src/constants/page-titles.ts",
+        16
+      ]
+    ]
   },
   "Art projects": {
-    "origin": [["src/constants/page-titles.ts", 17]]
+    "origin": [
+      [
+        "src/constants/page-titles.ts",
+        17
+      ]
+    ]
   },
   "Front-End projects": {
-    "origin": [["src/constants/page-titles.ts", 18]]
+    "origin": [
+      [
+        "src/constants/page-titles.ts",
+        18
+      ]
+    ]
   }
 }
