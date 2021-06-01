@@ -1,11 +1,10 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 
 import overlayWhiteDot from '~/assets/images/overlay_white.png';
 import homepageBg from '~/assets/images/backgrounds/homepage-background-tinyfied.jpg';
 import { BLACK, WHITE_90 } from '~/constants/colors';
 
-export const SectionNotFound = styled(motion.section)`
+export const SectionNotFound = styled.section`
   position: fixed;
   top: 0;
   left: 0;

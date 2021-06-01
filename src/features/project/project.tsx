@@ -2,7 +2,7 @@ import { useEffect, createElement, useState } from 'react';
 import { useRouteNode, useRoute } from 'react-router5';
 import { useStore } from 'effector-react';
 
-import { PortfolioResponseDataModel } from '~/models/portfolio.model';
+import { PortfolioResponseDataModel } from '~/models/portfolio-response-data.model';
 import { PortfolioItemModel } from '~/models/portfolio-item.model';
 import { $portfolioTabsStore } from '~/store/portfolio-tabs-store';
 import { $authStore } from '~/store/auth-store';
@@ -12,6 +12,7 @@ import { ProjectView } from './project-view';
 import { PROJECTS_URL } from '~/constants/api';
 import { transformObjectValuesIntoArrayOfValues } from '~/features/portfolio/helpers';
 import { SomethingWentWrong } from '~/features/something-went-wrong';
+import { mockedPortfolioData } from '~/features/portfolio/mocks';
 
 export const Project = () => {
   const [data, setData] = useState<PortfolioItemModel[]>([]);
@@ -31,7 +32,13 @@ export const Project = () => {
 
   const sendRequestCallback = (response: PortfolioResponseDataModel) => {
     const dataUpdated = transformObjectValuesIntoArrayOfValues(response);
-    setData(dataUpdated);
+    const mockedData = transformObjectValuesIntoArrayOfValues(
+      mockedPortfolioData
+    );
+
+    const responseData =
+      process.env.ENVIRONMENT === 'DEV' ? mockedData : dataUpdated;
+    setData(responseData);
   };
 
   useEffect(() => {

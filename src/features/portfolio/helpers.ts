@@ -1,5 +1,5 @@
-import { PortfolioResponseDataModel } from '~/models/portfolio.model';
+import { PortfolioResponseDataModel } from '~/models/portfolio-response-data.model';
 
 export const transformObjectValuesIntoArrayOfValues = (
-  resp: PortfolioResponseDataModel
-) => Object.values(resp);
+  response: PortfolioResponseDataModel
+) => Object.values(response);

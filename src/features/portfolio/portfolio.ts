@@ -2,7 +2,7 @@ import { FC, createElement, useState, useEffect, useMemo } from 'react';
 import { useStore } from 'effector-react';
 
 import { PortfolioItemModel } from '~/models/portfolio-item.model';
-import { PortfolioResponseDataModel } from '~/models/portfolio.model';
+import { PortfolioResponseDataModel } from '~/models/portfolio-response-data.model';
 
 import {
   $portfolioTabsStore,
@@ -10,11 +10,7 @@ import {
 } from '~/store/portfolio-tabs-store';
 import { $authStore } from '~/store/auth-store';
 
-import {
-  PORTFOLIO_CATEGORY_TAB_NAME_ALL,
-  PORTFOLIO_CATEGORY_TAB_NAME_ART,
-  PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND,
-} from '~/constants/portfolio';
+import { PortfolioCategories } from '~/constants/portfolio';
 import { PROJECTS_URL } from '~/constants/api';
 import { useHttp } from '~/hooks';
 import { PageLoader } from '~/ui/page-loader/page-loader';
@@ -22,10 +18,11 @@ import { PortfolioView } from './portfolio-view';
 import { transformObjectValuesIntoArrayOfValues } from '~/features/portfolio/helpers';
 import { SomethingWentWrong } from '~/features/something-went-wrong';
 
+import { mockedPortfolioResponsePromise } from '~/features/portfolio/mocks';
+
 export const Portfolio: FC = () => {
   const activePortfolioTab = useStore($portfolioTabsStore);
-  const { userId } = useStore($authStore);
-  const isAuthenticated = Boolean(userId);
+  const { userId: isAuthenticated } = useStore($authStore);
 
   const [data, setData] = useState<PortfolioItemModel[]>([]);
   const [hasMore, setHasMore] = useState<boolean>(true);
@@ -41,8 +38,7 @@ export const Portfolio: FC = () => {
   };
 
   const queries = useMemo(() => {
-    const defaultQueries = activePortfolioTab !==
-      PORTFOLIO_CATEGORY_TAB_NAME_ALL && {
+    const defaultQueries = activePortfolioTab !== PortfolioCategories.All && {
       orderByChild: 'category',
       equalTo: activePortfolioTab,
     };
@@ -55,39 +51,64 @@ export const Portfolio: FC = () => {
   }, [activePortfolioTab]);
 
   useEffect(() => {
-    sendRequest(
-      {
-        url: `${PROJECTS_URL}`,
-        method: 'GET',
-        headers: null,
-        body: null,
-        queries: {
-          ...queries,
-          limitToFirst: DATA_CHUNK_SIZE,
+    if (process.env.ENVIRONMENT === 'DEV') {
+      Promise.resolve(mockedPortfolioResponsePromise)
+        .then((response) => {
+          const dataUpdated = transformObjectValuesIntoArrayOfValues(response);
+          setData(dataUpdated.slice(0, DATA_CHUNK_SIZE));
+        })
+        .finally(() => {
+          setDataLoadCount((previousState) => previousState + 1);
+        });
+    } else {
+      sendRequest(
+        {
+          url: `${PROJECTS_URL}`,
+          method: 'GET',
+          headers: null,
+          body: null,
+          queries: {
+            ...queries,
+            limitToFirst: DATA_CHUNK_SIZE,
+          },
         },
-      },
-      sendRequestCallback
-    ).then(() => {
-      setDataLoadCount((previousState) => previousState + 1);
-    });
+        sendRequestCallback
+      ).then(() => {
+        setDataLoadCount((previousState) => previousState + 1);
+      });
+    }
   }, [queries, sendRequest, activePortfolioTab]);
 
   const getNextDataChunk = () => {
     setDataLoadCount((previousState) => previousState + 1);
 
-    sendRequest(
-      {
-        url: `${PROJECTS_URL}`,
-        method: 'GET',
-        headers: null,
-        body: null,
-        queries: {
-          ...queries,
-          limitToFirst: DATA_CHUNK_SIZE * dataLoadCount,
+    if (process.env.ENVIRONMENT === 'DEV') {
+      Promise.resolve(mockedPortfolioResponsePromise)
+        .then((response) => {
+          const dataUpdated = transformObjectValuesIntoArrayOfValues(
+            response
+          ).splice(
+            DATA_CHUNK_SIZE * (dataLoadCount - 1),
+            DATA_CHUNK_SIZE * (dataLoadCount - 1) + 6
+          );
+          setData(dataUpdated);
+        })
+        .then(() => {});
+    } else {
+      sendRequest(
+        {
+          url: `${PROJECTS_URL}`,
+          method: 'GET',
+          headers: null,
+          body: null,
+          queries: {
+            ...queries,
+            limitToFirst: DATA_CHUNK_SIZE * dataLoadCount,
+          },
         },
-      },
-      sendRequestCallback
-    ).then(() => {});
+        sendRequestCallback
+      ).then(() => {});
+    }
   };
 
   const onCategoryClick = (categoryName: string) => {
@@ -98,12 +119,13 @@ export const Portfolio: FC = () => {
   };
 
   useEffect(() => {
-    let maxItemsLength: number;
+    let maxItemsLength;
+
     switch (activePortfolioTab) {
-      case PORTFOLIO_CATEGORY_TAB_NAME_ART:
+      case PortfolioCategories.Art:
         maxItemsLength = 15;
         break;
-      case PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND:
+      case PortfolioCategories.FrontEnd:
         maxItemsLength = 7;
         break;
       default:
@@ -129,6 +151,6 @@ export const Portfolio: FC = () => {
     getNextDataChunk,
     hasMore,
     activeCategory: activePortfolioTab,
-    isAuthenticated,
+    isAuthenticated: Boolean(isAuthenticated),
   });
 };

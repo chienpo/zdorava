@@ -5,6 +5,8 @@ import { themes } from '@storybook/theming';
 import { addDecorator } from '@storybook/react';
 import { ThemeProvider } from 'styled-components';
 
+import { ThemeModes } from '~/constants/theme';
+
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   docs: {
@@ -16,7 +18,7 @@ export const parameters = {
 type DecoratorFunction = Parameters<typeof addDecorator>[0];
 
 const withThemeProvider: DecoratorFunction = (Story, context) => (
-  <ThemeProvider theme={{ mode: 'LIGHT_MODE' }}>
+  <ThemeProvider theme={{ mode: ThemeModes.Light }}>
     <Story {...context} />
   </ThemeProvider>
 );

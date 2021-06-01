@@ -9,7 +9,7 @@ import { Overlay, SectionNotFound } from '~/features/not-found/styled';
 
 export const SomethingWentWrong: FC = () => (
   <Layout>
-    <SectionNotFound animate="enter" exit="exit">
+    <SectionNotFound>
       <AnimatePresence>
         <Overlay>
           <AnimatedDiv

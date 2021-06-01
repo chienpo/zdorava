@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 import overlayWhiteDot from '~/assets/images/overlay_white.png';
 import overlayBlackDot from '~/assets/images/overlay_black.png';
-import { DARK_MODE } from '~/constants/theme';
+import { ThemeModes } from '~/constants/theme';
 import { BLACK, BLACK_90, WHITE, WHITE_80 } from '~/constants/colors';
 
 const write1 = keyframes`
@@ -47,7 +47,7 @@ export const LoaderBox = styled(motion.div)`
   }
 
   ${({ theme }) =>
-    theme.mode === DARK_MODE
+    theme.mode === ThemeModes.Dark
       ? `
     background: ${BLACK_90} url(${overlayBlackDot}) repeat scroll 0 0;
     path {

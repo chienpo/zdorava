@@ -1,21 +1,26 @@
 import { i18nMark } from '@lingui/react';
 
-export const PORTFOLIO_CATEGORY_TAB_NAME_ALL = 'all';
-export const PORTFOLIO_CATEGORY_TAB_NAME_ART = 'art';
-export const PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND = 'frontend';
+export enum PortfolioCategories {
+  All = 'all',
+  Art = 'art',
+  FrontEnd = 'frontend',
+}
 
-export const CATEGORIES_DATA: { [key: string]: string }[] = [
-  { value: PORTFOLIO_CATEGORY_TAB_NAME_ALL, label: i18nMark('All') },
-  { value: PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND, label: i18nMark('Front-end') },
-  { value: PORTFOLIO_CATEGORY_TAB_NAME_ART, label: i18nMark('Art') },
-];
+export enum ChunkType {
+  One = 'CHUNK_TYPE_ONE',
+  Two = 'CHUNK_TYPE_TWO',
+  Three = 'CHUNK_TYPE_THREE',
+}
 
 export const PORTFOLIO_CATEGORIES_TABS_LABELS: { [key: string]: string } = {
-  [PORTFOLIO_CATEGORY_TAB_NAME_ALL]: i18nMark('All'),
-  [PORTFOLIO_CATEGORY_TAB_NAME_ART]: i18nMark('Art'),
-  [PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND]: i18nMark('Front-end'),
+  [PortfolioCategories.All]: i18nMark('All'),
+  [PortfolioCategories.Art]: i18nMark('Art'),
+  [PortfolioCategories.FrontEnd]: i18nMark('Front-end'),
 };
 
-export const CHUNK_TYPE_ONE = 'CHUNK_TYPE_ONE';
-export const CHUNK_TYPE_TWO = 'CHUNK_TYPE_TWO';
-export const CHUNK_TYPE_THREE = 'CHUNK_TYPE_THREE';
+export const CATEGORIES_DATA = Object.entries(PortfolioCategories).map(
+  ([, value]) => ({
+    value,
+    label: PORTFOLIO_CATEGORIES_TABS_LABELS[value],
+  })
+);

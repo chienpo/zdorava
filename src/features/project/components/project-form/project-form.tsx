@@ -4,23 +4,15 @@ import { i18nMark, I18n, Trans } from '@lingui/react';
 import { useStore } from 'effector-react';
 import axios from 'axios';
 
-import { Props, ProjectEditFormValues } from './types';
+import {
+  ProjectFormModel,
+  ProjectFormFields,
+} from '~/models/project-form.model';
+import { Props } from './types';
 import { $authStore } from '~/store/auth-store';
 import { PortfolioItemModel } from '~/models/portfolio-item.model';
 import { defaultLang } from '~/store/language-store';
 
-import {
-  FIELD_CATEGORY,
-  FIELD_DESCRIPTION,
-  FIELD_DESCRIPTION_LIST,
-  FIELD_IMAGE_SRC,
-  FIELD_THUMBNAIL_SRC,
-  FIELD_TITLE,
-  FIELD_PROJECT_URL_LABEL,
-  FIELD_PROJECT_URL_HREF,
-  FIELD_PROJECT_URL,
-  FIELD_IMAGE_NAME,
-} from './constants';
 import { CATEGORIES_DATA } from '~/constants/portfolio';
 import { PROJECTS_URL, PROJECT_EDIT_URL } from '~/constants/api';
 import { MoreLoader } from '~/ui/more-loader/more-loader';
@@ -41,7 +33,7 @@ import {
 } from './styled';
 
 const prepareSubmitValues = (
-  values: ProjectEditFormValues,
+  values: ProjectFormModel,
   inEditState: boolean
 ) => {
   const { projectUrlLabel, projectUrlHref, projectUrl, ...restValues } = values;
@@ -51,7 +43,7 @@ const prepareSubmitValues = (
   };
 
   if (projectUrl && projectUrlHref && projectUrlLabel && inEditState) {
-    submittingValues[FIELD_PROJECT_URL] = {
+    submittingValues[ProjectFormFields.ProjectUrl] = {
       href: projectUrlHref,
       label: projectUrlLabel,
     };
@@ -67,7 +59,7 @@ export const ProjectForm: FC<Props> = ({
 }) => {
   const { loading: requestLoading, token } = useStore($authStore);
 
-  const onSubmitProjectFormHandler = async (values: ProjectEditFormValues) => {
+  const onSubmitProjectFormHandler = async (values: ProjectFormModel) => {
     const submitValues = prepareSubmitValues(values, inEditState);
 
     try {
@@ -108,7 +100,7 @@ export const ProjectForm: FC<Props> = ({
             render={({ handleSubmit, submitError }) => (
               <form onSubmit={handleSubmit}>
                 <InputField
-                  name={`${FIELD_TITLE}.${formLanguage}`}
+                  name={`${ProjectFormFields.Title}.${formLanguage}`}
                   type="text"
                   placeholder={i18n._(i18nMark('Title'))}
                   validate={required}
@@ -117,7 +109,7 @@ export const ProjectForm: FC<Props> = ({
                   <Trans>Title</Trans>
                 </InputField>
                 <InputField
-                  name={FIELD_IMAGE_NAME}
+                  name={ProjectFormFields.ImageName}
                   type="text"
                   placeholder={i18n._(i18nMark('Image name'))}
                   validate={required}
@@ -126,7 +118,7 @@ export const ProjectForm: FC<Props> = ({
                   <Trans>Image name</Trans>
                 </InputField>
                 <InputField
-                  name={`${FIELD_DESCRIPTION}.${formLanguage}`}
+                  name={`${ProjectFormFields.Description}.${formLanguage}`}
                   type="textarea"
                   placeholder={i18n._(i18nMark('Description'))}
                   validate={required}
@@ -135,7 +127,7 @@ export const ProjectForm: FC<Props> = ({
                   <Trans>Description</Trans>
                 </InputField>
                 <InputField
-                  name={`${FIELD_DESCRIPTION_LIST}.${formLanguage}`}
+                  name={`${ProjectFormFields.DescriptionList}.${formLanguage}`}
                   type="textarea"
                   placeholder={i18n._(i18nMark('Description list'))}
                   disabled={requestLoading}
@@ -143,7 +135,7 @@ export const ProjectForm: FC<Props> = ({
                   <Trans>Description list</Trans>
                 </InputField>
                 <SelectField
-                  name={FIELD_CATEGORY}
+                  name={ProjectFormFields.Category}
                   options={CATEGORIES_DATA.map(({ label, value }) => ({
                     value,
                     label: i18n._(label),
@@ -152,10 +144,10 @@ export const ProjectForm: FC<Props> = ({
                   <Trans>Category</Trans>
                 </SelectField>
                 {showUpload ||
-                  (data && data[FIELD_PROJECT_URL] && (
+                  (data && data[ProjectFormFields.ProjectUrl] && (
                     <FieldsRow>
                       <InputField
-                        name={FIELD_PROJECT_URL_HREF}
+                        name={ProjectFormFields.ProjectUrlHref}
                         type="text"
                         placeholder={i18n._(i18nMark('Project url src'))}
                         validate={required}
@@ -164,7 +156,7 @@ export const ProjectForm: FC<Props> = ({
                         <Trans>Project url src</Trans>
                       </InputField>
                       <InputField
-                        name={FIELD_PROJECT_URL_LABEL}
+                        name={ProjectFormFields.ProjectUrlLabel}
                         type="text"
                         placeholder={i18n._(i18nMark('Project url label'))}
                         validate={required}
@@ -177,14 +169,14 @@ export const ProjectForm: FC<Props> = ({
                 {showUpload ? (
                   <FieldGroup>
                     <InputUpload
-                      name={FIELD_IMAGE_SRC}
+                      name={ProjectFormFields.ImageSource}
                       placeholder={i18n._(i18nMark('Image'))}
                       validate={required}
                     >
                       <Trans>Image</Trans>
                     </InputUpload>
                     <InputUpload
-                      name={FIELD_THUMBNAIL_SRC}
+                      name={ProjectFormFields.ThumbnailSource}
                       placeholder={i18n._(i18nMark('Thumbnail'))}
                       validate={required}
                     >
@@ -194,7 +186,7 @@ export const ProjectForm: FC<Props> = ({
                 ) : (
                   <FieldGroup>
                     <InputField
-                      name={FIELD_IMAGE_SRC}
+                      name={ProjectFormFields.ImageSource}
                       type="text"
                       placeholder={i18n._(i18nMark('Image src'))}
                       validate={required}
@@ -203,7 +195,7 @@ export const ProjectForm: FC<Props> = ({
                       <Trans>Image src</Trans>
                     </InputField>
                     <InputField
-                      name={FIELD_THUMBNAIL_SRC}
+                      name={ProjectFormFields.ThumbnailSource}
                       type="text"
                       placeholder={i18n._(i18nMark('Preview src'))}
                       validate={required}

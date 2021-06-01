@@ -1,7 +1,7 @@
 import { css, keyframes } from 'styled-components';
 
 import { BLACK_20, WHITE_20 } from '~/constants/colors';
-import { DARK_MODE } from '~/constants/theme';
+import { ThemeModes } from '~/constants/theme';
 
 const linkOverlayMirrorEffect = keyframes`
   0% {
@@ -28,7 +28,7 @@ export const mirrorEffect = css`
     width: 120%;
     height: 100%;
     background: ${({ theme }) =>
-      theme.mode === DARK_MODE ? WHITE_20 : BLACK_20};
+      theme.mode === ThemeModes.Dark ? WHITE_20 : BLACK_20};
     opacity: 0;
     transition: transform 2s, visibility 2s, opacity 2s;
     animation: ${linkOverlayMirrorEffect} 0.8s;

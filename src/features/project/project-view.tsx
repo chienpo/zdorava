@@ -1,12 +1,10 @@
 import * as React from 'react';
 import { I18n, Trans } from '@lingui/react';
 import { AnimatePresence } from 'framer-motion';
-import { Router } from 'router5';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
-import { PortfolioItemModel } from '~/models/portfolio-item.model';
 
+import { Props } from './types';
 import { ROUTE_NAME_PORTFOLIO } from '~/router/routes';
 import { PROJECT_PREVIEW_URL, PROJECT_THUMBNAIL_URL } from '~/constants/api';
 import { PORTFOLIO_CATEGORIES_TABS_LABELS } from '~/constants/portfolio';
@@ -24,15 +22,9 @@ import {
   Title,
   DescriptionList,
   EditProjectLink,
+  AnimatedDescriptionContentStyled,
 } from './styled';
-
-interface Props {
-  data: PortfolioItemModel;
-  portfolioSelectedCategory: string;
-  isEditState: boolean;
-  router: Router;
-  isAuthenticated: boolean;
-}
+import { NoData } from '~/features/project/no-data';
 
 const transition = {
   duration: 1,
@@ -40,17 +32,17 @@ const transition = {
 };
 
 const imageVariants = {
-  exit: { y: '50%', opacity: 0, transition },
   enter: {
     y: '0%',
     opacity: 1,
     transition,
   },
+  exit: { y: '50%', opacity: 0, transition },
 };
 
 const descriptionVariants = {
-  exit: { x: 100, opacity: 0, transition },
   enter: { x: 0, opacity: 1, transition: { delay: 1, ...transition } },
+  exit: { x: 100, opacity: 0, transition },
 };
 
 export const ProjectView: React.FC<Props> = ({
@@ -59,120 +51,138 @@ export const ProjectView: React.FC<Props> = ({
   isEditState,
   router,
   isAuthenticated,
-}) => (
-  <Layout showFooter={false} headerMobileByDefault>
-    <AnimatedSectionStyled initial="exit" animate="enter" exit="exit">
-      {data && (
-        <AnimatePresence>
-          <AnimatedFigureStyled variants={imageVariants} initial="exit">
-            <LazyImage
-              alt={data.imageName}
-              src={PROJECT_PREVIEW_URL(data.category, data.imageSrc)}
-              srcSet={PROJECT_THUMBNAIL_URL(data.category, data.thumbnailSrc)}
-              style={{ maxWidth: '70vw' }}
-            />
-          </AnimatedFigureStyled>
-        </AnimatePresence>
-      )}
-      <AnimatePresence>
-        <AnimatedDescriptionStyled
-          variants={descriptionVariants}
-          initial="exit"
-        >
-          {data && (
-            <>
-              {isEditState ? (
-                <StyledLink
-                  routeName="project"
-                  routeParams={{ id: data.imageName }}
-                  routeOptions={{ reload: true }}
-                  router={router}
-                >
-                  ← &nbsp;
-                  <Trans>To project</Trans>
-                </StyledLink>
-              ) : (
-                <StyledLink
-                  routeName={ROUTE_NAME_PORTFOLIO}
-                  routeParams={{ category: portfolioSelectedCategory }}
-                  routeOptions={{ reload: true }}
-                  router={router}
-                >
-                  ← &nbsp;
-                  <Trans>Back</Trans>
-                </StyledLink>
-              )}
-            </>
-          )}
-          {isEditState && data && (
-            <>
-              <Title>
-                <Trans>Edit</Trans>
-              </Title>
-              <ProjectForm data={data} inEditState={isEditState} />
-            </>
-          )}
-          {data && !isEditState && (
-            <I18n>
-              {({ i18n }) => (
-                <>
-                  <Title>
-                    {data && !isEditState && isAuthenticated && (
-                      <EditProjectLink
-                        routeName="project.edit"
-                        routeParams={{
-                          id: data.imageName,
-                          category: data.category,
-                        }}
-                        routeOptions={{ reload: true }}
-                        router={router}
-                      >
-                        <FontAwesomeIcon icon={faEdit} size="sm" />
-                      </EditProjectLink>
-                    )}
-                    {data.title[i18n.language]}
-                  </Title>
-                  <Description>
-                    <div>{data.description[i18n.language]}</div>
-                    {data.descriptionList && (
-                      <DescriptionList>
-                        {data.descriptionList[i18n.language]
-                          .split('.')
-                          .filter((it) => it !== '')
-                          .map((item: string) => (
-                            <li key={item}>
-                              <b>&bull;</b>
-                              &nbsp;
-                              {item}
-                            </li>
-                          ))}
-                      </DescriptionList>
-                    )}
-                    <br />
-                    {data.projectUrl && (
-                      <>
-                        <Trans>With a great pleasure I suggest you</Trans>
-                        &nbsp;
-                        <StyledRealProjectLink
-                          href={data.projectUrl.href}
-                          target="_blank"
-                          rel="noopener"
-                          title={i18n._('watch real project')}
+}) => {
+  if (!data) {
+    return (
+      <Layout showFooter={false} headerMobileByDefault>
+        <AnimatedSectionStyled initial="exit" animate="enter" exit="exit">
+          <NoData />
+        </AnimatedSectionStyled>
+      </Layout>
+    );
+  }
+
+  const projectPreviewUrl =
+    process.env.ENVIRONMENT === 'DEV'
+      ? data.imageSrc
+      : PROJECT_PREVIEW_URL(data.category, data.imageSrc);
+
+  const projectThumbnailUrl =
+    process.env.ENVIRONMENT === 'DEV'
+      ? data.imageSrc
+      : PROJECT_THUMBNAIL_URL(data.category, data.thumbnailSrc);
+
+  return (
+    <I18n>
+      {({ i18n }) => (
+        <Layout showFooter={false} headerMobileByDefault>
+          <AnimatedSectionStyled initial="exit" animate="enter" exit="exit">
+            <AnimatePresence>
+              <AnimatedFigureStyled variants={imageVariants}>
+                <LazyImage
+                  alt={data.imageName}
+                  src={projectPreviewUrl}
+                  srcSet={projectThumbnailUrl}
+                  style={{ maxWidth: '70vw' }}
+                />
+              </AnimatedFigureStyled>
+              <AnimatedDescriptionStyled variants={descriptionVariants}>
+                {isEditState && (
+                  <AnimatedDescriptionContentStyled
+                    initial={{ opacity: 0 }}
+                    animate={{
+                      opacity: 1,
+                      transition: { duration: 0.6 },
+                    }}
+                    exit={{ opacity: 0, transition: { duration: 0.6 } }}
+                  >
+                    <StyledLink
+                      routeName="project"
+                      routeParams={{ id: data.imageName }}
+                      routeOptions={{ reload: true }}
+                      router={router}
+                    >
+                      ← &nbsp;
+                      <Trans>To project</Trans>
+                    </StyledLink>
+                    <Title>
+                      <Trans>Edit</Trans>
+                    </Title>
+                    <ProjectForm data={data} inEditState={isEditState} />
+                  </AnimatedDescriptionContentStyled>
+                )}
+                {!isEditState && (
+                  <AnimatedDescriptionContentStyled
+                    initial={{ opacity: 0 }}
+                    animate={{
+                      opacity: 1,
+                      transition: { duration: 0.6 },
+                    }}
+                    exit={{ opacity: 0, transition: { duration: 0.6 } }}
+                  >
+                    <StyledLink
+                      routeName={ROUTE_NAME_PORTFOLIO}
+                      routeParams={{ category: portfolioSelectedCategory }}
+                      routeOptions={{ reload: true }}
+                      router={router}
+                    >
+                      ← &nbsp;
+                      <Trans>Back</Trans>
+                    </StyledLink>
+                    <Title>
+                      {data && !isEditState && isAuthenticated && (
+                        <EditProjectLink
+                          routeName="project.edit"
+                          routeParams={{
+                            id: data.imageName,
+                            category: data.category,
+                          }}
+                          routeOptions={{ reload: true }}
+                          router={router}
                         >
-                          <Trans>watch real project</Trans>
-                        </StyledRealProjectLink>
-                      </>
-                    )}
-                  </Description>
-                  <Category>
-                    {i18n._(PORTFOLIO_CATEGORIES_TABS_LABELS[data.category])}
-                  </Category>
-                </>
-              )}
-            </I18n>
-          )}
-        </AnimatedDescriptionStyled>
-      </AnimatePresence>
-    </AnimatedSectionStyled>
-  </Layout>
-);
+                          <FontAwesomeIcon icon={faEdit} size="sm" />
+                        </EditProjectLink>
+                      )}
+                      {data.title[i18n.language]}
+                    </Title>
+                    <Description>
+                      <div>{data.description[i18n.language]}</div>
+                      {data.descriptionList && (
+                        <DescriptionList>
+                          {data.descriptionList[i18n.language]
+                            .split('.')
+                            .filter((it) => it !== '')
+                            .map((item: string) => (
+                              <li key={item}>{item}</li>
+                            ))}
+                        </DescriptionList>
+                      )}
+                      <br />
+                      {data.projectUrl && (
+                        <>
+                          <Trans>With a great pleasure I suggest you</Trans>
+                          &nbsp;
+                          <StyledRealProjectLink
+                            href={data.projectUrl.href}
+                            target="_blank"
+                            rel="noopener"
+                            title={i18n._('watch real project')}
+                          >
+                            <Trans>watch real project</Trans>
+                          </StyledRealProjectLink>
+                        </>
+                      )}
+                    </Description>
+                    <Category>
+                      {i18n._(PORTFOLIO_CATEGORIES_TABS_LABELS[data.category])}
+                    </Category>
+                  </AnimatedDescriptionContentStyled>
+                )}
+              </AnimatedDescriptionStyled>
+            </AnimatePresence>
+          </AnimatedSectionStyled>
+        </Layout>
+      )}
+    </I18n>
+  );
+};

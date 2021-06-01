@@ -1,39 +1,49 @@
 import * as React from 'react';
-import { AnimatePresence } from 'framer-motion';
+import { Trans } from '@lingui/react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 
 import { AnimatedDiv } from '~/animations/animated';
-import { SectionAuth, GridContent } from './styled';
 import { Layout } from '~/core/components';
-import { AuthForm } from '~/features/auth/auth-form';
+import { AuthForm } from './components';
+import { SectionAuth, GridContent } from './styled';
+import { H1 } from '~/ui/headings';
+import { BLACK_20 } from '~/constants/colors';
 
 export const AuthView: React.FC = () => (
   <Layout>
     <SectionAuth>
       <GridContent>
-        <AnimatedDiv animate="enter" exit="exit">
-          <AnimatePresence>
-            <AnimatedDiv
-              initial="initial"
-              variants={{
-                initial: {
-                  opacity: 0,
-                  x: '100%',
-                },
-                enter: {
-                  opacity: 1,
-                  x: '0%',
-                  transition: { duration: 1, delay: 1 },
-                },
-                exit: {
-                  opacity: 0,
-                  x: '100%',
-                  transition: { duration: 1.5 },
-                },
+        <AnimatedDiv
+          initial={{
+            opacity: 0,
+            x: '100%',
+          }}
+          animate={{
+            opacity: 1,
+            x: '0%',
+            transition: { duration: 1, delay: 1 },
+          }}
+          exit={{
+            opacity: 0,
+            x: '100%',
+            transition: { duration: 1.5 },
+          }}
+        >
+          <H1 style={{ textAlign: 'center' }}>
+            <FontAwesomeIcon icon={faSignOutAlt} size="2x" color={BLACK_20} />
+            <span
+              style={{
+                display: 'block',
+                width: '0',
+                height: '0',
+                overflow: 'hidden',
               }}
             >
-              <AuthForm />
-            </AnimatedDiv>
-          </AnimatePresence>
+              <Trans>Sign in</Trans>
+            </span>
+          </H1>
+          <AuthForm />
         </AnimatedDiv>
       </GridContent>
     </SectionAuth>

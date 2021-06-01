@@ -3,7 +3,7 @@ import { useStore } from 'effector-react';
 
 import { $themeStore, toggleTheme } from '~/store/theme-store';
 
-import { DARK_MODE } from '~/constants/theme';
+import { ThemeModes } from '~/constants/theme';
 import { ThemeSwitchView, ThemeSwitchProps } from './theme-switch-view';
 
 export const ThemeSwitch: FC<ThemeSwitchProps> = ({
@@ -11,7 +11,7 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({
   onToggleTheme,
 }) => {
   const theme = useStore($themeStore);
-  const toggledByDefault = theme === DARK_MODE && !disabled;
+  const toggledByDefault = theme === ThemeModes.Dark && !disabled;
 
   const [checked, toggleSwitch] = useState<boolean>(toggledByDefault);
 

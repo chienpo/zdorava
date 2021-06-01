@@ -5,7 +5,7 @@ import {
   STORAGE_KEY_USER_EXPIRATION_DATE,
   STORAGE_KEY_USER_TOKEN,
 } from '~/store/constants';
-import { AuthFormSubmitValues } from '~/features/auth/auth-form/types';
+import { AuthFormModel } from '~/models/auth-form.model';
 
 import {
   authFail,
@@ -38,7 +38,7 @@ interface AuthResponse {
 }
 
 export const fetchAuthData: Effect<
-  AuthFormSubmitValues,
+  AuthFormModel,
   { [key: string]: string }
 > = createEffect();
 

@@ -5,7 +5,7 @@ import { useStore } from 'effector-react';
 
 import { $portfolioTabsStore } from '~/store/portfolio-tabs-store';
 
-import { PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND } from '~/constants/portfolio';
+import { PortfolioCategories } from '~/constants/portfolio';
 import { PAGE_TITLES } from '~/constants/page-titles';
 import { ROUTE_NAME_PORTFOLIO, ROUTE_NAME_PROJECTS_ADD } from '~/router/routes';
 import { Layout } from '~/core/components';
@@ -34,7 +34,7 @@ export const ProjectNewView = () => {
     <Layout headerMobileByDefault>
       <AnimatedMainStyled initial="exit" animate="enter" exit="exit">
         <AnimatePresence>
-          <AnimatedSectionStyled variants={descriptionVariants} initial="exit">
+          <AnimatedSectionStyled variants={descriptionVariants}>
             <I18n>
               {({ i18n }) => (
                 <H1>{i18n._(PAGE_TITLES[ROUTE_NAME_PROJECTS_ADD])}</H1>
@@ -51,7 +51,7 @@ export const ProjectNewView = () => {
               <Trans>Add project form</Trans>
             </H2>
             <ProjectForm
-              initialValues={{ category: PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND }}
+              initialValues={{ category: PortfolioCategories.FrontEnd }}
             />
           </AnimatedSectionStyled>
         </AnimatePresence>

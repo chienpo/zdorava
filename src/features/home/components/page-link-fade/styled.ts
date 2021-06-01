@@ -6,7 +6,7 @@ import navigationAboutBackgroundLogo from '~/assets/images/backgrounds/navigatio
 import { ROUTE_NAME_ABOUT } from '~/router/routes';
 import { mirrorEffect } from '~/helpers/mirror-effect';
 import { BLACK, RED, RED_70, WHITE, WHITE_30 } from '~/constants/colors';
-import { DARK_MODE } from '~/constants/theme';
+import { ThemeModes } from '~/constants/theme';
 import { pulseAnim, pulseAnimWhite } from '~/animations/keyframes/pulse';
 
 export const LinkOverlayMirrorEffect = styled.div`
@@ -35,7 +35,7 @@ export const Text = styled.span`
   display: block;
   margin-top: 20vh;
   padding-left: 55px;
-  color: ${({ theme }) => (theme.mode === DARK_MODE ? WHITE_30 : BLACK)};
+  color: ${({ theme }) => (theme.mode === ThemeModes.Dark ? WHITE_30 : BLACK)};
   text-transform: uppercase;
   filter: brightness(150%);
   transition: color 0.6s;
@@ -49,7 +49,7 @@ export const Text = styled.span`
     width: 22px;
     height: 22px;
     border: 8px solid
-      ${({ theme }) => (theme.mode === DARK_MODE ? WHITE : BLACK)};
+      ${({ theme }) => (theme.mode === ThemeModes.Dark ? WHITE : BLACK)};
     border-radius: 50%;
     transform: translateY(-50%);
     transition: border-color 0.6s;

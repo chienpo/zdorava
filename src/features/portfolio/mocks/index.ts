@@ -1,1 +1,4 @@
-export { mockedPortfolioData } from './mocked-portfolio-data';
+export {
+  mockedPortfolioData,
+  mockedPortfolioResponsePromise,
+} from './mocked-portfolio-data';

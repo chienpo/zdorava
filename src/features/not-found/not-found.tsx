@@ -1,10 +1,29 @@
-import React from 'react';
+import * as React from 'react';
+import { Trans } from '@lingui/react';
 
-import { Layout } from '~/core/components/layout/layout';
-import { NotFoundView } from './not-found-view';
+import { AnimatedDiv } from '~/animations/animated';
+import { Layout } from '~/core/components';
+import { SectionNotFound, Overlay } from './styled';
 
 export const NotFound = () => (
   <Layout>
-    <NotFoundView />
+    <SectionNotFound>
+      <Overlay>
+        <AnimatedDiv
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+            transition: { duration: 1.5 },
+          }}
+          exit={{
+            opacity: 0,
+          }}
+        >
+          <Trans>404</Trans>
+        </AnimatedDiv>
+      </Overlay>
+    </SectionNotFound>
   </Layout>
 );

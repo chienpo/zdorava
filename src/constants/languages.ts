@@ -6,7 +6,7 @@ export enum Languages {
   Ru = 'ru',
 }
 
-export const LANGUAGE_LABELS: { [key: string]: string } = {
+export const LANGUAGE_LABELS = {
   [Languages.En]: i18nMark('En'),
   [Languages.Pl]: i18nMark('Pl'),
   [Languages.Ru]: i18nMark('Ru'),

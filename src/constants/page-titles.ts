@@ -10,11 +10,7 @@ import {
   ROUTE_NAME_SIGH_IN,
   ROUTE_NAME_PROJECTS_ADD,
 } from '~/router/routes';
-import {
-  PORTFOLIO_CATEGORY_TAB_NAME_ALL,
-  PORTFOLIO_CATEGORY_TAB_NAME_ART,
-  PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND,
-} from './portfolio';
+import { PortfolioCategories } from './portfolio';
 
 export const PAGE_TITLES: { [key: string]: string } = {
   [ROUTE_NAME_HOME]: i18nMark('Home'),
@@ -30,7 +26,7 @@ export const PAGE_TITLES: { [key: string]: string } = {
 };
 
 export const PORTFOLIO_PAGE_TITLES: { [key: string]: string } = {
-  [PORTFOLIO_CATEGORY_TAB_NAME_ALL]: i18nMark('All projects'),
-  [PORTFOLIO_CATEGORY_TAB_NAME_FRONTEND]: i18nMark('Front-End projects'),
-  [PORTFOLIO_CATEGORY_TAB_NAME_ART]: i18nMark('Art projects'),
+  [PortfolioCategories.All]: i18nMark('All projects'),
+  [PortfolioCategories.Art]: i18nMark('Art projects'),
+  [PortfolioCategories.FrontEnd]: i18nMark('Front-End projects'),
 };
