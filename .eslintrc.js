@@ -38,9 +38,6 @@ const config = {
     'airbnb/hooks',
     'airbnb-typescript',
     'prettier',
-    'prettier/react',
-    'prettier/@typescript-eslint',
-    'prettier/unicorn',
   ],
   overrides: [
     {
@@ -237,31 +234,16 @@ const config = {
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/no-unsafe-assignment': 'off',
     '@typescript-eslint/restrict-template-expressions': 'off',
-    'unicorn/prevent-abbreviations': [
-      'error',
-      {
-        whitelist: {
-          args: true,
-          ref: true,
-          Ref: true,
-          props: true,
-          Props: true,
-          dev: true,
-          Dev: true,
-          prod: true,
-          Prod: true,
-          env: true,
-          Env: true,
-          params: true,
-          Params: true,
-          config: true,
-          Config: true,
-        },
-      },
-    ],
+    'unicorn/prevent-abbreviations': 'off',
     'unicorn/no-null': 'off',
     'unicorn/no-fn-reference-in-iterator': 'off',
     'unicorn/explicit-length-check': 'off',
+    'unicorn/prefer-module': 'off',
+    'unicorn/prefer-node-protocol': 'off',
+    'unicorn/import-style': 'off',
+    // TODO: Update reduce in project
+    'unicorn/no-array-reduce': 'off',
+    'import/no-webpack-loader-syntax': 'off',
   },
 };
 

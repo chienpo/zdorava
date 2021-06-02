@@ -68,7 +68,7 @@ fetchAuthData.pending.watch((/* pending */) => {
 
 fetchAuthData.done.watch((response: AuthResponse) => {
   const expirationDate: Date = new Date(
-    new Date().getTime() + Number(response.result.expiresIn) * 1000
+    Date.now() + Number(response.result.expiresIn) * 1000
   );
 
   localStorage.setItem(STORAGE_KEY_USER_TOKEN, response.result.idToken);

@@ -17,30 +17,27 @@ import { InputField, FieldError } from '~/form-builder';
 import { required } from '~/form-builder/validators';
 import { StyledButton } from './styled';
 
-export const AuthForm: FC = () => {
-  const { loading: requestLoading } = useStore($authStore);
+const onSubmit = (values: AuthFormModel) =>
+  fetchAuthData({ ...values }).then((data: Error | AuthError) => {
+    if (data.error) {
+      let fieldErrors;
 
-  const onSubmit = (values: AuthFormModel) => {
-    return fetchAuthData({ ...values }).then((data: Error | AuthError) => {
-      if (data.error) {
-        let fieldErrors;
-
-        if (
-          (data as Error).error.message.includes(TOO_MANY_ATTEMPTS_TRY_LATER)
-        ) {
-          fieldErrors = <Trans>To many attempts</Trans>;
-        } else if ((data as Error).error.message.includes(EMAIL_NOT_FOUND)) {
-          fieldErrors = { email: data.error.message };
-        } else {
-          fieldErrors = { password: data.error.message };
-        }
-
-        return fieldErrors;
+      if ((data as Error).error.message.includes(TOO_MANY_ATTEMPTS_TRY_LATER)) {
+        fieldErrors = <Trans>To many attempts</Trans>;
+      } else if ((data as Error).error.message.includes(EMAIL_NOT_FOUND)) {
+        fieldErrors = { email: data.error.message };
+      } else {
+        fieldErrors = { password: data.error.message };
       }
 
-      return {};
-    });
-  };
+      return fieldErrors;
+    }
+
+    return {};
+  });
+
+export const AuthForm: FC = () => {
+  const { loading: requestLoading } = useStore($authStore);
 
   return (
     <I18n>

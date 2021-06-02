@@ -1,6 +1,7 @@
 import { useEffect, createElement, useState } from 'react';
 import { useRouteNode, useRoute } from 'react-router5';
 import { useStore } from 'effector-react';
+import * as env from '~/env';
 
 import { PortfolioResponseDataModel } from '~/models/portfolio-response-data.model';
 import { PortfolioItemModel } from '~/models/portfolio-item.model';
@@ -12,7 +13,7 @@ import { ProjectView } from './project-view';
 import { PROJECTS_URL } from '~/constants/api';
 import { transformObjectValuesIntoArrayOfValues } from '~/features/portfolio/helpers';
 import { SomethingWentWrong } from '~/features/something-went-wrong';
-import { mockedPortfolioData } from '~/features/portfolio/mocks';
+import { mockedPortfolioResponsePromise } from '~/features/portfolio/mocks';
 
 export const Project = () => {
   const [data, setData] = useState<PortfolioItemModel[]>([]);
@@ -32,29 +33,30 @@ export const Project = () => {
 
   const sendRequestCallback = (response: PortfolioResponseDataModel) => {
     const dataUpdated = transformObjectValuesIntoArrayOfValues(response);
-    const mockedData = transformObjectValuesIntoArrayOfValues(
-      mockedPortfolioData
-    );
-
-    const responseData =
-      process.env.ENVIRONMENT === 'DEV' ? mockedData : dataUpdated;
-    setData(responseData);
+    setData(dataUpdated);
   };
 
   useEffect(() => {
-    sendRequest(
-      {
-        url: `${PROJECTS_URL}`,
-        method: 'GET',
-        headers: null,
-        body: null,
-        queries: {
-          orderBy: 'imageName',
-          equalTo: projectId,
+    if (env.ENVIRONMENT === 'DEV') {
+      Promise.resolve(mockedPortfolioResponsePromise).then((response) => {
+        const dataUpdated = transformObjectValuesIntoArrayOfValues(response);
+        setData(dataUpdated);
+      });
+    } else {
+      sendRequest(
+        {
+          url: `${PROJECTS_URL}`,
+          method: 'GET',
+          headers: null,
+          body: null,
+          queries: {
+            orderBy: 'imageName',
+            equalTo: projectId,
+          },
         },
-      },
-      sendRequestCallback
-    ).then(() => {});
+        sendRequestCallback
+      ).then(() => {});
+    }
   }, [projectId, sendRequest]);
 
   if (requestError) {

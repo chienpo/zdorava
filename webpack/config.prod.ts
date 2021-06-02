@@ -11,7 +11,8 @@ import * as paths from './paths';
 import { createRules } from './rules';
 
 // Production plugins
-const productionPlugins: Plugin[] = [
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const productionPlugins: Plugin[] | any = [
   new DotenvPlugin({
     path: paths.env,
     safe: paths.envRef,

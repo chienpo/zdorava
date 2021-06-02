@@ -3,6 +3,7 @@ import { I18n, Trans } from '@lingui/react';
 import { AnimatePresence } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit } from '@fortawesome/free-solid-svg-icons';
+import * as env from '~/env';
 
 import { Props } from './types';
 import { ROUTE_NAME_PORTFOLIO } from '~/router/routes';
@@ -63,12 +64,12 @@ export const ProjectView: React.FC<Props> = ({
   }
 
   const projectPreviewUrl =
-    process.env.ENVIRONMENT === 'DEV'
+    env.ENVIRONMENT === 'DEV'
       ? data.imageSrc
       : PROJECT_PREVIEW_URL(data.category, data.imageSrc);
 
   const projectThumbnailUrl =
-    process.env.ENVIRONMENT === 'DEV'
+    env.ENVIRONMENT === 'DEV'
       ? data.imageSrc
       : PROJECT_THUMBNAIL_URL(data.category, data.thumbnailSrc);
 

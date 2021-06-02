@@ -46,21 +46,19 @@ const initialState = {
 export const $authStore = createStore(initialState);
 
 $authStore
-  .on(authStart, (state) => {
-    return { ...state, loading: true };
-  })
-  .on(authSuccess, (state: AuthState, action) => {
-    return {
-      ...state,
-      token: action.idToken,
-      userId: action.userId,
-      error: '',
-      loading: false,
-    };
-  })
-  .on(authFail, (state, action) => {
-    return { ...state, error: action.error, loading: false };
-  })
+  .on(authStart, (state) => ({ ...state, loading: true }))
+  .on(authSuccess, (state: AuthState, action) => ({
+    ...state,
+    token: action.idToken,
+    userId: action.userId,
+    error: '',
+    loading: false,
+  }))
+  .on(authFail, (state, action) => ({
+    ...state,
+    error: action.error,
+    loading: false,
+  }))
   .on(signOut, (state) => {
     localStorage.removeItem(STORAGE_KEY_USER_TOKEN);
     localStorage.removeItem(STORAGE_KEY_USER_EXPIRATION_DATE);
@@ -77,9 +75,10 @@ $authStore
       signOut();
     }, action.expiresIn * 1000);
   })
-  .on(setAuthRedirectPath, (state, action) => {
-    return { ...state, authRedirectPath: action.path };
-  });
+  .on(setAuthRedirectPath, (state, action) => ({
+    ...state,
+    authRedirectPath: action.path,
+  }));
 
 export const checkAuthLogoutHandler = () => {
   const expirationTime = localStorage.getItem(STORAGE_KEY_USER_EXPIRATION_DATE);

@@ -12,7 +12,7 @@ export const commonPlugins: Plugin[] = [
     inject: 'body',
     template: paths.indexHtml,
     favicon: paths.favicon,
-  }),
+  }) as any,
 ];
 
 export const resolvePlugins: ResolvePlugin[] = [

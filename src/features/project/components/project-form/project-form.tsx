@@ -65,15 +65,13 @@ export const ProjectForm: FC<Props> = ({
     try {
       const params = { auth: token };
 
-      if (inEditState && data?.uniqueId) {
-        await axios.put(`${PROJECT_EDIT_URL(data.uniqueId)}`, submitValues, {
-          params,
-        });
-      } else {
-        await axios.post(`${PROJECTS_URL}`, submitValues, {
-          params,
-        });
-      }
+      await (inEditState && data?.uniqueId
+        ? axios.put(`${PROJECT_EDIT_URL(data.uniqueId)}`, submitValues, {
+            params,
+          })
+        : axios.post(`${PROJECTS_URL}`, submitValues, {
+            params,
+          }));
     } catch (error) {
       throw new Error(error);
     }

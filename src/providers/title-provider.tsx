@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { I18n } from '@lingui/react';
 import { useRoute } from 'react-router5';
 import { useStore } from 'effector-react';
+import * as env from '~/env';
 
 import { Children } from '~/lib/types';
 import { $portfolioTabsStore } from '~/store/portfolio-tabs-store';
@@ -30,7 +31,7 @@ export const TitleProvider: React.FC<Children> = ({ children }) => {
             ? PORTFOLIO_PAGE_TITLES[selectedCategory]
             : PAGE_TITLES[name];
 
-        const title = `${process.env.SITE_NAME} | ${i18n._(pageTitle)}${i18n._(
+        const title = `${env.SITE_NAME} | ${i18n._(pageTitle)}${i18n._(
           projectPageTitle
         )}`;
 

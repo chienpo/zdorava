@@ -10,7 +10,7 @@ import { toggleLang } from '~/store/language-store';
 import { LanguageSelect } from '~/ui/select';
 import { BurgerMenu } from '~/ui/burger-menu';
 import { Navigation } from './components';
-import { AuthButton } from '~/features/auth/components';
+import { AuthButton } from '~/features/auth/components/auth-button';
 import {
   StyledHeader,
   NavigationWrapper,

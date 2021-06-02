@@ -14,7 +14,8 @@ const infoConfig = merge(productionConfig, {
       openAnalyzer: false,
       logLevel: 'info',
     }),
-  ],
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  ] as any,
   stats: {
     chunkGroups: true,
     chunks: true,

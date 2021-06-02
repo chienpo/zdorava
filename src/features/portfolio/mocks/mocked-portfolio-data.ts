@@ -25,9 +25,8 @@ const mockedProjectDataItem: PortfolioItemModel = {
   },
 };
 
-export const mockedPortfolioData = [...new Array(24)]
+export const mockedPortfolioData = Array.from({ length: 24 })
   .map(() => mockedProjectDataItem)
-  // eslint-disable-next-line unicorn/no-reduce
   .reduce((accumulator: PortfolioResponseDataModel, previous) => {
     accumulator[Math.random().toString()] = previous;
     return accumulator;

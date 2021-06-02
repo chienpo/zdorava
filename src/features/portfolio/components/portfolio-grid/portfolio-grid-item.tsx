@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faImage } from '@fortawesome/free-solid-svg-icons';
 import { I18n } from '@lingui/react';
+import * as env from '~/env';
 
 import { PortfolioGridItemProps } from './types';
 
@@ -54,7 +55,7 @@ export const PortfolioGridItem: React.FC<PortfolioGridItemProps> = ({
   title,
 }) => {
   const imgThumbnailSource =
-    process.env.ENVIRONMENT === 'DEV'
+    env.ENVIRONMENT === 'DEV'
       ? thumbnailSrc
       : PROJECT_THUMBNAIL_URL(category, thumbnailSrc);
   const chunkClassName = `${chunkType} ${activeCategory}`;

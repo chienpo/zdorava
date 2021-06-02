@@ -3,13 +3,13 @@ interface QueryBaseObject {
 }
 
 export const generateQueryString = (queryObject: QueryBaseObject) => {
-  // eslint-disable-next-line unicorn/no-reduce
-  const stringifiedQueryObject = Object.entries(queryObject).reduce(
-    (accumulator, [key, value]) => {
-      return { [key]: JSON.stringify(value), ...accumulator };
-    },
+  const stringifyQueryObject = Object.entries(queryObject).reduce(
+    (accumulator, [key, value]) => ({
+      [key]: JSON.stringify(value),
+      ...accumulator,
+    }),
     {}
   );
 
-  return `?${new URLSearchParams(stringifiedQueryObject)}`;
+  return `?${new URLSearchParams(stringifyQueryObject)}`;
 };

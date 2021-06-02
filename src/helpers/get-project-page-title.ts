@@ -6,7 +6,6 @@ import { PortfolioItemModel } from '~/models/portfolio-item.model';
 export const getProjectPageTitle = (projectName: string, locale: string) => {
   const { projects } = portfolioData;
 
-  // eslint-disable-next-line unicorn/no-reduce
   const transformedData = Object.entries(projects).reduce(
     (accumulator: { [key: string]: PortfolioItemModel }, [, value]) => ({
       ...accumulator,

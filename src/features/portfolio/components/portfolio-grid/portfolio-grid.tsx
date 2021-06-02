@@ -11,7 +11,6 @@ export const PortfolioGrid: FC<PortfolioGridProps> = ({
   data,
   activeCategory,
 }) => {
-  // eslint-disable-next-line unicorn/no-reduce
   const chunkedData = data.reduce(
     (accumulator: PortfolioItemModel[][], item, index) => {
       const chunkIndex: number = Math.floor(index / 4);
@@ -28,7 +27,7 @@ export const PortfolioGrid: FC<PortfolioGridProps> = ({
   );
 
   const getChunkType = (chunkInd: number) => {
-    const array = [...new Array(data.length)].map((_, i) => i);
+    const array = Array.from({ length: data.length }).map((_, i) => i);
 
     const types: string[] = Object.values(ChunkType);
 
