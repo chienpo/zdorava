@@ -1,15 +1,15 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
 import { Router } from 'router5';
 import { RouterProvider } from 'react-router5';
 
+import { Children } from '~/lib/types';
 import { TitleProvider } from './title-provider';
 import { LanguageProvider } from './language-provider';
 import { ThemeProvider } from './theme-provider';
 
-type Props = {
-  children: ReactElement;
+interface Props extends Children {
   router: Router;
-};
+}
 
 // eslint-disable-next-line import/no-default-export
 export default ({ children, router }: Props) => (

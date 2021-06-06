@@ -1,13 +1,10 @@
-import React, { useState, useEffect, ReactNode } from 'react';
+import React, { useState, useEffect } from 'react';
 import { I18nProvider } from '@lingui/react';
 import { Catalog, Catalogs } from '@lingui/core';
 import { useStore } from 'effector-react';
 
+import { Children } from '~/lib/types';
 import { $languageStore } from '~/store/language-store';
-
-interface Props {
-  children: ReactNode;
-}
 
 const importCatalogs: { [key: string]: Promise<Catalog> } = {
   en: import('@lingui/loader!../locales/en/messages.po'),
@@ -18,7 +15,7 @@ const importCatalogs: { [key: string]: Promise<Catalog> } = {
 const importCatalog: (lang: string) => Promise<Catalog> = (lang) =>
   importCatalogs[lang];
 
-export const LanguageProvider: React.FC<Props> = ({ children }) => {
+export const LanguageProvider: React.FC<Children> = ({ children }) => {
   const language = useStore($languageStore);
   const [catalog, setCatalog] = useState<Catalog | null>(null);
 

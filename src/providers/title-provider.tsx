@@ -1,20 +1,17 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import { I18n } from '@lingui/react';
 import { useRoute } from 'react-router5';
 import { useStore } from 'effector-react';
 
+import { Children } from '~/lib/types';
 import { $portfolioTabsStore } from '~/store/portfolio-tabs-store';
 import { getProjectPageTitle } from '~/helpers/get-project-page-title';
 
 import { PAGE_TITLES, PORTFOLIO_PAGE_TITLES } from '~/constants/page-titles';
 import { ROUTE_NAME_PORTFOLIO } from '~/router/routes';
 
-interface Props {
-  children: ReactElement;
-}
-
-export const TitleProvider: React.FC<Props> = ({ children }) => {
+export const TitleProvider: React.FC<Children> = ({ children }) => {
   const {
     route: { name, params },
   } = useRoute();

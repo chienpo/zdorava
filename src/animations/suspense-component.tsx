@@ -1,9 +1,11 @@
-import React, { FC, ReactNode, Suspense } from 'react';
+import React, { FC, Suspense } from 'react';
+
+import { Children } from '~/lib/types';
 
 interface SuspenseComponentProps {
   animCmp: FC;
   fallbackTag: string;
-  children?: ReactNode;
+  children?: Children;
   className?: string;
 }
 

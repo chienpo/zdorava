@@ -1,16 +1,13 @@
-import React, { ReactElement, FC } from 'react';
+import React, { FC } from 'react';
 import { useRoute } from 'react-router5';
 import { ThemeProvider as ThemeProviderRoot } from 'styled-components';
 import { useStore } from 'effector-react';
 
+import { Children } from '~/lib/types';
 import { $themeStore } from '~/store/theme-store';
 import { DEFAULT_ROUTE_THEME_MODES } from '~/constants/theme';
 
-type Props = {
-  children: ReactElement;
-};
-
-export const ThemeProvider: FC<Props> = ({ children }) => {
+export const ThemeProvider: FC<Children> = ({ children }) => {
   const themeMode = useStore($themeStore);
   const { route } = useRoute();
 

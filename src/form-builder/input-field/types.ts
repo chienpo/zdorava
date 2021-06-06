@@ -1,18 +1,16 @@
-import { ReactNode } from 'react';
-
 import { Props as ReactSelectProps } from 'react-select';
 
-export interface SelectFieldProps extends ReactSelectProps {
+import { ChildrenOptional } from '~/lib/types';
+
+export interface SelectFieldProps extends ReactSelectProps, ChildrenOptional {
   name: string;
   validate?: (value: string) => void;
-  children?: ReactNode;
 }
 
-export interface InputFieldProps {
+export interface InputFieldProps extends ChildrenOptional {
   name: string;
   type?: string;
   validate?: (value: string) => void;
-  children?: ReactNode;
   placeholder?: string | '';
   disabled?: boolean;
 }
