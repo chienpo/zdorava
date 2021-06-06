@@ -9,7 +9,7 @@ import { createRules } from './rules';
 
 // Development plugins
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const developmentPlugins: Plugin[] | any = [
+const developmentPlugins: Plugin[] | any[] = [
   new DotenvPlugin({
     path: paths.env,
     safe: paths.envRef,

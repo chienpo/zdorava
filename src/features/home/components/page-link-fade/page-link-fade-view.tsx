@@ -1,7 +1,7 @@
 import React, { useState, ReactNode } from 'react';
 import Tilt from 'react-parallax-tilt';
 import { AnimatePresence } from 'framer-motion';
-import { I18n } from '@lingui/react';
+import { i18n } from '@lingui/core';
 
 import { PAGE_TITLES } from '~/constants/page-titles';
 import { ROUTE_NAME_PORTFOLIO } from '~/router/routes';
@@ -80,31 +80,27 @@ export const PageLinkFadeView = ({
         )}
       </AnimatePresence>
 
-      <I18n>
-        {({ i18n }) => (
-          <PageLinkStyled
-            onMouseEnter={() => showOverlay(true)}
-            onBlur={() => showOverlay(false)}
-            onFocus={() => showOverlay(true)}
-            onMouseOver={() => showOverlay(true)}
-            onMouseOut={() => showOverlay(false)}
-            routeName={routeName}
-            routeParams={routeParams}
+      <PageLinkStyled
+        onMouseEnter={() => showOverlay(true)}
+        onBlur={() => showOverlay(false)}
+        onFocus={() => showOverlay(true)}
+        onMouseOver={() => showOverlay(true)}
+        onMouseOut={() => showOverlay(false)}
+        routeName={routeName}
+        routeParams={routeParams}
+      >
+        <LinkMirrorEffectBox>
+          <Text
+            title={i18n._(
+              routeName.includes(ROUTE_NAME_PORTFOLIO)
+                ? PAGE_TITLES[ROUTE_NAME_PORTFOLIO]
+                : PAGE_TITLES[routeName]
+            )}
           >
-            <LinkMirrorEffectBox>
-              <Text
-                title={i18n._(
-                  routeName.includes(ROUTE_NAME_PORTFOLIO)
-                    ? PAGE_TITLES[ROUTE_NAME_PORTFOLIO]
-                    : PAGE_TITLES[routeName]
-                )}
-              >
-                {title}
-              </Text>
-            </LinkMirrorEffectBox>
-          </PageLinkStyled>
-        )}
-      </I18n>
+            {title}
+          </Text>
+        </LinkMirrorEffectBox>
+      </PageLinkStyled>
     </>
   );
 };

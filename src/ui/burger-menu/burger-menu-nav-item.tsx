@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import styled from 'styled-components';
-import { I18n } from '@lingui/react';
+import { i18n } from '@lingui/core';
 import { BaseLink } from 'react-router5';
 import { Router } from 'router5';
 import { useStore } from 'effector-react';
@@ -92,24 +92,20 @@ export const BurgerMenuNavItem: React.FC<Props> = ({
   const category = useStore($portfolioTabsStore);
 
   return (
-    <I18n>
-      {({ i18n }) => (
-        <StyledMotionLi
-          variants={variants}
-          whileHover={{ color: RED }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <BaseLinkStyled
-            title={i18n._(PAGE_TITLES[name])}
-            router={router}
-            routeName={name}
-            routeParams={{ category }}
-            onClick={onClick}
-          >
-            {label || i18n._(PAGE_TITLES[name])}
-          </BaseLinkStyled>
-        </StyledMotionLi>
-      )}
-    </I18n>
+    <StyledMotionLi
+      variants={variants}
+      whileHover={{ color: RED }}
+      whileTap={{ scale: 0.95 }}
+    >
+      <BaseLinkStyled
+        title={i18n._(PAGE_TITLES[name])}
+        router={router}
+        routeName={name}
+        routeParams={{ category }}
+        onClick={onClick}
+      >
+        {label || i18n._(PAGE_TITLES[name])}
+      </BaseLinkStyled>
+    </StyledMotionLi>
   );
 };

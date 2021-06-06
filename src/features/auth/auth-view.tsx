@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Trans } from '@lingui/react';
+import { Trans } from '@lingui/macro';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 

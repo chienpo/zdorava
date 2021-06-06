@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Trans } from '@lingui/react';
+import { Trans } from '@lingui/macro';
 
 import { AnimatedDiv } from '~/animations/animated';
 import { Layout } from '~/core/components';

@@ -1,4 +1,4 @@
-import { StorybookConfig } from '@storybook/core/types';
+import { StorybookConfig } from '@storybook/react/types';
 
 import { configureWebpack } from './webpack';
 

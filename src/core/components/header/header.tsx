@@ -1,11 +1,10 @@
 import React, { lazy, FC, Suspense } from 'react';
-import { I18n } from '@lingui/react';
 import { useRouteNode, useRoute } from 'react-router5';
 import isMobileLib from 'ismobilejs';
 import { useStore } from 'effector-react';
 
 import { Props } from './types';
-import { toggleLang } from '~/store/language-store';
+import { $languageStore, toggleLang } from '~/store/language-store';
 
 import { LanguageSelect } from '~/ui/select';
 import { BurgerMenu } from '~/ui/burger-menu';
@@ -79,6 +78,8 @@ export const Header: FC<Props> = ({ mobileByDefault = false }) => {
     isMobileLib(window.navigator).any ||
     !mediaMinWidthForLaptops;
 
+  const language = useStore($languageStore);
+
   return (
     <StyledHeader
       initial="initial"
@@ -86,41 +87,36 @@ export const Header: FC<Props> = ({ mobileByDefault = false }) => {
       exit="exit"
       variants={headerVariants}
     >
-      <I18n>
-        {({ i18n }) => (
-          <NavigationWrapper>
-            {isMobile && <BurgerMenu showMenu={showMenu} routes={routes} />}
-            <AnimatedNavigationBox
-              style={{
-                height: headerHeight,
-                gridTemplateColumns:
-                  isMobile || !showMenu ? 'auto' : 'auto 335px',
-              }}
-              variants={navigationVariants}
-            >
-              {showMenu && !isMobile && (
-                <Navigation router={router} routes={routes} />
-              )}
-              <LanguageSwitchBox>
-                <AuthButton isAuthenticated={isAuthenticated} />
-                {themeSwitchVisible && (
-                  <Suspense fallback={<div />}>
-                    <ThemeSwitch disabled={!themeSwitchVisible} />
-                  </Suspense>
-                )}
-                <LanguageSelectBox>
-                  <Suspense fallback={<div />}>
-                    <LanguageSelect
-                      selectedLanguage={i18n.language}
-                      onToggleLanguage={toggleLang}
-                    />
-                  </Suspense>
-                </LanguageSelectBox>
-              </LanguageSwitchBox>
-            </AnimatedNavigationBox>
-          </NavigationWrapper>
-        )}
-      </I18n>
+      <NavigationWrapper>
+        {isMobile && <BurgerMenu showMenu={showMenu} routes={routes} />}
+        <AnimatedNavigationBox
+          style={{
+            height: headerHeight,
+            gridTemplateColumns: isMobile || !showMenu ? 'auto' : 'auto 335px',
+          }}
+          variants={navigationVariants}
+        >
+          {showMenu && !isMobile && (
+            <Navigation router={router} routes={routes} />
+          )}
+          <LanguageSwitchBox>
+            <AuthButton isAuthenticated={isAuthenticated} />
+            {themeSwitchVisible && (
+              <Suspense fallback={<div />}>
+                <ThemeSwitch disabled={!themeSwitchVisible} />
+              </Suspense>
+            )}
+            <LanguageSelectBox>
+              <Suspense fallback={<div />}>
+                <LanguageSelect
+                  selectedLanguage={language}
+                  onToggleLanguage={toggleLang}
+                />
+              </Suspense>
+            </LanguageSelectBox>
+          </LanguageSwitchBox>
+        </AnimatedNavigationBox>
+      </NavigationWrapper>
     </StyledHeader>
   );
 };

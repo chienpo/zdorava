@@ -17,8 +17,7 @@ const customConfig: Configuration = {
   },
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const configureWebpack: any = (config: Configuration): Configuration => {
+export const configureWebpack = (config: Configuration): Configuration => {
   // Remove style-loader, file-loader, url-loader
   if (config.module) {
     // eslint-disable-next-line no-param-reassign

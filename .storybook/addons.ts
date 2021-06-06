@@ -1,5 +1,6 @@
 import { create } from '@storybook/theming';
 import { addons } from '@storybook/addons';
+import { SITE_URL, STORYBOOK_LOGO_PATH } from '~/env';
 
 const mainTheme = create({
   base: 'dark',
@@ -7,8 +8,8 @@ const mainTheme = create({
   fontCode: 'monospace',
   appBorderRadius: 4,
   brandTitle: 'ZDORAVA Storybook',
-  brandUrl: 'https://zdorava.com',
-  brandImage: 'https://zdorava.com/assets/images/storybook-logo.png',
+  brandUrl: SITE_URL,
+  brandImage: `${STORYBOOK_LOGO_PATH}/storybook-logo.png`,
 });
 
 addons.setConfig({

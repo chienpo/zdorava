@@ -1,8 +1,8 @@
-import { i18nMark } from '@lingui/react';
+import { defineMessage } from '@lingui/macro';
 
 export const SKILLS_DATA = [
   {
-    title: i18nMark('Priorities'),
+    title: defineMessage({ message: 'Priorities' }),
     images: [
       {
         alt: 'react',
@@ -32,7 +32,7 @@ export const SKILLS_DATA = [
     ],
   },
   {
-    title: i18nMark("Hand's on experience"),
+    title: defineMessage({ message: "Hand's on experience" }),
     images: [
       {
         alt: 'html5',
@@ -62,7 +62,7 @@ export const SKILLS_DATA = [
     ],
   },
   {
-    title: i18nMark('Code quality tools'),
+    title: defineMessage({ message: 'Code quality tools' }),
     images: [
       {
         alt: 'eslint',
@@ -77,7 +77,7 @@ export const SKILLS_DATA = [
     ],
   },
   {
-    title: i18nMark('Platforms and bundlers'),
+    title: defineMessage({ message: 'Platforms and bundlers' }),
     images: [
       {
         alt: 'docker',
@@ -92,7 +92,7 @@ export const SKILLS_DATA = [
     ],
   },
   {
-    title: i18nMark('Development environment setup'),
+    title: defineMessage({ message: 'Development environment setup' }),
     images: [
       {
         alt: 'webstorm',
@@ -117,12 +117,11 @@ export const SKILLS_DATA = [
     ],
   },
   {
-    title: i18nMark('UI/UX tools'),
+    title: defineMessage({ message: 'UI/UX tools' }),
     images: [
       {
         alt: 'adobephotoshop',
-        src:
-          'https://cdn.jsdelivr.net/npm/simple-icons@3/icons/adobephotoshop.svg',
+        src: 'https://cdn.jsdelivr.net/npm/simple-icons@3/icons/adobephotoshop.svg',
         height: '35px',
       },
       {

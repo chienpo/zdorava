@@ -1,4 +1,4 @@
-import { i18nMark } from '@lingui/react';
+import { t } from '@lingui/macro';
 
 import reactUdemyCourse from '~/assets/images/sertificates/react-udemy-course.jpg';
 import javaScriptUdemyCourse from '~/assets/images/sertificates/java-script-udemy-course.jpg';
@@ -19,72 +19,74 @@ interface Certificate {
 export const CERTIFICATES_DATA: Certificate[] = [
   {
     src: reactUdemyCourse,
-    alt: i18nMark('react course certificate'),
-    title: i18nMark(
-      '"React - The Complete Guide (incl Hooks, React Router, Redux)"'
-    ),
-    description: i18nMark(
-      '"React - The Complete Guide (incl Hooks, React Router, Redux)" certificate, "UDEMY"'
-    ),
+    alt: t`react course certificate`,
+    title: t`
+      "React - The Complete Guide (incl Hooks, React Router, Redux)"
+    `,
+    description: t`
+      "React - The Complete Guide (incl Hooks, React Router, Redux)" certificate, "UDEMY"
+    `,
   },
   {
     src: javaScriptUdemyCourse,
-    alt: i18nMark('java-script course certificate'),
-    title: i18nMark(
-      '"JavaScript - The Complete Guide 2020 (Beginner + Advanced)"'
-    ),
-    description: i18nMark(
-      '"JavaScript - The Complete Guide 2020 certificate, "UDEMY"'
-    ),
+    alt: t`java-script course certificate`,
+    title: t`
+      "JavaScript - The Complete Guide 2020 (Beginner + Advanced)"
+    `,
+    description: t`
+      "JavaScript - The Complete Guide 2020 certificate, "UDEMY"
+    `,
   },
   {
     src: typeScriptUdemyCourse,
-    alt: i18nMark('type-script course certificate'),
-    title: i18nMark('"Understanding TypeScript - 2020 Edition"'),
-    description: i18nMark(
-      '"Understanding TypeScript - 2020 Edition" certificate, "UDEMY"'
-    ),
+    alt: t`type-script course certificate`,
+    title: t`"Understanding TypeScript - 2020 Edition"`,
+    description: t`
+      "Understanding TypeScript - 2020 Edition" certificate, "UDEMY"
+    `,
   },
   {
     src: spokenIntermediateOneCourseCertificate,
-    alt: i18nMark('spoken intermediate one english course certificate'),
-    title: i18nMark('"Spoken intermediate english course"'),
-    description: i18nMark(
-      '"Spoken intermediate one course" certificate, Itransition'
-    ),
+    alt: t`spoken intermediate one english course certificate`,
+    title: t`"Spoken intermediate english course"`,
+    description: t`
+      "Spoken intermediate one course" certificate, Itransition
+    `,
   },
   {
     src: businessEnglishThreeCourseCertificate,
-    alt: i18nMark('business english three english course certificate'),
-    title: i18nMark('"Business english three english course"'),
-    description: i18nMark(
-      '"Business english three course" certificate, Itransition'
-    ),
+    alt: t`business english three english course certificate`,
+    title: t`"Business english three english course"`,
+    description: t`
+      "Business english three course" certificate, Itransition
+    `,
   },
   {
     src: avaScriptAlgorithmsTheFundamentalsCourseCertificate,
-    alt: i18nMark('java script algorithms - the fundamentals" certificate'),
-    title: i18nMark('"JavaScript Algorithms - The Fundamentals"'),
-    description: i18nMark(
-      '"JavaScript Algorithms - The Fundamentals" certificate, "ACADEMIND"'
-    ),
+    alt: t`
+      java script algorithms - the fundamentals" certificate
+    `,
+    title: t`"JavaScript Algorithms - The Fundamentals"`,
+    description: t`
+      "JavaScript Algorithms - The Fundamentals" certificate, "ACADEMIND"
+    `,
   },
   {
     src: javaScriptDataStructuresTheFundamentalsCourseCertificate,
-    alt: i18nMark(
-      'java script data structures - the fundamentals" certificate'
-    ),
-    title: i18nMark('"JavaScript Data Structures - The Fundamentals"'),
-    description: i18nMark(
-      '"JavaScript Data Structures - The Fundamentals" certificate, "ACADEMIND"'
-    ),
+    alt: t`
+      java script data structures - the fundamentals" certificate
+    `,
+    title: t`"JavaScript Data Structures - The Fundamentals"`,
+    description: t`
+      "JavaScript Data Structures - The Fundamentals" certificate, "ACADEMIND"
+    `,
   },
   {
     src: gitAndGitHubThePracticalGuideCourseCertificate,
-    alt: i18nMark('git and github - the practical guide" certificate'),
-    title: i18nMark('"Git & GitHub - The Practical Guide"'),
-    description: i18nMark(
-      '"Git & GitHub - The Practical Guide" certificate, "ACADEMIND"'
-    ),
+    alt: t`git and github - the practical guide" certificate`,
+    title: t`"Git & GitHub - The Practical Guide"`,
+    description: t`
+      "Git & GitHub - The Practical Guide" certificate, "ACADEMIND"
+    `,
   },
 ];

@@ -30,10 +30,12 @@ export const SelectField: FC<SelectFieldProps> = ({
                 input.onChange(changedValue.value);
               }
             }}
-            defaultValue={(options as OptionsType<{
-              label: string;
-              value: string;
-            }>).find((item) => item.value === input.value)}
+            defaultValue={(
+              options as OptionsType<{
+                label: string;
+                value: string;
+              }>
+            ).find((item) => item.value === input.value)}
             options={options}
           />
         </Label>

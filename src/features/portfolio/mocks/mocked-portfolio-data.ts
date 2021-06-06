@@ -32,10 +32,9 @@ export const mockedPortfolioData = Array.from({ length: 24 })
     return accumulator;
   }, {});
 
-export const mockedPortfolioResponsePromise = new Promise<
-  PortfolioResponseDataModel
->((resolve) => {
-  setTimeout(() => {
-    resolve(mockedPortfolioData);
-  }, 200);
-});
+export const mockedPortfolioResponsePromise =
+  new Promise<PortfolioResponseDataModel>((resolve) => {
+    setTimeout(() => {
+      resolve(mockedPortfolioData);
+    }, 200);
+  });

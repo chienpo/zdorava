@@ -1,5 +1,5 @@
 declare namespace jest {
-  interface Matchers<> {
+  interface Matchers {
     toBeInTheDocument(): void;
   }
 }

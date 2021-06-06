@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import { Trans } from '@lingui/react';
+import { Trans } from '@lingui/macro';
 
 import { AnimatedDiv } from '~/animations/animated';
 import { Backdrop } from '~/ui/backdrop';

@@ -1,5 +1,6 @@
 import React from 'react';
-import { I18n, Trans } from '@lingui/react';
+import { Trans } from '@lingui/macro';
+import { i18n } from '@lingui/core';
 import { AnimatePresence } from 'framer-motion';
 import { useStore } from 'effector-react';
 
@@ -35,11 +36,7 @@ export const ProjectNewView = () => {
       <AnimatedMainStyled initial="exit" animate="enter" exit="exit">
         <AnimatePresence>
           <AnimatedSectionStyled variants={descriptionVariants}>
-            <I18n>
-              {({ i18n }) => (
-                <H1>{i18n._(PAGE_TITLES[ROUTE_NAME_PROJECTS_ADD])}</H1>
-              )}
-            </I18n>
+            <H1>{i18n._(PAGE_TITLES[ROUTE_NAME_PROJECTS_ADD])}</H1>
             <StyledLink
               routeName={ROUTE_NAME_PORTFOLIO}
               routeParams={{ category: selectedCategory }}

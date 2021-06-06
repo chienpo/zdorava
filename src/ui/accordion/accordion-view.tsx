@@ -1,6 +1,6 @@
 import React, { Fragment, ReactElement } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import { I18n } from '@lingui/react';
+import { i18n, MessageDescriptor } from '@lingui/core';
 
 import { BLACK, RED, RED_70, WHITE } from '~/constants/colors';
 import {
@@ -12,7 +12,7 @@ import { Panel } from './styled';
 
 export interface AccordionData {
   [key: string]: {
-    panelTitle: string;
+    panelTitle: string | MessageDescriptor;
     content: () => ReactElement;
   };
 }
@@ -44,9 +44,7 @@ export const AccordionView: React.FC<Props> = ({
             onClick={() => setExpanded(isOpen ? false : key)}
             style={{ transition: 'background0color 0.4s' }}
           >
-            <Panel active={isOpen}>
-              <I18n>{({ i18n }) => i18n._(panelTitle)}</I18n>
-            </Panel>
+            <Panel active={isOpen}>{i18n._(panelTitle)}</Panel>
           </AnimatedHeader>
           <AnimatePresence initial={false}>
             {isOpen && (

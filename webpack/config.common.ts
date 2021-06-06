@@ -7,12 +7,13 @@ import webpack, { Plugin, ResolvePlugin } from 'webpack';
 import * as paths from './paths';
 
 // Common plugins
-export const commonPlugins: Plugin[] = [
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const commonPlugins: Plugin[] | any[] = [
   new HtmlPlugin({
     inject: 'body',
     template: paths.indexHtml,
     favicon: paths.favicon,
-  }) as any,
+  }),
 ];
 
 export const resolvePlugins: ResolvePlugin[] = [
