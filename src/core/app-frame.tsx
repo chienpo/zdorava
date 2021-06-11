@@ -1,26 +1,24 @@
-import React, { FC, useEffect } from 'react';
+import React, { FC } from 'react';
 import { Router } from 'router5';
 
-import { loadWebFonts } from '~/utils/web-font-loader';
+import { useWebFonts } from '~/hooks/use-web-fonts';
 
 import Providers from '~/providers/providers';
 import { Root } from './root';
 import { GlobalStyle } from './global-style';
+import { FontFamilies, FontFamilyWeights } from '~/constants/fonts';
 
 interface Props {
   router: Router;
 }
 
 export const AppFrame: FC<Props> = ({ router }) => {
-  useEffect(() => {
-    loadWebFonts().then((response) =>
-      response.load({
-        google: {
-          families: ['Montserrat:100,400,700&display=swap'],
-        },
-      })
-    );
-  }, []);
+  useWebFonts([
+    {
+      family: FontFamilies.Montserrat,
+      weights: FontFamilyWeights[FontFamilies.Montserrat],
+    },
+  ]);
 
   return (
     <>
