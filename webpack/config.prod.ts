@@ -1,9 +1,8 @@
 import { CleanWebpackPlugin as CleanPlugin } from 'clean-webpack-plugin';
 import DotenvPlugin from 'dotenv-webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin';
-import TerserPlugin from 'terser-webpack-plugin';
-import webpack, { loader, Plugin } from 'webpack';
+import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
+import webpack from 'webpack';
 import { merge } from 'webpack-merge';
 
 import { commonConfig } from './config.common';
@@ -28,14 +27,17 @@ const productionPlugins: Plugin[] | any = [
     noSources: true,
   }),
   new MiniCssExtractPlugin({
+    // TODO: Check
     filename: paths.outputProd.css,
     chunkFilename: paths.outputProd.cssChunks,
   }),
 ];
 
-const testModules = (names: string[]) => (chunk: loader.LoaderContext) =>
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const testModules = (names: string[]) => (chunk: any) =>
   Boolean(chunk.resource) &&
   names.some((name) =>
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
     chunk.resource.startsWith(`${paths.root}/node_modules/${name}/`)
   );
 
@@ -80,7 +82,7 @@ export const productionConfig = merge(commonConfig, {
     },
     minimize: true,
     minimizer: [
-      new TerserPlugin({
+      () => ({
         cache: false,
         sourceMap: false,
         extractComments: false,
@@ -97,10 +99,16 @@ export const productionConfig = merge(commonConfig, {
           },
         },
       }),
-      new OptimizeCSSAssetsPlugin({
-        assetNameRegExp: paths.cssPattern,
-        cssProcessorPluginOptions: {
-          preset: ['default', { normalizeUnicode: false }],
+      new CssMinimizerPlugin({
+        test: paths.cssPattern,
+        minimizerOptions: {
+          preset: [
+            'default',
+            {
+              discardComments: { removeAll: true },
+              normalizeUnicode: false,
+            },
+          ],
         },
       }),
     ],

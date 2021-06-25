@@ -3,7 +3,6 @@ import { merge } from 'webpack-merge';
 
 import { productionConfig } from './config.prod';
 
-// WebpackBundleAnalyzer config
 const infoConfig = merge(productionConfig, {
   plugins: [
     new BundleAnalyzerPlugin({

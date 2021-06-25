@@ -1,22 +1,21 @@
 import './types';
 
-import HtmlPlugin from 'html-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
-import webpack, { Plugin, ResolvePlugin } from 'webpack';
 
+import webpack from 'webpack';
 import * as paths from './paths';
 
 // Common plugins
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const commonPlugins: Plugin[] | any[] = [
-  new HtmlPlugin({
+export const commonPlugin = [
+  new HtmlWebpackPlugin({
     inject: 'body',
     template: paths.indexHtml,
     favicon: paths.favicon,
   }),
 ];
 
-export const resolvePlugins: ResolvePlugin[] = [
+export const resolvePlugins: any = [
   // Get aliases from tsconfig.json
   new TsconfigPathsPlugin(),
 ];
@@ -36,14 +35,13 @@ export const commonConfig: webpack.Configuration = {
     wrappedContextCritical: true,
     strictExportPresence: true,
   },
-  plugins: commonPlugins,
+  plugins: commonPlugin,
   performance: {
     hints: false,
   },
   optimization: {
-    noEmitOnErrors: true,
-    namedModules: true, // better gzipped
-    namedChunks: true,
+    moduleIds: 'named', // better gzipped
+    chunkIds: 'named',
   },
   stats: {
     modules: false,
