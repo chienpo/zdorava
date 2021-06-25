@@ -13,11 +13,11 @@ interface Props extends Children {
 
 // eslint-disable-next-line import/no-default-export
 export default ({ children, router }: Props) => (
-  <RouterProvider router={router}>
-    <ThemeProvider>
-      <LanguageProvider>
+  <LanguageProvider>
+    <RouterProvider router={router}>
+      <ThemeProvider>
         <TitleProvider>{children}</TitleProvider>
-      </LanguageProvider>
-    </ThemeProvider>
-  </RouterProvider>
+      </ThemeProvider>
+    </RouterProvider>
+  </LanguageProvider>
 );

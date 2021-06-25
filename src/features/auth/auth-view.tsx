@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { Trans } from '@lingui/react';
+import { Trans } from '@lingui/macro';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 
 import { AnimatedDiv } from '~/animations/animated';
 import { Layout } from '~/core/components';
-import { AuthForm } from './components';
+import { AuthForm } from '~/features/auth/components';
 import { SectionAuth, GridContent } from './styled';
 import { H1 } from '~/ui/headings';
 import { BLACK_20 } from '~/constants/colors';

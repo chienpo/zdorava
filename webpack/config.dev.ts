@@ -1,6 +1,6 @@
 import DotenvPlugin from 'dotenv-webpack';
 import CssExtractPlugin from 'mini-css-extract-plugin';
-import webpack, { Plugin } from 'webpack';
+import webpack from 'webpack';
 import { merge } from 'webpack-merge';
 
 import { commonConfig } from './config.common';
@@ -8,7 +8,7 @@ import * as paths from './paths';
 import { createRules } from './rules';
 
 // Development plugins
-const developmentPlugins: Plugin[] = [
+const developmentPlugins = [
   new DotenvPlugin({
     path: paths.env,
     safe: paths.envRef,
@@ -24,6 +24,7 @@ const developmentPlugins: Plugin[] = [
 // Development config
 export const developmentConfig = merge(commonConfig, {
   mode: 'development',
+  target: 'web',
   entry: {
     main: ['react-hot-loader/patch', paths.entryMain],
   },
@@ -39,10 +40,12 @@ export const developmentConfig = merge(commonConfig, {
     chunkFilename: paths.outputDev.jsChunks,
   },
   module: {
-    rules: createRules(),
+    rules: createRules() as never[],
   },
   plugins: developmentPlugins,
   devtool: 'source-map',
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   devServer: {
     hot: true,
     contentBase: paths.build,

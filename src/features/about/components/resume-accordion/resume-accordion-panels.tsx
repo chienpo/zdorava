@@ -1,5 +1,6 @@
 import React from 'react';
-import { I18n, Trans } from '@lingui/react';
+import { Trans } from '@lingui/macro';
+import { i18n } from '@lingui/core';
 
 import { SKILLS_DATA } from './skills-data';
 import { CertificatesList } from './certifiates-list';
@@ -73,29 +74,25 @@ export const PanelExperienceView = () => (
 );
 
 export const PanelTechnologyStackView = () => (
-  <I18n>
-    {({ i18n }) => (
-      <PanelWrapper>
-        <Ul>
-          {SKILLS_DATA.map(({ title, images }) => (
-            <LiInline key={title}>
-              <H4>
-                {i18n._(title)}
-                &#x0003A; &nbsp;
-              </H4>
-              <StackList>
-                {images.map(({ alt, src, height }) => (
-                  <StackListItem key={alt}>
-                    <img title={alt} height={height} alt={alt} src={src} />
-                  </StackListItem>
-                ))}
-              </StackList>
-            </LiInline>
-          ))}
-        </Ul>
-      </PanelWrapper>
-    )}
-  </I18n>
+  <PanelWrapper>
+    <Ul>
+      {SKILLS_DATA.map(({ title, images }) => (
+        <LiInline key={images[0].src}>
+          <H4>
+            {i18n._(title)}
+            &#x0003A; &nbsp;
+          </H4>
+          <StackList>
+            {images.map(({ alt, src, height }) => (
+              <StackListItem key={alt}>
+                <img title={alt} height={height} alt={alt} src={src} />
+              </StackListItem>
+            ))}
+          </StackList>
+        </LiInline>
+      ))}
+    </Ul>
+  </PanelWrapper>
 );
 
 export const PanelLanguagesAndCertificatesView = () => (

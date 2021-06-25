@@ -1,7 +1,8 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faImage } from '@fortawesome/free-solid-svg-icons';
-import { I18n } from '@lingui/react';
+import { i18n } from '@lingui/core';
+import * as env from '~/env';
 
 import { PortfolioGridItemProps } from './types';
 
@@ -54,37 +55,34 @@ export const PortfolioGridItem: React.FC<PortfolioGridItemProps> = ({
   title,
 }) => {
   const imgThumbnailSource =
-    process.env.ENVIRONMENT === 'DEV'
+    env.ENVIRONMENT === 'DEV'
       ? thumbnailSrc
       : PROJECT_THUMBNAIL_URL(category, thumbnailSrc);
   const chunkClassName = `${chunkType} ${activeCategory}`;
 
   return (
-    <I18n>
-      {({ i18n }) => (
-        <Item className={chunkClassName} variants={variants}>
-          <ItemOrientationType
-            routeName={ROUTE_NAME_PROJECT}
-            routeParams={{ id: imageName, category: activeCategory }}
-            activeClassName="active"
-          >
-            <ItemFigure>
-              <LazyImageStyled
-                alt={imageName}
-                src={imgThumbnailSource}
-                srcSet={imgThumbnailSource}
-              />
-            </ItemFigure>
-            <ItemCategoryName>
-              <FontAwesomeIcon icon={faImage} />
-              <ItemCategoryLabel>
-                {i18n._(PORTFOLIO_CATEGORIES_TABS_LABELS[activeCategory])}
-              </ItemCategoryLabel>
-            </ItemCategoryName>
-            <ItemTitle>{title[i18n.language]}</ItemTitle>
-          </ItemOrientationType>
-        </Item>
-      )}
-    </I18n>
+    <Item className={chunkClassName} variants={variants}>
+      <ItemOrientationType
+        routeName={ROUTE_NAME_PROJECT}
+        routeParams={{ id: imageName, category: activeCategory }}
+        activeClassName="active"
+      >
+        <ItemFigure>
+          <LazyImageStyled
+            alt={imageName}
+            src={imgThumbnailSource}
+            srcSet={imgThumbnailSource}
+          />
+        </ItemFigure>
+        <ItemCategoryName>
+          <FontAwesomeIcon icon={faImage} />
+          <ItemCategoryLabel>
+            {i18n._(PORTFOLIO_CATEGORIES_TABS_LABELS[activeCategory])}
+          </ItemCategoryLabel>
+        </ItemCategoryName>
+        {/* eslint-disable-next-line no-underscore-dangle */}
+        <ItemTitle>{title[i18n._locale]}</ItemTitle>
+      </ItemOrientationType>
+    </Item>
   );
 };

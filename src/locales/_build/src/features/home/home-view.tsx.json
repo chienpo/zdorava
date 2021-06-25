@@ -1,26 +1,11 @@
 {
   "Stepan": {
-    "origin": [
-      [
-        "src/features/home/home-view.tsx",
-        24
-      ]
-    ]
+    "origin": [["src/features/home/home-view.tsx", 24]]
   },
   "Lagunovsky": {
-    "origin": [
-      [
-        "src/features/home/home-view.tsx",
-        26
-      ]
-    ]
+    "origin": [["src/features/home/home-view.tsx", 26]]
   },
   "web&art pro": {
-    "origin": [
-      [
-        "src/features/home/home-view.tsx",
-        29
-      ]
-    ]
+    "origin": [["src/features/home/home-view.tsx", 29]]
   }
 }

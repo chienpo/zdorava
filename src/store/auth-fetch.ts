@@ -37,10 +37,8 @@ interface AuthResponse {
   result: any | AuthResponseData | AuthResponseErrorData;
 }
 
-export const fetchAuthData: Effect<
-  AuthFormModel,
-  { [key: string]: string }
-> = createEffect();
+export const fetchAuthData: Effect<AuthFormModel, { [key: string]: string }> =
+  createEffect();
 
 fetchAuthData.use(async ({ email, password }) => {
   authStart();
@@ -68,7 +66,7 @@ fetchAuthData.pending.watch((/* pending */) => {
 
 fetchAuthData.done.watch((response: AuthResponse) => {
   const expirationDate: Date = new Date(
-    new Date().getTime() + Number(response.result.expiresIn) * 1000
+    Date.now() + Number(response.result.expiresIn) * 1000
   );
 
   localStorage.setItem(STORAGE_KEY_USER_TOKEN, response.result.idToken);
@@ -91,17 +89,16 @@ fetchAuthData.done.watch((response: AuthResponse) => {
   }
 });
 
-fetchAuthData.fail.watch(({ error }) => {
-  // eslint-disable-next-line no-console
-  console.error('error, rejected value', error);
-});
+fetchAuthData.fail.watch(({ error }) => error);
 
 fetchAuthData.finally.watch((data) => {
   if (data.status === 'done') {
     // const { result } = data;
     // console.log('result', result);
   } else {
-    // const { error } = data;
-    // console.log('error', error);
+    const { error } = data;
+    return error;
   }
+
+  return data;
 });

@@ -1,5 +1,6 @@
 import { FC, createElement, useState, useEffect, useMemo } from 'react';
 import { useStore } from 'effector-react';
+import * as env from '~/env';
 
 import { PortfolioItemModel } from '~/models/portfolio-item.model';
 import { PortfolioResponseDataModel } from '~/models/portfolio-response-data.model';
@@ -14,7 +15,7 @@ import { PortfolioCategories } from '~/constants/portfolio';
 import { PROJECTS_URL } from '~/constants/api';
 import { useHttp } from '~/hooks';
 import { PageLoader } from '~/ui/page-loader/page-loader';
-import { PortfolioView } from './portfolio-view';
+import { PortfolioView } from '~/features/portfolio/portfolio-view';
 import { transformObjectValuesIntoArrayOfValues } from '~/features/portfolio/helpers';
 import { SomethingWentWrong } from '~/features/something-went-wrong';
 
@@ -51,7 +52,7 @@ export const Portfolio: FC = () => {
   }, [activePortfolioTab]);
 
   useEffect(() => {
-    if (process.env.ENVIRONMENT === 'DEV') {
+    if (env.ENVIRONMENT === 'DEV') {
       Promise.resolve(mockedPortfolioResponsePromise)
         .then((response) => {
           const dataUpdated = transformObjectValuesIntoArrayOfValues(response);
@@ -82,7 +83,7 @@ export const Portfolio: FC = () => {
   const getNextDataChunk = () => {
     setDataLoadCount((previousState) => previousState + 1);
 
-    if (process.env.ENVIRONMENT === 'DEV') {
+    if (env.ENVIRONMENT === 'DEV') {
       Promise.resolve(mockedPortfolioResponsePromise)
         .then((response) => {
           const dataUpdated = transformObjectValuesIntoArrayOfValues(

@@ -1,6 +1,7 @@
 import React, { FC, useState } from 'react';
 import { Form } from 'react-final-form';
-import { i18nMark, I18n, Trans } from '@lingui/react';
+import { t, Trans } from '@lingui/macro';
+import { i18n } from '@lingui/core';
 import { useStore } from 'effector-react';
 import axios from 'axios';
 
@@ -65,15 +66,13 @@ export const ProjectForm: FC<Props> = ({
     try {
       const params = { auth: token };
 
-      if (inEditState && data?.uniqueId) {
-        await axios.put(`${PROJECT_EDIT_URL(data.uniqueId)}`, submitValues, {
-          params,
-        });
-      } else {
-        await axios.post(`${PROJECTS_URL}`, submitValues, {
-          params,
-        });
-      }
+      await (inEditState && data?.uniqueId
+        ? axios.put(`${PROJECT_EDIT_URL(data.uniqueId)}`, submitValues, {
+            params,
+          })
+        : axios.post(`${PROJECTS_URL}`, submitValues, {
+            params,
+          }));
     } catch (error) {
       throw new Error(error);
     }
@@ -92,141 +91,137 @@ export const ProjectForm: FC<Props> = ({
           onToggleLanguage={setFormLanguage}
         />
       </LangSelectBox>
-      <I18n>
-        {({ i18n }) => (
-          <Form
-            onSubmit={onSubmitProjectFormHandler}
-            initialValues={data || initialValues}
-            render={({ handleSubmit, submitError }) => (
-              <form onSubmit={handleSubmit}>
+      <Form
+        onSubmit={onSubmitProjectFormHandler}
+        initialValues={data || initialValues}
+        render={({ handleSubmit, submitError }) => (
+          <form onSubmit={handleSubmit}>
+            <InputField
+              name={`${ProjectFormFields.Title}.${formLanguage}`}
+              type="text"
+              placeholder={i18n._(t`Title`)}
+              validate={required}
+              disabled={requestLoading}
+            >
+              <Trans>Title</Trans>
+            </InputField>
+            <InputField
+              name={ProjectFormFields.ImageName}
+              type="text"
+              placeholder={i18n._(t`Image name`)}
+              validate={required}
+              disabled={requestLoading}
+            >
+              <Trans>Image name</Trans>
+            </InputField>
+            <InputField
+              name={`${ProjectFormFields.Description}.${formLanguage}`}
+              type="textarea"
+              placeholder={i18n._(t`Description`)}
+              validate={required}
+              disabled={requestLoading}
+            >
+              <Trans>Description</Trans>
+            </InputField>
+            <InputField
+              name={`${ProjectFormFields.DescriptionList}.${formLanguage}`}
+              type="textarea"
+              placeholder={i18n._(t`Description list`)}
+              disabled={requestLoading}
+            >
+              <Trans>Description list</Trans>
+            </InputField>
+            <SelectField
+              name={ProjectFormFields.Category}
+              options={CATEGORIES_DATA.map(({ label, value }) => ({
+                value,
+                label: i18n._(label),
+              }))}
+            >
+              <Trans>Category</Trans>
+            </SelectField>
+            {showUpload ||
+              (data && data[ProjectFormFields.ProjectUrl] && (
+                <FieldsRow>
+                  <InputField
+                    name={ProjectFormFields.ProjectUrlHref}
+                    type="text"
+                    placeholder={i18n._(t`Project url src`)}
+                    validate={required}
+                    disabled={requestLoading}
+                  >
+                    <Trans>Project url src</Trans>
+                  </InputField>
+                  <InputField
+                    name={ProjectFormFields.ProjectUrlLabel}
+                    type="text"
+                    placeholder={i18n._(t`Project url label`)}
+                    validate={required}
+                    disabled={requestLoading}
+                  >
+                    <Trans>Project url label</Trans>
+                  </InputField>
+                </FieldsRow>
+              ))}
+            {showUpload ? (
+              <FieldGroup>
+                <InputUpload
+                  name={ProjectFormFields.ImageSource}
+                  placeholder={i18n._(t`Image`)}
+                  validate={required}
+                >
+                  <Trans>Image</Trans>
+                </InputUpload>
+                <InputUpload
+                  name={ProjectFormFields.ThumbnailSource}
+                  placeholder={i18n._(t`Thumbnail`)}
+                  validate={required}
+                >
+                  <Trans>Thumbnail</Trans>
+                </InputUpload>
+              </FieldGroup>
+            ) : (
+              <FieldGroup>
                 <InputField
-                  name={`${ProjectFormFields.Title}.${formLanguage}`}
+                  name={ProjectFormFields.ImageSource}
                   type="text"
-                  placeholder={i18n._(i18nMark('Title'))}
+                  placeholder={i18n._(t`Image src`)}
                   validate={required}
                   disabled={requestLoading}
                 >
-                  <Trans>Title</Trans>
+                  <Trans>Image src</Trans>
                 </InputField>
                 <InputField
-                  name={ProjectFormFields.ImageName}
+                  name={ProjectFormFields.ThumbnailSource}
                   type="text"
-                  placeholder={i18n._(i18nMark('Image name'))}
+                  placeholder={i18n._(t`Preview src`)}
                   validate={required}
                   disabled={requestLoading}
                 >
-                  <Trans>Image name</Trans>
+                  <Trans>Thumbnail src</Trans>
                 </InputField>
-                <InputField
-                  name={`${ProjectFormFields.Description}.${formLanguage}`}
-                  type="textarea"
-                  placeholder={i18n._(i18nMark('Description'))}
-                  validate={required}
-                  disabled={requestLoading}
-                >
-                  <Trans>Description</Trans>
-                </InputField>
-                <InputField
-                  name={`${ProjectFormFields.DescriptionList}.${formLanguage}`}
-                  type="textarea"
-                  placeholder={i18n._(i18nMark('Description list'))}
-                  disabled={requestLoading}
-                >
-                  <Trans>Description list</Trans>
-                </InputField>
-                <SelectField
-                  name={ProjectFormFields.Category}
-                  options={CATEGORIES_DATA.map(({ label, value }) => ({
-                    value,
-                    label: i18n._(label),
-                  }))}
-                >
-                  <Trans>Category</Trans>
-                </SelectField>
-                {showUpload ||
-                  (data && data[ProjectFormFields.ProjectUrl] && (
-                    <FieldsRow>
-                      <InputField
-                        name={ProjectFormFields.ProjectUrlHref}
-                        type="text"
-                        placeholder={i18n._(i18nMark('Project url src'))}
-                        validate={required}
-                        disabled={requestLoading}
-                      >
-                        <Trans>Project url src</Trans>
-                      </InputField>
-                      <InputField
-                        name={ProjectFormFields.ProjectUrlLabel}
-                        type="text"
-                        placeholder={i18n._(i18nMark('Project url label'))}
-                        validate={required}
-                        disabled={requestLoading}
-                      >
-                        <Trans>Project url label</Trans>
-                      </InputField>
-                    </FieldsRow>
-                  ))}
-                {showUpload ? (
-                  <FieldGroup>
-                    <InputUpload
-                      name={ProjectFormFields.ImageSource}
-                      placeholder={i18n._(i18nMark('Image'))}
-                      validate={required}
-                    >
-                      <Trans>Image</Trans>
-                    </InputUpload>
-                    <InputUpload
-                      name={ProjectFormFields.ThumbnailSource}
-                      placeholder={i18n._(i18nMark('Thumbnail'))}
-                      validate={required}
-                    >
-                      <Trans>Thumbnail</Trans>
-                    </InputUpload>
-                  </FieldGroup>
-                ) : (
-                  <FieldGroup>
-                    <InputField
-                      name={ProjectFormFields.ImageSource}
-                      type="text"
-                      placeholder={i18n._(i18nMark('Image src'))}
-                      validate={required}
-                      disabled={requestLoading}
-                    >
-                      <Trans>Image src</Trans>
-                    </InputField>
-                    <InputField
-                      name={ProjectFormFields.ThumbnailSource}
-                      type="text"
-                      placeholder={i18n._(i18nMark('Preview src'))}
-                      validate={required}
-                      disabled={requestLoading}
-                    >
-                      <Trans>Thumbnail src</Trans>
-                    </InputField>
-                  </FieldGroup>
-                )}
-
-                <StyledButton
-                  type="submit"
-                  plain
-                  width="100%"
-                  disabled={requestLoading}
-                >
-                  {requestLoading && (
-                    <MoreLoader size="30px" style={{ marginRight: '10px' }} />
-                  )}
-                  {inEditState ? (
-                    <Trans>Update project</Trans>
-                  ) : (
-                    <Trans>Add project</Trans>
-                  )}
-                </StyledButton>
-                <FieldError meta={submitError} />
-              </form>
+              </FieldGroup>
             )}
-          />
+
+            <StyledButton
+              type="submit"
+              plain
+              width="100%"
+              disabled={requestLoading}
+            >
+              {requestLoading && (
+                <MoreLoader size="30px" style={{ marginRight: '10px' }} />
+              )}
+              {inEditState ? (
+                <Trans>Update project</Trans>
+              ) : (
+                <Trans>Add project</Trans>
+              )}
+            </StyledButton>
+            <FieldError meta={submitError} />
+          </form>
         )}
-      </I18n>
+      />
     </FormWrapper>
   );
 };

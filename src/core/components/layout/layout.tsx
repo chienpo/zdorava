@@ -1,7 +1,7 @@
 import React, { FC, PropsWithChildren } from 'react';
 
-import { Header } from '../header';
-import { Footer } from '../footer';
+import { Header } from '~/core/components/header';
+import { Footer } from '~/core/components/footer';
 
 interface Props {
   headerMobileByDefault?: boolean;

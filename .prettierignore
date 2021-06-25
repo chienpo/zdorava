@@ -1,4 +1,5 @@
 # Prettier
+test.env
 yarn.lock
 .yarnclean
 .env.ref

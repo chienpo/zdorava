@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
 import { AnimatePresence } from 'framer-motion';
-import { Trans } from '@lingui/react';
+import { Trans } from '@lingui/macro';
 
 import { Layout } from '~/core/components';
 import { AnimatedDiv } from '~/animations/animated';

@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { I18n } from '@lingui/react';
+import { i18n } from '@lingui/core';
 
 import { ErrorBox, IconError } from './styled';
 import { FIELD_ERRORS_TRANSLATED } from '~/form-builder/errors';
@@ -12,8 +12,6 @@ export const ErrorMessage: FC<Props> = ({ message }) => (
   <ErrorBox>
     <IconError>i</IconError>
     {typeof message === 'object' && message}
-    {typeof message === 'string' && (
-      <I18n>{({ i18n }) => i18n._(FIELD_ERRORS_TRANSLATED[message])}</I18n>
-    )}
+    {typeof message === 'string' && i18n._(FIELD_ERRORS_TRANSLATED[message])}
   </ErrorBox>
 );

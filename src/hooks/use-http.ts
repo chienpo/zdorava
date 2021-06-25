@@ -5,10 +5,8 @@ import { PortfolioResponseDataModel } from '~/models/portfolio-response-data.mod
 
 export const useHttp = () => {
   const [requestLoading, setRequestLoading] = useState<boolean>(false);
-  const [
-    requestError,
-    setRequestError,
-  ] = useState<PortfolioResponseDataModel | null>(null);
+  const [requestError, setRequestError] =
+    useState<PortfolioResponseDataModel | null>(null);
 
   const sendRequest = useCallback(
     async (

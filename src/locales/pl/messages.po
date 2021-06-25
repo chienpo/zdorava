@@ -13,421 +13,420 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/constants/page-titles.ts:13
-#: src/features/not-found/not-found.tsx:17
+#: src/constants/page-titles.ts:25
+#: src/features/not-found/not-found.tsx:24
 msgid "404"
 msgstr "404"
 
-#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:39
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:60
 msgid "\"Business english three course\" certificate, Itransition"
 msgstr "\"Business english three course\" certyfikat, Itransition"
 
-#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:38
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:59
 msgid "\"Business english three english course\""
 msgstr "\"Business english three kurs angielskiego\""
 
-#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:56
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:87
 msgid "\"Git & GitHub - The Practical Guide\""
 msgstr "\"Git & GitHub - Praktycznym Przewodniku\""
 
-#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:57
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:88
 msgid "\"Git & GitHub - The Practical Guide\" certificate, \"ACADEMIND\""
 msgstr "\"Git & GitHub - Praktycznym Przewodniku\" certificate, \"ACADEMIND\""
 
-#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:20
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:33
 msgid "\"JavaScript - The Complete Guide 2020 (Beginner + Advanced)\""
 msgstr "\"JavaScript - The Complete Guide 2020 (Beginner + Advanced)\""
 
-#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:21
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:36
 msgid "\"JavaScript - The Complete Guide 2020 certificate, \"UDEMY\""
 msgstr "\"JavaScript - The Complete Guide 2020 certyfikat, \"UDEMY\""
 
-#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:44
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:69
 msgid "\"JavaScript Algorithms - The Fundamentals\""
 msgstr "\"JavaScript Algorithms - The Fundamentals\""
 
-#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:45
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:70
 msgid "\"JavaScript Algorithms - The Fundamentals\" certificate, \"ACADEMIND\""
 msgstr "\"JavaScript Algorithms - The Fundamentals\" certyfikat, \"ACADEMIND\""
 
-#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:50
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:79
 msgid "\"JavaScript Data Structures - The Fundamentals\""
 msgstr "\"JavaScript Data Structures - The Fundamentals\""
 
-#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:51
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:80
 msgid "\"JavaScript Data Structures - The Fundamentals\" certificate, \"ACADEMIND\""
 msgstr "\"JavaScript Data Structures - The Fundamentals\" certyfikat, \"ACADEMIND\""
 
-#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:14
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:23
 msgid "\"React - The Complete Guide (incl Hooks, React Router, Redux)\""
 msgstr "\"React - The Complete Guide (incl Hooks, React Router, Redux)\""
 
-#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:15
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:26
 msgid "\"React - The Complete Guide (incl Hooks, React Router, Redux)\" certificate, \"UDEMY\""
 msgstr "\"React - The Complete Guide (incl Hooks, React Router, Redux)\" certyfikat, \"UDEMY\""
 
-#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:32
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:51
 msgid "\"Spoken intermediate english course\""
 msgstr "\"Spoken intermediate kurs angielskiego\""
 
-#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:33
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:52
 msgid "\"Spoken intermediate one course\" certificate, Itransition"
 msgstr "\"Spoken intermediate one course\" certyfikat, Itransition"
 
-#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:26
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:43
 msgid "\"Understanding TypeScript - 2020 Edition\""
 msgstr "\"Understanding TypeScript - 2020 Edition\""
 
-#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:27
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:44
 msgid "\"Understanding TypeScript - 2020 Edition\" certificate, \"UDEMY\""
 msgstr "\"Understanding TypeScript - 2020 Edition\" certyfikatu, \"UDEMY\""
 
-#: src/constants/page-titles.ts:7
-#: src/features/about/components/resume-accordion/resume-accordion-data.ts:6
-#: src/features/home/components/home-page-navigation.tsx:21
+#: src/constants/page-titles.ts:17
+#: src/features/about/components/resume-accordion/resume-accordion-data.ts:13
+#: src/features/home/components/home-page-navigation.tsx:31
 msgid "About"
 msgstr "O mnie"
 
-#: src/constants/page-titles.ts:12
-#: src/features/project/components/project-form/project-form.tsx:122
+#: src/constants/page-titles.ts:24
+#: src/features/project/components/project-form/project-form.tsx:218
 msgid "Add project"
 msgstr "Dodaj projekt"
 
-#: src/features/project-new/project-new-view.tsx:35
+#: src/features/project-new/project-new-view.tsx:48
 msgid "Add project form"
 msgstr "Dodać nowy projekt"
 
-#: src/constants/portfolio.ts:15
+#: src/constants/portfolio.ts:16
 msgid "All"
 msgstr "Wszystko"
 
-#: src/constants/page-titles.ts:16
+#: src/constants/page-titles.ts:29
 msgid "All projects"
 msgstr "Wszystkie projekty"
 
-#: src/constants/portfolio.ts:16
+#: src/constants/portfolio.ts:17
 msgid "Art"
 msgstr "Sztuka"
 
-#: src/constants/page-titles.ts:17
+#: src/constants/page-titles.ts:30
 msgid "Art projects"
 msgstr "Projekty artystyczne"
 
-#: src/features/project/project-view.tsx:71
-#: src/features/project-new/project-new-view.tsx:32
+#: src/features/project/project-view.tsx:135
+#: src/features/project-new/project-new-view.tsx:45
 msgid "Back"
 msgstr "Powrót"
 
-#: src/features/project/components/project-form/project-form.tsx:93
+#: src/features/project/components/project-form/project-form.tsx:141
 msgid "Category"
 msgstr "Kategoria"
 
-#: src/features/about/components/resume-accordion/resume-accordion-data.ts:18
+#: src/features/about/components/resume-accordion/resume-accordion-data.ts:25
 msgid "Certificates"
 msgstr "Certyfikaty"
 
-#: src/features/about/components/resume-accordion/resume-accordion-panels.tsx:25
+#: src/features/about/components/resume-accordion/resume-accordion-panels.tsx:38
 msgid "Closely related to design, front-end development process is always going on in creative way and i can always see the result of my job. And this is what i like so much!"
 msgstr "Proces tworzenia interfejsu, ściśle związany z projektowaniem, jest zawsze kreatywny i zawsze widzę efekt mojej pracy. I to właśnie tak lubię!"
 
-#: src/features/about/components/resume-accordion/skills-data.ts:64
+#: src/features/about/components/resume-accordion/skills-data.ts:65
 msgid "Code quality tools"
 msgstr "Jakośc kodu"
 
-#: src/features/portfolio/portfolio-view.tsx:47
+#: src/features/portfolio/portfolio-view.tsx:88
 msgid "Coming soon ..."
 msgstr "W budowie ..."
 
-#: src/features/about/components/resume-accordion/resume-accordion-panels.tsx:16
+#: src/features/about/components/resume-accordion/resume-accordion-panels.tsx:29
 msgid "Creating reactive applications for me is like making up some web ecosystems. But bricks here - are cutes of code, and component-structure - is the constructions. Using my arch-design and development skills, i combine this in to a real complex react web application!"
 msgstr "Tworzenie aplikacji reaktywnych jest dla mnie jak tworzenie ekosystemów internetowych. Ale cegły tutaj - to fragmenty kodu, a struktura komponentów - to konstrukcje. Korzystając z moich umiejętności projektowania i rozwoju architektury, łączę to w naprawdę złożoną aplikację internetową reagującą!"
 
-#: src/features/project/components/project-form/project-form.tsx:83
-#: src/features/project/components/project-form/project-form.tsx:84
+#: src/features/project/components/project-form/project-form.tsx:120
+#: src/features/project/components/project-form/project-form.tsx:124
 msgid "Description"
 msgstr "Opis"
 
-#: src/features/project/components/project-form/project-form.tsx:86
-#: src/features/project/components/project-form/project-form.tsx:87
+#: src/features/project/components/project-form/project-form.tsx:129
+#: src/features/project/components/project-form/project-form.tsx:132
 msgid "Description list"
 msgstr "Opis, lista"
 
-#: src/features/about/components/resume-accordion/skills-data.ts:94
+#: src/features/about/components/resume-accordion/skills-data.ts:95
 msgid "Development environment setup"
 msgstr "Środowisku programowania"
 
-#: src/features/project/project-view.tsx:61
+#: src/features/project/project-view.tsx:114
 msgid "Edit"
 msgstr "Edytować"
 
-#: src/constants/page-titles.ts:11
+#: src/constants/page-titles.ts:21
 msgid "Edit project:"
 msgstr "Edytuj projekt"
 
-#: src/features/auth/components/auth-form/auth-form.tsx:35
-#: src/features/contacts/components/contact-form-view.tsx:14
+#: src/features/auth/components/auth-form/auth-form.tsx:51
+#: src/features/contacts/components/contact-form-view.tsx:34
 msgid "Email"
 msgstr "Email"
 
-#: src/form-builder/errors.tsx:8
+#: src/form-builder/errors.tsx:10
 msgid "Email not found"
 msgstr "Nie znaleziono adresu e-mail"
 
-#: src/constants/languages.ts:9
+#: src/constants/languages.ts:10
 msgid "En"
 msgstr "En"
 
-#: src/features/auth/components/auth-form/auth-form.tsx:36
-#: src/features/contacts/components/contact-form-view.tsx:15
+#: src/features/auth/components/auth-form/auth-form.tsx:55
+#: src/features/contacts/components/contact-form-view.tsx:38
 msgid "Enter your email"
 msgstr "Wpisz swój adres e-mail"
 
-#: src/features/contacts/components/contact-form-view.tsx:18
+#: src/features/contacts/components/contact-form-view.tsx:47
 msgid "Enter your message"
 msgstr "Wpisz swoją wiadomość"
 
-#: src/features/contacts/components/contact-form-view.tsx:12
+#: src/features/contacts/components/contact-form-view.tsx:29
 msgid "Enter your name"
 msgstr "Wpisz swoje imię"
 
-#: src/features/auth/components/auth-form/auth-form.tsx:39
+#: src/features/auth/components/auth-form/auth-form.tsx:64
 msgid "Enter your password"
 msgstr "Wpisz swoje hasło"
 
-#: src/features/about/components/resume-accordion/resume-accordion-data.ts:10
+#: src/features/about/components/resume-accordion/resume-accordion-data.ts:17
 msgid "Experience"
 msgstr "Doświadczenie"
 
-#: src/constants/page-titles.ts:18
+#: src/constants/page-titles.ts:31
 msgid "Front-End projects"
 msgstr "projekty Front-End"
 
-#: src/constants/portfolio.ts:17
+#: src/constants/portfolio.ts:18
 msgid "Front-end"
 msgstr "Front-end"
 
-#: src/features/about/about.tsx:29
+#: src/features/about/about.tsx:43
 msgid "Front-end (React-JS) Developer"
 msgstr "Front-end (React-JS) Deweloper"
 
-#: src/features/about/components/resume-accordion/resume-accordion-panels.tsx:9
+#: src/features/about/components/resume-accordion/resume-accordion-panels.tsx:22
 msgid "Graduated as a Master of Architectural Design, took part at Hackathon-contest by MTS in 2015 when web-development by a side with the other things became my way of life."
 msgstr "Uzyskałem tytuł magistra z projektowania architektonicznego, wziąłem udział w konkursie hackathon MTS w 2015 roku, kiedy tworzenie stron internetowych stało się moim stylem życia."
 
-#: src/features/about/components/resume-accordion/skills-data.ts:34
+#: src/features/about/components/resume-accordion/skills-data.ts:35
 msgid "Hand's on experience"
 msgstr "Praktycznych doświadczeń"
 
-#: src/features/about/about.tsx:27
+#: src/features/about/about.tsx:41
 msgid "Hello, I'm Stepan"
 msgstr "Witam, jestem Stepan."
 
-#: src/constants/page-titles.ts:6
+#: src/constants/page-titles.ts:16
 msgid "Home"
 msgstr "Główna"
 
-#: src/features/about/components/resume-accordion/resume-accordion-panels.tsx:37
+#: src/features/about/components/resume-accordion/resume-accordion-panels.tsx:53
 msgid "I've been working in Itransition Software Development Company as a Front-end Developer. This time allowed me to dive dipper in to front-end and understand how cool is it! Working in a team of developers I took part in making up really cool projects and features for our foreign customers."
 msgstr "Pracowałem dla Itransition Software Development jako programista front-end. Ten czas pozwolił mi zagłębić się w Front-end i zrozumieć, jakie to niesamowite! Pracując w zespole deweloperskim brałem udział w tworzeniu naprawdę ciekawych projektów i funkcji dla naszych zagranicznych klientów."
 
-#: src/features/project/components/project-form/project-form.tsx:105
-#: src/features/project/components/project-form/project-form.tsx:106
+#: src/features/project/components/project-form/project-form.tsx:170
+#: src/features/project/components/project-form/project-form.tsx:173
 msgid "Image"
 msgstr "Obrazu"
 
-#: src/features/project/components/project-form/project-form.tsx:80
-#: src/features/project/components/project-form/project-form.tsx:81
+#: src/features/project/components/project-form/project-form.tsx:111
+#: src/features/project/components/project-form/project-form.tsx:115
 msgid "Image name"
 msgstr "Nazwą obrazu"
 
-#: src/features/project/components/project-form/project-form.tsx:112
-#: src/features/project/components/project-form/project-form.tsx:113
+#: src/features/project/components/project-form/project-form.tsx:188
+#: src/features/project/components/project-form/project-form.tsx:192
 msgid "Image src"
 msgstr "src obrazu"
 
-#: src/form-builder/errors.tsx:10
+#: src/form-builder/errors.tsx:12
 msgid "Invalid"
 msgstr "Pole jest wypełnione nieprawidłowo"
 
-#: src/form-builder/errors.tsx:9
+#: src/form-builder/errors.tsx:11
 msgid "Invalid password"
 msgstr "Hasło nieprawidłowe"
 
-#: src/features/home/home-view.tsx:26
+#: src/features/home/home-view.tsx:43
 msgid "Lagunovsky"
 msgstr "Lagunovsky"
 
-#: src/features/contacts/components/contact-form-view.tsx:17
+#: src/features/contacts/components/contact-form-view.tsx:43
 msgid "Message"
 msgstr "Wiadomość"
 
-#: src/features/contacts/components/contact-form-view.tsx:21
+#: src/features/contacts/components/contact-form-view.tsx:51
 msgid "Message has been sent!"
 msgstr "Wiadomość została wysłana"
 
-#: src/features/contacts/components/contact-form-view.tsx:11
+#: src/features/contacts/components/contact-form-view.tsx:25
 msgid "Name"
 msgstr "Nazwa"
 
-#: src/features/something-went-wrong/something-went-wrong.tsx:20
+#: src/features/something-went-wrong/something-went-wrong.tsx:27
 msgid "Oops ;)"
 msgstr ""
 
-#: src/features/about/components/resume-accordion/resume-accordion-panels.tsx:47
+#: src/features/about/components/resume-accordion/resume-accordion-panels.tsx:63
 msgid "Over 10 years I've been studying on architecture & design specialisations. I was lucky to improve my skills in such areas like: interior and brand design, modern and concept arts, i created a lot of cool creative projects and also got and expierence of presenting them to the customers! This expierence has became absolutely helpful in front-end, web-design, and even though in my whole life!"
 msgstr "Od ponad 10 lat studiuję architekturę i projektowanie architektoniczne. Miałem szczęście doskonalić swoje umiejętności w takich obszarach jak: projektowanie wnętrz i marek, sztuka nowoczesna i koncepcyjna, stworzyłem wiele fajnych projektów kreatywnych, a także dostałem i doświadczyłem możliwości zaprezentowania ich klientom! To doświadczenie stało się absolutnie przydatne we front-end, projektowaniu stron internetowych, a nawet w moim życiu!"
 
-#: src/features/auth/components/auth-form/auth-form.tsx:38
+#: src/features/auth/components/auth-form/auth-form.tsx:60
 msgid "Password"
 msgstr "Hasło"
 
-#: src/constants/languages.ts:10
+#: src/constants/languages.ts:11
 msgid "Pl"
 msgstr "Pl"
 
-#: src/features/about/components/resume-accordion/skills-data.ts:79
+#: src/features/about/components/resume-accordion/skills-data.ts:80
 msgid "Platforms and bundlers"
 msgstr "Platforms i bundlers"
 
-#: src/constants/page-titles.ts:8
-#: src/features/home/components/home-page-navigation.tsx:22
+#: src/constants/page-titles.ts:18
+#: src/features/home/components/home-page-navigation.tsx:36
 msgid "Portfolio"
 msgstr "Portfolio"
 
-#: src/features/project/components/project-form/project-form.tsx:115
+#: src/features/project/components/project-form/project-form.tsx:197
 msgid "Preview src"
 msgstr "Podgląd src"
 
-#: src/features/about/components/resume-accordion/skills-data.ts:4
+#: src/features/about/components/resume-accordion/skills-data.ts:5
 msgid "Priorities"
 msgstr "Priorytety"
 
-#: src/features/project/components/project-form/project-form.tsx:100
-#: src/features/project/components/project-form/project-form.tsx:101
+#: src/features/project/components/project-form/project-form.tsx:158
+#: src/features/project/components/project-form/project-form.tsx:162
 msgid "Project url label"
 msgstr "Project url label"
 
-#: src/features/project/components/project-form/project-form.tsx:97
-#: src/features/project/components/project-form/project-form.tsx:98
+#: src/features/project/components/project-form/project-form.tsx:149
+#: src/features/project/components/project-form/project-form.tsx:153
 msgid "Project url src"
 msgstr "Project url src"
 
-#: src/constants/page-titles.ts:10
+#: src/constants/page-titles.ts:20
 msgid "Project:"
 msgstr "Projekt:"
 
-#: src/form-builder/errors.tsx:11
-#: src/form-builder/validators.tsx:7
+#: src/form-builder/errors.tsx:13
+#: src/form-builder/validators.tsx:9
 msgid "Required"
 msgstr "Pole wymagane"
 
-#: src/constants/languages.ts:11
+#: src/constants/languages.ts:12
 msgid "Ru"
 msgstr "Ру"
 
-#: src/features/contacts/components/contact-form-view.tsx:24
+#: src/features/contacts/components/contact-form-view.tsx:63
 msgid "Send message"
 msgstr "Wyślij wiadomość"
 
-#: src/ui/burger-menu/burger-menu-nav.tsx:32
+#: src/ui/burger-menu/burger-menu-nav.tsx:72
 msgid "Sign Out"
 msgstr "Wylogować się"
 
-#: src/constants/page-titles.ts:9
-#: src/features/auth/auth-view.tsx:34
-#: src/features/auth/components/auth-button.tsx:18
-#: src/features/auth/components/auth-form/auth-form.tsx:43
-#: src/ui/burger-menu/burger-menu-nav.tsx:32
+#: src/constants/page-titles.ts:19
+#: src/features/auth/auth-view.tsx:43
+#: src/features/auth/components/auth-button.tsx:35
+#: src/features/auth/components/auth-form/auth-form.tsx:75
+#: src/ui/burger-menu/burger-menu-nav.tsx:74
 msgid "Sign in"
 msgstr "Zaloguj się"
 
-#: src/features/auth/components/auth-button.tsx:13
+#: src/features/auth/components/auth-button.tsx:27
 msgid "Sign out"
 msgstr "Wylogować się"
 
-#: src/features/home/home-view.tsx:24
+#: src/features/home/home-view.tsx:41
 msgid "Stepan"
 msgstr "Stepan"
 
-#: src/features/about/components/resume-accordion/resume-accordion-data.ts:14
+#: src/features/about/components/resume-accordion/resume-accordion-data.ts:21
 msgid "Technology stack & skills"
 msgstr "Technologie & umiejętności"
 
-#: src/features/project/components/project-form/project-form.tsx:108
-#: src/features/project/components/project-form/project-form.tsx:109
+#: src/features/project/components/project-form/project-form.tsx:177
+#: src/features/project/components/project-form/project-form.tsx:180
 msgid "Thumbnail"
 msgstr "Miniatur"
 
-#: src/features/project/components/project-form/project-form.tsx:116
+#: src/features/project/components/project-form/project-form.tsx:201
 msgid "Thumbnail src"
 msgstr "Miniatur src"
 
-#: src/features/project/components/project-form/project-form.tsx:77
-#: src/features/project/components/project-form/project-form.tsx:78
+#: src/features/project/components/project-form/project-form.tsx:102
+#: src/features/project/components/project-form/project-form.tsx:106
 msgid "Title"
 msgstr "Tytuł"
 
-#: src/features/auth/components/auth-form/auth-form.tsx:20
+#: src/features/auth/components/auth-form/auth-form.tsx:27
 msgid "To many attempts"
 msgstr "Wiele prób"
 
-#: src/features/project/project-view.tsx:58
+#: src/features/project/project-view.tsx:111
 msgid "To project"
 msgstr "Przejdź do projektu"
 
-#: src/features/about/components/resume-accordion/skills-data.ts:119
+#: src/features/about/components/resume-accordion/skills-data.ts:120
 msgid "UI/UX tools"
 msgstr "UI/UX narzędzi programistycznych"
 
-#: src/features/project/components/project-form/project-form.tsx:122
+#: src/features/project/components/project-form/project-form.tsx:216
 msgid "Update project"
 msgstr "Zaktualizować projekt"
 
-#: src/features/project/project-view.tsx:92
+#: src/features/project/project-view.tsx:168
 msgid "With a great pleasure I suggest you"
 msgstr "Z ogromną przyjemnością proponuję ci"
 
-#: src/features/contacts/contacts.tsx:27
+#: src/features/contacts/contacts.tsx:50
 msgid "Write me"
 msgstr "Napisać mi"
 
-#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:37
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:58
 msgid "business english three english course certificate"
 msgstr "business english three kurs angielskiego certyfikat"
 
-#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:55
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:86
 msgid "git and github - the practical guide\" certificate"
 msgstr "git i github - praktycznym przewodniku\" certyfikatu"
 
-#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:43
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:66
 msgid "java script algorithms - the fundamentals\" certificate"
 msgstr "java script algorithms - the fundamentals\" certyfikatu"
 
-#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:49
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:76
 msgid "java script data structures - the fundamentals\" certificate"
 msgstr "java script data structures - the fundamentals\" certyfikatu"
 
-#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:19
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:32
 msgid "java-script course certificate"
 msgstr "java-script certyfikatu kursu"
 
-#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:13
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:22
 msgid "react course certificate"
 msgstr "React certyfikatu kursu"
 
-#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:31
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:50
 msgid "spoken intermediate one english course certificate"
 msgstr "spoken intermediate one english certyfikatu kursu"
 
-#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:25
+#: src/features/about/components/resume-accordion/certifiates-list/certificates-data.ts:42
 msgid "type-script course certificate"
 msgstr "type-script certyfikatu kursu"
 
-#: src/features/project/project-view.tsx:94
-#: src/features/project/project-view.tsx:95
+#: src/features/project/project-view.tsx:176
 msgid "watch real project"
 msgstr "spojrzeć na prawdziwy projekt"
 
-#: src/features/home/home-view.tsx:29
+#: src/features/home/home-view.tsx:46
 msgid "web&art pro"
 msgstr "sieć&sztuka pro"

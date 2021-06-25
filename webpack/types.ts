@@ -1,8 +1,8 @@
 // Module declarations for Webpack
 declare module 'postcss-*' {
-  import { PluginCreator } from 'postcss';
+  import { Plugin } from 'postcss';
 
-  const plugin: PluginCreator<unknown>;
+  const plugin: Plugin;
 
   // noinspection all
   export default plugin;

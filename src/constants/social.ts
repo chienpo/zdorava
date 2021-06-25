@@ -1,5 +1,6 @@
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { Languages } from '~/constants/languages';
+import * as env from '~/env';
 
 export const SOCIAL_LINKS_DATA = (locale: string) => {
   const LOCALES: { [key: string]: string } = {
@@ -11,12 +12,12 @@ export const SOCIAL_LINKS_DATA = (locale: string) => {
   return [
     {
       title: 'GitHub',
-      path: `${process.env.SOCIAL_GITHUB_PATH}`,
+      path: `${env.SOCIAL_GITHUB_PATH}`,
       icon: faGithub,
     },
     {
       title: 'LinkedIn',
-      path: `${process.env.SOCIAL_LINKEDIN_PATH}?locale=${LOCALES[locale]}`,
+      path: `${env.SOCIAL_LINKEDIN_PATH}?locale=${LOCALES[locale]}`,
       icon: faLinkedin,
     },
   ];

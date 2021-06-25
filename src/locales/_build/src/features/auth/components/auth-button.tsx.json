@@ -1,18 +1,8 @@
 {
   "Sign out": {
-    "origin": [
-      [
-        "src/features/auth/components/auth-button.tsx",
-        13
-      ]
-    ]
+    "origin": [["src/features/auth/components/auth-button.tsx", 13]]
   },
   "Sign in": {
-    "origin": [
-      [
-        "src/features/auth/components/auth-button.tsx",
-        18
-      ]
-    ]
+    "origin": [["src/features/auth/components/auth-button.tsx", 18]]
   }
 }

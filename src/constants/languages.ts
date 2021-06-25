@@ -1,4 +1,4 @@
-import { i18nMark } from '@lingui/react';
+import { t } from '@lingui/macro';
 
 export enum Languages {
   En = 'en',
@@ -7,7 +7,7 @@ export enum Languages {
 }
 
 export const LANGUAGE_LABELS = {
-  [Languages.En]: i18nMark('En'),
-  [Languages.Pl]: i18nMark('Pl'),
-  [Languages.Ru]: i18nMark('Ru'),
+  [Languages.En]: t`En`,
+  [Languages.Pl]: t`Pl`,
+  [Languages.Ru]: t`Ru`,
 };

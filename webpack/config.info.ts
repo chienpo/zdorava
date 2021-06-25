@@ -3,7 +3,6 @@ import { merge } from 'webpack-merge';
 
 import { productionConfig } from './config.prod';
 
-// WebpackBundleAnalyzer config
 const infoConfig = merge(productionConfig, {
   plugins: [
     new BundleAnalyzerPlugin({
@@ -14,7 +13,8 @@ const infoConfig = merge(productionConfig, {
       openAnalyzer: false,
       logLevel: 'info',
     }),
-  ],
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  ] as any,
   stats: {
     chunkGroups: true,
     chunks: true,

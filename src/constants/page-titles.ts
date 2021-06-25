@@ -1,6 +1,7 @@
-import { i18nMark } from '@lingui/react';
+import { defineMessage } from '@lingui/macro';
 import { constants } from 'router5';
 
+import { MessageDescriptor } from '@lingui/core';
 import {
   ROUTE_NAME_HOME,
   ROUTE_NAME_ABOUT,
@@ -12,21 +13,23 @@ import {
 } from '~/router/routes';
 import { PortfolioCategories } from './portfolio';
 
-export const PAGE_TITLES: { [key: string]: string } = {
-  [ROUTE_NAME_HOME]: i18nMark('Home'),
-  [ROUTE_NAME_ABOUT]: i18nMark('About'),
-  [ROUTE_NAME_PORTFOLIO]: i18nMark('Portfolio'),
-  [ROUTE_NAME_SIGH_IN]: i18nMark('Sign in'),
-  [ROUTE_NAME_PROJECT]: i18nMark('Project:'),
-  [`${ROUTE_NAME_PROJECT}.${ROUTE_NAME_PROJECT_EDIT}`]: i18nMark(
-    'Edit project:'
-  ),
-  [ROUTE_NAME_PROJECTS_ADD]: i18nMark('Add project'),
-  [constants.UNKNOWN_ROUTE]: i18nMark('404'),
+export const PAGE_TITLES = {
+  [ROUTE_NAME_HOME]: defineMessage({ message: 'Home' }),
+  [ROUTE_NAME_ABOUT]: defineMessage({ message: 'About' }),
+  [ROUTE_NAME_PORTFOLIO]: defineMessage({ message: 'Portfolio' }),
+  [ROUTE_NAME_SIGH_IN]: defineMessage({ message: 'Sign in' }),
+  [ROUTE_NAME_PROJECT]: defineMessage({ message: 'Project:' }),
+  [`${ROUTE_NAME_PROJECT}.${ROUTE_NAME_PROJECT_EDIT}`]: defineMessage({
+    message: 'Edit project:',
+  }),
+  [ROUTE_NAME_PROJECTS_ADD]: defineMessage({ message: 'Add project' }),
+  [constants.UNKNOWN_ROUTE]: defineMessage({ message: '404' }),
 };
 
-export const PORTFOLIO_PAGE_TITLES: { [key: string]: string } = {
-  [PortfolioCategories.All]: i18nMark('All projects'),
-  [PortfolioCategories.Art]: i18nMark('Art projects'),
-  [PortfolioCategories.FrontEnd]: i18nMark('Front-End projects'),
+export const PORTFOLIO_PAGE_TITLES: { [key: string]: MessageDescriptor } = {
+  [PortfolioCategories.All]: defineMessage({ message: 'All projects' }),
+  [PortfolioCategories.Art]: defineMessage({ message: 'Art projects' }),
+  [PortfolioCategories.FrontEnd]: defineMessage({
+    message: 'Front-End projects',
+  }),
 };

@@ -1,4 +1,4 @@
-import { i18nMark } from '@lingui/react';
+import { defineMessage } from '@lingui/macro';
 
 import { ResumeAccordionPanels } from './types';
 import {
@@ -10,19 +10,19 @@ import {
 
 export const RESUME_ACCORDION_DATA = {
   [ResumeAccordionPanels.About]: {
-    panelTitle: i18nMark('About'),
+    panelTitle: defineMessage({ message: 'About' }),
     content: PanelAboutView,
   },
   [ResumeAccordionPanels.Experience]: {
-    panelTitle: i18nMark('Experience'),
+    panelTitle: defineMessage({ message: 'Experience' }),
     content: PanelExperienceView,
   },
   [ResumeAccordionPanels.Skills]: {
-    panelTitle: i18nMark('Technology stack & skills'),
+    panelTitle: defineMessage({ message: 'Technology stack & skills' }),
     content: PanelTechnologyStackView,
   },
   [ResumeAccordionPanels.Certificates]: {
-    panelTitle: i18nMark('Certificates'),
+    panelTitle: defineMessage({ message: 'Certificates' }),
     content: PanelLanguagesAndCertificatesView,
   },
 };

@@ -1,6 +1,7 @@
 import React, { lazy, Suspense, FC, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { useStore } from 'effector-react';
+import * as env from '~/env';
 
 import { SITE_PUBLICATION_YEAR } from '~/constants/site';
 import { AnimatedFooter } from '~/animations/animated/animated';
@@ -13,7 +14,7 @@ const Contacts = lazy(() => import('~/features/contacts'));
 export const Footer: FC = () => {
   const [contactFormOpened, toggleContactForm] = useState<boolean>(false);
   const language = useStore($languageStore);
-  const copy = `© ${process.env.SITE_NAME} ${SITE_PUBLICATION_YEAR}`;
+  const copy = `© ${env.SITE_NAME} ${SITE_PUBLICATION_YEAR}`;
 
   return (
     <AnimatedFooter animate="enter" exit="exit">

@@ -1,33 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, ReactNode, FC } from 'react';
 import { I18nProvider } from '@lingui/react';
-import { Catalog, Catalogs } from '@lingui/core';
-import { useStore } from 'effector-react';
+import { i18n } from '@lingui/core';
 
 import { Children } from '~/lib/types';
-import { $languageStore } from '~/store/language-store';
+import { dynamicActivate } from '~/utils/i18n-loader';
+import { defaultLang } from '~/store/language-store';
 
-const importCatalogs: { [key: string]: Promise<Catalog> } = {
-  en: import('@lingui/loader!../locales/en/messages.po'),
-  ru: import('@lingui/loader!../locales/ru/messages.po'),
-  pl: import('@lingui/loader!../locales/pl/messages.po'),
-};
-
-const importCatalog: (lang: string) => Promise<Catalog> = (lang) =>
-  importCatalogs[lang];
-
-export const LanguageProvider: React.FC<Children> = ({ children }) => {
-  const language = useStore($languageStore);
-  const [catalog, setCatalog] = useState<Catalog | null>(null);
-
+export const LanguageProvider: FC<Children> = ({
+  children,
+}) => {
   useEffect(() => {
-    importCatalog(language).then(setCatalog);
-  }, [language]);
+    dynamicActivate(defaultLang).then((result) => result);
+  }, []);
 
   return (
-    <I18nProvider
-      language={language}
-      catalogs={{ [language]: catalog } as Catalogs}
-    >
+    <I18nProvider forceRenderOnLocaleChange={false} i18n={i18n}>
       {children}
     </I18nProvider>
   );

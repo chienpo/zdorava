@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Trans } from '@lingui/react';
+import { Trans } from '@lingui/macro';
 
 import homepageGlitchBackground from '~/assets/images/backgrounds/home-bg.jpg';
 import homepageGlitchBackgroundMobile from '~/assets/images/backgrounds/homepage-background-tinyfied-mobile.jpg';
